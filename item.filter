@@ -1,0 +1,79 @@
+// Kryszard's PD2 Loot Filter ver alpha.0.0.1
+//
+// twitch.tv/kryszard
+//
+// For Casual and EndGame Players
+
+//FILTER UNFINISHED
+//WORK IN PROGRESS
+//USE ON UR OWN RISK
+
+//Health & Mana Potions
+ItemDisplay[rvl]: %PURPLE%R %WHITE%Full
+ItemDisplay[rvs]: %PURPLE%r %WHITE%35%
+ItemDisplay[hp5]: %RED%!%WHITE%Hp
+ItemDisplay[mp5]: %BLUE%!%WHITE%Mp
+ItemDisplay[hp1 DIFFICULTY=0]: %RED%!%WHITE%minor hp
+ItemDisplay[hp2 DIFFICULTY=0]: %RED%!%WHITE%light hp
+ItemDisplay[hp3 DIFFICULTY=0]: %RED%!%WHITE%healing
+ItemDisplay[hp4 DIFFICULTY<2]: %RED%!%WHITE%great hp
+ItemDisplay[mp1 DIFFICULTY=0]: %BLUE%!%WHITE%minor mp
+ItemDisplay[mp2 DIFFICULTY=0]: %BLUE%!%WHITE%light mp
+ItemDisplay[mp3 DIFFICULTY=0]: %BLUE%!%WHITE%mana
+ItemDisplay[mp4 DIFFICULTY<2]: %BLUE%!%WHITE%great mp
+ItemDisplay[(hp1 OR hp2 OR hp3 OR mp1 OR mp2 OR mp3) DIFFICULTY>0]:
+ItemDisplay[(hp4 OR mp4) DIFFICULTY>1]:
+
+//Utilites
+ItemDisplay[tsc CLVL<31]: %BLUE%* %GRAY%TP scroll
+ItemDisplay[isc CLVL<31]: %RED%* %GRAY%ID scroll
+ItemDisplay[vps CLVL<31]: %GREEN%!%WHITE%stamina
+ItemDisplay[wms CLVL<31]: %GREEN%!%WHITE%thaw
+ItemDisplay[(tsc OR isc OR vps OR wms) CLVL>30]:
+ItemDisplay[yps]: %GREEN%!%WHITE%ant
+ItemDisplay[key]: %GRAY%key %CONTINUE%
+//Choking, Exploding, Fulminating, Oil, Rancid, Strangling
+ItemDisplay[(gpm OR opm OR opl OR ops OR gps OR gpl) CLVL>23]:
+
+//Essences
+ItemDisplay[tes]: %NAME% {%TAN%Essence %WHITE%from: %BLUE%Andariel %WHITE%or %BLUE%Duriel%NL%}
+ItemDisplay[ceh]: %NAME% {%TAN%Essence %WHITE%from: %TAN%Mephisto%NL%}
+ItemDisplay[bet]: %NAME% {%TAN%Essence %WHITE%from: %RED%Diablo%NL%}
+ItemDisplay[fed]: %NAME% {%TAN%Essence %WHITE%from: %DARK_GREEN%Baal%NL%}
+
+//Uber Keys
+ItemDisplay[pk1]: %NAME% {%TAN%Key %WHITE%from: %RED%Countess %WHITE%or %RED%Blood Raven%NL%}
+ItemDisplay[pk2]: %NAME% {%TAN%Key %WHITE%from: %BLUE%Summoner %WHITE%or %BLUE%Bloodwitch%NL%}
+ItemDisplay[pk3]: %NAME% {%TAN%Key %WHITE%from: %PURPLE%Nihlathak %WHITE%or %PURPLE%Izual%NL%}
+
+//Gems
+//hiding low ones
+ItemDisplay[GEM<3 DIFFICULTY>0]:
+ItemDisplay[GEM<4 DIFFICULTY>1]:
+//amethysts
+ItemDisplay[GEMTYPE=1 GEM<4]: %NAME% %ORANGE%[%PURPLE%*%ORANGE%]
+ItemDisplay[GEMTYPE=1 GEM>3]: %NAME% %ORANGE%[%PURPLE%O%ORANGE%]
+//diamonds
+ItemDisplay[GEMTYPE=2 GEM<4]: %NAME% %ORANGE%[%WHITE%*%ORANGE%]
+ItemDisplay[GEMTYPE=2 GEM>3]: %NAME% %ORANGE%[%WHITE%O%ORANGE%]
+//emeralds
+ItemDisplay[GEMTYPE=3 GEM<4]: %NAME% %ORANGE%[%GREEN%*%ORANGE%]
+ItemDisplay[GEMTYPE=3 GEM>3]: %NAME% %ORANGE%[%GREEN%O%ORANGE%]
+//rubys
+ItemDisplay[GEMTYPE=4 GEM<4]: %NAME% %ORANGE%[%RED%*%ORANGE%]
+ItemDisplay[GEMTYPE=4 GEM>3]: %NAME% %ORANGE%[%RED%O%ORANGE%]
+//sapphires
+ItemDisplay[GEMTYPE=5 GEM<4]: %NAME% %ORANGE%[%BLUE%*%ORANGE%]
+ItemDisplay[GEMTYPE=5 GEM>3]: %NAME% %ORANGE%[%BLUE%O%ORANGE%]
+//topazes
+ItemDisplay[GEMTYPE=6 GEM<4]: %NAME% %ORANGE%[%YELLOW%*%ORANGE%]
+ItemDisplay[GEMTYPE=6 GEM>3]: %NAME% %ORANGE%[%YELLOW%O%ORANGE%]
+//skulls
+ItemDisplay[GEMTYPE=7 GEM<4]: %NAME% %ORANGE%[%GRAY%*%ORANGE%]
+ItemDisplay[GEMTYPE=7 GEM>3]: %NAME% %ORANGE%[%GRAY%O%ORANGE%]
+
+//Runes
+ItemDisplay[RUNE<18]:%ORANGE%%RUNENAME% %GRAY%[%RUNENUM%]
+ItemDisplay[RUNE>17 AND RUNE<20]:%TAN%*   %ORANGE%%RUNENAME% %GRAY%[%WHITE%%RUNENUM%%GRAY%]%TAN%   *
+ItemDisplay[RUNE>20 AND RUNE<26]:%RED%*     %ORANGE%%RUNENAME% %GRAY%[%WHITE%%RUNENUM%%GRAY%]%RED%     *
+ItemDisplay[RUNE>25]:%GREEN%*%PURPLE%*%RED%*          %ORANGE%%RUNENAME% %GRAY%[%WHITE%%RUNENUM%%GRAY%]%RED%          *%PURPLE%**%GREEN%*
