@@ -9,7 +9,7 @@
 //USE ON UR OWN RISK
 
 //Gold
-ItemDisplay[GOLD<100 CLVL<19]:
+ItemDisplay[GOLD<100 CLVL<18]:
 ItemDisplay[GOLD<1000 (CLVL>17 AND CLVL<80)]:
 ItemDisplay[GOLD<5000 CLVL>79]:
 
