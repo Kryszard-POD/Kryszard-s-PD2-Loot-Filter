@@ -25,19 +25,6 @@ ItemDisplay[ETH NMAG]: %GRAY%[%WHITE%eth%GRAY%] %GRAY%%NAME%%CONTINUE%
 //Show me number of sockets of every socketed item
 ItemDisplay[SOCK>0]: %NAME% %TAN%[%WHITE%%SOCKETS%%TAN%]%CONTINUE%
 
-//Highlight good magic items
-ItemDisplay[jew MAG !ID]: %DOT-9A%%TAN%*%WHITE%*   %BLUE%%NAME%%WHITE%   *%TAN%*
-//Highlight good rare items
-ItemDisplay[(jew OR rin OR amu OR EQ7) RARE !ID]: %DOT-A8%%TAN%*%WHITE%*   %YELLOW%%NAME%%WHITE%   *%TAN%*
-
-//Show me OK uniques
-ItemDisplay[(zlb OR zvb OR zhb OR umc OR xhn OR xtp OR xlt OR upl OR uvg OR uhg OR xh9 OR usk OR ci2 OR baa OR bac OR dra OR dre OR lbt OR xhb OR uhb OR uow OR pa9 OR nea OR 7cr OR 7fl OR 7kr OR oba OR ama) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
-//Show me GG uniques
-ItemDisplay[(rin OR amu OR uar OR ulc OR xea OR urn OR uap OR ulm OR ci3 OR xtb OR uit OR 6lw OR 7gw OR 7gd OR obf) UNI !ID]: %BORDER-68%%PURPLE%*%RED%*%ORANGE%*%YELLOW%*     %GOLD%%NAME%     %YELLOW%*%ORANGE%*%RED%*%PURPLE%*%NL%%GREEN%pick me up
-ItemDisplay[jew UNI !ID]: %BORDER-68%%RED%*%ORANGE%*%YELLOW%*%GREEN%*%BLUE%*     %PURPLE%%NAME%%BLUE%     *%GREEN%*%YELLOW%*%ORANGE%*%RED%*%NL%%GREEN%pick me up
-//Show me Good set parts
-ItemDisplay[(amu OR rin OR uar OR ci3 OR 7qr OR uth) SET !ID]: %MAP-84%%PURPLE%*%RED%*%DARK_GREEN%*%GREEN%*     %NAME%     *%DARK_GREEN%*%RED%*%PURPLE%*
-
 //Health & Mana Potions
 ItemDisplay[rvl]: %PURPLE%R %WHITE%Full
 ItemDisplay[rvs]: %PURPLE%r %WHITE%35%
@@ -115,6 +102,37 @@ ItemDisplay[cm1 MAG !ID]: %DOT-9B%%GREEN%*%BLUE%  %NAME%  %GREEN%*
 ItemDisplay[cm2 MAG !ID]: %TAN%*%BLUE% %NAME% %TAN%*
 ItemDisplay[cm3 MAG !ID]: %DOT-9B%%PURPLE%*%BLUE%   %NAME%   %PURPLE%*
 
+//Highlight good magic items
+ItemDisplay[jew MAG !ID]: %DOT-9A%%TAN%*%WHITE%*   %BLUE%%NAME%%WHITE%   *%TAN%*
+//Highlight good rare items
+ItemDisplay[(jew OR rin OR amu OR EQ7) RARE !ID]: %DOT-A8%%TAN%*%WHITE%*   %YELLOW%%NAME%%WHITE%   *%TAN%*
+
+//OK UNIQUES
+//belts
+ItemDisplay[(zlb OR zvb OR zhb OR umc) UNI !ETH !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
+//armors
+ItemDisplay[(xhn OR xtp OR xlt OR upl OR uld) UNI !ETH !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
+//gloves
+ItemDisplay[(uvg OR uhg OR umg) UNI !ETH !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
+//helmets
+ItemDisplay[(xh9 OR usk OR ci2 OR baa OR bac OR dra OR dre OR uhm OR uh9 OR xhm OR drd OR bae) UNI !ETH !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
+//boots
+ItemDisplay[(lbt OR xhb OR uhb OR tbt OR xvb) UNI !ETH !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
+//shields
+ItemDisplay[(pa9 OR nea OR uts OR uow OR xsh OR xow OR pae OR nef) UNI !ETH !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
+//weapons
+ItemDisplay[(7fl OR 7kr OR 7cr OR 7gm OR 9tw) UNI !ETH !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
+ItemDisplay[(oba OR ama OR 6ws OR obc OR 7lw OR amf) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
+
+//GG UNIQUES
+ItemDisplay[(rin OR amu OR uar OR ulc OR xea OR urn OR uap OR ci3 OR xtb OR uit OR 6lw OR 7gw OR 7gd OR obf OR ulm) UNI !ID]: %BORDER-68%%PURPLE%*%RED%*%ORANGE%*%YELLOW%*     %GOLD%%NAME%     %YELLOW%*%ORANGE%*%RED%*%PURPLE%*%NL%%GREEN%pick me up
+
+//Rainbow Facet
+ItemDisplay[jew UNI !ID]: %BORDER-68%%RED%*%ORANGE%*%YELLOW%*%GREEN%*%BLUE%*     %PURPLE%%NAME%%BLUE%     *%GREEN%*%YELLOW%*%ORANGE%*%RED%*%NL%%GREEN%pick me up
+
+//Good SET parts
+ItemDisplay[(amu OR rin OR uar OR ci3 OR 7qr OR uth OR paf) SET !ID]: %MAP-84%%PURPLE%*%RED%*%DARK_GREEN%*%GREEN%*     %NAME%     *%DARK_GREEN%*%RED%*%PURPLE%*
+
 //Class items
 ItemDisplay[(SOR OR WAND OR (wsp OR 9ws OR 7ws) OR (WP6 AND CL7) OR DRU OR BAR OR NEC OR SIN) (MAG OR RARE)]: %NAME%
 
@@ -122,13 +140,26 @@ ItemDisplay[(SOR OR WAND OR (wsp OR 9ws OR 7ws) OR (WP6 AND CL7) OR DRU OR BAR O
 ItemDisplay[EQ7 (MAG OR RARE)]: %NAME%
 ItemDisplay[ci3 NMAG !ETH SOCK=0]: %NAME% %YELLOW%[%GRAY%imbue%YELLOW%]
 
+//Rare Gloves, Belts and Boots
+ItemDisplay[(GLOVES OR BOOTS OR BELT) RARE]: %NAME%
+
+//Craftables
+ItemDisplay[(uvg OR xvg) MAG]: %NAME% {%ORANGE%Blood Gloves %WHITE%= %BLUE%This Item %WHITE%+ Perf %RED%O %WHITE%+ %ORANGE%Nef Rune %WHITE%+ %BLUE%Jewel}
+ItemDisplay[xtb MAG]: %NAME% {%ORANGE%Blood Boots %WHITE%= %BLUE%This Item %WHITE%+ Perf %RED%O %WHITE%+ %ORANGE%Eth Rune %WHITE%+ %BLUE%Jewel}
+ItemDisplay[(xlg OR ulg) MAG]: %NAME% {%ORANGE%Caster Gloves %WHITE%= %BLUE%This Item %WHITE%+ Perf %PURPLE%O %WHITE%+ %ORANGE%Ort Rune %WHITE%+ %BLUE%Jewel}
+ItemDisplay[(uvc OR zvb) MAG]: %NAME% {%ORANGE%Caster Belt %WHITE%= %BLUE%This Item %WHITE%+ Perf %PURPLE%O %WHITE%+ %ORANGE%Ith Rune %WHITE%+ %BLUE%Jewel}
+ItemDisplay[(umg OR xmg) MAG]: %NAME% {%ORANGE%HitPower Gloves %WHITE%= %BLUE%This Item %WHITE%+ Perf %BLUE%O %WHITE%+ %ORANGE%Ort Rune %WHITE%+ %BLUE%Jewel}
+ItemDisplay[uit MAG]: %NAME% {%ORANGE%Safety Shield %WHITE%= %BLUE%This Item %WHITE%+ Perf %GREEN%O %WHITE%+ %ORANGE%Nef Rune %WHITE%+ %BLUE%Jewel}
+ItemDisplay[amu MAG]: %NAME% {%ORANGE%Caster Amulet %WHITE%= %BLUE%This Item %WHITE%+ Perf %PURPLE%O %WHITE%+ %ORANGE%Ral Rune %WHITE%+ %BLUE%Jewel}
+ItemDisplay[rin MAG]: %NAME% {%ORANGE%Blood Ring %WHITE%= %BLUE%This Item %WHITE%+ Perf %RED%O %WHITE%+ %ORANGE%Sol Rune %WHITE%+ %BLUE%Jewel}
+
 //Shop hunting
 ItemDisplay[WEAPON TABSK34>2]: %NAME%%NL%%RED%***   %GREEN%3bo weapon%RED%   ***
-ItemDisplay[EQ4 (TABSK0>2 OR TABSK2>2 OR TABSK50>2) AND IAS>19]: %NAME%%NL%%RED%***   %GREEN%3sk-20ias Gloves%RED%   ***
+ItemDisplay[EQ4 (TABSK0>2 OR TABSK2>2 OR TABSK50>2) AND IAS>19]: %NAME%%NL%%RED%***   %GREEN%3sk~20ias Gloves%RED%   ***
 ItemDisplay[WP13 (TABSK24>2 AND SK119>2)]: %NAME%%NL%%RED%***   %GREEN%FoH Scepter%RED%   ***
 ItemDisplay[MAG STAFF CHSK54>0]: %NAME%%NL%%RED%***   %GREEN%Teleport Charges%RED%   ***
 ItemDisplay[MAG WAND CHSK91>0]: %NAME%%NL%%RED%***   %GREEN%Lower Resistances Charges%RED%   ***
-
+ItemDisplay[MAG WAND CHSK82>0]: %NAME%%NL%%RED%***   %GREEN%Life Tap Charges%RED%   ***
 
 //Always show me those items
 ItemDisplay[UNI OR SET OR RW OR CRAFT]: %NAME%
@@ -137,11 +168,14 @@ ItemDisplay[UNI OR SET OR RW OR CRAFT]: %NAME%
 ItemDisplay[!(ARMOR OR WEAPON OR tbk OR ibk) QTY>0]: %NAME% %TAN%x %WHITE%%QTY%%CONTINUE%
 
 //HIDE EVERYTHING ELSE
-ItemDisplay[(SOR OR STAFF OR WAND OR SCEPTER OR DRU OR BAR OR NEC OR SIN) CLVL<41]: %NAME% %GRAY%(%TAN%$%WHITE%%PRICE%%GRAY%)
-ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE) CLVL<61]: %NAME%
+ItemDisplay[(SOR OR STAFF OR WAND OR SCEPTER OR DRU OR BAR OR NEC OR SIN) (NMAG OR ID) CLVL<41]: %NAME% %GRAY%(%TAN%$%WHITE%%PRICE%%GRAY%)
+ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE) CLVL<41]: %NAME%
+ItemDisplay[(ARMOR OR WEAPON) (EXC OR ELT) (MAG OR RARE) CLVL>40 AND CLVL<80]: %NAME%
 ItemDisplay[(ARMOR OR WEAPON) NMAG AND (!ETH AND !INF) SOCK>1 CLVL<41]: %NAME%
-ItemDisplay[(ARMOR OR WEAPON) (EXC OR ELT) NMAG AND (!ETH AND !INF) SOCK>1 CLVL>39 AND CLVL<80]: %NAME%
+ItemDisplay[(ARMOR OR WEAPON) (EXC OR ELT) NMAG AND (!ETH AND !INF) SOCK>1 CLVL>40 AND CLVL<80]: %NAME%
 ItemDisplay[(ARMOR OR WEAPON) INF]: 
 ItemDisplay[(ARMOR OR WEAPON) !leg CLVL>18]: 
 
 //It’s just different sizes. BORDER > MAP > DOT > PX.
+//%NOTIFY-D%
+//%NOTIFY-0% -> %NOTIFY-F%
