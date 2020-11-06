@@ -261,5 +261,6 @@ ItemDisplay[(ARMOR OR WEAPON) INF]:
 ItemDisplay[(ARMOR OR WEAPON) !leg CLVL>18]: 
 
 //It’s just different sizes. BORDER > MAP > DOT > PX.
+//ItemDisplay[]: Hi, this is NOTIFY-B %MAP%%NOTIFY-B%
 //%NOTIFY-D%
 //%NOTIFY-0% -> %NOTIFY-F%
