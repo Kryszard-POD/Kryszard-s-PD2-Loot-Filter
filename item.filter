@@ -1,12 +1,10 @@
-// Kryszard's PD2 Loot Filter ver alpha.0.0.1
+// Kryszard's PD2 Loot Filter ver 1.0.0
 //
 // twitch.tv/kryszard
 //
 // For Casual and EndGame Players
-
-//FILTER UNFINISHED
-//WORK IN PROGRESS
-//USE ON UR OWN RISK
+//
+// Copy & Paste this code to your default.filter file in PD2 directory
 
 //Gold
 ItemDisplay[GOLD<100 CLVL<18]:
@@ -98,11 +96,11 @@ ItemDisplay[GEMTYPE=7 GEM<4]: %NAME% %ORANGE%[%GRAY%*%ORANGE%]
 ItemDisplay[GEMTYPE=7 GEM>3]: %NAME% %ORANGE%[%GRAY%O%ORANGE%]%CONTINUE%
 
 //Runes
-ItemDisplay[RUNE>0]: %NAME% {%TAN%Note %WHITE%: Transmute %ORANGE%Runes %WHITE%with %GRAY%key %WHITE%to upgrade them}%CONTINUE%
 ItemDisplay[RUNE<18]:%ORANGE%%RUNENAME% %GRAY%[%TAN%%RUNENUM%%GRAY%]%CONTINUE%
 ItemDisplay[RUNE>17 AND RUNE<20]:%TAN%*   %ORANGE%%RUNENAME% Rune %GRAY%[%WHITE%%RUNENUM%%GRAY%]%TAN%   *%CONTINUE%
 ItemDisplay[RUNE>19 AND RUNE<26]:%DOT-5F%%RED%*     %ORANGE%%RUNENAME% Rune %GRAY%[%RED%%RUNENUM%%GRAY%]%RED%     *%CONTINUE%
 ItemDisplay[RUNE>25]:%BORDER-62%%GREEN%*%PURPLE%*%RED%*          %ORANGE%%RUNENAME% Rune %GRAY%[%GREEN%%RUNENUM%%GRAY%]%RED%          *%PURPLE%**%GREEN%*%CONTINUE%
+ItemDisplay[RUNE>0]: %NAME% {%TAN%Note %WHITE%: Mix %ORANGE%Runes %WHITE%with %GRAY%key %WHITE%to upgrade}%CONTINUE%
 
 //All Charms
 ItemDisplay[cm2 MAG !ID]: %TAN%*%BLUE% %NAME% %TAN%*
@@ -254,6 +252,7 @@ ItemDisplay[jew UNI !ID]: %BORDER-68%%RED%*%ORANGE%*%YELLOW%*%GREEN%*%BLUE%*    
 ItemDisplay[(amu OR rin OR uar OR ci3 OR 7qr OR uth OR paf) SET !ID]: %MAP-84%%PURPLE%*%RED%*%DARK_GREEN%*%GREEN%*     %NAME%     *%DARK_GREEN%*%RED%*%PURPLE%*
 
 //Class items
+ItemDisplay[(SOR OR STAFF OR WAND OR SCEPTER OR DRU OR BAR OR NEC OR SIN) (NMAG OR ID) CLVL<41]: %NAME% %GRAY%(%TAN%$%WHITE%%PRICE%%GRAY%)
 ItemDisplay[(SOR OR WAND OR (wsp OR 9ws OR 7ws) OR (WP6 AND CL7) OR DRU OR BAR OR NEC OR SIN) (MAG OR RARE)]: %NAME%
 
 //Criclets
@@ -264,14 +263,14 @@ ItemDisplay[ci3 NMAG !ETH SOCK=0]: %NAME% %YELLOW%[%GRAY%imbue%YELLOW%]
 ItemDisplay[(GLOVES OR BOOTS OR BELT) RARE]: %NAME%
 
 //Craftables
-ItemDisplay[(uvg OR xvg) MAG]: %NAME% {%ORANGE%Blood Gloves %WHITE%= %BLUE%This Item %WHITE%+ Perf %RED%O %WHITE%+ %ORANGE%Nef Rune %WHITE%+ %BLUE%Jewel %WHITE%}
-ItemDisplay[xtb MAG]: %NAME% {%ORANGE%Blood Boots %WHITE%= %BLUE%This Item %WHITE%+ Perf %RED%O %WHITE%+ %ORANGE%Eth Rune %WHITE%+ %BLUE%Jewel %WHITE%}
-ItemDisplay[(xlg OR ulg) MAG]: %NAME% {%ORANGE%Caster Gloves %WHITE%= %BLUE%This Item %WHITE%+ Perf %PURPLE%O %WHITE%+ %ORANGE%Ort Rune %WHITE%+ %BLUE%Jewel %WHITE%}
-ItemDisplay[(uvc OR zvb) MAG]: %NAME% {%ORANGE%Caster Belt %WHITE%= %BLUE%This Item %WHITE%+ Perf %PURPLE%O %WHITE%+ %ORANGE%Ith Rune %WHITE%+ %BLUE%Jewel %WHITE%}
-ItemDisplay[(umg OR xmg) MAG]: %NAME% {%ORANGE%HitPower Gloves %WHITE%= %BLUE%This Item %WHITE%+ Perf %BLUE%O %WHITE%+ %ORANGE%Ort Rune %WHITE%+ %BLUE%Jewel %WHITE%}
-ItemDisplay[uit MAG]: %NAME% {%ORANGE%Safety Shield %WHITE%= %BLUE%This Item %WHITE%+ Perf %GREEN%O %WHITE%+ %ORANGE%Nef Rune %WHITE%+ %BLUE%Jewel %WHITE%}
-ItemDisplay[amu MAG]: %NAME% {%ORANGE%Caster Amulet %WHITE%= %BLUE%This Item %WHITE%+ Perf %PURPLE%O %WHITE%+ %ORANGE%Ral Rune %WHITE%+ %BLUE%Jewel %WHITE%}
-ItemDisplay[rin MAG]: %NAME% {%ORANGE%Blood Ring %WHITE%= %BLUE%This Item %WHITE%+ Perf %RED%O %WHITE%+ %ORANGE%Sol Rune %WHITE%+ %BLUE%Jewel %WHITE%}
+ItemDisplay[(uvg OR xvg) MAG]: %NAME% {%ORANGE%Blood Gloves %WHITE%= %BLUE%This Item %WHITE%+ Perf %RED%O %WHITE%+ %ORANGE%Nef %WHITE%+ %BLUE%Jewel %WHITE%}
+ItemDisplay[xtb MAG]: %NAME% {%ORANGE%Blood Boots %WHITE%= %BLUE%This Item %WHITE%+ Perf %RED%O %WHITE%+ %ORANGE%Eth %WHITE%+ %BLUE%Jewel %WHITE%}
+ItemDisplay[(xlg OR ulg) MAG]: %NAME% {%ORANGE%Caster Gloves %WHITE%= %BLUE%This Item %WHITE%+ Perf %PURPLE%O %WHITE%+ %ORANGE%Ort %WHITE%+ %BLUE%Jewel %WHITE%}
+ItemDisplay[(uvc OR zvb) MAG]: %NAME% {%ORANGE%Caster Belt %WHITE%= %BLUE%This Item %WHITE%+ Perf %PURPLE%O %WHITE%+ %ORANGE%Ith %WHITE%+ %BLUE%Jewel %WHITE%}
+ItemDisplay[(umg OR xmg) MAG]: %NAME% {%ORANGE%HitPower Gloves %WHITE%= %BLUE%This Item %WHITE%+ Perf %BLUE%O %WHITE%+ %ORANGE%Ort %WHITE%+ %BLUE%Jewel %WHITE%}
+ItemDisplay[uit MAG]: %NAME% {%ORANGE%Safety Shield %WHITE%= %BLUE%This Item %WHITE%+ Perf %GREEN%O %WHITE%+ %ORANGE%Nef %WHITE%+ %BLUE%Jewel %WHITE%}
+ItemDisplay[amu MAG]: %NAME% {%ORANGE%Caster Amulet %WHITE%= %BLUE%This Item %WHITE%+ Perf %PURPLE%O %WHITE%+ %ORANGE%Ral %WHITE%+ %BLUE%Jewel %WHITE%}
+ItemDisplay[rin MAG]: %NAME% {%ORANGE%Blood Ring %WHITE%= %BLUE%This Item %WHITE%+ Perf %RED%O %WHITE%+ %ORANGE%Sol %WHITE%+ %BLUE%Jewel %WHITE%}
 
 //Shop Hunting
 ItemDisplay[WEAPON TABSK34>2]: %NAME%%NL%%RED%***   %GREEN%3bo weapon%RED%   ***
@@ -365,7 +364,6 @@ ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE OR SET OR UNI OR CRAFT) ID]: %NAME%
 ItemDisplay[!(ARMOR OR WEAPON OR tbk OR ibk) QTY>0]: %NAME% %TAN%x %WHITE%%QTY%%CONTINUE%
 
 //HIDE EVERYTHING ELSE
-ItemDisplay[(SOR OR STAFF OR WAND OR SCEPTER OR DRU OR BAR OR NEC OR SIN) (NMAG OR ID) CLVL<41]: %NAME% %GRAY%(%TAN%$%WHITE%%PRICE%%GRAY%)
 ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE) CLVL<41]: %NAME%
 ItemDisplay[(ARMOR OR WEAPON) (EXC OR ELT) (MAG OR RARE) CLVL>40 AND CLVL<80]: %NAME%
 ItemDisplay[(ARMOR OR WEAPON) NMAG AND (!ETH AND !INF) SOCK>1 CLVL<41]: %NAME%
@@ -374,6 +372,3 @@ ItemDisplay[(ARMOR OR WEAPON) INF]:
 ItemDisplay[(ARMOR OR WEAPON) !leg CLVL>18]: 
 
 //It’s just different sizes. BORDER > MAP > DOT > PX.
-//ItemDisplay[]: Hi, this is NOTIFY-B %MAP%%NOTIFY-B%
-//%NOTIFY-D%
-//%NOTIFY-0% -> %NOTIFY-F%
