@@ -25,6 +25,10 @@ ItemDisplay[ETH NMAG]: %GRAY%[%WHITE%eth%GRAY%] %GRAY%%NAME%%CONTINUE%
 //Show me number of sockets of every socketed item
 ItemDisplay[SOCK>0]: %NAME% %TAN%[%WHITE%%SOCKETS%%TAN%]%CONTINUE%
 
+//Project Diablo 2 items
+ItemDisplay[wss OR lbox OR rera OR imra OR upma OR imma OR scou]: %MAP-E0%%NAME% %ORANGE%*
+ItemDisplay[t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18]: %MAP-7F%%NAME% %GREEN%*
+
 //Health & Mana Potions
 ItemDisplay[rvl]: %PURPLE%R %WHITE%Full
 ItemDisplay[rvs]: %PURPLE%r %WHITE%35%
@@ -156,7 +160,7 @@ ItemDisplay[uit MAG]: %NAME% {%ORANGE%Safety Shield %WHITE%= %BLUE%This Item %WH
 ItemDisplay[amu MAG]: %NAME% {%ORANGE%Caster Amulet %WHITE%= %BLUE%This Item %WHITE%+ Perf %PURPLE%O %WHITE%+ %ORANGE%Ral Rune %WHITE%+ %BLUE%Jewel %WHITE%(%CRAFTALVL%)}
 ItemDisplay[rin MAG]: %NAME% {%ORANGE%Blood Ring %WHITE%= %BLUE%This Item %WHITE%+ Perf %RED%O %WHITE%+ %ORANGE%Sol Rune %WHITE%+ %BLUE%Jewel %WHITE%(%CRAFTALVL%)}
 
-//Shop hunting
+//Shop Hunting
 ItemDisplay[WEAPON TABSK34>2]: %NAME%%NL%%RED%***   %GREEN%3bo weapon%RED%   ***
 ItemDisplay[EQ4 (TABSK0>2 OR TABSK2>2 OR TABSK50>2) AND IAS>19]: %NAME%%NL%%RED%***   %GREEN%3sk~20ias Gloves%RED%   ***
 ItemDisplay[WP13 (TABSK24>2 AND SK119>2)]: %NAME%%NL%%RED%***   %GREEN%FoH Scepter%RED%   ***
