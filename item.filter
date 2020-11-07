@@ -1,4 +1,4 @@
-// Kryszard's PD2 Loot Filter ver 1.0.0
+// Kryszard's PD2 Loot Filter ver 1.0.1
 //
 // twitch.tv/kryszard
 //
@@ -70,6 +70,14 @@ ItemDisplay[pk2]: %NAME% {%TAN%Key %WHITE%from: %BLUE%Summoner %WHITE%or %BLUE%B
 ItemDisplay[pk3]: %NAME% {%TAN%Key %WHITE%from: %PURPLE%Nihlathak %WHITE%or %PURPLE%Izual%NL%}
 
 //Gems
+//fix for flaweless and perfects for some reason it need that fix?
+ItemDisplay[gzv OR gpv]: %NAME% %ORANGE%[%PURPLE%O%ORANGE%]
+ItemDisplay[glw OR gpw]: %NAME% %ORANGE%[%WHITE%O%ORANGE%]
+ItemDisplay[glg OR gpg]: %NAME% %ORANGE%[%GREEN%O%ORANGE%]
+ItemDisplay[glr OR gpr]: %NAME% %ORANGE%[%RED%O%ORANGE%]
+ItemDisplay[glb OR gpb]: %NAME% %ORANGE%[%BLUE%O%ORANGE%]
+ItemDisplay[gly OR gpy]: %NAME% %ORANGE%[%YELLOW%O%ORANGE%]
+ItemDisplay[skl OR skz]: %NAME% %ORANGE%[%GRAY%O%ORANGE%]
 //hiding low ones
 ItemDisplay[GEM<3 DIFFICULTY>0]:
 ItemDisplay[GEM<4 DIFFICULTY>1]:
@@ -251,9 +259,13 @@ ItemDisplay[jew UNI !ID]: %BORDER-68%%RED%*%ORANGE%*%YELLOW%*%GREEN%*%BLUE%*    
 //Good SET parts
 ItemDisplay[(amu OR rin OR uar OR ci3 OR 7qr OR uth OR paf) SET !ID]: %MAP-84%%PURPLE%*%RED%*%DARK_GREEN%*%GREEN%*     %NAME%     *%DARK_GREEN%*%RED%*%PURPLE%*
 
-//Class items
-ItemDisplay[(SOR OR STAFF OR WAND OR SCEPTER OR DRU OR BAR OR NEC OR SIN) (NMAG OR ID) CLVL<41]: %NAME% %GRAY%(%TAN%$%WHITE%%PRICE%%GRAY%)
-ItemDisplay[(SOR OR WAND OR (wsp OR 9ws OR 7ws) OR (WP6 AND CL7) OR DRU OR BAR OR NEC OR SIN) (MAG OR RARE)]: %NAME%
+//Shop Hunting
+ItemDisplay[WEAPON TABSK34>2]: %NAME%%NL%%RED%***   %GREEN%3bo weapon%RED%   ***
+ItemDisplay[EQ4 (TABSK0>2 OR TABSK2>2 OR TABSK50>2) AND IAS>19]: %NAME%%NL%%RED%***   %GREEN%3sk~20ias Gloves%RED%   ***
+ItemDisplay[WP13 (TABSK24>2 AND SK119>2)]: %NAME%%NL%%RED%***   %GREEN%FoH Scepter%RED%   ***
+ItemDisplay[MAG STAFF CHSK54>0]: %NAME%%NL%%RED%***   %GREEN%Teleport Charges%RED%   ***
+ItemDisplay[MAG WAND CHSK91>0]: %NAME%%NL%%RED%***   %GREEN%Lower Resistances Charges%RED%   ***
+ItemDisplay[MAG WAND CHSK82>0]: %NAME%%NL%%RED%***   %GREEN%Life Tap Charges%RED%   ***
 
 //Criclets
 ItemDisplay[EQ7 (MAG OR RARE)]: %NAME%
@@ -270,15 +282,7 @@ ItemDisplay[(uvc OR zvb) MAG]: %NAME% {%ORANGE%Caster Belt %WHITE%= %BLUE%This I
 ItemDisplay[(umg OR xmg) MAG]: %NAME% {%ORANGE%HitPower Gloves %WHITE%= %BLUE%This Item %WHITE%+ Perf %BLUE%O %WHITE%+ %ORANGE%Ort %WHITE%+ %BLUE%Jewel %WHITE%}
 ItemDisplay[uit MAG]: %NAME% {%ORANGE%Safety Shield %WHITE%= %BLUE%This Item %WHITE%+ Perf %GREEN%O %WHITE%+ %ORANGE%Nef %WHITE%+ %BLUE%Jewel %WHITE%}
 ItemDisplay[amu MAG]: %NAME% {%ORANGE%Caster Amulet %WHITE%= %BLUE%This Item %WHITE%+ Perf %PURPLE%O %WHITE%+ %ORANGE%Ral %WHITE%+ %BLUE%Jewel %WHITE%}
-ItemDisplay[rin MAG]: %NAME% {%ORANGE%Blood Ring %WHITE%= %BLUE%This Item %WHITE%+ Perf %RED%O %WHITE%+ %ORANGE%Sol %WHITE%+ %BLUE%Jewel %WHITE%}
-
-//Shop Hunting
-ItemDisplay[WEAPON TABSK34>2]: %NAME%%NL%%RED%***   %GREEN%3bo weapon%RED%   ***
-ItemDisplay[EQ4 (TABSK0>2 OR TABSK2>2 OR TABSK50>2) AND IAS>19]: %NAME%%NL%%RED%***   %GREEN%3sk~20ias Gloves%RED%   ***
-ItemDisplay[WP13 (TABSK24>2 AND SK119>2)]: %NAME%%NL%%RED%***   %GREEN%FoH Scepter%RED%   ***
-ItemDisplay[MAG STAFF CHSK54>0]: %NAME%%NL%%RED%***   %GREEN%Teleport Charges%RED%   ***
-ItemDisplay[MAG WAND CHSK91>0]: %NAME%%NL%%RED%***   %GREEN%Lower Resistances Charges%RED%   ***
-ItemDisplay[MAG WAND CHSK82>0]: %NAME%%NL%%RED%***   %GREEN%Life Tap Charges%RED%   ***
+ItemDisplay[rin MAG]: %NAME%{%ORANGE%Blood Ring %WHITE%= %BLUE%This Item %WHITE%+ Perf %RED%O %WHITE%+ %ORANGE%Sol %WHITE%+ %BLUE%Jewel %WHITE%}
 
 //RuneWord Bases
 //Spirit Swords
@@ -353,6 +357,10 @@ ItemDisplay[(pab OR pac) (!INF AND !ETH) AND (NMAG OR RW) (SOCK=0 OR SOCK>2) RES
 ItemDisplay[CL3 (!INF AND !ETH) AND (NMAG OR RW) (SOCK=0 OR SOCK>2) (RES>34 AND CLVL<80)]: %GRAY%[%GREEN%res%GRAY%] %NAME%
 ItemDisplay[ush (!INF AND !ETH) AND (NMAG OR RW)  SOCK>1]: %NAME%
 ItemDisplay[uit !INF AND (NMAG OR RW)  (SOCK=0 OR SOCK=4)]: %NAME%
+
+//Class items
+ItemDisplay[(SOR OR STAFF OR WAND OR SCEPTER OR DRU OR BAR OR NEC OR SIN) (NMAG OR ID) CLVL<41]: %NAME% %GRAY%(%TAN%$%WHITE%%PRICE%%GRAY%)
+ItemDisplay[(SOR OR WAND OR (wsp OR 9ws OR 7ws) OR (WP6 AND CL7) OR DRU OR BAR OR NEC OR SIN) (MAG OR RARE)]: %NAME%
 
 //Always show me those items
 ItemDisplay[UNI OR SET OR RW OR CRAFT]: %NAME%
