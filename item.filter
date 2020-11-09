@@ -1,4 +1,4 @@
-// Kryszard's PD2 Loot Filter ver 1.1.0
+// Kryszard's PD2 Loot Filter ver 1.1.2
 //
 // twitch.tv/kryszard
 //
@@ -24,8 +24,15 @@ ItemDisplay[SOCK>0]: %NAME% %TAN%[%WHITE%%SOCKETS%%TAN%]%CONTINUE%
 ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE) ID]: %NAME% %GRAY%(%TAN%$%WHITE%%PRICE%%GRAY%)%CONTINUE%
 
 //Project Diablo 2 items
-ItemDisplay[wss OR lbox OR rera OR imra OR upma OR imma OR scou]: %MAP-4A%%NAME% %ORANGE%*
-ItemDisplay[t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18]: %MAP-7F%%NAME% %GREEN%*
+ItemDisplay[wss]: %MAP-4A%%NAME% %ORANGE%*%CONTINUE%
+ItemDisplay[imra]: This Item + %BLUE%Jewel %WHITE%+ %ORANGE%Rune>9%NL%%TAN%Note %WHITE%: %YELLOW%Imbue %WHITE%White Map :%NL%%NAME% %ORANGE%*%CONTINUE%
+ItemDisplay[rera]: This Item + Perf Gem + %ORANGE%Rune>9%NL%%TAN%Note %WHITE%: Reroll %YELLOW%Rare %WHITE%Map :%NL%%NAME% %ORANGE%*%CONTINUE%
+ItemDisplay[upma]: This Item + Perf %GRAY%O %WHITE%+ %ORANGE%Rune>9%NL%%TAN%Note %WHITE%: %BLUE%Magic %WHITE%Map to %YELLOW%Rare %WHITE%:%NL%%NAME% %ORANGE%*%CONTINUE%
+ItemDisplay[imma]: This Item + %BLUE%Jewel %WHITE%+ %ORANGE%Rune>9%NL%%TAN%Note %WHITE%: %YELLOW%Imbue %BLUE%Magic %WHITE%Map :%NL%%NAME% %ORANGE%*%CONTINUE%
+ItemDisplay[scou]: This Item + %ORANGE%Hel%NL%%TAN%Note %WHITE%: Revert back to a White Map :%NL%%NAME% %ORANGE%*%CONTINUE%
+ItemDisplay[lbox]: %MAP-4A%%NAME% %ORANGE%*%CONTINUE%
+ItemDisplay[(t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18) MAG]: %MAP-7F%%NAME% %GREEN%*{%WHITE%To Modify Maps buy Orbs form Anya%NL%%TAN%Note %WHITE%: Reroll = Mix with 3x Perf %GRAY%O}
+ItemDisplay[t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18]: %MAP-7F%%NAME% %GREEN%*{%TAN%Note %WHITE%: To Modify Maps buy Orbs form Anya}
 
 //Health & Mana Potions
 ItemDisplay[rvl]: %PURPLE%R %WHITE%Full
@@ -59,15 +66,15 @@ ItemDisplay[(aqv OR cqv) NMAG CLVL>6]:
 ItemDisplay[(gpm OR opm OR opl OR ops OR gps OR gpl) CLVL>23]:
 
 //Essences
-ItemDisplay[tes]: %NAME% {%TAN%Essence %WHITE%from: %BLUE%Andariel %WHITE%or %BLUE%Duriel%NL%}
-ItemDisplay[ceh]: %NAME% {%TAN%Essence %WHITE%from: %TAN%Mephisto%NL%}
-ItemDisplay[bet]: %NAME% {%TAN%Essence %WHITE%from: %RED%Diablo%NL%}
-ItemDisplay[fed]: %NAME% {%TAN%Essence %WHITE%from: %DARK_GREEN%Baal%NL%}
+ItemDisplay[tes]: %NAME% {%TAN%Essence %WHITE%from: %BLUE%Andariel %WHITE%or %BLUE%Duriel%NL%}%CONTINUE%
+ItemDisplay[ceh]: %NAME% {%TAN%Essence %WHITE%from: %TAN%Mephisto%NL%}%CONTINUE%
+ItemDisplay[bet]: %NAME% {%TAN%Essence %WHITE%from: %RED%Diablo%NL%}%CONTINUE%
+ItemDisplay[fed]: %NAME% {%TAN%Essence %WHITE%from: %DARK_GREEN%Baal%NL%}%CONTINUE%
 
 //Uber Keys
-ItemDisplay[pk1]: %NAME% {%TAN%Key %WHITE%from: %RED%Countess %WHITE%or %RED%Blood Raven%NL%}
-ItemDisplay[pk2]: %NAME% {%TAN%Key %WHITE%from: %BLUE%Summoner %WHITE%or %BLUE%Bloodwitch%NL%}
-ItemDisplay[pk3]: %NAME% {%TAN%Key %WHITE%from: %PURPLE%Nihlathak %WHITE%or %PURPLE%Izual%NL%}
+ItemDisplay[pk1]: %NAME% {%TAN%Key %WHITE%from: %RED%Countess %WHITE%or %RED%Blood Raven%NL%}%CONTINUE%
+ItemDisplay[pk2]: %NAME% {%TAN%Key %WHITE%from: %BLUE%Summoner %WHITE%or %BLUE%Bloodwitch%NL%}%CONTINUE%
+ItemDisplay[pk3]: %NAME% {%TAN%Key %WHITE%from: %PURPLE%Nihlathak %WHITE%or %PURPLE%Izual%NL%}%CONTINUE%
 
 //Gems
 //fix for flaweless and perfects for some reason it need that fix?
@@ -267,7 +274,7 @@ ItemDisplay[MAG STAFF CHSK54>0]: %NAME%%NL%%RED%***   %GREEN%Teleport Charges%RE
 ItemDisplay[MAG WAND CHSK91>0]: %NAME%%NL%%RED%***   %GREEN%Lower Resist Charges%RED%   ***
 ItemDisplay[MAG WAND CHSK82>0]: %NAME%%NL%%RED%***   %GREEN%Life Tap Charges%RED%   ***
 
-//Criclets
+//Circlets
 ItemDisplay[EQ7 (MAG OR RARE)]: %NAME%
 ItemDisplay[ci3 NMAG !ETH SOCK=0]: %NAME% %YELLOW%[%GRAY%imbue%YELLOW%]
 
@@ -275,12 +282,12 @@ ItemDisplay[ci3 NMAG !ETH SOCK=0]: %NAME% %YELLOW%[%GRAY%imbue%YELLOW%]
 ItemDisplay[(GLOVES OR BOOTS OR BELT) RARE]: %NAME%
 
 //Craftables
-ItemDisplay[(uvg OR xvg) MAG]: %GRAY%*%BLUE%%NAME%%GRAY%*{%BLUE%This Item %WHITE%+ Perf %RED%O %WHITE%+ %ORANGE%Nef %WHITE%+ %BLUE%Jewel%NL%%TAN%Note %WHITE%: To craft %ORANGE%Blood Gloves %WHITE%Mix :}
-ItemDisplay[xtb MAG]: %GRAY%*%BLUE%%NAME%%GRAY%*{%BLUE%This Item %WHITE%+ Perf %RED%O %WHITE%+ %ORANGE%Eth %WHITE%+ %BLUE%Jewel%NL%%TAN%Note %WHITE%: To craft %ORANGE%Blood Boots %WHITE%Mix :}
-ItemDisplay[(xlg OR ulg) MAG]: %GRAY%*%BLUE%%NAME%%GRAY%*{%BLUE%This Item %WHITE%+ Perf %PURPLE%O %WHITE%+ %ORANGE%Ort %WHITE%+ %BLUE%Jewel%NL%%TAN%Note %WHITE%: To craft %ORANGE%Caster Gloves %WHITE%Mix :}
-ItemDisplay[(uvc OR zvb) MAG]: %GRAY%*%BLUE%%NAME%%GRAY%*{%BLUE%This Item %WHITE%+ Perf %PURPLE%O %WHITE%+ %ORANGE%Ith %WHITE%+ %BLUE%Jewel%NL%%TAN%Note %WHITE%: To craft %ORANGE%Caster Belt %WHITE%Mix :}
-ItemDisplay[(umg OR xmg) MAG]: %GRAY%*%BLUE%%NAME%%GRAY%*{%BLUE%This Item %WHITE%+ Perf %BLUE%O %WHITE%+ %ORANGE%Ort %WHITE%+ %BLUE%Jewel%NL%%TAN%Note %WHITE%: To craft %ORANGE%HitPower Gloves %WHITE%Mix :}
-ItemDisplay[uit MAG]: %GRAY%*%BLUE%%NAME%%GRAY%*{%BLUE%This Item %WHITE%+ Perf %GREEN%O %WHITE%+ %ORANGE%Nef %WHITE%+ %BLUE%Jewel%NL%%TAN%Note %WHITE%: To craft %ORANGE%Safety Shield %WHITE%Mix :}
+ItemDisplay[(uvg OR xvg) MAG]: %GRAY%* %BLUE%%NAME% %GRAY%*{%BLUE%This Item %WHITE%+ Perf %RED%O %WHITE%+ %ORANGE%Nef %WHITE%+ %BLUE%Jewel%NL%%TAN%Note %WHITE%: To craft %ORANGE%Blood Gloves %WHITE%Mix :}
+ItemDisplay[xtb MAG]: %GRAY%* %BLUE%%NAME% %GRAY%*{%BLUE%This Item %WHITE%+ Perf %RED%O %WHITE%+ %ORANGE%Eth %WHITE%+ %BLUE%Jewel%NL%%TAN%Note %WHITE%: To craft %ORANGE%Blood Boots %WHITE%Mix :}
+ItemDisplay[(xlg OR ulg) MAG]: %GRAY%* %BLUE%%NAME% %GRAY%*{%BLUE%This Item %WHITE%+ Perf %PURPLE%O %WHITE%+ %ORANGE%Ort %WHITE%+ %BLUE%Jewel%NL%%TAN%Note %WHITE%: To craft %ORANGE%Caster Gloves %WHITE%Mix :}
+ItemDisplay[(uvc OR zvb) MAG]: %GRAY%* %BLUE%%NAME% %GRAY%*{%BLUE%This Item %WHITE%+ Perf %PURPLE%O %WHITE%+ %ORANGE%Ith %WHITE%+ %BLUE%Jewel%NL%%TAN%Note %WHITE%: To craft %ORANGE%Caster Belt %WHITE%Mix :}
+ItemDisplay[(umg OR xmg) MAG]: %GRAY%* %BLUE%%NAME% %GRAY%*{%BLUE%This Item %WHITE%+ Perf %BLUE%O %WHITE%+ %ORANGE%Ort %WHITE%+ %BLUE%Jewel%NL%%TAN%Note %WHITE%: To craft %ORANGE%HitPower Gloves %WHITE%Mix :}
+ItemDisplay[uit MAG]: %GRAY%* %BLUE%%NAME% %GRAY%*{%BLUE%This Item %WHITE%+ Perf %GREEN%O %WHITE%+ %ORANGE%Nef %WHITE%+ %BLUE%Jewel%NL%%TAN%Note %WHITE%: To craft %ORANGE%Safety Shield %WHITE%Mix :}
 ItemDisplay[amu MAG]: %NAME%{%BLUE%This Item %WHITE%+ Perf %PURPLE%O %WHITE%+ %ORANGE%Ral %WHITE%+ %BLUE%Jewel%NL%%TAN%Note %WHITE%: To craft %ORANGE%Caster Amulet %WHITE%Mix :}
 ItemDisplay[rin MAG]: %NAME%{%BLUE%This Item %WHITE%+ Perf %RED%O %WHITE%+ %ORANGE%Sol %WHITE%+ %BLUE%Jewel%NL%%TAN%Note %WHITE%: To craft %ORANGE%Blood Ring %WHITE%Mix :}
 
@@ -331,7 +338,7 @@ ItemDisplay[(clw OR btl OR skr OR 9ar OR 9lw OR 9tw OR 9qr OR 7ar OR 7wb OR 7lw 
 ItemDisplay[(clw OR btl OR skr OR 9ar OR 9lw OR 9tw OR 9qr OR 7ar OR 7wb OR 7lw OR 7tw OR 7qr) !INF AND (NMAG OR RW) SK262>2 (SOCK=0 OR SOCK=3)]: %DOT-D6%%GRAY%[%ORANGE%+3 wof%GRAY%] %NAME%
 //Armors
 ItemDisplay[xtp !ETH AND (NMAG OR RW) SOCK=2]: %DOT-D6%%NAME%
-ItemDisplay[(xtp OR utp OR uui) (!INF AND !ETH) AND (NMAG OR RW) (SOCK=0 OR SOCK>2)]: %DOT-D6%%GRAY%%NAME%
+ItemDisplay[(xtp OR utp OR uui) (!INF AND !ETH) AND (NMAG OR RW) (SOCK=0 OR SOCK>2)]: %DOT-D6%%NAME%
 ItemDisplay[EQ2 ELT ETH AND (NMAG OR RW) (SOCK=0 OR SOCK>2)]: %DOT-D6%%NAME%
 //Helmets
 ItemDisplay[(ci3 OR uh9) (!INF AND !ETH) AND (NMAG OR RW) SOCK=3]: %DOT-D6%%NAME%
@@ -359,7 +366,7 @@ ItemDisplay[ush (!INF AND !ETH) AND (NMAG OR RW)  SOCK>1]: %DOT-D6%%NAME%
 ItemDisplay[uit !INF AND (NMAG OR RW) (SOCK=0 OR SOCK=4)]: %DOT-D6%%NAME%
 
 //Class items
-ItemDisplay[(SOR OR STAFF OR WAND OR SCEPTER OR DRU OR BAR OR NEC OR SIN) (NMAG OR ID) CLVL<41]: %NAME% %GRAY%(%TAN%$%WHITE%%PRICE%%GRAY%)
+ItemDisplay[(SOR OR STAFF OR WAND OR SCEPTER OR DRU OR BAR OR NEC OR SIN) NMAG CLVL<41]: %NAME% %GRAY%(%TAN%$%WHITE%%PRICE%%GRAY%)
 ItemDisplay[(SOR OR WAND OR (wsp OR 9ws OR 7ws) OR (WP6 AND CL7) OR DRU OR BAR OR NEC OR SIN) (MAG OR RARE)]: %NAME%
 
 //Always show me those items
