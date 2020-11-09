@@ -1,4 +1,4 @@
-// Kryszard's PD2 Loot Filter ver 1.1.2
+// Kryszard's PD2 Loot Filter ver 1.1.3
 //
 // twitch.tv/kryszard
 //
@@ -39,16 +39,16 @@ ItemDisplay[rvl]: %PURPLE%R %WHITE%Full
 ItemDisplay[rvs]: %PURPLE%r %WHITE%35%
 ItemDisplay[hp5]: %RED%!%WHITE%Hp
 ItemDisplay[mp5]: %BLUE%!%WHITE%Mp
-ItemDisplay[hp1 DIFFICULTY=0]: %RED%!%WHITE%minor hp
-ItemDisplay[hp2 DIFFICULTY=0]: %RED%!%WHITE%light hp
-ItemDisplay[hp3 DIFFICULTY=0]: %RED%!%WHITE%healing
-ItemDisplay[hp4 DIFFICULTY<2]: %RED%!%WHITE%great hp
-ItemDisplay[mp1 DIFFICULTY=0]: %BLUE%!%WHITE%minor mp
-ItemDisplay[mp2 DIFFICULTY=0]: %BLUE%!%WHITE%light mp
-ItemDisplay[mp3 DIFFICULTY=0]: %BLUE%!%WHITE%mana
-ItemDisplay[mp4 DIFFICULTY<2]: %BLUE%!%WHITE%great mp
-ItemDisplay[(hp1 OR hp2 OR hp3 OR mp1 OR mp2 OR mp3) DIFFICULTY>0]:
-ItemDisplay[(hp4 OR mp4) DIFFICULTY>1]:
+ItemDisplay[hp1 DIFF=0]: %RED%!%WHITE%minor hp
+ItemDisplay[hp2 DIFF=0]: %RED%!%WHITE%light hp
+ItemDisplay[hp3 DIFF=0]: %RED%!%WHITE%healing
+ItemDisplay[hp4 DIFF<2]: %RED%!%WHITE%great hp
+ItemDisplay[mp1 DIFF=0]: %BLUE%!%WHITE%minor mp
+ItemDisplay[mp2 DIFF=0]: %BLUE%!%WHITE%light mp
+ItemDisplay[mp3 DIFF=0]: %BLUE%!%WHITE%mana
+ItemDisplay[mp4 DIFF<2]: %BLUE%!%WHITE%great mp
+ItemDisplay[(hp1 OR hp2 OR hp3 OR mp1 OR mp2 OR mp3) DIFF>0]:
+ItemDisplay[(hp4 OR mp4) DIFF>1]:
 
 //Utilites
 ItemDisplay[tsc CLVL<31]: %BLUE%* %GRAY%TP scroll
@@ -86,8 +86,8 @@ ItemDisplay[glb OR gpb]: %NAME% %ORANGE%[%BLUE%O%ORANGE%]
 ItemDisplay[gly OR gpy]: %NAME% %ORANGE%[%YELLOW%O%ORANGE%]
 ItemDisplay[skl OR skz]: %NAME% %ORANGE%[%GRAY%O%ORANGE%]
 //hiding low ones
-ItemDisplay[GEM<3 DIFFICULTY>0]:
-ItemDisplay[GEM<4 DIFFICULTY>1]:
+ItemDisplay[GEM<3 DIFF>0]:
+ItemDisplay[GEM<4 DIFF>1]:
 //amethysts
 ItemDisplay[GEMTYPE=1 GEM<4]: %NAME% %ORANGE%[%PURPLE%*%ORANGE%]
 ItemDisplay[GEMTYPE=1 GEM>3]: %NAME% %ORANGE%[%PURPLE%O%ORANGE%]%CONTINUE%
@@ -339,7 +339,7 @@ ItemDisplay[(clw OR btl OR skr OR 9ar OR 9lw OR 9tw OR 9qr OR 7ar OR 7wb OR 7lw 
 //Armors
 ItemDisplay[xtp !ETH AND (NMAG OR RW) SOCK=2]: %DOT-D6%%NAME%
 ItemDisplay[(xtp OR utp OR uui) (!INF AND !ETH) AND (NMAG OR RW) (SOCK=0 OR SOCK>2)]: %DOT-D6%%NAME%
-ItemDisplay[EQ2 ELT ETH AND (NMAG OR RW) (SOCK=0 OR SOCK>2)]: %DOT-D6%%NAME%
+ItemDisplay[EQ2 ELT ETH AND (NMAG OR RW) (!SOCK=1)]: %DOT-D6%%NAME%
 //Helmets
 ItemDisplay[(ci3 OR uh9) (!INF AND !ETH) AND (NMAG OR RW) SOCK=3]: %DOT-D6%%NAME%
 ItemDisplay[CL2 ((!INF AND !ETH) AND NMAG OR RW) SK149>2 !SOCK=1]: %DOT-D6%%GRAY%[%ORANGE%+3 bo%GRAY%] %NAME%
