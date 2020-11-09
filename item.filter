@@ -28,7 +28,7 @@ ItemDisplay[wss]: %MAP-4A%%NAME% %ORANGE%*%CONTINUE%
 ItemDisplay[imra]: This Item + %BLUE%Jewel %WHITE%+ %ORANGE%Rune>9%NL%%TAN%Note %WHITE%: %YELLOW%Imbue %WHITE%White Map :%NL%%NAME% %ORANGE%*%CONTINUE%
 ItemDisplay[rera]: This Item + Perf Gem + %ORANGE%Rune>9%NL%%TAN%Note %WHITE%: Reroll %YELLOW%Rare %WHITE%Map :%NL%%NAME% %ORANGE%*%CONTINUE%
 ItemDisplay[upma]: This Item + Perf %GRAY%O %WHITE%+ %ORANGE%Rune>9%NL%%TAN%Note %WHITE%: %BLUE%Magic %WHITE%Map to %YELLOW%Rare %WHITE%:%NL%%NAME% %ORANGE%*%CONTINUE%
-ItemDisplay[imma]: This Item + %BLUE%Jewel %WHITE%+ %ORANGE%Rune>9%NL%%TAN%Note %WHITE%: %YELLOW%Imbue %BLUE%Magic %WHITE%Map :%NL%%NAME% %ORANGE%*%CONTINUE%
+ItemDisplay[imma]: This Item + %BLUE%Jewel %WHITE%+ %ORANGE%Any Rune%NL%%TAN%Note %WHITE%: %YELLOW%Imbue %BLUE%Magic %WHITE%Map :%NL%%NAME% %ORANGE%*%CONTINUE%
 ItemDisplay[scou]: This Item + %ORANGE%Hel%NL%%TAN%Note %WHITE%: Revert back to a White Map :%NL%%NAME% %ORANGE%*%CONTINUE%
 ItemDisplay[lbox]: %MAP-4A%%NAME% %ORANGE%*%CONTINUE%
 ItemDisplay[(t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18) MAG]: %MAP-7F%%NAME% %GREEN%*{%WHITE%To Modify Maps buy Orbs form Anya%NL%%TAN%Note %WHITE%: Reroll = Mix with 3x Perf %GRAY%O}
