@@ -1,4 +1,4 @@
-// Kryszard's PD2 Loot Filter ver 1.1.6
+// Kryszard's PD2 Loot Filter ver 1.1.7
 //
 // twitch.tv/kryszard
 //
@@ -313,11 +313,11 @@ ItemDisplay[(7wa OR 7gd) (ETH AND !INF AND !SUP) AND (NMAG OR RW) SOCK=0]: %DOT-
 ItemDisplay[7cr !INF AND (NMAG OR RW) (SOCK=0 OR SOCK=6)]: %DOT-D6%%NAME%
 ItemDisplay[(7wa OR 7gd OR 7p7) (ETH AND !INF) AND (NMAG OR RW) (SOCK=0 OR SOCK=6)]: %DOT-D6%%NAME%
 //Lawbringer
+ItemDisplay[7cr (!ETH AND NMAG OR RW) SOCK=3]: %DOT-D6%%NAME%
 ItemDisplay[72h (ETH AND !INF) AND (NMAG OR RW) (SOCK=0 OR SOCK=3)]: %DOT-D6%%NAME%
 //Chaos
 ItemDisplay[9tw (!ETH AND !INF) AND (NMAG OR RW) (SK275>0 AND (SK273>0 OR SK278>0)) (SOCK=0 OR SOCK=3)]: %DOT-D6%%GRAY%[%ORANGE%chaos%GRAY%] %NAME%
 //Plague
-ItemDisplay[(clw OR btl OR skr OR 9ar OR 9lw OR 9tw OR 9qr OR 7ar OR 7wb OR 7lw OR 7tw OR 7qr) !INF AND (NMAG OR RW) SK273>2 (SOCK=0 OR SOCK=3)]: %DOT-D6%%GRAY%[%ORANGE%+3 mb%GRAY%] %NAME%
 ItemDisplay[(clw OR btl OR skr OR 9ar OR 9lw OR 9tw OR 9qr OR 7ar OR 7wb OR 7lw OR 7tw OR 7qr) !INF AND (NMAG OR RW) SK277>2 (SOCK=0 OR SOCK=3)]: %DOT-D6%%GRAY%[%ORANGE%+3 bs%GRAY%] %NAME%
 ItemDisplay[(clw OR btl OR skr OR 9ar OR 9lw OR 9tw OR 9qr OR 7ar OR 7wb OR 7lw OR 7tw OR 7qr) !INF AND (NMAG OR RW) SK278>2 (SOCK=0 OR SOCK=3)]: %DOT-D6%%GRAY%[%ORANGE%+3 vnm%GRAY%] %NAME%
 ItemDisplay[(clw OR btl OR skr OR 9ar OR 9lw OR 9tw OR 9qr OR 7ar OR 7wb OR 7lw OR 7tw OR 7qr) !INF AND (NMAG OR RW) SK276>2 (SOCK=0 OR SOCK=3)]: %DOT-D6%%GRAY%[%ORANGE%+3 ds%GRAY%] %NAME%
