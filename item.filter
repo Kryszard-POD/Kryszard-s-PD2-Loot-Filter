@@ -1,4 +1,4 @@
-// Kryszard's PD2 Loot Filter ver 1.1.7
+// Kryszard's PD2 Loot Filter ver 1.1.8
 //
 // twitch.tv/kryszard
 //
@@ -279,7 +279,7 @@ ItemDisplay[rin MAG]: %NAME%{%BLUE%This Item %WHITE%+ Perf %RED%O %WHITE%+ %ORAN
 
 //RuneWord Bases
 //Rift
-ItemDisplay[wsc (NMAG OR RW) SOCK=4 !ETH]: %DOT-D6%%NAME%
+ItemDisplay[(wsp OR 9ws OR 7ws) (NMAG OR RW) SOCK=4 !ETH]: %DOT-D6%%NAME%
 //Spirit Swords
 ItemDisplay[(crs OR bsd OR lsd) (NMAG OR RW) SOCK=4]: %DOT-D6%%NAME%
 //HOTO AND CTA
