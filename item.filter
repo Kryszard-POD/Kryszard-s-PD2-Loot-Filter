@@ -1,4 +1,4 @@
-// Kryszard's PD2 Loot Filter ver 1.1.4
+// Kryszard's PD2 Loot Filter ver 1.1.5
 //
 // twitch.tv/kryszard
 //
@@ -278,6 +278,8 @@ ItemDisplay[amu MAG]: %NAME%{%BLUE%This Item %WHITE%+ Perf %PURPLE%O %WHITE%+ %O
 ItemDisplay[rin MAG]: %NAME%{%BLUE%This Item %WHITE%+ Perf %RED%O %WHITE%+ %ORANGE%Sol %WHITE%+ %BLUE%Jewel%NL%%TAN%Note%WHITE%: To craft %ORANGE%Blood Ring %WHITE%Mix:}
 
 //RuneWord Bases
+//Rift
+ItemDisplay[wsc (NMAG OR RW) SOCK=4 !ETH]: %DOT-D6%%NAME%
 //Spirit Swords
 ItemDisplay[(crs OR bsd OR lsd) (NMAG OR RW) SOCK=4]: %DOT-D6%%NAME%
 //HOTO AND CTA
