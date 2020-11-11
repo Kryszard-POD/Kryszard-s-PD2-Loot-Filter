@@ -379,7 +379,7 @@ ItemDisplay[rera]: %NAME% %ORANGE%*{%WHITE%This Item + Perf Gem + %ORANGE%Rune>9
 ItemDisplay[upma]: %NAME% %ORANGE%*{%WHITE%This Item + Perf %GRAY%O %WHITE%+ %ORANGE%Rune>9%NL%%TAN%Note%WHITE%: Upg %BLUE%Magic %WHITE%to %YELLOW%Rare%WHITE% Map:}%CONTINUE%
 ItemDisplay[imma]: %NAME% %ORANGE%*{%WHITE%This Item + %BLUE%Jewel %WHITE%+ %ORANGE%Any Rune%NL%%TAN%Note%WHITE%: Imbue %BLUE%Magic %WHITE%to %YELLOW%Rare%WHITE% Map:}%CONTINUE%
 ItemDisplay[scou]: %NAME% %ORANGE%*{%WHITE%This Item + %ORANGE%Hel%NL%%TAN%Note%WHITE%: Revert back to a White Map:}%CONTINUE%
-ItemDisplay[lbox]: %MAP-4A%%NAME% %ORANGE%*%CONTINUE%
+ItemDisplay[lbox]: %MAP-4A%%NAME% %ORANGE%*{%WHITE%Two-Handed Weapon = 4 max%NL%One-Handed Weapon = 2 max%NL%Helmet, Chest, Shield = 2 max%NL%%TAN%Note%WHITE%: Use it to %TAN%Socket %WHITE%an Item}%CONTINUE%
 ItemDisplay[(t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18) MAG]: %MAP-7F%%NAME% %GREEN%*{%WHITE%To Modify Maps visit Anya%NL%%TAN%Note%WHITE%: Reroll = Mix with 3x Perf %GRAY%O}
 ItemDisplay[t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18]: %MAP-7F%%NAME% %GREEN%*{%TAN%Note%WHITE%: To Modify Maps visit Anya}
 ItemDisplay[dcma OR dcbl OR dcho OR dcso]: %MAP-4A%%NAME% %ORANGE%*%CONTINUE%
