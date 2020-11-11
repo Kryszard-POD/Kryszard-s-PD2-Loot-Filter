@@ -1,4 +1,4 @@
-// Kryszard's PD2 Loot Filter ver 1.2.0
+// Kryszard's PD2 Loot Filter ver 1.2.1
 //
 // twitch.tv/kryszard
 //
@@ -106,6 +106,7 @@ ItemDisplay[RUNE>25]:%BORDER-62%%NL%%GREEN%*%PURPLE%*%RED%*          %ORANGE%%RU
 //All Charms
 ItemDisplay[cm2 MAG !ID]: %TAN%*%BLUE% %NAME% %TAN%*
 ItemDisplay[cm1 OR cm3 MAG !ID]: %DOT-9B%%PURPLE%*%BLUE%   %NAME%   %PURPLE%*
+ItemDisplay[(cm1 OR cm2 OR cm3) UNI !ID]: %PX-68%%NAME%
 
 //Good Charms
 ItemDisplay[cm3 (MAXDMG>6 AND LIFE>0)]: %TAN%Max Dmg %RED%Life %BLUE%Grand Charm 
@@ -226,11 +227,14 @@ ItemDisplay[jew MAG !ID]: %DOT-9A%%TAN%*%WHITE%*   %BLUE%%NAME%%WHITE%   *%TAN%*
 //Highlight Good Rare items
 ItemDisplay[(jew OR rin OR amu OR EQ7) RARE !ID]: %DOT-A8%%TAN%*%WHITE%*   %YELLOW%%NAME%%WHITE%   *%TAN%*
 
+//GG UNIQUES
+ItemDisplay[(rin OR amu OR uar OR ulc OR xea OR urn OR uap OR ci3 OR xtb OR uit OR 6lw OR 7gw OR 7gd OR obf OR ulm) UNI !ID]: %BORDER-68%%PURPLE%*%RED%*%ORANGE%*%YELLOW%*     %GOLD%%NAME%     %YELLOW%*%ORANGE%*%RED%*%PURPLE%*%NL%%GREEN%pick me up
+
 //OK UNIQUES
 //belts
 ItemDisplay[(zlb OR zvb OR zhb OR umc) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
 //armors
-ItemDisplay[(xhn OR xtp OR xlt OR upl OR uld) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
+ItemDisplay[(xhn OR xtp OR xlt OR upl OR uld OR utu) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
 //gloves
 ItemDisplay[(uvg OR uhg OR umg) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
 //helmets
@@ -240,16 +244,25 @@ ItemDisplay[(lbt OR xhb OR uhb OR tbt OR xvb) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%
 //shields
 ItemDisplay[(pa9 OR nea OR uts OR uow OR xsh OR xow OR pae OR nef) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
 //weapons
-ItemDisplay[(7fl OR 7kr OR 7cr OR 7gm OR 9tw OR oba OR ama OR 6ws OR obc OR 7lw OR amf) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
-
-//GG UNIQUES
-ItemDisplay[(rin OR amu OR uar OR ulc OR xea OR urn OR uap OR ci3 OR xtb OR uit OR 6lw OR 7gw OR 7gd OR obf OR ulm) UNI !ID]: %BORDER-68%%PURPLE%*%RED%*%ORANGE%*%YELLOW%*     %GOLD%%NAME%     %YELLOW%*%ORANGE%*%RED%*%PURPLE%*%NL%%GREEN%pick me up
+ItemDisplay[(7fl OR 7kr OR 7cr OR 7gm OR 9tw OR oba OR ama OR 6ws OR obc OR 7lw OR amf OR 7wh) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
 
 //Rainbow Facet
-ItemDisplay[jew UNI !ID]: %BORDER-68%%RED%*%ORANGE%*%YELLOW%*%GREEN%*%BLUE%*     %PURPLE%%NAME%%BLUE%     *%GREEN%*%YELLOW%*%ORANGE%*%RED%*%NL%%GREEN%pick me up
+ItemDisplay[jew UNI !ID]: %BORDER-68%%RED%*%ORANGE%*%YELLOW%*%GREEN%*%BLUE%*%PURPLE%*     %GOLD%%NAME%%PURPLE%     *%BLUE%*%GREEN%*%YELLOW%*%ORANGE%*%RED%*%NL%%GREEN%pick me up
 
 //Good SET parts
 ItemDisplay[(amu OR rin OR uar OR ci3 OR 7qr OR uth OR paf) SET !ID]: %MAP-84%%PURPLE%*%RED%*%DARK_GREEN%*%GREEN%*     %NAME%     *%DARK_GREEN%*%RED%*%PURPLE%*
+
+//Uniques and Sets worth notifying
+//Armors
+ItemDisplay[(gth OR xth OR aar OR BELT OR skp OR xhl OR xrn OR vbt OR xmb OR uvb OR umb OR lgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR ush OR upk OR uml OR xts OR xrg OR xuc OR tow OR kit) UNI !ID]: %PX-68%%NAME%
+//Weapons
+ItemDisplay[((9la OR 7mp OR 6sw OR 6l7 OR 8hx OR 8rx OR dgr OR 7dg OR 7bl OR 9ma OR 9wh OR 9gm OR 7s8 OR 7wc OR 9ws OR 7ws OR 6cs OR 7b7 OR 7gs OR 9sb) OR (ELT (WP5 OR WP6)) OR 9bw OR ywn OR 7cs OR 7wb) UNI !ID]: %PX-68%%NAME%
+//Sets
+ItemDisplay[((ARMOR OR WEAPON) (EXC OR ELT OR ci0) !(9vo OR xcl OR xrn)) SET !ID]: %PX-84%%NAME%
+
+//Highlight all Sets and Uniques for low lvl characters
+ItemDisplay[UNI !ID CLVL<80]: %PX-68%%NAME%
+ItemDisplay[SET !ID CLVL<80]: %PX-84%%NAME%
 
 //Shop Hunting
 ItemDisplay[WEAPON TABSK34>2]: %NAME%%NL%%RED%***   %GREEN%Warcries Weapon%RED%   ***
