@@ -1,4 +1,4 @@
-// Kryszard's PD2 Loot Filter ver 1.1.8
+// Kryszard's PD2 Loot Filter ver 1.2.0
 //
 // twitch.tv/kryszard
 //
@@ -228,20 +228,19 @@ ItemDisplay[(jew OR rin OR amu OR EQ7) RARE !ID]: %DOT-A8%%TAN%*%WHITE%*   %YELL
 
 //OK UNIQUES
 //belts
-ItemDisplay[(zlb OR zvb OR zhb OR umc) UNI !ETH !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
+ItemDisplay[(zlb OR zvb OR zhb OR umc) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
 //armors
-ItemDisplay[(xhn OR xtp OR xlt OR upl OR uld) UNI !ETH !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
+ItemDisplay[(xhn OR xtp OR xlt OR upl OR uld) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
 //gloves
-ItemDisplay[(uvg OR uhg OR umg) UNI !ETH !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
+ItemDisplay[(uvg OR uhg OR umg) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
 //helmets
-ItemDisplay[(xh9 OR usk OR ci2 OR baa OR bac OR dra OR dre OR uhm OR uh9 OR xhm OR drd OR bae) UNI !ETH !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
+ItemDisplay[(xh9 OR usk OR ci2 OR baa OR bac OR dra OR dre OR uhm OR uh9 OR xhm OR drd OR bae) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
 //boots
-ItemDisplay[(lbt OR xhb OR uhb OR tbt OR xvb) UNI !ETH !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
+ItemDisplay[(lbt OR xhb OR uhb OR tbt OR xvb) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
 //shields
-ItemDisplay[(pa9 OR nea OR uts OR uow OR xsh OR xow OR pae OR nef) UNI !ETH !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
+ItemDisplay[(pa9 OR nea OR uts OR uow OR xsh OR xow OR pae OR nef) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
 //weapons
-ItemDisplay[(7fl OR 7kr OR 7cr OR 7gm OR 9tw) UNI !ETH !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
-ItemDisplay[(oba OR ama OR 6ws OR obc OR 7lw OR amf) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
+ItemDisplay[(7fl OR 7kr OR 7cr OR 7gm OR 9tw OR oba OR ama OR 6ws OR obc OR 7lw OR amf) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
 
 //GG UNIQUES
 ItemDisplay[(rin OR amu OR uar OR ulc OR xea OR urn OR uap OR ci3 OR xtb OR uit OR 6lw OR 7gw OR 7gd OR obf OR ulm) UNI !ID]: %BORDER-68%%PURPLE%*%RED%*%ORANGE%*%YELLOW%*     %GOLD%%NAME%     %YELLOW%*%ORANGE%*%RED%*%PURPLE%*%NL%%GREEN%pick me up
@@ -253,9 +252,11 @@ ItemDisplay[jew UNI !ID]: %BORDER-68%%RED%*%ORANGE%*%YELLOW%*%GREEN%*%BLUE%*    
 ItemDisplay[(amu OR rin OR uar OR ci3 OR 7qr OR uth OR paf) SET !ID]: %MAP-84%%PURPLE%*%RED%*%DARK_GREEN%*%GREEN%*     %NAME%     *%DARK_GREEN%*%RED%*%PURPLE%*
 
 //Shop Hunting
-ItemDisplay[WEAPON TABSK34>2]: %NAME%%NL%%RED%***   %GREEN%3bo weapon%RED%   ***
+ItemDisplay[WEAPON TABSK34>2]: %NAME%%NL%%RED%***   %GREEN%Warcries Weapon%RED%   ***
+ItemDisplay[CL5 TABSK48>2]: %NAME%%NL%%RED%***   %GREEN%Traps Claws%RED%   ***
 ItemDisplay[EQ4 (TABSK0>2 OR TABSK2>2 OR TABSK50>2) AND IAS>19]: %NAME%%NL%%RED%***   %GREEN%3sk~20ias Gloves%RED%   ***
-ItemDisplay[WP13 (TABSK24>2 AND SK119>2)]: %NAME%%NL%%RED%***   %GREEN%FoH Scepter%RED%   ***
+ItemDisplay[WP13 ((TABSK24>2 AND SK121>1) OR (TABSK24>1 AND SK121>2))]: %NAME%%NL%%RED%***   %GREEN%FoH Scepter%RED%   ***
+ItemDisplay[WP13 ((TABSK25>2 AND SK118>1) OR (TABSK25>1 AND SK118>2))]: %NAME%%NL%%RED%***   %GREEN%Holy Shock Scepter%RED%   ***
 ItemDisplay[STAFF CHSK54>0]: %NAME%%NL%%RED%***   %GREEN%Teleport Charges%RED%   ***
 ItemDisplay[WAND CHSK91>0]: %NAME%%NL%%RED%***   %GREEN%Lower Resist Charges%RED%   ***
 ItemDisplay[WAND CHSK82>0]: %NAME%%NL%%RED%***   %GREEN%Life Tap Charges%RED%   ***
@@ -350,8 +351,8 @@ ItemDisplay[CL1 ((!INF AND !ETH) AND NMAG OR RW) SK225>2 !SOCK=1]: %DOT-D6%%GRAY
 //Shields
 ItemDisplay[(pab OR pac) (!INF AND ETH) AND (NMAG OR RW) (SOCK=0 OR SOCK=4) RES>34]: %DOT-D6%%GRAY%[%GREEN%res%GRAY%] %NAME%
 ItemDisplay[(pab OR pac) (!INF AND !ETH) AND (NMAG OR RW) (SOCK=0 OR SOCK>2) RES>34]: %DOT-D6%%GRAY%[%GREEN%res%GRAY%] %NAME%
-ItemDisplay[CL3 (!INF AND !ETH) AND (NMAG OR RW) (SOCK=0 OR SOCK>2) (RES>34 AND CLVL<80)]: %GRAY%[%GREEN%res%GRAY%] %NAME%
-ItemDisplay[ush (!INF AND !ETH) AND (NMAG OR RW)  SOCK>1]: %DOT-D6%%NAME%
+ItemDisplay[CL3 (!INF AND !ETH) AND (NMAG OR RW) !SOCK=1 (RES>34 AND CLVL<80)]: %GRAY%[%GREEN%res%GRAY%] %NAME%
+ItemDisplay[(ush OR xsh) (!INF AND !ETH) AND (NMAG OR RW)  SOCK>1]: %DOT-D6%%NAME%
 ItemDisplay[uit !INF AND (NMAG OR RW) (SOCK=0 OR SOCK=4)]: %DOT-D6%%NAME%
 
 //Class items
@@ -373,14 +374,15 @@ ItemDisplay[!(ARMOR OR WEAPON OR tbk OR ibk) QTY>0]: %NAME% %TAN%x %WHITE%%QTY%%
 
 //Project Diablo 2 items
 ItemDisplay[wss]: %MAP-4A%%NAME% %ORANGE%*{%TAN%Note%WHITE%: Use it to %RED%Corrupt %WHITE%an Item}%CONTINUE%
-ItemDisplay[imra]: %NAME% %ORANGE%*{%WHITE%This Item + %BLUE%Jewel %WHITE%+ %ORANGE%Rune>9%NL%%TAN%Note%WHITE%: %YELLOW%Imbue %WHITE%White Map:}%CONTINUE%
+ItemDisplay[imra]: %NAME% %ORANGE%*{%WHITE%This Item + %BLUE%Jewel %WHITE%+ %ORANGE%Rune>9%NL%%TAN%Note%WHITE%: Imbue White to %YELLOW%Rare %WHITE%Map:}%CONTINUE%
 ItemDisplay[rera]: %NAME% %ORANGE%*{%WHITE%This Item + Perf Gem + %ORANGE%Rune>9%NL%%TAN%Note%WHITE%: Reroll %YELLOW%Rare %WHITE%Map:}%CONTINUE%
-ItemDisplay[upma]: %NAME% %ORANGE%*{%WHITE%This Item + Perf %GRAY%O %WHITE%+ %ORANGE%Rune>9%NL%%TAN%Note%WHITE%: %BLUE%Magic %WHITE%Map to %YELLOW%Rare%WHITE%:}%CONTINUE%
-ItemDisplay[imma]: %NAME% %ORANGE%*{%WHITE%This Item + %BLUE%Jewel %WHITE%+ %ORANGE%Any Rune%NL%%TAN%Note%WHITE%: %YELLOW%Imbue %BLUE%Magic %WHITE%Map:}%CONTINUE%
+ItemDisplay[upma]: %NAME% %ORANGE%*{%WHITE%This Item + Perf %GRAY%O %WHITE%+ %ORANGE%Rune>9%NL%%TAN%Note%WHITE%: Upg %BLUE%Magic %WHITE%to %YELLOW%Rare%WHITE% Map:}%CONTINUE%
+ItemDisplay[imma]: %NAME% %ORANGE%*{%WHITE%This Item + %BLUE%Jewel %WHITE%+ %ORANGE%Any Rune%NL%%TAN%Note%WHITE%: Imbue %BLUE%Magic %WHITE%to %YELLOW%Rare%WHITE% Map:}%CONTINUE%
 ItemDisplay[scou]: %NAME% %ORANGE%*{%WHITE%This Item + %ORANGE%Hel%NL%%TAN%Note%WHITE%: Revert back to a White Map:}%CONTINUE%
 ItemDisplay[lbox]: %MAP-4A%%NAME% %ORANGE%*%CONTINUE%
 ItemDisplay[(t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18) MAG]: %MAP-7F%%NAME% %GREEN%*{%WHITE%To Modify Maps visit Anya%NL%%TAN%Note%WHITE%: Reroll = Mix with 3x Perf %GRAY%O}
 ItemDisplay[t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18]: %MAP-7F%%NAME% %GREEN%*{%TAN%Note%WHITE%: To Modify Maps visit Anya}
+ItemDisplay[dcma OR dcbl OR dcho OR dcso]: %MAP-4A%%NAME% %ORANGE%*%CONTINUE%
 
 //Essences
 ItemDisplay[tes]: %NAME%{%TAN%Essence %WHITE%from: %BLUE%Andariel %WHITE%or %BLUE%Duriel}%CONTINUE%
