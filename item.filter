@@ -1,4 +1,4 @@
-// Kryszard's PD2 Loot Filter ver 1.2.3
+// Kryszard's PD2 Loot Filter ver 1.2.4
 //
 // twitch.tv/kryszard
 //
@@ -267,7 +267,7 @@ ItemDisplay[SET !ID CLVL<80]: %PX-84%%NAME%
 //Shop Hunting
 ItemDisplay[WEAPON TABSK34>2]: %NAME%%NL%%RED%***   %GREEN%Warcries Weapon%RED%   ***
 ItemDisplay[CL5 TABSK48>2]: %NAME%%NL%%RED%***   %GREEN%Traps Claws%RED%   ***
-ItemDisplay[EQ4 (TABSK0>2 OR TABSK2>2 OR TABSK50>2) AND IAS>19]: %NAME%%NL%%RED%***   %GREEN%3sk~20ias Gloves%RED%   ***
+ItemDisplay[EQ4 (TABSK0>2 OR TABSK2>2 OR TABSK50>2) AND IAS>19]: %NAME%%NL%%RED%***   %GREEN%3sk, 20ias Gloves%RED%   ***
 ItemDisplay[WP13 ((TABSK24>2 AND SK121>1) OR (TABSK24>1 AND SK121>2))]: %NAME%%NL%%RED%***   %GREEN%FoH Scepter%RED%   ***
 ItemDisplay[WP13 ((TABSK25>2 AND SK118>1) OR (TABSK25>1 AND SK118>2))]: %NAME%%NL%%RED%***   %GREEN%Holy Shock Scepter%RED%   ***
 ItemDisplay[STAFF CHSK54>0]: %NAME%%NL%%RED%***   %GREEN%Teleport Charges%RED%   ***
@@ -295,6 +295,8 @@ ItemDisplay[rin MAG]: %NAME%{%BLUE%This Item %WHITE%+ Perf %RED%O %WHITE%+ %ORAN
 //Rift
 ItemDisplay[(wsp OR 9ws OR 7ws) (NMAG OR RW) SOCK=4 !ETH]: %DOT-D6%%NAME%
 //Spirit Swords
+ItemDisplay[crs (NMAG OR RW) SOCK=0 (ILVL>25 AND ILVL<41) CLVL<80]: %DOT-D6%%NAME% [%DARK_GREEN%Larzuk 4soc%WHITE%]
+ItemDisplay[(bsd OR lsd) (NMAG OR RW) SOCK=0 ILVL>25 CLVL<80]: %DOT-D6%%NAME% [%DARK_GREEN%Larzuk 4soc%WHITE%]
 ItemDisplay[(crs OR bsd OR lsd) (NMAG OR RW) SOCK=4]: %DOT-D6%%NAME%
 //HOTO AND CTA
 ItemDisplay[fla (NMAG OR RW) SOCK>3]: %DOT-D6%%NAME%
@@ -339,7 +341,7 @@ ItemDisplay[(7wa OR 7gd OR 7p7) (ETH AND !INF) AND (NMAG OR RW) (SOCK=0 OR SOCK=
 ItemDisplay[7cr (!ETH AND NMAG OR RW) SOCK=3]: %DOT-D6%%NAME%
 ItemDisplay[72h (ETH AND !INF) AND (NMAG OR RW) (SOCK=0 OR SOCK=3)]: %DOT-D6%%NAME%
 //Chaos
-ItemDisplay[9tw (!ETH AND !INF) AND (NMAG OR RW) (SK275>0 AND (SK273>0 OR SK278>0)) (SOCK=0 OR SOCK=3)]: %DOT-D6%%GRAY%[%ORANGE%chaos%GRAY%] %NAME%
+ItemDisplay[(7ar OR 7tw OR 7qr OR 9tw) !INF AND (NMAG OR RW) (SK275>0 AND (SK273>0 OR SK278>0)) (SOCK=0 OR SOCK=3)]: %DOT-D6%%GRAY%[%ORANGE%chaos%GRAY%] %NAME%
 //Plague
 ItemDisplay[(clw OR btl OR skr OR 9ar OR 9lw OR 9tw OR 9qr OR 7ar OR 7wb OR 7lw OR 7tw OR 7qr) !INF AND (NMAG OR RW) SK277>2 (SOCK=0 OR SOCK=3)]: %DOT-D6%%GRAY%[%ORANGE%+3 bs%GRAY%] %NAME%
 ItemDisplay[(clw OR btl OR skr OR 9ar OR 9lw OR 9tw OR 9qr OR 7ar OR 7wb OR 7lw OR 7tw OR 7qr) !INF AND (NMAG OR RW) SK278>2 (SOCK=0 OR SOCK=3)]: %DOT-D6%%GRAY%[%ORANGE%+3 vnm%GRAY%] %NAME%
@@ -350,8 +352,8 @@ ItemDisplay[(clw OR btl OR skr OR 9ar OR 9lw OR 9tw OR 9qr OR 7ar OR 7wb OR 7lw 
 ItemDisplay[(clw OR btl OR skr OR 9ar OR 9lw OR 9tw OR 9qr OR 7ar OR 7wb OR 7lw OR 7tw OR 7qr) !INF AND (NMAG OR RW) SK262>2 (SOCK=0 OR SOCK=3)]: %DOT-D6%%GRAY%[%ORANGE%+3 wof%GRAY%] %NAME%
 //Armors
 ItemDisplay[xtp !ETH AND (NMAG OR RW) SOCK=2]: %DOT-D6%%NAME%
-ItemDisplay[(xtp OR utp OR uui) (!INF AND !ETH) AND (NMAG OR RW) (SOCK=0 OR SOCK>2)]: %DOT-D6%%NAME%
-ItemDisplay[EQ2 ELT ETH AND (NMAG OR RW) (!SOCK=1)]: %DOT-D6%%NAME%
+ItemDisplay[(xtp OR utp OR uui OR uea OR ula OR utu OR urs) (!INF AND !ETH) AND (NMAG OR RW) (SOCK=0 OR SOCK>2)]: %DOT-D6%%NAME%
+ItemDisplay[EQ2 ELT ETH AND (NMAG OR RW) !SOCK=1]: %DOT-D6%%NAME%
 //Helmets
 ItemDisplay[(ci3 OR uh9) (!INF AND !ETH) AND (NMAG OR RW) SOCK=3]: %DOT-D6%%NAME%
 ItemDisplay[CL2 ((!INF AND !ETH) AND NMAG OR RW) SK149>2 !SOCK=1]: %DOT-D6%%GRAY%[%ORANGE%+3 bo%GRAY%] %NAME%
@@ -437,6 +439,7 @@ ItemDisplay[GEM=4]: %NAME%{%TAN%Note%WHITE%: Mix Gems with %GRAY%key %WHITE%to u
 ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE) CLVL<41]: %NAME%
 ItemDisplay[(ARMOR OR WEAPON) (EXC OR ELT) (MAG OR RARE) CLVL>40 AND CLVL<80]: %NAME%
 ItemDisplay[(ARMOR OR WEAPON) NMAG AND (!ETH AND !INF) SOCK>1 CLVL<41]: %NAME%
+ItemDisplay[(SPEAR OR POLEARM) NMAG AND !INF (SOCK=0 OR SOCK=4) CLVL<80]: %NAME%
 ItemDisplay[(ARMOR OR WEAPON) (EXC OR ELT) NMAG AND (!ETH AND !INF) SOCK>1 CLVL>40 AND CLVL<80]: %NAME%
 ItemDisplay[(ARMOR OR WEAPON) INF]: 
 ItemDisplay[(ARMOR OR WEAPON) !leg CLVL>18]: 
