@@ -1,4 +1,4 @@
-// Kryszard's PD2 Loot Filter ver 1.3.4
+// Kryszard's PD2 Loot Filter ver 1.3.5
 //
 // twitch.tv/kryszard
 //
@@ -259,7 +259,7 @@ ItemDisplay[(lbt OR xhb OR uhb OR tbt OR xvb) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%
 //shields
 ItemDisplay[(pa9 OR nea OR uts OR uow OR xsh OR xow OR pae OR nef) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
 //weapons
-ItemDisplay[(7fl OR 7kr OR 7cr OR 7gm OR 9tw OR oba OR ama OR 6ws OR obc OR 7lw OR amf OR 7wh) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
+ItemDisplay[(72a OR 7fl OR 7kr OR 7cr OR 7gm OR 9tw OR oba OR ama OR 6ws OR obc OR 7lw OR amf OR 7wh) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %GOLD%%NAME%%GRAY%     *%TAN%*%YELLOW%*
 
 //Rainbow Facet
 ItemDisplay[jew UNI !ID]: %BORDER-68%%RED%r%ORANGE%a%YELLOW%in%GREEN%b%BLUE%o%PURPLE%w     %GOLD%%NAME%%PURPLE%     r%BLUE%a%GREEN%in%YELLOW%b%ORANGE%o%RED%w%NL%%GREEN%pick me up
@@ -436,7 +436,7 @@ ItemDisplay[(clw OR btl OR skr OR 9ar OR 9lw OR 9tw OR 9qr OR 7ar OR 7wb OR 7lw 
 ItemDisplay[(clw OR btl OR skr OR 9ar OR 9lw OR 9tw OR 9qr OR 7ar OR 7wb OR 7lw OR 7tw OR 7qr) !INF AND (NMAG OR RW) SK266>2 (SOCK=0 OR SOCK=3)]: %DOT-D6%%GRAY%[%ORANGE%+3 bf%GRAY%] %NAME%
 ItemDisplay[(clw OR btl OR skr OR 9ar OR 9lw OR 9tw OR 9qr OR 7ar OR 7wb OR 7lw OR 7tw OR 7qr) !INF AND (NMAG OR RW) SK262>2 (SOCK=0 OR SOCK=3)]: %DOT-D6%%GRAY%[%ORANGE%+3 wof%GRAY%] %NAME%
 //Amazon Spears
-ItemDisplay[(amd OR ame) TABSK2>2 !ETH (NMAG OR RW) (SOCK=0 OR SOCK=4)]: %DOT-D6%%GRAY%[%ORANGE%+3 java%GRAY%] %NAME%
+ItemDisplay[(amd OR ame) TABSK2>2 !ETH !INF (NMAG OR RW) (SOCK=0 OR SOCK=4)]: %DOT-D6%%GRAY%[%ORANGE%+3 java%GRAY%] %NAME%
 //Armors
 ItemDisplay[xtp !ETH AND (NMAG OR RW) SOCK=2]: %DOT-D6%%NAME%
 ItemDisplay[(xtp OR utp OR uui OR uea OR ula OR utu OR urs) (!INF AND !ETH) AND (NMAG OR RW) (SOCK=0 OR SOCK>2)]: %DOT-D6%%NAME%
