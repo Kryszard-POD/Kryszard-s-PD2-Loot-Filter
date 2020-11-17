@@ -1,4 +1,4 @@
-// Kryszard's PD2 Loot Filter ver 1.3.5
+// Kryszard's PD2 Loot Filter ver 1.3.6
 //
 // twitch.tv/kryszard
 //
@@ -417,7 +417,7 @@ ItemDisplay[(7vo OR 7tr) (ETH AND !INF) AND (NMAG OR RW) SOCK=0]: %DOT-D6%%NAME%
 //Grief/Beast/Passion
 ItemDisplay[(7cr OR 7wa) (!ETH AND NMAG OR RW) (SOCK=4 OR SOCK=5)]: %DOT-D6%%NAME%
 //Death/Oath
-ItemDisplay[(7wa OR 7fb OR 7gd) (ETH AND NMAG OR RW) (SOCK=4 OR SOCK=5)]: %DOT-D6%%NAME%
+ItemDisplay[(7wa OR 7fb OR 7gd) ETH AND (NMAG OR RW) (SOCK=4 OR SOCK=5)]: %DOT-D6%%NAME%
 ItemDisplay[7fb (ETH AND !INF) AND (NMAG OR RW) SOCK=0]: %DOT-D6%%NAME%
 //Breath of the Dying/Last Wish
 ItemDisplay[7cr !INF AND (NMAG OR RW) (SOCK=0 OR SOCK=6)]: %DOT-D6%%NAME%
