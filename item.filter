@@ -1,4 +1,4 @@
-// Kryszard's PD2 Loot Filter ver 1.4.1
+// Kryszard's PD2 Loot Filter ver 1.4.2
 //
 // twitch.tv/kryszard
 //
@@ -335,6 +335,7 @@ ItemDisplay[(7vo OR 7tr) ETH !INF !SUP SOCK=0 NMAG]: %DOT-D6%%NAME%{%WHITE%This 
 ItemDisplay[(7wc OR 7pa OR 7s8 OR 7h7 OR 7br OR 7st) ETH !INF !SUP SOCK=0 NMAG]: %DOT-D6%%NAME%{%WHITE%This Item + %ORANGE%Ral %WHITE%+ %ORANGE%Amn %WHITE%+ Perf %PURPLE%O%NL%%TAN%Note%WHITE%: Socketing Recipe:}
 //Grief/Beast/Passion
 ItemDisplay[(7cr OR 7wa) !ETH !INF !SUP SOCK=0 NMAG]: %DOT-D6%%NAME%{%WHITE%This Item + %ORANGE%Ral %WHITE%+ %ORANGE%Amn %WHITE%+ Perf %PURPLE%O%NL%%TAN%Note%WHITE%: Socketing Recipe:}
+ItemDisplay[(7m7 OR 7gm OR 7ga OR 7gi OR 7bt OR 7ba) ETH !INF !SUP SOCK=0 NMAG]: %DOT-D6%%NAME%{%WHITE%This Item + %ORANGE%Ral %WHITE%+ %ORANGE%Amn %WHITE%+ Perf %PURPLE%O%NL%%TAN%Note%WHITE%: Socketing Recipe:}
 //Death/Oath
 ItemDisplay[7fb ETH !INF !SUP SOCK=0 NMAG]: %DOT-D6%%NAME%{%WHITE%This Item + %ORANGE%Ral %WHITE%+ %ORANGE%Amn %WHITE%+ Perf %PURPLE%O%NL%%TAN%Note%WHITE%: Socketing Recipe:}
 ItemDisplay[(7wa OR 7gd) ETH !INF !SUP SOCK=0 NMAG]: %DOT-D6%%NAME%{%WHITE%This Item + %ORANGE%Ral %WHITE%+ %ORANGE%Amn %WHITE%+ Perf %PURPLE%O%NL%%TAN%Note%WHITE%: Socketing Recipe:}
@@ -419,7 +420,9 @@ ItemDisplay[6cb SOCK=4]: %DOT-D6%%NAME%
 ItemDisplay[(7wc OR 7pa OR 7s8 OR 7vo OR 7h7 OR 7tr OR 7br OR 7st OR 7p7) (ETH AND (NMAG OR RW)) (SOCK=4 OR SOCK=5)]: %DOT-D6%%NAME%
 ItemDisplay[(7vo OR 7tr) (ETH AND !INF) AND (NMAG OR RW) SOCK=0]: %DOT-D6%%NAME%
 //Grief/Beast/Passion
-ItemDisplay[(7cr OR 7wa) (!ETH AND NMAG OR RW) (SOCK=4 OR SOCK=5)]: %DOT-D6%%NAME%
+ItemDisplay[(7cr OR 7wa) !ETH (NMAG OR RW) (SOCK=4 OR SOCK=5)]: %DOT-D6%%NAME%
+ItemDisplay[(7bt OR 7ba) ETH (NMAG OR RW) (SOCK=0 OR SOCK=5)]: %DOT-D6%%NAME%
+ItemDisplay[(7m7 OR 7gm OR 7ga OR 7gi OR 7bt OR 7ba) ETH (NMAG OR RW) SOCK=5]: %DOT-D6%%NAME%
 //Death/Oath
 ItemDisplay[(7wa OR 7fb OR 7gd) ETH AND (NMAG OR RW) (SOCK=4 OR SOCK=5)]: %DOT-D6%%NAME%
 ItemDisplay[7fb (ETH AND !INF) AND (NMAG OR RW) SOCK=0]: %DOT-D6%%NAME%
@@ -471,7 +474,7 @@ ItemDisplay[CL1 ((!INF AND !ETH) AND NMAG OR RW) SK239>2 !SOCK=1]: %DOT-D6%%GRAY
 ItemDisplay[CL1 ((!INF AND !ETH) AND NMAG OR RW) SK225>2 !SOCK=1]: %DOT-D6%%GRAY%[%ORANGE%+3 fst%GRAY%] %NAME%
 //Shields
 ItemDisplay[(pab OR pac) (!INF AND ETH) AND (NMAG OR RW) (SOCK=0 OR SOCK=4) RES>34]: %DOT-D6%%GRAY%[%GREEN%res%GRAY%] %NAME%
-ItemDisplay[(pab OR pac) (!INF AND !ETH) AND (NMAG OR RW) (SOCK=0 OR SOCK>2) RES>34]: %DOT-D6%%GRAY%[%GREEN%res%GRAY%] %NAME%
+ItemDisplay[(pab OR pac) (!INF AND !ETH) AND (NMAG OR RW) !SOCK=1 RES>34]: %DOT-D6%%GRAY%[%GREEN%res%GRAY%] %NAME%
 ItemDisplay[CL3 (!INF AND !ETH) AND (NMAG OR RW) !SOCK=1 (RES>34 AND CLVL<80)]: %GRAY%[%GREEN%res%GRAY%] %NAME%
 ItemDisplay[(ush OR xsh) (!INF AND !ETH) AND (NMAG OR RW)  !SOCK=1]: %DOT-D6%%NAME%
 ItemDisplay[uit !INF AND (NMAG OR RW) (SOCK=0 OR SOCK=4)]: %DOT-D6%%NAME%
