@@ -1,4 +1,4 @@
-// Kryszard's PD2 Loot Filter ver 1.5.3
+// Kryszard's PD2 Loot Filter ver 1.5.4
 //
 // twitch.tv/kryszard
 //
@@ -303,8 +303,8 @@ ItemDisplay[WEAPON RARE (EXC OR ELT) ETH !ID]: %NAME%
 
 //Craftables
 ItemDisplay[GLOVES ((EXC OR ELT) !(utg OR uhg)) MAG !ID]: %GRAY%* %BLUE%%NAME% %GRAY%*
-ItemDisplay[GLOVES MAG ID]: %NAME%{%GRAY%Hit Power%WHITE%: Perf %BLUE%O, %ORANGE%Ort, %BLUE%Jewel%NL%%GRAY%Blood%WHITE%: Perf %RED%O, %ORANGE%Eth, %BLUE%Jewel%NL%%TAN%Note%WHITE%: Crafting Recipes:}
-ItemDisplay[BOOTS MAG ID]: %NAME%{%GRAY%Caster%WHITE%: Perf %PURPLE%O, %ORANGE%Thul, %BLUE%Jewel%NL%%GRAY%Blood%WHITE%: Perf %RED%O, %ORANGE%Nef, %BLUE%Jewel%NL%%TAN%Note%WHITE%: Crafting Recipes:}
+ItemDisplay[GLOVES MAG ID]: %NAME%{%GRAY%Hit Power%WHITE%: Perf %BLUE%O, %ORANGE%Ort, %BLUE%Jewel%NL%%GRAY%Blood%WHITE%: Perf %RED%O, %ORANGE%Nef, %BLUE%Jewel%NL%%TAN%Note%WHITE%: Crafting Recipes:}
+ItemDisplay[BOOTS MAG ID]: %NAME%{%GRAY%Caster%WHITE%: Perf %PURPLE%O, %ORANGE%Thul, %BLUE%Jewel%NL%%GRAY%Blood%WHITE%: Perf %RED%O, %ORANGE%Eth, %BLUE%Jewel%NL%%TAN%Note%WHITE%: Crafting Recipes:}
 ItemDisplay[BELT MAG ID]: %NAME%{%GRAY%Blood%WHITE%: Perf %RED%O, %ORANGE%Tal, %BLUE%Jewel%NL%%GRAY%Caster%WHITE%: Perf %PURPLE%O, %ORANGE%Ith, %BLUE%Jewel%NL%%TAN%Note%WHITE%: Crafting Recipes:}
 ItemDisplay[SHIELD MAG ID]: %NAME%{%GRAY%Blood%WHITE%: Perf %RED%O, %ORANGE%Ith, %BLUE%Jewel%NL%%GRAY%Safety%WHITE%: Perf %GREEN%O, %ORANGE%Nef, %BLUE%Jewel%NL%%TAN%Note%WHITE%: Crafting Recipes:}
 ItemDisplay[amu MAG]: %NAME%{%GRAY%Blood%WHITE%: Perf %RED%O, %ORANGE%Amn, %BLUE%Jewel%NL%%GRAY%Caster%WHITE%: Perf %PURPLE%O, %ORANGE%Ral, %BLUE%Jewel%NL%%TAN%Note%WHITE%: Crafting Recipes:}
