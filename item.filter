@@ -1,4 +1,4 @@
-// Kryszard's PD2 Loot Filter ver 1.5.2
+// Kryszard's PD2 Loot Filter ver 1.5.3
 //
 // twitch.tv/kryszard
 //
@@ -270,7 +270,7 @@ ItemDisplay[(amu OR rin OR uar OR ci3 OR 7qr OR uth OR paf) SET !ID]: %MAP-84%%P
 
 //Uniques and Sets worth notifying
 //Armors
-ItemDisplay[(xld OR xrs OR gth OR aar OR BELT OR skp OR xhl OR xrn OR vbt OR xmb OR uvb OR umb OR lgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR ush OR upk OR uml OR xts OR xrg OR xuc OR tow OR kit OR gts) UNI !ID]: %PX-68%%NAME%
+ItemDisplay[(xap OR xld OR xrs OR gth OR aar OR BELT OR skp OR xhl OR xrn OR vbt OR xmb OR uvb OR umb OR lgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR ush OR upk OR uml OR xts OR xrg OR xuc OR tow OR kit OR gts) UNI !ID]: %PX-68%%NAME%
 //Weapons
 ItemDisplay[((9kr OR amb OR 7sc OR 7mp OR 6sw OR 6l7 OR 8hx OR 8rx OR dgr OR 7dg OR 7bl OR 9ma OR 9wh OR 9gm OR 7s8 OR 7wc OR 9ws OR 7ws OR 6cs OR 7b7 OR 7gs OR 9sb) OR (ELT (WP5 OR WP6)) OR 9bw OR ywn OR 7cs OR 7wb OR 7sp) UNI !ID]: %PX-68%%NAME%
 //Sets
@@ -293,7 +293,7 @@ ItemDisplay[WAND CHSK82>0]: %NAME%%NL%%RED%***   %GREEN%Life Tap Charges%RED%   
 
 //Circlets
 ItemDisplay[EQ7 (MAG OR RARE) !ID]: %NAME%
-ItemDisplay[ci3 NMAG !ETH SOCK=0]: %NAME% %YELLOW%[%GRAY%imbue%YELLOW%]
+ItemDisplay[ci3 NMAG !ETH SOCK=0]: %NAME% %YELLOW%[%GRAY%imbue%YELLOW%]{%TAN%Note%WHITE%: Cool item to %YELLOW%imbue %WHITE%using Charsi quest}
 
 //Rare Gloves, Belts and Boots
 ItemDisplay[(GLOVES OR BOOTS OR BELT) RARE !ID]: %NAME%
@@ -334,6 +334,7 @@ ItemDisplay[(cst OR bst OR 8cs OR 8bs OR 6cs OR 6bs) SK58>2 !INF !SUP SOCK=0 NMA
 ItemDisplay[(wst OR 8ws OR 6ws) SK58>2 !INF !SUP SOCK=0 NMAG]: %DOT-D6%%GRAY%[%ORANGE%+3 es%GRAY%] %NAME%{%WHITE%This Item + %ORANGE%Ral %WHITE%+ %ORANGE%Amn %WHITE%+ Perf %PURPLE%O%NL%%TAN%Note%WHITE%: Socketing Recipe:}
 //Faith/Bows
 ItemDisplay[(amc OR amb) TABSK0>2 !INF !SUP SOCK=0 NMAG]: %DOT-D6%%GRAY%[%ORANGE%+3 bow%GRAY%] %NAME%{%WHITE%This Item + %ORANGE%Ral %WHITE%+ %ORANGE%Amn %WHITE%+ Perf %PURPLE%O%NL%%TAN%Note%WHITE%: Socketing Recipe:}
+ItemDisplay[(6cb OR 8rx OR 6rx) !INF !SUP SOCK=0 NMAG]: %NAME%{%WHITE%This Item + %ORANGE%Ral %WHITE%+ %ORANGE%Amn %WHITE%+ Perf %PURPLE%O%NL%%TAN%Note%WHITE%: Socketing Recipe:}
 //Infi/Insi/Pride and Obedience/Doom
 ItemDisplay[(7vo OR 7tr) ETH !INF !SUP SOCK=0 NMAG]: %DOT-D6%%NAME%{%WHITE%This Item + %ORANGE%Ral %WHITE%+ %ORANGE%Amn %WHITE%+ Perf %PURPLE%O%NL%%TAN%Note%WHITE%: Socketing Recipe:}
 ItemDisplay[(7wc OR 7pa OR 7s8 OR 7h7 OR 7br OR 7st) ETH !INF !SUP SOCK=0 NMAG]: %DOT-D6%%NAME%{%WHITE%This Item + %ORANGE%Ral %WHITE%+ %ORANGE%Amn %WHITE%+ Perf %PURPLE%O%NL%%TAN%Note%WHITE%: Socketing Recipe:}
@@ -416,10 +417,10 @@ ItemDisplay[NEC SK93>2 (SOCK=0 OR SOCK=2) (NMAG OR RW)]: %DOT-D6%%GRAY%[%ORANGE%
 //Memory
 ItemDisplay[(cst OR bst OR 8cs OR 8bs OR 6cs OR 6bs) (NMAG OR RW) SK58>2 (SOCK=0 OR SOCK=4)]: %DOT-D6%%GRAY%[%ORANGE%+3 es%GRAY%] %NAME%
 ItemDisplay[(wst OR 8ws OR 6ws) (NMAG OR RW) SK58>2 SOCK=4]: %DOT-D6%%GRAY%[%ORANGE%+3 es%GRAY%] %NAME%
-//Faith/Bows
+//Faith/Bows/Crossbows
 ItemDisplay[(amc OR amb) (NMAG OR RW) TABSK0>2 SOCK=4]: %DOT-D6%%GRAY%[%ORANGE%+3 bow%GRAY%] %NAME%
 ItemDisplay[6cb SOCK=3]: %NAME%
-ItemDisplay[6cb SOCK=4]: %DOT-D6%%NAME%
+ItemDisplay[(6cb OR 8rx OR 6rx) SOCK=4]: %DOT-D6%%NAME%
 //Infi/Insi/Pride and Obedience/Doom
 ItemDisplay[(7wc OR 7pa OR 7s8 OR 7vo OR 7h7 OR 7tr OR 7br OR 7st OR 7p7) (ETH AND (NMAG OR RW)) (SOCK=4 OR SOCK=5)]: %DOT-D6%%NAME%
 ItemDisplay[(7vo OR 7tr) (ETH AND !INF) AND (NMAG OR RW) SOCK=0]: %DOT-D6%%NAME%
