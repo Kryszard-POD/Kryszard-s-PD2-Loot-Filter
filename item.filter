@@ -1,4 +1,4 @@
-// Kryszard's PD2 Loot Filter ver 1.6.5
+// Kryszard's PD2 Loot Filter ver 1.6.6
 //
 // twitch.tv/kryszard
 //
@@ -270,9 +270,9 @@ ItemDisplay[(amu OR rin OR uar OR ci3 OR 7qr OR uth OR paf) SET !ID]: %MAP-84%%P
 
 //Uniques and Sets worth notifying
 //Armors
-ItemDisplay[(xlb OR xpl OR xap OR xld OR xrs OR gth OR aar OR BELT OR skp OR xhl OR xrn OR vbt OR xmb OR uvb OR umb OR lgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR ush OR upk OR uml OR xts OR xrg OR xuc OR tow OR kit OR gts) UNI !ID]: %PX-68%%NAME%
+ItemDisplay[(xml OR xlb OR xpl OR xap OR xld OR xrs OR gth OR aar OR BELT OR skp OR xhl OR xrn OR vbt OR xmb OR uvb OR umb OR lgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR ush OR upk OR uml OR xts OR xrg OR xuc OR tow OR kit OR gts) UNI !ID]: %PX-68%%NAME%
 //Weapons
-ItemDisplay[((9yw OR 9fc OR 7bw OR 9kr OR amb OR 7sc OR 7mp OR 6sw OR 6l7 OR 8hx OR 8rx OR dgr OR 7dg OR 7bl OR 9ma OR 9wh OR 9gm OR 7s8 OR 7wc OR 9ws OR 6cs OR 7b7 OR 7gs OR 9sb) OR (ELT (WP5 OR WP6)) OR 9bw OR ywn OR 7cs OR 7wb OR 7sp) UNI !ID]: %PX-68%%NAME%
+ItemDisplay[((7o7 OR 9yw OR 9fc OR 7bw OR 9kr OR amb OR 7sc OR 7mp OR 6sw OR 6l7 OR 8hx OR 8rx OR dgr OR 7dg OR 7bl OR 9ma OR 9wh OR 9gm OR 7s8 OR 7wc OR 9ws OR 6cs OR 7b7 OR 7gs OR 9sb) OR (ELT (WP5 OR WP6)) OR 9bw OR ywn OR 7cs OR 7wb OR 7sp) UNI !ID]: %PX-68%%NAME%
 //Sets
 ItemDisplay[((ARMOR OR WEAPON) (EXC OR ELT OR ci0 OR ba5) !(9vo OR xcl OR xrn)) SET !ID]: %PX-84%%NAME%
 
@@ -678,8 +678,8 @@ ItemDisplay[SHIELD (EXC OR ELT) !INF SOCK=4 NMAG !RW CLVL<80]: %NAME%{%GRAY%Exil
 ItemDisplay[(BOW OR XBOW) NORM !INF SOCK=2 NMAG !RW CLVL<31]: %NAME%{%GRAY%Zephyr%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[WAND NORM !INF SOCK=2 NMAG !RW CLVL<31]: %NAME%{%GRAY%Strength, White, Wind%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[STAFF NORM !INF SOCK=2 NMAG !RW CLVL<31]: %NAME%{%GRAY%Leaf, Strength, Wind%NL%%TAN%Note%WHITE%: Possible RuneWords:}
-ItemDisplay[(SWORD OR AXE OR MACE) NORM !INF SOCK=2 NMAG !RW CLVL<31]: %NAME%{%GRAY%Steel, Strength, Wind%NL%%TAN%Note%WHITE%: Possible RuneWords:}
-ItemDisplay[WEAPON !(BOW OR XBOW OR SOR) NORM !INF SOCK=2 NMAG !RW CLVL<31]: %NAME%{%GRAY%Strength, Wind%NL%%TAN%Note%WHITE%: Possible RuneWords:}
+ItemDisplay[(SWORD OR AXE OR MACE) !leg NORM !INF SOCK=2 NMAG !RW CLVL<31]: %NAME%{%GRAY%Steel, Strength, Wind%NL%%TAN%Note%WHITE%: Possible RuneWords:}
+ItemDisplay[WEAPON !(BOW OR XBOW OR SOR OR leg) NORM !INF SOCK=2 NMAG !RW CLVL<31]: %NAME%{%GRAY%Strength, Wind%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[(BOW OR XBOW) (EXC OR ELT) !INF SOCK=2 NMAG !RW CLVL<80]: %NAME%{%GRAY%Zephyr%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[WAND (EXC OR ELT) !INF SOCK=2 NMAG !RW CLVL<80]: %NAME%{%GRAY%Strength, White, Wind%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[STAFF (EXC OR ELT) !INF SOCK=2 NMAG !RW CLVL<80]: %NAME%{%GRAY%Leaf, Strength, Wind%NL%%TAN%Note%WHITE%: Possible RuneWords:}
@@ -693,8 +693,8 @@ ItemDisplay[SWORD NORM !INF SOCK=3 NMAG !RW CLVL<31]: %NAME%{%GRAY%Lawbringer, M
 ItemDisplay[SCEPTER NORM !INF SOCK=3 NMAG !RW CLVL<31]: %NAME%{%GRAY%Malice, Plague, Venom%NL%Fury, King's Grace, Lawbringer,%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[(clb OR spc OR mac OR mst OR fla) NORM !INF SOCK=3 NMAG !RW CLVL<31]: %NAME%{%GRAY%Fury, Malice, Plague, Venom%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Black,}
 ItemDisplay[(whm OR mau OR gma) NORM !INF SOCK=3 NMAG !RW CLVL<31]: %NAME%{%GRAY%Malice, Plague, Venom%NL%Black, Fury, Lawbringer,%NL%%TAN%Note%WHITE%: Possible RuneWords:}
-ItemDisplay[WEAPON !(BOW OR XBOW OR SOR) NORM !INF SOCK=3 NMAG !RW CLVL<31]: %NAME%{%GRAY%Fury, Malice, Plague, Venom%NL%%TAN%Note%WHITE%: Possible RuneWords:}
-ItemDisplay[WEAPON NORM !INF SOCK=3 NMAG !RW CLVL<31]: %NAME%{%GRAY%Plague, Venom%NL%%TAN%Note%WHITE%: Possible RuneWords:}
+ItemDisplay[WEAPON !(BOW OR XBOW OR SOR OR leg) NORM !INF SOCK=3 NMAG !RW CLVL<31]: %NAME%{%GRAY%Fury, Malice, Plague, Venom%NL%%TAN%Note%WHITE%: Possible RuneWords:}
+ItemDisplay[WEAPON !leg NORM !INF SOCK=3 NMAG !RW CLVL<31]: %NAME%{%GRAY%Plague, Venom%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[(BOW OR XBOW) (EXC OR ELT) !INF SOCK=3 NMAG !RW CLVL<80]: %NAME%{%GRAY%Edge, Melody, Plague, Venom%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[SIN (EXC OR ELT) !INF SOCK=3 NMAG !RW CLVL<80]: %NAME%{%GRAY%Pattern, Plague, Venom%NL%Chaos, Fury, Malice,%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[(AXE OR POLEARM) (EXC OR ELT) !INF SOCK=3 NMAG !RW CLVL<80]: %NAME%{%GRAY%Malice, Plague, Venom%NL%Crescent Moon, Fury,%NL%%TAN%Note%WHITE%: Possible RuneWords:}
