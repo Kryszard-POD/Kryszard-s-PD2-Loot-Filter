@@ -1,4 +1,4 @@
-// Kryszard's PD2 Loot Filter ver 1.6.6
+// Kryszard's PD2 Loot Filter ver 1.6.7
 //
 // twitch.tv/kryszard
 //
@@ -678,12 +678,12 @@ ItemDisplay[SHIELD (EXC OR ELT) !INF SOCK=4 NMAG !RW CLVL<80]: %NAME%{%GRAY%Exil
 ItemDisplay[(BOW OR XBOW) NORM !INF SOCK=2 NMAG !RW CLVL<31]: %NAME%{%GRAY%Zephyr%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[WAND NORM !INF SOCK=2 NMAG !RW CLVL<31]: %NAME%{%GRAY%Strength, White, Wind%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[STAFF NORM !INF SOCK=2 NMAG !RW CLVL<31]: %NAME%{%GRAY%Leaf, Strength, Wind%NL%%TAN%Note%WHITE%: Possible RuneWords:}
-ItemDisplay[(SWORD OR AXE OR MACE) !leg NORM !INF SOCK=2 NMAG !RW CLVL<31]: %NAME%{%GRAY%Steel, Strength, Wind%NL%%TAN%Note%WHITE%: Possible RuneWords:}
+ItemDisplay[(SWORD OR AXE OR mac OR mst OR fla) !leg NORM !INF SOCK=2 NMAG !RW CLVL<31]: %NAME%{%GRAY%Steel, Strength, Wind%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[WEAPON !(BOW OR XBOW OR SOR OR leg) NORM !INF SOCK=2 NMAG !RW CLVL<31]: %NAME%{%GRAY%Strength, Wind%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[(BOW OR XBOW) (EXC OR ELT) !INF SOCK=2 NMAG !RW CLVL<80]: %NAME%{%GRAY%Zephyr%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[WAND (EXC OR ELT) !INF SOCK=2 NMAG !RW CLVL<80]: %NAME%{%GRAY%Strength, White, Wind%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[STAFF (EXC OR ELT) !INF SOCK=2 NMAG !RW CLVL<80]: %NAME%{%GRAY%Leaf, Strength, Wind%NL%%TAN%Note%WHITE%: Possible RuneWords:}
-ItemDisplay[(SWORD OR AXE OR MACE) (EXC OR ELT) !INF SOCK=2 NMAG !RW CLVL<80]: %NAME%{%GRAY%Steel, Strength, Wind%NL%%TAN%Note%WHITE%: Possible RuneWords:}
+ItemDisplay[(SWORD OR AXE OR 9ma OR 9mt OR 9fl OR 7ma OR 7mt OR 7fl) (EXC OR ELT) !INF SOCK=2 NMAG !RW CLVL<80]: %NAME%{%GRAY%Steel, Strength, Wind%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[WEAPON !(BOW OR XBOW OR SOR) (EXC OR ELT) !INF SOCK=2 NMAG !RW CLVL<80]: %NAME%{%GRAY%Strength, Wind%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 //Weapons 3soc
 ItemDisplay[(BOW OR XBOW) NORM !INF SOCK=3 NMAG !RW CLVL<31]: %NAME%{%GRAY%Edge, Melody, Plague, Venom%NL%%TAN%Note%WHITE%: Possible RuneWords:}
