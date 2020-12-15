@@ -1,4 +1,4 @@
-// Kryszard's PD2 Loot Filter ver 1.8.0
+// Kryszard's PD2 Loot Filter ver 1.8.1
 //
 // twitch.tv/kryszard
 //
@@ -326,14 +326,14 @@ ItemDisplay[amu MAG]: %NAME%{%GRAY%Blood%WHITE%: Perf %RED%O, %ORANGE%Amn, %BLUE
 ItemDisplay[rin MAG]: %NAME%{%GRAY%Caster%WHITE%: Perf %PURPLE%O, %ORANGE%Amn, %BLUE%Jewel%NL%%GRAY%Blood%WHITE%: Perf %RED%O, %ORANGE%Sol, %BLUE%Jewel%NL%%TAN%Note%WHITE%: Crafting Recipes:}
 
 //RW Bases with high DEF
-ItemDisplay[xtp !ETH !INF NMAG DEF>249]: %DOT-D6%%NAME% %DARK_GREEN%*%CONTINUE%
-ItemDisplay[(uui OR uea OR ula) !ETH !INF NMAG DEF>449]: %DOT-D6%%NAME% %DARK_GREEN%*%CONTINUE%
-ItemDisplay[utu !ETH !INF NMAG DEF>459]: %DOT-D6%%NAME% %DARK_GREEN%*%CONTINUE%
-ItemDisplay[urs !ETH !INF NMAG DEF>479]: %DOT-D6%%NAME% %DARK_GREEN%*%CONTINUE%
-ItemDisplay[utp !ETH !INF NMAG DEF>499]: %DOT-D6%%NAME% %DARK_GREEN%*%CONTINUE%
-ItemDisplay[EQ2 ELT ETH !INF NMAG DEF>699]: %DOT-D6%%NAME% %DARK_GREEN%*%CONTINUE%
-ItemDisplay[uit !ETH !INF NMAG DEF>139]: %DOT-D6%%NAME% %DARK_GREEN%*%CONTINUE%
-ItemDisplay[uit ETH !INF NMAG DEF>209]: %DOT-D6%%NAME% %DARK_GREEN%*%CONTINUE%
+ItemDisplay[xtp !SOCK=1 !ETH !INF NMAG DEF>249]: %DOT-D6%%NAME% %DARK_GREEN%*%CONTINUE%
+ItemDisplay[(uui OR uea OR ula) !SOCK=1 !ETH !INF NMAG DEF>449]: %DOT-D6%%NAME% %DARK_GREEN%*%CONTINUE%
+ItemDisplay[utu !SOCK=1 !ETH !INF NMAG DEF>459]: %DOT-D6%%NAME% %DARK_GREEN%*%CONTINUE%
+ItemDisplay[urs !SOCK=1 !ETH !INF NMAG DEF>479]: %DOT-D6%%NAME% %DARK_GREEN%*%CONTINUE%
+ItemDisplay[utp !SOCK=1 !ETH !INF NMAG DEF>499]: %DOT-D6%%NAME% %DARK_GREEN%*%CONTINUE%
+ItemDisplay[EQ2 ELT !SOCK=1 ETH !INF NMAG DEF>699]: %DOT-D6%%NAME% %DARK_GREEN%*%CONTINUE%
+ItemDisplay[uit (SOCK=0 OR SOCK=4) !ETH !INF NMAG DEF>139]: %DOT-D6%%NAME% %DARK_GREEN%*%CONTINUE%
+ItemDisplay[uit (SOCK=0 OR SOCK=4) ETH !INF NMAG DEF>209]: %DOT-D6%%NAME% %DARK_GREEN%*%CONTINUE%
 
 //RW Bases with socketing recipes
 //Spirit Swords
