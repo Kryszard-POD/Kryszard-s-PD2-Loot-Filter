@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season II: ver 1.0.2
+//	Kryszard's PD2 Loot Filter for Season II: ver 1.0.3
 //
 //	twitch.tv/kryszard
 //
@@ -315,11 +315,11 @@ ItemDisplay[ci3 NMAG !ETH SOCK=0]: %NAME% %YELLOW%[%GRAY%imbue%YELLOW%]{%TAN%Not
 ItemDisplay[(GLOVES OR BOOTS OR BELT) RARE !ID]: %NAME%
 
 //Rare ETH weapons
-ItemDisplay[WEAPON RARE ETH !ID]: %NAME%
+ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp OR mac OR 9ma OR 7ma OR mst OR 9mt OR 7mt OR ssd OR 9ss OR 7ss OR scm OR 9sm OR 7sm OR sbr OR 9sb OR 7sb OR flc OR 9fc OR 7fc OR wsd OR 9wd OR 7wd OR dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR bld OR 9bl OR 7bl OR STAFF) RARE ETH !ID]: %NAME%
 
 //Craftables
 ItemDisplay[GLOVES ((EXC OR ELT) !(utg OR uhg)) MAG !ETH !ID]: %GRAY%* %BLUE%%NAME% %GRAY%*
-ItemDisplay[WEAPON MAG ETH !ID]: %NAME%
+ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp OR mac OR 9ma OR 7ma OR mst OR 9mt OR 7mt OR ssd OR 9ss OR 7ss OR scm OR 9sm OR 7sm OR sbr OR 9sb OR 7sb OR flc OR 9fc OR 7fc OR wsd OR 9wd OR 7wd OR dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR bld OR 9bl OR 7bl OR STAFF) MAG ETH !ID]: %NAME%
 ItemDisplay[(am2 OR am7 OR amc OR am1 OR am6 OR amb) MAG !ID]: %NAME%
 ItemDisplay[(bhm OR xh9 OR uh9) MAG !ID]: %NAME%
 ItemDisplay[(bsh OR xsh OR ush) MAG !ID]: %NAME%
@@ -1045,7 +1045,7 @@ ItemDisplay[(72h OR 7gs) ETH !INF !SUP SOCK=0 NMAG]: %DOT-D6%%NAME%{%WHITE%This 
 //Chaos
 ItemDisplay[(7ar OR 7tw OR 7qr OR 9tw) (SK275>0 OR SK276>0) ETH !INF !SUP SOCK=0 NMAG]: %DOT-D6%%NAME%{%WHITE%This Item + %ORANGE%Ral %WHITE%+ %ORANGE%Amn %WHITE%+ Perf %PURPLE%O%NL%%TAN%Note%WHITE%: Socketing Recipe:}
 //Plague
-ItemDisplay[(clw OR btl OR skr OR 9ar OR 9lw OR 9tw OR 9qr OR 7ar OR 7wb OR 7lw OR 7tw OR 7qr) (SK262>2 OR SK266>2 OR SK267>2 OR SK271>2 OR SK272>2 OR SK273>2 OR SK276>2 OR SK277>2 OR SK278>2) !INF !SUP SOCK=0 NMAG]: %DOT-D6%%NAME%{%WHITE%This Item + %ORANGE%Ral %WHITE%+ %ORANGE%Amn %WHITE%+ Perf %PURPLE%O%NL%%TAN%Note%WHITE%: Socketing Recipe:}
+ItemDisplay[(clw OR btl OR skr OR 9ar OR 9lw OR 9tw OR 9qr OR 7ar OR 7wb OR 7lw OR 7tw OR 7qr) (SK262>2 OR SK266>2 OR SK267>2 OR SK271>2 OR SK272>2 OR SK273>2 OR SK276>2 OR SK277>2 OR SK278>2 OR SK265>2 OR (SK278>1 AND SK265>1)) !INF !SUP SOCK=0 NMAG]: %DOT-D6%%NAME%{%WHITE%This Item + %ORANGE%Ral %WHITE%+ %ORANGE%Amn %WHITE%+ Perf %PURPLE%O%NL%%TAN%Note%WHITE%: Socketing Recipe:}
 ItemDisplay[(SCEPTER !(scp OR 9sc OR 7sc)) (SK101>2 OR SK112>2 OR SK118>2 OR SK121>2) !INF !SUP SOCK=0 NMAG]: %NAME%{%WHITE%This Item + %ORANGE%Ral %WHITE%+ %ORANGE%Amn %WHITE%+ Perf %PURPLE%O%NL%%TAN%Note%WHITE%: Socketing Recipe:}
 //Amazon Spears
 ItemDisplay[(amd OR ame) TABSK2>2 !ETH !INF !SUP SOCK=0 NMAG]: %DOT-D6%%NAME%{%WHITE%This Item + %ORANGE%Ral %WHITE%+ %ORANGE%Amn %WHITE%+ Perf %PURPLE%O%NL%%TAN%Note%WHITE%: Socketing Recipe:}
@@ -1092,7 +1092,7 @@ ItemDisplay[(72h OR 7gs) ETH SOCK=0 SUP NMAG]: %DOT-D6%%NAME%
 ItemDisplay[(7ar OR 7tw OR 7qr OR 9tw) (SK275>0 OR SK276>0) ETH SOCK=0 SUP NMAG]: %DOT-D6%%NAME%
 //Plague
 ItemDisplay[(SCEPTER !(scp OR 9sc OR 7sc OR wsp OR 9ws OR 7ws)) (SK101>2 OR SK112>2 OR SK118>2 OR SK121>2) SOCK=0 (INF OR SUP) NMAG]: %NAME%
-ItemDisplay[(clw OR btl OR skr OR 9ar OR 9lw OR 9tw OR 9qr OR 7ar OR 7wb OR 7lw OR 7tw OR 7qr) (SK262>2 OR SK266>2 OR SK267>2 OR SK271>2 OR SK272>2 OR SK273>2 OR SK276>2 OR SK277>2 OR SK278>2) SOCK=0 (INF OR SUP) NMAG]: %DOT-D6%%NAME%
+ItemDisplay[(clw OR btl OR skr OR 9ar OR 9lw OR 9tw OR 9qr OR 7ar OR 7wb OR 7lw OR 7tw OR 7qr) (SK262>2 OR SK266>2 OR SK267>2 OR SK271>2 OR SK272>2 OR SK273>2 OR SK276>2 OR SK277>2 OR SK278>2 OR SK265>2 OR (SK278>1 AND SK265>1)) SOCK=0 (INF OR SUP) NMAG]: %DOT-D6%%NAME%
 //Armors
 ItemDisplay[(xtp OR utp OR uui OR uea OR ula OR utu OR urs OR uar) SOCK=0 SUP NMAG]: %NAME%
 ItemDisplay[EQ2 ELT ETH SOCK=0 SUP NMAG]: %NAME%
@@ -1188,7 +1188,7 @@ ItemDisplay[(7p7 OR 7h7) ETH NMAG !RW SOCK=6]: %DOT-D6%%NAME%{%GRAY%Breath of th
 ItemDisplay[(amd OR ame) TABSK2>2 !ETH !INF NMAG !RW SOCK=4]: %DOT-D6%%NAME%{%GRAY%Passion, Phoenix, Pride, Rift%NL%Hand of Justice, Infinity, Insight,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Fortitude,}
 //Claws
 ItemDisplay[(7ar OR 7tw OR 7qr OR 9tw) (SK275>0 OR SK276>0) !INF ETH NMAG !RW SOCK=3]: %DOT-D6%%NAME%{%GRAY%Pattern, Plague, Venom, Wind%NL%Chaos, Fury, Malice,%NL%%TAN%Note%WHITE%: Possible RuneWords:}
-ItemDisplay[(clw OR btl OR skr OR 9ar OR 9lw OR 9tw OR 9qr OR 7ar OR 7wb OR 7lw OR 7tw OR 7qr) (SK262>2 OR SK266>2 OR SK267>2 OR SK271>2 OR SK272>2 OR SK273>2 OR SK276>2 OR SK277>2 OR SK278>2) !INF NMAG !RW SOCK=3]: %DOT-D6%%NAME%{%GRAY%Pattern, Plague, Venom, Wind%NL%Chaos, Fury, Malice,%NL%%TAN%Note%WHITE%: Possible RuneWords:}
+ItemDisplay[(clw OR btl OR skr OR 9ar OR 9lw OR 9tw OR 9qr OR 7ar OR 7wb OR 7lw OR 7tw OR 7qr) (SK262>2 OR SK266>2 OR SK267>2 OR SK271>2 OR SK272>2 OR SK273>2 OR SK276>2 OR SK277>2 OR SK278>2 OR SK265>2 OR (SK278>1 AND SK265>1)) !INF NMAG !RW SOCK=3]: %DOT-D6%%NAME%{%GRAY%Pattern, Plague, Venom, Wind%NL%Chaos, Fury, Malice,%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 
 //Potentially expensive (Woth some GOLD) items
 ItemDisplay[(7tk OR 7bk OR 7ta) (MAG OR RARE OR NMAG) !ETH !INF]: %NAME% %GRAY%(%TAN%$%WHITE%%PRICE%%GRAY%)
@@ -1233,8 +1233,8 @@ ItemDisplay[imma]: %NAME% %ORANGE%*{%WHITE%Map + %GOLD%Orb %WHITE%+ %BLUE%Jewel 
 ItemDisplay[scou]: %NAME% %ORANGE%*{%BLUE%M%WHITE%a%YELLOW%p %WHITE%+ %GOLD%Orb %WHITE%+ %ORANGE%Hel Rune%NL%%TAN%Note%WHITE%: Imbue %BLUE%Magic%WHITE%/%YELLOW%Rare %WHITE%Map to White:}%CONTINUE%
 ItemDisplay[upmp]: %NAME% %ORANGE%*{%WHITE%3x%BLUE%M%WHITE%a%YELLOW%p %TAN%(%WHITE%Tier:%ORANGE%x%TAN%) %WHITE%+ %GOLD%Orb %WHITE%= Map %TAN%(%WHITE%Tier:%ORANGE%x%WHITE%+1%TAN%)%NL%Note%WHITE%: Upgrade Maps for higher Tier:}%CONTINUE%
 ItemDisplay[lbox]: %BORDER-0A%%NAME% %ORANGE%*%NL%%GREEN%pick me up{%WHITE%Two-Handed Weapon = 4 max%NL%One-Handed Weapon = 2 max%NL%Helmet, Chest, Shield = 2 max%NL%%TAN%Note%WHITE%: Use it to %TAN%Socket %WHITE%an Item}%CONTINUE%
-ItemDisplay[(t10 OR t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR OR t19 OR t20 t21 OR t22 OR t23 OR y24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t30 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t40 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49) MAG]: %MAP-7F%%NAME% %GREEN%*{%WHITE%To Modify Maps visit Anya%NL%%TAN%Note%WHITE%: to Reroll: Cube with 3xPerf %GRAY%O}
-ItemDisplay[(t10 OR t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR OR t19 OR t20 t21 OR t22 OR t23 OR y24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t30 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t40 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]: %MAP-7F%%NAME% %GREEN%*{%TAN%Note%WHITE%: To Modify Maps visit Anya}
+ItemDisplay[(t10 OR t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t20 OR t21 OR t22 OR t23 OR y24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t30 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t40 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49) MAG]: %MAP-7F%%NAME% %GREEN%*{%WHITE%To Modify Maps visit Anya%NL%%TAN%Note%WHITE%: to Reroll: Cube with 3xPerf %GRAY%O}
+ItemDisplay[(t10 OR t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t20 OR t21 OR t22 OR t23 OR y24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t30 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t40 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]: %MAP-7F%%NAME% %GREEN%*{%TAN%Note%WHITE%: To Modify Maps visit Anya}
 ItemDisplay[dcma]: %MAP-0A%%GRAY%*%RED%* %NAME% %RED%*%GRAY%*%CONTINUE%{%RED%DO IT AT YOUR OWN RISK!%NL%%TAN%Note%WHITE%: %GRAY%You better not go in there...}
 ItemDisplay[dcbl OR dcho OR dcso]: %MAP-0A%%NAME% %RED%*%CONTINUE%{%TAN%Note%WHITE%: %RED%Diablo Clone %GRAY%walks nearby...}
 
