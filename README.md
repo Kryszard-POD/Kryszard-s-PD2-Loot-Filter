@@ -7,7 +7,7 @@ You can know me from: [Twitch](https://twitch.tv/kryszard). Feel free to follow 
 Link to filter: https://raw.githubusercontent.com/Kryszard-POD/Kryszard-s-PD2-Loot-Filter/main/item.filter
 
 # About
-I was trying to make one filter, which will suit most players needs.  
+I am trying to make one filter, which will suit most players needs.  
 Filter is good for both: leveling and endgame experience.  
 It's gonna show you almost everything which can help you during leveling process at early stages of your new characters, and became more strict after you hit **lvl 80+**
 
@@ -19,7 +19,7 @@ It's gonna show you almost everything which can help you during leveling process
 * Filter highlight useful vendor items to make those easier to catch *(like +3 to Warcries Weapons, Teleport Charges staves, Life Tap Charges wands, +3skill/+20IAS gloves, Trap Claws, etc.)*.  
 * Every MAG and RARE WEAPON or ARMOR displays a PRICETAG only when its IDENTIFIED *(so you can know if its wotrh to visit Charsi)*.  
 * Good CHARMS have changed names to make those easier to mule and organise in your inventory. *(for e.g. +1 to Warcries Grand Charm gonna be called "Warcries Skiller")*.
-* hp and mana potions which are showing on screen depends of difficulty of your game. You gonna see every potions on normal diff. On nightmare only Great +, and on hell only Super and Juvies *(and antidotes)*. Showing gems depends of game difficulty aswell.  
+* hp and mana potions which are showing on screen depends of difficulty of your game. You gonna see every potions on normal diff. On nightmare only Great +, and on hell only Super and Juvies *(and antidotes)*. Showing gems depends of game difficulty aswell. Perfect Gems drop with chat notify.  
 * Gold piles with low amount of gold are hidden  
 * You can see most of the items and runeword bases when you are on low lvl. Items gonna dissapear when your character gain more lvls. You gonna see every white item *(RW base)* to lvl 30. Normal tier runeword bases gonna be hidden when you hit lvl 30+. Then you will still see every runeword base *(exceptional and elite tier ones)* until you hit **lvl 80+**. Similar rule counts with every magic/rare item will be shown until you hit **lvl 80+** *(normal tier ones only to lvl 40)*.  
 
