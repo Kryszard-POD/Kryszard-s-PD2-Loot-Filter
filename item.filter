@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season II: ver 1.0.3
+//	Kryszard's PD2 Loot Filter for Season II: ver 1.0.4
 //
 //	twitch.tv/kryszard
 //
@@ -337,8 +337,8 @@ ItemDisplay[amu MAG]: %NAME%{%WHITE%HP: Perf %BLUE%O%ORANGE%, Thul %WHITE%| S: P
 ItemDisplay[rin MAG]: %NAME%{%WHITE%HP: Perf %BLUE%O%ORANGE%, Amn %WHITE%| S: Perf %GREEN%O%ORANGE%, Amn%NL%%WHITE%B: Perf %RED%O%ORANGE%, Sol%WHITE% | C: Perf %PURPLE%O%ORANGE%, Amn%NL%Craft Recipes: %BLUE%Jewel,}
 
 //Class items
-ItemDisplay[(SOR OR WAND OR SCEPTER OR STAFF OR DRU OR BAR OR NEC OR SIN) !INF NMAG (CLVL>1 AND CLVL<31)]: %NAME% %GRAY%(%TAN%$%WHITE%%PRICE%%GRAY%)%CONTINUE%
-ItemDisplay[(SOR OR WAND OR (wsp OR 9ws OR 7ws) OR (am5 OR ama OR amf) OR DRU OR BAR OR NEC OR SIN) (MAG OR RARE) !ID]: %NAME%
+ItemDisplay[(SOR OR WAND OR SCEPTER OR STAFF OR DRU OR BAR OR NEC OR (SIN !(NORM OR 9ar OR 9wb OR 9xf))) NMAG (CLVL>1 AND CLVL<31)]: %NAME% %GRAY%(%TAN%$%WHITE%%PRICE%%GRAY%)%CONTINUE%
+ItemDisplay[(SOR OR WAND OR (wsp OR 9ws OR 7ws) OR (am5 OR ama OR amf) OR DRU OR BAR OR NEC OR (SIN !(NORM OR 9ar OR 9wb OR 9xf))) (MAG OR RARE) !ID]: %NAME%
 
 //Show me exactly +SKILLS values on NMAG items
 //Amazon
@@ -1212,6 +1212,9 @@ ItemDisplay[ARMOR EXC SET ID]: %NAME%{%GREEN%This Item %WHITE%+ %ORANGE%Ko %WHIT
 ItemDisplay[WEAPON NORM SET ID]: %NAME%{%GREEN%This Item %WHITE%+ %ORANGE%Ral %WHITE%+ %ORANGE%Sol %WHITE%+ Perf %GREEN%O%NL%%TAN%Note%WHITE%: Upgrading Recipe:}
 ItemDisplay[WEAPON EXC SET ID]: %NAME%{%GREEN%This Item %WHITE%+ %ORANGE%Lum %WHITE%+ %ORANGE%Pul %WHITE%+ Perf %GREEN%O%NL%%TAN%Note%WHITE%: Upgrading Recipe:}
 
+//Show me quantitiy of all stackables
+ItemDisplay[!(ARMOR OR WEAPON OR tbk OR ibk) QTY>0]: %NAME% %TAN%x %WHITE%%QTY%%CONTINUE%
+
 //Standard of Heroes
 ItemDisplay[std]: %PX-9D%%NAME%{%WHITE%+10% Experience%NL%+20% Magic&Gold Find%NL%+20% Monster Density%NL%%TAN%Note: %WHITE%Cube it with Map to gain:}
 
@@ -1221,38 +1224,35 @@ ItemDisplay[UNI OR SET OR RW OR CRAFT]: %NAME%
 //Show me every identified item
 ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE OR SET OR UNI OR CRAFT) ID]: %NAME%
 
-//Show me quantitiy of all stackables
-ItemDisplay[!(ARMOR OR WEAPON OR tbk OR ibk) QTY>0]: %NAME% %TAN%x %WHITE%%QTY%%CONTINUE%
-
 //Project Diablo 2 items
-ItemDisplay[wss]: %MAP-0A%%NAME% %ORANGE%*{%WHITE%Map: 70% +Mod, 30% CNC%NL%Sock Item: 75% +Mod, 25% Brick%NL%Item: 50% +Mod, 25% +Sock, 25% Brick%NL%%TAN%Note: %RED%Corrupt %WHITE%Item/Map:}%CONTINUE%
-ItemDisplay[imra]: %NAME% %ORANGE%*{%WHITE%Map + %GOLD%Orb %WHITE%+ %BLUE%Jewel %WHITE%+ %ORANGE%Rune>9%NL%%TAN%Note%WHITE%: Imbue White Map to %YELLOW%Rare%WHITE%:}%CONTINUE%
-ItemDisplay[rera]: %NAME% %ORANGE%*{%YELLOW%Map %WHITE%+ %GOLD%Orb %WHITE%+ Perf Gem + %ORANGE%Rune>9%NL%%TAN%Note%WHITE%: Reroll %YELLOW%Rare %WHITE%Map:}%CONTINUE%
-ItemDisplay[upma]: %NAME% %ORANGE%*{%BLUE%Map %WHITE%+ %GOLD%Orb %WHITE%+ Perf %GRAY%O %WHITE%+ %ORANGE%Rune>9%NL%%TAN%Note%WHITE%: Imbue %BLUE%Magic %WHITE%Map to %YELLOW%Rare%WHITE%:}%CONTINUE%
-ItemDisplay[imma]: %NAME% %ORANGE%*{%WHITE%Map + %GOLD%Orb %WHITE%+ %BLUE%Jewel %NL%%TAN%Note%WHITE%: Imbue White Map to %BLUE%Magic%WHITE%:}%CONTINUE%
-ItemDisplay[scou]: %NAME% %ORANGE%*{%BLUE%M%WHITE%a%YELLOW%p %WHITE%+ %GOLD%Orb %WHITE%+ %ORANGE%Hel Rune%NL%%TAN%Note%WHITE%: Imbue %BLUE%Magic%WHITE%/%YELLOW%Rare %WHITE%Map to White:}%CONTINUE%
-ItemDisplay[upmp]: %NAME% %ORANGE%*{%WHITE%3x%BLUE%M%WHITE%a%YELLOW%p %TAN%(%WHITE%Tier:%ORANGE%x%TAN%) %WHITE%+ %GOLD%Orb %WHITE%= Map %TAN%(%WHITE%Tier:%ORANGE%x%WHITE%+1%TAN%)%NL%Note%WHITE%: Upgrade Maps for higher Tier:}%CONTINUE%
-ItemDisplay[lbox]: %BORDER-0A%%NAME% %ORANGE%*%NL%%GREEN%pick me up{%WHITE%Two-Handed Weapon = 4 max%NL%One-Handed Weapon = 2 max%NL%Helmet, Chest, Shield = 2 max%NL%%TAN%Note%WHITE%: Use it to %TAN%Socket %WHITE%an Item}%CONTINUE%
+ItemDisplay[wss]: %MAP-0A%%NAME% %ORANGE%*{%WHITE%Map: 70% +Mod, 30% CNC%NL%Sock Item: 75% +Mod, 25% Brick%NL%Item: 50% +Mod, 25% +Sock, 25% Brick%NL%%TAN%Note: %RED%Corrupt %WHITE%Item/Map:}
+ItemDisplay[imra]: %NAME% %ORANGE%*{%WHITE%Map + %GOLD%Orb %WHITE%+ %BLUE%Jewel %WHITE%+ %ORANGE%Rune>9%NL%%TAN%Note%WHITE%: Imbue White Map to %YELLOW%Rare%WHITE%:}
+ItemDisplay[rera]: %NAME% %ORANGE%*{%YELLOW%Map %WHITE%+ %GOLD%Orb %WHITE%+ Perf Gem + %ORANGE%Rune>9%NL%%TAN%Note%WHITE%: Reroll %YELLOW%Rare %WHITE%Map:}
+ItemDisplay[upma]: %NAME% %ORANGE%*{%BLUE%Map %WHITE%+ %GOLD%Orb %WHITE%+ Perf %GRAY%O %WHITE%+ %ORANGE%Rune>9%NL%%TAN%Note%WHITE%: Imbue %BLUE%Magic %WHITE%Map to %YELLOW%Rare%WHITE%:}
+ItemDisplay[imma]: %NAME% %ORANGE%*{%WHITE%Map + %GOLD%Orb %WHITE%+ %BLUE%Jewel %NL%%TAN%Note%WHITE%: Imbue White Map to %BLUE%Magic%WHITE%:}
+ItemDisplay[scou]: %NAME% %ORANGE%*{%BLUE%M%WHITE%a%YELLOW%p %WHITE%+ %GOLD%Orb %WHITE%+ %ORANGE%Hel Rune%NL%%TAN%Note%WHITE%: Imbue %BLUE%Magic%WHITE%/%YELLOW%Rare %WHITE%Map to White:}
+ItemDisplay[upmp]: %NAME% %ORANGE%*{%WHITE%3x%BLUE%M%WHITE%a%YELLOW%p %TAN%(%WHITE%Tier:%ORANGE%x%TAN%) %WHITE%+ %GOLD%Orb %WHITE%= Map %TAN%(%WHITE%Tier:%ORANGE%x%WHITE%+1%TAN%)%NL%Note%WHITE%: Upgrade Maps for higher Tier:}
+ItemDisplay[lbox]: %BORDER-0A%%NAME% %ORANGE%*%NL%%GREEN%pick me up{%WHITE%Two-Handed Weapon = 4 max%NL%One-Handed Weapon = 2 max%NL%Helmet, Chest, Shield = 2 max%NL%%TAN%Note%WHITE%: Use it to %TAN%Socket %WHITE%an Item}
 ItemDisplay[(t10 OR t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t20 OR t21 OR t22 OR t23 OR y24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t30 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t40 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49) MAG]: %MAP-7F%%NAME% %GREEN%*{%WHITE%To Modify Maps visit Anya%NL%%TAN%Note%WHITE%: to Reroll: Cube with 3xPerf %GRAY%O}
 ItemDisplay[(t10 OR t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t20 OR t21 OR t22 OR t23 OR y24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t30 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t40 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]: %MAP-7F%%NAME% %GREEN%*{%TAN%Note%WHITE%: To Modify Maps visit Anya}
-ItemDisplay[dcma]: %MAP-0A%%GRAY%*%RED%* %NAME% %RED%*%GRAY%*%CONTINUE%{%RED%DO IT AT YOUR OWN RISK!%NL%%TAN%Note%WHITE%: %GRAY%You better not go in there...}
-ItemDisplay[dcbl OR dcho OR dcso]: %MAP-0A%%NAME% %RED%*%CONTINUE%{%TAN%Note%WHITE%: %RED%Diablo Clone %GRAY%walks nearby...}
+ItemDisplay[dcma]: %MAP-0A%%GRAY%*%RED%* %NAME% %RED%*%GRAY%*{%RED%DO IT AT YOUR OWN RISK!%NL%%TAN%Note%WHITE%: %GRAY%You better not go in there...}
+ItemDisplay[dcbl OR dcho OR dcso]: %MAP-0A%%NAME% %RED%*{%TAN%Note%WHITE%: %RED%Diablo Clone %GRAY%walks nearby...}
 
 //Essences
-ItemDisplay[tes]: %PX-9D%%NAME%{%TAN%Essence %WHITE%from: %BLUE%Andariel %WHITE%or %BLUE%Duriel}%CONTINUE%
-ItemDisplay[ceh]: %PX-9D%%NAME%{%TAN%Essence %WHITE%from: %TAN%Mephisto}%CONTINUE%
-ItemDisplay[bet]: %PX-9D%%NAME%{%TAN%Essence %WHITE%from: %RED%Diablo}%CONTINUE%
-ItemDisplay[fed]: %PX-9D%%NAME%{%TAN%Essence %WHITE%from: %DARK_GREEN%Baal}%CONTINUE%
+ItemDisplay[tes]: %PX-9D%%NAME%{%TAN%Essence %WHITE%from: %BLUE%Andariel %WHITE%or %BLUE%Duriel}
+ItemDisplay[ceh]: %PX-9D%%NAME%{%TAN%Essence %WHITE%from: %TAN%Mephisto}
+ItemDisplay[bet]: %PX-9D%%NAME%{%TAN%Essence %WHITE%from: %RED%Diablo}
+ItemDisplay[fed]: %PX-9D%%NAME%{%TAN%Essence %WHITE%from: %DARK_GREEN%Baal}
 
 //Uber Keys
-ItemDisplay[pk1]: %PX-9D%%NAME%{%TAN%Key %WHITE%from: %RED%Countess %WHITE%or %RED%Blood Raven}%CONTINUE%
-ItemDisplay[pk2]: %PX-9D%%NAME%{%TAN%Key %WHITE%from: %BLUE%Summoner %WHITE%or %BLUE%Bloodwitch}%CONTINUE%
-ItemDisplay[pk3]: %PX-9D%%NAME%{%TAN%Key %WHITE%from: %PURPLE%Nihlathak %WHITE%or %PURPLE%Izual}%CONTINUE%
+ItemDisplay[pk1]: %PX-9D%%NAME%{%TAN%Key %WHITE%from: %RED%Countess %WHITE%or %RED%Blood Raven}
+ItemDisplay[pk2]: %PX-9D%%NAME%{%TAN%Key %WHITE%from: %BLUE%Summoner %WHITE%or %BLUE%Bloodwitch}
+ItemDisplay[pk3]: %PX-9D%%NAME%{%TAN%Key %WHITE%from: %PURPLE%Nihlathak %WHITE%or %PURPLE%Izual}
 
 //Organs
-ItemDisplay[mbr]: %PX-9D%%NAME%{%WHITE%to open %GRAY%Uber %RED%Tristram%NL%%TAN%Note%WHITE%: Cube %ORANGE%ANY %WHITE%3 Organs}%CONTINUE%
-ItemDisplay[bey]: %PX-9D%%NAME%{%WHITE%to open %GRAY%Uber %RED%Tristram%NL%%TAN%Note%WHITE%: Cube %ORANGE%ANY %WHITE%3 Organs}%CONTINUE%
-ItemDisplay[dhn]: %PX-9D%%NAME%{%WHITE%to open %GRAY%Uber %RED%Tristram%NL%%TAN%Note%WHITE%: Cube %ORANGE%ANY %WHITE%3 Organs}%CONTINUE%
+ItemDisplay[mbr]: %PX-9D%%NAME%{%WHITE%to open %GRAY%Uber %RED%Tristram%NL%%TAN%Note%WHITE%: Cube %ORANGE%ANY %WHITE%3 Organs}
+ItemDisplay[bey]: %PX-9D%%NAME%{%WHITE%to open %GRAY%Uber %RED%Tristram%NL%%TAN%Note%WHITE%: Cube %ORANGE%ANY %WHITE%3 Organs}
+ItemDisplay[dhn]: %PX-9D%%NAME%{%WHITE%to open %GRAY%Uber %RED%Tristram%NL%%TAN%Note%WHITE%: Cube %ORANGE%ANY %WHITE%3 Organs}
 
 //Runes Notes
 ItemDisplay[r01s]: %NAME%{%TAN%Note%WHITE%: 3xEl + %GRAY%key %WHITE%= Eld%NL%%NL%Shield: +15 Defense%NL%Armor/Helm: +15 Defense%NL%Weapon: +50 Attack Rating%NL%}
@@ -1288,7 +1288,7 @@ ItemDisplay[r30s]: %NAME%{%TAN%Note%WHITE%: 2xBer + %GRAY%key %WHITE%= Jah%NL%%N
 ItemDisplay[r31s]: %NAME%{%TAN%Note%WHITE%: 2xJah + %GRAY%key %WHITE%= Cham%NL%%NL%Shield: +50 to Life%NL%Armor/Helm: Inc Max Life 5%%NL%Weapon: Ignore Target's Defense%NL%}
 ItemDisplay[r32s]: %NAME%{%TAN%Note%WHITE%: 2xCham + %GRAY%key %WHITE%= Zod%NL%%NL%Shield: Cannot be Frozen%NL%Armor/Helm: Cannot be Frozen%NL%Weapon: Freezes Target +3%NL%}
 ItemDisplay[r33s]: %NAME%{%TAN%Note%WHITE%: Zod + Perf %GRAY%O %WHITE%= Repair any Item%NL%%NL%%WHITE%Shield: Indestructible%NL%Armor/Helm: Indestructible%NL%Weapon: Indestructible%NL%}
-ItemDisplay[RUNE>0]: %NAME%{%TAN%Note%WHITE%: Cube %ORANGE%Runes %WHITE%to %GRAY%(un)%WHITE%stack them%NL%}%CONTINUE%
+ItemDisplay[RUNE>0]: %NAME%{%TAN%Note%WHITE%: Cube %ORANGE%Runes %WHITE%to %GRAY%(un)%WHITE%stack them%NL%}
 
 //Gems Notes
 ItemDisplay[gzvs]: %NAME%{%TAN%Note%WHITE%: 3xFlawless + %GRAY%key %WHITE%= Perf%NL%%NL%%WHITE%Shield: +24 Def%NL%Armor/Helm: +8 to Strength%NL%Weapon: +100 to Attack Rating%NL%}
@@ -1400,6 +1400,25 @@ ItemDisplay[(AXE OR SWORD OR (whm OR mau OR gma)) NORM !INF SOCK=6 NMAG !RW CLVL
 ItemDisplay[WEAPON NORM !INF SOCK=6 NMAG !RW CLVL<31]: %NAME%{%GRAY%Breath of the Dying, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[(AXE OR SWORD OR (9wh OR 9m9 OR 9gm OR 7wh OR 7m7 OR 7gm)) (EXC OR ELT) !INF SOCK=6 NMAG !RW CLVL<80]: %NAME%{%GRAY%of the Dying, Last Wish, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Breath}
 ItemDisplay[WEAPON (EXC OR ELT) !INF SOCK=6 NMAG !RW CLVL<80]: %NAME%{%GRAY%Breath of the Dying, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords:}
+//Inferior Class Items
+ItemDisplay[(SOR OR WAND OR SCEPTER OR STAFF OR DRU OR BAR OR NEC OR (SIN !(NORM OR 9ar OR 9wb OR 9xf))) INF SOCK=0 NMAG !RW CLVL<31]: %NAME%
+ItemDisplay[(DRU OR BAR) INF SOCK=2 NMAG !RW CLVL<31]: %NAME%{%GRAY%Lore, Nadir%NL%%TAN%Note%WHITE%: Possible RuneWords:}
+ItemDisplay[(DRU OR BAR) INF SOCK=3 NMAG !RW CLVL<80]: %NAME%{%GRAY%Dream, Delirium, Radiance%NL%%TAN%Note%WHITE%: Possible RuneWords:}
+ItemDisplay[WAND INF SOCK=2 NMAG !RW CLVL<31]: %NAME%{%GRAY%Strength, White%NL%%TAN%Note%WHITE%: Possible RuneWords:}
+ItemDisplay[SOR INF SOCK=2 NMAG !RW CLVL<31]: %NAME%
+ItemDisplay[SOR INF SOCK=3 NMAG !RW CLVL<31]: %NAME%{%GRAY%Plague, Venom%NL%%TAN%Note%WHITE%: Possible RuneWords:}
+ItemDisplay[STAFF INF SOCK=2 NMAG !RW CLVL<31]: %NAME%{%GRAY%Leaf, Strength%NL%%TAN%Note%WHITE%: Possible RuneWords:}
+ItemDisplay[STAFF INF SOCK=3 NMAG !RW CLVL<31]: %NAME%{%GRAY%Malice, Plague, Venom, Wind%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Fury,}
+ItemDisplay[STAFF INF SOCK=4 NMAG !RW CLVL<31]: %NAME%{%GRAY%Insight, Memory, Passion, Phoenix%NL%Hand of Justice, Heart of the Oak,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Fortitude,}
+ItemDisplay[STAFF INF SOCK=5 NMAG !RW CLVL<31]: %NAME%{%GRAY%Call to Arms, Eternity, Honor%NL%%TAN%Note%WHITE%: Possible RuneWords:}
+ItemDisplay[STAFF INF SOCK=6 NMAG !RW CLVL<31]: %NAME%{%GRAY%Breath of the Dying, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords:}
+ItemDisplay[SCEPTER INF SOCK=2 NMAG !RW CLVL<31]: %NAME%{%GRAY%Strength%NL%%TAN%Note%WHITE%: Possible RuneWords:}
+ItemDisplay[SCEPTER INF SOCK=3 NMAG !RW CLVL<31]: %NAME%{%GRAY%Malice, Plague, Venom, Wind%NL%Fury, King's Grace, Lawbringer,%NL%%TAN%Note%WHITE%: Possible RuneWords:}
+ItemDisplay[SCEPTER INF SOCK=4 NMAG !RW CLVL<31]: %NAME%{%GRAY%Passion, Phoenix, Rift%NL%Holy Thunder, Hand of Justice,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Fortitude,}
+ItemDisplay[SCEPTER INF SOCK=5 NMAG !RW CLVL<31]: %NAME%{%GRAY%Call to Arms, Eternity, Honor%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Beast,}
+ItemDisplay[(SIN !(NORM OR 9ar OR 9wb OR 9xf)) INF SOCK=2 NMAG !RW CLVL<31]: %NAME%{%GRAY%Strength%NL%%TAN%Note%WHITE%: Possible RuneWords:}
+ItemDisplay[(SIN !(NORM OR 9ar OR 9wb OR 9xf)) INF SOCK=3 NMAG !RW CLVL<31]: %NAME%{%GRAY%Pattern, Plague, Venom, Wind%NL%Chaos, Fury, Malice,%NL%%TAN%Note%WHITE%: Possible RuneWords:}
+ItemDisplay[NEC INF SOCK=2 NMAG !RW CLVL<31]: %NAME%{%GRAY%Rhyme, Splendor%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 
 //Notes for socketing
 ItemDisplay[CHEST NORM !INF !SUP SOCK=0 NMAG CLVL<31]: %NAME%{%WHITE%This Item + %ORANGE%Tal %WHITE%+ %ORANGE%Thul %WHITE%+ Perf %YELLOW%O%NL%%TAN%Note%WHITE%: Socketing Recipe:}
@@ -1412,6 +1431,8 @@ ItemDisplay[(HELM OR CIRC) (EXC OR ELT) !INF !SUP SOCK=0 NMAG CLVL<80]: %NAME%{%
 ItemDisplay[SHIELD (EXC OR ELT) !INF !SUP SOCK=0 NMAG CLVL<80]: %NAME%{%WHITE%This Item + %ORANGE%Tal %WHITE%+ %ORANGE%Amn %WHITE%+ Perf %RED%O%NL%%TAN%Note%WHITE%: Socketing Recipe:}
 
 //HIDE EVERYTHING ELSE part 2
+ItemDisplay[(am5 OR ama OR amf) NMAG !RW TABSK2>0 CLVL<31]: %NAME%
+ItemDisplay[(am5 OR ama OR amf) NMAG !RW TABSK2>2 CLVL<80]: %NAME%
 ItemDisplay[(ARMOR OR WEAPON) INF]: 
 ItemDisplay[(ARMOR OR WEAPON) !leg CLVL>30]: 
 
