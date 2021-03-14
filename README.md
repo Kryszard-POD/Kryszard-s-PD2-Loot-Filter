@@ -48,6 +48,9 @@ It's gonna show you almost everything which can help you during leveling process
 ![ScreenShot 4](https://preview.redd.it/x3g8skmaoi961.jpg?width=1068&format=pjpg&auto=webp&s=fd929eb9f8bac6ce111892a3f00af886a49c594b "ScreenShot 4")  
 ![ScreenShot 5](https://preview.redd.it/97pve20ofq561.jpg?width=1068&format=pjpg&auto=webp&s=edb621bebcef47be01f5be1652ac4eaf92337b24 "ScreenShot 5")  
 
+## in-game settings:
+![in-game settings](https://i.postimg.cc/vHb6QKgj/filter-settings.png "in-game settings")
+
 # Donate/Support:
 ![Donate](https://panels-images.twitch.tv/panel-43229886-image-184ad605-0cff-419a-a0cc-665154478819 "Donation Image")  
 ### **You don't know what to do with your hard earnd money?**
