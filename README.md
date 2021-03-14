@@ -49,7 +49,7 @@ It's gonna show you almost everything which can help you during leveling process
 ![ScreenShot 5](https://preview.redd.it/97pve20ofq561.jpg?width=1068&format=pjpg&auto=webp&s=edb621bebcef47be01f5be1652ac4eaf92337b24 "ScreenShot 5")  
 
 ## in-game settings:
-![in-game settings](https://i.postimg.cc/vHb6QKgj/filter-settings.png "in-game settings")
+![in-game settings](https://i.postimg.cc/g2BCzfJH/filter-settings.png "in-game settings")
 
 # Donate/Support:
 ![Donate](https://panels-images.twitch.tv/panel-43229886-image-184ad605-0cff-419a-a0cc-665154478819 "Donation Image")  
