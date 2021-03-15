@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season II: ver 1.0.6
+//	Kryszard's PD2 Loot Filter for Season II: ver 1.0.7
 //
 //	twitch.tv/kryszard
 //
@@ -336,7 +336,7 @@ ItemDisplay[amu MAG]: %NAME%{%WHITE%HP: Perf %BLUE%O%ORANGE%, Thul %WHITE%| S: P
 ItemDisplay[rin MAG]: %NAME%{%WHITE%HP: Perf %BLUE%O%ORANGE%, Amn %WHITE%| S: Perf %GREEN%O%ORANGE%, Amn%NL%%WHITE%B: Perf %RED%O%ORANGE%, Sol%WHITE% | C: Perf %PURPLE%O%ORANGE%, Amn%NL%Craft Recipes: %BLUE%Jewel,}
 
 //Class items
-ItemDisplay[(SOR OR WAND OR SCEPTER OR STAFF OR DRU OR BAR OR NEC OR (SIN !(NORM OR 9ar OR 9wb OR 9xf))) NMAG (CLVL>1 AND CLVL<80)]: %NAME% %GRAY%(%TAN%$%WHITE%%PRICE%%GRAY%)%CONTINUE%
+ItemDisplay[(SOR OR WAND OR SCEPTER OR STAFF OR DRU OR BAR OR NEC OR (SIN !(NORM OR 9ar OR 9wb OR 9xf))) NMAG]: %NAME% %GRAY%(%TAN%$%WHITE%%PRICE%%GRAY%)%CONTINUE%
 ItemDisplay[(SOR OR WAND OR (wsp OR 9ws OR 7ws) OR (am5 OR ama OR amf) OR (am2 OR am7 OR amc OR am1 OR am6 OR amb) OR DRU OR BAR OR NEC OR (SIN !(NORM OR 9ar OR 9wb OR 9xf))) (MAG OR RARE) !ID]: %NAME%
 
 //Show me exactly +SKILLS values on NMAG items
@@ -1209,7 +1209,7 @@ ItemDisplay[WEAPON EXC SET ID]: %NAME%{%GREEN%This Item %WHITE%+ %ORANGE%Lum %WH
 
 //Potentially expensive (Woth some GOLD) items
 ItemDisplay[(7tk OR 7bk OR 7ta) (MAG OR RARE OR NMAG) !ETH !INF]: %NAME% %GRAY%(%TAN%$%WHITE%%PRICE%%GRAY%)
-ItemDisplay[(WAND OR SOR (SK86>1 OR SK87>1 OR SK88>1 OR SK89>1 OR SK90>1 OR SK91>1 OR SK92>1 OR SK93>1 OR SK94>1 OR SK95>1 OR SK56>1 OR SK57>1 OR SK58>1 OR SK59>1 OR SK60>1 OR SK61>1 OR SK62>1 OR SK63>1 OR SK64>1 OR SK65>1) !ETH !INF NMAG CLVL>79]: %NAME% %GRAY%(%TAN%$%WHITE%%PRICE%%GRAY%)
+ItemDisplay[(WAND OR SOR (SK86>1 OR SK87>1 OR SK88>1 OR SK89>1 OR SK90>1 OR SK91>1 OR SK92>1 OR SK93>1 OR SK94>1 OR SK95>1 OR SK56>1 OR SK57>1 OR SK58>1 OR SK59>1 OR SK60>1 OR SK61>1 OR SK62>1 OR SK63>1 OR SK64>1 OR SK65>1) !ETH !INF NMAG CLVL>79]: %NAME%
 
 //Show me quantitiy of all stackables
 ItemDisplay[!(ARMOR OR WEAPON OR tbk OR ibk) QTY>0]: %NAME% %TAN%x %WHITE%%QTY%%CONTINUE%
