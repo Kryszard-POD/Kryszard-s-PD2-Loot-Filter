@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season II: ver 1.0.9
+//	Kryszard's PD2 Loot Filter for Season II: ver 1.1.0
 //
 //	twitch.tv/kryszard
 //
@@ -284,7 +284,7 @@ ItemDisplay[(amu OR rin OR uar OR ci3 OR 7qr OR uth OR paf) SET !ID]: %MAP-84%%P
 
 //Uniques and Sets worth notifying
 //Armors
-ItemDisplay[(uul OR xng OR xui OR spl OR pac OR xmg OR xsk OR xml OR xlb OR xpl OR xap OR xld OR xrs OR gth OR aar OR BELT OR skp OR xhl OR xrn OR vbt OR xmb OR uvb OR umb OR lgl OR vgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR ush OR upk OR uml OR xts OR xrg OR xuc OR tow OR kit OR gts) UNI !ID]: %PX-68%%NAME%
+ItemDisplay[(chn OR uul OR xng OR xui OR spl OR pac OR xmg OR xsk OR xml OR xlb OR xpl OR xap OR xld OR xrs OR gth OR aar OR BELT OR skp OR xhl OR xrn OR vbt OR xmb OR uvb OR umb OR lgl OR vgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR ush OR upk OR uml OR xts OR xrg OR xuc OR tow OR kit OR gts) UNI !ID]: %PX-68%%NAME%
 //Weapons
 ItemDisplay[((7ls OR 9ls OR 7br OR 7sr OR 7p7 OR 9ba OR 7ga OR 7wa OR 7gi OR 7pa OR 8ls OR 72a OR 7o7 OR 9yw OR 9fc OR 7bw OR 9kr OR amb OR 7sc OR 7mp OR 6sw OR 6l7 OR 8hx OR 8rx OR dgr OR 7dg OR 7bl OR 9ma OR 9wh OR 9gm OR 7s8 OR 7wc OR 9ws OR 6cs OR 7b7 OR 7gs OR 9sb) OR (ELT (WP5 OR WP6)) OR 9bw OR ywn OR 7wb OR 7sp) UNI !ID]: %PX-68%%NAME%
 //Sets
@@ -315,11 +315,11 @@ ItemDisplay[ci3 NMAG !ETH SOCK=0]: %NAME% %YELLOW%[%GRAY%imbue%YELLOW%]{%TAN%Not
 ItemDisplay[(GLOVES OR BOOTS OR BELT) RARE !ID]: %NAME%
 
 //Rare ETH weapons
-ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp OR mac OR 9ma OR 7ma OR mst OR 9mt OR 7mt OR ssd OR 9ss OR 7ss OR scm OR 9sm OR 7sm OR sbr OR 9sb OR 7sb OR flc OR 9fc OR 7fc OR wsd OR 9wd OR 7wd OR dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR bld OR 9bl OR 7bl OR STAFF) RARE ETH !ID]: %NAME%
+ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp OR mac OR 9ma OR 7ma OR mst OR 9mt OR 7mt OR ssd OR 9ss OR 7ss OR scm OR 9sm OR 7sm OR sbr OR 9sb OR 7sb OR flc OR 9fc OR 7fc OR wsd OR 9wd OR 7wd OR dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR bld OR 9bl OR 7bl OR STAFF OR ktr OR wrb OR axf OR ces OR clw OR btl OR skr OR 9ar OR 9wb OR 9xf) RARE ETH !ID]: %NAME%
 
 //Craftables
 ItemDisplay[GLOVES ((EXC OR ELT) !(utg OR uhg)) MAG !ETH !ID]: %GRAY%* %BLUE%%NAME% %GRAY%*
-ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp OR mac OR 9ma OR 7ma OR mst OR 9mt OR 7mt OR ssd OR 9ss OR 7ss OR scm OR 9sm OR 7sm OR sbr OR 9sb OR 7sb OR flc OR 9fc OR 7fc OR wsd OR 9wd OR 7wd OR dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR bld OR 9bl OR 7bl OR STAFF) MAG ETH !ID]: %NAME%
+ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp OR mac OR 9ma OR 7ma OR mst OR 9mt OR 7mt OR ssd OR 9ss OR 7ss OR scm OR 9sm OR 7sm OR sbr OR 9sb OR 7sb OR flc OR 9fc OR 7fc OR wsd OR 9wd OR 7wd OR dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR bld OR 9bl OR 7bl OR STAFF OR ktr OR wrb OR axf OR ces OR clw OR btl OR skr OR 9ar OR 9wb OR 9xf) MAG ETH !ID]: %NAME%
 ItemDisplay[(bhm OR xh9 OR uh9) MAG !ID]: %NAME%
 ItemDisplay[(bsh OR xsh OR ush) MAG !ID]: %NAME%
 ItemDisplay[(lwb OR 8lw OR 6lw) MAG !ID]: %NAME%
@@ -1135,15 +1135,15 @@ ItemDisplay[CL3 !INF !ETH NMAG !RW SOCK=3 RES>19 CLVL<80]: %NAME%{%GRAY%Pledge, 
 ItemDisplay[CL3 !INF !ETH NMAG !RW SOCK=4 RES>19 CLVL<80]: %NAME%{%GRAY%Exile, Phoenix, Spirit%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[(ush OR xsh) !INF !ETH NMAG !RW SOCK=2]: %NAME%{%GRAY%Rhyme, Splendor%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[(ush OR xsh) !INF !ETH NMAG !RW SOCK=3]: %NAME%{%GRAY%Pledge, Dragon, Dream, Sanctuary%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Ancient's}
-ItemDisplay[uit !INF NMAG !RW SOCK=4]: %NAME%{%GRAY%Exile, Phoenix, Spirit%NL%%TAN%Note%WHITE%: Possible RuneWords:}
+ItemDisplay[uit !INF NMAG !RW SOCK=4]: %NAME%{%GRAY%Phoenix, Spirit%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 //Splendor Shields
 ItemDisplay[NEC (SK67>2 OR SK74>2 OR SK94>2 OR SK75>2 OR SK70>2 OR SK84>2 OR SK83>2 OR SK92>2 OR SK93>2 OR SK79>2 OR SK80>2 OR SK85>2 OR SK95>2) !INF !ETH SOCK=2 NMAG !RW]: %DOT-D6%%NAME%{%GRAY%Rhyme, Splendor%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 //Weapons
 //Bows/Crossbows
-ItemDisplay[(amc OR amb) NMAG !RW TABSK0>2 SOCK=4]: %DOT-D6%%NAME%{%GRAY%Ice, Passion, Phoenix, Wrath%NL%Faith, Fortitude, Hand of Justice,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Brand,}
+ItemDisplay[(amc OR amb) NMAG !RW TABSK0>2 SOCK=4]: %DOT-D6%%NAME%{%GRAY%Harmony, Ice, Passion, Phoenix, Wrath%NL%Faith, Fortitude, Hand of Justice,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Brand,}
 ItemDisplay[(amc OR amb) NMAG !RW TABSK0>2 SOCK=3]: %NAME%{%GRAY%Edge, Melody, Plague, Venom%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[6cb NMAG !RW SOCK=3]: %NAME%{%GRAY%Edge, Melody, Plague, Venom%NL%%TAN%Note%WHITE%: Possible RuneWords:}
-ItemDisplay[(6cb OR 8rx OR 6rx) NMAG !RW SOCK=4]: %NAME%{%GRAY%Ice, Passion, Phoenix, Wrath%NL%Faith, Fortitude, Hand of Justice,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Brand,}
+ItemDisplay[(6cb OR 8rx OR 6rx) NMAG !RW SOCK=4]: %NAME%{%GRAY%Harmony, Ice, Passion, Phoenix, Wrath%NL%Faith, Fortitude, Hand of Justice,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Brand,}
 //Daggers
 ItemDisplay[7kr !INF NMAG !RW SOCK=3]: %NAME%{%GRAY%Fury, Malice, Plague, Venom, Wind%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 //Axes
@@ -1333,7 +1333,8 @@ ItemDisplay[(HELM OR CIRC) NORM !INF SOCK=2 NMAG !RW CLVL<31]: %NAME%{%GRAY%Lore
 ItemDisplay[(HELM OR CIRC) NORM !INF SOCK=3 NMAG !RW CLVL<80]: %NAME%{%GRAY%Dream, Delirium, Radiance%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[SHIELD NORM !INF SOCK=2 NMAG !RW CLVL<31]: %NAME%{%GRAY%Rhyme, Splendor%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[SHIELD NORM !INF SOCK=3 NMAG !RW CLVL<31]: %NAME%{%GRAY%Pledge, Dragon, Dream, Sanctuary%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Ancient's}
-ItemDisplay[SHIELD NORM !INF SOCK=4 NMAG !RW CLVL<31]: %NAME%{%GRAY%Exile, Phoenix, Spirit%NL%%TAN%Note%WHITE%: Possible RuneWords:}
+ItemDisplay[CL3 NORM !INF SOCK=4 NMAG !RW CLVL<31]: %NAME%{%GRAY%Exile, Phoenix, Spirit%NL%%TAN%Note%WHITE%: Possible RuneWords:}
+ItemDisplay[SHIELD NORM !INF SOCK=4 NMAG !RW CLVL<31]: %NAME%{%GRAY%Phoenix, Spirit%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[CHEST (EXC OR ELT) !INF SOCK=2 NMAG !RW CLVL<80]: %NAME%{%GRAY%Prudence, Smoke, Stealth%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[CHEST (EXC OR ELT) !INF SOCK=3 NMAG !RW CLVL<80]: %NAME%{%GRAY%Principle, Rain, Treachery, Wealth%NL%Gloom, Lionheart, Myth, Peace,%NL%Dragon, Duress, Enigma, Enlightenment,%NL%%TAN%RWs: %GRAY%Bone,}
 ItemDisplay[CHEST (EXC OR ELT) !INF SOCK=4 NMAG !RW CLVL<80]: %NAME%{%GRAY%Chains of Honor, Fortitude, Stone%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Bramble,}
@@ -1341,7 +1342,8 @@ ItemDisplay[(HELM OR CIRC) (EXC OR ELT) !INF SOCK=2 NMAG !RW CLVL<80]: %NAME%{%G
 ItemDisplay[(HELM OR CIRC) (EXC OR ELT) !INF SOCK=3 NMAG !RW CLVL<80]: %NAME%{%GRAY%Dream, Delirium, Radiance%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[SHIELD (EXC OR ELT) !INF SOCK=2 NMAG !RW CLVL<80]: %NAME%{%GRAY%Rhyme, Splendor%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[SHIELD (EXC OR ELT) !INF SOCK=3 NMAG !RW CLVL<80]: %NAME%{%GRAY%Pledge, Dragon, Dream, Sanctuary%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Ancient's}
-ItemDisplay[SHIELD (EXC OR ELT) !INF SOCK=4 NMAG !RW CLVL<80]: %NAME%{%GRAY%Exile, Phoenix, Spirit%NL%%TAN%Note%WHITE%: Possible RuneWords:}
+ItemDisplay[CL3 (EXC OR ELT) !INF SOCK=4 NMAG !RW CLVL<80]: %NAME%{%GRAY%Exile, Phoenix, Spirit%NL%%TAN%Note%WHITE%: Possible RuneWords:}
+ItemDisplay[SHIELD (EXC OR ELT) !INF SOCK=4 NMAG !RW CLVL<80]: %NAME%{%GRAY%Phoenix, Spirit%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 //Weapons 2soc
 ItemDisplay[(BOW OR XBOW) NORM !INF SOCK=2 NMAG !RW CLVL<31]: %NAME%{%GRAY%Zephyr%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[WAND NORM !INF SOCK=2 NMAG !RW CLVL<31]: %NAME%{%GRAY%Strength, White%NL%%TAN%Note%WHITE%: Possible RuneWords:}
@@ -1373,7 +1375,7 @@ ItemDisplay[(9wh OR 9m9 OR 9gm OR 7wh OR 7m7 OR 7gm) (EXC OR ELT) !INF SOCK=3 NM
 ItemDisplay[WEAPON !(BOW OR XBOW OR SOR) (EXC OR ELT) !INF SOCK=3 NMAG !RW CLVL<80]: %NAME%{%GRAY%Fury, Malice, Plague, Venom, Wind%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[WEAPON (EXC OR ELT) !INF SOCK=3 NMAG !RW CLVL<80]: %NAME%{%GRAY%Plague, Venom%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 //Weapons 4soc
-ItemDisplay[(BOW OR XBOW) NORM !INF SOCK=4 NMAG !RW CLVL<31]: %NAME%{%GRAY%Ice, Passion, Phoenix, Wrath%NL%Faith, Fortitude, Hand of Justice,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Brand,}
+ItemDisplay[(BOW OR XBOW) NORM !INF SOCK=4 NMAG !RW CLVL<31]: %NAME%{%GRAY%Harmony, Ice, Passion, Phoenix, Wrath%NL%Faith, Fortitude, Hand of Justice,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Brand,}
 ItemDisplay[fla NORM !INF SOCK=4 NMAG !RW CLVL<31]: %NAME%{%GRAY%Oath, Passion, Phoenix, Voice of Reason%NL%Hand of Justice, Heart of the Oak,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Fortitude,}
 ItemDisplay[SWORD NORM !INF SOCK=4 NMAG !RW CLVL<31]: %NAME%{%GRAY%Phoenix, Spirit, Voice of Reason%NL%Hand of Justice, Kingslayer, Oath, Passion,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Fortitude,}
 ItemDisplay[(POLEARM OR SPEAR OR JAV) NORM !INF SOCK=4 NMAG !RW CLVL<31]: %NAME%{%GRAY%Passion, Phoenix, Pride, Rift%NL%Hand of Justice, Infinity, Insight,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Fortitude,}
@@ -1382,7 +1384,7 @@ ItemDisplay[AXE NORM !INF SOCK=4 NMAG !RW CLVL<31]: %NAME%{%GRAY%Oath, Passion, 
 ItemDisplay[STAFF NORM !INF SOCK=4 NMAG !RW CLVL<31]: %NAME%{%GRAY%Insight, Memory, Passion, Phoenix%NL%Hand of Justice, Heart of the Oak,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Fortitude,}
 ItemDisplay[(whm OR mau OR gma) NORM !INF SOCK=4 NMAG !RW CLVL<31]: %NAME%{%GRAY%Justice, Passion, Phoenix%NL%Famine, Fortitude, Hand of%NL%%TAN%Note%WHITE%: Possible RuneWords:}
 ItemDisplay[WEAPON NORM !INF SOCK=4 NMAG !RW CLVL<31]: %NAME%{%GRAY%Hand of Justice, Passion, Phoenix%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Fortitude,}
-ItemDisplay[(BOW OR XBOW) (EXC OR ELT) !INF SOCK=4 NMAG !RW CLVL<80]: %NAME%{%GRAY%Ice, Passion, Phoenix, Wrath%NL%Faith, Fortitude, Hand of Justice,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Brand,}
+ItemDisplay[(BOW OR XBOW) (EXC OR ELT) !INF SOCK=4 NMAG !RW CLVL<80]: %NAME%{%GRAY%Harmony, Ice, Passion, Phoenix, Wrath%NL%Faith, Fortitude, Hand of Justice,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Brand,}
 ItemDisplay[(9fl OR 7fl) (EXC OR ELT) !INF SOCK=4 NMAG !RW CLVL<80]: %NAME%{%GRAY%Oath, Passion, Phoenix, Voice of Reason%NL%Hand of Justice, Heart of the Oak,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Fortitude,}
 ItemDisplay[SWORD (EXC OR ELT) !INF SOCK=4 NMAG !RW CLVL<80]: %NAME%{%GRAY%Phoenix, Spirit, Voice of Reason%NL%Hand of Justice, Kingslayer, Oath, Passion,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Fortitude,}
 ItemDisplay[(POLEARM OR SPEAR OR JAV) (EXC OR ELT) !INF SOCK=4 NMAG !RW CLVL<80]: %NAME%{%GRAY%Passion, Phoenix, Pride, Rift%NL%Hand of Justice, Infinity, Insight,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Fortitude,}
