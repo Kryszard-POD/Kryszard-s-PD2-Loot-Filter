@@ -39,7 +39,7 @@ It's gonna show you almost everything which can help you during leveling process
 
 ## Supported RuneWord bases:
 
-*List coming soon.*
+*List coming soon. Meanwhile you can test it using [FilterBird Tool](https://betweenwalls.github.io/filterbird/?v=PD2).*
 
 # ScreenShots preview:
 ![ScreenShot 1](https://preview.redd.it/55pqcgwugvl61.png?width=1920&format=png&auto=webp&s=b276f3bad428f6ee403ea28b247ab20d73f1ec76 "ScreenShot 1")  
