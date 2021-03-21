@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season II: ver 1.1.2
+//	Kryszard's PD2 Loot Filter for Season II: ver 1.1.3
 //
 //	twitch.tv/kryszard
 //
@@ -336,7 +336,8 @@ ItemDisplay[amu MAG]: %NAME%{%WHITE%HP: Perf %BLUE%O%ORANGE%, Thul %WHITE%| S: P
 ItemDisplay[rin MAG]: %NAME%{%WHITE%HP: Perf %BLUE%O%ORANGE%, Amn %WHITE%| S: Perf %GREEN%O%ORANGE%, Amn%NL%%WHITE%B: Perf %RED%O%ORANGE%, Sol%WHITE% | C: Perf %PURPLE%O%ORANGE%, Amn%NL%Craft Recipes: %BLUE%Jewel,}
 
 //Class items
-ItemDisplay[(SOR OR WAND OR SCEPTER OR STAFF OR DRU OR BAR OR NEC OR (SIN !(NORM OR 9ar OR 9wb OR 9xf))) NMAG]: %NAME% %GRAY%(%TAN%$%WHITE%%PRICE%%GRAY%)%CONTINUE%
+ItemDisplay[(SOR OR WAND OR SCEPTER OR STAFF OR DRU OR BAR OR NEC OR (SIN !(NORM OR 9ar OR 9wb OR 9xf))) !ETH NMAG]: %NAME% %GRAY%(%TAN%$%WHITE%%PRICE%%GRAY%)%CONTINUE%
+ItemDisplay[(SOR OR WAND OR SCEPTER OR STAFF OR DRU OR BAR OR NEC OR (SIN !(NORM OR 9ar OR 9wb OR 9xf))) ETH NMAG]: %NAME%%CONTINUE%
 ItemDisplay[(SOR OR WAND OR (wsp OR 9ws OR 7ws) OR (am5 OR ama OR amf) OR (am2 OR am7 OR amc OR am1 OR am6 OR amb) OR DRU OR BAR OR NEC OR (SIN !(NORM OR 9ar OR 9wb OR 9xf))) (MAG OR RARE) !ID]: %NAME%
 
 //Show me exactly +SKILLS values on NMAG items
