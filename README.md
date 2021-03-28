@@ -33,8 +33,8 @@ It's gonna show you almost everything which can help you during leveling process
 * Good magical bases for crafting *(Blood Gloves, Caster Belt, Safety Shield, etc.)*, and:  
 * Potentially expensive (Woth some GOLD) items are shown with a PRICETAG, like 2square in eq throwables, wands, sorc orbs etc.  
 * Gold piles only in stacks **5k+**  
-* Good Uniques (only when UNID!) will be shown with Chat Notification, Minimap Pin and extra colorful ** **STARS** **, the Best Uniques with extra second-line of text to make it easier to pick up in Players 8 games, before others will. *(pick me up!)*
-* Runes Number colors 1-14 and 16-17 TAN, 15 and 18-19 WHITE with extra TAN *, 20-25 RED with extra RED * and chat notification, and 26+ GREEN with extra COLORFUL ** **STARS** ** and second blink line of text, to make it easier to pick up. *(and build some hype)*
+* Good Uniques (only when UNID!) will be shown with Chat Notification, Minimap Pin and extra colorful ** **STARS** **, the Best Uniques with extra green note. *(pick up!)*
+* Runes Number colors 1-14 and 16-17 TAN, 15 and 18-19 WHITE with extra TAN *, 20-25 RED with extra RED * and chat notification, and 26+ GREEN with extra wide-box with COLORFUL ** **STARS** ** . *(to build some hype)*
 * New PD2 items like: WorldStone Shards, Larzuk Puzzleboxes, Maps, DClone parts, etc. are included.
 
 ## Supported RuneWord bases:
@@ -43,10 +43,9 @@ It's gonna show you almost everything which can help you during leveling process
 
 # ScreenShots preview:
 ![ScreenShot 1](https://preview.redd.it/55pqcgwugvl61.png?width=1920&format=png&auto=webp&s=b276f3bad428f6ee403ea28b247ab20d73f1ec76 "ScreenShot 1")  
-![ScreenShot 2](https://preview.redd.it/6q2go79tfq561.jpg?width=1068&format=pjpg&auto=webp&s=2eba3dfcd1fc6ffd87fbac52cab6ec31c1f19c55 "ScreenShot 2")  
-![ScreenShot 3](https://preview.redd.it/vgn0fn9tfq561.jpg?width=1068&format=pjpg&auto=webp&s=e979811e1d5fbc6c53e78e98964624e4ed97d0ad "ScreenShot 3")  
-![ScreenShot 4](https://preview.redd.it/x3g8skmaoi961.jpg?width=1068&format=pjpg&auto=webp&s=fd929eb9f8bac6ce111892a3f00af886a49c594b "ScreenShot 4")  
-![ScreenShot 5](https://preview.redd.it/97pve20ofq561.jpg?width=1068&format=pjpg&auto=webp&s=edb621bebcef47be01f5be1652ac4eaf92337b24 "ScreenShot 5")  
+![ScreenShot 2](https://i.postimg.cc/38mfnbD2/1.png "ScreenShot 2")  
+![ScreenShot 3](https://i.postimg.cc/3NLF0GfF/2.png "ScreenShot 3")  
+![ScreenShot 4](https://i.postimg.cc/mZVwnxZ1/3.png "ScreenShot 4")  
 
 ## in-game settings:
 ![in-game settings](https://i.postimg.cc/g2BCzfJH/filter-settings.png "in-game settings")
