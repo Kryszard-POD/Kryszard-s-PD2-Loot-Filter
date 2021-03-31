@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season II: ver 2.0.4
+//	Kryszard's PD2 Loot Filter for Season II: ver 2.0.5
 //
 //	twitch.tv/kryszard
 //
@@ -517,7 +517,10 @@ ItemDisplay[CRAFT]: %ORANGE%%NAME%%CONTINUE%
 ItemDisplay[SUP ED<5]: %WHITE%Sup %NAME%%CONTINUE%
 ItemDisplay[WEAPON SUP ED>4]: %RED%Sup %NAME%%CONTINUE%
 ItemDisplay[ARMOR SUP ED>4]: %BLUE%Sup %NAME%%CONTINUE%
-ItemDisplay[INF !(rin OR amu)]: %GRAY%Inf %NAME%%CONTINUE%
+ItemDisplay[INF !(rin OR amu) ID]: %GRAY%Inf %NAME%%CONTINUE%
+
+//Show me names of items in gambling screen
+ItemDisplay[(WEAPON OR ARMOR) NMAG !ID]: %NAME%
 
 //Show me that item is ethereal
 ItemDisplay[ETH]: %GRAY%[%WHITE%eth%GRAY%] %NAME%%CONTINUE%
