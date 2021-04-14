@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season II: ver 2.0.8
+//	Kryszard's PD2 Loot Filter for Season II: ver 2.0.9
 //
 //	twitch.tv/kryszard
 //
@@ -1880,7 +1880,7 @@ ItemDisplay[UNI OR RW]: %NAME%%GOLD%%CONTINUE%
 ItemDisplay[SET]: %NAME%%GREEN%%CONTINUE%
 ItemDisplay[RARE]: %NAME%%YELLOW%%CONTINUE%
 ItemDisplay[MAG]: %NAME%%BLUE%%CONTINUE%
-ItemDisplay[(ARMOR OR WEAPON) NMAG !ETH SOCK=0]: %NAME%%WHITE%%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) NMAG !ETH (SOCK=0 OR THROWING)]: %NAME%%WHITE%%CONTINUE%
 ItemDisplay[(ARMOR OR WEAPON) NMAG !RW (SOCK>0 OR ETH)]: %NAME%%GRAY%%CONTINUE%
 ItemDisplay[CRAFT]: %NAME%%ORANGE%%CONTINUE%
 
@@ -1924,7 +1924,7 @@ ItemDisplay[(whm OR mau OR gma OR 9wh OR 9m9 OR 9gm OR 7wh OR 7m7 OR 7gm) SOCK=3
 ItemDisplay[WEAPON SOCK=4 NMAG !RW]: %NAME%{%GRAY%Hand of Justice, Passion, Phoenix%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Fortitude,}%CONTINUE%
 ItemDisplay[(BOW OR XBOW) SOCK=4 NMAG !RW]: %NAME%{%GRAY%Harmony, Ice, Passion, Phoenix, Wrath%NL%Faith, Fortitude, Hand of Justice,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Brand,}%CONTINUE%
 ItemDisplay[(fla OR 9fl OR 7fl) SOCK=4 NMAG !RW]: %NAME%{%GRAY%Oath, Passion, Phoenix, Voice of Reason%NL%Hand of Justice, Heart of the Oak,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Fortitude,}%CONTINUE%
-ItemDisplay[SWORD SOCK=4 NMAG !RW]: %NAME%{%GRAY%Phoenix, Spirit, Voice of Reason%NL%Hand of Justice, Kingslayer, Oath, Passion,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Fortitude,}%CONTINUE%
+ItemDisplay[SWORD SOCK=4 NMAG !RW]: %NAME%{%GRAY%Phoenix, Spirit, Voice of Reason%NL%Justice, Kingslayer, Oath, Passion,%NL%%TAN%RWs:%WHITE% %GRAY%Famine, Fortitude, Hand of}%CONTINUE%
 ItemDisplay[(POLEARM OR SPEAR OR JAV) SOCK=4 NMAG !RW]: %NAME%{%GRAY%Passion, Phoenix, Pride, Rift%NL%Hand of Justice, Infinity, Insight,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Fortitude,}%CONTINUE%
 ItemDisplay[SCEPTER SOCK=4 NMAG !RW]: %NAME%{%GRAY%Passion, Phoenix, Rift%NL%Holy Thunder, Hand of Justice,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Fortitude,}%CONTINUE%
 ItemDisplay[AXE SOCK=4 NMAG !RW]: %NAME%{%GRAY%Oath, Passion, Phoenix%NL%Fortitude, Hand of Justice, Kingslayer,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Famine,}%CONTINUE%
