@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season III: ver 3.1.0
+//	Kryszard's PD2 Loot Filter for Season III: ver 3.1.1
 //
 //	twitch.tv/kryszard
 //
@@ -551,10 +551,10 @@ ItemDisplay[(hp4 OR mp4) DIFF>1]: {%NAME%}
 //Utilites
 ItemDisplay[tsc CLVL<31]: %BLUE%* %GRAY%tp %WHITE%scroll{%RED%Warning:%WHITE%: You gonna lose socketed Runes/Gems%NL%Socketed Item + %BLUE%* %GRAY%tp %WHITE%scroll + %ORANGE%Hel%NL%%TAN%Note%WHITE%: To remove Runes/Gems from Item:}
 ItemDisplay[isc CLVL<31]: %RED%* %GRAY%id %WHITE%scroll
-ItemDisplay[vps]: %GREEN%!%WHITE%stamina{%GRAY%(time stack)%NL%%WHITE%Gives infinite stamina for 30s%NL%%TAN%Note%WHITE%: Instantly restores stamina}%CONTINUE%
-ItemDisplay[wms]: %GREEN%!%WHITE%thaw{%GREEN%!%WHITE%thaw + Perf %BLUE%O %WHITE%+ %BLUE%Ring %WHITE%= Cold Res %BLUE%Ring%NL%%GRAY%(time stack)%NL%%WHITE%Gives +25 Cold Res for 30s%NL%%TAN%Note%WHITE%: Instantly thaws character}%CONTINUE%
+ItemDisplay[vps]: %GREEN%!%WHITE%stamina{%BLUE%(time stack)%NL%%WHITE%Gives infinite stamina for 30s%NL%%TAN%Note%WHITE%: Instantly restores stamina}%CONTINUE%
+ItemDisplay[wms]: %GREEN%!%WHITE%thaw{%GREEN%!%WHITE%thaw + Perf %BLUE%O %WHITE%+ %BLUE%Ring %WHITE%= Cold Res %BLUE%Ring%NL%(time stack)%NL%%WHITE%Gives +25 Cold Res for 30s%NL%%TAN%Note%WHITE%: Instantly thaws character}%CONTINUE%
 ItemDisplay[(tsc OR isc OR vps OR wms) CLVL>30]: {%NAME%}
-ItemDisplay[yps]: %GREEN%!%WHITE%ant{%GREEN%!%WHITE%ant + Perf %GREEN%O %WHITE%+ %BLUE%Ring %WHITE%= Psn Res %BLUE%Ring%NL%%GRAY%(time stack)%NL%%WHITE%Gives +25 Psn Res for 30s%NL%%TAN%Note%WHITE%: Instantly cures poison}
+ItemDisplay[yps]: %GREEN%!%WHITE%ant{%GREEN%!%WHITE%ant + Perf %GREEN%O %WHITE%+ %BLUE%Ring %WHITE%= Psn Res %BLUE%Ring%NL%(time stack)%NL%%WHITE%Gives +25 Psn Res for 30s%NL%%TAN%Note%WHITE%: Instantly cures poison}
 ItemDisplay[key]: %GRAY%key %TAN%x %WHITE%%QTY%{%ORANGE%crafting %WHITE%bases from vendors%NL%%TAN%Pro-Tip%WHITE%: You can buy many}
 
 //Arrows & Bolts
