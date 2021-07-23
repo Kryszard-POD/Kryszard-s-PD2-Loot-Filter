@@ -2073,7 +2073,7 @@ ItemDisplay[7gm !INF ETH NMAG !RW SOCK=6]: %DOT-D6%%NAME%{%NAME%}
 //Scepters
 ItemDisplay[(wsp OR 9ws OR 7ws) (SK100>2 OR SK125>2 OR SK108>2) !INF !ETH NMAG !RW (SOCK=0 OR SOCK=4)]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[(wsp OR 9ws OR 7ws) SK117>2 NMAG !RW (SOCK=0 OR SOCK=5)]: %DOT-D6%%NAME%{%NAME%}
-ItemDisplay[(wsp OR 9ws OR 7ws) SK117>1 NMAG !RW (SOCK=0 OR SOCK=5)]: %NAME%{%NAME%}
+ItemDisplay[(wsp OR 9ws OR 7ws) SK117>0 NMAG !RW (SOCK=0 OR SOCK=5)]: %NAME%{%NAME%}
 ItemDisplay[(wsp OR 9ws OR 7ws) !INF !ETH NMAG !RW (SOCK=0 OR SOCK=4)]: %NAME%{%NAME%}
 ItemDisplay[(SCEPTER !scp) !INF !ETH NMAG !RW (SK101>2 OR SK112>2 OR SK118>2 OR SK121>2) (SOCK=0 OR SOCK=3)]: %DOT-D6%%NAME%{%NAME%}
 //Swords
