@@ -47,6 +47,9 @@ It's gonna show you almost everything which can help you during leveling process
 ![ScreenShot 3](https://i.postimg.cc/3NLF0GfF/2.png "ScreenShot 3")  
 ![ScreenShot 4](https://i.postimg.cc/mZVwnxZ1/3.png "ScreenShot 4")  
 
+# Futureal version:
+Tweaked for [Futureal](https://www.twitch.tv/futureal) - Less colorful, more Vanilla looking version of the filter. No more "colorful *STARS*" and "PICK UP" things.
+
 ## in-game settings:
 ![in-game settings](https://i.postimg.cc/g2BCzfJH/filter-settings.png "in-game settings")
 
