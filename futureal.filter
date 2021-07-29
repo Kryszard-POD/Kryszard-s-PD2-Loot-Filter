@@ -534,28 +534,28 @@ ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE) ID]: %NAME% %GRAY%(%TAN%$%WHITE%%PRI
 
 //Health & Mana Potions
 ItemDisplay[rvl]: %WHITE%Full Rejuv
-ItemDisplay[rvs]: %WHITE%Small Rejuv{%PURPLE%r %WHITE%35% + Perf %YELLOW%O %WHITE%+ %BLUE%Ring %WHITE%= Light Res %BLUE%Ring%NL%%WHITE%3x%PURPLE%r %WHITE%35% = %PURPLE%R %WHITE%Full%NL%%TAN%Note%WHITE%: Crafting Recipes:}
+ItemDisplay[rvs DIFF<2]: %WHITE%Small Rejuv{%PURPLE%r %WHITE%35% + Perf %YELLOW%O %WHITE%+ %BLUE%Ring %WHITE%= Light Res %BLUE%Ring%NL%%WHITE%3x%PURPLE%r %WHITE%35% = %PURPLE%R %WHITE%Full%NL%%TAN%Note%WHITE%: Crafting Recipes:}
 ItemDisplay[(hp1 OR hp2 OR hp3 OR hp4 OR hp5 OR mp1 OR mp2 OR mp3 OR mp4 OR mp5) (CLVL<80 OR DIFF<2)]: %NAME%{%WHITE%3x%RED%!%WHITE%Hp + 3x%BLUE%!%WHITE%Mp + Square Gem = %PURPLE%R %WHITE%Full%NL%3x%RED%!%WHITE%Hp + 3x%BLUE%!%WHITE%Mp + Chip. Gem = %PURPLE%r %WHITE%35%%NL%%TAN%Craft Recipes:}%CONTINUE%
 ItemDisplay[hp5]: %WHITE%Super Healing{%NAME%}
 ItemDisplay[mp5]: %WHITE%Super Mana{%NAME%}
 ItemDisplay[hp1 DIFF=0]: %WHITE%minor Healing{%NAME%}
-ItemDisplay[hp2 DIFF=0]: %WHITE%light hp{%NAME%}
-ItemDisplay[hp3 DIFF=0]: %WHITE%Healing{%NAME%}
+ItemDisplay[hp2 DIFF=0]: %WHITE%light Healing{%NAME%}
+ItemDisplay[hp3 DIFF=0]: %WHITE%Healing{%NAME%}	
 ItemDisplay[hp4 DIFF<2]: %WHITE%great Healing{%NAME%}
 ItemDisplay[mp1 DIFF=0]: %WHITE%minor Mana{%NAME%}
 ItemDisplay[mp2 DIFF=0]: %WHITE%light Mana{%NAME%}
 ItemDisplay[mp3 DIFF=0]: %WHITE%Mana{%NAME%}
 ItemDisplay[mp4 DIFF<2]: %WHITE%great Mana{%NAME%}
 ItemDisplay[(hp1 OR hp2 OR hp3 OR mp1 OR mp2 OR mp3) DIFF>0]: {%NAME%}
-ItemDisplay[(hp4 OR mp4) DIFF>1]: {%NAME%}
+ItemDisplay[(hp4 OR mp4 OR rvs) DIFF>1]: {%NAME%}
 
 //Utilites
 ItemDisplay[tsc]: %BLUE%* %GRAY%tp %WHITE%scroll{%RED%Warning%WHITE%: You gonna lose socketed Runes/Gems%NL%Socketed Item + %BLUE%* %GRAY%tp %WHITE%scroll + %ORANGE%Hel%NL%%TAN%Note%WHITE%: To remove Runes/Gems from Item:}%CONTINUE%
 ItemDisplay[isc]: %RED%* %GRAY%id %WHITE%scroll%CONTINUE%
-ItemDisplay[vps]: %GREEN%!%WHITE%stamina{%GRAY%(time stack)%NL%%WHITE%Gives infinite stamina for 30s%NL%%TAN%Note%WHITE%: Instantly restores stamina}%CONTINUE%
-ItemDisplay[wms]: %GREEN%!%WHITE%thaw{%GRAY%(time stack)%NL%%GREEN%!%WHITE%thaw + Perf %BLUE%O %WHITE%+ %BLUE%Ring %WHITE%= Cold Res %BLUE%Ring%NL%%WHITE%Gives +25 Cold Res for 30s%NL%%TAN%Note%WHITE%: Instantly thaws character}%CONTINUE%
-ItemDisplay[(tsc OR isc OR vps OR wms) CLVL>30]: {%NAME%}
-ItemDisplay[yps]: %GREEN%!%WHITE%ant{%GREEN%!%WHITE%ant + Perf %GREEN%O %WHITE%+ %BLUE%Ring %WHITE%= Psn Res %BLUE%Ring%NL%%GRAY%(time stack)%NL%%WHITE%Gives +25 Psn Res for 30s%NL%%TAN%Note%WHITE%: Instantly cures poison}
+ItemDisplay[vps]: %WHITE%Stamina{%GRAY%(time stack)%NL%%WHITE%Gives infinite stamina for 30s%NL%%TAN%Note%WHITE%: Instantly restores stamina}%CONTINUE%
+ItemDisplay[wms]: %WHITE%Thawing{%GRAY%(time stack)%NL%%GREEN%!%WHITE%thaw + Perf %BLUE%O %WHITE%+ %BLUE%Ring %WHITE%= Cold Res %BLUE%Ring%NL%%WHITE%Gives +25 Cold Res for 30s%NL%%TAN%Note%WHITE%: Instantly thaws character}%CONTINUE%
+ItemDisplay[yps]: %WHITE%Antidote{%GREEN%!%WHITE%ant + Perf %GREEN%O %WHITE%+ %BLUE%Ring %WHITE%= Psn Res %BLUE%Ring%NL%%GRAY%(time stack)%NL%%WHITE%Gives +25 Psn Res for 30s%NL%%TAN%Note%WHITE%: Instantly cures poison}%CONTINUE%
+ItemDisplay[(tsc OR isc OR vps OR wms OR yps) CLVL>30]: {%NAME%}
 ItemDisplay[key]: %GRAY%key %TAN%x %WHITE%%QTY%{%ORANGE%crafting %WHITE%bases from vendors%NL%%TAN%Pro-Tip%WHITE%: You can buy many}
 
 //Arrows & Bolts
