@@ -49,6 +49,7 @@ It's gonna show you almost everything which can help you during leveling process
 
 # Futureal version:
 Tweaked for [Futureal](https://www.twitch.tv/futureal) - Less colorful, more Vanilla looking version of the filter. No more "colorful *STARS*" and "PICK UP" things.
+Few small changes compararing to orginal item.filter, but still almost the same functianolity.
 
 ## in-game settings:
 ![in-game settings](https://i.postimg.cc/g2BCzfJH/filter-settings.png "in-game settings")
