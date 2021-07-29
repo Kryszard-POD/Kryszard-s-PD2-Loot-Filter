@@ -1802,9 +1802,9 @@ ItemDisplay[NMAG !RW SK47=2]: %TAN%+2%DARK_GREEN%fba%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK47=3]: %TAN%+3%DARK_GREEN%fba%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK47>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0)]: %TAN% %NAME%%CONTINUE%
 
-ItemDisplay[NMAG !RW SK46=1]: %TAN%+1%DARK_GREEN%blz%NAME%%CONTINUE%
-ItemDisplay[NMAG !RW SK46=2]: %TAN%+2%DARK_GREEN%blz%NAME%%CONTINUE%
-ItemDisplay[NMAG !RW SK46=3]: %TAN%+3%DARK_GREEN%blz%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK46=1]: %TAN%+1%DARK_GREEN%bze%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK46=2]: %TAN%+2%DARK_GREEN%bze%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK46=3]: %TAN%+3%DARK_GREEN%bze%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK46>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0)]: %TAN% %NAME%%CONTINUE%
 
 ItemDisplay[NMAG !RW SK45=1]: %TAN%+1%DARK_GREEN%ibl%NAME%%CONTINUE%
@@ -2243,6 +2243,7 @@ ItemDisplay[r33s]: %NAME%{%TAN%Note%WHITE%: Zod + Perf %GRAY%O %WHITE%= Repair a
 ItemDisplay[RUNE>0]: %NAME%{%TAN%Note%WHITE%: Cube %ORANGE%Runes %WHITE%to %GRAY%(un)%WHITE%stack them%NL%}
 
 //Gems Notes
+ItemDisplay[(gzvs OR glys OR glbs OR glgs OR glrs OR glws OR skls) (CLVL>1 AND CLVL<80)]: %DOT-70%%NAME%%CONTINUE%
 ItemDisplay[gzvs]: %NAME%{%TAN%Note%WHITE%: 3xFlawless + %GRAY%key %WHITE%= Perf%NL%%NL%%WHITE%Shield: +24 Def%NL%Armor/Helm: +8 to Strength%NL%Weapon: +100 to Attack Rating%NL%}
 ItemDisplay[glys]: %NAME%{%TAN%Note%WHITE%: 3xFlawless + %GRAY%key %WHITE%= Perf%NL%%NL%%WHITE%Shield: 28% Light Res%NL%Armor/Helm: 20% Magic Find%NL%Weapon: 1-30 Light Damage%NL%}
 ItemDisplay[glbs]: %NAME%{%TAN%Note%WHITE%: 3xFlawless + %GRAY%key %WHITE%= Perf%NL%%NL%%WHITE%Shield: 28% Cold Res%NL%Armor/Helm: +31 to Mana%NL%Weapon: 6-10 Cold Damage%NL%}
