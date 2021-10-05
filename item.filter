@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season III: ver 3.1.8
+//	Kryszard's PD2 Loot Filter for Season III: ver 3.1.9
 //
 //	twitch.tv/kryszard
 //
@@ -804,7 +804,7 @@ ItemDisplay[(7bt OR 7gi OR 7wa OR 7m7 OR 7p7 OR 8ls OR 7gl OR 7b8 OR 7bk OR xpl)
 
 //OK UNIQUES
 //belts
-ItemDisplay[(ztb OR zlb OR zvb OR zhb OR umc) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %NAME%%GRAY%     *%TAN%*%YELLOW%*
+ItemDisplay[(ztb OR zlb OR zvb OR zhb OR umc OR uvc) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %NAME%%GRAY%     *%TAN%*%YELLOW%*
 //armors
 ItemDisplay[(xea OR uui OR xth OR xhn OR xtp OR xlt OR upl OR uld OR utu) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %NAME%%GRAY%     *%TAN%*%YELLOW%*
 //gloves
