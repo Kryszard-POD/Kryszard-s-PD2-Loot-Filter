@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season IV]: ver 4.1.2
+//	Kryszard's PD2 Loot Filter for Season IV]: ver 4.1.3
 //	Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -615,7 +615,7 @@ ItemDisplay[cm2 MAG !ID]: %NAME%
 ItemDisplay[(cm1 OR cm3) MAG !ID]: %DOT-9B%%NAME%
 ItemDisplay[(cm1 OR cm2 OR cm3) UNI !ID]: %PX-68%%NAME%
 
-//Good Charms
+//Good Charms part.1
 ItemDisplay[cm3 !UNI (MAXDMG>6 AND LIFE>0)]: %TAN%Max Dmg %RED%Life %BLUE%Grand Charm 
 ItemDisplay[cm3 !UNI (MAXDMG>6 AND FRW>0)]: %TAN%Max Dmg %ORANGE%frw %BLUE%Grand Charm 
 ItemDisplay[cm3 !UNI (MAXDMG>6 AND FHR>0)]: %TAN%Max Dmg %ORANGE%FHR %BLUE%Grand Charm 
@@ -626,6 +626,30 @@ ItemDisplay[cm3 !UNI (RES>7 AND LIFE>0)]: %PURPLE%ALL %WHITE%Res %RED%Life %BLUE
 ItemDisplay[cm3 !UNI (RES>7 AND FRW>0)]: %PURPLE%ALL %WHITE%Res %ORANGE%frw %BLUE%Grand Charm 
 ItemDisplay[cm3 !UNI (RES>7 AND FHR>0)]: %PURPLE%ALL %WHITE%Res %ORANGE%FHR %BLUE%Grand Charm 
 ItemDisplay[cm3 !UNI RES>9]: %PURPLE%ALL %WHITE%Res %BLUE%Grand Charm 
+
+//PD2 Large Charms
+ItemDisplay[cm2 !UNI (STAT357>1 AND LIFE>0)]: %ORANGE%Magic %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %RED%Life%BLUE%
+ItemDisplay[cm2 !UNI (STAT329>1 AND LIFE>0)]: %RED%Fire %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %RED%Life%BLUE%
+ItemDisplay[cm2 !UNI (STAT330>1 AND LIFE>0)]: %YELLOW%Light %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %RED%Life%BLUE%
+ItemDisplay[cm2 !UNI (STAT331>1 AND LIFE>0)]: %BLUE%Cold %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %RED%Life%BLUE%
+ItemDisplay[cm2 !UNI (STAT332>1 AND LIFE>0)]: %GREEN%Psn %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %RED%Life%BLUE%
+ItemDisplay[cm2 !UNI (STAT357>1 AND FRW>0)]: %ORANGE%Magic %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %ORANGE%frw%BLUE%
+ItemDisplay[cm2 !UNI (STAT329>1 AND FRW>0)]: %RED%Fire %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %ORANGE%frw%BLUE%
+ItemDisplay[cm2 !UNI (STAT330>1 AND FRW>0)]: %YELLOW%Light %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %ORANGE%frw%BLUE%
+ItemDisplay[cm2 !UNI (STAT331>1 AND FRW>0)]: %BLUE%Cold %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %ORANGE%frw%BLUE%
+ItemDisplay[cm2 !UNI (STAT332>1 AND FRW>0)]: %GREEN%Psn %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %ORANGE%frw%BLUE%
+ItemDisplay[cm2 !UNI (STAT357>1 AND FHR>0)]: %ORANGE%Magic %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %ORANGE%FHR%BLUE%
+ItemDisplay[cm2 !UNI (STAT329>1 AND FHR>0)]: %RED%Fire %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %ORANGE%FHR%BLUE%
+ItemDisplay[cm2 !UNI (STAT330>1 AND FHR>0)]: %YELLOW%Light %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %ORANGE%FHR%BLUE%
+ItemDisplay[cm2 !UNI (STAT331>1 AND FHR>0)]: %BLUE%Cold %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %ORANGE%FHR%BLUE%
+ItemDisplay[cm2 !UNI (STAT332>1 AND FHR>0)]: %GREEN%Psn %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %ORANGE%FHR%BLUE%
+ItemDisplay[cm2 !UNI STAT357>2]: %ORANGE%Magic %PURPLE%Damage %BLUE%Large Charm
+ItemDisplay[cm2 !UNI STAT329>2]: %RED%Fire %PURPLE%Damage %BLUE%Large Charm
+ItemDisplay[cm2 !UNI STAT330>2]: %YELLOW%Light %PURPLE%Damage %BLUE%Large Charm
+ItemDisplay[cm2 !UNI STAT331>2]: %BLUE%Cold %PURPLE%Damage %BLUE%Large Charm
+ItemDisplay[cm2 !UNI STAT332>2]: %GREEN%Psn %PURPLE%Damage %BLUE%Large Charm
+
+//Good Charms part.2
 ItemDisplay[cm2 !UNI (MAXDMG>3 AND LIFE>0)]: %TAN%Max Dmg %RED%Life %BLUE%Large Charm 
 ItemDisplay[cm2 !UNI (MAXDMG>3 AND DEX>0)]: %TAN%Max Dmg %GREEN%dex %BLUE%Large Charm 
 ItemDisplay[cm2 !UNI (MAXDMG>3 AND STR>0)]: %TAN%Max Dmg %DARK_GREEN%str %BLUE%Large Charm 
@@ -671,28 +695,6 @@ ItemDisplay[cm1 !UNI CRES>9]: %BLUE%Cold %WHITE%Res %BLUE%Small Charm
 ItemDisplay[cm1 !UNI PRES>9]: %GREEN%Psn %WHITE%Res %BLUE%Small Charm 
 ItemDisplay[cm1 !UNI MFIND>5]: %GREEN%MF %BLUE%Small Charm 
 ItemDisplay[cm1 !UNI LIFE>16]: %RED%Life %BLUE%Small Charm 
-
-//PD2 Large Charms
-ItemDisplay[cm2 !UNI (STAT357>1 AND LIFE>0)]: %ORANGE%Magic %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %RED%Life%BLUE%
-ItemDisplay[cm2 !UNI (STAT329>1 AND LIFE>0)]: %RED%Fire %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %RED%Life%BLUE%
-ItemDisplay[cm2 !UNI (STAT330>1 AND LIFE>0)]: %YELLOW%Light %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %RED%Life%BLUE%
-ItemDisplay[cm2 !UNI (STAT331>1 AND LIFE>0)]: %BLUE%Cold %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %RED%Life%BLUE%
-ItemDisplay[cm2 !UNI (STAT332>1 AND LIFE>0)]: %GREEN%Psn %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %RED%Life%BLUE%
-ItemDisplay[cm2 !UNI (STAT357>1 AND FRW>0)]: %ORANGE%Magic %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %ORANGE%frw%BLUE%
-ItemDisplay[cm2 !UNI (STAT329>1 AND FRW>0)]: %RED%Fire %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %ORANGE%frw%BLUE%
-ItemDisplay[cm2 !UNI (STAT330>1 AND FRW>0)]: %YELLOW%Light %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %ORANGE%frw%BLUE%
-ItemDisplay[cm2 !UNI (STAT331>1 AND FRW>0)]: %BLUE%Cold %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %ORANGE%frw%BLUE%
-ItemDisplay[cm2 !UNI (STAT332>1 AND FRW>0)]: %GREEN%Psn %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %ORANGE%frw%BLUE%
-ItemDisplay[cm2 !UNI (STAT357>1 AND FHR>0)]: %ORANGE%Magic %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %ORANGE%FHR%BLUE%
-ItemDisplay[cm2 !UNI (STAT329>1 AND FHR>0)]: %RED%Fire %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %ORANGE%FHR%BLUE%
-ItemDisplay[cm2 !UNI (STAT330>1 AND FHR>0)]: %YELLOW%Light %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %ORANGE%FHR%BLUE%
-ItemDisplay[cm2 !UNI (STAT331>1 AND FHR>0)]: %BLUE%Cold %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %ORANGE%FHR%BLUE%
-ItemDisplay[cm2 !UNI (STAT332>1 AND FHR>0)]: %GREEN%Psn %PURPLE%Damage %BLUE%Large Charm %WHITE%+ %ORANGE%FHR%BLUE%
-ItemDisplay[cm2 !UNI STAT357>2]: %ORANGE%Magic %PURPLE%Damage %BLUE%Large Charm
-ItemDisplay[cm2 !UNI STAT329>2]: %RED%Fire %PURPLE%Damage %BLUE%Large Charm
-ItemDisplay[cm2 !UNI STAT330>2]: %YELLOW%Light %PURPLE%Damage %BLUE%Large Charm
-ItemDisplay[cm2 !UNI STAT331>2]: %BLUE%Cold %PURPLE%Damage %BLUE%Large Charm
-ItemDisplay[cm2 !UNI STAT332>2]: %GREEN%Psn %PURPLE%Damage %BLUE%Large Charm
 
 //Skillers
 ItemDisplay[cm3 !UNI (TABSK0>0 AND FHR>0)]: %PURPLE%Bow and Crossbow %TAN%Skiller %WHITE%+ %ORANGE%FHR%BLUE%
@@ -1910,6 +1912,7 @@ ItemDisplay[DIN NMAG RES=42]: %GRAY%[%GREEN%42%WHITE%r%GRAY%] %NAME%%CONTINUE%
 ItemDisplay[DIN NMAG RES=43]: %GRAY%[%GREEN%43%WHITE%r%GRAY%] %NAME%%CONTINUE%
 ItemDisplay[DIN NMAG RES=44]: %GRAY%[%GREEN%44%WHITE%r%GRAY%] %NAME%%CONTINUE%
 ItemDisplay[DIN NMAG RES=45]: %GRAY%[%GREEN%45%WHITE%r%GRAY%] %NAME%%CONTINUE%
+
 //Show me high ED TAG on PALADIN shields
 ItemDisplay[DIN NMAG AR>100]: %GRAY%[%RED%ed%GRAY%] %NAME%%CONTINUE%
 
