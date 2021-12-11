@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season IV: ver 4.2.3
+//	Kryszard's PD2 Loot Filter for Season IV: ver 4.2.4
 //
 //	twitch.tv/kryszard
 //
@@ -2199,6 +2199,7 @@ ItemDisplay[dcma]: %MAP-0A%%PX-62%%GRAY%*%RED%* %NAME% %RED%*%GRAY%*{%RED%DO IT 
 ItemDisplay[dcbl OR dcho OR dcso]: %MAP-0A%%PX-62%%NAME% %RED%*{%TAN%Note%WHITE%: %RED%Diablo Clone %GRAY%walks nearby...}
 
 //Rathma Items
+ItemDisplay[rtmv]: %MAP-0A%%PX-62%%NAME% %RED%*{%TAN%Note%WHITE%: %RED%Rathma %GRAY%...?}
 ItemDisplay[rtmo]: %MAP-0A%%PX-62%%NAME% %RED%*{%TAN%Note%WHITE%: %RED%Rathma %GRAY%...?}
 ItemDisplay[rtma]: %MAP-0A%%PX-62%%NAME% %RED%*{%TAN%Note%WHITE%: %RED%Rathma %GRAY%...?}
 ItemDisplay[cwss]: %MAP-0A%%DOT-84%%NAME% %GREEN%*{%RED%Warning%WHITE%: It can Brick your %GOLD%Annihilus%NL%%TAN%Note%WHITE%: Use it to %RED%Corrupt %GOLD%Annihilus:}
