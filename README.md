@@ -28,9 +28,9 @@ It's gonna show you almost everything which can help you during leveling process
 * Filter will show you only good runeword bases. *(check supported RW bases below)*  
 * You gonna see exactly ED values on superior RW bases, exactly RES values on Paladin shields RW bases, exactly +skills values on Class-Specific RW bases.
 * You will be able to see magic and rare: Circlets and Class Items like Barb Helms, Druid Pelts, Sorc Globes, Wands, Assasin Claws, Amazon Javelins and:  
-* Rare gloves, boots and belts and:  
+* Rare gloves, boots and belts (and since rares are better then in LoD also chests, helmets and shields) and:  
 * Every ETH Rare and Magic WEAPONS, and:
-* Good magical bases for crafting *(Blood Gloves, Caster Belt, Safety Shield, etc.)*, and:  
+* Good magical bases for crafting, and:  
 * Potentially expensive (Woth some GOLD) items are shown with a PRICETAG, like 2square in eq throwables, wands, sorc orbs etc.  
 * Gold piles only in stacks **5k+**  
 * Good Uniques (only when UNID!) will be shown with Chat Notification, Minimap Pin and extra colorful ** **STARS** **, the Best Uniques with extra green note. *(pick up!)*
@@ -42,6 +42,8 @@ It's gonna show you almost everything which can help you during leveling process
 *List coming soon. Meanwhile you can test it using [FilterBird Tool](https://betweenwalls.github.io/filterbird/?v=PD2).*
 
 # ScreenShots preview:
+![ScreenShot 5](https://user-images.githubusercontent.com/63604590/146273870-9d67317f-3ae7-4e0a-8ca1-1ad451d866aa.png) "ScreenShot 5")
+ver 4.4.1 update
 ![ScreenShot 1](https://preview.redd.it/55pqcgwugvl61.png?width=1920&format=png&auto=webp&s=b276f3bad428f6ee403ea28b247ab20d73f1ec76 "ScreenShot 1")  
 ![ScreenShot 2](https://i.postimg.cc/38mfnbD2/1.png "ScreenShot 2")  
 ![ScreenShot 3](https://i.postimg.cc/3NLF0GfF/2.png "ScreenShot 3")  
