@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season IV: ver 4.4.7
+//	Kryszard's PD2 Loot Filter for Season IV: ver 4.4.8
 //
 //	twitch.tv/kryszard
 //
@@ -820,7 +820,7 @@ ItemDisplay[(lbt OR xhb OR uhb OR tbt OR xvb) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%
 //shields
 ItemDisplay[(nee OR pa9 OR nea OR uts OR uow OR xsh OR xow OR pae OR nef) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %NAME%%GRAY%     *%TAN%*%YELLOW%*
 //weapons
-ItemDisplay[(7bw OR 7cs OR 7ws OR 7fl OR 7kr OR 7cr OR 7gm OR 9tw OR oba OR ama OR obc OR 7lw OR amf OR 7wh) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %NAME%%GRAY%     *%TAN%*%YELLOW%*
+ItemDisplay[(7ts OR 9bw OR 7wc OR 7bw OR 7cs OR 7ws OR 7fl OR 7kr OR 7cr OR 7gm OR 9tw OR oba OR ama OR obc OR 7lw OR amf OR 7wh) UNI !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %NAME%%GRAY%     *%TAN%*%YELLOW%*
 
 //Rainbow Facet
 ItemDisplay[jew UNI !ID]: %BORDER-68%%RED%r%ORANGE%a%YELLOW%in%GREEN%b%BLUE%o%PURPLE%w     %NAME%%PURPLE%     r%BLUE%a%GREEN%in%YELLOW%b%ORANGE%o%RED%w
@@ -832,7 +832,7 @@ ItemDisplay[(amu OR rin OR uar OR ci3 OR 7qr OR uth OR paf) SET !ID]: %MAP-84%%P
 //Armors
 ItemDisplay[(fld OR xkp OR xul OR xlm OR drb OR 9sp OR mbt OR xcl OR rng OR uul OR xng OR xui OR spl OR pac OR xmg OR xsk OR xml OR xlb OR xpl OR xap OR xld OR xrs OR gth OR aar OR BELT OR skp OR xhl OR xrn OR vbt OR xmb OR uvb OR umb OR lgl OR vgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR ush OR upk OR uml OR xts OR xrg OR xuc OR tow OR kit OR gts) UNI !ID]: %PX-68%%NAME%
 //Weapons
-ItemDisplay[((8mx OR 6rx OR 6hx OR 9gw OR 7m7 OR 9cl OR mau OR 7ls OR 9ls OR 7br OR 7sr OR 7p7 OR 9ba OR 7ga OR 7wa OR 7gi OR 7pa OR 8ls OR 72a OR 7o7 OR 9yw OR 9fc OR 9kr OR amb OR 7sc OR 7mp OR 6sw OR 6l7 OR 8hx OR 8rx OR dgr OR 7dg OR 7bl OR 9ma OR 9wh OR 9gm OR 7s8 OR 7wc OR 9ws OR 6cs OR 7b7 OR 7gs OR 9sb) OR (ELT (THROWING OR JAV)) OR 9bw OR 7wb OR 7sp) UNI !ID]: %PX-68%%NAME%
+ItemDisplay[((8mx OR 6rx OR 6hx OR 9gw OR 7m7 OR 9cl OR mau OR 7ls OR 9ls OR 7br OR 7sr OR 7p7 OR 9ba OR 7ga OR 7wa OR 7gi OR 7pa OR 8ls OR 72a OR 7o7 OR 9yw OR 9fc OR 9kr OR amb OR 7sc OR 7mp OR 6sw OR 6l7 OR 8hx OR 8rx OR dgr OR 7dg OR 7bl OR 9ma OR 9wh OR 9gm OR 7s8 OR 9ws OR 6cs OR 7b7 OR 7gs OR 9sb) OR (ELT (THROWING OR JAV)) OR 7wb OR 7sp) UNI !ID]: %PX-68%%NAME%
 //Sets
 ItemDisplay[((ARMOR OR WEAPON) (EXC OR ELT OR ci0 OR ba5 OR lbt) !(9vo OR xcl OR xrn)) SET !ID]: %PX-84%%NAME%
 
@@ -855,6 +855,8 @@ ItemDisplay[(GLOVES OR BOOTS OR BELT) RARE !ID]: %NAME%
 ItemDisplay[(CHEST OR HELM OR SHIELD) RARE !ID]: %NAME%
 
 //Class dependence highlight items
+//Paladin
+ItemDisplay[(pa1 OR pa6 OR pab) PALADIN MAG !ETH !ID]: %DOT-97%%PX-68%%NAME%
 //Barbarian
 ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta) BARBARIAN RARE ETH !ID]: %DOT-A8%%NAME%
 ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta) BARBARIAN MAG ETH !ID]: %DOT-97%%PX-68%%NAME%
@@ -872,6 +874,7 @@ ItemDisplay[SHIELD !(sml OR xml OR uml OR spk OR xpk OR upk) MAG ETH !ID]: %NAME
 ItemDisplay[CHEST MAG ETH !ID]: %NAME%
 ItemDisplay[GLOVES ((EXC OR ELT) !(utg OR uhg)) MAG !ETH !ID]: %NAME%
 ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp OR mac OR 9ma OR 7ma OR mst OR 9mt OR 7mt OR ssd OR 9ss OR 7ss OR scm OR 9sm OR 7sm OR sbr OR 9sb OR 7sb OR flc OR 9fc OR 7fc OR wsd OR 9wd OR 7wd OR dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR bld OR 9bl OR 7bl OR STAFF OR ktr OR wrb OR axf OR ces OR clw OR btl OR skr OR 9ar OR 9wb OR 9xf) MAG ETH !ID]: %NAME%
+ItemDisplay[(cst OR 8cs OR 6cs OR bst OR 8bs OR 6bs OR wst OR 8ws OR 6ws) MAG ETH !ID]: %NAME%
 ItemDisplay[(lwb OR 8lw OR 6lw) MAG !ID]: %NAME%
 
 //Class items
