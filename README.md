@@ -50,9 +50,25 @@ ver 4.4.1 update
 ![ScreenShot 4](https://i.postimg.cc/mZVwnxZ1/3.png "ScreenShot 4")  
 
 # Futureal version:
-![ScreenShot 4](https://i.postimg.cc/y6PrDd5Q/obraz-2021-07-29-192957.png "ScreenShot 5")  
+![ScreenShot 4](https://i.postimg.cc/y6PrDd5Q/obraz-2021-07-29-192957.png "ScreenShot 6")  
 Tweaked for [Futureal](https://www.twitch.tv/futureal) - Less colorful, more Vanilla looking version of the filter. No more "colorful *STARS*" and "PICK UP" things.
 Few small changes compararing to orginal item.filter, but still almost the same functianolity and QoL features.
+
+# strict.filter:
+![ScreenShot 4](https://i.postimg.cc/QXZjWxXw/compare.png "ScreenShot 7")  
+More strict version of a filter for late season farmers.
+Filter is pretty much the same for characters below lvl 80, at 80+ diffrences are:
+- Keys removed
+- Mana and Health potions removed (only juvies and antidotes will be shown)
+- Class items (magic and rare) will show only to class which with you are playing
+- Rare Helmets removed (circlets are still there)
+- Rare uneth Weapons removed
+- Magic gloves removed
+- Quivers: Only rare Arrows will be shown for all clases
+- Expensive/worth some gold items with pricetag removed (RW bases with good +skills still there)
+- Armor RW bases (body chests, helmets, shields) showing only when rolled with extra ED%
+- Eth Body Chests only with 750+ defence
+- Runes: Only Lem [20]+ will drop chat notify
 
 ## in-game settings:
 ![in-game settings](https://i.postimg.cc/g2BCzfJH/filter-settings.png "in-game settings")
