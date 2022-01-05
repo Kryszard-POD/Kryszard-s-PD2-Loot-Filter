@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season IV: ver 4.6.1
+//	Kryszard's PD2 Loot Filter for Season IV: ver 4.6.2
 //
 //	twitch.tv/kryszard
 //
@@ -559,7 +559,9 @@ ItemDisplay[key]: %GRAY%key{%ORANGE%crafting %WHITE%bases from vendors%NL%%TAN%P
 
 //Arrows & Bolts
 ItemDisplay[(aqv OR cqv) NMAG CLVL>6]:
-ItemDisplay[(aqv OR cqv) MAG !AMAZON CLVL>79]:
+ItemDisplay[cqv MAG CLVL>79]:
+ItemDisplay[aqv MAG !AMAZON CLVL>79]:
+ItemDisplay[aqv RARE AMAZON !ID]: %DOT-A8%%NAME%%CONTINUE%
 
 //Choking, Exploding, Fulminating, Oil, Rancid, Strangling
 ItemDisplay[opm]: %NAME%{%WHITE%Exoplo. Potion + Perf %RED%O %WHITE%+ %BLUE%Ring %WHITE%= Fire Res %BLUE%Ring%NL%%TAN%Note%WHITE%: Crafting Recipe:}%CONTINUE%
