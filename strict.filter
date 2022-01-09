@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season IV: ver 4.6.3
+//	Kryszard's PD2 Loot Filter for Season IV: ver 4.6.4
 //	strict version
 //
 //	twitch.tv/kryszard
@@ -835,7 +835,7 @@ ItemDisplay[(amu OR rin OR uar OR ci3 OR 7qr OR uth OR paf) SET !ID]: %MAP-84%%P
 
 //Uniques and Sets worth notifying
 //Armors
-ItemDisplay[(brs OR fld OR xkp OR xul OR xlm OR drb OR 9sp OR mbt OR xcl OR rng OR uul OR xng OR xui OR spl OR pac OR xmg OR xsk OR xml OR xlb OR xpl OR xap OR xld OR xrs OR gth OR aar OR BELT OR skp OR xhl OR xrn OR vbt OR xmb OR uvb OR umb OR lgl OR vgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR ush OR upk OR uml OR xts OR xrg OR xuc OR tow OR kit OR gts) UNI !ID]: %PX-68%%NAME%
+ItemDisplay[(brs OR fld OR xkp OR xul OR xlm OR drb OR 9sp OR mbt OR xcl OR rng OR uul OR xng OR xui OR spl OR pac OR xmg OR xsk OR xml OR xlb OR xpl OR xap OR xld OR xrs OR gth OR aar OR (BELT !(vbl OR zmb OR hbl)) OR skp OR xhl OR xrn OR vbt OR xmb OR uvb OR umb OR lgl OR vgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR ush OR upk OR uml OR xts OR xrg OR tow OR kit OR gts) UNI !ID]: %PX-68%%NAME%
 //Weapons
 ItemDisplay[((8mx OR 6rx OR 6hx OR 9gw OR 7m7 OR 9cl OR mau OR 7ls OR 9ls OR 7br OR 7sr OR 7p7 OR 9ba OR 7ga OR 7wa OR 7gi OR 7pa OR 8ls OR 72a OR 7o7 OR 9yw OR 9fc OR 9kr OR amb OR 7sc OR 7mp OR 6sw OR 6l7 OR 8hx OR 8rx OR dgr OR 7dg OR 7bl OR 9ma OR 9wh OR 9gm OR 7s8 OR 9ws OR 6cs OR 7b7 OR 7gs OR 9sb) OR (ELT (THROWING OR JAV)) OR 7wb OR 7sp) UNI !ID]: %PX-68%%NAME%
 //Sets
@@ -2074,7 +2074,7 @@ ItemDisplay[(AXE OR SWORD OR (whm OR mau OR gma OR 9wh OR 9m9 OR 9gm OR 7wh OR 7
 
 //RuneWord Bases
 //Chests
-ItemDisplay[(xld OR xpl OR gth) !INF !ETH NMAG !RW !SOCK=1 ED=15]: %DOT-D6%%NAME%{%NAME%}
+ItemDisplay[(xld OR xpl OR gth) !INF !ETH NMAG !RW (SOCK=0 OR SOCK=3) ED=15]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[(xld OR xpl OR gth) !INF !ETH NMAG !RW !SOCK=1 ED>4]: %NAME%{%NAME%}
 ItemDisplay[xtp !INF !ETH NMAG !RW !SOCK=1 ED>4]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[(utp OR uui OR uea OR ula OR utu OR urs OR uar) !INF !ETH NMAG !RW (SOCK=0 OR SOCK>2) ED>4]: %DOT-D6%%NAME%{%NAME%}
@@ -2104,12 +2104,12 @@ ItemDisplay[NEC (SK67>2 OR SK74>2 OR SK94>2 OR SK75>2 OR SK70>2 OR SK84>2 OR SK8
 ItemDisplay[(amc OR amb) NMAG !INF !RW TABSK0>2 (SOCK=0 OR SOCK=4)]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[(amc OR amb) NMAG !INF !RW TABSK0>2 SOCK=3]: %NAME%{%NAME%}
 ItemDisplay[(amc OR amb) NMAG !INF !RW (SOCK=0 OR SOCK=5)]: %NAME%{%NAME%}
-ItemDisplay[6cb NMAG !RW !INF SOCK=3]: %NAME%{%NAME%}
-ItemDisplay[(6cb OR 8rx OR 6rx OR 6lx OR 6mx) NMAG !INF !RW (SOCK=0 OR SOCK=4)]: %NAME%{%NAME%}
+ItemDisplay[6cb NMAG !RW !INF SOCK=3 ED>4]: %NAME%{%NAME%}
+ItemDisplay[(6cb OR 8rx OR 6rx OR 6lx OR 6mx) NMAG !INF !RW (SOCK=0 OR SOCK=4) ED>4]: %NAME%{%NAME%}
 //Clubs
 ItemDisplay[(7cl OR 7sp) NMAG !INF !RW !SOCK=1 (SK221>2 OR SK223>2 OR SK224>2 OR SK225>2 OR SK227>2 OR SK228>2 OR SK233>2 OR SK237>2 OR SK238>2 OR SK239>2 OR SK240>2 OR SK243>2 OR SK244>2 OR SK245>2 OR SK247>2 OR SK248>2 OR SK249>2 OR SK250>2)]: %NAME%{%NAME%}
 //Daggers
-ItemDisplay[7kr !INF NMAG !RW !SOCK=1]: %NAME%{%NAME%}
+ItemDisplay[7kr !INF NMAG !RW !SOCK=1 ED>4]: %NAME%{%NAME%}
 //Axes
 ItemDisplay[(7wa OR 72a) !ETH !INF NMAG !RW !SOCK=1]: %NAME%{%NAME%}
 ItemDisplay[(7wa OR 72a) ETH !INF NMAG !RW !SOCK=1]: %DOT-D6%%NAME%{%NAME%}
@@ -2117,8 +2117,8 @@ ItemDisplay[(7bt OR 7ba OR 7ga OR 7gi OR 7la) !INF ETH NMAG !RW (SOCK=0 OR SOCK=
 //Hammers
 ItemDisplay[(7m7 OR 7gm) !INF ETH NMAG !RW !SOCK=1]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[(7m7 OR 7gm) !INF NMAG !RW !SOCK=1 ED>4]: %DOT-D6%%NAME%{%NAME%}
-ItemDisplay[(7m7 OR 7gm) !INF NMAG !RW !SOCK=1]: %NAME%{%NAME%}
-ItemDisplay[7wh !INF NMAG !RW !SOCK=1]: %NAME%{%NAME%}
+ItemDisplay[7wh !INF NMAG ETH !RW !SOCK=1]: %NAME%{%NAME%}
+ItemDisplay[7wh !INF NMAG !ETH !RW !SOCK=1 ED>4]: %NAME%{%NAME%}
 //Scepters
 ItemDisplay[(wsp OR 9ws OR 7ws) (SK100>2 OR SK125>2 OR SK108>2 OR SK121>2) !INF !ETH NMAG !RW (SOCK=0 OR SOCK=4)]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[(wsp OR 9ws OR 7ws) SK117>2 NMAG !RW (SOCK=0 OR SOCK=5)]: %DOT-D6%%NAME%{%NAME%}
@@ -2129,14 +2129,11 @@ ItemDisplay[7ws NMAG !RW !SOCK=1]: %NAME%{%NAME%}
 //Swords
 ItemDisplay[crs NMAG SOCK=0 (ILVL>25 AND ILVL<41) CLVL<80]: %NAME% %TAN%[%DARK_GREEN%Larzuk 4soc%TAN%]{%NAME%}
 ItemDisplay[(bsd OR lsd) NMAG SOCK=0 ILVL>25 CLVL<80]: %NAME% %TAN%[%DARK_GREEN%Larzuk 4soc%TAN%]{%NAME%}
-ItemDisplay[(crs OR bsd OR lsd) NMAG !INF !RW SOCK=4]: %NAME%{%NAME%}
 ItemDisplay[crs ILVL>25 NMAG !INF !RW (SOCK=0 OR SOCK>4)]: %NAME%{%NAME%}
 ItemDisplay[7cr NMAG !RW !INF (SOCK=0 OR SOCK>2) ED>4]: %DOT-D6%%NAME%{%NAME%}
-ItemDisplay[7cr NMAG !RW !INF SOCK=0]: %NAME%{%NAME%}
-ItemDisplay[7cr NMAG !RW !INF SOCK>2]: %NAME%{%NAME%}
 ItemDisplay[(72h OR 7fb OR 7gd OR 7gs OR 7ls) ETH NMAG !RW !INF !SOCK=1]: %DOT-D6%%NAME%{%NAME%}
 //Maces
-ItemDisplay[fla NMAG !RW !INF (SOCK=0 OR SOCK>2)]: %NAME%{%NAME%}
+ItemDisplay[fla NMAG !RW !INF (SOCK=0 OR SOCK>3)]: %NAME%{%NAME%}
 //Wands
 ItemDisplay[WAND !(wnd OR ywn OR 9wn) (SK67>2 OR SK74>2 OR SK94>2 OR SK75>2 OR SK70>2 OR SK84>2 OR SK83>2 OR SK89>2 OR SK92>2 OR SK93>2 OR SK79>2 OR SK80>2 OR SK85>2 OR SK95>2 OR SK374>2 OR SK381>2) !SOCK=1 NMAG !RW]: %NAME%{%NAME%}
 //Staves
@@ -2159,7 +2156,7 @@ ItemDisplay[((SIN ELT) OR 9tw OR 9lw) (SK275>0 OR SK276>0 OR SK278>0) !INF ETH N
 ItemDisplay[((SIN ELT) OR 9tw OR 9lw) (SK275>0 OR SK276>0 OR SK278>0 OR SK257>2 OR SK266>2) !INF ETH NMAG !RW !SOCK=1]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[(9tw OR 7tw) (SK262>2 OR SK271>2 OR SK276>2) !INF NMAG !RW (SOCK=0 OR SOCK=3)]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[((SIN ELT) OR 9tw OR 9lw) ((SK254>2 OR SK255>2 OR SK260>2 OR SK275>2) OR ((SK254>0 OR SK255>0 OR SK260>0) AND (SK275>0 AND SK276>0)) OR ((SK254>1 OR SK255>1 OR SK260>1) AND (SK275>0 OR SK276>0 OR SK278>0))) !INF !ETH NMAG !RW (SOCK=0 OR SOCK=2)]: %NAME%{%NAME%}
-ItemDisplay[SIN !(ktr OR wrb OR axf OR ces) (SK254>2 OR SK255>2 OR SK259>2 OR SK260>2 OR SK262>2 OR SK266>2 OR SK267>2 OR SK271>2 OR SK272>2 OR SK273>2 OR SK276>2 OR SK277>2 OR SK278>2 OR SK265>2 OR (SK278>1 AND SK265>1) OR SK366>2 OR SK280>2) !INF NMAG !RW (SOCK=0 OR SOCK=3)]: %NAME%{%NAME%}
+ItemDisplay[SIN !(ktr OR wrb OR axf OR ces) (SK254>2 OR SK255>2 OR SK259>2 OR SK260>2 OR SK262>2 OR SK266>2 OR SK267>2 OR SK271>2 OR SK272>2 OR SK273>2 OR SK276>2 OR SK277>2 OR SK278>2 OR SK265>2 OR (SK278>1 AND SK265>1) OR SK366>2 OR SK280>2 OR SK252>2) !INF NMAG !RW (SOCK=0 OR SOCK=3)]: %NAME%{%NAME%}
 ItemDisplay[((SIN ELT) OR 9tw OR 9lw) !INF ETH NMAG !RW !SOCK=1]: %NAME%{%NAME%}
 
 //Notes for crafting
