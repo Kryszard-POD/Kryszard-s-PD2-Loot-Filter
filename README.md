@@ -68,6 +68,7 @@ Filter is pretty much the same for characters below lvl 80, at 80+ diffrences ar
 - Expensive/worth some gold items with pricetag removed (RW bases with good +skills still there)
 - Armor RW bases (body chests, helmets, shields) showing only when rolled with extra ED%
 - Eth Body Chests only with 750+ defence
+- Some common RW bases like spirit swords, phase blades w/o ED removed.
 - Runes: Only Lem [20]+ will drop chat notify
 
 ## in-game settings:
