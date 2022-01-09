@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season IV]: ver 4.6.3
+//	Kryszard's PD2 Loot Filter for Season IV]: ver 4.6.4
 //	Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -833,7 +833,7 @@ ItemDisplay[(amu OR rin OR uar OR ci3 OR 7qr OR uth OR paf) SET !ID]: %MAP-84%%N
 
 //Uniques and Sets worth notifying
 //Armors
-ItemDisplay[(brs OR fld OR xkp OR xul OR xlm OR drb OR 9sp OR mbt OR xcl OR rng OR uul OR xng OR xui OR spl OR pac OR xmg OR xsk OR xml OR xlb OR xpl OR xap OR xld OR xrs OR gth OR aar OR BELT OR skp OR xhl OR xrn OR vbt OR xmb OR uvb OR umb OR lgl OR vgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR ush OR upk OR uml OR xts OR xrg OR xuc OR tow OR kit OR gts) UNI !ID]: %PX-68%%NAME%
+ItemDisplay[(brs OR fld OR xkp OR xul OR xlm OR drb OR 9sp OR mbt OR xcl OR rng OR uul OR xng OR xui OR spl OR pac OR xmg OR xsk OR xml OR xlb OR xpl OR xap OR xld OR xrs OR gth OR aar OR (BELT !(vbl OR zmb OR hbl)) OR skp OR xhl OR xrn OR vbt OR xmb OR uvb OR umb OR lgl OR vgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR ush OR upk OR uml OR xts OR xrg OR tow OR kit OR gts) UNI !ID]: %PX-68%%NAME%
 //Weapons
 ItemDisplay[((8mx OR 6rx OR 6hx OR 9gw OR 7m7 OR 9cl OR mau OR 7ls OR 9ls OR 7br OR 7sr OR 7p7 OR 9ba OR 7ga OR 7wa OR 7gi OR 7pa OR 8ls OR 72a OR 7o7 OR 9yw OR 9fc OR 9kr OR amb OR 7sc OR 7mp OR 6sw OR 6l7 OR 8hx OR 8rx OR dgr OR 7dg OR 7bl OR 9ma OR 9wh OR 9gm OR 7s8 OR 9ws OR 6cs OR 7b7 OR 7gs OR 9sb) OR (ELT (THROWING OR JAV)) OR 7wb OR 7sp) UNI !ID]: %PX-68%%NAME%
 //Sets
@@ -2078,7 +2078,7 @@ ItemDisplay[(AXE OR SWORD OR (whm OR mau OR gma OR 9wh OR 9m9 OR 9gm OR 7wh OR 7
 
 //RuneWord Bases
 //Chests
-ItemDisplay[(xld OR xpl OR gth) !INF !ETH NMAG !RW !SOCK=1 ED=15]: %DOT-D6%%NAME%{%NAME%}
+ItemDisplay[(xld OR xpl OR gth) !INF !ETH NMAG !RW (SOCK=0 OR SOCK=3) ED=15]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[(xld OR xpl OR gth) !INF !ETH NMAG !RW !SOCK=1 ED>4]: %NAME%{%NAME%}
 ItemDisplay[xtp !INF !ETH NMAG !RW !SOCK=1]: %NAME%{%NAME%}
 ItemDisplay[(utp OR uui OR uea OR ula OR utu OR urs OR uar) !INF !ETH NMAG !RW (SOCK=0 OR SOCK>2)]: %NAME%{%NAME%}
@@ -2162,7 +2162,7 @@ ItemDisplay[((SIN ELT) OR 9tw OR 9lw) (SK275>0 OR SK276>0 OR SK278>0) !INF ETH N
 ItemDisplay[((SIN ELT) OR 9tw OR 9lw) (SK275>0 OR SK276>0 OR SK278>0 OR SK257>2 OR SK266>2) !INF ETH NMAG !RW !SOCK=1]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[(9tw OR 7tw) (SK262>2 OR SK271>2 OR SK276>2) !INF NMAG !RW (SOCK=0 OR SOCK=3)]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[((SIN ELT) OR 9tw OR 9lw) ((SK254>2 OR SK255>2 OR SK260>2 OR SK275>2) OR ((SK254>0 OR SK255>0 OR SK260>0) AND (SK275>0 AND SK276>0)) OR ((SK254>1 OR SK255>1 OR SK260>1) AND (SK275>0 OR SK276>0 OR SK278>0))) !INF !ETH NMAG !RW (SOCK=0 OR SOCK=2)]: %NAME%{%NAME%}
-ItemDisplay[SIN !(ktr OR wrb OR axf OR ces) (SK254>2 OR SK255>2 OR SK259>2 OR SK260>2 OR SK262>2 OR SK266>2 OR SK267>2 OR SK271>2 OR SK272>2 OR SK273>2 OR SK276>2 OR SK277>2 OR SK278>2 OR SK265>2 OR (SK278>1 AND SK265>1) OR SK366>2 OR SK280>2) !INF NMAG !RW (SOCK=0 OR SOCK=3)]: %NAME%{%NAME%}
+ItemDisplay[SIN !(ktr OR wrb OR axf OR ces) (SK254>2 OR SK255>2 OR SK259>2 OR SK260>2 OR SK262>2 OR SK266>2 OR SK267>2 OR SK271>2 OR SK272>2 OR SK273>2 OR SK276>2 OR SK277>2 OR SK278>2 OR SK265>2 OR (SK278>1 AND SK265>1) OR SK366>2 OR SK280>2 OR SK252>2) !INF NMAG !RW (SOCK=0 OR SOCK=3)]: %NAME%{%NAME%}
 ItemDisplay[((SIN ELT) OR 9tw OR 9lw) !INF ETH NMAG !RW !SOCK=1]: %NAME%{%NAME%}
 
 //Notes for crafting
