@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season IV: ver 4.6.4
+//	Kryszard's PD2 Loot Filter for Season IV: ver 4.6.5
 //
 //	twitch.tv/kryszard
 //
@@ -559,8 +559,8 @@ ItemDisplay[key]: %GRAY%key{%ORANGE%crafting %WHITE%bases from vendors%NL%%TAN%P
 
 //Arrows & Bolts
 ItemDisplay[(aqv OR cqv) NMAG CLVL>6]:
-ItemDisplay[cqv MAG CLVL>79]:
-ItemDisplay[aqv MAG !AMAZON CLVL>79]:
+ItemDisplay[cqv MAG !ID CLVL>79]:
+ItemDisplay[aqv MAG !AMAZON !ID CLVL>79]:
 ItemDisplay[aqv RARE AMAZON !ID]: %DOT-A8%%NAME%%CONTINUE%
 
 //Choking, Exploding, Fulminating, Oil, Rancid, Strangling
@@ -806,7 +806,7 @@ ItemDisplay[(ba6 OR 9ar OR dr2 OR ob6 OR am5 OR ne6) UNI !ID]: %DOT-68%%TAN%*%GR
 ItemDisplay[pa3 UNI !ID]: %DOT-68%%GRAY%*  %NAME%%GRAY%  *
 
 //OK only when ETH
-ItemDisplay[(7bt OR 7gi OR 7wa OR 7m7 OR 7p7 OR 8ls OR 7gl OR 7b8 OR 7bk OR xpl) UNI ETH !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %NAME%%GRAY%     *%TAN%*%YELLOW%*
+ItemDisplay[(7pa OR 7bt OR 7gi OR 7wa OR 7m7 OR 7p7 OR 8ls OR 7gl OR 7b8 OR 7bk OR xpl) UNI ETH !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %NAME%%GRAY%     *%TAN%*%YELLOW%*
 
 //OK UNIQUES
 //belts
@@ -2434,7 +2434,7 @@ ItemDisplay[std]: %PX-9D%%NAME%{%WHITE%+10% Experience%NL%+20% Magic&Gold Find%N
 ItemDisplay[UNI OR SET OR RW OR CRAFT]: %NAME%{%NAME%}
 
 //Show me every identified item
-ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE OR SET OR UNI OR CRAFT) ID]: %NAME%{%NAME%}
+ItemDisplay[(ARMOR OR WEAPON OR (aqv OR cqv)) (MAG OR RARE OR SET OR UNI OR CRAFT) ID]: %NAME%{%NAME%}
 
 //Project Diablo 2 items
 ItemDisplay[wss]: %MAP-0A%%DOT-66%%NAME% %ORANGE%*{%RED%Warning%WHITE%: It can Brick your Item%NL%%TAN%Note%WHITE%: Use it to %RED%Corrupt %WHITE%Item/Map:}
