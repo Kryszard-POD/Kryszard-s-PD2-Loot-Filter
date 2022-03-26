@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season IV: ver 4.6.6
+//	Kryszard's PD2 Loot Filter for Season IV: ver 4.6.7
 //	strict version
 //
 //	twitch.tv/kryszard
@@ -2384,11 +2384,11 @@ ItemDisplay[NEC (MAG OR RARE OR CRAFT) ((TABSK17>2 AND (SK93>1 OR SK84>1 OR SK67
 ItemDisplay[STAFF (MAG OR RARE OR CRAFT) CHSK54>0 ((NORM OR EXC) OR (SOCK=0 AND !THROWING) OR MAG)]: %NAME%{%NAME%%NL%}%CONTINUE%
 ItemDisplay[STAFF (MAG OR RARE OR CRAFT) CHSK54>0]: %NAME%{%NAME%%RED%***   %GREEN%Teleport Charges%RED%   ***%NL%%GREEN%***%RED%***   %TAN%Note%WHITE%: Notice me, That's me:   %RED%***%GREEN%***}
 //
-ItemDisplay[WAND (MAG OR RARE OR CRAFT) CHSK91>0 ((NORM OR EXC) OR (SOCK=0 AND !THROWING) OR MAG)]: %NAME%{%NAME%%NL%}%CONTINUE%
-ItemDisplay[WAND (MAG OR RARE OR CRAFT) CHSK91>0]: %NAME%{%NAME%%RED%***   %GREEN%Lower Resist Charges%RED%   ***%NL%%GREEN%***%RED%***   %TAN%Note%WHITE%: Notice me, That's me:   %RED%***%GREEN%***}
+ItemDisplay[WAND (MAG OR RARE OR CRAFT) CHSK447>0 ((NORM OR EXC) OR (SOCK=0 AND !THROWING) OR MAG)]: %NAME%{%NAME%%NL%}%CONTINUE%
+ItemDisplay[WAND (MAG OR RARE OR CRAFT) CHSK447>0]: %NAME%{%NAME%%RED%***   %GREEN%Lower Resist Charges%RED%   ***%NL%%GREEN%***%RED%***   %TAN%Note%WHITE%: Notice me, That's me:   %RED%***%GREEN%***}
 //
-ItemDisplay[WEAPON (MAG OR RARE OR CRAFT) CHSK82>0 ((NORM OR EXC) OR (SOCK=0 AND !THROWING) OR MAG)]: %NAME%{%NAME%%NL%}%CONTINUE%
-ItemDisplay[WEAPON (MAG OR RARE OR CRAFT) CHSK82>0]: %NAME%{%NAME%%RED%***   %GREEN%Life Tap Charges%RED%   ***%NL%%GREEN%***%RED%***   %TAN%Note%WHITE%: Notice me, That's me:   %RED%***%GREEN%***}
+ItemDisplay[WEAPON (MAG OR RARE OR CRAFT) CHSK445>0 ((NORM OR EXC) OR (SOCK=0 AND !THROWING) OR MAG)]: %NAME%{%NAME%%NL%}%CONTINUE%
+ItemDisplay[WEAPON (MAG OR RARE OR CRAFT) CHSK445>0]: %NAME%{%NAME%%RED%***   %GREEN%Life Tap Charges%RED%   ***%NL%%GREEN%***%RED%***   %TAN%Note%WHITE%: Notice me, That's me:   %RED%***%GREEN%***}
 //
 ItemDisplay[WEAPON (MAG OR RARE OR CRAFT) ED>399 ((NORM OR EXC) OR (SOCK=0 AND !THROWING) OR MAG)]: %NAME%{%NAME%%NL%}%CONTINUE%
 ItemDisplay[WEAPON (MAG OR RARE OR CRAFT) ED>399]: %NAME%{%NAME%%RED%***   %GREEN%High ED Weapon%RED%   ***%NL%%GREEN%***%RED%***   %TAN%Note%WHITE%: Notice me, That's me:   %RED%***%GREEN%***}
