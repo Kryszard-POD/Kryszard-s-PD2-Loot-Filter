@@ -561,7 +561,6 @@ ItemDisplay[key]: %GRAY%key{%ORANGE%crafting %WHITE%bases from vendors%NL%%TAN%P
 //Arrows & Bolts
 ItemDisplay[(aqv OR cqv) NMAG CLVL>6]:
 ItemDisplay[cqv MAG !ID CLVL>79]:
-ItemDisplay[aqv MAG !AMAZON !ID CLVL>79]:
 ItemDisplay[aqv RARE AMAZON !ID]: %DOT-A8%%NAME%%CONTINUE%
 
 //Choking, Exploding, Fulminating, Oil, Rancid, Strangling
