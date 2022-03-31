@@ -2083,6 +2083,11 @@ ItemDisplay[ARMOR EXC SET ID]: %NAME%{%GREEN%This Item%WHITE%, %ORANGE%Ko%WHITE%
 ItemDisplay[WEAPON NORM SET ID]: %NAME%{%GREEN%This Item%WHITE%, %ORANGE%Ral%WHITE%, %ORANGE%Sol%WHITE%, Perf %GREEN%O%NL%%TAN%Note%WHITE%: Upgrading Recipe:}%CONTINUE%
 ItemDisplay[WEAPON EXC SET ID]: %NAME%{%GREEN%This Item%WHITE%, %ORANGE%Lum%WHITE%, %ORANGE%Pul%WHITE%, Perf %GREEN%O%NL%%TAN%Note%WHITE%: Upgrading Recipe:}%CONTINUE%
 
+//Notes about crafting RARES
+ItemDisplay[(ARMOR OR WEAPON) RARE (SOCK=0 AND (NORM OR EXC)) ID]: %NAME%{%NAME%%NL%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON OR rin OR amu) RARE ID]: %NAME%{%NAME%%WHITE%You can use it as Crafting Base}%CONTINUE%
+ItemDisplay[((CHEST OR HELM OR SHIELD) OR (WEAPON !(THROWING))) RARE (SOCK=0 AND ELT) ID]: %NAME%{%NAME%%NL%}%CONTINUE%
+
 //Items which will benefit socket roll chance from upgrading it first
 //from 1 to 2
 //opener
