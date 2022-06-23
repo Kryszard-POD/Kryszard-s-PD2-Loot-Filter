@@ -11,6 +11,13 @@ I am trying to make one filter, which will suit most players needs.
 Filter is good for both: leveling and endgame experience.  
 It's gonna show you almost everything which can help you during leveling process at early stages of your new characters, and became more strict after you hit **lvl 80+**
 
+## Season V Update!:
+Filter is Updated for Season V supports new Strictness Levels, all new Items and Runewords.
+I would describe it more, but don't have much time lately.
+Please report any bugs you gonna notice. I need your Feedback to make it better.
+
+Below description is outdated, but filter works still on similar behaviour.
+
 ## Some Filter Features:
 
 * Filter adds a lot of **useful NOTES** in item descriptions *(like crafting formulas, socketing and upgrading recipes, possible runewords, usability info etc.)*.  
