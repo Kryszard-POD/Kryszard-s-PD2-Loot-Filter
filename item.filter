@@ -2157,7 +2157,8 @@ ItemDisplay[NEC (SK67>2 OR SK74>2 OR SK94>2 OR SK75>2 OR SK70>2 OR SK84>2 OR SK8
 //Bows/Crossbows
 ItemDisplay[(amc OR amb) NMAG !INF !RW TABSK0>2 (SOCK=0 OR SOCK=4)]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[(amc OR amb) NMAG !INF !RW TABSK0>2 SOCK=3]: %NAME%{%NAME%}
-ItemDisplay[(amc OR amb) NMAG !INF !RW (SOCK=0 OR SOCK=5)]: %NAME%{%NAME%}
+ItemDisplay[(amc OR amb) NMAG !INF !RW (SOCK=0 OR SOCK=5) FILTLVL<4]: %NAME%{%NAME%}
+ItemDisplay[(amc OR amb) NMAG !INF !RW (SOCK=0 OR SOCK=5) ED>4 FILTLVL>3]: %NAME%{%NAME%}
 ItemDisplay[6cb NMAG !RW !INF SOCK=3 FILTLVL<4]: %NAME%{%NAME%}
 ItemDisplay[(6cb OR 8rx OR 6rx OR 6lx OR 6mx) NMAG !INF !RW (SOCK=0 OR SOCK=4) FILTLVL<4]: %NAME%{%NAME%}
 ItemDisplay[6cb NMAG !RW !INF SOCK=3 ED>4 FILTLVL>3]: %NAME%{%NAME%}
