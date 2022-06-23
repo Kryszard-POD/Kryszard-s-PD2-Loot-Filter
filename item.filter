@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season V: ver 5.0.1
+//	Kryszard's PD2 Loot Filter for Season V: ver 5.0.2
 //
 //	twitch.tv/kryszard
 //
@@ -2562,37 +2562,37 @@ ItemDisplay[RUNE>0]: %NAME%{%TAN%Note%WHITE%: Check Settings to Find Hotkey for 
 
 ItemDisplay[(r01 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%El %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Eld %GRAY%[%TAN%2%GRAY%]%NL%}%CONTINUE%
 ItemDisplay[(r02 OR r02s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Eld %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Tir %GRAY%[%TAN%3%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r03 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Tir %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Nef %GRAY%[%TAN%4%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r04 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Nef %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Eth %GRAY%[%TAN%5%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r05 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Eth %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Ith %GRAY%[%TAN%6%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r06 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Ith %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Tal %GRAY%[%TAN%7%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r07 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Tal %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Ral %GRAY%[%TAN%8%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r08 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Ral %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Ort %GRAY%[%TAN%9%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r09 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Ort %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Thul %GRAY%[%TAN%10%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r10 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Thul %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Amn %GRAY%[%TAN%11%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r11 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Amn %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Sol %GRAY%[%TAN%12%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r12 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Sol %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Shael %GRAY%[%TAN%13%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r13 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Shael %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Dol %GRAY%[%TAN%14%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r14 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Dol %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Hel %GRAY%[%WHITE%15%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r15 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Hel %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Io %GRAY%[%TAN%16%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r16 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Io %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Lum %GRAY%[%TAN%17%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r17 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Lum %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Ko %GRAY%[%WHITE%18%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r18 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Ko %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Fal %GRAY%[%WHITE%19%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r19 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Fal %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Lem %GRAY%[%RED%20%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r20 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Lem %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Pul %GRAY%[%RED%21%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r21 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 2x %ORANGE%Pul %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Um %GRAY%[%RED%22%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r22 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 2x %ORANGE%Um %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Mal %GRAY%[%RED%23%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r23 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 2x %ORANGE%Mal %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Ist %GRAY%[%RED%24%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r24 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 2x %ORANGE%Ist %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Gul %GRAY%[%RED%25%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r25 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 2x %ORANGE%Gul %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Vex %GRAY%[%GREEN%26%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r26 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 2x %ORANGE%Vex %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Ohm %GRAY%[%GREEN%27%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r27 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 2x %ORANGE%Ohm %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Lo %GRAY%[%GREEN%28%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r28 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 2x %ORANGE%Lo %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Sur %GRAY%[%GREEN%29%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r29 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 2x %ORANGE%Sur %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Ber %GRAY%[%GREEN%30%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r30 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 2x %ORANGE%Ber %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Jah %GRAY%[%GREEN%31%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r31 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 2x %ORANGE%Jah %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Cham %GRAY%[%GREEN%32%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r32 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 2x %ORANGE%Cham %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Zod %GRAY%[%GREEN%33%GRAY%]%NL%}%CONTINUE%
-ItemDisplay[(r33 OR r01s)]: %NAME%{%NAME%%TAN%Note%WHITE%: %ORANGE%Zod %WHITE% + Perf %GRAY%O %WHITE%= Repair any Item %GRAY%(even eth)%NL%}%CONTINUE%
+ItemDisplay[(r03 OR r03s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Tir %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Nef %GRAY%[%TAN%4%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r04 OR r04s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Nef %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Eth %GRAY%[%TAN%5%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r05 OR r05s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Eth %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Ith %GRAY%[%TAN%6%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r06 OR r06s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Ith %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Tal %GRAY%[%TAN%7%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r07 OR r07s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Tal %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Ral %GRAY%[%TAN%8%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r08 OR r08s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Ral %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Ort %GRAY%[%TAN%9%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r09 OR r09s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Ort %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Thul %GRAY%[%TAN%10%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r10 OR r10s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Thul %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Amn %GRAY%[%TAN%11%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r11 OR r11s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Amn %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Sol %GRAY%[%TAN%12%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r12 OR r12s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Sol %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Shael %GRAY%[%TAN%13%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r13 OR r13s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Shael %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Dol %GRAY%[%TAN%14%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r14 OR r14s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Dol %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Hel %GRAY%[%WHITE%15%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r15 OR r15s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Hel %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Io %GRAY%[%TAN%16%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r16 OR r16s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Io %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Lum %GRAY%[%TAN%17%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r17 OR r17s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Lum %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Ko %GRAY%[%WHITE%18%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r18 OR r18s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Ko %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Fal %GRAY%[%WHITE%19%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r19 OR r19s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Fal %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Lem %GRAY%[%RED%20%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r20 OR r20s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Lem %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Pul %GRAY%[%RED%21%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r21 OR r21s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 2x %ORANGE%Pul %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Um %GRAY%[%RED%22%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r22 OR r22s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 2x %ORANGE%Um %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Mal %GRAY%[%RED%23%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r23 OR r23s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 2x %ORANGE%Mal %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Ist %GRAY%[%RED%24%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r24 OR r24s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 2x %ORANGE%Ist %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Gul %GRAY%[%RED%25%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r25 OR r25s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 2x %ORANGE%Gul %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Vex %GRAY%[%GREEN%26%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r26 OR r26s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 2x %ORANGE%Vex %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Ohm %GRAY%[%GREEN%27%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r27 OR r27s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 2x %ORANGE%Ohm %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Lo %GRAY%[%GREEN%28%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r28 OR r28s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 2x %ORANGE%Lo %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Sur %GRAY%[%GREEN%29%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r29 OR r29s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 2x %ORANGE%Sur %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Ber %GRAY%[%GREEN%30%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r30 OR r30s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 2x %ORANGE%Ber %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Jah %GRAY%[%GREEN%31%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r31 OR r31s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 2x %ORANGE%Jah %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Cham %GRAY%[%GREEN%32%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r32 OR r32s)]: %NAME%{%NAME%%TAN%Note%WHITE%: 2x %ORANGE%Cham %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Zod %GRAY%[%GREEN%33%GRAY%]%NL%}%CONTINUE%
+ItemDisplay[(r33 OR r33s)]: %NAME%{%NAME%%TAN%Note%WHITE%: %ORANGE%Zod %WHITE% + Perf %GRAY%O %WHITE%= Repair any Item %GRAY%(even eth)%NL%}%CONTINUE%
 
 ItemDisplay[r01s]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%El %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Eld %GRAY%[%TAN%2%GRAY%]%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: +15 Defense%NL%Armor/Helm: +15 Defense%NL%Weapon: +50 Attack Rating%NL%}
 ItemDisplay[r02s]: %NAME%{%NAME%%TAN%Note%WHITE%: 3x %ORANGE%Eld %WHITE%+ %GRAY%key %WHITE%= %ORANGE%Tir %GRAY%[%TAN%3%GRAY%]%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: 7% Block Chance%NL%Armor/Helm: -15% Stamina Drain%NL%Weapon: +75% Dmg, +50 AR vs Undead%NL%}
