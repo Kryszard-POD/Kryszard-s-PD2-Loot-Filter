@@ -12,7 +12,18 @@ Filter is good for both: leveling and endgame experience.
 It's gonna show you almost everything which can help you during leveling process at early stages of your new characters, and became more strict after you hit **lvl 80+**
 
 ## Season V Update!:
-Filter is Updated for Season V supports new Strictness Levels, all new Items and Runewords.
+I made 5 strictness levels, which you can choose directly from in-game settings menu:
+
+*0 - Show All Items - Default setup for all Filters - Like it say's, It gonna show you every garbage.
+*1 - Hide Just Trash Items - Clear your screen a little bit, hide just junk items
+*2 - Item Filter - More Notify - This one is classic Item.Filter that you all know and love, but with extra notifies for more items - all uniques and sets, low runes, flawlesses etc.
+*3 - Item Filter - Recommended - Classic Filter that most of us were using to this day :) I Recommend you use it, or use option 1 for first days of the ladder.
+*4 - Strict Filter - Something like my current strict filter, but with super health and mana potions
+*5 - Max-Strictness Filter - For EndGame Maniac Farmers - Should show just good stuff.
+
+Those Strict Levels are not perfect for now (but should be fine), and we need to balance them to suit most of our needs, so I really want to hear your feedback.
+
+There is also a change for Crafting Recipes descriptions. I've decided to transfer them from items to Perfect Gems instead. It gonna make our Items much Cleaner and Better! QoL Descriptions updated, all new Items and Runewords Supported!
 I would describe it more, but don't have much time lately.
 Please report any bugs you gonna notice. I need your Feedback to make it better.
 
