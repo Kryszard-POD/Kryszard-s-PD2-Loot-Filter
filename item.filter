@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season V: ver 5.0.3
+//	Kryszard's PD2 Loot Filter for Season V: ver 5.0.4
 //
 //	twitch.tv/kryszard
 //
@@ -12,9 +12,9 @@ ItemDisplayFilterName[]: Strict Filter
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Gold
-ItemDisplay[GOLD<100 CLVL>11]:
-ItemDisplay[GOLD<200 CLVL>23]:
-ItemDisplay[GOLD<400 CLVL>39]:
+ItemDisplay[GOLD<100 (CLVL>11 OR FILTLVL>3)]:
+ItemDisplay[GOLD<200 (CLVL>23 OR FILTLVL>3)]:
+ItemDisplay[GOLD<400 (CLVL>39 OR FILTLVL>3)]:
 ItemDisplay[GOLD<1000 CLVL>79]:
 ItemDisplay[GOLD<2000 CLVL>79 FILTLVL>1]:
 ItemDisplay[GOLD<3000 CLVL>79 FILTLVL>3]:
@@ -1872,8 +1872,8 @@ ItemDisplay[NMAG !RW SK37=3]: %TAN%+3%DARK_GREEN%wrm%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK37>0 SK36>0]: %CONTINUE% %NAME%
 
 ItemDisplay[NMAG !RW SK36=1]: %TAN%+1%DARK_GREEN%fbo%NAME%%CONTINUE%
-ItemDisplay[NMAG !RW SK36=2]: %TAN%+1%DARK_GREEN%fbo%NAME%%CONTINUE%
-ItemDisplay[NMAG !RW SK36=3]: %TAN%+1%DARK_GREEN%fbo%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK36=2]: %TAN%+2%DARK_GREEN%fbo%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK36=3]: %TAN%+3%DARK_GREEN%fbo%NAME%%CONTINUE%
 
 ItemDisplay[NMAG !RW (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0 OR SK50>0 OR SK51>0 OR SK52>0 OR SK53>0 OR SK54>0 OR SK55>0 OR SK56>0 OR SK57>0 OR SK58>0 OR SK59>0 OR SK60>0 OR SK61>0 OR SK62>0 OR SK63>0 OR SK64>0 OR SK65>0 OR SK369>0 OR SK383>0 OR SK376>0)]: %GRAY%[%NAME%%CONTINUE%
 
