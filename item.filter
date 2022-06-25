@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season V: ver 5.0.5
+//	Kryszard's PD2 Loot Filter for Season V: ver 5.0.6
 //
 //	twitch.tv/kryszard
 //
@@ -2190,6 +2190,7 @@ ItemDisplay[7ws NMAG !RW !SOCK=1]: %NAME%{%NAME%}
 ItemDisplay[crs NMAG SOCK=0 (ILVL>25 AND ILVL<41) CLVL<80]: %NAME% %TAN%[%DARK_GREEN%Larzuk 4soc%TAN%]{%NAME%}
 ItemDisplay[(bsd OR lsd) NMAG SOCK=0 ILVL>25 CLVL<80]: %NAME% %TAN%[%DARK_GREEN%Larzuk 4soc%TAN%]{%NAME%}
 ItemDisplay[(crs OR bsd OR lsd) NMAG !INF !RW SOCK=4]: %NAME%{%NAME%}
+ItemDisplay[((crs (ILVL>25 AND ILVL<41)) OR ((bsd OR lsd) ILVL>25)) NMAG !INF !RW SOCK=0 FILTLVL<2]: %NAME%{%NAME%}
 ItemDisplay[crs ILVL>25 NMAG !INF !RW (SOCK=0 OR SOCK>4) FILTLVL<4]: %NAME%{%NAME%}
 ItemDisplay[7cr NMAG !RW !INF (SOCK=0 OR SOCK>2) ED>4]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[7cr NMAG !RW !INF SOCK=0 FILTLVL<4]: %NAME%{%NAME%}
