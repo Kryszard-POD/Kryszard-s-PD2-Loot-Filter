@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season V: ver 5.0.8
+//	Kryszard's PD2 Loot Filter for Season V: ver 5.0.9
 //	Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -856,8 +856,8 @@ ItemDisplay[((8mx OR 6rx OR 6hx OR 9gw OR 7m7 OR 9cl OR mau OR 7ls OR 9ls OR 7br
 ItemDisplay[((ARMOR OR WEAPON) (EXC OR ELT OR ci0 OR ba5 OR lbt) !(9vo OR xcl OR xrn)) SET !ID]: %PX-84%%TIER-3%%NAME%
 
 //Highlight all Sets and Uniques for low lvl characters
-ItemDisplay[UNI !ID (FILTLVL<2 OR (CLVL<80 AND FILTLVL<4))]: %PX-68%%NAME%
-ItemDisplay[SET !ID (FILTLVL<2 OR (CLVL<80 AND FILTLVL<4))]: %PX-84%%NAME%
+ItemDisplay[UNI !ID (FILTLVL<3 OR (CLVL<80 AND FILTLVL<4))]: %PX-68%%NAME%
+ItemDisplay[SET !ID (FILTLVL<3 OR (CLVL<80 AND FILTLVL<4))]: %PX-84%%NAME%
 
 //Circlets
 ItemDisplay[CIRC (MAG OR RARE) !ID]: %NAME%
@@ -2620,7 +2620,7 @@ ItemDisplay[gzv OR glw OR glg OR glr OR glb OR gly OR skl OR gpv OR gpw OR gpg O
 ItemDisplay[gzvs OR glys OR glbs OR glgs OR glrs OR glws OR skls OR gzv OR glw OR glg OR glr OR glb OR gly OR skl]: %NAME%{%NAME%%TAN%Note%WHITE%: 3xFlawless + %GRAY%key %WHITE%= Perf}%CONTINUE%
 ItemDisplay[gzv OR glw OR glg OR glr OR glb OR gly OR skl]: %NAME%{%NAME%%NL%}%CONTINUE%
 
-ItemDisplay[gzvs]: %NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: +24 Defence%NL%Armor/Helm: +8 to Strength%NL%Weapon: +100 to Attack Rating%NL%}
+ItemDisplay[gzvs]: %NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: +24 Defense%NL%Armor/Helm: +8 to Strength%NL%Weapon: +100 to Attack Rating%NL%}
 ItemDisplay[glys]: %NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: 28% Light Res%NL%Armor/Helm: 20% Magic Find%NL%Weapon: 1-30 Light Damage%NL%}
 ItemDisplay[glbs]: %NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: 28% Cold Res%NL%Armor/Helm: +31 to Mana%NL%Weapon: 6-10 Cold Damage%NL%}
 ItemDisplay[glgs]: %NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: 28% Psn Res%NL%Armor/Helm: +8 Dexterity%NL%Weapon: +60 Psn Dmg over 6 Sec%NL%}
@@ -2635,7 +2635,7 @@ ItemDisplay[(gprs OR gpr)]: %NAME%{%NAME%%WHITE%You Can use %BLUE%Magic%WHITE%/%
 ItemDisplay[(gpws OR gpw)]: %NAME%{%NAME%%WHITE%You Can use %BLUE%Magic%WHITE%/%YELLOW%Rare %WHITE%Items as Bases%NL%%GRAY%Maybe in future seasons? Who knows... :)%NL%%TAN%Note%WHITE%: Kryszard's Crafting Recipes: Perf %WHITE%O, %BLUE%Jewel%WHITE%,}%CONTINUE%
 ItemDisplay[(skzs OR skz)]: %NAME%{%NAME%%WHITE%You Can use %BLUE%Magic%WHITE%/%YELLOW%Rare %WHITE%Items as Bases%NL%Gloves: %ORANGE%Io %WHITE%| Belt: %ORANGE%Eld %WHITE%| Boots: %ORANGE%El%NL%%WHITE%Weapon: %ORANGE%Shael %WHITE%| Armor: %ORANGE%Tir %WHITE%| Shield: %ORANGE%Sol%NL%%WHITE%Ring: %ORANGE%Hel %WHITE%| Helm: %ORANGE%Lum %WHITE%| Amulet: %ORANGE%Dol%NL%%TAN%Note%WHITE%: Vampiric Crafting Recipes: Perf %GRAY%O%WHITE%, %BLUE%Jewel%WHITE%,}%CONTINUE%
 
-ItemDisplay[gpvs]: %DOT-70%%NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: +30 Defence%NL%Armor/Helm: +10 to Strength%NL%Weapon: +150 to Attack Rating%NL%}
+ItemDisplay[gpvs]: %DOT-70%%NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: +30 Defense%NL%Armor/Helm: +10 to Strength%NL%Weapon: +150 to Attack Rating%NL%}
 ItemDisplay[gpys]: %DOT-70%%NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: 40% Light Res%NL%Armor/Helm: 24% Magic Find%NL%Weapon: 1-40 Light Damage%NL%}
 ItemDisplay[gpbs]: %DOT-70%%NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: 40% Cold Res%NL%Armor/Helm: +38 to Mana%NL%Weapon: 10-14 Cold Damage%NL%}
 ItemDisplay[gpgs]: %DOT-70%%NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: 40% Psn Res%NL%Armor/Helm: +10 Dexterity%NL%Weapon: +100 Psn Dmg over 7 Sec%NL%}
