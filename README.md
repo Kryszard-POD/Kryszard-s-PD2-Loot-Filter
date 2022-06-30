@@ -27,6 +27,9 @@ There is also a change for Crafting Recipes descriptions. I've decided to transf
 I would describe it more, but don't have much time lately.
 Please report any bugs you gonna notice. I need your Feedback to make it better.
 
+![SeasonV.1](https://i.redd.it/o022vrzios891.png "SeasonV.1")  
+![SeasonV.2](https://i.redd.it/saodw48and891.png "SeasonV.2")
+
 Below description is outdated, but filter works still on similar behaviour.
 
 ## Some Filter Features:
