@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season V: ver 5.3.1
+//	Kryszard's PD2 Loot Filter for Season V: ver 5.3.2
 //	Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -863,9 +863,9 @@ ItemDisplay[SET !ID (FILTLVL<3 OR (CLVL<80 AND FILTLVL<4))]: %PX-84%%NAME%
 ItemDisplay[CIRC (MAG OR RARE) !ID]: %NAME%
 
 //Imbue bases
-ItemDisplay[ci3 NMAG !ETH SOCK=0]: %NAME%{%TAN%Note%WHITE%: You can %YELLOW%imbue %WHITE%it using Charsi quest}%CONTINUE%
-ItemDisplay[(glv OR 9gl OR 7gl) (BARBARIAN OR FILTLVL<2) NMAG ETH ILVL>71 FILTLVL<4]: %NAME%{%TAN%Note%WHITE%: You can %YELLOW%imbue %WHITE%it using Charsi quest}
-ItemDisplay[(am5 OR ama OR amf) (AMAZON OR FILTLVL<2) NMAG ETH ILVL>71 FILTLVL<4]: %NAME%{%TAN%Note%WHITE%: You can %YELLOW%imbue %WHITE%it using Charsi quest}
+ItemDisplay[ci3 NMAG !ETH SOCK=0]: %NAME%{%TAN%Note%WHITE%: You can %YELLOW%Imbue %WHITE%it using Charsi quest%NL%}%CONTINUE%
+ItemDisplay[(glv OR 9gl OR 7gl) (BARBARIAN OR FILTLVL<2) NMAG ETH ILVL>71 FILTLVL<4]: %NAME%{%TAN%Note%WHITE%: You can %YELLOW%Imbue %WHITE%it using Charsi quest}
+ItemDisplay[(am5 OR ama OR amf) (AMAZON OR FILTLVL<2) NMAG ETH ILVL>71 FILTLVL<4]: %NAME%{%TAN%Note%WHITE%: You can %YELLOW%Imbue %WHITE%it using Charsi quest}
 
 //Rare Gloves, Belts and Boots
 ItemDisplay[(GLOVES OR BOOTS OR BELT) RARE !ID]: %NAME%
@@ -909,6 +909,7 @@ ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl
 ItemDisplay[(lbw OR 8lb OR 6lb OR lbb OR 8l8 OR 6l7 OR lwb OR 8lw OR 6lw) RARE !ID  (AMAZON OR FILTLVL<4)]: %NAME%
 
 //Craftables
+ItemDisplay[(GLOVES OR BELT OR BOOTS) MAG ETH !ID]: %NAME%
 ItemDisplay[(msk OR xsk OR usk OR bhm OR xh9 OR uh9 OR ghm OR xhm OR uhm OR crn OR xrn OR urn) MAG ETH !ID]: %NAME%
 ItemDisplay[SHIELD !(sml OR xml OR uml OR spk OR xpk OR upk) MAG ETH !ID]: %NAME%
 ItemDisplay[CHEST MAG ETH !ID]: %NAME%
@@ -1976,13 +1977,14 @@ ItemDisplay[(((WEAPON !THROWING !SIN !SOR !WAND !SCEPTER !STAFF !(clb OR 9cl OR 
 ItemDisplay[(((WEAPON !THROWING !SIN !SOR !WAND !SCEPTER !STAFF !(clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp)) ELT) OR 8rx) !SOCK=1 !INF SUP NMAG ED=15]: %GRAY%[%RED%15%%GRAY%] %NAME%%CONTINUE%
 
 //Fixing coloring for vendors
-ItemDisplay[UNI OR RW]: %NAME%%GOLD%%CONTINUE%
-ItemDisplay[SET]: %NAME%%GREEN%%CONTINUE%
-ItemDisplay[RARE]: %NAME%%YELLOW%%CONTINUE%
-ItemDisplay[MAG]: %NAME%%BLUE%%CONTINUE%
-ItemDisplay[(ARMOR OR WEAPON) NMAG !ETH (SOCK=0 OR THROWING) !opm]: %NAME%%WHITE%%CONTINUE%
-ItemDisplay[(ARMOR OR WEAPON) NMAG !RW (SOCK>0 OR ETH)]: %NAME%%GRAY%%CONTINUE%
-ItemDisplay[CRAFT]: %NAME%%ORANGE%%CONTINUE%
+ItemDisplay[UNI OR RW]: %NAME%%GOLD%{%NAME%}%CONTINUE%
+ItemDisplay[SET]: %NAME%%GREEN%{%NAME%}%CONTINUE%
+ItemDisplay[RARE]: %NAME%%YELLOW%{%NAME%}%CONTINUE%
+ItemDisplay[MAG]: %NAME%%BLUE%{%NAME%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) NMAG !ETH (SOCK=0 OR THROWING) !opm]: %NAME%%WHITE%{%NAME%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) NMAG !RW (SOCK>0 OR ETH)]: %NAME%%GRAY%{%NAME%}%CONTINUE%
+ItemDisplay[CRAFT]: %NAME%%ORANGE%{%NAME%}%CONTINUE%
+
 
 //Notes about socketing recipes
 ItemDisplay[CHEST !INF !SUP SOCK=0 NMAG]: %NAME%{%WHITE%This Item, %ORANGE%Tal%WHITE%, %ORANGE%Thul%WHITE%, Perf %YELLOW%O%NL%%TAN%Note%WHITE%: Socketing Recipe:}%CONTINUE%
@@ -2591,7 +2593,7 @@ ItemDisplay[imma]: %NAME%{%WHITE%Map + %GOLD%Orb %WHITE%+ %BLUE%Jewel %NL%%TAN%N
 ItemDisplay[scou]: %NAME%{%BLUE%M%WHITE%a%YELLOW%p %WHITE%+ %GOLD%Orb%NL%%TAN%Note%WHITE%: Imbue %BLUE%Magic%WHITE%/%YELLOW%Rare %WHITE%Map to White:}
 ItemDisplay[upmp]: %NAME%{%WHITE%3x%BLUE%M%WHITE%a%YELLOW%p %TAN%(%WHITE%Tier:%ORANGE%x%TAN%) %WHITE%+ %GOLD%Orb %WHITE%= Map %TAN%(%WHITE%Tier:%ORANGE%x%WHITE%+1%TAN%)%NL%Note%WHITE%: Upgrade Maps for higher Tier:}
 ItemDisplay[lbox]: %BORDER-0A%%DOT-62%%NAME%{%WHITE%Two-Handed Weapon = 2-4 max%NL%One-Handed Weapon = 1-2 max%NL%Helmet, Chest, Shield = 1-2 max%NL%%TAN%Note%WHITE%: Use it to %TAN%Socket %WHITE%an Item}
-ItemDisplay[lpp]: %DOT-0A%%PX-62%%NAME%{%WHITE%Two-Handed Weapon = 2-4 max%NL%One-Handed Weapon = 1-2 max%NL%Helmet, Chest, Shield = 1-2 max%NL%%TAN%Note%WHITE%: Use it to %TAN%Socket %WHITE%an %BLUE%Magic%WHITE%/%YELLOW%Rare%WHITE%/%ORANGE%Crafted %WHITE%Item}
+ItemDisplay[lpp]: %DOT-0A%%PX-62%%NAME%{%WHITE%Two-Handed Weapon = 2-4 max%NL%One-Handed Weapon = 1-2 max%NL%Helmet, Chest, Shield = 1-2 max%NL%%TAN%Note%WHITE%: Use to %TAN%Socket %WHITE%Normal/%BLUE%Magic%WHITE%/%YELLOW%Rare%WHITE%/%ORANGE%Crafted %WHITE%Item}
 ItemDisplay[lsvl]: %BORDER-9B%%DOT-62%%GREEN%*%PURPLE%*%RED%*%TAN%*%GRAY%*        %NAME%        %GRAY%*%TAN%*%RED%*%PURPLE%*%GREEN%*{%TAN%Note%WHITE%: %PURPLE%R%RED%A%ORANGE%R%YELLOW%E %WHITE%Item. Probably worth %YELLOW%A%ORANGE%L%RED%O%PURPLE%T}
 ItemDisplay[llmr]: %BORDER-9B%%DOT-62%%GREEN%*%PURPLE%*%RED%*%ORANGE%*%GOLD%*        %NAME%        %GOLD%*%ORANGE%*%RED%*%PURPLE%*%GREEN%*{%TAN%Note%WHITE%: %PURPLE%R%RED%A%ORANGE%R%YELLOW%E %WHITE%Item. Probably worth %YELLOW%A%ORANGE%L%RED%O%PURPLE%T}
 ItemDisplay[rkey]: %MAP-0A%%PX-62%%NAME%
@@ -2792,7 +2794,7 @@ ItemDisplay[NMAG !RW (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 O
 
 //HIDE EVERYTHING ELSE
 ItemDisplay[(tkf OR tax OR bkf) ((NMAG AND !INF) OR ((MAG OR RARE) !ETH !ID)) CLVL<13 FILTLVL<4]: %NAME% %GRAY%(%TAN%$%WHITE%%PRICE%%GRAY%){%NAME%}
-ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE) !ID (CLVL<41 FILTLVL<4)]: %NAME%
+ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE) !ID (FILTLVL<2 OR (CLVL<41 FILTLVL<4))]: %NAME%
 ItemDisplay[(ARMOR OR WEAPON) (EXC OR ELT) (MAG OR RARE) !ID (FILTLVL<2 OR (CLVL<80 AND (FILTLVL>1 AND FILTLVL<4)))]: %NAME%
 ItemDisplay[(CHEST OR HELM OR SHIELD) NORM RARE !ID (FILTLVL<2 OR (CLVL<80 AND (FILTLVL>1 AND FILTLVL<4)))]: %NAME%
 ItemDisplay[((CHEST OR HELM OR SHIELD) OR (WEAPON AND !THROWING)) (EXC OR ELT) NMAG !ETH !INF !SOCK=1 (FILTLVL<2 OR (CLVL<80 AND (FILTLVL>1 AND FILTLVL<4)))]: %NAME%{%NAME%}
