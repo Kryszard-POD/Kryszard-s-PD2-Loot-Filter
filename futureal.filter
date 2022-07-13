@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season V: ver 5.4.1
+//	Kryszard's PD2 Loot Filter for Season V: ver 5.4.2
 //	Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -593,8 +593,8 @@ ItemDisplay[glb OR gpb]: %NAME%%CONTINUE%
 ItemDisplay[gly OR gpy]: %NAME%%CONTINUE%
 ItemDisplay[skl OR skz]: %NAME%%CONTINUE%
 //hiding low ones
-ItemDisplay[GEM<3 (DIFF>0 OR FILTLVL>3) !(gzv OR gpv OR glw OR gpw OR glg OR gpg OR glr OR gpr OR glb OR gpb OR gly OR gpy OR skl OR skz)]:
-ItemDisplay[GEM<4 (DIFF>1 OR FILTLVL>3) !(gzv OR gpv OR glw OR gpw OR glg OR gpg OR glr OR gpr OR glb OR gpb OR gly OR gpy OR skl OR skz)]:
+ItemDisplay[GEM<3 FILTLVL>0 (DIFF>0 OR FILTLVL>3) !(gzv OR gpv OR glw OR gpw OR glg OR gpg OR glr OR gpr OR glb OR gpb OR gly OR gpy OR skl OR skz)]:
+ItemDisplay[GEM<4 FILTLVL>0 (DIFF>1 OR FILTLVL>3) !(gzv OR gpv OR glw OR gpw OR glg OR gpg OR glr OR gpr OR glb OR gpb OR gly OR gpy OR skl OR skz)]:
 //amethysts
 ItemDisplay[GEMTYPE=1 GEM<4 !(gzv OR gpv)]: %NAME%
 ItemDisplay[GEMTYPE=1 GEM>3]: %NAME%%CONTINUE%
