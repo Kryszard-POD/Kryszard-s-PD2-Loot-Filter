@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season V: ver 5.4.1
+//	Kryszard's PD2 Loot Filter for Season V: ver 5.4.2
 //
 //	twitch.tv/kryszard
 //
@@ -592,8 +592,8 @@ ItemDisplay[glb OR gpb]: %NAME% %ORANGE%[%BLUE%O%ORANGE%]%CONTINUE%
 ItemDisplay[gly OR gpy]: %NAME% %ORANGE%[%YELLOW%O%ORANGE%]%CONTINUE%
 ItemDisplay[skl OR skz]: %NAME% %ORANGE%[%GRAY%O%ORANGE%]%CONTINUE%
 //hiding low ones
-ItemDisplay[GEM<3 (DIFF>0 OR FILTLVL>3) !(gzv OR gpv OR glw OR gpw OR glg OR gpg OR glr OR gpr OR glb OR gpb OR gly OR gpy OR skl OR skz)]:
-ItemDisplay[GEM<4 (DIFF>1 OR FILTLVL>3) !(gzv OR gpv OR glw OR gpw OR glg OR gpg OR glr OR gpr OR glb OR gpb OR gly OR gpy OR skl OR skz)]:
+ItemDisplay[GEM<3 FILTLVL>0 (DIFF>0 OR FILTLVL>3) !(gzv OR gpv OR glw OR gpw OR glg OR gpg OR glr OR gpr OR glb OR gpb OR gly OR gpy OR skl OR skz)]:
+ItemDisplay[GEM<4 FILTLVL>0 (DIFF>1 OR FILTLVL>3) !(gzv OR gpv OR glw OR gpw OR glg OR gpg OR glr OR gpr OR glb OR gpb OR gly OR gpy OR skl OR skz)]:
 //amethysts
 ItemDisplay[GEMTYPE=1 GEM<4 !(gzv OR gpv)]: %NAME% %ORANGE%[%PURPLE%*%ORANGE%]
 ItemDisplay[GEMTYPE=1 GEM>3]: %NAME% %ORANGE%[%PURPLE%O%ORANGE%]%CONTINUE%
@@ -2823,7 +2823,6 @@ ItemDisplay[(ARMOR OR WEAPON) (MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR M
 ItemDisplay[(ARMOR OR WEAPON) (MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109) FILTLVL>0]: %NAME%{%PURPLE%Decrease Your Filter Level in Settings to Display It All The Time%NL%%WHITE%Outside the Town/In the Fight Field it is Going to be %RED%HIDDEN%NL%WARNING%WHITE%: At Current Filter LVL this item is shown %RED%ONLY %WHITE%in Town%NAME%}
 ItemDisplay[(ARMOR OR WEAPON) INF FILTLVL>0]: {%NAME%}
 ItemDisplay[(ARMOR OR WEAPON) !leg !opm ((CLVL>30 FILTLVL>0) OR FILTLVL>3)]: {%NAME%}
-
 
 //It’s just different sizes. BORDER > MAP > DOT > PX.
 //%TIER-X% - just minimap pin w/o chat notify when tier is higher
