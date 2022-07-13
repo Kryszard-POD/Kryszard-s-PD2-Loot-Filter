@@ -29,6 +29,7 @@ Please report any bugs you gonna notice. I need your Feedback to make it better.
 
 ![SeasonV.1](https://i.redd.it/o022vrzios891.png "SeasonV.1")  
 ![SeasonV.2](https://i.redd.it/saodw48and891.png "SeasonV.2")
+![SeasonV.3](https://i.redd.it/4666g25zbeb91.png "SeasonV.3")
 
 Below description is outdated, but filter works still on similar behaviour.
 
