@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season V: ver 5.4.4
+//	Kryszard's PD2 Loot Filter for Season V: ver 5.4.5
 //
 //	twitch.tv/kryszard
 //
@@ -2184,9 +2184,10 @@ ItemDisplay[(7cl OR 7sp) NMAG !INF !RW !SOCK=1 (SK221>2 OR SK223>2 OR SK224>2 OR
 ItemDisplay[7kr !INF NMAG !RW !SOCK=1 FILTLVL<4]: %NAME%{%NAME%}
 ItemDisplay[7kr !INF NMAG !RW !SOCK=1 ED>4 FILTLVL>3]: %NAME%{%NAME%}
 //Axes
-ItemDisplay[(7wa OR 72a) !ETH !INF NMAG !RW !SOCK=1]: %NAME%{%NAME%}
 ItemDisplay[(7wa OR 72a) ETH !INF NMAG !RW !SOCK=1]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[(7bt OR 7ba OR 7ga OR 7gi OR 7la) !INF ETH NMAG !RW (SOCK=0 OR SOCK=5)]: %DOT-D6%%NAME%{%NAME%}
+ItemDisplay[(7wa OR 72a) !ETH !INF NMAG !RW !SOCK=1 FILTLVL<4]: %NAME%{%NAME%}
+ItemDisplay[(7wa OR 72a) !ETH !INF NMAG !RW !SOCK=1 ED>4 FILTLVL>3]: %NAME%{%NAME%}
 //Hammers
 ItemDisplay[(7m7 OR 7gm) !INF ETH NMAG !RW !SOCK=1]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[(7m7 OR 7gm) !INF NMAG !RW !SOCK=1 ED>4]: %DOT-D6%%NAME%{%NAME%}
@@ -2198,9 +2199,10 @@ ItemDisplay[7wh !INF NMAG !ETH !RW !SOCK=1 ED>4 FILTLVL>3]: %NAME%{%NAME%}
 ItemDisplay[(wsp OR 9ws OR 7ws) (SK100>2 OR SK125>2 OR SK108>2 OR SK121>2) !INF !ETH NMAG !RW (SOCK=0 OR SOCK=4)]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[(wsp OR 9ws OR 7ws) SK117>2 NMAG !RW (SOCK=0 OR SOCK=5)]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[(SCEPTER !scp) !INF !ETH NMAG !RW (SK101>2 OR SK112>2 OR SK121>2) (SOCK=0 OR SOCK=3)]: %DOT-D6%%NAME%{%NAME%}
-ItemDisplay[(wsp OR 9ws OR 7ws) SK117>0 NMAG !RW (SOCK=0 OR SOCK=5)]: %DOT-D6%%NAME%{%NAME%}
-ItemDisplay[(wsp OR 9ws OR 7ws) !INF !ETH NMAG !RW (SOCK=0 OR SOCK=4)]: %NAME%{%NAME%}
-ItemDisplay[7ws NMAG !RW !SOCK=1]: %NAME%{%NAME%}
+ItemDisplay[(wsp OR 9ws OR 7ws) SK117>0 NMAG !RW (SOCK=0 OR SOCK=5)]: %DOT-D6%%TIER-3%%NAME%{%NAME%}
+ItemDisplay[(wsp OR 9ws OR 7ws) !INF !ETH NMAG !RW (SOCK=0 OR SOCK=4) FILTLVL<4]: %NAME%{%NAME%}
+ItemDisplay[7ws NMAG !RW !SOCK=1 FILTLVL<4]: %NAME%{%NAME%}
+ItemDisplay[7ws NMAG !RW !SOCK=1 ED>4 FILTLVL>3]: %NAME%{%NAME%}
 //Swords
 ItemDisplay[crs NMAG SOCK=0 (ILVL>25 AND ILVL<41) CLVL<80]: %NAME% %TAN%[%DARK_GREEN%Larzuk 4soc%TAN%]{%NAME%}
 ItemDisplay[(bsd OR lsd) NMAG SOCK=0 ILVL>25 CLVL<80]: %NAME% %TAN%[%DARK_GREEN%Larzuk 4soc%TAN%]{%NAME%}
@@ -2213,7 +2215,7 @@ ItemDisplay[7cr NMAG !RW !INF SOCK>2 FILTLVL<4]: %NAME%{%NAME%}
 ItemDisplay[(72h OR 7fb OR 7gd OR 7gs OR 7ls) ETH NMAG !RW !INF !SOCK=1]: %DOT-D6%%NAME%{%NAME%}
 //Maces
 ItemDisplay[fla NMAG !RW !INF (SOCK=0 OR SOCK>2) FILTLVL<4]: %NAME%{%NAME%}
-ItemDisplay[fla NMAG !RW !INF (SOCK=0 OR SOCK>3) FILTLVL>3]: %NAME%{%NAME%}
+ItemDisplay[fla NMAG !RW !INF SOCK>3 FILTLVL>3]: %NAME%{%NAME%}
 //Wands
 ItemDisplay[WAND !(wnd OR ywn OR 9wn) (SK67>2 OR SK74>2 OR SK94>2 OR SK75>2 OR SK70>2 OR SK84>2 OR SK83>2 OR SK89>2 OR SK92>2 OR SK93>2 OR SK79>2 OR SK80>2 OR SK85>2 OR SK95>2 OR SK374>2 OR SK381>2) !SOCK=1 NMAG !RW]: %NAME%{%NAME%}
 //Staves
