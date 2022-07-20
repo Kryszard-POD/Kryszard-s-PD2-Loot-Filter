@@ -547,16 +547,16 @@ ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE) ID]: %NAME% %GRAY%(%TAN%$%WHITE%%PRI
 ItemDisplay[rvl]: %WHITE%Full Rejuv
 ItemDisplay[rvs]: %WHITE%Small Rejuv{%PURPLE%r %WHITE%35%, Perf %YELLOW%O%WHITE%, %BLUE%Ring %WHITE%= Light Res %BLUE%Ring%NL%%WHITE%3x%PURPLE%r %WHITE%35% = %PURPLE%R %WHITE%Full%NL%%TAN%Note%WHITE%: Crafting Recipes:}
 ItemDisplay[(hp1 OR hp2 OR hp3 OR hp4 OR hp5 OR mp1 OR mp2 OR mp3 OR mp4 OR mp5) (CLVL<80 OR DIFF<2)]: %NAME%{%WHITE%3x%RED%!%WHITE%hp, 3x%BLUE%!%WHITE%mp, Square Gem = %PURPLE%R %WHITE%Full%NL%3x%RED%!%WHITE%hp, 3x%BLUE%!%WHITE%mp, Chip. Gem = %PURPLE%r %WHITE%35%%NL%%TAN% Note%WHITE%: Crafting Recipes:}%CONTINUE%
-ItemDisplay[hp5]: %WHITE%Super Healing{%NAME%}
-ItemDisplay[mp5]: %WHITE%Super Mana{%NAME%}
-ItemDisplay[hp1]: %WHITE%minor Healing{%NAME%}
-ItemDisplay[hp2]: %WHITE%light Healing{%NAME%}
-ItemDisplay[hp3]: %WHITE%Healing{%NAME%}	
-ItemDisplay[hp4]: %WHITE%great Healing{%NAME%}
-ItemDisplay[mp1]: %WHITE%minor Mana{%NAME%}
-ItemDisplay[mp2]: %WHITE%light Mana{%NAME%}
-ItemDisplay[mp3]: %WHITE%Mana{%NAME%}
-ItemDisplay[mp4]: %WHITE%great Mana{%NAME%}
+ItemDisplay[hp5]: %WHITE%Super Healing{%NAME%}%CONTINUE%
+ItemDisplay[mp5]: %WHITE%Super Mana{%NAME%}%CONTINUE%
+ItemDisplay[hp1]: %WHITE%minor Healing{%NAME%}%CONTINUE%
+ItemDisplay[hp2]: %WHITE%light Healing{%NAME%}%CONTINUE%
+ItemDisplay[hp3]: %WHITE%Healing{%NAME%}%CONTINUE%
+ItemDisplay[hp4]: %WHITE%great Healing{%NAME%}%CONTINUE%
+ItemDisplay[mp1]: %WHITE%minor Mana{%NAME%}%CONTINUE%
+ItemDisplay[mp2]: %WHITE%light Mana{%NAME%}%CONTINUE%
+ItemDisplay[mp3]: %WHITE%Mana{%NAME%}%CONTINUE%
+ItemDisplay[mp4]: %WHITE%great Mana{%NAME%}%CONTINUE%
 ItemDisplay[(hp1 OR hp2 OR hp3 OR mp1 OR mp2 OR mp3) FILTLVL>0 (DIFF>0 OR FILTLVL>4)]: {%NAME%}
 ItemDisplay[(hp4 OR mp4) FILTLVL>0 (DIFF>1 OR FILTLVL>4)]: {%NAME%}
 ItemDisplay[(hp5 OR mp5) DIFF>1 FILTLVL>4]: {%NAME%}
