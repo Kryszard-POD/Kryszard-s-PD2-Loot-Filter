@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season V: ver 5.4.7
+//	Kryszard's PD2 Loot Filter for Season V: ver 5.4.8
 //
 //	twitch.tv/kryszard
 //
@@ -219,7 +219,7 @@ ItemDisplay[(SUP OR INF) !RW ne8]: Sexton Trophy%CONTINUE%
 ItemDisplay[(SUP OR INF) !RW ned]: Overseer Skull%CONTINUE%
 ItemDisplay[(SUP OR INF) !RW ne4]: Gargoyle Head%CONTINUE%
 ItemDisplay[(SUP OR INF) !RW ne9]: Cantor Trophy%CONTINUE%
-ItemDisplay[(SUP OR INF) !RW nee]: Succubae Skull%CONTINUE%
+ItemDisplay[(SUP OR INF) !RW nee]: Succubus Skull%CONTINUE%
 ItemDisplay[(SUP OR INF) !RW ne5]: Demon Head%CONTINUE%
 ItemDisplay[(SUP OR INF) !RW nea]: Heirophant Trophy%CONTINUE%
 ItemDisplay[(SUP OR INF) !RW nef]: Bloodlord Skull%CONTINUE%
