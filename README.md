@@ -11,7 +11,26 @@ I am trying to make one filter, which will suit most players needs.
 Filter is good for both: leveling and endgame experience.  
 It's gonna show you almost everything which can help you during leveling process at early stages of your new characters, and became more strict after you hit **lvl 80+**
 
-## Season V Update!:
+## Season VI Update!:
+General changes:
+* Added all ETH EXC and ELT weapons with 0 and 2 or more sockets to "FILTER LEVEL 1 - Hide Just Trash Items",
+* Changed how info about max sockets is displayed. Before it was using shortcuts of:
+**Q, PB and C** - stands for Larzuk Quest, PuzzleBox and Corruption
+Changed to:
+**L, P and C** - stands for Larzuk Quest(and Larzuk Mallus - magic items will still show value of 2 sockets, but you need to know that Larzuk Mallus will give always 1 socket, mechanism is diffrent then Larzuk Quest - Larzuk Mallus description shows correct value of possible sockets which is 1), P is for Puzzle(Piece/Box) and C for Corruption,
+* Few small fixes.
+
+Season VI update changes:
+* Added new items with accurate descriptions of what they do: Larzuk Mallus and Orb of Fortification,
+* Map Tier changes - Maps now show correct values of tiers in their names (rotation of tiers),
+* Map Immunes changes - Maps now show correct immunes values (to verify and adjust during the season if needed),
+* Runes Descriptions changes - Affected runes: Dol, Ist, Ohm, Ber and Jah,
+* New Runewords (Asylum and Shattered Wall) added to Possible Runewords descriptions for correct bases,
+* Doom shown as possible Runeword for 5sock Scepters,
+* Rift shown as possible Runewerd for 4sock Swords.
+
+
+## Season V Update:
 I made 5 strictness levels, which you can choose directly from in-game settings menu:
 
 * 0 - Show All Items - Default setup for all Filters - Like it say's, It gonna show you every garbage.
