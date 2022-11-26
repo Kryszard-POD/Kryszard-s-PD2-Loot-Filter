@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season VI: ver 6.0.3
+//	Kryszard's PD2 Loot Filter for Season VI: ver 6.0.4
 //	Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -2602,10 +2602,10 @@ ItemDisplay[upma]: %NAME%{%BLUE%Map %WHITE%+ %GOLD%Orb %WHITE%+ Perf %GRAY%O %WH
 ItemDisplay[imma]: %NAME%{%WHITE%Map + %GOLD%Orb %WHITE%+ %BLUE%Jewel %NL%%TAN%Note%WHITE%: Imbue White Map to %BLUE%Magic%WHITE%:}
 ItemDisplay[scou]: %NAME%{%BLUE%M%WHITE%a%YELLOW%p %WHITE%+ %GOLD%Orb%NL%%TAN%Note%WHITE%: Imbue %BLUE%Magic%WHITE%/%YELLOW%Rare %WHITE%Map to White:}
 ItemDisplay[upmp]: %NAME%{%WHITE%3x%BLUE%M%WHITE%a%YELLOW%p %TAN%(%WHITE%Tier:%ORANGE%x%TAN%) %WHITE%+ %GOLD%Orb %WHITE%= Map %TAN%(%WHITE%Tier:%ORANGE%x%WHITE%+1%TAN%)%NL%Note%WHITE%: Upgrade Maps for higher Tier:}
-ItemDisplay[fort]: %NAME%{%BLUE%M%WHITE%a%YELLOW%p %WHITE%+ %GOLD%Orb%NL%%WHITE%2x Health, 2x Exp, 20% Damage, 2x Loot%NL%%TAN%Note%WHITE%: Reduces Base Density by Half, Monsters Gain:}
+ItemDisplay[fort]: %GOLD%%NAME%{%BLUE%M%WHITE%a%YELLOW%p %WHITE%+ %GOLD%Orb%NL%%WHITE%2x Health, 2x Exp, 20% Damage, 2x Loot%NL%%TAN%Note%WHITE%: Reduces Base Density by Half, Monsters Gain:}
 ItemDisplay[lbox]: %BORDER-0A%%DOT-62%%NAME%{%WHITE%Two-Handed Weapon = 2-4 max%NL%One-Handed Weapon = 1-2 max%NL%Helmet, Chest, Shield = 1-2 max%NL%%TAN%Note%WHITE%: Use it to %TAN%Socket %WHITE%an Item}
 ItemDisplay[lpp]: %DOT-0A%%PX-62%%NAME%{%WHITE%Two-Handed Weapon = 2-4 max%NL%One-Handed Weapon = 1-2 max%NL%Helmet, Chest, Shield = 1-2 max%NL%%TAN%Note%WHITE%: Use to %TAN%Socket %WHITE%Normal/%BLUE%Magic%WHITE%/%YELLOW%Rare%WHITE%/%ORANGE%Crafted %WHITE%Item}
-ItemDisplay[lmal]: %NAME%{%WHITE%All Types of Items = 1 max%NL%%TAN%Note%WHITE%: Use it to %TAN%Socket %WHITE%an Item}
+ItemDisplay[lmal]: %GOLD%%NAME%{%WHITE%All Types of Items = 1 max%NL%%TAN%Note%WHITE%: Use it to %TAN%Socket %WHITE%an Item}
 ItemDisplay[lsvl]: %BORDER-9B%%DOT-62%%GREEN%*%PURPLE%*%RED%*%TAN%*%GRAY%*        %NAME%        %GRAY%*%TAN%*%RED%*%PURPLE%*%GREEN%*{%TAN%Note%WHITE%: %PURPLE%R%RED%A%ORANGE%R%YELLOW%E %WHITE%Item. Probably worth %YELLOW%A%ORANGE%L%RED%O%PURPLE%T}
 ItemDisplay[llmr]: %BORDER-9B%%DOT-62%%GREEN%*%PURPLE%*%RED%*%ORANGE%*%GOLD%*        %NAME%        %GOLD%*%ORANGE%*%RED%*%PURPLE%*%GREEN%*{%TAN%Note%WHITE%: %PURPLE%R%RED%A%ORANGE%R%YELLOW%E %WHITE%Item. Probably worth %YELLOW%A%ORANGE%L%RED%O%PURPLE%T}
 ItemDisplay[rkey]: %MAP-0A%%PX-62%%NAME%
