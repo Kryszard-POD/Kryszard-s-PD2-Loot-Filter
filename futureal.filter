@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season VI: ver 6.0.4
+//	Kryszard's PD2 Loot Filter for Season VI: ver 6.0.5
 //	Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -818,8 +818,8 @@ ItemDisplay[(uhl OR uth OR utb OR 7bs OR 7qr) UNI !ID]: %BORDER-68%%NAME%
 ItemDisplay[(rar OR rbe OR ram) UNI !ID]: %BORDER-68%%NAME%
 
 //NEW PD2 UNIQUES
-ItemDisplay[(drf OR utp OR 7tw OR baf OR 7qs OR 6bs OR ned OR ulb OR ame OR 7fb OR utg) UNI !ID]: %BORDER-68%%NAME%
-ItemDisplay[(ba6 OR 9ar OR dr2 OR ob6 OR am5 OR ne6) UNI !ID]: %DOT-68%%NAME%
+ItemDisplay[(drf OR utp OR 7tw OR baf OR 7qs OR 6bs OR ned OR ame OR 7fb OR utg) UNI !ID]: %BORDER-68%%NAME%
+ItemDisplay[(ba6 OR 9ar OR dr2 OR ob6 OR am5 OR ne6 OR ulb) UNI !ID]: %DOT-68%%NAME%
 ItemDisplay[pa3 UNI !ID]: %DOT-68%%NAME%
 
 //OK only when ETH
@@ -864,7 +864,6 @@ ItemDisplay[CIRC (MAG OR RARE) !ID]: %NAME%
 
 //Imbue bases
 ItemDisplay[ci3 NMAG !ETH SOCK=0]: %NAME%{%TAN%Note%WHITE%: You can %YELLOW%Imbue %WHITE%it using Charsi quest%NL%}%CONTINUE%
-ItemDisplay[(glv OR 9gl OR 7gl) (BARBARIAN OR FILTLVL<2) NMAG ETH ILVL>71 FILTLVL<4]: %NAME%{%TAN%Note%WHITE%: You can %YELLOW%Imbue %WHITE%it using Charsi quest}
 ItemDisplay[(am5 OR ama OR amf) (AMAZON OR FILTLVL<2) NMAG ETH ILVL>71 FILTLVL<4]: %NAME%{%TAN%Note%WHITE%: You can %YELLOW%Imbue %WHITE%it using Charsi quest}
 
 //Rare Gloves, Belts and Boots
@@ -876,6 +875,7 @@ ItemDisplay[HELM RARE !ID FILTLVL<4]: %NAME%
 
 //Class dependence highlight items
 //Barbarian
+ItemDisplay[(jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR tax OR 9ta OR 7ta) BARBARIAN NMAG ETH ILVL>71]: %DOT-A8%%PX-68%%NAME%{%WHITE%Next: You Can %ORANGE%Craft %WHITE%With This Base%NL%%TAN%Note%WHITE%: You can %RED%Corrupt %WHITE%it to get %YELLOW%Rare %WHITE%Item}
 ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a) BARBARIAN RARE ETH !ID ILVL>71]: %DOT-A8%%NAME%
 ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a) BARBARIAN MAG ETH !ID ILVL>71]: %DOT-97%%PX-68%%NAME%
 //Paladin
@@ -909,6 +909,7 @@ ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl
 ItemDisplay[(lbw OR 8lb OR 6lb OR lbb OR 8l8 OR 6l7 OR lwb OR 8lw OR 6lw) RARE !ID  (AMAZON OR FILTLVL<4)]: %NAME%
 
 //Craftables
+ItemDisplay[(jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR tax OR 9ta OR 7ta) NMAG ETH ILVL>71]: %DOT-A8%%PX-68%%TIER-2%%NAME%{%WHITE%Next: You Can %ORANGE%Craft %WHITE%With This Base%NL%%TAN%Note%WHITE%: You can %RED%Corrupt %WHITE%it to get %YELLOW%Rare %WHITE%Item}
 ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a) RARE ETH !ID ILVL>71]: %DOT-A8%%TIER-2%%NAME%
 ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a) MAG ETH !ID ILVL>71]: %DOT-97%%PX-68%%TIER-2%%NAME%
 ItemDisplay[(GLOVES OR BELT OR BOOTS) MAG ETH !ID]: %NAME%
