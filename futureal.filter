@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season VI: ver 6.0.7
+//	Kryszard's PD2 Loot Filter for Season VI: ver 6.0.8
 //	Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -851,7 +851,7 @@ ItemDisplay[(amu OR rin OR uar OR ci3 OR 7qr OR uth OR paf) SET !ID]: %MAP-84%%N
 //Armors
 ItemDisplay[(brs OR fld OR xkp OR xul OR xlm OR drb OR 9sp OR mbt OR xcl OR rng OR uul OR xng OR xui OR spl OR pac OR xmg OR xsk OR xml OR xlb OR xpl OR xap OR xld OR xrs OR gth OR aar OR (BELT !(vbl OR zmb OR hbl)) OR skp OR xhl OR xrn OR vbt OR xmb OR uvb OR umb OR lgl OR vgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR ush OR upk OR uml OR xts OR xrg OR tow OR kit OR gts) UNI !ID]: %PX-68%%TIER-3%%NAME%
 //Weapons
-ItemDisplay[((8s8 OR 9wc OR 92h OR 8mx OR 6rx OR 6hx OR 9gw OR 7m7 OR 9cl OR mau OR 7ls OR 9ls OR 7br OR 7sr OR 7p7 OR 9ba OR 7ga OR 7wa OR 7gi OR 7pa OR 8ls OR 72a OR 7o7 OR 9yw OR 9fc OR 9kr OR amb OR 7sc OR 7mp OR 6sw OR 6l7 OR 8hx OR 8rx OR dgr OR 7dg OR 7bl OR 9ma OR 9wh OR 9gm OR 9ws OR 6cs OR 7b7 OR 7gs OR 9sb) OR (ELT (THROWING OR JAV)) OR 7wb OR 7sp) UNI !ID]: %PX-68%%TIER-3%%NAME%
+ItemDisplay[((8lb OR 92h OR 8s8 OR 9wc OR 92h OR 8mx OR 6rx OR 6hx OR 9gw OR 7m7 OR 9cl OR mau OR 7ls OR 9ls OR 7br OR 7sr OR 7p7 OR 9ba OR 7ga OR 7wa OR 7gi OR 7pa OR 8ls OR 72a OR 7o7 OR 9yw OR 9fc OR 9kr OR amb OR 7sc OR 7mp OR 6sw OR 6l7 OR 8hx OR 8rx OR dgr OR 7dg OR 7bl OR 9ma OR 9wh OR 9gm OR 9ws OR 6cs OR 7b7 OR 7gs OR 9sb) OR (ELT (THROWING OR JAV)) OR 7wb OR 7sp) UNI !ID]: %PX-68%%TIER-3%%NAME%
 //Sets
 ItemDisplay[((ARMOR OR WEAPON) (EXC OR ELT OR ci0 OR ba5 OR lbt) !(9vo OR xcl OR xrn)) SET !ID]: %PX-84%%TIER-3%%NAME%
 
@@ -2122,7 +2122,6 @@ ItemDisplay[WEAPON SOCK=6 NMAG !RW]: %NAME%{%GRAY%Breath of the Dying, Silence%N
 ItemDisplay[(AXE OR SWORD OR (whm OR mau OR gma OR 9wh OR 9m9 OR 9gm OR 7wh OR 7m7 OR 7gm)) SOCK=6 NMAG !RW]: %NAME%{%GRAY%of the Dying, Last Wish, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Breath}%CONTINUE%
 ItemDisplay[(whm OR mau OR gma OR 9wh OR 9m9 OR 9gm OR 7wh OR 7m7 OR 7gm) SOCK=6 NMAG !RW]: %NAME%{%GRAY%Breath of the Dying, Last Wish, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Asylum,}%CONTINUE%
 ItemDisplay[BOW SOCK=6 NMAG !RW]: %NAME%{%GRAY%Asylum, Breath of the Dying, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
-ItemDisplay[SWORD SOCK=6 NMAG !RW]: %NAME%{%GRAY%Silence, Unbending Will%NL%Asylum, Breath of the Dying, Last Wish,%NL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
 ItemDisplay[STAFF SOCK=6 NMAG !RW]: %NAME%{%GRAY%Breath of the Dying, Obsession, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Asylum,}%CONTINUE%
 
 //RuneWord Bases
@@ -2644,7 +2643,7 @@ ItemDisplay[(t10 OR t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 
 ItemDisplay[t60 OR t61 OR t62 OR t63 OR t64 OR t65 OR t66 OR t67 OR t68 OR t69]: %NAME%{%GRAY%(without PermaDeath on HC)%NL%You can challenge other Players here%NL%%TAN%Note%WHITE%: PvP Arena}
 //Map Immunes (Fire/Cold/Light/Poison/Magic/Phys)
 //ItemDisplay[t11]: %NAME%{%WHITE%Immunes: %RED%125% %BLUE%110% %YELLOW%140% %GREEN%105% %ORANGE%110% %GOLD%120%%NL%%NAME%}%CONTINUE%
-ItemDisplay[t11]: %NAME%{%WHITE%Immunes: %RED%145% %BLUE%160% %YELLOW%100%%WHITE%/%YELLOW%120% %GREEN%100%%WHITE%/%GREEN%120%%NL%%NAME%}%CONTINUE%
+ItemDisplay[t11]: %NAME%{%WHITE%Immunes: %YELLOW%100%%WHITE%/%YELLOW%120% %GREEN%100%%WHITE%/%GREEN%120%%NL%%NAME%}%CONTINUE%
 ItemDisplay[t12]: %NAME%{%WHITE%Immunes: %RED%135% %GREEN%120% %GRAY%(%WHITE%Light. Spire: %YELLOW%100%%WHITE%/%GREEN%1000%%GRAY%)%NL%%NAME%}%CONTINUE%
 ItemDisplay[t13]: %NAME%{%WHITE%Immunes: %YELLOW%135% %GOLD%110%%NL%%NAME%}%CONTINUE%
 ItemDisplay[t14]: %NAME%{%WHITE%Immunes: %RED%130% %BLUE%130%%NL%%NAME%}%CONTINUE%
