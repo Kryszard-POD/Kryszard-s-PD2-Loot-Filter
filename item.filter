@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season VI: ver 6.1.2
+//	Kryszard's PD2 Loot Filter for Season VI: ver 6.1.3
 //
 //	twitch.tv/kryszard
 //
@@ -2135,7 +2135,7 @@ ItemDisplay[WEAPON SOCK=6 NMAG !RW]: %NAME%{%GRAY%Breath of the Dying, Silence%N
 ItemDisplay[(AXE OR SWORD OR (whm OR mau OR gma OR 9wh OR 9m9 OR 9gm OR 7wh OR 7m7 OR 7gm)) SOCK=6 NMAG !RW]: %NAME%{%GRAY%of the Dying, Last Wish, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Breath}%CONTINUE%
 ItemDisplay[(whm OR mau OR gma OR 9wh OR 9m9 OR 9gm OR 7wh OR 7m7 OR 7gm) SOCK=6 NMAG !RW]: %NAME%{%GRAY%Breath of the Dying, Last Wish, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Asylum,}%CONTINUE%
 ItemDisplay[(POLEARM OR SPEAR OR JAV) SOCK=6 NMAG !RW]: %NAME%{%GRAY%Asylum, Breath of the Dying, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
-ItemDisplay[BOW SOCK=6 NMAG !RW]: %NAME%{%GRAY%Asylum, Breath of the Dying, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
+ItemDisplay[(BOW OR XBOW) SOCK=6 NMAG !RW]: %NAME%{%GRAY%Asylum, Breath of the Dying, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
 ItemDisplay[STAFF SOCK=6 NMAG !RW]: %NAME%{%GRAY%Breath of the Dying, Obsession, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Asylum,}%CONTINUE%
 
 //RuneWord Bases
@@ -2183,8 +2183,8 @@ ItemDisplay[6cb NMAG !RW !INF SOCK=3 FILTLVL<4]: %NAME%{%NAME%}
 ItemDisplay[6cb NMAG !RW !INF SOCK=3 ED>4 FILTLVL>3]: %NAME%{%NAME%}
 ItemDisplay[(6cb OR 8rx OR 6rx OR 6lx OR 6mx) NMAG !INF !RW (SOCK=0 OR SOCK=4 OR SOCK=5) FILTLVL<4]: %NAME%{%NAME%}
 ItemDisplay[(6cb OR 8rx OR 6rx OR 6lx OR 6mx) NMAG !INF !RW (SOCK=0 OR SOCK=4 OR SOCK=5) ED>4 FILTLVL>3]: %NAME%{%NAME%}
-ItemDisplay[(6lw OR 6l7) NMAG !INF !RW (SOCK=0 OR SOCK=6) FILTLVL<4]: %NAME%{%NAME%}
-ItemDisplay[(6lw OR 6l7) NMAG !INF !RW (SOCK=0 OR SOCK=6) ED>4 FILTLVL>3]: %NAME%{%NAME%}
+ItemDisplay[(6lw OR 6l7 OR 6hx) NMAG !INF !RW (SOCK=0 OR SOCK=6) FILTLVL<4]: %NAME%{%NAME%}
+ItemDisplay[(6lw OR 6l7 OR 6hx) NMAG !INF !RW (SOCK=0 OR SOCK=6) ED>4 FILTLVL>3]: %NAME%{%NAME%}
 //Clubs
 ItemDisplay[(7cl OR 7sp) NMAG !INF !RW !SOCK=1 (SK221>2 OR SK223>2 OR SK224>2 OR SK225>2 OR SK227>2 OR SK228>2 OR SK233>2 OR SK237>2 OR SK238>2 OR SK239>2 OR SK240>2 OR SK243>2 OR SK244>2 OR SK245>2 OR SK247>2 OR SK248>2 OR SK249>2 OR SK250>2)]: %NAME%{%NAME%}
 //Daggers
