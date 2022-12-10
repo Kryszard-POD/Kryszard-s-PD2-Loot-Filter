@@ -9,7 +9,7 @@ Link to filter: https://raw.githubusercontent.com/Kryszard-POD/Kryszard-s-PD2-Lo
 # About
 I am trying to make one filter, which will suit most players needs.  
 Filter is good for both: leveling and endgame experience.  
-It's gonna show you almost everything which can help you during leveling process at early stages of your new characters, and became more strict after you hit **lvl 80+**
+It's gonna show you almost everything which can help you during leveling process at early stages of your new characters, and became more strict after you hit **lvl 80+** (select your lootfilter level in-game settings to adjust it more for your needs)
 
 ## Season VI Update!:
 General changes:
