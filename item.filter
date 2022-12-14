@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season VI: ver 6.1.3
+//	Kryszard's PD2 Loot Filter for Season VI: ver 6.1.4
 //
 //	twitch.tv/kryszard
 //
@@ -2133,6 +2133,7 @@ ItemDisplay[(POLEARM OR SPEAR OR JAV) SOCK=5 NMAG !RW]: %NAME%{%GRAY%Eternity, H
 //Weapons 6soc
 ItemDisplay[WEAPON SOCK=6 NMAG !RW]: %NAME%{%GRAY%Breath of the Dying, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
 ItemDisplay[(AXE OR SWORD OR (whm OR mau OR gma OR 9wh OR 9m9 OR 9gm OR 7wh OR 7m7 OR 7gm)) SOCK=6 NMAG !RW]: %NAME%{%GRAY%of the Dying, Last Wish, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Breath}%CONTINUE%
+ItemDisplay[SWORD SOCK=6 NMAG !RW]: %NAME%{%GRAY%Silence, Unbending Will%NL%Breath of the Dying, Last Wish,%NL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
 ItemDisplay[(whm OR mau OR gma OR 9wh OR 9m9 OR 9gm OR 7wh OR 7m7 OR 7gm) SOCK=6 NMAG !RW]: %NAME%{%GRAY%Breath of the Dying, Last Wish, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Asylum,}%CONTINUE%
 ItemDisplay[(POLEARM OR SPEAR OR JAV) SOCK=6 NMAG !RW]: %NAME%{%GRAY%Asylum, Breath of the Dying, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
 ItemDisplay[(BOW OR XBOW) SOCK=6 NMAG !RW]: %NAME%{%GRAY%Asylum, Breath of the Dying, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
