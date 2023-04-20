@@ -11,7 +11,29 @@ I am trying to make one filter, which will suit most players needs.
 Filter is good for both: leveling and endgame experience.  
 It's gonna show you almost everything which can help you during leveling process at early stages of your new characters, and became more strict after you hit **lvl 80+** (select your lootfilter level in-game settings to adjust it more for your needs)
 
-## Season VI Update!:
+## Season VII Update:
+
+![image](https://user-images.githubusercontent.com/63604590/233369590-f72dfb33-08a0-4817-bb6e-dd0c4154c936.png)
+
+What's new:
+
+- Info about currently selected loot filter level added to horadric cube description,
+- Charges weapons "Notice me" note color reduced from green to dark green,
+- "Notice me" Notes are showing only for uncorrupted items now,
+- Charms now displays it's orginal name + what stats it adds if its good in next line,
+- eth unique Tomahawk added for better highlighting,
+- Ohm Rune and other misc items descriptions updated,
+- Possible RuneWords Note updated for RW bases,
+- Added Notes for new S7 items like Hellfire Ashes, Catalyst Shard, etc.,
+- Updated already existing Notes to match s7 changes,
+- Added new "+Xdwo" abbreviation on NMAG barb helms to catch new Deep Wounds skill,
+- Adjusted Filter code with new avaliable improvements
+- Paladin shields will show exact Enhanced Damage % automod values,
+- Removed Spirit Sword bases from filter level 4+,
+- Added few more staves RW bases for your new A4 Merc,
+- Removed Gold-worthy items from filter level 4+ (hidden gold piles are auto-picked up now),
+
+## Season VI Update:
 General changes:
 * Added all ETH EXC and ELT weapons with 0 and 2 or more sockets to "FILTER LEVEL 1 - Hide Just Trash Items",
 * Changed how info about max sockets is displayed. Before it was using shortcuts of:
