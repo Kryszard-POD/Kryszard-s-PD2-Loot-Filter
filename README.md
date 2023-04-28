@@ -4,8 +4,6 @@
 Welcome to **Kryszard's PD2 Loot Filter!**  
 You can know me from: [Twitch](https://twitch.tv/kryszard). Feel free to follow me there *(I'll try to stream as much as I can for you)*
 
-Link to filter: https://raw.githubusercontent.com/Kryszard-POD/Kryszard-s-PD2-Loot-Filter/main/item.filter
-
 # About
 I am trying to make one filter, which will suit most players needs.  
 Filter is good for both: leveling and endgame experience.  
@@ -22,7 +20,7 @@ What's new:
 - "Notice me" Notes are showing only for uncorrupted items now,
 - Charms now displays it's orginal name + what stats it adds if its good in next line,
 - eth unique Tomahawk added for better highlighting,
-- Ohm Rune and other misc items descriptions updated,
+- Ohm Rune, Um Rune, and other misc items descriptions updated,
 - Possible RuneWords Note updated for RW bases,
 - Added Notes for new S7 items like Hellfire Ashes, Catalyst Shard, etc.,
 - Updated already existing Notes to match s7 changes,
@@ -31,6 +29,7 @@ What's new:
 - Paladin shields will show exact Enhanced Damage % automod values,
 - Removed Spirit Sword bases from filter level 4+,
 - Added few more staves RW bases for your new A4 Merc,
+- +3 Cleansing Scepters 0/4/5 Sockets added with hihglight for your A3 Merc (it does scale his Cleansing Aura)
 - Removed Gold-worthy items from filter level 4+ (hidden gold piles are auto-picked up now),
 
 ## Season VI Update:
