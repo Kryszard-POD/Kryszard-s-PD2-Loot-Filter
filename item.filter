@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season VII: ver 7.1.1
+//	Kryszard's PD2 Loot Filter for Season VII: ver 7.1.2
 //
 //	twitch.tv/kryszard
 //
@@ -1776,6 +1776,7 @@ ItemDisplay[(wsp OR 9ws OR 7ws) (SK100>2 OR SK125>2 OR SK108>2 OR SK121>2 OR SK1
 ItemDisplay[(wsp OR 9ws OR 7ws) (SK117>2 OR SK109>2) NMAG !RW (SOCK=0 OR SOCK=5)]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[(SCEPTER !scp) !INF !ETH NMAG !RW (SK101>2 OR SK112>2 OR SK121>2) (SOCK=0 OR SOCK=3)]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[(wsp OR 9ws OR 7ws) SK117>0 NMAG !RW (SOCK=0 OR SOCK=5)]: %DOT-D6%%TIER-3%%NAME%{%NAME%}
+ItemDisplay[(wsp OR 9ws OR 7ws) !INF !ETH NMAG !RW (SOCK=0 OR SOCK>3) SK99>2]: %NAME%{%NAME%}
 ItemDisplay[(wsp OR 9ws OR 7ws) !INF !ETH NMAG !RW (SOCK=0 OR SOCK=4) FILTLVL<4]: %NAME%{%NAME%}
 ItemDisplay[7ws NMAG !RW !SOCK=1 FILTLVL<4]: %NAME%{%NAME%}
 ItemDisplay[7ws NMAG !RW !SOCK=1 ED>4 FILTLVL>3]: %NAME%{%NAME%}
@@ -2358,7 +2359,7 @@ ItemDisplay[glbs]: %NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%
 ItemDisplay[glgs]: %NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: 28% Psn Res%NL%Armor/Helm: +8 Dexterity%NL%Weapon: +60 Psn Dmg over 6 Sec%NL%}
 ItemDisplay[glrs]: %NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: 28% Fire Res%NL%Armor/Helm: +31 to Life%NL%Weapon: 10-16 Fire Dmg%NL%}
 ItemDisplay[glws]: %NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: All Res +14%%NL%Armor/Helm: +80 to AR%NL%Weapon: +54% Dmg vs Undead%NL%}
-ItemDisplay[skls]: %NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%)Shield: Atcker+16Dmg%NL%Armor/Helm: Rep Life 4, Reg Mana 12%%NL%Weapon: 3%Life 3%Mana %NL%}
+ItemDisplay[skls]: %NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: Atcker+16Dmg%NL%Armor/Helm: Rep Life 4, Reg Mana 12%%NL%Weapon: 3%Life 3%Mana %NL%}
 ItemDisplay[(gpvs OR gpv)]: %NAME%{%NAME%%WHITE%You Can use %BLUE%Magic%WHITE%/%YELLOW%Rare %WHITE%Items as Bases%NL%Gloves: %ORANGE%Ort %WHITE%| Belt: %ORANGE%Ith %WHITE%| Boots: %ORANGE%Thul%NL%%WHITE%Weapon: %ORANGE%Tir %WHITE%| Armor: %ORANGE%Tal %WHITE%| Shield: %ORANGE%Eth%NL%%WHITE%Ring: %ORANGE%Amn %WHITE%| Helm: %ORANGE%Nef %WHITE%| Amulet: %ORANGE%Ral%NL%%TAN%Note%WHITE%: Caster Crafting Recipes: Perf %PURPLE%O%WHITE%, %BLUE%Jewel%WHITE%,}%CONTINUE%
 ItemDisplay[(gpys OR gpy)]: %NAME%{%NAME%%WHITE%You Can use %BLUE%Magic%WHITE%/%YELLOW%Rare %WHITE%Items as Bases%NL%Gloves: %ORANGE%Hel %WHITE%| Belt: %ORANGE%El %WHITE%| Boots: %ORANGE%Io%NL%%WHITE%Weapon: %ORANGE%Shael %WHITE%| Armor: %ORANGE%Eld %WHITE%| Shield: %ORANGE%Dol%NL%%WHITE%Ring: %ORANGE%Lum %WHITE%| Helm: %ORANGE%Tir %WHITE%| Amulet: %ORANGE%Ko%NL%%TAN%Note%WHITE%: Bontiful Crafting Recipes: Perf %YELLOW%O%WHITE%, %BLUE%Jewel%WHITE%,}%CONTINUE%
 ItemDisplay[(gpbs OR gpb)]: %NAME%{%NAME%%WHITE%You Can use %BLUE%Magic%WHITE%/%YELLOW%Rare %WHITE%Items as Bases%NL%Gloves: %ORANGE%Ort %WHITE%| Belt: %ORANGE%Tal %WHITE%| Boots: %ORANGE%Ral%NL%%WHITE%Weapon: %ORANGE%Tir %WHITE%| Armor: %ORANGE%Nef %WHITE%| Shield: %ORANGE%Eth%NL%%WHITE%Ring: %ORANGE%Amn %WHITE%| Helm: %ORANGE%Ith %WHITE%| Amulet: %ORANGE%Thul%NL%%TAN%Note%WHITE%: Hit Power Crafting Recipes: Perf %BLUE%O%WHITE%, %BLUE%Jewel%WHITE%,}%CONTINUE%
