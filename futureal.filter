@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season VII: ver 7.1.2
+//	Kryszard's PD2 Loot Filter for Season VII: ver 7.2.1
 //	Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -576,7 +576,26 @@ ItemDisplay[vps]: %WHITE%Stamina{%GRAY%(time stack)%NL%%WHITE%Gives infinite sta
 ItemDisplay[wms]: %WHITE%Thawing{%GREEN%!%WHITE%thaw, Perf %BLUE%O%WHITE%, %BLUE%Ring %WHITE%= Cold Res %BLUE%Ring%NL%%GRAY%(time stack)%NL%%WHITE%Gives +25 Cold Res for 30s%NL%%TAN%Note%WHITE%: Instantly thaws character}%CONTINUE%
 ItemDisplay[(tsc OR isc OR vps OR wms) FILTLVL>0 (CLVL>30 OR FILTLVL>3)]: {%NAME%}
 ItemDisplay[yps]: %WHITE%Antidote{%GREEN%!%WHITE%ant, Perf %GREEN%O%WHITE%, %BLUE%Ring %WHITE%= Psn Res %BLUE%Ring%NL%%GRAY%(time stack)%NL%%WHITE%Gives +25 Psn Res for 30s%NL%%TAN%Note%WHITE%: Instantly cures poison}
-ItemDisplay[key]: %GRAY%key{%WHITE%at Bottom Edge of your Screen%NL%Notice the %GRAY%"%WHITE%Settings%GRAY%" %WHITE%button located%NL%%NL%%ORANGE%Crafting %WHITE%Bases from Vendors%NL%%TAN%Pro-Tip%WHITE%: You can buy many}%CONTINUE%
+ItemDisplay[key QTY>19]: %GRAY%key{%TAN%Note%WHITE%: RuneWords Recipes Avaliable at Quantity<20%NL%%NL%%WHITE%at Bottom Edge of your Screen%NL%Notice the %GRAY%"%WHITE%Settings%GRAY%" %WHITE%button located%NL%%NL%%ORANGE%Crafting %WHITE%Bases from Vendors%NL%%TAN%Pro-Tip%WHITE%: You can buy many}%CONTINUE%
+ItemDisplay[key QTY=1]: %GRAY%key{%WHITE%Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Bone: %ORANGE%Sol + Um + Um%NL%%GRAY%Black: %ORANGE%Thul + Io + Nef%NL%%GRAY%Beast: %ORANGE%Ber + Tir + Um + Mal + Lum%NL%%GRAY%Asylum: %ORANGE%Gul + Cham + Hel + Jah + Dol + Um%NL%%GRAY%Ancient's Pledge: %ORANGE%Ral + Ort + Tal%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=2]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Chains of Honor: %ORANGE%Dol + Um + Ber + Ist%NL%%GRAY%Call to Arms: %ORANGE%Amn + Ral + Mal + Ist + Ohm%NL%%GRAY%Breath of the Dying: %ORANGE%Vex + Hel + El + Eld + Zod + Eth%NL%%GRAY%Brand: %ORANGE%Jah + Lo + Mal + Gul%NL%%GRAY%Bramble: %ORANGE%Ral + Ohm + Sur + Eth%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=3]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Destruction: %ORANGE%Vex + Lo + Ber + Jah + Ko%NL%%GRAY%Delirium: %ORANGE%Lem + Ist + Io%NL%%GRAY%Death: %ORANGE%Hel + El + Vex + Ort + Gul%NL%%GRAY%Crescent Moon: %ORANGE%Shael + Um + Tir%NL%%GRAY%Chaos: %ORANGE%Fal + Ohm + Um%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=4]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Duress: %ORANGE%Shael + Um + Thul%NL%%GRAY%Dream: %ORANGE%Io + Jah + Pul%NL%%GRAY%Dragon: %ORANGE%Sur + Lo + Sol%NL%%GRAY%Doom: %ORANGE%Hel + Ohm + Um + Lo + Cham%NL%%GRAY%Dominion: %ORANGE%Cham + Ohm%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=5]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Exile: %ORANGE%Vex + Ohm + Ist + Dol%NL%%GRAY%Eternity: %ORANGE%Amn + Ber + Ist + Sol + Sur%NL%%GRAY%Enlightenment: %ORANGE%Pul + Ral + Sol%NL%%GRAY%Enigma: %ORANGE%Jah + Ith + Ber%NL%%GRAY%Edge: %ORANGE%Tir + Tal + Amn%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=6]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Fortitude: %ORANGE%El + Sol + Dol + Lo%NL%%GRAY%Flickering Flame: %ORANGE%Nef + Pul + Vex%NL%%GRAY%Ferocity: %ORANGE%Zod + Cham + Shael%NL%%GRAY%Famine: %ORANGE%Fal + Ohm + Ort + Jah%NL%%GRAY%Faith: %ORANGE%Ohm + Jah + Lem + Eld%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=7]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Harmony: %ORANGE%Tir + Ith + Sol + Ko%NL%%GRAY%Hand of Justice: %ORANGE%Sur + Cham + Amn + Lo%NL%%GRAY%Grief: %ORANGE%Eth + Tir + Lo + Mal + Ral%NL%%GRAY%Gloom: %ORANGE%Fal + Um + Pul%NL%%GRAY%Fury: %ORANGE%Jah + Gul + Eth%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=8]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Infinity: %ORANGE%Ber + Mal + Ber + Ist%NL%%GRAY%Ice: %ORANGE%Amn + Shael + Jah + Lo%NL%%GRAY%Honor: %ORANGE%Amn + El + Ith + Tir + Sol%NL%%GRAY%Holy Thunder: %ORANGE%Eth + Ral + Ort + Tal%NL%%GRAY%Heart of the Oak: %ORANGE%Ko + Vex + Pul + Thul%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=9]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Lawbringer: %ORANGE%Amn + Lem + Ko%NL%%GRAY%Last Wish: %ORANGE%Jah + Mal + Jah + Sur + Jah + Ber%NL%%GRAY%Kingslayer: %ORANGE%Mal + Um + Gul + Fal%NL%%GRAY%King's Grace: %ORANGE%Amn + Ral + Thul%NL%%GRAY%Insight: %ORANGE%Ral + Tir + Tal + Sol%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=10]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Melody: %ORANGE%Shael + Ko + Nef%NL%%GRAY%Malice: %ORANGE%Ith + El + Eth%NL%%GRAY%Lore: %ORANGE%Ort + Sol%NL%%GRAY%Lionheart: %ORANGE%Hel + Lum + Fal%NL%%GRAY%Leaf: %ORANGE%Tir + Ral%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=11]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Neophyte: %ORANGE%Thul + Tir%NL%%GRAY%Nadir: %ORANGE%Nef + Tir%NL%%GRAY%Myth: %ORANGE%Hel + Amn + Nef%NL%%GRAY%Mist: %ORANGE%Cham + Shael + Gul + Thul + Ith%NL%%GRAY%Memory: %ORANGE%Lum + Io + Sol + Eth%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=12]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Pattern: %ORANGE%Tal + Ort + Tir%NL%%GRAY%Passion: %ORANGE%Dol + Ort + Eld + Lem%NL%%GRAY%Obsession: %ORANGE%Zod + Ist + Lem + Lum + Io + Nef%NL%%GRAY%Obedience: %ORANGE%Hel + Ko + Thul + Eth + Fal%NL%%GRAY%Oath: %ORANGE%Shael + Pul + Mal + Lum%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=13]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Principle: %ORANGE%Ral + Gul + Eld%NL%%GRAY%Pride: %ORANGE%Cham + Sur + Io + Lo%NL%%GRAY%Plague: %ORANGE%Cham + Fal + Um%NL%%GRAY%Phoenix: %ORANGE%Vex + Vex + Lo + Jah%NL%%GRAY%Peace: %ORANGE%Shael + Thul + Amn%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=14]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Rhyme: %ORANGE%Shael + Eth%NL%%GRAY%Rampage: %ORANGE%Shael + El + Ith + Eth%NL%%GRAY%Rain: %ORANGE%Ort + Mal + Ith%NL%%GRAY%Radiance: %ORANGE%Nef + Sol + Ith%NL%%GRAY%Prudence: %ORANGE%Mal + Tir%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=15]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Smoke: %ORANGE%Nef + Lum%NL%%GRAY%Silence: %ORANGE%Dol + Eld + Hel + Ist + Tir + Vex%NL%%GRAY%Shattered Wall: %ORANGE%Zod + Jah + Ral + Cham%NL%%GRAY%Sanctuary: %ORANGE%Ko + Ko + Mal%NL%%GRAY%Rift: %ORANGE%Hel + Ko + Lem + Gul%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=16]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Stone: %ORANGE%Shael + Um + Pul + Lum%NL%%GRAY%Steel: %ORANGE%Tir + El%NL%%GRAY%Stealth: %ORANGE%Tal + Eth%NL%%GRAY%Splendor: %ORANGE%Eth + Lum%NL%%GRAY%Spirit: %ORANGE%Tal + Thul + Ort + Amn%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=17]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Voice of Reason: %ORANGE%Lem + Ko + El + Eld%NL%%GRAY%Venom: %ORANGE%Tal + Dol + Mal%NL%%GRAY%Unbending Will: %ORANGE%Fal + Io + Ith + Eld + El + Hel%NL%%GRAY%Treachery: %ORANGE%Shael + Thul + Lem%NL%%GRAY%Strength: %ORANGE%Amn + Tir%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=18]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Wrath: %ORANGE%Pul + Lum + Ber + Mal%NL%%GRAY%Wisdom: %ORANGE%Pul + Ith + Eld%NL%%GRAY%Wind: %ORANGE%Sur + El%NL%%GRAY%White: %ORANGE%Dol + Io%NL%%GRAY%Wealth: %ORANGE%Lem + Ko + Tir%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=19]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity%NL%%NL%%GRAY%Zephyr: %ORANGE%Ort + Eth%NL%%GRAY%Zenith: %ORANGE%Jah + Zod + Ort + Thul + Ral%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
 ItemDisplay[key FILTLVL>0 (ASSASSIN OR FILTLVL>3)]: {%NAME%}
 
 //Arrows & Bolts
@@ -824,7 +843,7 @@ ItemDisplay[(ba6 OR 9ar OR dr2 OR ob6 OR am5 OR ne6 OR ulb) UNI !ID]: %DOT-68%%N
 ItemDisplay[pa3 UNI !ID]: %DOT-68%%NAME%
 
 //OK only when ETH
-ItemDisplay[(7pa OR 7bt OR 7gi OR 7wa OR 7m7 OR 8ls OR 7gl OR 7b8 OR 7bk OR xpl OR 7ha) UNI ETH !ID]: %DOT-68%%NAME%
+ItemDisplay[(7pa OR 7bt OR 7gi OR 7wa OR 7m7 OR 8ls OR 7gl OR 7b8 OR 7bk OR xpl OR 7ha OR 7b7) UNI ETH !ID]: %DOT-68%%NAME%
 
 //OK UNIQUES
 //belts
@@ -857,8 +876,8 @@ ItemDisplay[((8lb OR 92h OR 8s8 OR 9wc OR 92h OR 8mx OR 6rx OR 6hx OR 9gw OR 7m7
 ItemDisplay[((ARMOR OR WEAPON) (EXC OR ELT OR ci0 OR ba5 OR lbt) !(9vo OR xcl OR xrn)) SET !ID]: %PX-84%%TIER-3%%NAME%
 
 //Highlight all Sets and Uniques for low lvl characters
-ItemDisplay[UNI !ID (FILTLVL<3 OR (CLVL<80 AND FILTLVL<4))]: %PX-68%%NAME%
-ItemDisplay[SET !ID (FILTLVL<3 OR (CLVL<80 AND FILTLVL<4))]: %PX-84%%NAME%
+ItemDisplay[UNI !ID (FILTLVL<3 OR (CLVL<80 AND FILTLVL<4))]: %PX-68%%NAME%%CONTINUE%
+ItemDisplay[SET !ID (FILTLVL<3 OR (CLVL<80 AND FILTLVL<4))]: %PX-84%%NAME%%CONTINUE%
 
 //Circlets
 ItemDisplay[CIRC (MAG OR RARE) !ID]: %NAME%
@@ -1597,9 +1616,9 @@ ItemDisplay[NEC (EXC OR ELT) NMAG SOCK=0]: %NAME%{%NAME%%NL%%WHITE%Maximum Socke
 //always 1
 ItemDisplay[(dgr OR dir OR wnd OR ywn OR 9wn) NMAG SOCK=0]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: %TAN%[%WHITE%1%TAN%]}%CONTINUE%
 //always 2
-ItemDisplay[(hax OR clb OR spc OR 9sp OR 7sp OR mac OR ssd OR scm OR sbr OR flc OR 9dg OR 9di OR 7dg OR 7di OR bld OR 9bl OR 7bl OR sst OR (WAND !(wnd OR ywn OR 9wn)) OR scp OR ktr OR wrb OR axf OR ces OR (SOR !(ob5 OR oba OR obf))) NMAG SOCK=0]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: %TAN%[%WHITE%2%TAN%]}%CONTINUE%
+ItemDisplay[(hax OR clb OR spc OR 9sp OR mac OR ssd OR scm OR sbr OR flc OR 9dg OR 9di OR 7dg OR 7di OR bld OR 9bl OR 7bl OR sst OR (WAND !(wnd OR ywn OR 9wn)) OR scp OR ktr OR wrb OR axf OR ces OR (SOR !(ob5 OR oba OR obf))) NMAG SOCK=0]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: %TAN%[%WHITE%2%TAN%]}%CONTINUE%
 //always 3
-ItemDisplay[(9ha OR 7ha OR 9cl OR 7cl OR 9ma OR 7ma OR mst OR 9mt OR 7mt OR 9ss OR 9sm OR 9sb OR 9fc OR 7ss OR 7sm OR 7sb OR 7fc OR wsd OR 9wd OR 7wd OR 2hs OR 92h OR 72h OR 9kr OR 7kr OR spr OR 9sr OR 7sr OR bar OR sbw OR lxb OR 8ss OR 6ss OR lst OR 8ls OR 6ls OR 9sc OR 7sc OR gsc OR 9qs OR 7qs OR (SIN !(ktr OR wrb OR axf OR ces OR clw OR btl OR skr)) OR oba OR obf) NMAG SOCK=0]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: %TAN%[%WHITE%3%TAN%]}%CONTINUE%
+ItemDisplay[(9ha OR 7ha OR 9cl OR 7cl OR 9ma OR 7ma OR mst OR 9mt OR 7mt OR 9ss OR 9sm OR 9sb OR 9fc OR 7ss OR 7sm OR 7sb OR 7fc OR wsd OR 9wd OR 7wd OR 2hs OR 92h OR 72h OR 9kr OR 7kr OR spr OR 9sr OR 7sr OR bar OR sbw OR lxb OR 8ss OR 6ss OR lst OR 8ls OR 6ls OR 9sc OR 7sc OR gsc OR 9qs OR 7qs OR 7sp OR (SIN !(ktr OR wrb OR axf OR ces OR clw OR btl OR skr)) OR oba OR obf) NMAG SOCK=0]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: %TAN%[%WHITE%3%TAN%]}%CONTINUE%
 //always 4
 ItemDisplay[(axe OR 9ax OR 7ax OR lax OR 9wh OR 7wh OR 9bs OR 7bs OR 9ls OR 7ls OR 9cm OR 9gs OR 9b9 OR 7cm OR 7gs OR 7b7 OR 9tr OR 7tr OR 9b7 OR 9vo OR 7o7 OR 7vo OR 8sb OR 6sb OR 8hb OR 6hb OR 8cb OR 6cb OR 8lx OR 6lx OR 8mx OR 6mx OR cst OR 8cs OR 6cs OR bst OR 8bs OR 6bs) NMAG SOCK=0]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: %TAN%[%WHITE%4%TAN%]}%CONTINUE%
 //always 5
@@ -1763,6 +1782,7 @@ ItemDisplay[(wsp OR 9ws OR 7ws) (SK100>2 OR SK125>2 OR SK108>2 OR SK121>2 OR SK1
 ItemDisplay[(wsp OR 9ws OR 7ws) (SK117>2 OR SK109>2) NMAG !RW (SOCK=0 OR SOCK=5)]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[(SCEPTER !scp) !INF !ETH NMAG !RW (SK101>2 OR SK112>2 OR SK121>2) (SOCK=0 OR SOCK=3)]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[(wsp OR 9ws OR 7ws) SK117>0 NMAG !RW (SOCK=0 OR SOCK=5)]: %DOT-D6%%TIER-3%%NAME%{%NAME%}
+ItemDisplay[(wsp OR 9ws OR 7ws) !INF !ETH NMAG !RW (SOCK=0 OR SOCK=5) SK124>0]: %NAME%{%NAME%}
 ItemDisplay[(wsp OR 9ws OR 7ws) !INF !ETH NMAG !RW (SOCK=0 OR SOCK>3) SK99>2]: %NAME%{%NAME%}
 ItemDisplay[(wsp OR 9ws OR 7ws) !INF !ETH NMAG !RW (SOCK=0 OR SOCK=4) FILTLVL<4]: %NAME%{%NAME%}
 ItemDisplay[7ws NMAG !RW !SOCK=1 FILTLVL<4]: %NAME%{%NAME%}
@@ -2014,9 +2034,9 @@ ItemDisplay[NEC (EXC OR ELT) (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360
 //always 1
 ItemDisplay[(dgr OR dir OR wnd OR ywn OR 9wn) (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0]: %NAME%{%NAME%, %RED%C%WHITE%:1}%CONTINUE%
 //always 2
-ItemDisplay[(hax OR clb OR spc OR 9sp OR 7sp OR mac OR ssd OR scm OR sbr OR flc OR 9dg OR 9di OR 7dg OR 7di OR bld OR 9bl OR 7bl OR sst OR (WAND !(wnd OR ywn OR 9wn)) OR scp OR ktr OR wrb OR axf OR ces OR (SOR !(ob5 OR oba OR obf))) (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0]: %NAME%{%NAME%, %RED%C%WHITE%:2}%CONTINUE%
+ItemDisplay[(hax OR clb OR spc OR 9sp OR mac OR ssd OR scm OR sbr OR flc OR 9dg OR 9di OR 7dg OR 7di OR bld OR 9bl OR 7bl OR sst OR (WAND !(wnd OR ywn OR 9wn)) OR scp OR ktr OR wrb OR axf OR ces OR (SOR !(ob5 OR oba OR obf))) (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0]: %NAME%{%NAME%, %RED%C%WHITE%:2}%CONTINUE%
 //always 3
-ItemDisplay[(9ha OR 7ha OR 9cl OR 7cl OR 9ma OR 7ma OR mst OR 9mt OR 7mt OR 9ss OR 9sm OR 9sb OR 9fc OR 7ss OR 7sm OR 7sb OR 7fc OR wsd OR 9wd OR 7wd OR 2hs OR 92h OR 72h OR 9kr OR 7kr OR spr OR 9sr OR 7sr OR bar OR sbw OR lxb OR 8ss OR 6ss OR lst OR 8ls OR 6ls OR 9sc OR 7sc OR gsc OR 9qs OR 7qs OR (SIN !(ktr OR wrb OR axf OR ces OR clw OR btl OR skr)) OR oba OR obf) (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0]: %NAME%{%NAME%, %RED%C%WHITE%:3}%CONTINUE%
+ItemDisplay[(9ha OR 7ha OR 9cl OR 7cl OR 9ma OR 7ma OR mst OR 9mt OR 7mt OR 9ss OR 9sm OR 9sb OR 9fc OR 7ss OR 7sm OR 7sb OR 7fc OR wsd OR 9wd OR 7wd OR 2hs OR 92h OR 72h OR 9kr OR 7kr OR spr OR 9sr OR 7sr OR bar OR sbw OR lxb OR 8ss OR 6ss OR lst OR 8ls OR 6ls OR 9sc OR 7sc OR gsc OR 9qs OR 7qs OR 7sp OR (SIN !(ktr OR wrb OR axf OR ces OR clw OR btl OR skr)) OR oba OR obf) (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0]: %NAME%{%NAME%, %RED%C%WHITE%:3}%CONTINUE%
 //always 4
 ItemDisplay[(axe OR 9ax OR 7ax OR lax OR 9wh OR 7wh OR 9bs OR 7bs OR 9ls OR 7ls OR 9cm OR 9gs OR 9b9 OR 7cm OR 7gs OR 7b7 OR 9tr OR 7tr OR 9b7 OR 9vo OR 7o7 OR 7vo OR 8sb OR 6sb OR 8hb OR 6hb OR 8cb OR 6cb OR 8lx OR 6lx OR 8mx OR 6mx OR cst OR 8cs OR 6cs OR bst OR 8bs OR 6bs) (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0]: %NAME%{%NAME%, %RED%C%WHITE%:4}%CONTINUE%
 //always 5
