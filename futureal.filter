@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season VII: ver 7.2.1
+//	Kryszard's PD2 Loot Filter for Season VII: ver 7.2.2
 //	Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -1894,7 +1894,7 @@ ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (stu OR xtu OR xng OR lrg OR kit OR
 //STR __0
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (cap OR xap OR hla OR ful OR aar OR xul OR gts OR xml OR lgl OR vgl OR hgl OR xlg OR xvg OR lbt OR xlb OR lbl OR vbl OR hbl OR zlb OR zvb OR dr2 OR ne4 OR spc OR whm OR flc OR gsd OR 9ss OR ssp OR brn OR pik OR bar OR wsc OR 9vo OR lbb OR mxb OR hxb OR rxb OR 9cs)]: %NAME%{%NAME%0}%CONTINUE%
 //When -REQ appears
-ItemDisplay[(ARMOR OR WEAPON) !(CIRC OR SOR OR WAND OR 8ss OR hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID STAT91>0]: %NAME%{%NAME%%GRAY%-x%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(CIRC OR SOR OR WAND OR 8ss OR hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID !STAT91=0]: %NAME%{%NAME%%GRAY%-x%}%CONTINUE%
 //Dexterity
 ItemDisplay[(hax OR mpi OR gax OR 9ha OR 9ax OR 92a OR 9mp OR 9wa OR 9ba OR 9bt OR 9ga OR 9gi OR fla OR 9cl OR 9ma OR 9mt OR 9fl OR (SWORD !ssd) OR (DAGGER !THROWING !dgr) OR THROWING OR (SPEAR !THROWING !spt) OR (POLEARM !bar !vou) OR BOW OR XBOW OR 8ls OR 8cs OR 8bs OR 9sc OR 9qs OR 9ws OR SIN OR ZON) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID]: %NAME%{%NAME%%WHITE%, %GRAY%Dex%WHITE%:}%CONTINUE%
 //DEX 1__
@@ -1940,7 +1940,7 @@ ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (2hs OR gis OR 9tk OR hal OR 8l8 OR
 //DEX __0
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (mpi OR crs OR clm OR bsw OR gsd OR 92h OR 9gd OR tax OR ssp OR 9sr OR wsc OR 9wc OR sbb OR mxb OR hxb OR 9ws OR 9cs OR am2 OR am3)]: %NAME%{%NAME%0}%CONTINUE%
 //When -REQ appears
-ItemDisplay[(hax OR mpi OR gax OR 9ha OR 9ax OR 92a OR 9mp OR 9wa OR 9ba OR 9bt OR 9ga OR 9gi OR fla OR 9cl OR 9ma OR 9mt OR 9fl OR (SWORD !ssd) OR (DAGGER !THROWING !dgr) OR THROWING OR (SPEAR !THROWING !spt) OR (POLEARM !bar !vou) OR BOW OR XBOW OR 8ls OR 8cs OR 8bs OR 9sc OR 9qs OR 9ws OR SIN OR ZON) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID STAT91>0]: %NAME%{%NAME%%GRAY%-x%}%CONTINUE%
+ItemDisplay[(hax OR mpi OR gax OR 9ha OR 9ax OR 92a OR 9mp OR 9wa OR 9ba OR 9bt OR 9ga OR 9gi OR fla OR 9cl OR 9ma OR 9mt OR 9fl OR (SWORD !ssd) OR (DAGGER !THROWING !dgr) OR THROWING OR (SPEAR !THROWING !spt) OR (POLEARM !bar !vou) OR BOW OR XBOW OR 8ls OR 8cs OR 8bs OR 9sc OR 9qs OR 9ws OR SIN OR ZON) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID !STAT91=0]: %NAME%{%NAME%%GRAY%-x%}%CONTINUE%
 //Upgrading Req End Line
 ItemDisplay[(ARMOR OR WEAPON) !(CIRC OR SOR OR WAND OR 8ss OR hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID]: %NAME%{%NAME%%GRAY%)}%CONTINUE%
 
