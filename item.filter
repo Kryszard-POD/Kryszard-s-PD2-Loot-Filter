@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season VII: ver 7.2.2
+//	Kryszard's PD2 Loot Filter for Season VIII: ver 8.0.1
 //
 //	twitch.tv/kryszard
 //
@@ -12,6 +12,7 @@ ItemDisplayFilterName[]: Strict Filter
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 8.0.1}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%Item Filter - More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -532,6 +533,9 @@ ItemDisplay[(ARMOR OR WEAPON) NMAG !ETH SOCK=0]: %WHITE%%NAME%%CONTINUE%
 ItemDisplay[(ARMOR OR WEAPON) NMAG (SOCK>0 OR ETH)]: %GRAY%%NAME%%CONTINUE%
 ItemDisplay[CRAFT]: %ORANGE%%NAME%%CONTINUE%
 
+//Add red "*" Stars on Corrupted items in Unique Stygian Caverns Map
+ItemDisplay[(ARMOR OR WEAPON OR (aqv OR cqv OR rin OR amu)) (MAG OR RARE OR SET OR UNI OR CRAFT) !ID MAPID=181]: %RED%*%NAME%%RED%*%CONTINUE%
+
 //"Sup" for superiors, and "Inf" for inferiors
 ItemDisplay[SUP ED<5]: %WHITE%Sup %NAME%%CONTINUE%
 ItemDisplay[WEAPON SUP ED>4]: %RED%Sup %NAME%%CONTINUE%
@@ -576,24 +580,24 @@ ItemDisplay[wms]: %GREEN%!%WHITE%thaw{%GREEN%!%WHITE%thaw, Perf %BLUE%O%WHITE%, 
 ItemDisplay[(tsc OR isc OR vps OR wms) FILTLVL>0 (CLVL>30 OR FILTLVL>3)]: {%NAME%}
 ItemDisplay[yps]: %GREEN%!%WHITE%ant{%GREEN%!%WHITE%ant, Perf %GREEN%O%WHITE%, %BLUE%Ring %WHITE%= Psn Res %BLUE%Ring%NL%%GRAY%(time stack)%NL%%WHITE%Gives +25 Psn Res for 30s%NL%%TAN%Note%WHITE%: Instantly cures poison}
 ItemDisplay[key QTY>19]: %GRAY%key{%TAN%Note%WHITE%: RuneWords Recipes Avaliable at Quantity<20%NL%%NL%%WHITE%at Bottom Edge of your Screen%NL%Notice the %GRAY%"%WHITE%Settings%GRAY%" %WHITE%button located%NL%%NL%%ORANGE%Crafting %WHITE%Bases from Vendors%NL%%TAN%Pro-Tip%WHITE%: You can buy many}%CONTINUE%
-ItemDisplay[key QTY=1]: %GRAY%key{%WHITE%Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Bone: %ORANGE%Sol + Um + Um%NL%%GRAY%Black: %ORANGE%Thul + Io + Nef%NL%%GRAY%Beast: %ORANGE%Ber + Tir + Um + Mal + Lum%NL%%GRAY%Asylum: %ORANGE%Gul + Cham + Hel + Jah + Dol + Um%NL%%GRAY%Ancient's Pledge: %ORANGE%Ral + Ort + Tal%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
-ItemDisplay[key QTY=2]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Chains of Honor: %ORANGE%Dol + Um + Ber + Ist%NL%%GRAY%Call to Arms: %ORANGE%Amn + Ral + Mal + Ist + Ohm%NL%%GRAY%Breath of the Dying: %ORANGE%Vex + Hel + El + Eld + Zod + Eth%NL%%GRAY%Brand: %ORANGE%Jah + Lo + Mal + Gul%NL%%GRAY%Bramble: %ORANGE%Ral + Ohm + Sur + Eth%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
-ItemDisplay[key QTY=3]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Destruction: %ORANGE%Vex + Lo + Ber + Jah + Ko%NL%%GRAY%Delirium: %ORANGE%Lem + Ist + Io%NL%%GRAY%Death: %ORANGE%Hel + El + Vex + Ort + Gul%NL%%GRAY%Crescent Moon: %ORANGE%Shael + Um + Tir%NL%%GRAY%Chaos: %ORANGE%Fal + Ohm + Um%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
-ItemDisplay[key QTY=4]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Duress: %ORANGE%Shael + Um + Thul%NL%%GRAY%Dream: %ORANGE%Io + Jah + Pul%NL%%GRAY%Dragon: %ORANGE%Sur + Lo + Sol%NL%%GRAY%Doom: %ORANGE%Hel + Ohm + Um + Lo + Cham%NL%%GRAY%Dominion: %ORANGE%Cham + Ohm%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
-ItemDisplay[key QTY=5]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Exile: %ORANGE%Vex + Ohm + Ist + Dol%NL%%GRAY%Eternity: %ORANGE%Amn + Ber + Ist + Sol + Sur%NL%%GRAY%Enlightenment: %ORANGE%Pul + Ral + Sol%NL%%GRAY%Enigma: %ORANGE%Jah + Ith + Ber%NL%%GRAY%Edge: %ORANGE%Tir + Tal + Amn%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
-ItemDisplay[key QTY=6]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Fortitude: %ORANGE%El + Sol + Dol + Lo%NL%%GRAY%Flickering Flame: %ORANGE%Nef + Pul + Vex%NL%%GRAY%Ferocity: %ORANGE%Zod + Cham + Shael%NL%%GRAY%Famine: %ORANGE%Fal + Ohm + Ort + Jah%NL%%GRAY%Faith: %ORANGE%Ohm + Jah + Lem + Eld%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
-ItemDisplay[key QTY=7]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Harmony: %ORANGE%Tir + Ith + Sol + Ko%NL%%GRAY%Hand of Justice: %ORANGE%Sur + Cham + Amn + Lo%NL%%GRAY%Grief: %ORANGE%Eth + Tir + Lo + Mal + Ral%NL%%GRAY%Gloom: %ORANGE%Fal + Um + Pul%NL%%GRAY%Fury: %ORANGE%Jah + Gul + Eth%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
-ItemDisplay[key QTY=8]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Infinity: %ORANGE%Ber + Mal + Ber + Ist%NL%%GRAY%Ice: %ORANGE%Amn + Shael + Jah + Lo%NL%%GRAY%Honor: %ORANGE%Amn + El + Ith + Tir + Sol%NL%%GRAY%Holy Thunder: %ORANGE%Eth + Ral + Ort + Tal%NL%%GRAY%Heart of the Oak: %ORANGE%Ko + Vex + Pul + Thul%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
-ItemDisplay[key QTY=9]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Lawbringer: %ORANGE%Amn + Lem + Ko%NL%%GRAY%Last Wish: %ORANGE%Jah + Mal + Jah + Sur + Jah + Ber%NL%%GRAY%Kingslayer: %ORANGE%Mal + Um + Gul + Fal%NL%%GRAY%King's Grace: %ORANGE%Amn + Ral + Thul%NL%%GRAY%Insight: %ORANGE%Ral + Tir + Tal + Sol%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
-ItemDisplay[key QTY=10]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Melody: %ORANGE%Shael + Ko + Nef%NL%%GRAY%Malice: %ORANGE%Ith + El + Eth%NL%%GRAY%Lore: %ORANGE%Ort + Sol%NL%%GRAY%Lionheart: %ORANGE%Hel + Lum + Fal%NL%%GRAY%Leaf: %ORANGE%Tir + Ral%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
-ItemDisplay[key QTY=11]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Neophyte: %ORANGE%Thul + Tir%NL%%GRAY%Nadir: %ORANGE%Nef + Tir%NL%%GRAY%Myth: %ORANGE%Hel + Amn + Nef%NL%%GRAY%Mist: %ORANGE%Cham + Shael + Gul + Thul + Ith%NL%%GRAY%Memory: %ORANGE%Lum + Io + Sol + Eth%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
-ItemDisplay[key QTY=12]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Pattern: %ORANGE%Tal + Ort + Tir%NL%%GRAY%Passion: %ORANGE%Dol + Ort + Eld + Lem%NL%%GRAY%Obsession: %ORANGE%Zod + Ist + Lem + Lum + Io + Nef%NL%%GRAY%Obedience: %ORANGE%Hel + Ko + Thul + Eth + Fal%NL%%GRAY%Oath: %ORANGE%Shael + Pul + Mal + Lum%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
-ItemDisplay[key QTY=13]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Principle: %ORANGE%Ral + Gul + Eld%NL%%GRAY%Pride: %ORANGE%Cham + Sur + Io + Lo%NL%%GRAY%Plague: %ORANGE%Cham + Fal + Um%NL%%GRAY%Phoenix: %ORANGE%Vex + Vex + Lo + Jah%NL%%GRAY%Peace: %ORANGE%Shael + Thul + Amn%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
-ItemDisplay[key QTY=14]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Rhyme: %ORANGE%Shael + Eth%NL%%GRAY%Rampage: %ORANGE%Shael + El + Ith + Eth%NL%%GRAY%Rain: %ORANGE%Ort + Mal + Ith%NL%%GRAY%Radiance: %ORANGE%Nef + Sol + Ith%NL%%GRAY%Prudence: %ORANGE%Mal + Tir%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
-ItemDisplay[key QTY=15]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Smoke: %ORANGE%Nef + Lum%NL%%GRAY%Silence: %ORANGE%Dol + Eld + Hel + Ist + Tir + Vex%NL%%GRAY%Shattered Wall: %ORANGE%Zod + Jah + Ral + Cham%NL%%GRAY%Sanctuary: %ORANGE%Ko + Ko + Mal%NL%%GRAY%Rift: %ORANGE%Hel + Ko + Lem + Gul%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
-ItemDisplay[key QTY=16]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Stone: %ORANGE%Shael + Um + Pul + Lum%NL%%GRAY%Steel: %ORANGE%Tir + El%NL%%GRAY%Stealth: %ORANGE%Tal + Eth%NL%%GRAY%Splendor: %ORANGE%Eth + Lum%NL%%GRAY%Spirit: %ORANGE%Tal + Thul + Ort + Amn%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
-ItemDisplay[key QTY=17]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Voice of Reason: %ORANGE%Lem + Ko + El + Eld%NL%%GRAY%Venom: %ORANGE%Tal + Dol + Mal%NL%%GRAY%Unbending Will: %ORANGE%Fal + Io + Ith + Eld + El + Hel%NL%%GRAY%Treachery: %ORANGE%Shael + Thul + Lem%NL%%GRAY%Strength: %ORANGE%Amn + Tir%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
-ItemDisplay[key QTY=18]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%Next Page%NL%%NL%%GRAY%Wrath: %ORANGE%Pul + Lum + Ber + Mal%NL%%GRAY%Wisdom: %ORANGE%Pul + Ith + Eld%NL%%GRAY%Wind: %ORANGE%Sur + El%NL%%GRAY%White: %ORANGE%Dol + Io%NL%%GRAY%Wealth: %ORANGE%Lem + Ko + Tir%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=1]: %GRAY%key{%WHITE%Quantity:   %TAN%+1   %WHITE%:Next Page%NL%%NL%%GRAY%Bone: %ORANGE%Sol + Um + Um%NL%%GRAY%Black: %ORANGE%Thul + Io + Nef%NL%%GRAY%Beast: %ORANGE%Ber + Tir + Um + Mal + Lum%NL%%GRAY%Asylum: %ORANGE%Gul + Cham + Hel + Jah + Dol + Um%NL%%GRAY%Ancient's Pledge: %ORANGE%Ral + Ort + Tal%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=2]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%:Next Page%NL%%NL%%GRAY%Chains of Honor: %ORANGE%Dol + Um + Ber + Ist%NL%%GRAY%Call to Arms: %ORANGE%Amn + Ral + Mal + Ist + Ohm%NL%%GRAY%Breath of the Dying: %ORANGE%Vex + Hel + El + Eld + Zod + Eth%NL%%GRAY%Brand: %ORANGE%Jah + Lo + Mal + Gul%NL%%GRAY%Bramble: %ORANGE%Ral + Ohm + Sur + Eth%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=3]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%:Next Page%NL%%NL%%GRAY%Destruction: %ORANGE%Vex + Lo + Ber + Jah + Ko%NL%%GRAY%Delirium: %ORANGE%Lem + Ist + Io%NL%%GRAY%Death: %ORANGE%Hel + El + Vex + Ort + Gul%NL%%GRAY%Crescent Moon: %ORANGE%Shael + Um + Tir%NL%%GRAY%Chaos: %ORANGE%Fal + Ohm + Um%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=4]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%:Next Page%NL%%NL%%GRAY%Duress: %ORANGE%Shael + Um + Thul%NL%%GRAY%Dream: %ORANGE%Io + Jah + Pul%NL%%GRAY%Dragon: %ORANGE%Sur + Lo + Sol%NL%%GRAY%Doom: %ORANGE%Hel + Ohm + Um + Lo + Cham%NL%%GRAY%Dominion: %ORANGE%Cham + Ohm%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=5]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%:Next Page%NL%%NL%%GRAY%Exile: %ORANGE%Vex + Ohm + Ist + Dol%NL%%GRAY%Eternity: %ORANGE%Amn + Ber + Ist + Sol + Sur%NL%%GRAY%Enlightenment: %ORANGE%Pul + Ral + Sol%NL%%GRAY%Enigma: %ORANGE%Jah + Ith + Ber%NL%%GRAY%Edge: %ORANGE%Tir + Tal + Amn%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=6]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%:Next Page%NL%%NL%%GRAY%Fortitude: %ORANGE%El + Sol + Dol + Lo%NL%%GRAY%Flickering Flame: %ORANGE%Nef + Pul + Vex%NL%%GRAY%Ferocity: %ORANGE%Zod + Cham + Shael%NL%%GRAY%Famine: %ORANGE%Fal + Ohm + Ort + Jah%NL%%GRAY%Faith: %ORANGE%Ohm + Jah + Lem + Eld%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=7]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%:Next Page%NL%%NL%%GRAY%Harmony: %ORANGE%Tir + Ith + Sol + Ko%NL%%GRAY%Hand of Justice: %ORANGE%Sur + Cham + Amn + Lo%NL%%GRAY%Grief: %ORANGE%Eth + Tir + Lo + Mal + Ral%NL%%GRAY%Gloom: %ORANGE%Fal + Um + Pul%NL%%GRAY%Fury: %ORANGE%Jah + Gul + Eth%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=8]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%:Next Page%NL%%NL%%GRAY%Infinity: %ORANGE%Ber + Mal + Ber + Ist%NL%%GRAY%Ice: %ORANGE%Amn + Shael + Jah + Lo%NL%%GRAY%Hustle: %ORANGE%Shael + Ko + Eld%NL%%GRAY%Honor: %ORANGE%Amn + El + Ith + Tir + Sol%NL%%GRAY%Holy Thunder: %ORANGE%Eth + Ral + Ort + Tal%NL%%GRAY%Heart of the Oak: %ORANGE%Ko + Vex + Pul + Thul%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=9]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%:Next Page%NL%%NL%%GRAY%Lawbringer: %ORANGE%Amn + Lem + Ko%NL%%GRAY%Last Wish: %ORANGE%Jah + Mal + Jah + Sur + Jah + Ber%NL%%GRAY%Kingslayer: %ORANGE%Mal + Um + Gul + Fal%NL%%GRAY%King's Grace: %ORANGE%Amn + Ral + Thul%NL%%GRAY%Insight: %ORANGE%Ral + Tir + Tal + Sol%NL%%GRAY%Innocence: %ORANGE%Gul + Lem + Zod + Hel%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=10]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%:Next Page%NL%%NL%%GRAY%Melody: %ORANGE%Shael + Ko + Nef%NL%%GRAY%Malice: %ORANGE%Ith + El + Eth%NL%%GRAY%Lore: %ORANGE%Ort + Sol%NL%%GRAY%Lionheart: %ORANGE%Hel + Lum + Fal%NL%%GRAY%Leaf: %ORANGE%Tir + Ral%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=11]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%:Next Page%NL%%NL%%GRAY%Neophyte: %ORANGE%Thul + Tir%NL%%GRAY%Nadir: %ORANGE%Nef + Tir%NL%%GRAY%Myth: %ORANGE%Hel + Amn + Nef%NL%%GRAY%Mist: %ORANGE%Cham + Shael + Gul + Thul + Ith%NL%%GRAY%Memory: %ORANGE%Lum + Io + Sol + Eth%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=12]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%:Next Page%NL%%NL%%GRAY%Pattern: %ORANGE%Tal + Ort + Tir%NL%%GRAY%Passion: %ORANGE%Dol + Ort + Eld + Lem%NL%%GRAY%Obsession: %ORANGE%Zod + Ist + Lem + Lum + Io + Nef%NL%%GRAY%Obedience: %ORANGE%Hel + Ko + Thul + Eth + Fal%NL%%GRAY%Oath: %ORANGE%Shael + Pul + Mal + Lum%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=13]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%:Next Page%NL%%NL%%GRAY%Principle: %ORANGE%Ral + Gul + Eld%NL%%GRAY%Pride: %ORANGE%Cham + Sur + Io + Lo%NL%%GRAY%Plague: %ORANGE%Cham + Fal + Um%NL%%GRAY%Phoenix: %ORANGE%Vex + Vex + Lo + Jah%NL%%GRAY%Peace: %ORANGE%Shael + Thul + Amn%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=14]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%:Next Page%NL%%NL%%GRAY%Rhyme: %ORANGE%Shael + Eth%NL%%GRAY%Rampage: %ORANGE%Shael + El + Ith + Eth%NL%%GRAY%Rain: %ORANGE%Ort + Mal + Ith%NL%%GRAY%Radiance: %ORANGE%Nef + Sol + Ith%NL%%GRAY%Prudence: %ORANGE%Mal + Tir%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=15]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%:Next Page%NL%%NL%%GRAY%Smoke: %ORANGE%Nef + Lum%NL%%GRAY%Silence: %ORANGE%Dol + Eld + Hel + Ist + Tir + Vex%NL%%GRAY%Shattered Wall: %ORANGE%Zod + Jah + Ral + Cham%NL%%GRAY%Sanctuary: %ORANGE%Ko + Ko + Mal%NL%%GRAY%Rift: %ORANGE%Hel + Ko + Lem + Gul%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=16]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%:Next Page%NL%%NL%%GRAY%Stone: %ORANGE%Shael + Um + Pul + Lum%NL%%GRAY%Steel: %ORANGE%Tir + El%NL%%GRAY%Stealth: %ORANGE%Tal + Eth%NL%%GRAY%Splendor: %ORANGE%Eth + Lum%NL%%GRAY%Spirit: %ORANGE%Tal + Thul + Ort + Amn%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=17]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%:Next Page%NL%%NL%%GRAY%Voice of Reason: %ORANGE%Lem + Ko + El + Eld%NL%%GRAY%Venom: %ORANGE%Tal + Dol + Mal%NL%%GRAY%Unbending Will: %ORANGE%Fal + Io + Ith + Eld + El + Hel%NL%%GRAY%Treachery: %ORANGE%Shael + Thul + Lem%NL%%GRAY%Strength: %ORANGE%Amn + Tir%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
+ItemDisplay[key QTY=18]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity:   %TAN%+1   %WHITE%:Next Page%NL%%NL%%GRAY%Wrath: %ORANGE%Pul + Lum + Ber + Mal%NL%%GRAY%Wisdom: %ORANGE%Pul + Ith + Eld%NL%%GRAY%Wind: %ORANGE%Sur + El%NL%%GRAY%White: %ORANGE%Dol + Io%NL%%GRAY%Wealth: %ORANGE%Lem + Ko + Tir%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
 ItemDisplay[key QTY=19]: %GRAY%key{%WHITE%Previous Page:   %TAN%-1   %WHITE%:Quantity%NL%%NL%%GRAY%Zephyr: %ORANGE%Ort + Eth%NL%%GRAY%Zenith: %ORANGE%Jah + Zod + Ort + Thul + Ral%NL%%TAN%Note%WHITE%: RuneWords Recipes:}%CONTINUE%
 ItemDisplay[key FILTLVL>0 (ASSASSIN OR FILTLVL>3)]: {%NAME%}
 
@@ -604,10 +608,13 @@ ItemDisplay[aqv MAG !ID ((!AMAZON AND FILTLVL>1 AND CLVL>79) OR FILTLVL>3)]:
 ItemDisplay[cqv RARE AMAZON !ID FILTLVL<5]: %NAME%%CONTINUE%
 ItemDisplay[aqv RARE AMAZON !ID]: %DOT-A8%%TIER-4%%NAME%%CONTINUE%
 
-//Choking, Exploding, Fulminating, Oil, Rancid, Strangling
-ItemDisplay[opm]: %NAME%{%WHITE%Exoplo. Potion, Perf %RED%O%WHITE%, %BLUE%Ring %WHITE%= Fire Res %BLUE%Ring%NL%%TAN%Note%WHITE%: Crafting Recipe:}%CONTINUE%
-ItemDisplay[opm FILTLVL>0 (CLVL>79 OR FILTLVL>3)]: {%NAME%}
+//Choking, Exploding, Fulminating, Oil, Rancid, Strangling, and New PD2 Throwing Potions
+ItemDisplay[opm OR tpfm]: %NAME%{%WHITE%Exoplo. Potion, Perf %RED%O%WHITE%, %BLUE%Ring %WHITE%= Fire Res %BLUE%Ring%NL%%TAN%Note%WHITE%: Crafting Recipe:}%CONTINUE%
+ItemDisplay[(opm OR tpfm) FILTLVL>0 (CLVL>79 OR FILTLVL>3)]: {%NAME%}
 ItemDisplay[(gpm OR opl OR ops OR gps OR gpl) FILTLVL>0 (CLVL>23 OR FILTLVL>3)]: {%NAME%}
+ItemDisplay[(tpfs OR tpgs OR tpcs OR tpls) FILTLVL>0 (CLVL>17 OR FILTLVL>3)]: {%NAME%}
+ItemDisplay[(tpfm OR tpgm OR tpcm OR tplm) FILTLVL>0 (CLVL>23 OR FILTLVL>3)]: {%NAME%}
+ItemDisplay[(tpfl OR tpgl OR tpcl OR tpll) FILTLVL>0 (CLVL>39 OR FILTLVL>3)]: {%NAME%}
 
 //Gems
 //hiding low ones
@@ -826,22 +833,30 @@ ItemDisplay[jew MAG !ID]: %DOT-9A%%TAN%*%WHITE%*   %NAME%%WHITE%   *%TAN%*%BLUE%
 //Highlight Good Rare items
 ItemDisplay[(jew OR rin OR amu OR CIRC) RARE !ID]: %DOT-A8%%TAN%*%WHITE%*   %NAME%%WHITE%   *%TAN%*%YELLOW%
 
-//GG UNIQUES
-ItemDisplay[(rin OR amu OR 6ws OR uar OR ulc OR urn OR uap OR ci3 OR xtb OR uit OR 6lw OR 7gw OR 7gd OR obf OR ulm) UNI !ID]: %BORDER-68%%GREEN%pick %PURPLE%*%RED%*%ORANGE%*%YELLOW%*     %NAME%     %YELLOW%*%ORANGE%*%RED%*%PURPLE%* %GREEN%up
-
-//GG only when ETH
-ItemDisplay[(9gm OR 7gm OR 7s8 OR 7p7) UNI ETH !ID]: %BORDER-68%%GREEN%pick %PURPLE%*%RED%*%ORANGE%*%YELLOW%*     %NAME%     %YELLOW%*%ORANGE%*%RED%*%PURPLE%* %GREEN%up
-
 //PD2 DCLONE/DUNGEON/RATHMA BOSSES UNIQUES
 ItemDisplay[(uhl OR uth OR utb OR 7bs OR 7qr) UNI !ID]: %BORDER-68%%GREEN%HOLY %PURPLE%*%RED%*%ORANGE%*%YELLOW%*     %NAME%     %YELLOW%*%ORANGE%*%RED%*%PURPLE%* %GREEN%MOLY
 ItemDisplay[(rar OR rbe OR ram) UNI !ID]: %BORDER-68%%GREEN%HOLY %PURPLE%*%RED%*%ORANGE%*%YELLOW%*     %NAME%     %YELLOW%*%ORANGE%*%RED%*%PURPLE%* %GREEN%MOLY
 
 //NEW PD2 UNIQUES
-ItemDisplay[(drf OR utp OR 7tw OR baf OR 7qs OR 6bs OR ned OR ame OR 7fb OR utg) UNI !ID]: %BORDER-68%%GREEN%new %PURPLE%*%RED%*%ORANGE%*%YELLOW%*     %NAME%     %YELLOW%*%ORANGE%*%RED%*%PURPLE%* %GREEN%new
+//GG PD2 UNIQUES
+ItemDisplay[(7tw OR baf OR 7qs OR 6bs OR utg) UNI !ID]: %BORDER-68%%ORANGE%pick %PURPLE%*%RED%*%ORANGE%*%YELLOW%*     %NAME%     %YELLOW%*%ORANGE%*%RED%*%PURPLE%* %ORANGE%up
+//GG PD2 UNIQUES only when ETH
+ItemDisplay[(utp OR 7st OR 7cm OR 7fb) UNI ETH !ID]: %BORDER-68%%ORANGE%pick %PURPLE%*%RED%*%ORANGE%*%YELLOW%*     %NAME%     %YELLOW%*%ORANGE%*%RED%*%PURPLE%* %ORANGE%up
+//OK PD2 UNIQUES only when ETH
+ItemDisplay[(am5) UNI ETH !ID]: %DOT-68%%GREEN%*%DARK_GREEN%*%GRAY%*     %NAME%%GRAY%     *%DARK_GREEN%*%GREEN%*
+//OK PD2 UNIQUES
+ItemDisplay[(drf OR utp OR 7st OR 7cm OR 7fb OR ned OR ame) UNI !ID]: %DOT-68%%GREEN%*%DARK_GREEN%*%GRAY%*     %NAME%%GRAY%     *%DARK_GREEN%*%GREEN%*
+//Leveling/Lower Value PD2 UNIQUES
 ItemDisplay[(ba6 OR 9ar OR dr2 OR ob6 OR am5 OR ne6 OR ulb) UNI !ID]: %DOT-68%%TAN%*%GRAY%*   %NAME%%GRAY%   *%TAN%*
 ItemDisplay[pa3 UNI !ID]: %DOT-68%%GRAY%*  %NAME%%GRAY%  *
 
-//OK only when ETH
+//GG UNIQUES
+ItemDisplay[(rin OR amu OR 6ws OR uar OR ulc OR urn OR uap OR ci3 OR xtb OR uit OR 6lw OR 7gw OR 7gd OR obf OR ulm) UNI !ID]: %BORDER-68%%GREEN%pick %PURPLE%*%RED%*%ORANGE%*%YELLOW%*     %NAME%     %YELLOW%*%ORANGE%*%RED%*%PURPLE%* %GREEN%up
+
+//GG UNIQUES only when ETH
+ItemDisplay[(9gm OR 7gm OR 7s8 OR 7p7) UNI ETH !ID]: %BORDER-68%%GREEN%pick %PURPLE%*%RED%*%ORANGE%*%YELLOW%*     %NAME%     %YELLOW%*%ORANGE%*%RED%*%PURPLE%* %GREEN%up
+
+//OK UNIQUES only when ETH
 ItemDisplay[(7pa OR 7bt OR 7gi OR 7wa OR 7m7 OR 8ls OR 7gl OR 7b8 OR 7bk OR xpl OR 7ha OR 7b7) UNI ETH !ID]: %DOT-68%%YELLOW%*%TAN%*%GRAY%*     %NAME%%GRAY%     *%TAN%*%YELLOW%*
 
 //OK UNIQUES
@@ -864,7 +879,7 @@ ItemDisplay[(7ts OR 7s8 OR 9bw OR 7wc OR 7bw OR 7cs OR 7ws OR 7fl OR 7kr OR 7cr 
 ItemDisplay[jew UNI !ID]: %BORDER-68%%RED%r%ORANGE%a%YELLOW%in%GREEN%b%BLUE%o%PURPLE%w     %NAME%%PURPLE%     r%BLUE%a%GREEN%in%YELLOW%b%ORANGE%o%RED%w
 
 //Good SET parts
-ItemDisplay[(amu OR rin OR uar OR ci3 OR 7qr OR uth OR paf) SET !ID]: %MAP-84%%PURPLE%*%RED%*%DARK_GREEN%*%GREEN%*     %NAME%     *%DARK_GREEN%*%RED%*%PURPLE%*
+ItemDisplay[(amu OR rin OR uar OR ci3 OR 7qr OR uth OR paf) SET !ID]: %MAP-84%%DARK_GREEN%*%GREEN%*%WHITE%*     %NAME%     %WHITE%*%GREEN%*%DARK_GREEN%*
 
 //Uniques and Sets worth notifying
 //Armors
@@ -942,597 +957,788 @@ ItemDisplay[(lwb OR 8lw OR 6lw) MAG !ID (AMAZON OR FILTLVL<4)]: %NAME%
 
 //Show me exactly +SKILLS values on NMAG items
 //Amazon
-ItemDisplay[NMAG !RW TABSK0>0]: %GRAY%[%TAN%+%TABSK0%%DARK_GREEN%bow%GRAY%] %NAME%%CONTINUE%
-ItemDisplay[NMAG !RW TABSK2>0]: %GRAY%[%TAN%+%TABSK2%%DARK_GREEN%java%GRAY%] %NAME%%CONTINUE%
+ItemDisplay[NMAG !RW TABSK0>0 AMAZON]: %GRAY%[%YELLOW%+%TABSK0%%ORANGE%bow%GRAY%] %NAME%%CONTINUE%
+ItemDisplay[NMAG !RW TABSK2>0 AMAZON]: %GRAY%[%YELLOW%+%TABSK2%%ORANGE%java%GRAY%] %NAME%%CONTINUE%
+ItemDisplay[NMAG !RW TABSK0>0 !AMAZON]: %GRAY%[%TAN%+%TABSK0%%DARK_GREEN%bow%GRAY%] %NAME%%CONTINUE%
+ItemDisplay[NMAG !RW TABSK2>0 !AMAZON]: %GRAY%[%TAN%+%TABSK2%%DARK_GREEN%java%GRAY%] %NAME%%CONTINUE%
 
 //Assasin
 ItemDisplay[NMAG !RW (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0 OR SK258>0 OR SK259>0 OR SK260>0 OR SK261>0 OR SK262>0 OR SK263>0 OR SK264>0 OR SK265>0 OR SK266>0 OR SK267>0 OR SK268>0 OR SK269>0 OR SK270>0 OR SK271>0 OR SK272>0 OR SK273>0 OR SK274>0 OR SK275>0 OR SK276>0 OR SK277>0 OR SK278>0 OR SK279>0 OR SK280>0 OR SK366>0)]: %GRAY%] %NAME%%CONTINUE%
 
-ItemDisplay[NMAG !RW SK366>0]: %TAN%+%SK366%%DARK_GREEN%lgs%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK366>0 ASSASSIN]: %YELLOW%+%SK366%%ORANGE%lgs%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK366>0 !ASSASSIN]: %TAN%+%SK366%%DARK_GREEN%lgs%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK366>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0 OR SK258>0 OR SK259>0 OR SK260>0 OR SK261>0 OR SK262>0 OR SK263>0 OR SK264>0 OR SK265>0 OR SK266>0 OR SK267>0 OR SK268>0 OR SK269>0 OR SK270>0 OR SK271>0 OR SK272>0 OR SK273>0 OR SK274>0 OR SK275>0 OR SK276>0 OR SK277>0 OR SK278>0 OR SK279>0 OR SK280>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK280>0]: %TAN%+%SK280%%DARK_GREEN%phx%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK280>0 ASSASSIN]: %YELLOW%+%SK280%%ORANGE%phx%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK280>0 !ASSASSIN]: %TAN%+%SK280%%DARK_GREEN%phx%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK280>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0 OR SK258>0 OR SK259>0 OR SK260>0 OR SK261>0 OR SK262>0 OR SK263>0 OR SK264>0 OR SK265>0 OR SK266>0 OR SK267>0 OR SK268>0 OR SK269>0 OR SK270>0 OR SK271>0 OR SK272>0 OR SK273>0 OR SK274>0 OR SK275>0 OR SK276>0 OR SK277>0 OR SK278>0 OR SK279>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK279>0]: %TAN%+%SK279%%DARK_GREEN%shm%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK279>0 ASSASSIN]: %YELLOW%+%SK279%%ORANGE%shm%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK279>0 !ASSASSIN]: %TAN%+%SK279%%DARK_GREEN%shm%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK279>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0 OR SK258>0 OR SK259>0 OR SK260>0 OR SK261>0 OR SK262>0 OR SK263>0 OR SK264>0 OR SK265>0 OR SK266>0 OR SK267>0 OR SK268>0 OR SK269>0 OR SK270>0 OR SK271>0 OR SK272>0 OR SK273>0 OR SK274>0 OR SK275>0 OR SK276>0 OR SK277>0 OR SK278>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK278>0]: %TAN%+%SK278%%DARK_GREEN%vnm%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK278>0 ASSASSIN]: %YELLOW%+%SK278%%ORANGE%vnm%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK278>0 !ASSASSIN]: %TAN%+%SK278%%DARK_GREEN%vnm%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK278>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0 OR SK258>0 OR SK259>0 OR SK260>0 OR SK261>0 OR SK262>0 OR SK263>0 OR SK264>0 OR SK265>0 OR SK266>0 OR SK267>0 OR SK268>0 OR SK269>0 OR SK270>0 OR SK271>0 OR SK272>0 OR SK273>0 OR SK274>0 OR SK275>0 OR SK276>0 OR SK277>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK277>0]: %TAN%+%SK277%%DARK_GREEN%bsh%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK277>0 ASSASSIN]: %YELLOW%+%SK277%%ORANGE%bsh%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK277>0 !ASSASSIN]: %TAN%+%SK277%%DARK_GREEN%bsh%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK277>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0 OR SK258>0 OR SK259>0 OR SK260>0 OR SK261>0 OR SK262>0 OR SK263>0 OR SK264>0 OR SK265>0 OR SK266>0 OR SK267>0 OR SK268>0 OR SK269>0 OR SK270>0 OR SK271>0 OR SK272>0 OR SK273>0 OR SK274>0 OR SK275>0 OR SK276>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK276>0]: %TAN%+%SK276%%DARK_GREEN%dts%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK276>0 ASSASSIN]: %YELLOW%+%SK276%%ORANGE%dts%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK276>0 !ASSASSIN]: %TAN%+%SK276%%DARK_GREEN%dts%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK276>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0 OR SK258>0 OR SK259>0 OR SK260>0 OR SK261>0 OR SK262>0 OR SK263>0 OR SK264>0 OR SK265>0 OR SK266>0 OR SK267>0 OR SK268>0 OR SK269>0 OR SK270>0 OR SK271>0 OR SK272>0 OR SK273>0 OR SK274>0 OR SK275>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK275>0]: %TAN%+%SK275%%DARK_GREEN%dfl%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK275>0 ASSASSIN]: %YELLOW%+%SK275%%ORANGE%dfl%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK275>0 !ASSASSIN]: %TAN%+%SK275%%DARK_GREEN%dfl%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK275>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0 OR SK258>0 OR SK259>0 OR SK260>0 OR SK261>0 OR SK262>0 OR SK263>0 OR SK264>0 OR SK265>0 OR SK266>0 OR SK267>0 OR SK268>0 OR SK269>0 OR SK270>0 OR SK271>0 OR SK272>0 OR SK273>0 OR SK274>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK274>0]: %TAN%+%SK274%%DARK_GREEN%boi%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK274>0 ASSASSIN]: %YELLOW%+%SK274%%ORANGE%boi%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK274>0 !ASSASSIN]: %TAN%+%SK274%%DARK_GREEN%boi%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK274>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0 OR SK258>0 OR SK259>0 OR SK260>0 OR SK261>0 OR SK262>0 OR SK263>0 OR SK264>0 OR SK265>0 OR SK266>0 OR SK267>0 OR SK268>0 OR SK269>0 OR SK270>0 OR SK271>0 OR SK272>0 OR SK273>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK273>0]: %TAN%+%SK273%%DARK_GREEN%mib%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK273>0 ASSASSIN]: %YELLOW%+%SK273%%ORANGE%mib%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK273>0 !ASSASSIN]: %TAN%+%SK273%%DARK_GREEN%mib%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK273>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0 OR SK258>0 OR SK259>0 OR SK260>0 OR SK261>0 OR SK262>0 OR SK263>0 OR SK264>0 OR SK265>0 OR SK266>0 OR SK267>0 OR SK268>0 OR SK269>0 OR SK270>0 OR SK271>0 OR SK272>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK272>0]: %TAN%+%SK272%%DARK_GREEN%woi%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK272>0 ASSASSIN]: %YELLOW%+%SK272%%ORANGE%woi%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK272>0 !ASSASSIN]: %TAN%+%SK272%%DARK_GREEN%woi%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK272>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0 OR SK258>0 OR SK259>0 OR SK260>0 OR SK261>0 OR SK262>0 OR SK263>0 OR SK264>0 OR SK265>0 OR SK266>0 OR SK267>0 OR SK268>0 OR SK269>0 OR SK270>0 OR SK271>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK271>0]: %TAN%+%SK271%%DARK_GREEN%cls%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK271>0 ASSASSIN]: %YELLOW%+%SK271%%ORANGE%cls%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK271>0 !ASSASSIN]: %TAN%+%SK271%%DARK_GREEN%cls%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK271>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0 OR SK258>0 OR SK259>0 OR SK260>0 OR SK261>0 OR SK262>0 OR SK263>0 OR SK264>0 OR SK265>0 OR SK266>0 OR SK267>0 OR SK268>0 OR SK269>0 OR SK270>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK270>0]: %TAN%+%SK270%%DARK_GREEN%dtl%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK270>0 ASSASSIN]: %YELLOW%+%SK270%%ORANGE%dtl%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK270>0 !ASSASSIN]: %TAN%+%SK270%%DARK_GREEN%dtl%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK270>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0 OR SK258>0 OR SK259>0 OR SK260>0 OR SK261>0 OR SK262>0 OR SK263>0 OR SK264>0 OR SK265>0 OR SK266>0 OR SK267>0 OR SK268>0 OR SK269>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK269>0]: %TAN%+%SK269%%DARK_GREEN%cot%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK269>0 ASSASSIN]: %YELLOW%+%SK269%%ORANGE%cot%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK269>0 !ASSASSIN]: %TAN%+%SK269%%DARK_GREEN%cot%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK269>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0 OR SK258>0 OR SK259>0 OR SK260>0 OR SK261>0 OR SK262>0 OR SK263>0 OR SK264>0 OR SK265>0 OR SK266>0 OR SK267>0 OR SK268>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK268>0]: %TAN%+%SK268%%DARK_GREEN%shw%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK268>0 ASSASSIN]: %YELLOW%+%SK268%%ORANGE%shw%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK268>0 !ASSASSIN]: %TAN%+%SK268%%DARK_GREEN%shw%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK268>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0 OR SK258>0 OR SK259>0 OR SK260>0 OR SK261>0 OR SK262>0 OR SK263>0 OR SK264>0 OR SK265>0 OR SK266>0 OR SK267>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK267>0]: %TAN%+%SK267%%DARK_GREEN%fde%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK267>0 ASSASSIN]: %YELLOW%+%SK267%%ORANGE%fde%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK267>0 !ASSASSIN]: %TAN%+%SK267%%DARK_GREEN%fde%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK267>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0 OR SK258>0 OR SK259>0 OR SK260>0 OR SK261>0 OR SK262>0 OR SK263>0 OR SK264>0 OR SK265>0 OR SK266>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK266>0]: %TAN%+%SK266%%DARK_GREEN%blf%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK266>0 ASSASSIN]: %YELLOW%+%SK266%%ORANGE%blf%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK266>0 !ASSASSIN]: %TAN%+%SK266%%DARK_GREEN%blf%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK266>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0 OR SK258>0 OR SK259>0 OR SK260>0 OR SK261>0 OR SK262>0 OR SK263>0 OR SK264>0 OR SK265>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK265>0]: %TAN%+%SK265%%DARK_GREEN%cob%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK265>0 ASSASSIN]: %YELLOW%+%SK265%%ORANGE%cob%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK265>0 !ASSASSIN]: %TAN%+%SK265%%DARK_GREEN%cob%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK265>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0 OR SK258>0 OR SK259>0 OR SK260>0 OR SK261>0 OR SK262>0 OR SK263>0 OR SK264>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK264>0]: %TAN%+%SK264%%DARK_GREEN%csh%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK264>0 ASSASSIN]: %YELLOW%+%SK264%%ORANGE%csh%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK264>0 !ASSASSIN]: %TAN%+%SK264%%DARK_GREEN%csh%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK264>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0 OR SK258>0 OR SK259>0 OR SK260>0 OR SK261>0 OR SK262>0 OR SK263>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK263>0]: %TAN%+%SK263%%DARK_GREEN%wbk%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK263>0 ASSASSIN]: %YELLOW%+%SK263%%ORANGE%wbk%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK263>0 !ASSASSIN]: %TAN%+%SK263%%DARK_GREEN%wbk%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK263>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0 OR SK258>0 OR SK259>0 OR SK260>0 OR SK261>0 OR SK262>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK262>0]: %TAN%+%SK262%%DARK_GREEN%wof%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK262>0 ASSASSIN]: %YELLOW%+%SK262%%ORANGE%wof%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK262>0 !ASSASSIN]: %TAN%+%SK262%%DARK_GREEN%wof%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK262>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0 OR SK258>0 OR SK259>0 OR SK260>0 OR SK261>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK261>0]: %TAN%+%SK261%%DARK_GREEN%cbs%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK261>0 ASSASSIN]: %YELLOW%+%SK261%%ORANGE%cbs%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK261>0 !ASSASSIN]: %TAN%+%SK261%%DARK_GREEN%cbs%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK261>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0 OR SK258>0 OR SK259>0 OR SK260>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK260>0]: %TAN%+%SK260%%DARK_GREEN%dcw%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK260>0 ASSASSIN]: %YELLOW%+%SK260%%ORANGE%dcw%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK260>0 !ASSASSIN]: %TAN%+%SK260%%DARK_GREEN%dcw%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK260>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0 OR SK258>0 OR SK259>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK259>0]: %TAN%+%SK259%%DARK_GREEN%fof%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK259>0 ASSASSIN]: %YELLOW%+%SK259%%ORANGE%fof%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK259>0 !ASSASSIN]: %TAN%+%SK259%%DARK_GREEN%fof%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK259>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0 OR SK258>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK258>0]: %TAN%+%SK258%%DARK_GREEN%bos%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK258>0 ASSASSIN]: %YELLOW%+%SK258%%ORANGE%bos%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK258>0 !ASSASSIN]: %TAN%+%SK258%%DARK_GREEN%bos%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK258>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK257>0]: %TAN%+%SK257%%DARK_GREEN%bls%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK257>0 ASSASSIN]: %YELLOW%+%SK257%%ORANGE%bls%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK257>0 !ASSASSIN]: %TAN%+%SK257%%DARK_GREEN%bls%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK257>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK256>0]: %TAN%+%SK256%%DARK_GREEN%swb%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK256>0 ASSASSIN]: %YELLOW%+%SK256%%ORANGE%swb%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK256>0 !ASSASSIN]: %TAN%+%SK256%%DARK_GREEN%swb%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK256>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK255>0]: %TAN%+%SK255%%DARK_GREEN%dtn%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK255>0 ASSASSIN]: %YELLOW%+%SK255%%ORANGE%dtn%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK255>0 !ASSASSIN]: %TAN%+%SK255%%DARK_GREEN%dtn%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK255>0 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK254>0]: %TAN%+%SK254%%DARK_GREEN%tst%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK254>0 ASSASSIN]: %YELLOW%+%SK254%%ORANGE%tst%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK254>0 !ASSASSIN]: %TAN%+%SK254%%DARK_GREEN%tst%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK254>0 (SK251>0 OR SK252>0 OR SK253>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK253>0]: %TAN%+%SK253%%DARK_GREEN%psh%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK253>0 ASSASSIN]: %YELLOW%+%SK253%%ORANGE%psh%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK253>0 !ASSASSIN]: %TAN%+%SK253%%DARK_GREEN%psh%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK253>0 (SK251>0 OR SK252>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK252>0]: %TAN%+%SK252%%DARK_GREEN%clm%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK252>0 ASSASSIN]: %YELLOW%+%SK252%%ORANGE%clm%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK252>0 !ASSASSIN]: %TAN%+%SK252%%DARK_GREEN%clm%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK252>0 SK251>0]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK251>0]: %TAN%+%SK251%%DARK_GREEN%fbl%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK251>0 ASSASSIN]: %YELLOW%+%SK251%%ORANGE%fbl%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK251>0 !ASSASSIN]: %TAN%+%SK251%%DARK_GREEN%fbl%NAME%%CONTINUE%
 
 ItemDisplay[NMAG !RW (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0 OR SK258>0 OR SK259>0 OR SK260>0 OR SK261>0 OR SK262>0 OR SK263>0 OR SK264>0 OR SK265>0 OR SK266>0 OR SK267>0 OR SK268>0 OR SK269>0 OR SK270>0 OR SK271>0 OR SK272>0 OR SK273>0 OR SK274>0 OR SK275>0 OR SK276>0 OR SK277>0 OR SK278>0 OR SK279>0 OR SK280>0 OR SK366>0)]: %GRAY%[%NAME%%CONTINUE%
 
 //Barbarian
 ItemDisplay[NMAG !RW (SK126>0 OR SK128>0 OR SK130>0 OR SK131>0 OR SK132>0 OR SK133>0 OR SK135>0 OR (SK134>0 OR SK136>0) OR SK137>0 OR SK138>0 OR SK139>0 OR SK140>0 OR SK141>0 OR SK142>0 OR SK143>0 OR SK144>0 OR SK145>0 OR SK146>0 OR SK147>0 OR SK148>0 OR SK149>0 OR SK150>0 OR SK151>0 OR SK152>0 OR SK153>0 OR SK154>0 OR SK155>0 OR SK368>0)]: %GRAY%] %NAME%%CONTINUE%
 
-ItemDisplay[NMAG !RW SK368>0]: %TAN%+%SK368%%DARK_GREEN%dwo%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK368>0 BARBARIAN]: %YELLOW%+%SK368%%ORANGE%dwo%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK368>0 !BARBARIAN]: %TAN%+%SK368%%DARK_GREEN%dwo%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK368>0 (SK126>0 OR SK128>0 OR SK130>0 OR SK131>0 OR SK132>0 OR SK133>0 OR SK135>0 OR (SK134>0 OR SK136>0) OR SK137>0 OR SK138>0 OR SK139>0 OR SK140>0 OR SK141>0 OR SK142>0 OR SK143>0 OR SK144>0 OR SK145>0 OR SK146>0 OR SK147>0 OR SK148>0 OR SK149>0 OR SK150>0 OR SK151>0 OR SK152>0 OR SK153>0 OR SK154>0 OR SK155>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK155>0]: %TAN%+%SK155%%DARK_GREEN%bcm%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK155>0 BARBARIAN]: %YELLOW%+%SK155%%ORANGE%bcm%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK155>0 !BARBARIAN]: %TAN%+%SK155%%DARK_GREEN%bcm%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK155>0 (SK126>0 OR SK128>0 OR SK130>0 OR SK131>0 OR SK132>0 OR SK133>0 OR SK135>0 OR (SK134>0 OR SK136>0) OR SK137>0 OR SK138>0 OR SK139>0 OR SK140>0 OR SK141>0 OR SK142>0 OR SK143>0 OR SK144>0 OR SK145>0 OR SK146>0 OR SK147>0 OR SK148>0 OR SK149>0 OR SK150>0 OR SK151>0 OR SK152>0 OR SK153>0 OR SK154>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK154>0]: %TAN%+%SK154%%DARK_GREEN%wcy%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK154>0 BARBARIAN]: %YELLOW%+%SK154%%ORANGE%wcy%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK154>0 !BARBARIAN]: %TAN%+%SK154%%DARK_GREEN%wcy%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK154>0 (SK126>0 OR SK128>0 OR SK130>0 OR SK131>0 OR SK132>0 OR SK133>0 OR SK135>0 OR (SK134>0 OR SK136>0) OR SK137>0 OR SK138>0 OR SK139>0 OR SK140>0 OR SK141>0 OR SK142>0 OR SK143>0 OR SK144>0 OR SK145>0 OR SK146>0 OR SK147>0 OR SK148>0 OR SK149>0 OR SK150>0 OR SK151>0 OR SK152>0 OR SK153>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK153>0]: %TAN%+%SK153%%DARK_GREEN%res%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK153>0 BARBARIAN]: %YELLOW%+%SK153%%ORANGE%res%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK153>0 !BARBARIAN]: %TAN%+%SK153%%DARK_GREEN%res%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK153>0 (SK126>0 OR SK128>0 OR SK130>0 OR SK131>0 OR SK132>0 OR SK133>0 OR SK135>0 OR (SK134>0 OR SK136>0) OR SK137>0 OR SK138>0 OR SK139>0 OR SK140>0 OR SK141>0 OR SK142>0 OR SK143>0 OR SK144>0 OR SK145>0 OR SK146>0 OR SK147>0 OR SK148>0 OR SK149>0 OR SK150>0 OR SK151>0 OR SK152>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK152>0]: %TAN%+%SK152%%DARK_GREEN%ber%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK152>0 BARBARIAN]: %YELLOW%+%SK152%%ORANGE%ber%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK152>0 !BARBARIAN]: %TAN%+%SK152%%DARK_GREEN%ber%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK152>0 (SK126>0 OR SK128>0 OR SK130>0 OR SK131>0 OR SK132>0 OR SK133>0 OR SK135>0 OR (SK134>0 OR SK136>0) OR SK137>0 OR SK138>0 OR SK139>0 OR SK140>0 OR SK141>0 OR SK142>0 OR SK143>0 OR SK144>0 OR SK145>0 OR SK146>0 OR SK147>0 OR SK148>0 OR SK149>0 OR SK150>0 OR SK151>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK151>0]: %TAN%+%SK151%%DARK_GREEN%wwd%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK151>0 BARBARIAN]: %YELLOW%+%SK151%%ORANGE%wwd%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK151>0 !BARBARIAN]: %TAN%+%SK151%%DARK_GREEN%wwd%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK151>0 (SK126>0 OR SK128>0 OR SK130>0 OR SK131>0 OR SK132>0 OR SK133>0 OR SK135>0 OR (SK134>0 OR SK136>0) OR SK137>0 OR SK138>0 OR SK139>0 OR SK140>0 OR SK141>0 OR SK142>0 OR SK143>0 OR SK144>0 OR SK145>0 OR SK146>0 OR SK147>0 OR SK148>0 OR SK149>0 OR SK150>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK150>0]: %TAN%+%SK150%%DARK_GREEN%gwd%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK150>0 BARBARIAN]: %YELLOW%+%SK150%%ORANGE%gwd%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK150>0 !BARBARIAN]: %TAN%+%SK150%%DARK_GREEN%gwd%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK150>0 (SK126>0 OR SK128>0 OR SK130>0 OR SK131>0 OR SK132>0 OR SK133>0 OR SK135>0 OR (SK134>0 OR SK136>0) OR SK137>0 OR SK138>0 OR SK139>0 OR SK140>0 OR SK141>0 OR SK142>0 OR SK143>0 OR SK144>0 OR SK145>0 OR SK146>0 OR SK147>0 OR SK148>0 OR SK149>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK149>0]: %TAN%+%SK149%%DARK_GREEN%bos%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK149>0 BARBARIAN]: %YELLOW%+%SK149%%ORANGE%bos%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK149>0 !BARBARIAN]: %TAN%+%SK149%%DARK_GREEN%bos%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK149>0 (SK126>0 OR SK128>0 OR SK130>0 OR SK131>0 OR SK132>0 OR SK133>0 OR SK135>0 OR (SK134>0 OR SK136>0) OR SK137>0 OR SK138>0 OR SK139>0 OR SK140>0 OR SK141>0 OR SK142>0 OR SK143>0 OR SK144>0 OR SK145>0 OR SK146>0 OR SK147>0 OR SK148>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK148>0]: %TAN%+%SK148%%DARK_GREEN%isp%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK148>0 BARBARIAN]: %YELLOW%+%SK148%%ORANGE%isp%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK148>0 !BARBARIAN]: %TAN%+%SK148%%DARK_GREEN%isp%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK148>0 (SK126>0 OR SK128>0 OR SK130>0 OR SK131>0 OR SK132>0 OR SK133>0 OR SK135>0 OR (SK134>0 OR SK136>0) OR SK137>0 OR SK138>0 OR SK139>0 OR SK140>0 OR SK141>0 OR SK142>0 OR SK143>0 OR SK144>0 OR SK145>0 OR SK146>0 OR SK147>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK147>0]: %TAN%+%SK147%%DARK_GREEN%fzy%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK147>0 BARBARIAN]: %YELLOW%+%SK147%%ORANGE%fzy%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK147>0 !BARBARIAN]: %TAN%+%SK147%%DARK_GREEN%fzy%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK147>0 (SK126>0 OR SK128>0 OR SK130>0 OR SK131>0 OR SK132>0 OR SK133>0 OR SK135>0 OR (SK134>0 OR SK136>0) OR SK137>0 OR SK138>0 OR SK139>0 OR SK140>0 OR SK141>0 OR SK142>0 OR SK143>0 OR SK144>0 OR SK145>0 OR SK146>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK146>0]: %TAN%+%SK146%%DARK_GREEN%bcy%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK146>0 BARBARIAN]: %YELLOW%+%SK146%%ORANGE%bcy%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK146>0 !BARBARIAN]: %TAN%+%SK146%%DARK_GREEN%bcy%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK146>0 (SK126>0 OR SK128>0 OR SK130>0 OR SK131>0 OR SK132>0 OR SK133>0 OR SK135>0 OR (SK134>0 OR SK136>0) OR SK137>0 OR SK138>0 OR SK139>0 OR SK140>0 OR SK141>0 OR SK142>0 OR SK143>0 OR SK144>0 OR SK145>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK145>0]: %TAN%+%SK145%%DARK_GREEN%isk%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK145>0 BARBARIAN]: %YELLOW%+%SK145%%ORANGE%isk%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK145>0 !BARBARIAN]: %TAN%+%SK145%%DARK_GREEN%isk%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK145>0 (SK126>0 OR SK128>0 OR SK130>0 OR SK131>0 OR SK132>0 OR SK133>0 OR SK135>0 OR (SK134>0 OR SK136>0) OR SK137>0 OR SK138>0 OR SK139>0 OR SK140>0 OR SK141>0 OR SK142>0 OR SK143>0 OR SK144>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK144>0]: %TAN%+%SK144%%DARK_GREEN%con%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK144>0 BARBARIAN]: %YELLOW%+%SK144%%ORANGE%con%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK144>0 !BARBARIAN]: %TAN%+%SK144%%DARK_GREEN%con%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK144>0 (SK126>0 OR SK128>0 OR SK130>0 OR SK131>0 OR SK132>0 OR SK133>0 OR SK135>0 OR (SK134>0 OR SK136>0) OR SK137>0 OR SK138>0 OR SK139>0 OR SK140>0 OR SK141>0 OR SK142>0 OR SK143>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK143>0]: %TAN%+%SK143%%DARK_GREEN%lat%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK143>0 BARBARIAN]: %YELLOW%+%SK143%%ORANGE%lat%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK143>0 !BARBARIAN]: %TAN%+%SK143%%DARK_GREEN%lat%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK143>0 (SK126>0 OR SK128>0 OR SK130>0 OR SK131>0 OR SK132>0 OR SK133>0 OR SK135>0 OR (SK134>0 OR SK136>0) OR SK137>0 OR SK138>0 OR SK139>0 OR SK140>0 OR SK141>0 OR SK142>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK142>0]: %TAN%+%SK142%%DARK_GREEN%fit%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK142>0 BARBARIAN]: %YELLOW%+%SK142%%ORANGE%fit%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK142>0 !BARBARIAN]: %TAN%+%SK142%%DARK_GREEN%fit%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK142>0 (SK126>0 OR SK128>0 OR SK130>0 OR SK131>0 OR SK132>0 OR SK133>0 OR SK135>0 OR (SK134>0 OR SK136>0) OR SK137>0 OR SK138>0 OR SK139>0 OR SK140>0 OR SK141>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK141>0]: %TAN%+%SK141%%DARK_GREEN%crx%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK141>0 BARBARIAN]: %YELLOW%+%SK141%%ORANGE%crx%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK141>0 !BARBARIAN]: %TAN%+%SK141%%DARK_GREEN%crx%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK141>0 (SK126>0 OR SK128>0 OR SK130>0 OR SK131>0 OR SK132>0 OR SK133>0 OR SK135>0 OR (SK134>0 OR SK136>0) OR SK137>0 OR SK138>0 OR SK139>0 OR SK140>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK140>0]: %TAN%+%SK140%%DARK_GREEN%dtr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK140>0 BARBARIAN]: %YELLOW%+%SK140%%ORANGE%dtr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK140>0 !BARBARIAN]: %TAN%+%SK140%%DARK_GREEN%dtr%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK140>0 (SK126>0 OR SK128>0 OR SK130>0 OR SK131>0 OR SK132>0 OR SK133>0 OR SK135>0 OR (SK134>0 OR SK136>0) OR SK137>0 OR SK138>0 OR SK139>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK139>0]: %TAN%+%SK139%%DARK_GREEN%stn%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK139>0 BARBARIAN]: %YELLOW%+%SK139%%ORANGE%stn%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK139>0 !BARBARIAN]: %TAN%+%SK139%%DARK_GREEN%stn%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK139>0 (SK126>0 OR SK128>0 OR SK130>0 OR SK131>0 OR SK132>0 OR SK133>0 OR SK135>0 OR (SK134>0 OR SK136>0) OR SK137>0 OR SK138>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK138>0]: %TAN%+%SK138%%DARK_GREEN%sht%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK138>0 BARBARIAN]: %YELLOW%+%SK138%%ORANGE%sht%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK138>0 !BARBARIAN]: %TAN%+%SK138%%DARK_GREEN%sht%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK138>0 (SK126>0 OR SK128>0 OR SK130>0 OR SK131>0 OR SK132>0 OR SK133>0 OR SK135>0 OR (SK134>0 OR SK136>0) OR SK137>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK137>0]: %TAN%+%SK137%%DARK_GREEN%tnt%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK137>0 BARBARIAN]: %YELLOW%+%SK137%%ORANGE%tnt%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK137>0 !BARBARIAN]: %TAN%+%SK137%%DARK_GREEN%tnt%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK137>0 (SK126>0 OR SK128>0 OR SK130>0 OR SK131>0 OR SK132>0 OR SK133>0 OR SK135>0 OR (SK134>0 OR SK136>0))]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW (SK134>0 OR SK136>0)]: %TAN%+%SK134%%DARK_GREEN%psm%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW (SK134>0 OR SK136>0) BARBARIAN]: %YELLOW%+%SK134%%ORANGE%psm%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW (SK134>0 OR SK136>0) !BARBARIAN]: %TAN%+%SK134%%DARK_GREEN%psm%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW (SK134>0 OR SK136>0) (SK126>0 OR SK128>0 OR SK130>0 OR SK131>0 OR SK132>0 OR SK133>0 OR SK135>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK135>0]: %TAN%+%SK135%%DARK_GREEN%trm%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK135>0 BARBARIAN]: %YELLOW%+%SK135%%ORANGE%trm%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK135>0 !BARBARIAN]: %TAN%+%SK135%%DARK_GREEN%trm%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK135>0 (SK126>0 OR SK128>0 OR SK130>0 OR SK131>0 OR SK132>0 OR SK133>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK133>0]: %TAN%+%SK133%%DARK_GREEN%dsw%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK133>0 BARBARIAN]: %YELLOW%+%SK133%%ORANGE%dsw%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK133>0 !BARBARIAN]: %TAN%+%SK133%%DARK_GREEN%dsw%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK133>0 (SK126>0 OR SK128>0 OR SK130>0 OR SK131>0 OR SK132>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK132>0]: %TAN%+%SK132%%DARK_GREEN%lep%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK132>0 BARBARIAN]: %YELLOW%+%SK132%%ORANGE%lep%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK132>0 !BARBARIAN]: %TAN%+%SK132%%DARK_GREEN%lep%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK132>0 (SK126>0 OR SK128>0 OR SK130>0 OR SK131>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK131>0]: %TAN%+%SK131%%DARK_GREEN%fpn%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK131>0 BARBARIAN]: %YELLOW%+%SK131%%ORANGE%fpn%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK131>0 !BARBARIAN]: %TAN%+%SK131%%DARK_GREEN%fpn%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK131>0 (SK126>0 OR SK128>0 OR SK130>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK130>0]: %TAN%+%SK130%%DARK_GREEN%hwl%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK130>0 BARBARIAN]: %YELLOW%+%SK130%%ORANGE%hwl%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK130>0 !BARBARIAN]: %TAN%+%SK130%%DARK_GREEN%hwl%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK130>0 (SK126>0 OR SK128>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK128>0]: %TAN%+%SK128%%DARK_GREEN%gem%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK128>0 BARBARIAN]: %YELLOW%+%SK128%%ORANGE%gem%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK128>0 !BARBARIAN]: %TAN%+%SK128%%DARK_GREEN%gem%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK128>0 SK126>0]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK126>0]: %TAN%+%SK126%%DARK_GREEN%bsh%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK126>0 BARBARIAN]: %YELLOW%+%SK126%%ORANGE%bsh%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK126>0 !BARBARIAN]: %TAN%+%SK126%%DARK_GREEN%bsh%NAME%%CONTINUE%
 
 ItemDisplay[NMAG !RW (SK126>0 OR SK128>0 OR SK130>0 OR SK131>0 OR SK132>0 OR SK133>0 OR SK135>0 OR (SK134>0 OR SK136>0) OR SK137>0 OR SK138>0 OR SK139>0 OR SK140>0 OR SK141>0 OR SK142>0 OR SK143>0 OR SK144>0 OR SK145>0 OR SK146>0 OR SK147>0 OR SK148>0 OR SK149>0 OR SK150>0 OR SK151>0 OR SK152>0 OR SK153>0 OR SK154>0 OR SK155>0 OR SK368>0)]: %GRAY%[%NAME%%CONTINUE%
 
 //Druid
 ItemDisplay[NMAG !RW (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0 OR SK229>0 OR SK230>0 OR SK231>0 OR SK232>0 OR SK233>0 OR SK234>0 OR SK235>0 OR SK236>0 OR SK237>0 OR SK238>0 OR SK239>0 OR SK240>0 OR SK241>0 OR SK242>0 OR SK243>0 OR SK244>0 OR SK245>0 OR SK246>0 OR SK247>0 OR SK248>0 OR SK249>0 OR SK250>0 OR SK370>0)]: %GRAY%] %NAME%%CONTINUE%
 
-ItemDisplay[NMAG !RW SK370>0]: %TAN%+%SK370%%DARK_GREEN%gst%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK370>0 DRUID]: %YELLOW%+%SK370%%ORANGE%gst%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK370>0 !DRUID]: %TAN%+%SK370%%DARK_GREEN%gst%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK370>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0 OR SK229>0 OR SK230>0 OR SK231>0 OR SK232>0 OR SK233>0 OR SK234>0 OR SK235>0 OR SK236>0 OR SK237>0 OR SK238>0 OR SK239>0 OR SK240>0 OR SK241>0 OR SK242>0 OR SK243>0 OR SK244>0 OR SK245>0 OR SK246>0 OR SK247>0 OR SK248>0 OR SK249>0 OR SK250>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK250>0]: %TAN%+%SK250%%DARK_GREEN%hrc%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK250>0 DRUID]: %YELLOW%+%SK250%%ORANGE%hrc%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK250>0 !DRUID]: %TAN%+%SK250%%DARK_GREEN%hrc%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK250>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0 OR SK229>0 OR SK230>0 OR SK231>0 OR SK232>0 OR SK233>0 OR SK234>0 OR SK235>0 OR SK236>0 OR SK237>0 OR SK238>0 OR SK239>0 OR SK240>0 OR SK241>0 OR SK242>0 OR SK243>0 OR SK244>0 OR SK245>0 OR SK246>0 OR SK247>0 OR SK248>0 OR SK249>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK249>0]: %TAN%+%SK249%%DARK_GREEN%agn%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK249>0 DRUID]: %YELLOW%+%SK249%%ORANGE%agn%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK249>0 !DRUID]: %TAN%+%SK249%%DARK_GREEN%agn%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK249>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0 OR SK229>0 OR SK230>0 OR SK231>0 OR SK232>0 OR SK233>0 OR SK234>0 OR SK235>0 OR SK236>0 OR SK237>0 OR SK238>0 OR SK239>0 OR SK240>0 OR SK241>0 OR SK242>0 OR SK243>0 OR SK244>0 OR SK245>0 OR SK246>0 OR SK247>0 OR SK248>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK248>0]: %TAN%+%SK248%%DARK_GREEN%fry%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK248>0 DRUID]: %YELLOW%+%SK248%%ORANGE%fry%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK248>0 !DRUID]: %TAN%+%SK248%%DARK_GREEN%fry%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK248>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0 OR SK229>0 OR SK230>0 OR SK231>0 OR SK232>0 OR SK233>0 OR SK234>0 OR SK235>0 OR SK236>0 OR SK237>0 OR SK238>0 OR SK239>0 OR SK240>0 OR SK241>0 OR SK242>0 OR SK243>0 OR SK244>0 OR SK245>0 OR SK246>0 OR SK247>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK247>0]: %TAN%+%SK247%%DARK_GREEN%gzy%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK247>0 DRUID]: %YELLOW%+%SK247%%ORANGE%gzy%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK247>0 !DRUID]: %TAN%+%SK247%%DARK_GREEN%gzy%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK247>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0 OR SK229>0 OR SK230>0 OR SK231>0 OR SK232>0 OR SK233>0 OR SK234>0 OR SK235>0 OR SK236>0 OR SK237>0 OR SK238>0 OR SK239>0 OR SK240>0 OR SK241>0 OR SK242>0 OR SK243>0 OR SK244>0 OR SK245>0 OR SK246>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK246>0]: %TAN%+%SK246%%DARK_GREEN%bbs%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK246>0 DRUID]: %YELLOW%+%SK246%%ORANGE%bbs%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK246>0 !DRUID]: %TAN%+%SK246%%DARK_GREEN%bbs%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK246>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0 OR SK229>0 OR SK230>0 OR SK231>0 OR SK232>0 OR SK233>0 OR SK234>0 OR SK235>0 OR SK236>0 OR SK237>0 OR SK238>0 OR SK239>0 OR SK240>0 OR SK241>0 OR SK242>0 OR SK243>0 OR SK244>0 OR SK245>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK245>0]: %TAN%+%SK245%%DARK_GREEN%tno%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK245>0 DRUID]: %YELLOW%+%SK245%%ORANGE%tno%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK245>0 !DRUID]: %TAN%+%SK245%%DARK_GREEN%tno%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK245>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0 OR SK229>0 OR SK230>0 OR SK231>0 OR SK232>0 OR SK233>0 OR SK234>0 OR SK235>0 OR SK236>0 OR SK237>0 OR SK238>0 OR SK239>0 OR SK240>0 OR SK241>0 OR SK242>0 OR SK243>0 OR SK244>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK244>0]: %TAN%+%SK244%%DARK_GREEN%vno%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK244>0 DRUID]: %YELLOW%+%SK244%%ORANGE%vno%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK244>0 !DRUID]: %TAN%+%SK244%%DARK_GREEN%vno%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK244>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0 OR SK229>0 OR SK230>0 OR SK231>0 OR SK232>0 OR SK233>0 OR SK234>0 OR SK235>0 OR SK236>0 OR SK237>0 OR SK238>0 OR SK239>0 OR SK240>0 OR SK241>0 OR SK242>0 OR SK243>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK243>0]: %TAN%+%SK243%%DARK_GREEN%shw%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK243>0 DRUID]: %YELLOW%+%SK243%%ORANGE%shw%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK243>0 !DRUID]: %TAN%+%SK243%%DARK_GREEN%shw%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK243>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0 OR SK229>0 OR SK230>0 OR SK231>0 OR SK232>0 OR SK233>0 OR SK234>0 OR SK235>0 OR SK236>0 OR SK237>0 OR SK238>0 OR SK239>0 OR SK240>0 OR SK241>0 OR SK242>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK242>0]: %TAN%+%SK242%%DARK_GREEN%hgr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK242>0 DRUID]: %YELLOW%+%SK242%%ORANGE%hgr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK242>0 !DRUID]: %TAN%+%SK242%%DARK_GREEN%hgr%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK242>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0 OR SK229>0 OR SK230>0 OR SK231>0 OR SK232>0 OR SK233>0 OR SK234>0 OR SK235>0 OR SK236>0 OR SK237>0 OR SK238>0 OR SK239>0 OR SK240>0 OR SK241>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK241>0]: %TAN%+%SK241%%DARK_GREEN%scr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK241>0 DRUID]: %YELLOW%+%SK241%%ORANGE%scr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK241>0 !DRUID]: %TAN%+%SK241%%DARK_GREEN%scr%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK241>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0 OR SK229>0 OR SK230>0 OR SK231>0 OR SK232>0 OR SK233>0 OR SK234>0 OR SK235>0 OR SK236>0 OR SK237>0 OR SK238>0 OR SK239>0 OR SK240>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK240>0]: %TAN%+%SK240%%DARK_GREEN%tsr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK240>0 DRUID]: %YELLOW%+%SK240%%ORANGE%tsr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK240>0 !DRUID]: %TAN%+%SK240%%DARK_GREEN%tsr%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK240>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0 OR SK229>0 OR SK230>0 OR SK231>0 OR SK232>0 OR SK233>0 OR SK234>0 OR SK235>0 OR SK236>0 OR SK237>0 OR SK238>0 OR SK239>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK239>0]: %TAN%+%SK239%%DARK_GREEN%fcl%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK239>0 DRUID]: %YELLOW%+%SK239%%ORANGE%fcl%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK239>0 !DRUID]: %TAN%+%SK239%%DARK_GREEN%fcl%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK239>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0 OR SK229>0 OR SK230>0 OR SK231>0 OR SK232>0 OR SK233>0 OR SK234>0 OR SK235>0 OR SK236>0 OR SK237>0 OR SK238>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK238>0]: %TAN%+%SK238%%DARK_GREEN%rbs%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK238>0 DRUID]: %YELLOW%+%SK238%%ORANGE%rbs%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK238>0 !DRUID]: %TAN%+%SK238%%DARK_GREEN%rbs%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK238>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0 OR SK229>0 OR SK230>0 OR SK231>0 OR SK232>0 OR SK233>0 OR SK234>0 OR SK235>0 OR SK236>0 OR SK237>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK237>0]: %TAN%+%SK237%%DARK_GREEN%dwf%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK237>0 DRUID]: %YELLOW%+%SK237%%ORANGE%dwf%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK237>0 !DRUID]: %TAN%+%SK237%%DARK_GREEN%dwf%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK237>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0 OR SK229>0 OR SK230>0 OR SK231>0 OR SK232>0 OR SK233>0 OR SK234>0 OR SK235>0 OR SK236>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK236>0]: %TAN%+%SK236%%DARK_GREEN%wvn%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK236>0 DRUID]: %YELLOW%+%SK236%%ORANGE%wvn%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK236>0 !DRUID]: %TAN%+%SK236%%DARK_GREEN%wvn%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK236>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0 OR SK229>0 OR SK230>0 OR SK231>0 OR SK232>0 OR SK233>0 OR SK234>0 OR SK235>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK235>0]: %TAN%+%SK235%%DARK_GREEN%cca%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK235>0 DRUID]: %YELLOW%+%SK235%%ORANGE%cca%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK235>0 !DRUID]: %TAN%+%SK235%%DARK_GREEN%cca%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK235>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0 OR SK229>0 OR SK230>0 OR SK231>0 OR SK232>0 OR SK233>0 OR SK234>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK234>0]: %TAN%+%SK234%%DARK_GREEN%fsr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK234>0 DRUID]: %YELLOW%+%SK234%%ORANGE%fsr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK234>0 !DRUID]: %TAN%+%SK234%%DARK_GREEN%fsr%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK234>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0 OR SK229>0 OR SK230>0 OR SK231>0 OR SK232>0 OR SK233>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK233>0]: %TAN%+%SK233%%DARK_GREEN%mal%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK233>0 DRUID]: %YELLOW%+%SK233%%ORANGE%mal%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK233>0 !DRUID]: %TAN%+%SK233%%DARK_GREEN%mal%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK233>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0 OR SK229>0 OR SK230>0 OR SK231>0 OR SK232>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK232>0]: %TAN%+%SK232%%DARK_GREEN%frr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK232>0 DRUID]: %YELLOW%+%SK232%%ORANGE%frr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK232>0 !DRUID]: %TAN%+%SK232%%DARK_GREEN%frr%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK232>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0 OR SK229>0 OR SK230>0 OR SK231>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK231>0]: %TAN%+%SK231%%DARK_GREEN%crv%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK231>0 DRUID]: %YELLOW%+%SK231%%ORANGE%crv%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK231>0 !DRUID]: %TAN%+%SK231%%DARK_GREEN%crv%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK231>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0 OR SK229>0 OR SK230>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK230>0]: %TAN%+%SK230%%DARK_GREEN%acb%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK230>0 DRUID]: %YELLOW%+%SK230%%ORANGE%acb%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK230>0 !DRUID]: %TAN%+%SK230%%DARK_GREEN%acb%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK230>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0 OR SK229>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK229>0]: %TAN%+%SK229%%DARK_GREEN%mtb%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK229>0 DRUID]: %YELLOW%+%SK229%%ORANGE%mtb%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK229>0 !DRUID]: %TAN%+%SK229%%DARK_GREEN%mtb%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK229>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK228>0]: %TAN%+%SK228%%DARK_GREEN%wbr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK228>0 DRUID]: %YELLOW%+%SK228%%ORANGE%wbr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK228>0 !DRUID]: %TAN%+%SK228%%DARK_GREEN%wbr%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK228>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK227>0]: %TAN%+%SK227%%DARK_GREEN%spw%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK227>0 DRUID]: %YELLOW%+%SK227%%ORANGE%spw%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK227>0 !DRUID]: %TAN%+%SK227%%DARK_GREEN%spw%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK227>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK226>0]: %TAN%+%SK226%%DARK_GREEN%oak%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK226>0 DRUID]: %YELLOW%+%SK226%%ORANGE%oak%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK226>0 !DRUID]: %TAN%+%SK226%%DARK_GREEN%oak%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK226>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK225>0]: %TAN%+%SK225%%DARK_GREEN%fst%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK225>0 DRUID]: %YELLOW%+%SK225%%ORANGE%fst%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK225>0 !DRUID]: %TAN%+%SK225%%DARK_GREEN%fst%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK225>0 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK224>0]: %TAN%+%SK224%%DARK_GREEN%lyc%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK224>0 DRUID]: %YELLOW%+%SK224%%ORANGE%lyc%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK224>0 !DRUID]: %TAN%+%SK224%%DARK_GREEN%lyc%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK224>0 (SK221>0 OR SK222>0 OR SK223>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK223>0]: %TAN%+%SK223%%DARK_GREEN%wwf%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK223>0 DRUID]: %YELLOW%+%SK223%%ORANGE%wwf%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK223>0 !DRUID]: %TAN%+%SK223%%DARK_GREEN%wwf%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK223>0 (SK221>0 OR SK222>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK222>0]: %TAN%+%SK222%%DARK_GREEN%psc%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK222>0 DRUID]: %YELLOW%+%SK222%%ORANGE%psc%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK222>0 !DRUID]: %TAN%+%SK222%%DARK_GREEN%psc%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK222>0 SK221>0]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK221>0]: %TAN%+%SK221%%DARK_GREEN%rvn%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK221>0 DRUID]: %YELLOW%+%SK221%%ORANGE%rvn%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK221>0 !DRUID]: %TAN%+%SK221%%DARK_GREEN%rvn%NAME%%CONTINUE%
 
 ItemDisplay[NMAG !RW (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0 OR SK229>0 OR SK230>0 OR SK231>0 OR SK232>0 OR SK233>0 OR SK234>0 OR SK235>0 OR SK236>0 OR SK237>0 OR SK238>0 OR SK239>0 OR SK240>0 OR SK241>0 OR SK242>0 OR SK243>0 OR SK244>0 OR SK245>0 OR SK246>0 OR SK247>0 OR SK248>0 OR SK249>0 OR SK250>0 OR SK370>0)]: %GRAY%[%NAME%%CONTINUE%
 
 //Necromancer
 ItemDisplay[NMAG !RW (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0 OR SK76>0 OR SK77>0 OR SK78>0 OR SK79>0 OR SK80>0 OR SK81>0 OR SK82>0 OR SK83>0 OR SK84>0 OR SK85>0 OR SK86>0 OR SK87>0 OR SK88>0 OR SK89>0 OR SK90>0 OR SK91>0 OR SK92>0 OR SK93>0 OR SK94>0 OR SK95>0 OR SK367>0 OR SK381>0 OR SK374>0)]: %GRAY%] %NAME%%CONTINUE%
 
-ItemDisplay[NMAG !RW SK374>0]: %TAN%+%SK374%%DARK_GREEN%cum%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK374>0 NECROMANCER]: %YELLOW%+%SK374%%ORANGE%cum%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK374>0 !NECROMANCER]: %TAN%+%SK374%%DARK_GREEN%cum%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK374>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0 OR SK76>0 OR SK77>0 OR SK78>0 OR SK79>0 OR SK80>0 OR SK81>0 OR SK82>0 OR SK83>0 OR SK84>0 OR SK85>0 OR SK86>0 OR SK87>0 OR SK88>0 OR SK89>0 OR SK90>0 OR SK91>0 OR SK92>0 OR SK93>0 OR SK94>0 OR SK95>0 OR SK367>0 OR SK381>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK381>0]: %TAN%+%SK381%%DARK_GREEN%dap%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK381>0 NECROMANCER]: %YELLOW%+%SK381%%ORANGE%dap%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK381>0 !NECROMANCER]: %TAN%+%SK381%%DARK_GREEN%dap%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK381>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0 OR SK76>0 OR SK77>0 OR SK78>0 OR SK79>0 OR SK80>0 OR SK81>0 OR SK82>0 OR SK83>0 OR SK84>0 OR SK85>0 OR SK86>0 OR SK87>0 OR SK88>0 OR SK89>0 OR SK90>0 OR SK91>0 OR SK92>0 OR SK93>0 OR SK94>0 OR SK95>0 OR SK367>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK367>0]: %TAN%+%SK367%%DARK_GREEN%bwp%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK367>0 NECROMANCER]: %YELLOW%+%SK367%%ORANGE%bwp%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK367>0 !NECROMANCER]: %TAN%+%SK367%%DARK_GREEN%bwp%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK367>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0 OR SK76>0 OR SK77>0 OR SK78>0 OR SK79>0 OR SK80>0 OR SK81>0 OR SK82>0 OR SK83>0 OR SK84>0 OR SK85>0 OR SK86>0 OR SK87>0 OR SK88>0 OR SK89>0 OR SK90>0 OR SK91>0 OR SK92>0 OR SK93>0 OR SK94>0 OR SK95>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK95>0]: %TAN%+%SK95%%DARK_GREEN%rev%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK95>0 NECROMANCER]: %YELLOW%+%SK95%%ORANGE%rev%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK95>0 !NECROMANCER]: %TAN%+%SK95%%DARK_GREEN%rev%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK95>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0 OR SK76>0 OR SK77>0 OR SK78>0 OR SK79>0 OR SK80>0 OR SK81>0 OR SK82>0 OR SK83>0 OR SK84>0 OR SK85>0 OR SK86>0 OR SK87>0 OR SK88>0 OR SK89>0 OR SK90>0 OR SK91>0 OR SK92>0 OR SK93>0 OR SK94>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK94>0]: %TAN%+%SK94%%DARK_GREEN%fgm%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK94>0 NECROMANCER]: %YELLOW%+%SK94%%ORANGE%fgm%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK94>0 !NECROMANCER]: %TAN%+%SK94%%DARK_GREEN%fgm%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK94>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0 OR SK76>0 OR SK77>0 OR SK78>0 OR SK79>0 OR SK80>0 OR SK81>0 OR SK82>0 OR SK83>0 OR SK84>0 OR SK85>0 OR SK86>0 OR SK87>0 OR SK88>0 OR SK89>0 OR SK90>0 OR SK91>0 OR SK92>0 OR SK93>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK93>0]: %TAN%+%SK93%%DARK_GREEN%bst%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK93>0 NECROMANCER]: %YELLOW%+%SK93%%ORANGE%bst%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK93>0 !NECROMANCER]: %TAN%+%SK93%%DARK_GREEN%bst%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK93>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0 OR SK76>0 OR SK77>0 OR SK78>0 OR SK79>0 OR SK80>0 OR SK81>0 OR SK82>0 OR SK83>0 OR SK84>0 OR SK85>0 OR SK86>0 OR SK87>0 OR SK88>0 OR SK89>0 OR SK90>0 OR SK91>0 OR SK92>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK92>0]: %TAN%+%SK92%%DARK_GREEN%psn%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK92>0 NECROMANCER]: %YELLOW%+%SK92%%ORANGE%psn%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK92>0 !NECROMANCER]: %TAN%+%SK92%%DARK_GREEN%psn%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK92>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0 OR SK76>0 OR SK77>0 OR SK78>0 OR SK79>0 OR SK80>0 OR SK81>0 OR SK82>0 OR SK83>0 OR SK84>0 OR SK85>0 OR SK86>0 OR SK87>0 OR SK88>0 OR SK89>0 OR SK90>0 OR SK91>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK91>0]: %TAN%+%SK91%%DARK_GREEN%lre%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK91>0 NECROMANCER]: %YELLOW%+%SK91%%ORANGE%lre%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK91>0 !NECROMANCER]: %TAN%+%SK91%%DARK_GREEN%lre%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK91>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0 OR SK76>0 OR SK77>0 OR SK78>0 OR SK79>0 OR SK80>0 OR SK81>0 OR SK82>0 OR SK83>0 OR SK84>0 OR SK85>0 OR SK86>0 OR SK87>0 OR SK88>0 OR SK89>0 OR SK90>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK90>0]: %TAN%+%SK90%%DARK_GREEN%igm%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK90>0 NECROMANCER]: %YELLOW%+%SK90%%ORANGE%igm%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK90>0 !NECROMANCER]: %TAN%+%SK90%%DARK_GREEN%igm%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK90>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0 OR SK76>0 OR SK77>0 OR SK78>0 OR SK79>0 OR SK80>0 OR SK81>0 OR SK82>0 OR SK83>0 OR SK84>0 OR SK85>0 OR SK86>0 OR SK87>0 OR SK88>0 OR SK89>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK89>0]: %TAN%+%SK89%%DARK_GREEN%ska%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK89>0 NECROMANCER]: %YELLOW%+%SK89%%ORANGE%ska%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK89>0 !NECROMANCER]: %TAN%+%SK89%%DARK_GREEN%ska%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK89>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0 OR SK76>0 OR SK77>0 OR SK78>0 OR SK79>0 OR SK80>0 OR SK81>0 OR SK82>0 OR SK83>0 OR SK84>0 OR SK85>0 OR SK86>0 OR SK87>0 OR SK88>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK88>0]: %TAN%+%SK88%%DARK_GREEN%bpr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK88>0 NECROMANCER]: %YELLOW%+%SK88%%ORANGE%bpr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK88>0 !NECROMANCER]: %TAN%+%SK88%%DARK_GREEN%bpr%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK88>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0 OR SK76>0 OR SK77>0 OR SK78>0 OR SK79>0 OR SK80>0 OR SK81>0 OR SK82>0 OR SK83>0 OR SK84>0 OR SK85>0 OR SK86>0 OR SK87>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK87>0]: %TAN%+%SK87%%DARK_GREEN%dec%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK87>0 NECROMANCER]: %YELLOW%+%SK87%%ORANGE%dec%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK87>0 !NECROMANCER]: %TAN%+%SK87%%DARK_GREEN%dec%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK87>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0 OR SK76>0 OR SK77>0 OR SK78>0 OR SK79>0 OR SK80>0 OR SK81>0 OR SK82>0 OR SK83>0 OR SK84>0 OR SK85>0 OR SK86>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK86>0]: %TAN%+%SK86%%DARK_GREEN%att%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK86>0 NECROMANCER]: %YELLOW%+%SK86%%ORANGE%att%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK86>0 !NECROMANCER]: %TAN%+%SK86%%DARK_GREEN%att%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK86>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0 OR SK76>0 OR SK77>0 OR SK78>0 OR SK79>0 OR SK80>0 OR SK81>0 OR SK82>0 OR SK83>0 OR SK84>0 OR SK85>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK85>0]: %TAN%+%SK85%%DARK_GREEN%bgm%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK85>0 NECROMANCER]: %YELLOW%+%SK85%%ORANGE%bgm%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK85>0 !NECROMANCER]: %TAN%+%SK85%%DARK_GREEN%bgm%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK85>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0 OR SK76>0 OR SK77>0 OR SK78>0 OR SK79>0 OR SK80>0 OR SK81>0 OR SK82>0 OR SK83>0 OR SK84>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK84>0]: %TAN%+%SK84%%DARK_GREEN%bsr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK84>0 NECROMANCER]: %YELLOW%+%SK84%%ORANGE%bsr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK84>0 !NECROMANCER]: %TAN%+%SK84%%DARK_GREEN%bsr%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK84>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0 OR SK76>0 OR SK77>0 OR SK78>0 OR SK79>0 OR SK80>0 OR SK81>0 OR SK82>0 OR SK83>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK83>0]: %TAN%+%SK83%%DARK_GREEN%des%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK83>0 NECROMANCER]: %YELLOW%+%SK83%%ORANGE%des%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK83>0 !NECROMANCER]: %TAN%+%SK83%%DARK_GREEN%des%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK83>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0 OR SK76>0 OR SK77>0 OR SK78>0 OR SK79>0 OR SK80>0 OR SK81>0 OR SK82>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK82>0]: %TAN%+%SK82%%DARK_GREEN%lit%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK82>0 NECROMANCER]: %YELLOW%+%SK82%%ORANGE%lit%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK82>0 !NECROMANCER]: %TAN%+%SK82%%DARK_GREEN%lit%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK82>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0 OR SK76>0 OR SK77>0 OR SK78>0 OR SK79>0 OR SK80>0 OR SK81>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK81>0]: %TAN%+%SK81%%DARK_GREEN%cnf%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK81>0 NECROMANCER]: %YELLOW%+%SK81%%ORANGE%cnf%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK81>0 !NECROMANCER]: %TAN%+%SK81%%DARK_GREEN%cnf%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK81>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0 OR SK76>0 OR SK77>0 OR SK78>0 OR SK79>0 OR SK80>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK80>0]: %TAN%+%SK80%%DARK_GREEN%skm%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK80>0 NECROMANCER]: %YELLOW%+%SK80%%ORANGE%skm%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK80>0 !NECROMANCER]: %TAN%+%SK80%%DARK_GREEN%skm%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK80>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0 OR SK76>0 OR SK77>0 OR SK78>0 OR SK79>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK79>0]: %TAN%+%SK79%%DARK_GREEN%gma%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK79>0 NECROMANCER]: %YELLOW%+%SK79%%ORANGE%gma%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK79>0 !NECROMANCER]: %TAN%+%SK79%%DARK_GREEN%gma%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK79>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0 OR SK76>0 OR SK77>0 OR SK78>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK78>0]: %TAN%+%SK78%%DARK_GREEN%bwa%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK78>0 NECROMANCER]: %YELLOW%+%SK78%%ORANGE%bwa%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK78>0 !NECROMANCER]: %TAN%+%SK78%%DARK_GREEN%bwa%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK78>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0 OR SK76>0 OR SK77>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK77>0]: %TAN%+%SK77%%DARK_GREEN%trr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK77>0 NECROMANCER]: %YELLOW%+%SK77%%ORANGE%trr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK77>0 !NECROMANCER]: %TAN%+%SK77%%DARK_GREEN%trr%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK77>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0 OR SK76>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK76>0]: %TAN%+%SK76%%DARK_GREEN%ima%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK76>0 NECROMANCER]: %YELLOW%+%SK76%%ORANGE%ima%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK76>0 !NECROMANCER]: %TAN%+%SK76%%DARK_GREEN%ima%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK76>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK75>0]: %TAN%+%SK75%%DARK_GREEN%cgm%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK75>0 NECROMANCER]: %YELLOW%+%SK75%%ORANGE%cgm%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK75>0 !NECROMANCER]: %TAN%+%SK75%%DARK_GREEN%cgm%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK75>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK74>0]: %TAN%+%SK74%%DARK_GREEN%cex%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK74>0 NECROMANCER]: %YELLOW%+%SK74%%ORANGE%cex%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK74>0 !NECROMANCER]: %TAN%+%SK74%%DARK_GREEN%cex%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK74>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK73>0]: %TAN%+%SK73%%DARK_GREEN%pdg%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK73>0 NECROMANCER]: %YELLOW%+%SK73%%ORANGE%pdg%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK73>0 !NECROMANCER]: %TAN%+%SK73%%DARK_GREEN%pdg%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK73>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK72>0]: %TAN%+%SK72%%DARK_GREEN%wkn%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK72>0 NECROMANCER]: %YELLOW%+%SK72%%ORANGE%wkn%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK72>0 !NECROMANCER]: %TAN%+%SK72%%DARK_GREEN%wkn%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK72>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK71>0]: %TAN%+%SK71%%DARK_GREEN%dvi%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK71>0 NECROMANCER]: %YELLOW%+%SK71%%ORANGE%dvi%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK71>0 !NECROMANCER]: %TAN%+%SK71%%DARK_GREEN%dvi%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK71>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK70>0]: %TAN%+%SK70%%DARK_GREEN%skw%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK70>0 NECROMANCER]: %YELLOW%+%SK70%%ORANGE%skw%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK70>0 !NECROMANCER]: %TAN%+%SK70%%DARK_GREEN%skw%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK70>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK69>0]: %TAN%+%SK69%%DARK_GREEN%sma%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK69>0 NECROMANCER]: %YELLOW%+%SK69%%ORANGE%sma%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK69>0 !NECROMANCER]: %TAN%+%SK69%%DARK_GREEN%sma%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK69>0 (SK66>0 OR SK67>0 OR SK68>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK68>0]: %TAN%+%SK68%%DARK_GREEN%bar%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK68>0 NECROMANCER]: %YELLOW%+%SK68%%ORANGE%bar%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK68>0 !NECROMANCER]: %TAN%+%SK68%%DARK_GREEN%bar%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK68>0 (SK66>0 OR SK67>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK67>0]: %TAN%+%SK67%%DARK_GREEN%tth%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK67>0 NECROMANCER]: %YELLOW%+%SK67%%ORANGE%tth%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK67>0 !NECROMANCER]: %TAN%+%SK67%%DARK_GREEN%tth%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK67>0 SK66>0]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK66>0]: %TAN%+%SK66%%DARK_GREEN%amp%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK66>0 NECROMANCER]: %YELLOW%+%SK66%%ORANGE%amp%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK66>0 !NECROMANCER]: %TAN%+%SK66%%DARK_GREEN%amp%NAME%%CONTINUE%
 
 ItemDisplay[NMAG !RW (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0 OR SK76>0 OR SK77>0 OR SK78>0 OR SK79>0 OR SK80>0 OR SK81>0 OR SK82>0 OR SK83>0 OR SK84>0 OR SK85>0 OR SK86>0 OR SK87>0 OR SK88>0 OR SK89>0 OR SK90>0 OR SK91>0 OR SK92>0 OR SK93>0 OR SK94>0 OR SK95>0 OR SK367>0 OR SK381>0 OR SK374>0)]: %GRAY%[%NAME%%CONTINUE%
 
 //Paladin
 ItemDisplay[NMAG !RW (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0 OR SK105>0 OR SK106>0 OR SK107>0 OR SK108>0 OR SK109>0 OR SK110>0 OR SK111>0 OR SK112>0 OR SK113>0 OR SK114>0 OR SK115>0 OR SK116>0 OR SK117>0 OR SK118>0 OR SK119>0 OR SK120>0 OR SK121>0 OR SK122>0 OR SK123>0 OR SK124>0 OR SK125>0 OR SK364>0 OR SK371>0 OR SK378>0)]: %GRAY%] %NAME%%CONTINUE%
 
-ItemDisplay[NMAG !RW SK378>0]: %TAN%+%SK378%%DARK_GREEN%jst%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK378>0 PALADIN]: %YELLOW%+%SK378%%ORANGE%jst%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK378>0 !PALADIN]: %TAN%+%SK378%%DARK_GREEN%jst%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK378>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0 OR SK105>0 OR SK106>0 OR SK107>0 OR SK108>0 OR SK109>0 OR SK110>0 OR SK111>0 OR SK112>0 OR SK113>0 OR SK114>0 OR SK115>0 OR SK116>0 OR SK117>0 OR SK118>0 OR SK119>0 OR SK120>0 OR SK121>0 OR SK122>0 OR SK123>0 OR SK124>0 OR SK125>0 OR SK364>0 OR SK371>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK371>0]: %TAN%+%SK371%%DARK_GREEN%hli%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK371>0 PALADIN]: %YELLOW%+%SK371%%ORANGE%hli%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK371>0 !PALADIN]: %TAN%+%SK371%%DARK_GREEN%hli%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK371>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0 OR SK105>0 OR SK106>0 OR SK107>0 OR SK108>0 OR SK109>0 OR SK110>0 OR SK111>0 OR SK112>0 OR SK113>0 OR SK114>0 OR SK115>0 OR SK116>0 OR SK117>0 OR SK118>0 OR SK119>0 OR SK120>0 OR SK121>0 OR SK122>0 OR SK123>0 OR SK124>0 OR SK125>0 OR SK364>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK364>0]: %TAN%+%SK364%%DARK_GREEN%hno%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK364>0 PALADIN]: %YELLOW%+%SK364%%ORANGE%hno%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK364>0 !PALADIN]: %TAN%+%SK364%%DARK_GREEN%hno%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK364>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0 OR SK105>0 OR SK106>0 OR SK107>0 OR SK108>0 OR SK109>0 OR SK110>0 OR SK111>0 OR SK112>0 OR SK113>0 OR SK114>0 OR SK115>0 OR SK116>0 OR SK117>0 OR SK118>0 OR SK119>0 OR SK120>0 OR SK121>0 OR SK122>0 OR SK123>0 OR SK124>0 OR SK125>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK125>0]: %TAN%+%SK125%%DARK_GREEN%slv%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK125>0 PALADIN]: %YELLOW%+%SK125%%ORANGE%slv%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK125>0 !PALADIN]: %TAN%+%SK125%%DARK_GREEN%slv%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK125>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0 OR SK105>0 OR SK106>0 OR SK107>0 OR SK108>0 OR SK109>0 OR SK110>0 OR SK111>0 OR SK112>0 OR SK113>0 OR SK114>0 OR SK115>0 OR SK116>0 OR SK117>0 OR SK118>0 OR SK119>0 OR SK120>0 OR SK121>0 OR SK122>0 OR SK123>0 OR SK124>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK124>0]: %TAN%+%SK124%%DARK_GREEN%red%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK124>0 PALADIN]: %YELLOW%+%SK124%%ORANGE%red%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK124>0 !PALADIN]: %TAN%+%SK124%%DARK_GREEN%red%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK124>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0 OR SK105>0 OR SK106>0 OR SK107>0 OR SK108>0 OR SK109>0 OR SK110>0 OR SK111>0 OR SK112>0 OR SK113>0 OR SK114>0 OR SK115>0 OR SK116>0 OR SK117>0 OR SK118>0 OR SK119>0 OR SK120>0 OR SK121>0 OR SK122>0 OR SK123>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK123>0]: %TAN%+%SK123%%DARK_GREEN%cvn%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK123>0 PALADIN]: %YELLOW%+%SK123%%ORANGE%cvn%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK123>0 !PALADIN]: %TAN%+%SK123%%DARK_GREEN%cvn%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK123>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0 OR SK105>0 OR SK106>0 OR SK107>0 OR SK108>0 OR SK109>0 OR SK110>0 OR SK111>0 OR SK112>0 OR SK113>0 OR SK114>0 OR SK115>0 OR SK116>0 OR SK117>0 OR SK118>0 OR SK119>0 OR SK120>0 OR SK121>0 OR SK122>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK122>0]: %TAN%+%SK122%%DARK_GREEN%fan%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK122>0 PALADIN]: %YELLOW%+%SK122%%ORANGE%fan%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK122>0 !PALADIN]: %TAN%+%SK122%%DARK_GREEN%fan%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK122>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0 OR SK105>0 OR SK106>0 OR SK107>0 OR SK108>0 OR SK109>0 OR SK110>0 OR SK111>0 OR SK112>0 OR SK113>0 OR SK114>0 OR SK115>0 OR SK116>0 OR SK117>0 OR SK118>0 OR SK119>0 OR SK120>0 OR SK121>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK121>0]: %TAN%+%SK121%%DARK_GREEN%foh%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK121>0 PALADIN]: %YELLOW%+%SK121%%ORANGE%foh%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK121>0 !PALADIN]: %TAN%+%SK121%%DARK_GREEN%foh%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK121>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0 OR SK105>0 OR SK106>0 OR SK107>0 OR SK108>0 OR SK109>0 OR SK110>0 OR SK111>0 OR SK112>0 OR SK113>0 OR SK114>0 OR SK115>0 OR SK116>0 OR SK117>0 OR SK118>0 OR SK119>0 OR SK120>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK120>0]: %TAN%+%SK120%%DARK_GREEN%med%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK120>0 PALADIN]: %YELLOW%+%SK120%%ORANGE%med%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK120>0 !PALADIN]: %TAN%+%SK120%%DARK_GREEN%med%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK120>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0 OR SK105>0 OR SK106>0 OR SK107>0 OR SK108>0 OR SK109>0 OR SK110>0 OR SK111>0 OR SK112>0 OR SK113>0 OR SK114>0 OR SK115>0 OR SK116>0 OR SK117>0 OR SK118>0 OR SK119>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK119>0]: %TAN%+%SK119%%DARK_GREEN%san%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK119>0 PALADIN]: %YELLOW%+%SK119%%ORANGE%san%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK119>0 !PALADIN]: %TAN%+%SK119%%DARK_GREEN%san%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK119>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0 OR SK105>0 OR SK106>0 OR SK107>0 OR SK108>0 OR SK109>0 OR SK110>0 OR SK111>0 OR SK112>0 OR SK113>0 OR SK114>0 OR SK115>0 OR SK116>0 OR SK117>0 OR SK118>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK118>0]: %TAN%+%SK118%%DARK_GREEN%hsk%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK118>0 PALADIN]: %YELLOW%+%SK118%%ORANGE%hsk%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK118>0 !PALADIN]: %TAN%+%SK118%%DARK_GREEN%hsk%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK118>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0 OR SK105>0 OR SK106>0 OR SK107>0 OR SK108>0 OR SK109>0 OR SK110>0 OR SK111>0 OR SK112>0 OR SK113>0 OR SK114>0 OR SK115>0 OR SK116>0 OR SK117>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK117>0]: %TAN%+%SK117%%DARK_GREEN%hsh%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK117>0 PALADIN]: %YELLOW%+%SK117%%ORANGE%hsh%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK117>0 !PALADIN]: %TAN%+%SK117%%DARK_GREEN%hsh%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK117>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0 OR SK105>0 OR SK106>0 OR SK107>0 OR SK108>0 OR SK109>0 OR SK110>0 OR SK111>0 OR SK112>0 OR SK113>0 OR SK114>0 OR SK115>0 OR SK116>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK116>0]: %TAN%+%SK116%%DARK_GREEN%csn%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK116>0 PALADIN]: %YELLOW%+%SK116%%ORANGE%hsw%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK116>0 !PALADIN]: %TAN%+%SK116%%DARK_GREEN%hsw%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK116>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0 OR SK105>0 OR SK106>0 OR SK107>0 OR SK108>0 OR SK109>0 OR SK110>0 OR SK111>0 OR SK112>0 OR SK113>0 OR SK114>0 OR SK115>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK115>0]: %TAN%+%SK115%%DARK_GREEN%vgr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK115>0 PALADIN]: %YELLOW%+%SK115%%ORANGE%vgr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK115>0 !PALADIN]: %TAN%+%SK115%%DARK_GREEN%vgr%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK115>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0 OR SK105>0 OR SK106>0 OR SK107>0 OR SK108>0 OR SK109>0 OR SK110>0 OR SK111>0 OR SK112>0 OR SK113>0 OR SK114>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK114>0]: %TAN%+%SK114%%DARK_GREEN%hfr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK114>0 PALADIN]: %YELLOW%+%SK114%%ORANGE%hfr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK114>0 !PALADIN]: %TAN%+%SK114%%DARK_GREEN%hfr%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK114>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0 OR SK105>0 OR SK106>0 OR SK107>0 OR SK108>0 OR SK109>0 OR SK110>0 OR SK111>0 OR SK112>0 OR SK113>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK113>0]: %TAN%+%SK113%%DARK_GREEN%ctn%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK113>0 PALADIN]: %YELLOW%+%SK113%%ORANGE%ctn%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK113>0 !PALADIN]: %TAN%+%SK113%%DARK_GREEN%ctn%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK113>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0 OR SK105>0 OR SK106>0 OR SK107>0 OR SK108>0 OR SK109>0 OR SK110>0 OR SK111>0 OR SK112>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK112>0]: %TAN%+%SK112%%DARK_GREEN%bhm%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK112>0 PALADIN]: %YELLOW%+%SK112%%ORANGE%bhm%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK112>0 !PALADIN]: %TAN%+%SK112%%DARK_GREEN%bhm%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK112>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0 OR SK105>0 OR SK106>0 OR SK107>0 OR SK108>0 OR SK109>0 OR SK110>0 OR SK111>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK111>0]: %TAN%+%SK111%%DARK_GREEN%ven%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK111>0 PALADIN]: %YELLOW%+%SK111%%ORANGE%ven%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK111>0 !PALADIN]: %TAN%+%SK111%%DARK_GREEN%ven%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK111>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0 OR SK105>0 OR SK106>0 OR SK107>0 OR SK108>0 OR SK109>0 OR SK110>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK110>0]: %TAN%+%SK110%%DARK_GREEN%rel%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK110>0 PALADIN]: %YELLOW%+%SK110%%ORANGE%rel%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK110>0 !PALADIN]: %TAN%+%SK110%%DARK_GREEN%rel%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK110>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0 OR SK105>0 OR SK106>0 OR SK107>0 OR SK108>0 OR SK109>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK109>0]: %TAN%+%SK109%%DARK_GREEN%cln%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK109>0 PALADIN]: %YELLOW%+%SK109%%ORANGE%cln%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK109>0 !PALADIN]: %TAN%+%SK109%%DARK_GREEN%cln%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK109>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0 OR SK105>0 OR SK106>0 OR SK107>0 OR SK108>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK108>0]: %TAN%+%SK108%%DARK_GREEN%bai%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK108>0 PALADIN]: %YELLOW%+%SK108%%ORANGE%bai%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK108>0 !PALADIN]: %TAN%+%SK108%%DARK_GREEN%bai%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK108>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0 OR SK105>0 OR SK106>0 OR SK107>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK107>0]: %TAN%+%SK107%%DARK_GREEN%cge%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK107>0 PALADIN]: %YELLOW%+%SK107%%ORANGE%cge%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK107>0 !PALADIN]: %TAN%+%SK107%%DARK_GREEN%cge%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK107>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0 OR SK105>0 OR SK106>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK106>0]: %TAN%+%SK106%%DARK_GREEN%zal%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK106>0 PALADIN]: %YELLOW%+%SK106%%ORANGE%zal%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK106>0 !PALADIN]: %TAN%+%SK106%%DARK_GREEN%zal%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK106>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0 OR SK105>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK105>0]: %TAN%+%SK105%%DARK_GREEN%rec%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK105>0 PALADIN]: %YELLOW%+%SK105%%ORANGE%rec%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK105>0 !PALADIN]: %TAN%+%SK105%%DARK_GREEN%rec%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK105>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK104>0]: %TAN%+%SK104%%DARK_GREEN%def%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK104>0 PALADIN]: %YELLOW%+%SK104%%ORANGE%def%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK104>0 !PALADIN]: %TAN%+%SK104%%DARK_GREEN%def%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK104>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK103>0]: %TAN%+%SK103%%DARK_GREEN%ths%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK103>0 PALADIN]: %YELLOW%+%SK103%%ORANGE%ths%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK103>0 !PALADIN]: %TAN%+%SK103%%DARK_GREEN%ths%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK103>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK102>0]: %TAN%+%SK102%%DARK_GREEN%hfr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK102>0 PALADIN]: %YELLOW%+%SK102%%ORANGE%hfr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK102>0 !PALADIN]: %TAN%+%SK102%%DARK_GREEN%hfr%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK102>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK101>0]: %TAN%+%SK101%%DARK_GREEN%hbo%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK101>0 PALADIN]: %YELLOW%+%SK101%%ORANGE%hbo%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK101>0 !PALADIN]: %TAN%+%SK101%%DARK_GREEN%hbo%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK101>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK100>0]: %TAN%+%SK100%%DARK_GREEN%ref%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK100>0 PALADIN]: %YELLOW%+%SK100%%ORANGE%ref%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK100>0 !PALADIN]: %TAN%+%SK100%%DARK_GREEN%ref%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK100>0 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK99>0]: %TAN%+%SK99%%DARK_GREEN%pra%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK99>0 PALADIN]: %YELLOW%+%SK99%%ORANGE%pra%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK99>0 !PALADIN]: %TAN%+%SK99%%DARK_GREEN%pra%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK99>0 (SK96>0 OR SK97>0 OR SK98>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK98>0]: %TAN%+%SK98%%DARK_GREEN%mgt%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK98>0 PALADIN]: %YELLOW%+%SK98%%ORANGE%mgt%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK98>0 !PALADIN]: %TAN%+%SK98%%DARK_GREEN%mgt%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK98>0 (SK96>0 OR SK97>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK97>0]: %TAN%+%SK97%%DARK_GREEN%smt%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK97>0 PALADIN]: %YELLOW%+%SK97%%ORANGE%smt%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK97>0 !PALADIN]: %TAN%+%SK97%%DARK_GREEN%smt%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK97>0 SK96>0]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK96>0]: %TAN%+%SK96%%DARK_GREEN%sac%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK96>0 PALADIN]: %YELLOW%+%SK96%%ORANGE%sac%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK96>0 !PALADIN]: %TAN%+%SK96%%DARK_GREEN%sac%NAME%%CONTINUE%
 
 ItemDisplay[NMAG !RW (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0 OR SK105>0 OR SK106>0 OR SK107>0 OR SK108>0 OR SK109>0 OR SK110>0 OR SK111>0 OR SK112>0 OR SK113>0 OR SK114>0 OR SK115>0 OR SK116>0 OR SK117>0 OR SK118>0 OR SK119>0 OR SK120>0 OR SK121>0 OR SK122>0 OR SK123>0 OR SK124>0 OR SK125>0 OR SK364>0 OR SK371>0 OR SK378>0)]: %GRAY%[%NAME%%CONTINUE%
 
 //Sorceress
 ItemDisplay[NMAG !RW (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0 OR SK50>0 OR SK51>0 OR SK52>0 OR SK53>0 OR SK54>0 OR SK55>0 OR SK56>0 OR SK57>0 OR SK58>0 OR SK59>0 OR SK60>0 OR SK61>0 OR SK62>0 OR SK63>0 OR SK64>0 OR SK65>0 OR SK369>0 OR SK383>0 OR SK376>0)]: %GRAY%] %NAME%%CONTINUE%
 
-ItemDisplay[NMAG !RW SK376>0]: %TAN%+%SK376%%DARK_GREEN%cmb%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK376>0 SORCERESS]: %YELLOW%+%SK376%%ORANGE%cmb%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK376>0 !SORCERESS]: %TAN%+%SK376%%DARK_GREEN%cmb%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK376>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0 OR SK50>0 OR SK51>0 OR SK52>0 OR SK53>0 OR SK54>0 OR SK55>0 OR SK56>0 OR SK57>0 OR SK58>0 OR SK59>0 OR SK60>0 OR SK61>0 OR SK62>0 OR SK63>0 OR SK64>0 OR SK65>0 OR SK369>0 OR SK383>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK383>0]: %TAN%+%SK383%%DARK_GREEN%lhd%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK383>0 SORCERESS]: %YELLOW%+%SK383%%ORANGE%lhd%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK383>0 !SORCERESS]: %TAN%+%SK383%%DARK_GREEN%lhd%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK383>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0 OR SK50>0 OR SK51>0 OR SK52>0 OR SK53>0 OR SK54>0 OR SK55>0 OR SK56>0 OR SK57>0 OR SK58>0 OR SK59>0 OR SK60>0 OR SK61>0 OR SK62>0 OR SK63>0 OR SK64>0 OR SK65>0 OR SK369>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK369>0]: %TAN%+%SK369%%DARK_GREEN%iba%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK369>0 SORCERESS]: %YELLOW%+%SK369%%ORANGE%iba%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK369>0 !SORCERESS]: %TAN%+%SK369%%DARK_GREEN%iba%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK369>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0 OR SK50>0 OR SK51>0 OR SK52>0 OR SK53>0 OR SK54>0 OR SK55>0 OR SK56>0 OR SK57>0 OR SK58>0 OR SK59>0 OR SK60>0 OR SK61>0 OR SK62>0 OR SK63>0 OR SK64>0 OR SK65>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK65>0]: %TAN%+%SK65%%DARK_GREEN%cma%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK65>0 SORCERESS]: %YELLOW%+%SK65%%ORANGE%cma%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK65>0 !SORCERESS]: %TAN%+%SK65%%DARK_GREEN%cma%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK65>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0 OR SK50>0 OR SK51>0 OR SK52>0 OR SK53>0 OR SK54>0 OR SK55>0 OR SK56>0 OR SK57>0 OR SK58>0 OR SK59>0 OR SK60>0 OR SK61>0 OR SK62>0 OR SK63>0 OR SK64>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK64>0]: %TAN%+%SK64%%DARK_GREEN%fob%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK64>0 SORCERESS]: %YELLOW%+%SK64%%ORANGE%fob%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK64>0 !SORCERESS]: %TAN%+%SK64%%DARK_GREEN%fob%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK64>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0 OR SK50>0 OR SK51>0 OR SK52>0 OR SK53>0 OR SK54>0 OR SK55>0 OR SK56>0 OR SK57>0 OR SK58>0 OR SK59>0 OR SK60>0 OR SK61>0 OR SK62>0 OR SK63>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK63>0]: %TAN%+%SK63%%DARK_GREEN%lma%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK63>0 SORCERESS]: %YELLOW%+%SK63%%ORANGE%lma%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK63>0 !SORCERESS]: %TAN%+%SK63%%DARK_GREEN%lma%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK63>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0 OR SK50>0 OR SK51>0 OR SK52>0 OR SK53>0 OR SK54>0 OR SK55>0 OR SK56>0 OR SK57>0 OR SK58>0 OR SK59>0 OR SK60>0 OR SK61>0 OR SK62>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK62>0]: %TAN%+%SK62%%DARK_GREEN%hyd%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK62>0 SORCERESS]: %YELLOW%+%SK62%%ORANGE%hyd%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK62>0 !SORCERESS]: %TAN%+%SK62%%DARK_GREEN%hyd%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK62>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0 OR SK50>0 OR SK51>0 OR SK52>0 OR SK53>0 OR SK54>0 OR SK55>0 OR SK56>0 OR SK57>0 OR SK58>0 OR SK59>0 OR SK60>0 OR SK61>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK61>0]: %TAN%+%SK61%%DARK_GREEN%fma%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK61>0 SORCERESS]: %YELLOW%+%SK61%%ORANGE%fma%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK61>0 !SORCERESS]: %TAN%+%SK61%%DARK_GREEN%fma%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK61>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0 OR SK50>0 OR SK51>0 OR SK52>0 OR SK53>0 OR SK54>0 OR SK55>0 OR SK56>0 OR SK57>0 OR SK58>0 OR SK59>0 OR SK60>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK60>0]: %TAN%+%SK60%%DARK_GREEN%cha%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK60>0 SORCERESS]: %YELLOW%+%SK60%%ORANGE%cha%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK60>0 !SORCERESS]: %TAN%+%SK60%%DARK_GREEN%cha%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK60>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0 OR SK50>0 OR SK51>0 OR SK52>0 OR SK53>0 OR SK54>0 OR SK55>0 OR SK56>0 OR SK57>0 OR SK58>0 OR SK59>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK59>0]: %TAN%+%SK59%%DARK_GREEN%blz%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK59>0 SORCERESS]: %YELLOW%+%SK59%%ORANGE%blz%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK59>0 !SORCERESS]: %TAN%+%SK59%%DARK_GREEN%blz%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK59>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0 OR SK50>0 OR SK51>0 OR SK52>0 OR SK53>0 OR SK54>0 OR SK55>0 OR SK56>0 OR SK57>0 OR SK58>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK58>0]: %TAN%+%SK58%%DARK_GREEN%esh%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK58>0 SORCERESS]: %YELLOW%+%SK58%%ORANGE%esh%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK58>0 !SORCERESS]: %TAN%+%SK58%%DARK_GREEN%esh%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK58>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0 OR SK50>0 OR SK51>0 OR SK52>0 OR SK53>0 OR SK54>0 OR SK55>0 OR SK56>0 OR SK57>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK57>0]: %TAN%+%SK57%%DARK_GREEN%tst%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK57>0 SORCERESS]: %YELLOW%+%SK57%%ORANGE%tst%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK57>0 !SORCERESS]: %TAN%+%SK57%%DARK_GREEN%tst%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK57>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0 OR SK50>0 OR SK51>0 OR SK52>0 OR SK53>0 OR SK54>0 OR SK55>0 OR SK56>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK56>0]: %TAN%+%SK56%%DARK_GREEN%mtr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK56>0 SORCERESS]: %YELLOW%+%SK56%%ORANGE%mtr%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK56>0 !SORCERESS]: %TAN%+%SK56%%DARK_GREEN%mtr%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK56>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0 OR SK50>0 OR SK51>0 OR SK52>0 OR SK53>0 OR SK54>0 OR SK55>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK55>0]: %TAN%+%SK55%%DARK_GREEN%gsp%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK55>0 SORCERESS]: %YELLOW%+%SK55%%ORANGE%gsp%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK55>0 !SORCERESS]: %TAN%+%SK55%%DARK_GREEN%gsp%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK55>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0 OR SK50>0 OR SK51>0 OR SK52>0 OR SK53>0 OR SK54>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK54>0]: %TAN%+%SK54%%DARK_GREEN%tel%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK54>0 SORCERESS]: %YELLOW%+%SK54%%ORANGE%tel%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK54>0 !SORCERESS]: %TAN%+%SK54%%DARK_GREEN%tel%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK54>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0 OR SK50>0 OR SK51>0 OR SK52>0 OR SK53>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK53>0]: %TAN%+%SK53%%DARK_GREEN%chl%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK53>0 SORCERESS]: %YELLOW%+%SK53%%ORANGE%chl%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK53>0 !SORCERESS]: %TAN%+%SK53%%DARK_GREEN%chl%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK53>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0 OR SK50>0 OR SK51>0 OR SK52>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK52>0]: %TAN%+%SK52%%DARK_GREEN%enf%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK52>0 SORCERESS]: %YELLOW%+%SK52%%ORANGE%enf%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK52>0 !SORCERESS]: %TAN%+%SK52%%DARK_GREEN%enf%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK52>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0 OR SK50>0 OR SK51>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK51>0]: %TAN%+%SK51%%DARK_GREEN%fwl%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK51>0 SORCERESS]: %YELLOW%+%SK51%%ORANGE%fwl%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK51>0 !SORCERESS]: %TAN%+%SK51%%DARK_GREEN%fwl%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK51>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0 OR SK50>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK50>0]: %TAN%+%SK50%%DARK_GREEN%sha%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK50>0 SORCERESS]: %YELLOW%+%SK50%%ORANGE%sha%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK50>0 !SORCERESS]: %TAN%+%SK50%%DARK_GREEN%sha%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK50>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK49>0]: %TAN%+%SK49%%DARK_GREEN%lig%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK49>0 SORCERESS]: %YELLOW%+%SK49%%ORANGE%lig%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK49>0 !SORCERESS]: %TAN%+%SK49%%DARK_GREEN%lig%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK49>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK48>0]: %TAN%+%SK48%%DARK_GREEN%nov%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK48>0 SORCERESS]: %YELLOW%+%SK48%%ORANGE%nov%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK48>0 !SORCERESS]: %TAN%+%SK48%%DARK_GREEN%nov%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK48>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK47>0]: %TAN%+%SK47%%DARK_GREEN%fba%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK47>0 SORCERESS]: %YELLOW%+%SK47%%ORANGE%fba%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK47>0 !SORCERESS]: %TAN%+%SK47%%DARK_GREEN%fba%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK47>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK46>0]: %TAN%+%SK46%%DARK_GREEN%bze%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK46>0 SORCERESS]: %YELLOW%+%SK46%%ORANGE%bze%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK46>0 !SORCERESS]: %TAN%+%SK46%%DARK_GREEN%bze%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK46>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK45>0]: %TAN%+%SK45%%DARK_GREEN%ibl%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK45>0 SORCERESS]: %YELLOW%+%SK45%%ORANGE%ibl%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK45>0 !SORCERESS]: %TAN%+%SK45%%DARK_GREEN%ibl%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK45>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK44>0]: %TAN%+%SK44%%DARK_GREEN%fno%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK44>0 SORCERESS]: %YELLOW%+%SK44%%ORANGE%fno%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK44>0 !SORCERESS]: %TAN%+%SK44%%DARK_GREEN%fno%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK44>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK43>0]: %TAN%+%SK43%%DARK_GREEN%tlk%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK43>0 SORCERESS]: %YELLOW%+%SK43%%ORANGE%tlk%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK43>0 !SORCERESS]: %TAN%+%SK43%%DARK_GREEN%tlk%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK43>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK42>0]: %TAN%+%SK42%%DARK_GREEN%stf%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK42>0 SORCERESS]: %YELLOW%+%SK42%%ORANGE%stf%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK42>0 !SORCERESS]: %TAN%+%SK42%%DARK_GREEN%stf%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK42>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK41>0]: %TAN%+%SK41%%DARK_GREEN%inf%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK41>0 SORCERESS]: %YELLOW%+%SK41%%ORANGE%inf%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK41>0 !SORCERESS]: %TAN%+%SK41%%DARK_GREEN%inf%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK41>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK40>0]: %TAN%+%SK40%%DARK_GREEN%cen%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK40>0 SORCERESS]: %YELLOW%+%SK40%%ORANGE%cen%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK40>0 !SORCERESS]: %TAN%+%SK40%%DARK_GREEN%cen%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK40>0 (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK39>0]: %TAN%+%SK39%%DARK_GREEN%ibo%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK39>0 SORCERESS]: %YELLOW%+%SK39%%ORANGE%ibo%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK39>0 !SORCERESS]: %TAN%+%SK39%%DARK_GREEN%ibo%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK39>0 (SK36>0 OR SK37>0 OR SK38>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK38>0]: %TAN%+%SK38%%DARK_GREEN%chb%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK38>0 SORCERESS]: %YELLOW%+%SK38%%ORANGE%chb%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK38>0 !SORCERESS]: %TAN%+%SK38%%DARK_GREEN%chb%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK38>0 (SK36>0 OR SK37>0)]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK37>0]: %TAN%+%SK37%%DARK_GREEN%wrm%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK37>0 SORCERESS]: %YELLOW%+%SK37%%ORANGE%wrm%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK37>0 !SORCERESS]: %TAN%+%SK37%%DARK_GREEN%wrm%NAME%%CONTINUE%
 ItemDisplay[NMAG !RW SK37>0 SK36>0]: %CONTINUE% %NAME%
 
-ItemDisplay[NMAG !RW SK36>0]: %TAN%+%SK36%%DARK_GREEN%fbo%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK36>0 SORCERESS]: %YELLOW%+%SK36%%ORANGE%fbo%NAME%%CONTINUE%
+ItemDisplay[NMAG !RW SK36>0 !SORCERESS]: %TAN%+%SK36%%DARK_GREEN%fbo%NAME%%CONTINUE%
 
 ItemDisplay[NMAG !RW (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0 OR SK50>0 OR SK51>0 OR SK52>0 OR SK53>0 OR SK54>0 OR SK55>0 OR SK56>0 OR SK57>0 OR SK58>0 OR SK59>0 OR SK60>0 OR SK61>0 OR SK62>0 OR SK63>0 OR SK64>0 OR SK65>0 OR SK369>0 OR SK383>0 OR SK376>0)]: %GRAY%[%NAME%%CONTINUE%
 
@@ -1649,9 +1855,9 @@ ItemDisplay[(fla OR flb OR brn OR scy OR pax OR 9s8 OR 9pa OR lbw OR 8lb OR sbb 
 ItemDisplay[(fla OR flb OR brn OR scy OR pax OR 9s8 OR 9pa OR lbw OR 8lb OR sbb OR swb OR am1 OR am2 OR am6) NMAG SOCK=0 (ILVL>25 AND ILVL<41)]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: %TAN%[%WHITE%4%TAN%]}%CONTINUE%
 ItemDisplay[(fla OR flb OR brn OR scy OR pax OR 9s8 OR 9pa OR lbw OR 8lb OR sbb OR swb OR am1 OR am2 OR am6) NMAG SOCK=0 ILVL>40]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: %TAN%[%WHITE%5%TAN%]}%CONTINUE%
 //varies 3/4/6
-ItemDisplay[(mau OR gma OR crs OR 9cr OR gsd OR spt OR pik OR hal OR wsc OR lbb OR lwb OR hxb OR am3 OR am4) NMAG SOCK=0 ILVL<26]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: %TAN%[%WHITE%3%TAN%]}%CONTINUE%
-ItemDisplay[(mau OR gma OR crs OR 9cr OR gsd OR spt OR pik OR hal OR wsc OR lbb OR lwb OR hxb OR am3 OR am4) NMAG SOCK=0 (ILVL>25 AND ILVL<41)]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: %TAN%[%WHITE%4%TAN%]}%CONTINUE%
-ItemDisplay[(mau OR gma OR crs OR 9cr OR gsd OR spt OR pik OR hal OR wsc OR lbb OR lwb OR hxb OR am3 OR am4) NMAG SOCK=0 ILVL>40]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: %TAN%[%WHITE%6%TAN%]}%CONTINUE%
+ItemDisplay[(mau OR gma OR crs OR 9cr OR gsd OR spt OR pik OR hal OR wsc OR lbb OR lwb OR hxb OR am3 OR am4 OR 6lb) NMAG SOCK=0 ILVL<26]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: %TAN%[%WHITE%3%TAN%]}%CONTINUE%
+ItemDisplay[(mau OR gma OR crs OR 9cr OR gsd OR spt OR pik OR hal OR wsc OR lbb OR lwb OR hxb OR am3 OR am4 OR 6lb) NMAG SOCK=0 (ILVL>25 AND ILVL<41)]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: %TAN%[%WHITE%4%TAN%]}%CONTINUE%
+ItemDisplay[(mau OR gma OR crs OR 9cr OR gsd OR spt OR pik OR hal OR wsc OR lbb OR lwb OR hxb OR am3 OR am4 OR 6lb) NMAG SOCK=0 ILVL>40]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: %TAN%[%WHITE%6%TAN%]}%CONTINUE%
 //varies 3/5/5
 ItemDisplay[wsp NMAG SOCK=0 ILVL<26]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: %TAN%[%WHITE%3%TAN%]}%CONTINUE%
 ItemDisplay[wsp NMAG SOCK=0 ILVL>25]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: %TAN%[%WHITE%5%TAN%]}%CONTINUE%
@@ -1669,8 +1875,8 @@ ItemDisplay[wst NMAG SOCK=0 ILVL>25]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: %
 //Notes about possible RuneWords
 //Chest, Head, Shield
 ItemDisplay[CHEST SOCK=2 NMAG !RW]: %NAME%{%GRAY%Prudence, Smoke, Stealth%NL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
-ItemDisplay[CHEST SOCK=3 NMAG !RW]: %NAME%{%GRAY%Peace, Principle, Rain, Treachery, Wealth%NL%Enlightenment, Gloom, Lionheart, Myth,%NL%Bone, Dragon, Duress, Enigma,%NL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
-ItemDisplay[CHEST SOCK=4 NMAG !RW]: %NAME%{%GRAY%Chains of Honor, Fortitude, Stone%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Bramble,}%CONTINUE%
+ItemDisplay[CHEST SOCK=3 NMAG !RW]: %NAME%{%GRAY%Principle, Rain, Treachery, Wealth%NL%Gloom, Hustle, Lionheart, Myth, Peace,%NL%Dragon, Duress, Enigma, Enlightenment,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Bone, }%CONTINUE%
+ItemDisplay[CHEST SOCK=4 NMAG !RW]: %NAME%{%GRAY%Fortitude, Innocence, Stone%NL%Bramble, Chains of Honor, %NL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
 ItemDisplay[(HELM OR CIRC) SOCK=2 NMAG !RW]: %NAME%{%GRAY%Lore, Nadir%NL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
 ItemDisplay[(HELM OR CIRC) SOCK=3 NMAG !RW]: %NAME%{%GRAY%Flickering Flame, Radiance, Wisdom%NL%Dream, Delirium, Ferocity,%NL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
 ItemDisplay[SHIELD SOCK=2 NMAG !RW]: %NAME%{%GRAY%Rhyme, Splendor%NL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
@@ -1720,7 +1926,7 @@ ItemDisplay[(POLEARM OR SPEAR OR JAV) SOCK=5 NMAG !RW]: %NAME%{%GRAY%Eternity, H
 //Weapons 6soc
 ItemDisplay[WEAPON SOCK=6 NMAG !RW]: %NAME%{%GRAY%Breath of the Dying, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
 ItemDisplay[(AXE OR SWORD OR (whm OR mau OR gma OR 9wh OR 9m9 OR 9gm OR 7wh OR 7m7 OR 7gm)) SOCK=6 NMAG !RW]: %NAME%{%GRAY%of the Dying, Last Wish, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Breath}%CONTINUE%
-ItemDisplay[SWORD SOCK=6 NMAG !RW]: %NAME%{%GRAY%Silence, Unbending Will%NL%Breath of the Dying, Last Wish,%NL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
+ItemDisplay[SWORD SOCK=6 NMAG !RW]: %NAME%{%GRAY%Silence, Unbending Will%NL%Breath of the Dying, Last Wish,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Asylum,}%CONTINUE%
 ItemDisplay[(whm OR mau OR gma OR 9wh OR 9m9 OR 9gm OR 7wh OR 7m7 OR 7gm) SOCK=6 NMAG !RW]: %NAME%{%GRAY%Breath of the Dying, Last Wish, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Asylum,}%CONTINUE%
 ItemDisplay[(POLEARM OR SPEAR OR JAV) SOCK=6 NMAG !RW]: %NAME%{%GRAY%Asylum, Breath of the Dying, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
 ItemDisplay[(BOW OR XBOW) SOCK=6 NMAG !RW]: %NAME%{%GRAY%Asylum, Breath of the Dying, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
@@ -1810,6 +2016,8 @@ ItemDisplay[7cr NMAG !RW !INF (SOCK=0 OR SOCK>2) ED>4]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[7cr NMAG !RW !INF SOCK=0 FILTLVL<4]: %NAME%{%NAME%}
 ItemDisplay[7cr NMAG !RW !INF SOCK>2 FILTLVL<4]: %NAME%{%NAME%}
 ItemDisplay[(72h OR 7fb OR 7gd OR 7gs OR 7ls) ETH NMAG !RW !INF !SOCK=1]: %DOT-D6%%NAME%{%NAME%}
+ItemDisplay[7gd NMAG !RW !INF !ETH (SOCK=0 OR SOCK=6) FILTLVL<4]: %NAME%{%NAME%}
+ItemDisplay[7gd NMAG !RW !INF !ETH (SOCK=0 OR SOCK=6) ED>4 FILTLVL>3]: %NAME%{%NAME%}
 //Maces
 ItemDisplay[fla NMAG !RW !INF (SOCK=0 OR SOCK>2) FILTLVL<4]: %NAME%{%NAME%}
 ItemDisplay[fla NMAG !RW !INF SOCK>3 FILTLVL>3]: %NAME%{%NAME%}
@@ -2000,7 +2208,8 @@ ItemDisplay[lax (RARE OR CRAFT OR UNI OR SET) ID SOCK=0 STAT360=0]: %NAME%{%NAME
 ItemDisplay[(lbw OR 8lb) (RARE OR CRAFT OR UNI OR SET) ID SOCK=0 STAT360=0]: %NAME%{%NAME%%NL%}%CONTINUE%
 ItemDisplay[(lbw OR 8lb) (RARE OR CRAFT OR UNI OR SET) ID SOCK=0 STAT360=0]: %NAME%{%NAME%%WHITE%After Upgrade: %TAN%[%WHITE%L:1}%CONTINUE%
 //values
-ItemDisplay[(lbw OR 8lb) (RARE OR CRAFT OR UNI OR SET) ID SOCK=0 STAT360=0]: %NAME%{%NAME%, %TAN%P%WHITE%:4}%CONTINUE%
+ItemDisplay[((lbw OR 8lb) ILVL<26) (RARE OR CRAFT OR UNI OR SET) ID SOCK=0 STAT360=0]: %NAME%{%NAME%, %TAN%P%WHITE%:%ORANGE%4%WHITE%}%CONTINUE%
+ItemDisplay[((lbw OR 8lb) ILVL>25) (RARE OR CRAFT OR UNI OR SET) ID SOCK=0 STAT360=0]: %NAME%{%NAME%, %TAN%P%WHITE%:4}%CONTINUE%
 ItemDisplay[(lbw OR 8lb) (RARE OR CRAFT OR UNI OR SET) ID SOCK=0 STAT360=0]: %NAME%{%NAME%, %RED%C%WHITE%:%ORANGE%6}%CONTINUE%
 //closer
 ItemDisplay[(lbw OR 8lb) (RARE OR CRAFT OR UNI OR SET) ID SOCK=0 STAT360=0]: %NAME%{%NAME%%TAN%]}%CONTINUE%
@@ -2070,10 +2279,10 @@ ItemDisplay[(fla OR flb OR brn OR scy OR pax OR 9s8 OR 9pa OR lbw OR 8lb OR sbb 
 ItemDisplay[(fla OR flb OR brn OR scy OR pax OR 9s8 OR 9pa OR lbw OR 8lb OR sbb OR swb OR am1 OR am2 OR am6) 1H (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0 ILVL>40]: %NAME%{%NAME%, %RED%C%WHITE%:4}%CONTINUE%
 ItemDisplay[(fla OR flb OR brn OR scy OR pax OR 9s8 OR 9pa OR lbw OR 8lb OR sbb OR swb OR am1 OR am2 OR am6) 2H (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0 ILVL>40]: %NAME%{%NAME%, %RED%C%WHITE%:5}%CONTINUE%
 //varies 3/4/6
-ItemDisplay[(mau OR gma OR crs OR 9cr OR gsd OR spt OR pik OR hal OR wsc OR lbb OR lwb OR hxb OR am3 OR am4) (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0 ILVL<26]: %NAME%{%NAME%, %RED%C%WHITE%:3}%CONTINUE%
-ItemDisplay[(mau OR gma OR crs OR 9cr OR gsd OR spt OR pik OR hal OR wsc OR lbb OR lwb OR hxb OR am3 OR am4) (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0 (ILVL>25 AND ILVL<41)]: %NAME%{%NAME%, %RED%C%WHITE%:4}%CONTINUE%
-ItemDisplay[(mau OR gma OR crs OR 9cr OR gsd OR spt OR pik OR hal OR wsc OR lbb OR lwb OR hxb OR am3 OR am4) 1H (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0 ILVL>40]: %NAME%{%NAME%, %RED%C%WHITE%:4}%CONTINUE%
-ItemDisplay[(mau OR gma OR crs OR 9cr OR gsd OR spt OR pik OR hal OR wsc OR lbb OR lwb OR hxb OR am3 OR am4) 2H (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0 ILVL>40]: %NAME%{%NAME%, %RED%C%WHITE%:6}%CONTINUE%
+ItemDisplay[(mau OR gma OR crs OR 9cr OR gsd OR spt OR pik OR hal OR wsc OR lbb OR lwb OR hxb OR am3 OR am4 OR 6lb) (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0 ILVL<26]: %NAME%{%NAME%, %RED%C%WHITE%:3}%CONTINUE%
+ItemDisplay[(mau OR gma OR crs OR 9cr OR gsd OR spt OR pik OR hal OR wsc OR lbb OR lwb OR hxb OR am3 OR am4 OR 6lb) (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0 (ILVL>25 AND ILVL<41)]: %NAME%{%NAME%, %RED%C%WHITE%:4}%CONTINUE%
+ItemDisplay[(mau OR gma OR crs OR 9cr OR gsd OR spt OR pik OR hal OR wsc OR lbb OR lwb OR hxb OR am3 OR am4 OR 6lb) 1H (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0 ILVL>40]: %NAME%{%NAME%, %RED%C%WHITE%:4}%CONTINUE%
+ItemDisplay[(mau OR gma OR crs OR 9cr OR gsd OR spt OR pik OR hal OR wsc OR lbb OR lwb OR hxb OR am3 OR am4 OR 6lb) 2H (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0 ILVL>40]: %NAME%{%NAME%, %RED%C%WHITE%:6}%CONTINUE%
 //varies 3/5/5
 ItemDisplay[wsp (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0 ILVL<26]: %NAME%{%NAME%, %RED%C%WHITE%:3}%CONTINUE%
 ItemDisplay[wsp (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0 ILVL>25]: %NAME%{%NAME%, %RED%C%WHITE%:4}%CONTINUE%
@@ -2192,6 +2401,8 @@ ItemDisplay[(clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp) (SK370>2 OR SK238>2 OR SK24
 ItemDisplay[!(ARMOR OR WEAPON OR tbk OR ibk OR (MAPTIER>0 !NMAG)) QTY>0]: %NAME% %TAN%x %WHITE%%QTY%{%NAME%}%CONTINUE%
 
 //Jewel notes
+ItemDisplay[jew STAT477=21 ]: %NAME%{%TAN%Note%WHITE%: White %BLUE%Jewel}
+ItemDisplay[jew STAT477=4 ]: %NAME%{%TAN%Note%WHITE%: %GRAY%Black %BLUE%Jewel}
 ItemDisplay[jew ID]: %NAME%{%TAN%Note%WHITE%: Cube with %GRAY%key %WHITE%to Destroy Into: %BLUE%Jewel Fragments}
 ItemDisplay[jewf ID]: %BLUE%%NAME%{%GRAY%(Stackable Jewel)%NL%%TAN%Note%WHITE%: Use Those in Cube Recipes}
 
@@ -2206,10 +2417,18 @@ ItemDisplay[wss]: %MAP-0A%%DOT-66%%NAME% %ORANGE%*{%RED%Warning%WHITE%: It can B
 ItemDisplay[iwss]: %MAP-0A%%DOT-66%%NAME% %ORANGE%*{%WHITE%Random Event to Your Map%NL%%TAN%Note%WHITE%: Use it to %PURPLE%Add %WHITE%a Guaranteed}
 ItemDisplay[scrb]: %MAP-A9%%NAME% %ORANGE%*{%RED%Group Dungeon%NL%%TAN%Note%WHITE%: Cube it with %GRAY%[%ORANGE%T3%GRAY%] %WHITE%Map to Make:}
 ItemDisplay[ubtm]: %MAP-A9%%NAME% %ORANGE%*
-ItemDisplay[imra]: %NAME% %ORANGE%*{%WHITE%Map + %GOLD%Orb %WHITE%+ %BLUE%Jewel %WHITE%+ %ORANGE%Rune>9%NL%%TAN%Note%WHITE%: Imbue White Map to %YELLOW%Rare%WHITE%:}
-ItemDisplay[rera]: %NAME% %ORANGE%*{%YELLOW%Map %WHITE%+ %GOLD%Orb %WHITE%+ Perf Gem + %ORANGE%Rune>9%NL%%TAN%Note%WHITE%: Reroll %YELLOW%Rare %WHITE%Map:}
-ItemDisplay[upma]: %NAME% %ORANGE%*{%BLUE%Map %WHITE%+ %GOLD%Orb %WHITE%+ Perf %GRAY%O %WHITE%+ %ORANGE%Rune>9%NL%%TAN%Note%WHITE%: Imbue %BLUE%Magic %WHITE%Map to %YELLOW%Rare%WHITE%:}
-ItemDisplay[imma]: %NAME% %ORANGE%*{%WHITE%Map + %GOLD%Orb %WHITE%+ %BLUE%Jewel %NL%%TAN%Note%WHITE%: Imbue White Map to %BLUE%Magic%WHITE%:}
+ItemDisplay[imra]: %NAME% %ORANGE%*{%WHITE%Map + %GOLD%Orb %WHITE%+ %BLUE%Jewel %WHITE%+ %ORANGE%Rune>9%NL%%TAN%Note%WHITE%: Imbue White Map to %YELLOW%Rare%WHITE%:}%CONTINUE%
+ItemDisplay[rera]: %NAME% %ORANGE%*{%YELLOW%Map %WHITE%+ %GOLD%Orb %WHITE%+ Perf Gem + %ORANGE%Rune>9%NL%%TAN%Note%WHITE%: Reroll %YELLOW%Rare %WHITE%Map:}%CONTINUE%
+ItemDisplay[upma]: %NAME% %ORANGE%*{%BLUE%Map %WHITE%+ %GOLD%Orb %WHITE%+ Perf %GRAY%O %WHITE%+ %ORANGE%Rune>9%NL%%TAN%Note%WHITE%: Imbue %BLUE%Magic %WHITE%Map to %YELLOW%Rare%WHITE%:}%CONTINUE%
+ItemDisplay[imma]: %NAME% %ORANGE%*{%WHITE%Map + %GOLD%Orb %WHITE%+ %BLUE%Jewel %NL%%TAN%Note%WHITE%: Imbue White Map to %BLUE%Magic%WHITE%:}%CONTINUE%
+
+ItemDisplay[(imra OR rera OR upma OR imma)]: %NAME%{%GRAY%(Skip Map to make %GOLD%Infused Orb%GRAY%)%NL%%NAME%}
+
+ItemDisplay[irra]: %NAME% %ORANGE%*{%WHITE%Map + %GOLD%Orb%NL%%TAN%Note%WHITE%: Imbue White Map to %YELLOW%Rare%WHITE%:}
+ItemDisplay[rrra]: %NAME% %ORANGE%*{%YELLOW%Map %WHITE%+ %GOLD%Orb%NL%%TAN%Note%WHITE%: Reroll %YELLOW%Rare %WHITE%Map:}
+ItemDisplay[urma]: %NAME% %ORANGE%*{%BLUE%Map %WHITE%+ %GOLD%Orb%NL%%TAN%Note%WHITE%: Imbue %BLUE%Magic %WHITE%Map to %YELLOW%Rare%WHITE%:}
+ItemDisplay[irma]: %NAME% %ORANGE%*{%WHITE%Map + %GOLD%Orb%NL%%TAN%Note%WHITE%: Imbue White Map to %BLUE%Magic%WHITE%:}
+
 ItemDisplay[scou]: %NAME% %ORANGE%*{%BLUE%M%WHITE%a%YELLOW%p %WHITE%+ %GOLD%Orb%NL%%TAN%Note%WHITE%: Imbue %BLUE%Magic%WHITE%/%YELLOW%Rare %WHITE%Map to White:}
 ItemDisplay[upmp]: %NAME% %ORANGE%*{%WHITE%3x%BLUE%M%WHITE%a%YELLOW%p %TAN%(%WHITE%Tier:%ORANGE%x%TAN%) %WHITE%+ %GOLD%Orb %WHITE%= Map %TAN%(%WHITE%Tier:%ORANGE%x%WHITE%+1%TAN%)%NL%Note%WHITE%: Upgrade Maps for higher Tier:}
 ItemDisplay[fort]: %GOLD%%NAME% %ORANGE%*{%BLUE%M%WHITE%a%YELLOW%p %WHITE%+ %GOLD%Orb%NL%%WHITE%2x Health, 2x Exp, 20% Damage, 2x Loot%NL%%TAN%Note%WHITE%: Reduces Base Density by Half, Monsters Gain:}
@@ -2220,17 +2439,15 @@ ItemDisplay[lsvl]: %BORDER-9B%%DOT-62%%GREEN%*%PURPLE%*%RED%*%TAN%*%GRAY%*      
 ItemDisplay[llmr]: %BORDER-9B%%DOT-62%%GREEN%*%PURPLE%*%RED%*%ORANGE%*%GOLD%*        %NAME%        %GOLD%*%ORANGE%*%RED%*%PURPLE%*%GREEN%*{%TAN%Note%WHITE%: %PURPLE%R%RED%A%ORANGE%R%YELLOW%E %WHITE%Item. Probably worth %YELLOW%A%ORANGE%L%RED%O%PURPLE%T}
 ItemDisplay[rkey]: %MAP-0A%%PX-62%%NAME% %RED%*
 
-//DClone Materials
-ItemDisplay[dcma]: %MAP-0A%%PX-62%%GRAY%*%RED%* %NAME% %RED%*%GRAY%*{%GRAY%(Cube with %ORANGE%Vex-Zod %GRAY%to Boost Difficulty)%NL%%RED%DO IT AT YOUR OWN RISK!%NL%%TAN%Note%WHITE%: %GRAY%You better not go in there...}
+//DClone & Rathma Materials & items
+ItemDisplay[(dcma OR rtma) STAT185=0]: %MAP-0A%%PX-62%%GRAY%*%RED%* %NAME% %RED%*%GRAY%*{%GRAY%Cube with %ORANGE%Ber-Zod %GRAY%for %BLUE%Difficulty Level +2%NL%%GRAY%Cube with %ORANGE%Vex-Sur %GRAY%for %BLUE%Difficulty Level +1%NL%%BLUE%Difficulty Level: 0 (Default)%NL%%RED%DO IT AT YOUR OWN RISK!%NL%%TAN%Note%WHITE%: %GRAY%You better not go in there...}
+ItemDisplay[(dcma OR rtma) STAT185>0]: %MAP-0A%%PX-62%%GRAY%*%RED%* %NAME% %RED%*%GRAY%*{%RED%DO IT AT YOUR OWN RISK!%NL%%TAN%Note%WHITE%: %GRAY%You better not go in there...}
 ItemDisplay[dcbl OR dcho]: %MAP-0A%%PX-62%%NAME% %RED%*{%TAN%Note%WHITE%: %RED%Diablo Clone %GRAY%walks nearby...}
 ItemDisplay[dcso]: %MAP-0A%%PX-62%%NAME% %RED%*{%TAN%Note%WHITE%: Contains Soul of %RED%Diablo Clone}
-
-//Rathma Items
 ItemDisplay[rtmf]: %MAP-0A%%PX-62%%NAME% %RED%*{%TAN%Note%WHITE%: 2x %ORANGE%Bone Fragments %WHITE%+ %GOLD%Hellfire Torch %WHITE%= %ORANGE%Trang-Oul's Jawbone}
 ItemDisplay[rtmv]: %MAP-0A%%PX-62%%NAME% %RED%*{%TAN%Note%WHITE%: %RED%Rathma %GRAY%is getting closer...}
 ItemDisplay[rtmo]: %MAP-0A%%PX-62%%NAME% %RED%*{%TAN%Note%WHITE%: %RED%Rathma %GRAY%is getting closer...}
 ItemDisplay[cm2f]: %MAP-0A%%PX-62%%ORANGE%%NAME% %RED%*{%TAN%Note%WHITE%: %RED%Rathma %GRAY%is getting closer...}
-ItemDisplay[rtma]: %MAP-0A%%PX-62%%GRAY%*%RED%* %NAME% %RED%*%GRAY%*{%GRAY%(Cube with %ORANGE%Vex-Zod %GRAY%to Boost Difficulty)%NL%%RED%DO IT AT YOUR OWN RISK!%NL%%TAN%Note%WHITE%: %GRAY%You better not go in there...}
 ItemDisplay[cwss]: %MAP-0A%%DOT-84%%NAME% %GREEN%*{%RED%Warning%WHITE%: You can actually BRICK it%NL%%TAN%Note%WHITE%: Use it to %RED%Corrupt %GOLD%Annihilus}
 ItemDisplay[rid]: %MAP-0A%%PX-62%%NAME% %RED%*
 ItemDisplay[rtp]: %MAP-0A%%PX-62%%NAME% %RED%* {%TAN%Note%WHITE%: You can use it w/o losing it in Cube recipes}
@@ -2279,7 +2496,7 @@ ItemDisplay[t38]: %NAME%{%WHITE%Immunes: %YELLOW%110%%WHITE%/%YELLOW%160% %GREEN
 ItemDisplay[t39]: %NAME%{%WHITE%Immunes: %BLUE%130% %GREEN%110% %GRAY%(%WHITE%Fire Tower: %GREEN%1000%%GRAY%)%NL%%NAME%}%CONTINUE%
 ItemDisplay[t3a]: %NAME%{%WHITE%Immunes: %YELLOW%145% %GREEN%130% %ORANGE%120%%NL%%NAME%}%CONTINUE%
 ItemDisplay[(t41 OR t42 OR t43)]: %NAME%{%WHITE%Immunes: %PURPLE%All %WHITE%Type%NAME%}%CONTINUE%
-ItemDisplay[t50 OR t51 OR t52 OR t53 OR t54 OR t55 OR t56 OR t57 OR t58 OR t59]: %NAME%{%WHITE%Immunes: %GRAY%Unknown Yet...%NAME%}%CONTINUE%
+ItemDisplay[t50 OR t51 OR t52 OR t53 OR t54 OR t55 OR t56 OR t57 OR t58 OR t59]: %NAME%{%WHITE%Immunes: %GRAY%Immune-Free Zone%NAME%}%CONTINUE%
 
 //Essences
 ItemDisplay[tes]: %PX-9D%%NAME%{%TAN%Essence %WHITE%from: %BLUE%Andariel %WHITE%or %BLUE%Duriel}
