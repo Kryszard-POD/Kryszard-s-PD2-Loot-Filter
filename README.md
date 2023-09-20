@@ -13,6 +13,21 @@ It's gonna show you almost everything which can help you during leveling process
 
 ![Kryszard-S8](https://github.com/Kryszard-POD/Kryszard-s-PD2-Loot-Filter/assets/63604590/6b5c5532-9d01-4c5d-979f-66253cef5ea5)
 
+General changes:
+
+- Info about current filter version added to Horadric Cube description,
+- Corrupted items that drop on "Warlord of Blood Map" got red stars extra highlight,
+- New "RuneWords" recipes updated on keys stacks,
+- Updated possibles RW's on Item Bases,
+- New Throwing Potions added (low tier to level 18, mid tier to level 24, high tier to level 40),
+- PD2 items now keep the same naming convention/highlights, but with different colors then LoD items,
+- Good SET parts highlights changed a little (preview on main pic),
+- +skills AutoMod's now will be highlighted in better colors for class that you play,
+- Added 0/6 sockets uneth Colossus Blade as good Asylum RW base,
+- Mirrored Jewels will show their colors in descriptions now (black/white),
+- Rathma/DClone entrance key description updated (3 tiers avaliable),
+- Some general fixes&improvements like Shadow Bow wasn't showing possible max sockets from corruption etc.,
+
 ## New QoL Feature:
 
 ![image](https://user-images.githubusercontent.com/63604590/236599499-a7b304e1-f333-4a2c-bf53-5975a1dd53f8.png)
