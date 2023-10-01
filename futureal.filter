@@ -535,7 +535,7 @@ ItemDisplay[(ARMOR OR WEAPON) NMAG (SOCK>0 OR ETH)]: %GRAY%%NAME%%CONTINUE%
 ItemDisplay[CRAFT]: %ORANGE%%NAME%%CONTINUE%
 
 //Add red "*" Stars on Corrupted items in Unique Stygian Caverns Map
-ItemDisplay[(ARMOR OR WEAPON OR (aqv OR cqv OR rin OR amu)) (MAG OR RARE OR SET OR UNI OR CRAFT) !ID MAPID=181]: %RED%*%NAME%%RED%*%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON OR (aqv OR cqv OR rin OR amu)) (MAG OR RARE OR SET OR UNI OR CRAFT) !ID (MAPID=181 OR MAPID=182)]: %RED%*%NAME%%RED%*%CONTINUE%
 
 //"Sup" for superiors, and "Inf" for inferiors
 ItemDisplay[SUP ED<5]: %WHITE%Sup %NAME%%CONTINUE%
