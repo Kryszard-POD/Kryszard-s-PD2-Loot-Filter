@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season VIII: ver 8.0.2
+//	Kryszard's PD2 Loot Filter for Season VIII: ver 8.0.3
 //
 //	twitch.tv/kryszard
 //
@@ -12,7 +12,7 @@ ItemDisplayFilterName[]: Strict Filter
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 8.0.2}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 8.0.3}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%Item Filter - More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -1930,7 +1930,8 @@ ItemDisplay[(POLEARM OR SPEAR OR JAV) SOCK=5 NMAG !RW]: %NAME%{%GRAY%Eternity, H
 //Weapons 6soc
 ItemDisplay[WEAPON SOCK=6 NMAG !RW]: %NAME%{%GRAY%Breath of the Dying, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
 ItemDisplay[(AXE OR SWORD OR (whm OR mau OR gma OR 9wh OR 9m9 OR 9gm OR 7wh OR 7m7 OR 7gm)) SOCK=6 NMAG !RW]: %NAME%{%GRAY%of the Dying, Last Wish, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Breath}%CONTINUE%
-ItemDisplay[SWORD SOCK=6 NMAG !RW]: %NAME%{%GRAY%Silence, Unbending Will%NL%Breath of the Dying, Last Wish,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Asylum,}%CONTINUE%
+ItemDisplay[SWORD 1H SOCK=6 NMAG !RW]: %NAME%{%GRAY%Silence, Unbending Will%NL%Breath of the Dying, Last Wish,%NL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
+ItemDisplay[SWORD 2H SOCK=6 NMAG !RW]: %NAME%{%GRAY%Silence, Unbending Will%NL%Breath of the Dying, Last Wish,%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Asylum,}%CONTINUE%
 ItemDisplay[(whm OR mau OR gma OR 9wh OR 9m9 OR 9gm OR 7wh OR 7m7 OR 7gm) SOCK=6 NMAG !RW]: %NAME%{%GRAY%Breath of the Dying, Last Wish, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Asylum,}%CONTINUE%
 ItemDisplay[(POLEARM OR SPEAR OR JAV) SOCK=6 NMAG !RW]: %NAME%{%GRAY%Asylum, Breath of the Dying, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
 ItemDisplay[(BOW OR XBOW) SOCK=6 NMAG !RW]: %NAME%{%GRAY%Asylum, Breath of the Dying, Silence%NL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
