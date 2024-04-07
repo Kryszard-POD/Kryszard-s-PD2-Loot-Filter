@@ -9,6 +9,48 @@ I am trying to make one filter, which will suit most players needs.
 Filter is good for both: leveling and endgame experience.  
 It's gonna show you almost everything which can help you during leveling process at early stages of your new characters, and became more strict after you hit **lvl 80+** (select your lootfilter level in-game settings to adjust it more for your needs)
 
+## Season IX Update:
+
+![S9 update](https://github.com/Kryszard-POD/Kryszard-s-PD2-Loot-Filter/assets/63604590/6ebcd8be-9e69-4604-ac2a-61ae16b46562)
+
+This update is one of the biggest in history, even if it will not feel very different from your - gamers perspective. Most of the code has been re-visited and optimised/adjusted even more then it was before. There is still some places for improvements, so I'll do my best to provide you the best quality filter I can - Bringing some more updates during the season.
+
+Changelog:
+- Item descriptions adjusted more by using new %CL% keyword instead of %NL% - This one is to prevent extra empty description lines to appear when they shouldn't - It never was an issue in my filter, but thanks to it I was able to remove ~40 lines with conditions where description line should break and when not. Now it's much easier to mange it (Big thanks to BetweenWalls and Kanzeon for that!),
+- New Filter Level implemented - "Strict Filter - w/o Potions" - This one is set to be like regular "Strict Filter" but in addition it's hiding all health and mana potions, leaving just Juvies,
+- Difference between "Strict Filters" and "Max-Strict Filter" is more noticable now - Mostly when it comes to RW bases and Chat Notifies about them,
+- Possible Unique items will be listed on Gheed's Event screen from now (divided into Tier Levels - Norm/Exc/Elite),
+- Added Notes about Guaranteed Stats of Crafted Items on both: Craft Infusions and Keys stacks with Quantity between 20-26,
+- Visual Changes: 
+	- PD2 "Pick Up"-Tagged items will be displayed with correct "*-stars" colors now (It should be like this from previous season, but I didn't notice it stays with same coloring as LoD items).
+	- Added better highlights for Unique Horadric Tomes and Skeleton Key,
+	- Superior items with ED tags color changed to New avaliable options:
+		- Weapons - "Sup" color changed from RED to CORAL (light red) - Percentage values on high-tier items will stay in RED.
+		- Armors - "Sup" color changed from BLUE to TEAL (light blue-ish) - Percentage values on high-tier items will stay in BLUE.
+	- Removed displayed Quantity on Quivers - Those will be displayed as "x  Arrows  x" if MAG or RARE from now on.
+	- +SKILLS staffmods will be highlighted a little bit more when roll with max +3 value (+1/+2 will appear with TAN "+" sign and LIGHT_GRAY "number value", while +3 will be displayed with ORANGE "+" sign and "YELLOW" "number value".
+	- 3-signs Skill Names Abbreviations color when it match your class changed from ORANGE to SAGE (light green). If those are for other classes it will stay in DARK_GREEN as before. This will work also with Daggers, which can be spawn with both: Necromancer and Assassin skills at the same time.
+- Fixed an issue, where Holy Freeze and Holy Fire skills has the same "HFR" abbreviations - Holy Freeze switched to "HFZ" from now on,
+- Fixed an issue with abbreviation of "Poison Strike" skill which is "PST" now - It was "PDG" as Poison Dagger before,
+- Goblin Toes highlighting reduced a little (but still noticable),
+- Added better highlighting for good SET Etheral Weapons,
+- Added chat notify for Skull Collector,
+- White Etheral Throwing Weapons for Imbue/Crafting will be shown up to Filter Level 3 with chat notify up to Filter Level 2 (or up to Filter Level 5 with chat notify up to Filter Level 3 when your class is Barbarian) - Which means those are no longer visible on Strict Filters,
+- Etheral Magic Necro Heads removed for filter levels 2+,
+- MAG/RARE Daggers added since those can roll Staffmods now (with similar logic between filter levels as other staffmods-able items),
+- Grand Matron Bows and its lower tiers will be displayed on all Filter levels now (caused by popularity of safety bows crafts),
+- Highlights with DARK_GREEN *-star and chat notify of non-superior high-def RW bases removed (caused by general Defense values on body armors change),
+- NMAG Chest Armors considered as good RW bases will be shown as all Elite Tiers - with adjusted +ED Values and Chat Notify messages between filter levels - also as few NORM and EXC tier bases if someone is hunting not only for highest DEF values but also their favourite skin options,
+- Added a Note on RW Bases about Aviability of RW Recipes on Keys Stacks,
+- Whole RuneWord Section has been re-visited and re-wrote to adjust filtering experience even more - There was too many changes to list in this small note, but trust me - It should be even better now! (if you will notice that some bases are missing, or some of them should be moved to lower filter levels let me know),
+- Added a Dynamic Note with info that 2 x Half Freeze Duration sources will provide Cannot Be Frozen - It will help you to track your currently using Anti-Freezing sources.
+- Added "notice me" Notes on Combo of 250+ED weapons with any Amp CTC proc,
+- Added "notice me" Notes on High Lower Resist CTC proc items,
+- "Notice me" notes adjusted to be less distractive on some common things like just CTC items or items with Charges,
+- Adjusted descriptions of some items like Pandemonium Talisman, Skeleton Key, Perfect Diamonds (with info about new Brilliant Crafting Recipes), infos about presence of Immune Monsters on maps, and few other things,
+- Health/Mana Potions Notes about Crafting recipes moved to Chipped/Square Gems instead,
+- Some other adjustments and fixes here and there... :)
+
 ## Season VIII Update:
 
 ![Kryszard-S8](https://github.com/Kryszard-POD/Kryszard-s-PD2-Loot-Filter/assets/63604590/6b5c5532-9d01-4c5d-979f-66253cef5ea5)
@@ -158,10 +200,12 @@ Filter is pretty much the same for characters below lvl 80, at 80+ diffrences ar
 - Runes: Only Lem [20]+ will drop chat notify
 
 ## in-game settings:
-![in-game settings](https://cdn.discordapp.com/attachments/733819970127003688/989897933296136192/LootfilterSettings.png "in-game settings")
+![image](https://github.com/Kryszard-POD/Kryszard-s-PD2-Loot-Filter/assets/63604590/7f19090c-4261-4bb9-9cc5-a8ff6e06a8c6)
+
 
 # Donate/Support:
-![Donate](https://panels-images.twitch.tv/panel-43229886-image-184ad605-0cff-419a-a0cc-665154478819 "Donation Image")  
+![image](https://github.com/Kryszard-POD/Kryszard-s-PD2-Loot-Filter/assets/63604590/cde75db6-48a6-4d47-9732-b123e71ce784)
+
 ### **You don't know what to do with your hard earnd money?**
 
 I've got solution to your problem! Waste them by supporting me and my work! Every donations are more then welcome :)  
