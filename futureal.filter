@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season IX: ver 9.0.3
+//	Kryszard's PD2 Loot Filter for Season IX: ver 9.0.4
 //  Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -14,7 +14,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 9.0.3}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 9.0.4}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%Item Filter %WHITE%- %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -3089,6 +3089,7 @@ ItemDisplay[MAPTIER=5]: %GRAY%[%ORANGE%T3%GRAY%] %NAME% %ORANGE%*%CONTINUE%
 ItemDisplay[MAPTIER>0 (!ID OR NMAG) !UNI]: %MAP-7F%%NAME%%CONTINUE%
 ItemDisplay[MAPTIER>0 !ID UNI]: %MAP-7F%%DOT-68%%NAME%%CONTINUE%
 ItemDisplay[MAPTIER~1-3]: %NAME%{%TAN%Note%WHITE%: To Modify Maps visit Anya}%CONTINUE%
+ItemDisplay[MAPTIER~1-4]: %NAME%{%WHITE%Cube 3 Maps of Same Tier = Random Map of Same Tier%CL%%NAME%}%CONTINUE%
 ItemDisplay[MAPTIER~1-3 MAG]: %NAME%{%WHITE%To Reroll: Cube with 3 %TAN%x %WHITE%Perf %GRAY%O%NL%%NAME%}%CONTINUE%
 ItemDisplay[t60 OR t61 OR t62 OR t63 OR t64 OR t65 OR t66 OR t67 OR t68 OR t69]: %NAME%{%GRAY%(without PermaDeath on HC)%NL%You can challenge other Players here%NL%%TAN%Note%WHITE%: PvP Arena}%CONTINUE%
 
