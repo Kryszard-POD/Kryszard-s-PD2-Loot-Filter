@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season IX: ver 9.0.4
+//	Kryszard's PD2 Loot Filter for Season IX: ver 9.0.5
 //  Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -14,7 +14,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 9.0.4}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 9.0.5}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%Item Filter %WHITE%- %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -2762,7 +2762,7 @@ ItemDisplay[SIN (MAG OR RARE OR CRAFT) ((TABSK49>1 OR CLSK6>1) AND SK278>1) STAT
 //
 ItemDisplay[SIN (MAG OR RARE OR CRAFT) ((TABSK49>1 OR CLSK6>1) AND SK273>1) STAT360=0]: %NAME%{%NAME%%CL%%RED%***   %GREEN%Mind Blast Claws%RED%   ***%CL%%GREEN%***%RED%***   %TAN%Note%WHITE%: Notice me, That's me:   %RED%***%GREEN%***}
 //
-ItemDisplay[SIN (MAG OR RARE OR CRAFT) (TABSK50>2 OR ((TABSK50>1 OR CLSK6>1) AND (SK280>1 OR SK265>1))) STAT360=0]: %NAME%{%NAME%%CL%%RED%***   %GREEN%Martial Arts Claws%RED%   ***%CL%%GREEN%***%RED%***   %TAN%Note%WHITE%: Notice me, That's me:   %RED%***%GREEN%***}
+ItemDisplay[SIN (MAG OR RARE OR CRAFT) (TABSK50>2 OR ((TABSK50>1 OR CLSK6>1) AND (SK280>1 OR SK265>1 OR SK274>1))) STAT360=0]: %NAME%{%NAME%%CL%%RED%***   %GREEN%Martial Arts Claws%RED%   ***%CL%%GREEN%***%RED%***   %TAN%Note%WHITE%: Notice me, That's me:   %RED%***%GREEN%***}
 //
 ItemDisplay[SIN (MAG OR RARE OR CRAFT) (TABSK48>2 OR (((TABSK48>1 OR CLSK6>1) OR ((TABSK48>0 OR CLSK6>0) AND ALLSK>0)) AND (SK366>1 OR SK276>1 OR SK272>1 OR SK271>1 OR SK262>1))) STAT360=0]: %NAME%{%NAME%%CL%%RED%***   %GREEN%Traps Claws%RED%   ***%CL%%GREEN%***%RED%***   %TAN%Note%WHITE%: Notice me, That's me:   %RED%***%GREEN%***}
 //
@@ -2786,7 +2786,7 @@ ItemDisplay[NEC (MAG OR RARE OR CRAFT) ((TABSK16>2 AND SK381>1) OR ((TABSK16>1 O
 //
 ItemDisplay[WAND (MAG OR RARE OR CRAFT) ((TABSK17>2 AND (SK92>1 OR SK83>1)) OR ((TABSK17>1 OR CLSK2>1) AND (SK92>2 OR SK83>2))) STAT360=0]: %NAME%{%NAME%%CL%%RED%***   %GREEN%Poison Spells Wand%RED%   ***%CL%%GREEN%***%RED%***   %TAN%Note%WHITE%: Notice me, That's me:   %RED%***%GREEN%***}
 //
-ItemDisplay[NEC (MAG OR RARE OR CRAFT) ((TABSK17>2 AND (SK92>1 OR SK83>1)) OR ((TABSK17>1 OR CLSK2>1) AND (SK92>2 OR SK83>2))) STAT360=0]: %NAME%{%NAME%%CL%%RED%***   %GREEN%Poison Spells Head%RED%   ***%CL%%GREEN%***%RED%***   %TAN%Note%WHITE%: Notice me, That's me:   %RED%***%GREEN%**}
+ItemDisplay[NEC (MAG OR RARE OR CRAFT) ((TABSK17>2 AND (SK92>1 OR SK83>1)) OR ((TABSK17>1 OR CLSK2>1) AND (SK92>2 OR SK83>2 OR SK73>2))) STAT360=0]: %NAME%{%NAME%%CL%%RED%***   %GREEN%Poison Spells Head%RED%   ***%CL%%GREEN%***%RED%***   %TAN%Note%WHITE%: Notice me, That's me:   %RED%***%GREEN%**}
 //
 ItemDisplay[WAND (MAG OR RARE OR CRAFT) ((TABSK17>2 AND (SK93>1 OR SK84>1 OR SK67>1)) OR ((TABSK17>1 OR CLSK2>1) AND (SK93>2 OR SK84>2 OR SK67>2))) STAT360=0]: %NAME%{%NAME%%CL%%RED%***   %GREEN%Bone Spells Wand%RED%   ***%CL%%GREEN%***%RED%***   %TAN%Note%WHITE%: Notice me, That's me:   %RED%***%GREEN%***}
 //
@@ -2887,12 +2887,12 @@ ItemDisplay[(7dg OR 7di OR 7bl) !ETH !INF NMAG !RW !SOCK=1 ED>4 FILTLVL<4]: %NAM
 ItemDisplay[(kri OR 9kr OR 7kr) (SK265>2 AND SK275>0) !ETH !INF NMAG !RW !SOCK=1~2]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[(kri OR 9kr OR 7kr) (SK265>2 OR SK73>2) !ETH !INF NMAG !RW !SOCK=1~2]: %NAME%{%NAME%}
 //Axes
-ItemDisplay[(7wa OR 72a) ETH !INF NMAG !RW !SOCK=1~4]: %DOT-D6%%NAME%{%NAME%}
-ItemDisplay[(7wa OR 72a) ETH !INF NMAG !RW !SOCK=1 ED=15]: %DOT-D6%%NAME%{%NAME%}
-ItemDisplay[(7wa OR 72a) ETH !INF NMAG !RW !SOCK=1]: %DOT-D6%%TIER-3%%NAME%{%NAME%}
-ItemDisplay[(7wa OR 72a) !ETH !INF NMAG !RW !SOCK=1 ED=15]: %DOT-D6%%NAME%{%NAME%}
-ItemDisplay[(7wa OR 72a) !ETH !INF NMAG !RW !SOCK=1 ED>4 FILTLVL<6]: %NAME%{%NAME%}
-ItemDisplay[(7wa OR 72a) !ETH !INF NMAG !RW !SOCK=1 FILTLVL<4]: %NAME%{%NAME%}
+ItemDisplay[(7wa OR 72a OR 7mp) ETH !INF NMAG !RW !SOCK=1~4]: %DOT-D6%%NAME%{%NAME%}
+ItemDisplay[(7wa OR 72a OR 7mp) ETH !INF NMAG !RW !SOCK=1 ED=15]: %DOT-D6%%NAME%{%NAME%}
+ItemDisplay[(7wa OR 72a OR 7mp) ETH !INF NMAG !RW !SOCK=1]: %DOT-D6%%TIER-3%%NAME%{%NAME%}
+ItemDisplay[(7wa OR 72a OR 7mp) !ETH !INF NMAG !RW !SOCK=1 ED=15]: %DOT-D6%%NAME%{%NAME%}
+ItemDisplay[(7wa OR 72a OR 7mp) !ETH !INF NMAG !RW !SOCK=1 ED>4 FILTLVL<6]: %NAME%{%NAME%}
+ItemDisplay[(7wa OR 72a OR 7mp) !ETH !INF NMAG !RW !SOCK=1 FILTLVL<4]: %NAME%{%NAME%}
 ItemDisplay[(7bt OR 7ba OR 7ga OR 7gi OR 7la) !INF ETH NMAG !RW (SOCK=0 OR SOCK=5) ED=15]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[(7bt OR 7ba OR 7ga OR 7gi OR 7la) !INF ETH NMAG !RW (SOCK=0 OR SOCK=5) ED>4]: %DOT-D6%%TIER-5%%NAME%{%NAME%}
 ItemDisplay[(7bt OR 7ba OR 7ga OR 7gi OR 7la) !INF ETH NMAG !RW (SOCK=0 OR SOCK=5) FILTLVL<6]: %DOT-D6%%TIER-2%%NAME%{%NAME%}
@@ -3106,7 +3106,7 @@ ItemDisplay[t22]: %NAME%{%WHITE%Immunes: %RED%125% %YELLOW%105%%NL%%NAME%}%CONTI
 ItemDisplay[t23]: %NAME%{%WHITE%Immunes: %RED%130% %YELLOW%100%%NL%%NAME%}%CONTINUE%
 ItemDisplay[t24]: %NAME%{%WHITE%Immunes: %YELLOW%120% %GREEN%110% %GOLD%105%%NL%%NAME%}%CONTINUE%
 ItemDisplay[t25]: %NAME%{%WHITE%Immunes: %YELLOW%135% %GREEN%125%%NL%%NAME%}%CONTINUE%
-ItemDisplay[t26]: %NAME%{%WHITE%Immunes: %GREEN%135% %GOLD%100%%NL%%NAME%}%CONTINUE%
+ItemDisplay[t26]: %NAME%{%WHITE%Immunes: %BLUE%130% %GREEN%135% %GOLD%100%%NL%%NAME%}%CONTINUE%
 ItemDisplay[t31]: %NAME%{%WHITE%Immunes: %BLUE%180% %GREEN%130% %ORANGE%100%%NL%%NAME%}%CONTINUE%
 ItemDisplay[t32]: %NAME%{%WHITE%Immunes: %BLUE%130% %YELLOW%130%%NL%%NAME%}%CONTINUE%
 ItemDisplay[t33]: %NAME%{%WHITE%Immunes: %RED%120% %BLUE%110%%NL%%NAME%}%CONTINUE%
@@ -3278,7 +3278,8 @@ ItemDisplay[BOW NMAG !RW TABSK0>0 (CLVL<41 FILTLVL<4)]: %NAME%{%NAME%}
 ItemDisplay[BOW NMAG !RW TABSK0>2 (FILTLVL<2 OR (CLVL<80 AND (FILTLVL>1 AND FILTLVL<4)))]: %NAME%{%NAME%}
 ItemDisplay[(am5 OR ama OR amf) NMAG !RW TABSK2>0 (CLVL<41 FILTLVL<4)]: %NAME%{%NAME%}
 ItemDisplay[(am5 OR ama OR amf) NMAG !RW TABSK2>2 (FILTLVL<2 OR (CLVL<80 AND (FILTLVL>1 AND FILTLVL<4)))]: %NAME%{%NAME%}
-ItemDisplay[(ARMOR OR WEAPON) !INF (CLVL<31 FILTLVL<4)]: %NAME%{%NAME%}
+ItemDisplay[(GLOVES OR BOOTS OR BELT) NMAG !INF (CLVL<19 FILTLVL<4)]: %NAME%{%NAME%}
+ItemDisplay[((CHEST OR HELM OR CIRC OR SHIELD) OR WEAPON) !INF (CLVL<31 FILTLVL<4)]: %NAME%{%NAME%}
 ItemDisplay[(ARMOR OR WEAPON) (MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109) !leg FILTLVL>0]: %NAME%{%PURPLE%Decrease Your Filter Level in Settings to Display It All The Time%NL%%WHITE%Outside the Town/In the Fight Field it is Going to be %RED%HIDDEN%NL%WARNING%WHITE%: At Current Filter LVL this item is shown %RED%ONLY %WHITE%in Town%CL%%NAME%}
 ItemDisplay[(ARMOR OR WEAPON) !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109) !leg FILTLVL>0]: {%PURPLE%Decrease Your Filter Level in Settings to Display It All The Time%NL%%WHITE%Outside the Town/In the Fight Field it is Going to be %RED%HIDDEN%NL%WARNING%WHITE%: At Current Filter LVL this item is shown %RED%ONLY %WHITE%in Town%CL%%NAME%}
 ItemDisplay[(ARMOR OR WEAPON) INF FILTLVL>0]: {%NAME%}
