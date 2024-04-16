@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season IX: ver 9.0.5
+//	Kryszard's PD2 Loot Filter for Season IX: ver 9.0.6
 //  Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -14,7 +14,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 9.0.5}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 9.0.6}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%Item Filter %WHITE%- %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -2750,7 +2750,7 @@ ItemDisplay[(CHARSTAT118>1 AND CHARSTAT153=0) STAT118=1 EQUIPPED]: %NAME%{%TAN%N
 ItemDisplay[CHARSTAT153>0 STAT118=1 EQUIPPED]: %NAME%{%TAN%Note%WHITE%: %BLUE%Cannot Be Frozen %WHITE%Activated Elsewhere%CL%%NAME%}%CONTINUE%
 
 //Shop Hunting / Good Items Highlighting
-ItemDisplay[WEAPON (MAG OR RARE OR CRAFT) (ED>249 AND (SUFFIX=901 OR SUFFIX=902 OR SUFFIX=903)) STAT360=0]: %NAME%{%NAME%%CL%%RED%***   %GREEN%High ED %ORANGE%High Amp %GREEN%CTC Weapon%RED%   ***%CL%%GREEN%***%RED%***   %TAN%Note%WHITE%: Notice me, That's me:   %RED%***%GREEN%***}
+ItemDisplay[WEAPON (MAG OR RARE OR CRAFT) (ED>249 AND (SUFFIX=662 OR SUFFIX=898 OR SUFFIX=899)) STAT360=0]: %NAME%{%NAME%%CL%%RED%***   %GREEN%High ED %ORANGE%High Amp %GREEN%CTC Weapon%RED%   ***%CL%%GREEN%***%RED%***   %TAN%Note%WHITE%: Notice me, That's me:   %RED%***%GREEN%***}
 //
 ItemDisplay[WEAPON (MAG OR RARE OR CRAFT) ED>399 STAT360=0]: %NAME%{%NAME%%CL%%RED%***   %GREEN%High ED Weapon%RED%   ***%CL%%GREEN%***%RED%***   %TAN%Note%WHITE%: Notice me, That's me:   %RED%***%GREEN%***}
 //
@@ -2796,7 +2796,7 @@ ItemDisplay[STAFF (MAG OR RARE OR CRAFT) CHSK54>0 STAT360=0]: %NAME%{%NAME%%CL%%
 //
 ItemDisplay[WEAPON (MAG OR RARE OR CRAFT) (SUFFIX=909 OR SUFFIX=912) STAT360=0]: %NAME%{%NAME%%CL%%RED%***   %LIGHT_GRAY%High %PURPLE%Lower Resist %GREEN%CTC %LIGHT_GRAY%Proc%RED%   ***%CL%%DARK_GREEN%*%GRAY%*   %TAN%Note%WHITE%: Notice me, That's me:   %GRAY%*%DARK_GREEN%*}
 //
-ItemDisplay[WEAPON (MAG OR RARE OR CRAFT) (SUFFIX=903 OR SUFFIX=906) STAT360=0]: %NAME%{%NAME%%CL%%RED%***   %LIGHT_GRAY%High %ORANGE%Amplify Damage %GREEN%CTC %LIGHT_GRAY%Proc%RED%   ***%CL%%DARK_GREEN%*%GRAY%*   %TAN%Note%WHITE%: Notice me, That's me:   %GRAY%*%DARK_GREEN%*}
+ItemDisplay[WEAPON (MAG OR RARE OR CRAFT) (SUFFIX=899 OR SUFFIX=906) STAT360=0]: %NAME%{%NAME%%CL%%RED%***   %LIGHT_GRAY%High %ORANGE%Amplify Damage %GREEN%CTC %LIGHT_GRAY%Proc%RED%   ***%CL%%DARK_GREEN%*%GRAY%*   %TAN%Note%WHITE%: Notice me, That's me:   %GRAY%*%DARK_GREEN%*}
 //
 ItemDisplay[WEAPON (MAG OR RARE OR CRAFT) (SUFFIX=598 OR SUFFIX=599) STAT360=0]: %NAME%{%NAME%%CL%%RED%***   %DARK_GREEN%Lower Resist Charges%RED%   ***%CL%%DARK_GREEN%*%GRAY%*    %TAN%Note%WHITE%: Notice me, That's me:   %GRAY%*%DARK_GREEN%*}
 //
