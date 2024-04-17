@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season IX: ver 9.0.6
+//	Kryszard's PD2 Loot Filter for Season IX: ver 9.0.7
 //  Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -14,7 +14,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 9.0.6}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 9.0.7}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%Item Filter %WHITE%- %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -2765,6 +2765,8 @@ ItemDisplay[SIN (MAG OR RARE OR CRAFT) ((TABSK49>1 OR CLSK6>1) AND SK273>1) STAT
 ItemDisplay[SIN (MAG OR RARE OR CRAFT) (TABSK50>2 OR ((TABSK50>1 OR CLSK6>1) AND (SK280>1 OR SK265>1 OR SK274>1))) STAT360=0]: %NAME%{%NAME%%CL%%RED%***   %GREEN%Martial Arts Claws%RED%   ***%CL%%GREEN%***%RED%***   %TAN%Note%WHITE%: Notice me, That's me:   %RED%***%GREEN%***}
 //
 ItemDisplay[SIN (MAG OR RARE OR CRAFT) (TABSK48>2 OR (((TABSK48>1 OR CLSK6>1) OR ((TABSK48>0 OR CLSK6>0) AND ALLSK>0)) AND (SK366>1 OR SK276>1 OR SK272>1 OR SK271>1 OR SK262>1))) STAT360=0]: %NAME%{%NAME%%CL%%RED%***   %GREEN%Traps Claws%RED%   ***%CL%%GREEN%***%RED%***   %TAN%Note%WHITE%: Notice me, That's me:   %RED%***%GREEN%***}
+//
+ItemDisplay[SIN (MAG OR RARE OR CRAFT) (TABSK48>2 OR (((TABSK48>1 OR CLSK6>1) OR ((TABSK48>0 OR CLSK6>0) AND ALLSK>0)) AND (SK257>1 OR SK266>1 OR SK277>1))) STAT360=0]: %NAME%{%NAME%%CL%%RED%***   %ORANGE%Blade Claws%RED%   ***%CL%%GREEN%***%RED%***   %TAN%Note%WHITE%: Notice me, That's me:   %RED%***%GREEN%***}
 //
 ItemDisplay[GLOVES (MAG OR RARE OR CRAFT) (TABSK0>2 OR TABSK2>2 OR TABSK50>2) AND IAS>19 STAT360=0]: %NAME%{%NAME%%CL%%RED%***   %GREEN%3sk, 20ias Gloves%RED%   ***%CL%%GREEN%***%RED%***   %TAN%Note%WHITE%: Notice me, That's me:   %RED%***%GREEN%***}
 //
