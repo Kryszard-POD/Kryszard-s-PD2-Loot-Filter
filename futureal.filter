@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season IX: ver 9.0.7
+//	Kryszard's PD2 Loot Filter for Season IX: ver 9.0.8
 //  Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -14,7 +14,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 9.0.7}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 9.0.8}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%Item Filter %WHITE%- %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -2443,7 +2443,7 @@ ItemDisplay[DIN SOCK=4 NMAG !RW]: %NAME%{%GRAY%Exile, Phoenix, Shattered Wall, S
 //Weapons 2soc
 ItemDisplay[WEAPON !(BOW OR XBOW OR SOR OR leg) SOCK=2 NMAG !RW]: %NAME%{%GRAY%Strength, Wind%CL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
 ItemDisplay[(BOW OR XBOW) SOCK=2 NMAG !RW]: %NAME%{%GRAY%Zephyr%CL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
-ItemDisplay[WAND SOCK=2 NMAG !RW]: %NAME%{%GRAY%Dominion, White, Wind%CL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Strength,}%CONTINUE%
+ItemDisplay[WAND SOCK=2 NMAG !RW]: %NAME%{%GRAY%Strength, White, Wind%CL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Dominion,}%CONTINUE%
 ItemDisplay[STAFF SOCK=2 NMAG !RW]: %NAME%{%GRAY%Leaf, Neophyte, Strength, Wind%CL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
 ItemDisplay[SOR SOCK=2 NMAG !RW]: %NAME%{%GRAY%Neophyte%CL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
 ItemDisplay[SCEPTER SOCK=2 NMAG !RW]: %NAME%{%GRAY%Neophyte, Strength, Wind%CL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
@@ -2930,9 +2930,9 @@ ItemDisplay[(wsp OR 9ws OR 7ws) SK117>0 NMAG !RW (SOCK=0 OR SOCK=5) PALADIN FILT
 ItemDisplay[(SCEPTER !scp) !INF !ETH NMAG !RW (SK101>2 OR SK112>2 OR SK121>2) (SOCK=0 OR SOCK=3) FILTLVL<6]: %DOT-D6%%TIER-2%%NAME%{%NAME%}
 ItemDisplay[7ws NMAG !ETH !RW !SOCK=1 ED>4 FILTLVL<6]: %DOT-D6%%TIER-2%%NAME%{%NAME%}
 ItemDisplay[(wsp OR 9ws OR 7ws) SK117>0 NMAG !RW (SOCK=0 OR SOCK=5) FILTLVL<6]: %DOT-D6%%TIER-2%%NAME%{%NAME%}
-ItemDisplay[(wsp OR 9ws OR 7ws) (SK100>1 AND SK108>1 AND SK125>1) !INF !ETH NMAG !RW (SOCK=0 OR SOCK=4)]: %%NAME%{%NAME%}
-ItemDisplay[(wsp OR 9ws OR 7ws) (SK100>2 OR SK108>2 OR SK125>2) !INF !ETH NMAG !RW (SOCK=0 OR SOCK=4) FILTLVL<6]: %%NAME%{%NAME%}
-ItemDisplay[(wsp OR 9ws OR 7ws) (SK100>0 OR SK108>0 OR SK125>0) !INF !ETH NMAG !RW (SOCK=0 OR SOCK=4) FILTLVL<6]: %%NAME%{%NAME%}
+ItemDisplay[(wsp OR 9ws OR 7ws) (SK100>1 AND SK108>1 AND SK125>1) !INF !ETH NMAG !RW (SOCK=0 OR SOCK=4)]: %NAME%{%NAME%}
+ItemDisplay[(wsp OR 9ws OR 7ws) (SK100>2 OR SK108>2 OR SK125>2) !INF !ETH NMAG !RW (SOCK=0 OR SOCK=4) FILTLVL<6]: %NAME%{%NAME%}
+ItemDisplay[(wsp OR 9ws OR 7ws) (SK100>0 OR SK108>0 OR SK125>0) !INF !ETH NMAG !RW (SOCK=0 OR SOCK=4) FILTLVL<6]: %NAME%{%NAME%}
 ItemDisplay[(wsp OR 9ws OR 7ws) !INF NMAG !RW (SOCK=0 OR SOCK=5) SK124>2]: %NAME%{%NAME%}
 ItemDisplay[(wsp OR 9ws OR 7ws) !INF NMAG !RW (SOCK=0 OR SOCK=5) SK124>0 FILTLVL<6]: %NAME%{%NAME%}
 ItemDisplay[(wsp OR 9ws OR 7ws) !INF !ETH NMAG !RW (SOCK=0 OR SOCK=4) FILTLVL<4]: %NAME%{%NAME%}
