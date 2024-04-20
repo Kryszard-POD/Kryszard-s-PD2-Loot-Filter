@@ -1,4 +1,4 @@
-%//	Kryszard's PD2 Loot Filter for Season IX: ver 9.0.8
+//	Kryszard's PD2 Loot Filter for Season IX: ver 9.0.8
 //  Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -3291,4 +3291,4 @@ ItemDisplay[(ARMOR OR WEAPON) !leg !opm ((CLVL>30 FILTLVL>0) OR FILTLVL>3)]: {%N
 //%TIER-X% - just minimap pin w/o chat notify when tier is higher
 //BELOW: Minimap Pin + Notify for TIER1, Just Pin for TIER2, Hide for Tier3+
 //ItemDisplay[(ARMOR OR WEAPON) FILTLVL<3]: %MAP-0A%%PX-62%%TIER-1%%NAME%
-//ItemDisplay[(ARMOR OR WEAPON) FILTLVL>2]: %NAME%%
+//ItemDisplay[(ARMOR OR WEAPON) FILTLVL>2]: %NAME%
