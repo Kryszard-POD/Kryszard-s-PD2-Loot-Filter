@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season IX: ver 9.0.8
+%//	Kryszard's PD2 Loot Filter for Season IX: ver 9.0.8
 //  Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -2337,7 +2337,7 @@ ItemDisplay[DIN NMAG !RW EDAM>50]: %GRAY%[%RED%%EDAM%%WHITE%ed%GRAY%] %NAME%%CON
 
 //Superior Bases with ED
 //Armors
-ItemDisplay[(((CHEST OR (HELM !(BAR OR DRU)) OR (SHIELD !(DIN OR NEC))) ELT) OR (DIN (EXC OR ELT) (RES>19 OR AR>100)) OR (gth OR ful OR aar) OR (xng OR xcl OR xhn OR xrs OR xpl OR xlt OR xld OR xtp) OR ci3 OR xsh) !SOCK=1 !INF SUP NMAG ED~5-15]: %GRAY%[%BLUE%%ED%%%GRAY%] %NAME%%CONTINUE%
+ItemDisplay[(((CHEST OR (HELM !(BAR OR DRU)) OR (SHIELD !(DIN OR NEC))) ELT) OR (DIN (EXC OR ELT) (RES>19 OR AR>100)) OR (gth OR ful OR aar) OR (xng OR xcl OR xhn OR xrs OR xpl OR xlt OR xld OR xtp) OR ci3 OR xsh OR xhm) !SOCK=1 !INF SUP NMAG ED~5-15]: %GRAY%[%BLUE%%ED%%%GRAY%] %NAME%%CONTINUE%
 
 //Weapons
 ItemDisplay[(((WEAPON !THROWING !SIN !SOR !WAND !SCEPTER !STAFF !(clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp) !DAGGER) ELT) OR 8rx) !SOCK=1 !INF SUP NMAG ED~5-15]: %GRAY%[%RED%%ED%%%GRAY%] %NAME%%CONTINUE%
@@ -3291,4 +3291,4 @@ ItemDisplay[(ARMOR OR WEAPON) !leg !opm ((CLVL>30 FILTLVL>0) OR FILTLVL>3)]: {%N
 //%TIER-X% - just minimap pin w/o chat notify when tier is higher
 //BELOW: Minimap Pin + Notify for TIER1, Just Pin for TIER2, Hide for Tier3+
 //ItemDisplay[(ARMOR OR WEAPON) FILTLVL<3]: %MAP-0A%%PX-62%%TIER-1%%NAME%
-//ItemDisplay[(ARMOR OR WEAPON) FILTLVL>2]: %NAME%
+//ItemDisplay[(ARMOR OR WEAPON) FILTLVL>2]: %NAME%%
