@@ -3116,7 +3116,7 @@ ItemDisplay[t35]: %NAME%{%WHITE%Immunes: %GRAY%Immune-Free Zone%NL%%NAME%}%CONTI
 ItemDisplay[t36]: %NAME%{%WHITE%Immunes: %BLUE%130% %YELLOW%100%%NL%%NAME%}%CONTINUE%
 ItemDisplay[t37]: %NAME%{%WHITE%Immunes: %YELLOW%135% %GREEN%130% %GOLD%100%%NL%%NAME%}%CONTINUE%
 ItemDisplay[t38]: %NAME%{%WHITE%Immunes: %RED%130% %GREEN%110% %GOLD%120%%NL%%NAME%}%CONTINUE%
-ItemDisplay[t39]: %NAME%{%WHITE%Immunes: %NAME%{%WHITE%Immunes: %RED%125% %BLUE%130% %GREEN%110% %GRAY%(%WHITE%Fire Tower: %GREEN%1000%%GRAY%)%NL%%NAME%}%CONTINUE%
+ItemDisplay[t39]: %NAME%{%WHITE%Immunes: %RED%125% %BLUE%130% %GREEN%110% %GRAY%(%WHITE%Fire Tower: %GREEN%1000%%GRAY%)%NL%%NAME%}%CONTINUE%
 ItemDisplay[t3a]: %NAME%{%WHITE%Immunes: %BLUE%130% %GREEN%130% %ORANGE%120%%NL%%NAME%}%CONTINUE%
 ItemDisplay[(t41 OR t42 OR t43)]: %NAME%{%WHITE%Immunes: %PURPLE%All %WHITE%Type%NAME%}%CONTINUE%
 ItemDisplay[t50 OR t51 OR t52 OR t53 OR t54 OR t55 OR t56 OR t57 OR t58 OR t59]: %NAME%{%WHITE%Immunes: %GRAY%Immune-Free Zone%NAME%}%CONTINUE%
