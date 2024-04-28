@@ -787,7 +787,7 @@ ItemDisplay[key FILTLVL>0 (ASSASSIN OR FILTLVL>3)]: {%NAME%}
 //Arrows & Bolts
 ItemDisplay[(aqv OR cqv) !NMAG !ID]: %NAME%%CONTINUE%
 ItemDisplay[(aqv OR cqv) NMAG (CLVL>6 OR FILTLVL>3)]:
-ItemDisplay[cqv MAG ((FILTLVL>1 AND CLVL>79) OR FILTLVL>3)]:
+ItemDisplay[cqv MAG !ID ((FILTLVL>1 AND CLVL>79) OR FILTLVL>3)]:
 ItemDisplay[aqv MAG !ID ((!AMAZON AND FILTLVL>1 AND CLVL>79) OR FILTLVL>3)]:
 ItemDisplay[cqv RARE AMAZON !ID FILTLVL<6]: %NAME%%CONTINUE%
 ItemDisplay[aqv RARE AMAZON !ID]: %DOT-A8%%TIER-5%%NAME%%CONTINUE%
