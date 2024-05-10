@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season IX: ver 9.0.9
+//	Kryszard's PD2 Loot Filter for Season IX: ver 9.1.0
 //
 //	twitch.tv/kryszard
 //
@@ -13,7 +13,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 9.0.9}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 9.1.0}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%Item Filter %WHITE%- %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -828,8 +828,9 @@ ItemDisplay[GEMTYPE=7 GEM>3]: %NAME% %ORANGE%[%GRAY%O%ORANGE%]%CONTINUE%
 //hiding low ones
 ItemDisplay[GEM<3 FILTLVL>0 (DIFF>0 OR FILTLVL>3) !(gzv OR gpv OR glw OR gpw OR glg OR gpg OR glr OR gpr OR glb OR gpb OR gly OR gpy OR skl OR skz)]:{%NAME%}%CONTINUE%
 ItemDisplay[GEM<4 FILTLVL>0 (DIFF>1 OR FILTLVL>3) !(gzv OR gpv OR glw OR gpw OR glg OR gpg OR glr OR gpr OR glb OR gpb OR gly OR gpy OR skl OR skz)]:{%NAME%}%CONTINUE%
+ItemDisplay[GEM<5 FILTLVL>5]:{%NAME%}%CONTINUE%
 //ping for flawlesses
-ItemDisplay[(gzvs OR glys OR glbs OR glgs OR glrs OR glws OR skls) (CLVL>1 FILTLVL<4)]: %DOT-70%%TIER-2%%NAME%%CONTINUE%
+ItemDisplay[(gzvs OR glys OR glbs OR glgs OR glrs OR glws OR skls) (CLVL>1 FILTLVL<6)]: %DOT-70%%TIER-2%%NAME%%CONTINUE%
 
 //Runes
 ItemDisplay[(RUNE<18) (CLVL>1 AND (CLVL<80 OR FILTLVL<4))]: %PX-62%%TIER-2%%ORANGE%%RUNENAME% %GRAY%[%TAN%%RUNENUM%%GRAY%]%CONTINUE%
@@ -1019,6 +1020,9 @@ ItemDisplay[jew MAG !ID]: %DOT-9A%%TAN%*%WHITE%*   %NAME%%WHITE%   *%TAN%*%BLUE%
 
 //Highlight Good Rare items
 ItemDisplay[(jew OR rin OR amu OR CIRC) RARE !ID]: %DOT-A8%%TAN%*%WHITE%*   %NAME%%WHITE%   *%TAN%*%YELLOW%
+
+//Hide Magic Ring and Amulets on Super Strict Level
+ItemDisplay[(rin OR amu) MAG !ID]: {%NAME%}
 
 //PD2 DCLONE/DUNGEON/RATHMA BOSSES UNIQUES
 ItemDisplay[(uhl OR uth OR utb OR 7bs OR 7qr) UNI !ID]: %BORDER-68%%GREEN%HOLY %PURPLE%*%RED%*%ORANGE%*%YELLOW%*     %NAME%     %YELLOW%*%ORANGE%*%RED%*%PURPLE%* %GREEN%MOLY
