@@ -3218,13 +3218,13 @@ ItemDisplay[gzv OR glw OR glg OR glr OR glb OR gly OR skl OR gpv OR gpw OR gpg O
 ItemDisplay[gzvs OR glys OR glbs OR glgs OR glrs OR glws OR skls OR gzv OR glw OR glg OR glr OR glb OR gly OR skl]: %NAME%{%NAME%%TAN%Note%WHITE%: 3xFlawless + %GRAY%key %WHITE%= Perf}%CONTINUE%
 ItemDisplay[gzv OR glw OR glg OR glr OR glb OR gly OR skl]: %NAME%{%NAME%%NL%}%CONTINUE%
 
-ItemDisplay[gzvs]: %NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: +24 Defense%NL%Armor/Helm: +8 to Strength%NL%Weapon: +100 to Attack Rating%NL%}
-ItemDisplay[glys]: %NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: 28% Light Res%NL%Armor/Helm: 20% Magic Find%NL%Weapon: 1-30 Light Damage%NL%}
-ItemDisplay[glbs]: %NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: 28% Cold Res%NL%Armor/Helm: +31 to Mana%NL%Weapon: 6-10 Cold Damage%NL%}
-ItemDisplay[glgs]: %NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: 28% Psn Res%NL%Armor/Helm: +8 Dexterity%NL%Weapon: +60 Psn Dmg over 6 Sec%NL%}
-ItemDisplay[glrs]: %NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: 28% Fire Res%NL%Armor/Helm: +31 to Life%NL%Weapon: 10-16 Fire Dmg%NL%}
-ItemDisplay[glws]: %NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: All Res +14%%NL%Armor/Helm: +80 to AR%NL%Weapon: +54% Dmg vs Undead%NL%}
-ItemDisplay[skls]: %NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: Atcker+16Dmg%NL%Armor/Helm: Rep Life 4, Reg Mana 12%%NL%Weapon: 3%Life 3%Mana %NL%}
+ItemDisplay[gzvs]: %NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: +24 Defense%NL%Armor/Helm: +8 to Strength%NL%Weapon: +100 to Attack Rating%NL%}%CONTINUE%
+ItemDisplay[glys]: %NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: 28% Light Res%NL%Armor/Helm: 20% Magic Find%NL%Weapon: 1-30 Light Damage%NL%}%CONTINUE%
+ItemDisplay[glbs]: %NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: 28% Cold Res%NL%Armor/Helm: +31 to Mana%NL%Weapon: 6-10 Cold Damage%NL%}%CONTINUE%
+ItemDisplay[glgs]: %NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: 28% Psn Res%NL%Armor/Helm: +8 Dexterity%NL%Weapon: +60 Psn Dmg over 6 Sec%NL%}%CONTINUE%
+ItemDisplay[glrs]: %NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: 28% Fire Res%NL%Armor/Helm: +31 to Life%NL%Weapon: 10-16 Fire Dmg%NL%}%CONTINUE%
+ItemDisplay[glws]: %NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: All Res +14%%NL%Armor/Helm: +80 to AR%NL%Weapon: +54% Dmg vs Undead%NL%}%CONTINUE%
+ItemDisplay[skls]: %NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: Atcker+16Dmg%NL%Armor/Helm: Rep Life 4, Reg Mana 12%%NL%Weapon: 3%Life 3%Mana %NL%}%CONTINUE%
 ItemDisplay[(gpvs OR gpv)]: %NAME%{%NAME%%WHITE%You Can use %BLUE%Magic%WHITE%/%YELLOW%Rare %WHITE%Items as Bases%NL%Gloves: %ORANGE%Ort %WHITE%| Belt: %ORANGE%Ith %WHITE%| Boots: %ORANGE%Thul%NL%%WHITE%Weapon: %ORANGE%Tir %WHITE%| Chest: %ORANGE%Tal %WHITE%| Shield: %ORANGE%Eth%NL%%WHITE%Ring: %ORANGE%Amn %WHITE%| Helm: %ORANGE%Nef %WHITE%| Amulet: %ORANGE%Ral%NL%%TAN%Note%WHITE%: Caster Crafting Recipes: Perf %PURPLE%O%WHITE%, %BLUE%Jewel%WHITE%,}%CONTINUE%
 ItemDisplay[(gpys OR gpy)]: %NAME%{%NAME%%WHITE%You Can use %BLUE%Magic%WHITE%/%YELLOW%Rare %WHITE%Items as Bases%NL%Gloves: %ORANGE%Hel %WHITE%| Belt: %ORANGE%El %WHITE%| Boots: %ORANGE%Io%NL%%WHITE%Weapon: %ORANGE%Shael %WHITE%| Chest: %ORANGE%Eld %WHITE%| Shield: %ORANGE%Dol%NL%%WHITE%Ring: %ORANGE%Lum %WHITE%| Helm: %ORANGE%Tir %WHITE%| Amulet: %ORANGE%Ko%NL%%TAN%Note%WHITE%: Bontiful Crafting Recipes: Perf %YELLOW%O%WHITE%, %BLUE%Jewel%WHITE%,}%CONTINUE%
 ItemDisplay[(gpbs OR gpb)]: %NAME%{%NAME%%WHITE%You Can use %BLUE%Magic%WHITE%/%YELLOW%Rare %WHITE%Items as Bases%NL%Gloves: %ORANGE%Ort %WHITE%| Belt: %ORANGE%Tal %WHITE%| Boots: %ORANGE%Ral%NL%%WHITE%Weapon: %ORANGE%Tir %WHITE%| Chest: %ORANGE%Nef %WHITE%| Shield: %ORANGE%Eth%NL%%WHITE%Ring: %ORANGE%Amn %WHITE%| Helm: %ORANGE%Ith %WHITE%| Amulet: %ORANGE%Thul%NL%%TAN%Note%WHITE%: Hitpower Crafting Recipes: Perf %BLUE%O%WHITE%, %BLUE%Jewel%WHITE%,}%CONTINUE%
@@ -3242,7 +3242,7 @@ ItemDisplay[gpws]: %DOT-70%%NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANG
 ItemDisplay[skzs]: %DOT-70%%NAME%{%NAME%%NL%%ORANGE%[ %TAN%x %WHITE%%QTY% %ORANGE%]%NL%%WHITE%Shield: Atcker+20Dmg%NL%Armor/Helm: Rep Life 5, Reg Mana 19%%NL%Weapon: 4%Life 3%Mana %NL%}%CONTINUE%
 
 //Hide Flawlesses on Max Strict Level
-ItemDisplay[GEM<5 FILTLVL>5]:{%NAME%}%CONTINUE%
+ItemDisplay[(GEM<5 OR (gzvs OR glys OR glbs OR glgs OR glrs OR glws OR skls)) FILTLVL>5]:{%NAME%}%CONTINUE%
 
 //Craft Infusions
 ItemDisplay[crfb]: %DOT-66%%ORANGE%[%RED%O%ORANGE%] %NAME%{Weapon: [50-80]% ED, [3-6]% LL, [10-20] Life%NL%Shield: [10-20]% Block, [3-6]% LL, [10-20] Life%NL%Chest: [3-6] LPK, [3-6]% LL, [20-40] Life%NL%Helm: [10-20]% Crushing Blow, [2-4]% LL, [10-20] Life%NL%Boots: [15-30] Rep Life, [2-4]% LL, [10-20] Life%NL%Gloves: [5-10]% Crushing Blow, [2-4]% LL, [10-20] Life%NL%Belt: [10-20]% Open Wounds, [3-6]% LL, [10-20] Life%NL%Ring: [5-10] Str, [1-3]% LL, [10-20] Life%NL%Amulet: 10% FRW, [3-6] LPK, [10-20] Life%NL%%TAN%Note%WHITE%: Guaranteed:}
