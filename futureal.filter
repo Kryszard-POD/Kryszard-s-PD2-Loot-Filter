@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season IX: ver 9.0.9
+//	Kryszard's PD2 Loot Filter for Season IX: ver 9.1.0
 //  Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -14,7 +14,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 9.0.9}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 9.1.0}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%Item Filter %WHITE%- %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -782,7 +782,7 @@ ItemDisplay[key QTY=23]: %NAME%{Weapon: [50-80]% ED, -[10-20]% Target Defense%NL
 ItemDisplay[key QTY=24]: %NAME%{Weapon: [100-140]% Dmg to Demon/Undead, [3-6]% ML, [10-15] R.Life%NL%Shield: [10-20]% Block, [3-6]% ML, -[20-30]% Req%NL%Chest: [3-6]% ML, [5-10] R.Life, -[20-30]% Req%NL%Helm: [10-20]% Deadly Strike, [2-4]% ML, [5-10] R.Life%NL%Boots: [10-20]% PLR, [2-4]% ML, [5-10] R.Life%NL%Gloves: [5-10]% Deadly Strike, [2-4]% ML, [5-10] R.Life%NL%Belt: [10-20]% Dmg as Mana, [3-6]% ML, [5-10] R.Life%NL%Ring: [10-20]% PLR, [1-3]% ML, [5-10] R.Life%NL%Amulet: [5-10]% Curse D. R., [3-6]% ML, [5-10] R.Life%NL%%TAN% Note%WHITE%: Vampiric %ORANGE%[%GRAY%O%ORANGE%]%WHITE%:}%CONTINUE%
 ItemDisplay[key QTY=25]: %NAME%{Weapon: [50-80]% ED, [20-30]% MF, [1-3] L.Radius%NL%Shield: [10-20]% Block, [20-30]% MF, [1-3] L.Radius%NL%Chest: [25-50]% Defense, [20-30]% MF, [1-3] L.Radius%NL%Helm: [25-50]% Defense, [20-30]% MF, [1-3] L.Radius%NL%Boots: [25-50]% Defense, [15-25]% MF, [1-3] L.Radius%NL%Gloves: [25-50]% Defense, [15-25]% MF, [1-3] L.Radius%NL%Belt: [25-50]% Defense, [20-30]% MF, [1-3] L.Radius%NL%Ring: [5-10] Vit, [10-20]% MF, [1-3] L.Radius%NL%Amulet: [10-20] Vit, [20-30]% MF, [1-3] L.Radius%NL%%TAN%Note%WHITE%: Bontiful %ORANGE%[%YELLOW%O%ORANGE%]%WHITE%:}%CONTINUE%
 ItemDisplay[key QTY=26]: %NAME%{Weapon: [20-40]% ED, 20% IAS, [50-100] AR%NL%Shield: [5-10]% All Res, [10-20]% Block, H. F. D.%NL%Chest: [5-10]% All Res, [10-20]% Block, [25-50]% Defense%NL%Helm: [5-10]% IAS, [25-50]% Defense, H. F. D.%NL%Boots: 10% FRW, [100-150] Def vs Missle, H. F. D.%NL%Gloves: [5-10]% IAS, [10-20]% AR, [25-50]% Defense%NL%Belt: [5-10]% IAS, [25-50]% Defense, H. F. D.%NL%Ring: [3-5]% All Res, [50-100] Def vs Missle, H. F. D.%NL%Amulet: [5-15]% All Res, [100-150] Def vs Missle, [4-8] All Atrb%NL%%TAN% Note%WHITE%: Brilliant %ORANGE%[%WHITE%O%ORANGE%]%WHITE%:}%CONTINUE%
-ItemDisplay[key FILTLVL>0 (ASSASSIN OR FILTLVL>3)]: {%NAME%}
+ItemDisplay[key FILTLVL>0 (ASSASSIN OR FILTLVL>3) !SHOP]: {%NAME%}
 
 //Arrows & Bolts
 ItemDisplay[(aqv OR cqv) !NMAG !ID]: %NAME%%CONTINUE%
@@ -806,31 +806,33 @@ ItemDisplay[GEM<5]:%NAME%{%WHITE%3x Gem of the same Type and Level = 1x Higher L
 ItemDisplay[GEM=1]:%NAME%{%WHITE%3x Any %RED%!%WHITE%H.Potion, 3x Any %BLUE%!%WHITE%M.Potion, Any Chip. Gem = %PURPLE%r %WHITE%35%%NL%%NAME%}%CONTINUE%
 ItemDisplay[GEM=3]:%NAME%{%WHITE%3x Any %RED%!%WHITE%H.Potion, 3x Any %BLUE%!%WHITE%M.Potion, Any Square Gem = %PURPLE%R %WHITE%Full%NL%%NAME%}%CONTINUE%
 //amethysts
-ItemDisplay[GEMTYPE=1 GEM<4 !(gzv OR gpv)]: %NAME%
+ItemDisplay[GEMTYPE=1 GEM<4 !(gzv OR gpv)]: %NAME%%CONTINUE%
 ItemDisplay[GEMTYPE=1 GEM>3]: %NAME%%CONTINUE%
 //diamonds
-ItemDisplay[GEMTYPE=2 GEM<4 !(glw OR gpw)]: %NAME%
+ItemDisplay[GEMTYPE=2 GEM<4 !(glw OR gpw)]: %NAME%%CONTINUE%
 ItemDisplay[GEMTYPE=2 GEM>3]: %NAME%%CONTINUE%
 //emeralds
-ItemDisplay[GEMTYPE=3 GEM<4 !(glg OR gpg)]: %NAME%
+ItemDisplay[GEMTYPE=3 GEM<4 !(glg OR gpg)]: %NAME%%CONTINUE%
 ItemDisplay[GEMTYPE=3 GEM>3]: %NAME%%CONTINUE%
 //rubys
-ItemDisplay[GEMTYPE=4 GEM<4 !(glr OR gpr)]: %NAME%
+ItemDisplay[GEMTYPE=4 GEM<4 !(glr OR gpr)]: %NAME%%CONTINUE%
 ItemDisplay[GEMTYPE=4 GEM>3]: %NAME%%CONTINUE%
 //sapphires
-ItemDisplay[GEMTYPE=5 GEM<4 !(glb OR gpb)]: %NAME%
+ItemDisplay[GEMTYPE=5 GEM<4 !(glb OR gpb)]: %NAME%%CONTINUE%
 ItemDisplay[GEMTYPE=5 GEM>3]: %NAME%%CONTINUE%
 //topazes
-ItemDisplay[GEMTYPE=6 GEM<4 !(gly OR gpy)]: %NAME%
+ItemDisplay[GEMTYPE=6 GEM<4 !(gly OR gpy)]: %NAME%%CONTINUE%
 ItemDisplay[GEMTYPE=6 GEM>3]: %NAME%%CONTINUE%
 //skulls
-ItemDisplay[GEMTYPE=7 GEM<4 !(skl OR skz)]: %NAME%
+ItemDisplay[GEMTYPE=7 GEM<4 !(skl OR skz)]: %NAME%%CONTINUE%
 ItemDisplay[GEMTYPE=7 GEM>3]: %NAME%%CONTINUE%
 //hiding low ones
 ItemDisplay[GEM<3 FILTLVL>0 (DIFF>0 OR FILTLVL>3) !(gzv OR gpv OR glw OR gpw OR glg OR gpg OR glr OR gpr OR glb OR gpb OR gly OR gpy OR skl OR skz)]:{%NAME%}%CONTINUE%
 ItemDisplay[GEM<4 FILTLVL>0 (DIFF>1 OR FILTLVL>3) !(gzv OR gpv OR glw OR gpw OR glg OR gpg OR glr OR gpr OR glb OR gpb OR gly OR gpy OR skl OR skz)]:{%NAME%}%CONTINUE%
+ItemDisplay[GEM<5 FILTLVL>5]:{%NAME%}%CONTINUE%
+
 //ping for flawlesses
-ItemDisplay[(gzvs OR glys OR glbs OR glgs OR glrs OR glws OR skls) (CLVL>1 FILTLVL<4)]: %DOT-70%%TIER-2%%NAME%%CONTINUE%
+ItemDisplay[(gzvs OR glys OR glbs OR glgs OR glrs OR glws OR skls) (CLVL>1 FILTLVL<6)]: %DOT-70%%TIER-2%%NAME%%CONTINUE%
 
 //Runes
 ItemDisplay[(RUNE<18) (CLVL>1 AND (CLVL<80 OR FILTLVL<4))]: %PX-62%%TIER-2%%ORANGE%%RUNENAME% %GRAY%[%TAN%%RUNENUM%%GRAY%]%CONTINUE%
@@ -1020,6 +1022,9 @@ ItemDisplay[jew MAG !ID]: %DOT-9A%%NAME%
 
 //Highlight Good Rare items
 ItemDisplay[(jew OR rin OR amu OR CIRC) RARE !ID]: %DOT-A8%%NAME%
+
+//Hide Magic Ring and Amulets on Super Strict Level
+ItemDisplay[(rin OR amu) MAG !ID]: {%NAME%}
 
 //PD2 DCLONE/DUNGEON/RATHMA BOSSES UNIQUES
 ItemDisplay[(uhl OR uth OR utb OR 7bs OR 7qr) UNI !ID]: %BORDER-68%%NAME%
