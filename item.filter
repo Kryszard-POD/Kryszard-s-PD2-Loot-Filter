@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season IX: ver 9.1.1
+//	Kryszard's PD2 Loot Filter for Season IX: ver 9.1.2
 //
 //	twitch.tv/kryszard
 //
@@ -13,7 +13,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 9.1.1}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 9.1.2}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%Item Filter %WHITE%- %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -2825,6 +2825,7 @@ ItemDisplay[utp !INF !ETH NMAG !RW !SOCK=1~2 ED>4]: %DOT-D6%%TIER-5%%NAME%{%NAME
 ItemDisplay[CHEST ELT !INF !ETH NMAG !RW !SOCK=1~2 ED>9]: %DOT-D6%%TIER-5%%NAME%{%NAME%}
 ItemDisplay[CHEST ELT !INF !ETH NMAG !RW !SOCK=1~2 ED>4 FILTLVL<6]: %DOT-D6%%TIER-3%%NAME%{%NAME%}
 ItemDisplay[CHEST ELT !INF !ETH NMAG !RW !SOCK=1~2 FILTLVL<4]: %NAME%{%NAME%}
+ItemDisplay[CHEST ELT !INF ETH NMAG !RW !SOCK=1~2 ED=15]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[CHEST ELT !INF ETH NMAG !RW !SOCK=1~2 DEF>699]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[CHEST ELT !INF ETH NMAG !RW !SOCK=1~2 DEF>649 FILTLVL<6]: %DOT-D6%%TIER-3%%NAME%{%NAME%}
 //Helmets
