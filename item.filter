@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season X: ver 10.0.2
+//	Kryszard's PD2 Loot Filter for Season X: ver 10.0.3
 //
 //	twitch.tv/kryszard
 //
@@ -13,7 +13,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 10.0.2}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 10.0.3}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%Item Filter %WHITE%- %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -784,7 +784,7 @@ ItemDisplay[key QTY=26]: %NAME%{Weapon: [20-40]% ED, 20% IAS, [50-100] AR%NL%Shi
 ItemDisplay[key FILTLVL>0 (ASSASSIN OR FILTLVL>3)]: {%NAME%}
 
 //Arrows & Bolts
-ItemDisplay[(aqv OR cqv) !NMAG !ID]: %TAN%x  %NAME%  %TAN%x%CONTINUE%
+ItemDisplay[(aqv OR cqv) !NMAG !ID]: %NAME%%CONTINUE%
 ItemDisplay[(aqv OR cqv) NMAG (CLVL>6 OR FILTLVL>3)]:
 ItemDisplay[cqv MAG !ID ((FILTLVL>1 AND CLVL>79) OR FILTLVL>3)]:
 ItemDisplay[aqv MAG !ID ((!AMAZON AND FILTLVL>1 AND CLVL>79) OR FILTLVL>3)]:
@@ -3093,10 +3093,9 @@ ItemDisplay[uba]: %MAP-0A%%PX-62%%GRAY%*%RED%* %NAME% %RED%*%GRAY%*{%TAN%Note%WH
 //Project Diablo 2 Maps
 ItemDisplay[MAPTIER>0 NMAG]: %WHITE%%NAME%%CONTINUE%
 ItemDisplay[MAPTIER=1]: %GRAY%[%DARK_GREEN%T1%GRAY%] %NAME% %DARK_GREEN%*%CONTINUE%
-ItemDisplay[MAPTIER=2]: %GRAY%[%TAN%T2%GRAY%] %NAME% %TAN%*%CONTINUE%
-ItemDisplay[MAPTIER=3]: %GRAY%[%ORANGE%T3%GRAY%] %NAME% %ORANGE%*%CONTINUE%
+ItemDisplay[MAPTIER=2 OR t53]: %GRAY%[%TAN%T2%GRAY%] %NAME% %TAN%*%CONTINUE%
+ItemDisplay[MAPTIER=3 OR t51 OR t52]: %GRAY%[%ORANGE%T3%GRAY%] %NAME% %ORANGE%*%CONTINUE%
 ItemDisplay[MAPTIER=4]: %GRAY%[%RED%Dungeon%GRAY%] %NAME%%CONTINUE%
-ItemDisplay[MAPTIER=5]: %GRAY%[%ORANGE%T3%GRAY%] %NAME% %ORANGE%*%CONTINUE%
 ItemDisplay[MAPTIER>0 (!ID OR NMAG) !UNI]: %MAP-7F%%NAME%%CONTINUE%
 ItemDisplay[MAPTIER>0 !ID UNI]: %MAP-7F%%DOT-68%%RED%*%GREEN%*%YELLOW%*          %NAME%          %YELLOW%*%GREEN%*%RED%*%CONTINUE%
 ItemDisplay[MAPTIER~1-3]: %NAME%{%TAN%Note%WHITE%: To Modify Maps visit Anya}%CONTINUE%
