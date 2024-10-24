@@ -3099,7 +3099,7 @@ ItemDisplay[MAPTIER=2 OR t53]: %GRAY%[%TAN%T2%GRAY%] %NAME% %TAN%*%CONTINUE%
 ItemDisplay[MAPTIER=3 OR t51 OR t52]: %GRAY%[%ORANGE%T3%GRAY%] %NAME% %ORANGE%*%CONTINUE%
 ItemDisplay[MAPTIER=4]: %GRAY%[%RED%Dungeon%GRAY%] %NAME%%CONTINUE%
 ItemDisplay[MAPTIER>0 (!ID OR NMAG) !UNI]: %MAP-7F%%NAME%%CONTINUE%
-ItemDisplay[MAPTIER>0 !ID UNI]: %MAP-7F%%DOT-68%%RED%*%GREEN%*%YELLOW%*          %NAME%          %YELLOW%*%GREEN%*%RED%*%CONTINUE%
+ItemDisplay[MAPTIER>0 !ID UNI]: %MAP-7F%%DOT-68%%NAME%%CONTINUE%
 ItemDisplay[MAPTIER~1-3]: %NAME%{%TAN%Note%WHITE%: To Modify Maps visit Anya}%CONTINUE%
 ItemDisplay[MAPTIER~1-4]: %NAME%{%WHITE%Cube 3 Maps of Same Tier = Random Map of Same Tier%CL%%NAME%}%CONTINUE%
 ItemDisplay[MAPTIER~1-3 MAG]: %NAME%{%WHITE%To Reroll: Cube with 3 %TAN%x %WHITE%Perf %GRAY%O%NL%%NAME%}%CONTINUE%
