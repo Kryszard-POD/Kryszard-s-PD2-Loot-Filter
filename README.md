@@ -9,6 +9,22 @@ I am trying to make one filter, which will suit most players needs.
 Filter is good for both: leveling and endgame experience.  
 It's gonna show you almost everything which can help you during leveling process at early stages of your new characters, and became more strict after you hit **lvl 80+** (select your lootfilter level in-game settings to adjust it more for your needs)
 
+## Season X Update:
+
+What's new?
+- Adjusted items descriptions to match all S10 changes like max sockets increase on some items, new possible runewords on rw bases, new runewords recipes on keys etc.,
+- Some unique items are slightly highlighted more or less because of their changes,
+- All new upcoming Uniques included,
+- Added a feature, which will highlight and ping for all new unknown items (like new uber mats etc - thx to BetweenWalls),
+- Added some new RW bases during to max sockets change, adjustet paladin shields RW bases,
+- Added better highlight for high Corpse Explosion +skills wands and necro heads (for shop hunting),
+- Added descriptions with immunities for new maps,
+- Removed TAN color "x" signs on magic/rare quivers,
+- Fixed an issue that showed magic uneth throwing knifes for necros and sins even on high strict levels (which are in the same pool in DAGGER keyword as regular staffmods'able daggers),
+- Fixed an issue that showed Unique Fallen Gardens Map as Tier 3 - It's a Tier 2 map,
+- Some other fixes/improves here and there,
+- Filter will be updated with all upcoming post-beta changes, so do not worry about anything :)
+
 ## Season IX Update:
 
 ![S9 update](https://github.com/Kryszard-POD/Kryszard-s-PD2-Loot-Filter/assets/63604590/6ebcd8be-9e69-4604-ac2a-61ae16b46562)
