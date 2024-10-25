@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season IX: ver 10.0.3
+//	Kryszard's PD2 Loot Filter for Season IX: ver 10.0.4
 //  Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -14,7 +14,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 10.0.3}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 10.0.4}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%Item Filter %WHITE%- %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -1050,7 +1050,7 @@ ItemDisplay[(rin OR amu OR 6ws OR uar OR ulc OR urn OR uap OR ci3 OR xtb OR uit 
 ItemDisplay[(9gm OR 7gm OR 7s8 OR 7p7 OR 7wa) UNI ETH !ID]: %BORDER-68%%NAME%
 
 //OK UNIQUES only when ETH
-ItemDisplay[(7pa OR 7bt OR 7gi OR 7m7 OR 8ls OR 7gl OR 7b8 OR 7bk OR xpl OR 7ha OR 7b7) UNI ETH !ID]: %MAP-68%%NAME%
+ItemDisplay[(7pa OR 7bt OR 7gi OR 7m7 OR 8ls OR 7gl OR 7b8 OR 7bk OR xpl OR 7ha OR 7b7 OR 7sr) UNI ETH !ID]: %MAP-68%%NAME%
 
 //OK UNIQUES
 //belts
@@ -1082,9 +1082,9 @@ ItemDisplay[(amu OR rin OR uar OR ci3 OR 7qr OR uth OR paf) SET !ID]: %MAP-84%%N
 
 //Uniques and Sets worth notifying
 //Armors
-ItemDisplay[(brs OR fld OR xkp OR xul OR xlm OR drb OR 9sp OR mbt OR rng OR uul OR xng OR xui OR spl OR pac OR xmg OR xsk OR xml OR xlb OR xpl OR xap OR xld OR xrs OR gth OR aar OR (BELT !(vbl OR zmb OR hbl)) OR skp OR xhl OR xrn OR vbt OR xmb OR uvb OR umb OR lgl OR vgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR ush OR upk OR uml OR xts OR xrg OR tow OR kit OR gts OR xar) UNI !ID]: %PX-68%%TIER-5%%NAME%
+ItemDisplay[(brs OR fld OR xkp OR xul OR xlm OR drb OR 9sp OR mbt OR rng OR uul OR xng OR xui OR spl OR pac OR xmg OR xsk OR xml OR xlb OR xpl OR xap OR xld OR xrs OR gth OR aar OR (BELT !(vbl OR hbl)) OR skp OR xhl OR xrn OR vbt OR xmb OR uvb OR umb OR lgl OR vgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR ush OR upk OR uml OR xts OR xrg OR tow OR kit OR gts OR xar) UNI !ID]: %PX-68%%TIER-5%%NAME%
 //Weapons
-ItemDisplay[((8ws OR 8lb OR 92h OR 8s8 OR 9wc OR 92h OR 8mx OR 6rx OR 6hx OR 9gw OR 7m7 OR 9cl OR mau OR 7ls OR 9ls OR 7br OR 7sr OR 7p7 OR 9ba OR 7ga OR 7wa OR 7gi OR 7pa OR 8ls OR 72a OR 7o7 OR 9yw OR 9fc OR 9kr OR amb OR 7sc OR 7mp OR 6sw OR 6l7 OR 8hx OR 8rx OR dgr OR 7dg OR 7bl OR 9ma OR 9wh OR 9gm OR 9ws OR 6cs OR 7b7 OR 7gs OR 9sb) OR (ELT (THROWING OR JAV)) OR 7wb OR 7sp) UNI !ID]: %PX-68%%TIER-5%%NAME%
+ItemDisplay[((8ws OR 8lb OR 92h OR 8s8 OR 9wc OR 92h OR 8mx OR 6rx OR 6hx OR 9gw OR 7m7 OR 9cl OR mau OR 7ls OR 9ls OR 7br OR 7sr OR 7p7 OR 9ba OR 7ga OR 7gi OR 7pa OR 8ls OR 72a OR 7o7 OR 9yw OR 9fc OR 9kr OR amb OR 7sc OR 7mp OR 6sw OR 6l7 OR 8hx OR 8rx OR dgr OR 7dg OR 7bl OR 9ma OR 9wh OR 9gm OR 9ws OR 6cs OR 7b7 OR 7gs OR 9sb OR 9bs OR 7bt) OR (ELT (THROWING OR JAV)) OR 7wb OR 7sp) UNI !ID]: %PX-68%%TIER-5%%NAME%
 //Sets
 ItemDisplay[((ARMOR OR WEAPON) (EXC OR ELT OR ci0 OR ba5 OR lbt) !(9vo OR xcl OR xrn)) SET !ID]: %PX-84%%TIER-5%%NAME%
 
@@ -2401,21 +2401,21 @@ ItemDisplay[(hax OR clb OR spc OR mac OR ssd OR scm OR sbr OR flc OR 9dg OR 9di 
 //always 3
 ItemDisplay[(9ha OR 7ha OR 9cl OR 7cl OR 9ma OR 7ma OR 9sp OR mst OR 9mt OR 7mt OR 9ss OR 9sm OR 9sb OR 9fc OR 7ss OR 7sm OR 7sb OR 7fc OR wsd OR 9wd OR 7wd OR 2hs OR 92h OR 72h OR 9kr OR 7kr OR spr OR bar OR sbw OR lxb OR 8ss OR 6ss OR lst OR 8ls OR 6ls OR 9sc OR 7sc OR gsc OR 9qs OR 7qs OR 7sp OR (SIN !(ktr OR wrb OR axf OR ces OR clw OR btl OR skr)) OR oba OR obf) NMAG SOCK=0]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%3%TAN%]}%CONTINUE%
 //always 4
-ItemDisplay[(axe OR 9ax OR 7ax OR lax OR 9wh OR 7wh OR 9bs OR 7bs OR 9cm OR 9gs OR 9b9 OR 7cm OR 7gs OR 7b7 OR 9tr OR 7tr OR 9b7 OR 9vo OR 7o7 OR 7vo OR 8sb OR 6sb OR 8hb OR 6hb OR 8cb OR 6cb OR 8lx OR 6lx OR 8mx OR 6mx OR cst OR 8cs OR 6cs OR bst OR 8bs OR 6bs OR 9sr) NMAG SOCK=0]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%4%TAN%]}%CONTINUE%
+ItemDisplay[(axe OR 9ax OR 7ax OR lax OR 9wh OR 7wh OR 9bs OR 7bs OR 9cm OR 9gs OR 9b9 OR 7cm OR 7gs OR 7b7 OR 9tr OR 7tr OR 9b7 OR 9vo OR 7o7 OR 7vo OR 8sb OR 6sb OR 8hb OR 6hb OR 8cb OR 6cb OR 8lx OR 6lx OR 8mx OR 6mx OR cst OR 8cs OR 6cs OR bst OR 8bs OR 6bs) NMAG SOCK=0]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%4%TAN%]}%CONTINUE%
 //always 5
-ItemDisplay[(92a OR 72a OR 9la OR 9ba OR 9bt OR 7la OR 7ba OR 7bt OR 9fl OR 7fl OR 9fb OR 7fb OR 9br OR 7br OR 7s8 OR 7pa OR 8s8 OR 8sw OR 6s7 OR 6sw OR 8rx OR 6rx OR 9ws OR 7ws OR amb OR am7 OR amc OR 7ls OR 9ls) NMAG SOCK=0]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%5%TAN%]}%CONTINUE%
+ItemDisplay[(92a OR 72a OR 9la OR 9ba OR 9bt OR 7la OR 7ba OR 7bt OR 9fl OR 7fl OR 9fb OR 7fb OR 9br OR 7br OR 7s8 OR 7pa OR 8s8 OR 8sw OR 6s7 OR 6sw OR 8rx OR 6rx OR 9ws OR 7ws OR amb OR am7 OR amc OR 7ls) NMAG SOCK=0]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%5%TAN%]}%CONTINUE%
 //always 6
 ItemDisplay[(9mp OR 9wa OR 7mp OR 7wa OR 9ga OR 9gi OR 7ga OR 7gi OR 9m9 OR 9gm OR 7m7 OR 7gm OR 7cr OR 9gd OR 7gd OR 9st OR 9p9 OR 7st OR 7p7 OR 9h9 OR 9wc OR 7h7 OR 7wc OR 8l8 OR 8lw OR 6l7 OR 6lw OR 8hx OR 6hx OR 8ws OR 6ws OR am8 OR am9 OR amd OR ame OR 7sr) NMAG SOCK=0]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%6%TAN%]}%CONTINUE%
 //varies 2/3/3
 ItemDisplay[(kri OR clw OR btl OR skr OR ob5) NMAG SOCK=0 ILVL<26]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%2%TAN%]}%CONTINUE%
 ItemDisplay[(kri OR clw OR btl OR skr OR ob5) NMAG SOCK=0 ILVL>25]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%3%TAN%]}%CONTINUE%
 //varies 3/4/4
-ItemDisplay[(whm OR bsd OR lsd OR clm OR gis OR bsw OR tri OR vou OR hbw OR cbw OR mxb) NMAG SOCK=0 ILVL<26]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%3%TAN%]}%CONTINUE%
-ItemDisplay[(whm OR bsd OR lsd OR clm OR gis OR bsw OR tri OR vou OR hbw OR cbw OR mxb) NMAG SOCK=0 ILVL>25]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%4%TAN%]}%CONTINUE%
+ItemDisplay[(whm OR bsd OR lsd OR clm OR gis OR bsw OR tri OR vou OR hbw OR cbw OR mxb OR 9sr) NMAG SOCK=0 ILVL<26]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%3%TAN%]}%CONTINUE%
+ItemDisplay[(whm OR bsd OR lsd OR clm OR gis OR bsw OR tri OR vou OR hbw OR cbw OR mxb OR 9sr) NMAG SOCK=0 ILVL>25]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%4%TAN%]}%CONTINUE%
 //varies 3/4/5
-ItemDisplay[(fla OR flb OR brn OR scy OR pax OR 9s8 OR 9pa OR lbw OR 8lb OR sbb OR swb OR am1 OR am2 OR am6 OR rxb) NMAG SOCK=0 ILVL<26]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%3%TAN%]}%CONTINUE%
-ItemDisplay[(fla OR flb OR brn OR scy OR pax OR 9s8 OR 9pa OR lbw OR 8lb OR sbb OR swb OR am1 OR am2 OR am6 OR rxb) NMAG SOCK=0 (ILVL>25 AND ILVL<41)]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%4%TAN%]}%CONTINUE%
-ItemDisplay[(fla OR flb OR brn OR scy OR pax OR 9s8 OR 9pa OR lbw OR 8lb OR sbb OR swb OR am1 OR am2 OR am6 OR rxb) NMAG SOCK=0 ILVL>40]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%5%TAN%]}%CONTINUE%
+ItemDisplay[(fla OR flb OR brn OR scy OR pax OR 9s8 OR 9pa OR lbw OR 8lb OR sbb OR swb OR am1 OR am2 OR am6 OR rxb OR 9ls) NMAG SOCK=0 ILVL<26]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%3%TAN%]}%CONTINUE%
+ItemDisplay[(fla OR flb OR brn OR scy OR pax OR 9s8 OR 9pa OR lbw OR 8lb OR sbb OR swb OR am1 OR am2 OR am6 OR rxb OR 9ls) NMAG SOCK=0 (ILVL>25 AND ILVL<41)]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%4%TAN%]}%CONTINUE%
+ItemDisplay[(fla OR flb OR brn OR scy OR pax OR 9s8 OR 9pa OR lbw OR 8lb OR sbb OR swb OR am1 OR am2 OR am6 OR rxb OR 9ls) NMAG SOCK=0 ILVL>40]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%5%TAN%]}%CONTINUE%
 //varies 3/4/6
 ItemDisplay[(mau OR gma OR crs OR 9cr OR gsd OR spt OR pik OR hal OR wsc OR lbb OR lwb OR hxb OR am3 OR am4 OR 6lb) NMAG SOCK=0 ILVL<26]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%3%TAN%]}%CONTINUE%
 ItemDisplay[(mau OR gma OR crs OR 9cr OR gsd OR spt OR pik OR hal OR wsc OR lbb OR lwb OR hxb OR am3 OR am4 OR 6lb) NMAG SOCK=0 (ILVL>25 AND ILVL<41)]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%4%TAN%]}%CONTINUE%
