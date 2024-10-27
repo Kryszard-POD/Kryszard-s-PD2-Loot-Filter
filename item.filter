@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season X: ver 10.0.4
+//	Kryszard's PD2 Loot Filter for Season X: ver 10.0.5
 //
 //	twitch.tv/kryszard
 //
@@ -13,7 +13,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 10.0.4}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 10.0.5}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%Item Filter %WHITE%- %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -785,11 +785,10 @@ ItemDisplay[key FILTLVL>0 (ASSASSIN OR FILTLVL>3)]: {%NAME%}
 
 //Arrows & Bolts
 ItemDisplay[(aqv OR cqv) !NMAG !ID]: %NAME%%CONTINUE%
-ItemDisplay[(aqv OR cqv) NMAG (CLVL>6 OR FILTLVL>3)]:
+ItemDisplay[(aqv OR cqv) NMAG (CLVL>6 OR FILTLVL>3) !SHOP]:
 ItemDisplay[cqv MAG !ID ((FILTLVL>1 AND CLVL>79) OR FILTLVL>3)]:
 ItemDisplay[aqv MAG !ID ((!AMAZON AND FILTLVL>1 AND CLVL>79) OR FILTLVL>3)]:
-ItemDisplay[cqv RARE AMAZON !ID FILTLVL<6]: %NAME%%CONTINUE%
-ItemDisplay[aqv RARE AMAZON !ID]: %DOT-A8%%TIER-5%%NAME%%CONTINUE%
+ItemDisplay[(aqv OR cqv) RARE AMAZON !ID]: %DOT-A8%%TIER-5%%NAME%%CONTINUE%
 
 //Choking, Exploding, Fulminating, Oil, Rancid, Strangling, and New PD2 Throwing Potions
 ItemDisplay[opm OR tpfm]: %NAME%{%WHITE%Exoplo. Potion, Perf %RED%O%WHITE%, %BLUE%Ring %WHITE%= Fire Res %BLUE%Ring%NL%%TAN%Note%WHITE%: Crafting Recipe:}%CONTINUE%
@@ -1036,8 +1035,8 @@ ItemDisplay[(utp OR 7st OR 7cm OR 7fb) UNI ETH !ID]: %BORDER-68%%ORANGE%pick %PU
 ItemDisplay[(am5) UNI ETH !ID]: %MAP-68%%SAGE%*%DARK_GREEN%*%GRAY%*     %NAME%%GRAY%     *%DARK_GREEN%*%SAGE%*
 //OK PD2 UNIQUES
 ItemDisplay[(drf OR utp OR 7st OR 7cm OR 7fb OR ned OR ame OR ulg OR ung OR urg OR drc OR 7di) UNI !ID]: %MAP-68%%SAGE%*%DARK_GREEN%*%GRAY%*     %NAME%%GRAY%     *%DARK_GREEN%*%SAGE%*
-//Leveling/Lower Value PD2 UNIQUES
-ItemDisplay[(ba6 OR dr2 OR ne6 OR ulb) UNI !ID]: %MAP-68%%TAN%*%GRAY%*   %NAME%%GRAY%   *%TAN%*
+//OK/Lower Value PD2 UNIQUES
+ItemDisplay[(ba6 OR dr2 OR ne6 OR ulb) UNI !ID]: %MAP-68%%SAGE%*   %NAME%%SAGE%   *
 //PD2 Uniques worth notifying
 ItemDisplay[(9ar OR ob6 OR am5 OR pa3) UNI !ID]: %PX-68%%TIER-5%%NAME%
 
@@ -1107,10 +1106,10 @@ ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav 
 ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a) BARBARIAN MAG ETH !ID ILVL>71]: %DOT-97%%PX-68%%NAME%
 //Paladin
 ItemDisplay[DIN PALADIN RARE !ETH !ID ILVL>71]: %DOT-A8%%TIER-5%%NAME%
-ItemDisplay[(pa1 OR pa6 OR pab) PALADIN MAG !ETH !ID ILVL>71]: %DOT-97%%PX-68%%TIER-5%%NAME%
+ItemDisplay[DIN PALADIN MAG !ETH !ID ILVL>71]: %DOT-97%%PX-68%%TIER-2%%NAME%
 //Necromancer
 ItemDisplay[NEC NECROMANCER RARE !ETH !ID ILVL>71]: %DOT-A8%%TIER-5%%NAME%
-ItemDisplay[(ne5 OR nea OR nef) NECROMANCER MAG !ETH !ID ILVL>71]: %DOT-97%%PX-68%%TIER-5%%NAME%
+ItemDisplay[NEC NECROMANCER MAG !ETH !ID ILVL>71]: %DOT-97%%PX-68%%TIER-2%%NAME%
 //Amazon
 ItemDisplay[((am5 OR ama OR amf) OR (am2 OR am7 OR amc OR am1 OR am6 OR amb)) AMAZON RARE !ID ILVL>71]: %DOT-A8%%TIER-5%%NAME%
 ItemDisplay[((am5 OR ama OR amf) OR (am2 OR am7 OR amc OR am1 OR am6 OR amb)) AMAZON MAG !ID ILVL>71]: %DOT-97%%PX-68%%TIER-5%%NAME%
@@ -1119,8 +1118,8 @@ ItemDisplay[SOR SORCERESS RARE !ID ILVL>71]: %DOT-A8%%TIER-5%%NAME%
 ItemDisplay[(ob5 OR oba OR obf) SORCERESS MAG !ID ILVL>71]: %DOT-97%%PX-68%%TIER-5%%NAME%
 //Assassin
 ItemDisplay[SIN ASSASSIN RARE ETH !ID ILVL>71]: %DOT-A8%%TIER-5%%NAME%
-ItemDisplay[(7xf OR 7qr OR 7ar OR 7tw) ASSASSIN RARE ETH !ID ILVL>71]: %DOT-A8%%NAME%
-ItemDisplay[(7xf OR 7qr OR 7ar OR 7tw) ASSASSIN MAG ETH !ID ILVL>71]: %DOT-97%%PX-68%%NAME%
+ItemDisplay[(7xf OR 7ar OR 7tw OR 7qr OR 9qr OR skr) ASSASSIN RARE ETH !ID ILVL>71]: %DOT-A8%%NAME%
+ItemDisplay[(7xf OR 7ar OR 7tw OR 7qr OR 9qr OR skr) ASSASSIN MAG ETH !ID ILVL>71]: %DOT-97%%PX-68%%NAME%
 
 //Class items
 ItemDisplay[(SOR OR WAND OR SCEPTER OR (am5 OR ama OR amf) OR (am2 OR am7 OR amc OR am1 OR am6 OR amb) OR DRU OR BAR OR NEC OR SIN OR DIN OR (clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp) OR (DAGGER !THROWING)) (MAG OR RARE) !ID FILTLVL<4]: %NAME%
@@ -1136,8 +1135,8 @@ ItemDisplay[(SIN OR (DAGGER !THROWING)) ASSASSIN (MAG OR RARE) !ID]: %NAME%
 //Craftables
 ItemDisplay[(jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR tax OR 9ta OR 7ta) NMAG ETH ILVL>71 STAT360=0 FILTLVL<4]: %DOT-A8%%PX-68%%TIER-2%%NAME%{%WHITE%Next: You Can %ORANGE%Craft %WHITE%With This Base%NL%%TAN%Note%WHITE%: You can %RED%Corrupt %WHITE%to Imbue into %YELLOW%Rare %GRAY%(%WHITE%50% Chance%GRAY%)}
 ItemDisplay[(jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR tax OR 9ta OR 7ta) NMAG ETH ILVL>71 STAT360>0 FILTLVL<4]: %NAME%{%TAN%Note%WHITE%: Unlucky... Maybe Next Time :)}
-ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a) RARE ETH !ID ILVL>71]: %DOT-A8%%TIER-2%%NAME%
-ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a) MAG ETH !ID ILVL>71]: %DOT-97%%PX-68%%TIER-2%%NAME%
+ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a OR 7xf OR 7ar OR 7tw OR 7qr OR 9qr OR skr) RARE ETH !ID ILVL>71]: %DOT-A8%%TIER-2%%NAME%
+ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a OR 7xf OR 7ar OR 7tw OR 7qr OR 9qr OR skr) MAG ETH !ID ILVL>71]: %DOT-97%%PX-68%%TIER-2%%NAME%
 ItemDisplay[(GLOVES OR BELT OR BOOTS) MAG ETH !ID]: %NAME%
 ItemDisplay[(msk OR xsk OR usk OR bhm OR xh9 OR uh9 OR ghm OR xhm OR uhm OR crn OR xrn OR urn) MAG ETH !ID]: %NAME%
 ItemDisplay[SHIELD !(sml OR xml OR uml OR spk OR xpk OR upk) MAG ETH !ID]: %NAME%
@@ -1153,6 +1152,7 @@ ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl
 //Rare weapons
 ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp OR mac OR 9ma OR 7ma OR mst OR 9mt OR 7mt OR ssd OR 9ss OR 7ss OR scm OR 9sm OR 7sm OR sbr OR 9sb OR 7sb OR flc OR 9fc OR 7fc OR wsd OR 9wd OR 7wd OR dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR bld OR 9bl OR 7bl OR STAFF OR BOW OR XBOW) RARE !ETH !ID FILTLVL<4]: %NAME%
 ItemDisplay[(lbw OR 8lb OR 6lb OR lbb OR 8l8 OR 6l7 OR lwb OR 8lw OR 6lw) RARE !ID  (AMAZON OR FILTLVL<4)]: %NAME%
+ItemDisplay[STAFF RARE !ID FILTLVL<4]: %NAME%
 
 //Show me exactly +SKILLS values on NMAG items
 //Daggers Opener (Assassin and Necromancer Staffmods at the same time)
