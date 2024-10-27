@@ -2458,6 +2458,7 @@ ItemDisplay[SIN SOCK=2 NMAG !RW]: %NAME%{%GRAY%Neophyte, Steel, Strength, Wind%C
 //Weapons 3soc
 ItemDisplay[WEAPON !leg SOCK=3 NMAG !RW]: %NAME%{%GRAY%Plague, Venom%CL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
 ItemDisplay[WEAPON !(BOW OR XBOW OR SOR OR leg) SOCK=3 NMAG !RW]: %NAME%{%GRAY%Malice, Plague, Venom%CL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Fury,}%CONTINUE%
+ItemDisplay[STAFF SOCK=3 NMAG !RW]: %NAME%{%GRAY%Malice, Plague, Purity, Venom%CL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Fury,}%CONTINUE%
 ItemDisplay[(BOW OR XBOW) SOCK=3 NMAG !RW]: %NAME%{%GRAY%Edge, Melody, Plague, Purity, Venom%CL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
 ItemDisplay[SIN SOCK=3 NMAG !RW]: %NAME%{%GRAY%Malice, Pattern, Plague, Venom%CL%Fury, King's grace, Lawbringer,%CL%Black, Chaos, Crescent moon,%CL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
 ItemDisplay[AXE SOCK=3 NMAG !RW]: %NAME%{%GRAY%Malice, Plague, Venom%CL%Crescent Moon, Fury,%CL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
@@ -2484,7 +2485,8 @@ ItemDisplay[STAFF SOCK=5 NMAG !RW]: %NAME%{%GRAY%Doom, Eternity, Honor, Zenith%C
 ItemDisplay[SCEPTER SOCK=5 NMAG !RW]: %NAME%{%GRAY%Call to Arms, Doom, Eternity, Honor%CL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Beast,}%CONTINUE%
 ItemDisplay[(whm OR mau OR gma OR 9wh OR 9m9 OR 9gm OR 7wh OR 7m7 OR 7gm) SOCK=5 NMAG !RW]: %NAME%{%GRAY% Eternity, Honor, Obedience%CL%Beast, Call to Arms, Doom,%CL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
 ItemDisplay[AXE SOCK=5 NMAG !RW]: %NAME%{%GRAY%Eternity, Grief, Honor%CL%Call to Arms, Death, Doom,%CL%%TAN%Note%WHITE%: Possible RuneWords: %GRAY%Beast,}%CONTINUE%
-ItemDisplay[SWORD SOCK=5 NMAG !RW]: %NAME%{%GRAY%Destruction, Doom, Grief, Honor, Zenith%CL%Call to Arms, Eternity, Death,%CL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
+ItemDisplay[SWORD 1H SOCK=5 NMAG !RW]: %NAME%{%GRAY%Destruction, Doom, Grief, Honor%CL%Call to Arms, Eternity, Death,%CL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
+ItemDisplay[SWORD 2H SOCK=5 NMAG !RW]: %NAME%{%GRAY%Destruction, Doom, Grief, Honor, Zenith%CL%Call to Arms, Eternity, Death,%CL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
 ItemDisplay[(POLEARM OR SPEAR OR JAV) SOCK=5 NMAG !RW]: %NAME%{%GRAY%Eternity, Honor, Obedience, Zenith%CL%Call to Arms, Destruction, Doom,%CL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
 //Weapons 6soc
 ItemDisplay[WEAPON SOCK=6 NMAG !RW]: %NAME%{%GRAY%Breath of the Dying, Silence%CL%%TAN%Note%WHITE%: Possible RuneWords:}%CONTINUE%
