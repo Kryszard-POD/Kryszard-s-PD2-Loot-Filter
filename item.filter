@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season X: ver 10.1.1
+//	Kryszard's PD2 Loot Filter for Season X: ver 10.1.2
 //
 //	twitch.tv/kryszard
 //
@@ -13,7 +13,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 10.1.1}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 10.1.2}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%Item Filter %WHITE%- %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -1120,10 +1120,10 @@ ItemDisplay[((am5 OR ama OR amf) OR (am2 OR am7 OR amc OR am1 OR am6 OR amb)) AM
 ItemDisplay[SOR SORCERESS RARE !ID ILVL>71]: %DOT-A8%%TIER-5%%NAME%
 ItemDisplay[(ob5 OR oba OR obf) SORCERESS MAG !ID ILVL>71]: %DOT-97%%PX-68%%TIER-5%%NAME%
 //Assassin
-ItemDisplay[SIN ASSASSIN RARE !ID ILVL>71]: %DOT-A8%%TIER-2%%NAME%
-ItemDisplay[SIN ASSASSIN RARE ETH !ID ILVL>71]: %DOT-A8%%TIER-5%%NAME%
 ItemDisplay[(7xf OR 9xf OR axf OR 7ar OR 9ar OR ktr OR 7tw OR 9tw OR btl OR 7qr OR 9qr OR skr) ASSASSIN RARE ETH !ID ILVL>71]: %DOT-A8%%NAME%
 ItemDisplay[(7xf OR 9xf OR axf OR 7ar OR 9ar OR ktr OR 7tw OR 9tw OR btl OR 7qr OR 9qr OR skr) ASSASSIN MAG ETH !ID ILVL>71]: %DOT-97%%PX-68%%NAME%
+ItemDisplay[SIN ASSASSIN RARE ETH !ID ILVL>71]: %DOT-A8%%TIER-5%%NAME%
+ItemDisplay[SIN ASSASSIN RARE !ID ILVL>71]: %DOT-A8%%TIER-2%%NAME%
 //Druid
 ItemDisplay[DRU DRUID RARE !ID]: %DOT-A8%%TIER-5%%NAME%
 
