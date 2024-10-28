@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season X: ver 10.0.6
+//	Kryszard's PD2 Loot Filter for Season X: ver 10.1.1
 //
 //	twitch.tv/kryszard
 //
@@ -13,7 +13,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 10.0.6}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%Filter ver 10.1.1}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%Item Filter %WHITE%- %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -791,6 +791,7 @@ ItemDisplay[aqv MAG !ID ((!AMAZON AND FILTLVL>1 AND CLVL>79) OR FILTLVL>3)]:
 ItemDisplay[(aqv OR cqv) RARE AMAZON !ID]: %DOT-A8%%TIER-5%%NAME%%CONTINUE%
 
 //Choking, Exploding, Fulminating, Oil, Rancid, Strangling, and New PD2 Throwing Potions
+Alias[THROWPOTS]: (opm OR gpm OR opl OR ops OR gps OR gpl OR tpfs OR tpgs OR tpcs OR tpls OR tpfm OR tpgm OR tpcm OR tplm OR tpfl OR tpgl OR tpcl OR tpll)
 ItemDisplay[opm OR tpfm]: %NAME%{%WHITE%Exoplo. Potion, Perf %RED%O%WHITE%, %BLUE%Ring %WHITE%= Fire Res %BLUE%Ring%NL%%TAN%Note%WHITE%: Crafting Recipe:}%CONTINUE%
 ItemDisplay[(opm OR tpfm) FILTLVL>0 (CLVL>79 OR FILTLVL>3)]: {%NAME%}
 ItemDisplay[(gpm OR opl OR ops OR gps OR gpl) FILTLVL>0 (CLVL>23 OR FILTLVL>3)]: {%NAME%}
@@ -843,172 +844,172 @@ ItemDisplay[(cm1 OR cm2 OR cm3) MAG !ID]: %DOT-9B%%PURPLE%*%BLUE%   %NAME%   %PU
 ItemDisplay[(cm1 OR cm2 OR cm3) UNI !ID]: %PX-68%%NAME%
 
 //Good Charms part.1
-ItemDisplay[cm3 !UNI (MAXDMG>6 AND LIFE>0)]: %TAN%Max Dmg %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (MAXDMG>6 AND FRW>0)]: %TAN%Max Dmg %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (MAXDMG>6 AND FHR>0)]: %TAN%Max Dmg %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI (MAXDMG>6 AND DEX>0)]: %TAN%Max Dmg %GREEN%dex%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI (MAXDMG>6 AND STR>0)]: %TAN%Max Dmg %DARK_GREEN%str%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI MAXDMG>8]: %TAN%Max Dmg%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (RES>7 AND LIFE>0)]: %PURPLE%ALL %WHITE%Res %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (RES>7 AND FRW>0)]: %PURPLE%ALL %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (RES>7 AND FHR>0)]: %PURPLE%ALL %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI RES>9]: %PURPLE%ALL %WHITE%Res%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (MAXDMG>6 AND LIFE>0)]: %TAN%Max Dmg %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (MAXDMG>6 AND FRW>0)]: %TAN%Max Dmg %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (MAXDMG>6 AND FHR>0)]: %TAN%Max Dmg %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG (MAXDMG>6 AND DEX>0)]: %TAN%Max Dmg %GREEN%dex%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG (MAXDMG>6 AND STR>0)]: %TAN%Max Dmg %DARK_GREEN%str%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG MAXDMG>8]: %TAN%Max Dmg%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (RES>7 AND LIFE>0)]: %PURPLE%ALL %WHITE%Res %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (RES>7 AND FRW>0)]: %PURPLE%ALL %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (RES>7 AND FHR>0)]: %PURPLE%ALL %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG RES>9]: %PURPLE%ALL %WHITE%Res%BLUE%%NL%%NAME%
 
 //PD2 Large Charms
 ItemDisplay[cm2 UNI]: %NAME%{%TAN%Note%WHITE%: Cube with %GRAY%key %WHITE%to Destroy Into: %ORANGE%Hellfire Ashes}
-ItemDisplay[cm2 !UNI ((STAT357>1 AND LIFE>0) OR (STAT357>0 AND LIFE>24))]: %ORANGE%Magic %PURPLE%Damage %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI ((STAT329>1 AND LIFE>0) OR (STAT329>0 AND LIFE>24))]: %RED%Fire %PURPLE%Damage %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI ((STAT330>1 AND LIFE>0) OR (STAT330>0 AND LIFE>24))]: %YELLOW%Light %PURPLE%Damage %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI ((STAT331>1 AND LIFE>0) OR (STAT331>0 AND LIFE>24))]: %BLUE%Cold %PURPLE%Damage %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI ((STAT332>1 AND LIFE>0) OR (STAT332>0 AND LIFE>24))]: %GREEN%Psn %PURPLE%Damage %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI (STAT357>1 AND FRW>0)]: %ORANGE%Magic %PURPLE%Damage %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI (STAT329>1 AND FRW>0)]: %RED%Fire %PURPLE%Damage %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI (STAT330>1 AND FRW>0)]: %YELLOW%Light %PURPLE%Damage %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI (STAT331>1 AND FRW>0)]: %BLUE%Cold %PURPLE%Damage %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI (STAT332>1 AND FRW>0)]: %GREEN%Psn %PURPLE%Damage %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI (STAT357>1 AND FHR>0)]: %ORANGE%Magic %PURPLE%Damage %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI (STAT329>1 AND FHR>0)]: %RED%Fire %PURPLE%Damage %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI (STAT330>1 AND FHR>0)]: %YELLOW%Light %PURPLE%Damage %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI (STAT331>1 AND FHR>0)]: %BLUE%Cold %PURPLE%Damage %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI (STAT332>1 AND FHR>0)]: %GREEN%Psn %PURPLE%Damage %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI STAT357>2]: %ORANGE%Magic %PURPLE%Damage%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI STAT329>2]: %RED%Fire %PURPLE%Damage%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI STAT330>2]: %YELLOW%Light %PURPLE%Damage%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI STAT331>2]: %BLUE%Cold %PURPLE%Damage%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI STAT332>2]: %GREEN%Psn %PURPLE%Damage%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG ((STAT357>1 AND LIFE>0) OR (STAT357>0 AND LIFE>24))]: %ORANGE%Magic %PURPLE%Damage %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG ((STAT329>1 AND LIFE>0) OR (STAT329>0 AND LIFE>24))]: %RED%Fire %PURPLE%Damage %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG ((STAT330>1 AND LIFE>0) OR (STAT330>0 AND LIFE>24))]: %YELLOW%Light %PURPLE%Damage %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG ((STAT331>1 AND LIFE>0) OR (STAT331>0 AND LIFE>24))]: %BLUE%Cold %PURPLE%Damage %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG ((STAT332>1 AND LIFE>0) OR (STAT332>0 AND LIFE>24))]: %GREEN%Psn %PURPLE%Damage %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG (STAT357>1 AND FRW>0)]: %ORANGE%Magic %PURPLE%Damage %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG (STAT329>1 AND FRW>0)]: %RED%Fire %PURPLE%Damage %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG (STAT330>1 AND FRW>0)]: %YELLOW%Light %PURPLE%Damage %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG (STAT331>1 AND FRW>0)]: %BLUE%Cold %PURPLE%Damage %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG (STAT332>1 AND FRW>0)]: %GREEN%Psn %PURPLE%Damage %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG (STAT357>1 AND FHR>0)]: %ORANGE%Magic %PURPLE%Damage %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG (STAT329>1 AND FHR>0)]: %RED%Fire %PURPLE%Damage %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG (STAT330>1 AND FHR>0)]: %YELLOW%Light %PURPLE%Damage %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG (STAT331>1 AND FHR>0)]: %BLUE%Cold %PURPLE%Damage %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG (STAT332>1 AND FHR>0)]: %GREEN%Psn %PURPLE%Damage %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG STAT357>2]: %ORANGE%Magic %PURPLE%Damage%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG STAT329>2]: %RED%Fire %PURPLE%Damage%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG STAT330>2]: %YELLOW%Light %PURPLE%Damage%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG STAT331>2]: %BLUE%Cold %PURPLE%Damage%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG STAT332>2]: %GREEN%Psn %PURPLE%Damage%BLUE%%NL%%NAME%
 
 //Good Charms part.2
-ItemDisplay[cm2 !UNI (MAXDMG>3 AND LIFE>0)]: %TAN%Max Dmg %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI (MAXDMG>3 AND DEX>0)]: %TAN%Max Dmg %GREEN%dex%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI (MAXDMG>3 AND STR>0)]: %TAN%Max Dmg %DARK_GREEN%str%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI (MAXDMG>3 AND FRW>0)]: %TAN%Max Dmg %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI (MAXDMG>3 AND FHR>0)]: %TAN%Max Dmg %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI MAXDMG>4]: %TAN%Max Dmg%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI !UNI (RES>4 AND FRW>0)]: %PURPLE%ALL %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI !UNI (RES>4 AND FHR>0)]: %PURPLE%ALL %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI !UNI ((RES>4 AND LIFE>0) OR (RES>0 AND LIFE>29))]: %PURPLE%ALL %WHITE%Res %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI !UNI RES>6]: %PURPLE%ALL %WHITE%Res%BLUE%%NL%%NAME%
-ItemDisplay[cm2 !UNI LIFE>33]: %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI ((MAXDMG>1 AND LIFE>0) OR (MAXDMG>0 AND LIFE>9))]: %TAN%Max Dmg %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI ((MAXDMG>1 AND MFIND>0) OR (MAXDMG>0 AND MFIND>4))]: %TAN%Max Dmg %GREEN%MF%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI (MAXDMG>1 AND DEX>0)]: %TAN%Max Dmg %GREEN%dex%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI (MAXDMG>1 AND STR>0)]: %TAN%Max Dmg %DARK_GREEN%str%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI (MAXDMG>1 AND FRW>0)]: %TAN%Max Dmg %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI (MAXDMG>1 AND FHR>0)]: %TAN%Max Dmg %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI MAXDMG>1]: %TAN%Max Dmg%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI (RES>0 AND LIFE>0)]: %PURPLE%ALL %WHITE%Res %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI (RES>0 AND FRW>0)]: %PURPLE%ALL %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI (RES>0 AND FHR>0)]: %PURPLE%ALL %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI (RES>0 AND MFIND>0)]: %PURPLE%ALL %WHITE%Res %GREEN%MF%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI RES>0]: %PURPLE%ALL %WHITE%Res%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI ((FRES>9 AND LIFE>0) OR (FRES>4 AND LIFE>10) OR (FRES>0 AND LIFE>16))]: %RED%Fire %WHITE%Res %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI ((LRES>9 AND LIFE>0) OR (LRES>4 AND LIFE>10) OR (LRES>0 AND LIFE>16))]: %YELLOW%Light %WHITE%Res %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI ((CRES>9 AND LIFE>0) OR (CRES>4 AND LIFE>10) OR (CRES>0 AND LIFE>16))]: %BLUE%Cold %WHITE%Res %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI ((PRES>9 AND LIFE>0) OR (PRES>4 AND LIFE>10) OR (PRES>0 AND LIFE>16))]: %GREEN%Psn %WHITE%Res %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI (FRES>4 AND FRW>0)]: %RED%Fire %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI (LRES>4 AND FRW>0)]: %YELLOW%Light %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI (CRES>4 AND FRW>0)]: %BLUE%Cold %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI (PRES>4 AND FRW>0)]: %GREEN%Psn %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI (FRES>4 AND FHR>0)]: %RED%Fire %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI (LRES>4 AND FHR>0)]: %YELLOW%Light %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI (CRES>4 AND FHR>0)]: %BLUE%Cold %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI (PRES>4 AND FHR>0)]: %GREEN%Psn %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI ((FRES>9 AND MFIND>0) OR (FRES>4 AND MFIND>3) OR (FRES>0 AND MFIND>5))]: %RED%Fire %WHITE%Res %GREEN%MF%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI ((LRES>9 AND MFIND>0) OR (LRES>4 AND MFIND>3) OR (LRES>0 AND MFIND>5))]: %YELLOW%Light %WHITE%Res %GREEN%MF%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI ((CRES>9 AND MFIND>0) OR (CRES>4 AND MFIND>3) OR (CRES>0 AND MFIND>5))]: %BLUE%Cold %WHITE%Res %GREEN%MF%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI ((PRES>9 AND MFIND>0) OR (PRES>4 AND MFIND>3) OR (PRES>0 AND MFIND>5))]: %GREEN%Psn %WHITE%Res %GREEN%MF%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI FRES>9]: %RED%Fire %WHITE%Res%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI LRES>9]: %YELLOW%Light %WHITE%Res%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI CRES>9]: %BLUE%Cold %WHITE%Res%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI PRES>9]: %GREEN%Psn %WHITE%Res%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI MFIND>5]: %GREEN%MF%BLUE%%NL%%NAME%
-ItemDisplay[cm1 !UNI LIFE>16]: %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG (MAXDMG>3 AND LIFE>0)]: %TAN%Max Dmg %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG (MAXDMG>3 AND DEX>0)]: %TAN%Max Dmg %GREEN%dex%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG (MAXDMG>3 AND STR>0)]: %TAN%Max Dmg %DARK_GREEN%str%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG (MAXDMG>3 AND FRW>0)]: %TAN%Max Dmg %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG (MAXDMG>3 AND FHR>0)]: %TAN%Max Dmg %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG MAXDMG>4]: %TAN%Max Dmg%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG (RES>4 AND FRW>0)]: %PURPLE%ALL %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG (RES>4 AND FHR>0)]: %PURPLE%ALL %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG ((RES>4 AND LIFE>0) OR (RES>0 AND LIFE>29))]: %PURPLE%ALL %WHITE%Res %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG RES>6]: %PURPLE%ALL %WHITE%Res%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG LIFE>33]: %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG ((MAXDMG>1 AND LIFE>0) OR (MAXDMG>0 AND LIFE>9))]: %TAN%Max Dmg %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG ((MAXDMG>1 AND MFIND>0) OR (MAXDMG>0 AND MFIND>4))]: %TAN%Max Dmg %GREEN%MF%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG (MAXDMG>1 AND DEX>0)]: %TAN%Max Dmg %GREEN%dex%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG (MAXDMG>1 AND STR>0)]: %TAN%Max Dmg %DARK_GREEN%str%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG (MAXDMG>1 AND FRW>0)]: %TAN%Max Dmg %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG (MAXDMG>1 AND FHR>0)]: %TAN%Max Dmg %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG MAXDMG>1]: %TAN%Max Dmg%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG (RES>0 AND LIFE>0)]: %PURPLE%ALL %WHITE%Res %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG (RES>0 AND FRW>0)]: %PURPLE%ALL %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG (RES>0 AND FHR>0)]: %PURPLE%ALL %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG (RES>0 AND MFIND>0)]: %PURPLE%ALL %WHITE%Res %GREEN%MF%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG RES>0]: %PURPLE%ALL %WHITE%Res%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG ((FRES>9 AND LIFE>0) OR (FRES>4 AND LIFE>10) OR (FRES>0 AND LIFE>16))]: %RED%Fire %WHITE%Res %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG ((LRES>9 AND LIFE>0) OR (LRES>4 AND LIFE>10) OR (LRES>0 AND LIFE>16))]: %YELLOW%Light %WHITE%Res %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG ((CRES>9 AND LIFE>0) OR (CRES>4 AND LIFE>10) OR (CRES>0 AND LIFE>16))]: %BLUE%Cold %WHITE%Res %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG ((PRES>9 AND LIFE>0) OR (PRES>4 AND LIFE>10) OR (PRES>0 AND LIFE>16))]: %GREEN%Psn %WHITE%Res %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG (FRES>4 AND FRW>0)]: %RED%Fire %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG (LRES>4 AND FRW>0)]: %YELLOW%Light %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG (CRES>4 AND FRW>0)]: %BLUE%Cold %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG (PRES>4 AND FRW>0)]: %GREEN%Psn %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG (FRES>4 AND FHR>0)]: %RED%Fire %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG (LRES>4 AND FHR>0)]: %YELLOW%Light %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG (CRES>4 AND FHR>0)]: %BLUE%Cold %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG (PRES>4 AND FHR>0)]: %GREEN%Psn %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG ((FRES>9 AND MFIND>0) OR (FRES>4 AND MFIND>3) OR (FRES>0 AND MFIND>5))]: %RED%Fire %WHITE%Res %GREEN%MF%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG ((LRES>9 AND MFIND>0) OR (LRES>4 AND MFIND>3) OR (LRES>0 AND MFIND>5))]: %YELLOW%Light %WHITE%Res %GREEN%MF%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG ((CRES>9 AND MFIND>0) OR (CRES>4 AND MFIND>3) OR (CRES>0 AND MFIND>5))]: %BLUE%Cold %WHITE%Res %GREEN%MF%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG ((PRES>9 AND MFIND>0) OR (PRES>4 AND MFIND>3) OR (PRES>0 AND MFIND>5))]: %GREEN%Psn %WHITE%Res %GREEN%MF%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG FRES>9]: %RED%Fire %WHITE%Res%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG LRES>9]: %YELLOW%Light %WHITE%Res%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG CRES>9]: %BLUE%Cold %WHITE%Res%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG PRES>9]: %GREEN%Psn %WHITE%Res%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG MFIND>5]: %GREEN%MF%BLUE%%NL%%NAME%
+ItemDisplay[cm1 MAG LIFE>16]: %RED%Life%BLUE%%NL%%NAME%
 
 //Skillers
-ItemDisplay[cm3 !UNI (TABSK0>0 AND FHR>0)]: %PURPLE%Bow and Crossbow %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK2>0 AND FHR>0)]: %PURPLE%Javelin and Spear %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK1>0 AND FHR>0)]: %PURPLE%Passive and Magic %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK8>0 AND FHR>0)]: %PURPLE%Fire Spells %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK9>0 AND FHR>0)]: %PURPLE%Lightning Spells %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK10>0 AND FHR>0)]: %PURPLE%Cold Spells %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK16>0 AND FHR>0)]: %PURPLE%Curses %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK17>0 AND FHR>0)]: %PURPLE%Poison & Bone Spells %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK18>0 AND FHR>0)]: %GRAY%Nec %PURPLE%Summoning Spells %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK24>0 AND FHR>0)]: %GRAY%Pal %PURPLE%Combat %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK25>0 AND FHR>0)]: %PURPLE%Offensive Auras %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK26>0 AND FHR>0)]: %PURPLE%Defensive Auras %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK32>0 AND FHR>0)]: %GRAY%Barb %PURPLE%Combat %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK33>0 AND FHR>0)]: %GRAY%Barb %PURPLE%Masteries %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK34>0 AND FHR>0)]: %PURPLE%Warcries %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK40>0 AND FHR>0)]: %GRAY%Dru %PURPLE%Summoning %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK41>0 AND FHR>0)]: %PURPLE%Shape Shifting %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK42>0 AND FHR>0)]: %PURPLE%Elemental %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK48>0 AND FHR>0)]: %PURPLE%Traps %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK49>0 AND FHR>0)]: %PURPLE%Shadow Disciplines %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK50>0 AND FHR>0)]: %PURPLE%Martial Arts %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK0>0 AND FRW>0)]: %PURPLE%Bow and Crossbow %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK2>0 AND FRW>0)]: %PURPLE%Javelin and Spear %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK1>0 AND FRW>0)]: %PURPLE%Passive and Magic %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK8>0 AND FRW>0)]: %PURPLE%Fire Spells %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK9>0 AND FRW>0)]: %PURPLE%Lightning Spells %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK10>0 AND FRW>0)]: %PURPLE%Cold Spells %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK16>0 AND FRW>0)]: %PURPLE%Curses %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK17>0 AND FRW>0)]: %PURPLE%Poison & Bone Spells %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK18>0 AND FRW>0)]: %GRAY%Nec %PURPLE%Summoning Spells %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK24>0 AND FRW>0)]: %GRAY%Pal %PURPLE%Combat %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK25>0 AND FRW>0)]: %PURPLE%Offensive Auras %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK26>0 AND FRW>0)]: %PURPLE%Defensive Auras %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK32>0 AND FRW>0)]: %GRAY%Barb %PURPLE%Combat %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK33>0 AND FRW>0)]: %GRAY%Barb %PURPLE%Masteries %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK34>0 AND FRW>0)]: %PURPLE%Warcries %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK40>0 AND FRW>0)]: %GRAY%Dru %PURPLE%Summoning %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK41>0 AND FRW>0)]: %PURPLE%Shape Shifting %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK42>0 AND FRW>0)]: %PURPLE%Elemental %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK48>0 AND FRW>0)]: %PURPLE%Traps %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK49>0 AND FRW>0)]: %PURPLE%Shadow Disciplines %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK50>0 AND FRW>0)]: %PURPLE%Martial Arts %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK0>0 AND LIFE>0)]: %PURPLE%Bow and Crossbow %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK2>0 AND LIFE>0)]: %PURPLE%Javelin and Spear %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK1>0 AND LIFE>0)]: %PURPLE%Passive and Magic %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK8>0 AND LIFE>0)]: %PURPLE%Fire Spells %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK9>0 AND LIFE>0)]: %PURPLE%Lightning Spells %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK10>0 AND LIFE>0)]: %PURPLE%Cold Spells %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK16>0 AND LIFE>0)]: %PURPLE%Curses %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK17>0 AND LIFE>0)]: %PURPLE%Poison & Bone Spells %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK18>0 AND LIFE>0)]: %GRAY%Nec %PURPLE%Summoning Spells %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK24>0 AND LIFE>0)]: %GRAY%Pal %PURPLE%Combat %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK25>0 AND LIFE>0)]: %PURPLE%Offensive Auras %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK26>0 AND LIFE>0)]: %PURPLE%Defensive Auras %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK32>0 AND LIFE>0)]: %GRAY%Barb %PURPLE%Combat %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK33>0 AND LIFE>0)]: %GRAY%Barb %PURPLE%Masteries %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK34>0 AND LIFE>0)]: %PURPLE%Warcries %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK40>0 AND LIFE>0)]: %GRAY%Dru %PURPLE%Summoning %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK41>0 AND LIFE>0)]: %PURPLE%Shape Shifting %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK42>0 AND LIFE>0)]: %PURPLE%Elemental %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK48>0 AND LIFE>0)]: %PURPLE%Traps %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK49>0 AND LIFE>0)]: %PURPLE%Shadow Disciplines %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI (TABSK50>0 AND LIFE>0)]: %PURPLE%Martial Arts %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI TABSK0>0]: %PURPLE%Bow and Crossbow%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI TABSK2>0]: %PURPLE%Javelin and Spear%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI TABSK1>0]: %PURPLE%Passive and Magic%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI TABSK8>0]: %PURPLE%Fire Spells%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI TABSK9>0]: %PURPLE%Lightning Spells%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI TABSK10>0]: %PURPLE%Cold Spells%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI TABSK16>0]: %PURPLE%Curses%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI TABSK17>0]: %PURPLE%Poison & Bone Spells%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI TABSK18>0]: %GRAY%Nec %PURPLE%Summoning Spells%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI TABSK24>0]: %GRAY%Pal %PURPLE%Combat%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI TABSK25>0]: %PURPLE%Offensive Auras%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI TABSK26>0]: %PURPLE%Defensive Auras%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI TABSK32>0]: %GRAY%Barb %PURPLE%Combat%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI TABSK33>0]: %GRAY%Barb %PURPLE%Masteries%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI TABSK34>0]: %PURPLE%Warcries%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI TABSK40>0]: %GRAY%Dru %PURPLE%Summoning%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI TABSK41>0]: %PURPLE%Shape Shifting%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI TABSK42>0]: %PURPLE%Elemental%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI TABSK48>0]: %PURPLE%Traps%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI TABSK49>0]: %PURPLE%Shadow Disciplines%BLUE%%NL%%NAME%
-ItemDisplay[cm3 !UNI TABSK50>0]: %PURPLE%Martial Arts%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK0>0 AND FHR>0)]: %PURPLE%Bow and Crossbow %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK2>0 AND FHR>0)]: %PURPLE%Javelin and Spear %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK1>0 AND FHR>0)]: %PURPLE%Passive and Magic %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK8>0 AND FHR>0)]: %PURPLE%Fire Spells %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK9>0 AND FHR>0)]: %PURPLE%Lightning Spells %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK10>0 AND FHR>0)]: %PURPLE%Cold Spells %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK16>0 AND FHR>0)]: %PURPLE%Curses %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK17>0 AND FHR>0)]: %PURPLE%Poison & Bone Spells %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK18>0 AND FHR>0)]: %GRAY%Nec %PURPLE%Summoning Spells %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK24>0 AND FHR>0)]: %GRAY%Pal %PURPLE%Combat %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK25>0 AND FHR>0)]: %PURPLE%Offensive Auras %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK26>0 AND FHR>0)]: %PURPLE%Defensive Auras %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK32>0 AND FHR>0)]: %GRAY%Barb %PURPLE%Combat %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK33>0 AND FHR>0)]: %GRAY%Barb %PURPLE%Masteries %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK34>0 AND FHR>0)]: %PURPLE%Warcries %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK40>0 AND FHR>0)]: %GRAY%Dru %PURPLE%Summoning %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK41>0 AND FHR>0)]: %PURPLE%Shape Shifting %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK42>0 AND FHR>0)]: %PURPLE%Elemental %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK48>0 AND FHR>0)]: %PURPLE%Traps %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK49>0 AND FHR>0)]: %PURPLE%Shadow Disciplines %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK50>0 AND FHR>0)]: %PURPLE%Martial Arts %ORANGE%FHR%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK0>0 AND FRW>0)]: %PURPLE%Bow and Crossbow %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK2>0 AND FRW>0)]: %PURPLE%Javelin and Spear %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK1>0 AND FRW>0)]: %PURPLE%Passive and Magic %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK8>0 AND FRW>0)]: %PURPLE%Fire Spells %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK9>0 AND FRW>0)]: %PURPLE%Lightning Spells %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK10>0 AND FRW>0)]: %PURPLE%Cold Spells %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK16>0 AND FRW>0)]: %PURPLE%Curses %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK17>0 AND FRW>0)]: %PURPLE%Poison & Bone Spells %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK18>0 AND FRW>0)]: %GRAY%Nec %PURPLE%Summoning Spells %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK24>0 AND FRW>0)]: %GRAY%Pal %PURPLE%Combat %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK25>0 AND FRW>0)]: %PURPLE%Offensive Auras %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK26>0 AND FRW>0)]: %PURPLE%Defensive Auras %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK32>0 AND FRW>0)]: %GRAY%Barb %PURPLE%Combat %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK33>0 AND FRW>0)]: %GRAY%Barb %PURPLE%Masteries %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK34>0 AND FRW>0)]: %PURPLE%Warcries %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK40>0 AND FRW>0)]: %GRAY%Dru %PURPLE%Summoning %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK41>0 AND FRW>0)]: %PURPLE%Shape Shifting %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK42>0 AND FRW>0)]: %PURPLE%Elemental %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK48>0 AND FRW>0)]: %PURPLE%Traps %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK49>0 AND FRW>0)]: %PURPLE%Shadow Disciplines %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK50>0 AND FRW>0)]: %PURPLE%Martial Arts %ORANGE%frw%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK0>0 AND LIFE>0)]: %PURPLE%Bow and Crossbow %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK2>0 AND LIFE>0)]: %PURPLE%Javelin and Spear %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK1>0 AND LIFE>0)]: %PURPLE%Passive and Magic %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK8>0 AND LIFE>0)]: %PURPLE%Fire Spells %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK9>0 AND LIFE>0)]: %PURPLE%Lightning Spells %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK10>0 AND LIFE>0)]: %PURPLE%Cold Spells %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK16>0 AND LIFE>0)]: %PURPLE%Curses %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK17>0 AND LIFE>0)]: %PURPLE%Poison & Bone Spells %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK18>0 AND LIFE>0)]: %GRAY%Nec %PURPLE%Summoning Spells %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK24>0 AND LIFE>0)]: %GRAY%Pal %PURPLE%Combat %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK25>0 AND LIFE>0)]: %PURPLE%Offensive Auras %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK26>0 AND LIFE>0)]: %PURPLE%Defensive Auras %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK32>0 AND LIFE>0)]: %GRAY%Barb %PURPLE%Combat %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK33>0 AND LIFE>0)]: %GRAY%Barb %PURPLE%Masteries %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK34>0 AND LIFE>0)]: %PURPLE%Warcries %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK40>0 AND LIFE>0)]: %GRAY%Dru %PURPLE%Summoning %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK41>0 AND LIFE>0)]: %PURPLE%Shape Shifting %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK42>0 AND LIFE>0)]: %PURPLE%Elemental %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK48>0 AND LIFE>0)]: %PURPLE%Traps %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK49>0 AND LIFE>0)]: %PURPLE%Shadow Disciplines %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (TABSK50>0 AND LIFE>0)]: %PURPLE%Martial Arts %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG TABSK0>0]: %PURPLE%Bow and Crossbow%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG TABSK2>0]: %PURPLE%Javelin and Spear%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG TABSK1>0]: %PURPLE%Passive and Magic%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG TABSK8>0]: %PURPLE%Fire Spells%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG TABSK9>0]: %PURPLE%Lightning Spells%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG TABSK10>0]: %PURPLE%Cold Spells%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG TABSK16>0]: %PURPLE%Curses%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG TABSK17>0]: %PURPLE%Poison & Bone Spells%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG TABSK18>0]: %GRAY%Nec %PURPLE%Summoning Spells%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG TABSK24>0]: %GRAY%Pal %PURPLE%Combat%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG TABSK25>0]: %PURPLE%Offensive Auras%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG TABSK26>0]: %PURPLE%Defensive Auras%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG TABSK32>0]: %GRAY%Barb %PURPLE%Combat%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG TABSK33>0]: %GRAY%Barb %PURPLE%Masteries%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG TABSK34>0]: %PURPLE%Warcries%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG TABSK40>0]: %GRAY%Dru %PURPLE%Summoning%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG TABSK41>0]: %PURPLE%Shape Shifting%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG TABSK42>0]: %PURPLE%Elemental%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG TABSK48>0]: %PURPLE%Traps%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG TABSK49>0]: %PURPLE%Shadow Disciplines%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG TABSK50>0]: %PURPLE%Martial Arts%BLUE%%NL%%NAME%
 
 //Note abut High-LVL Grand Charms
 ItemDisplay[cm3 MAG ID ILVL>90]: %NAME%{%WHITE%Cube with 3xPerf Gem%NL%%TAN%Note%WHITE%: ILVL%ORANGE%91+ %BLUE%Grand Charm%WHITE%, to Reroll:}
@@ -1101,9 +1102,11 @@ ItemDisplay[HELM RARE !ID FILTLVL<4]: %NAME%
 
 //Class dependence highlight items
 //Barbarian
-ItemDisplay[(jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR tax OR 9ta OR 7ta) BARBARIAN NMAG ETH ILVL>71 FILTLVL<6]: %DOT-A8%%PX-68%%TIER-3%%NAME%{%WHITE%Next: You Can %ORANGE%Craft %WHITE%With This Base%NL%%TAN%Note%WHITE%: You can %RED%Corrupt %WHITE%to Imbue into %YELLOW%Rare %GRAY%(%WHITE%50% Chance%GRAY%)}
+ItemDisplay[(jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR tax OR 9ta OR 7ta) BARBARIAN NMAG ETH ILVL>71 STAT360=0 FILTLVL<6]: %DOT-A8%%PX-68%%TIER-3%%NAME%{%WHITE%Next: You Can %ORANGE%Craft %WHITE%With This Base%NL%%TAN%Note%WHITE%: You can %RED%Corrupt %WHITE%to Imbue into %YELLOW%Rare %GRAY%(%WHITE%50% Chance%GRAY%)}
+ItemDisplay[(jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR tax OR 9ta OR 7ta) BARBARIAN NMAG ETH ILVL>71 STAT360>0 FILTLVL<6]: %NAME%{%TAN%Note%WHITE%: Unlucky... Maybe Next Time :)}
 ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a) BARBARIAN RARE ETH !ID ILVL>71]: %DOT-A8%%NAME%
 ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a) BARBARIAN MAG ETH !ID ILVL>71]: %DOT-97%%PX-68%%NAME%
+ItemDisplay[BAR BARBARIAN RARE !ID]: %DOT-A8%%TIER-5%%NAME%
 //Paladin
 ItemDisplay[DIN PALADIN RARE !ETH !ID ILVL>71]: %DOT-A8%%TIER-5%%NAME%
 ItemDisplay[DIN PALADIN MAG !ETH !ID ILVL>71]: %DOT-97%%PX-68%%TIER-2%%NAME%
@@ -1117,9 +1120,12 @@ ItemDisplay[((am5 OR ama OR amf) OR (am2 OR am7 OR amc OR am1 OR am6 OR amb)) AM
 ItemDisplay[SOR SORCERESS RARE !ID ILVL>71]: %DOT-A8%%TIER-5%%NAME%
 ItemDisplay[(ob5 OR oba OR obf) SORCERESS MAG !ID ILVL>71]: %DOT-97%%PX-68%%TIER-5%%NAME%
 //Assassin
+ItemDisplay[SIN ASSASSIN RARE !ID ILVL>71]: %DOT-A8%%TIER-2%%NAME%
 ItemDisplay[SIN ASSASSIN RARE ETH !ID ILVL>71]: %DOT-A8%%TIER-5%%NAME%
-ItemDisplay[(7xf OR 7ar OR 7tw OR 7qr OR 9qr OR skr) ASSASSIN RARE ETH !ID ILVL>71]: %DOT-A8%%NAME%
-ItemDisplay[(7xf OR 7ar OR 7tw OR 7qr OR 9qr OR skr) ASSASSIN MAG ETH !ID ILVL>71]: %DOT-97%%PX-68%%NAME%
+ItemDisplay[(7xf OR 9xf OR axf OR 7ar OR 9ar OR ktr OR 7tw OR 9tw OR btl OR 7qr OR 9qr OR skr) ASSASSIN RARE ETH !ID ILVL>71]: %DOT-A8%%NAME%
+ItemDisplay[(7xf OR 9xf OR axf OR 7ar OR 9ar OR ktr OR 7tw OR 9tw OR btl OR 7qr OR 9qr OR skr) ASSASSIN MAG ETH !ID ILVL>71]: %DOT-97%%PX-68%%NAME%
+//Druid
+ItemDisplay[DRU DRUID RARE !ID]: %DOT-A8%%TIER-5%%NAME%
 
 //Class items
 ItemDisplay[(SOR OR WAND OR SCEPTER OR (am5 OR ama OR amf) OR (am2 OR am7 OR amc OR am1 OR am6 OR amb) OR DRU OR BAR OR NEC OR SIN OR DIN OR (clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp) OR (DAGGER !THROWING)) (MAG OR RARE) !ID FILTLVL<4]: %NAME%
@@ -1135,15 +1141,15 @@ ItemDisplay[(SIN OR (DAGGER !THROWING)) ASSASSIN (MAG OR RARE) !ID]: %NAME%
 //Craftables
 ItemDisplay[(jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR tax OR 9ta OR 7ta) NMAG ETH ILVL>71 STAT360=0 FILTLVL<4]: %DOT-A8%%PX-68%%TIER-2%%NAME%{%WHITE%Next: You Can %ORANGE%Craft %WHITE%With This Base%NL%%TAN%Note%WHITE%: You can %RED%Corrupt %WHITE%to Imbue into %YELLOW%Rare %GRAY%(%WHITE%50% Chance%GRAY%)}
 ItemDisplay[(jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR tax OR 9ta OR 7ta) NMAG ETH ILVL>71 STAT360>0 FILTLVL<4]: %NAME%{%TAN%Note%WHITE%: Unlucky... Maybe Next Time :)}
-ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a OR 7xf OR 7ar OR 7tw OR 7qr OR 9qr OR skr) RARE ETH !ID ILVL>71]: %DOT-A8%%TIER-2%%NAME%
-ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a OR 7xf OR 7ar OR 7tw OR 7qr OR 9qr OR skr) MAG ETH !ID ILVL>71]: %DOT-97%%PX-68%%TIER-2%%NAME%
+ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a OR 7xf OR 9xf OR axf OR 7ar OR 9ar OR ktr OR 7tw OR 9tw OR btl OR 7qr OR 9qr OR skr) RARE ETH !ID ILVL>71]: %DOT-A8%%TIER-2%%NAME%
+ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a OR 7xf OR 9xf OR axf OR 7ar OR 9ar OR ktr OR 7tw OR 9tw OR btl OR 7qr OR 9qr OR skr) MAG ETH !ID ILVL>71]: %DOT-97%%PX-68%%TIER-2%%NAME%
 ItemDisplay[(GLOVES OR BELT OR BOOTS) MAG ETH !ID]: %NAME%
 ItemDisplay[(msk OR xsk OR usk OR bhm OR xh9 OR uh9 OR ghm OR xhm OR uhm OR crn OR xrn OR urn) MAG ETH !ID]: %NAME%
 ItemDisplay[SHIELD !(sml OR xml OR uml OR spk OR xpk OR upk) MAG ETH !ID]: %NAME%
 ItemDisplay[CHEST MAG ETH !ID]: %NAME%
 ItemDisplay[GLOVES ((EXC OR ELT) !(utg OR uhg)) MAG !ETH !ID FILTLVL<4]: %NAME%
 ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp OR mac OR 9ma OR 7ma OR mst OR 9mt OR 7mt OR ssd OR 9ss OR 7ss OR scm OR 9sm OR 7sm OR sbr OR 9sb OR 7sb OR flc OR 9fc OR 7fc OR wsd OR 9wd OR 7wd OR dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR bld OR 9bl OR 7bl OR STAFF OR ktr OR wrb OR axf OR ces OR clw OR btl OR skr OR 9ar OR 9wb OR 9xf) MAG ETH !ID]: %NAME%
-ItemDisplay[(lwb OR 8lw OR 6lw) MAG !ID (AMAZON OR FILTLVL<4)]: %NAME%
+ItemDisplay[(6lw OR 6l7 OR 6lb OR 6s7 OR 6cb OR 6lx OR 6mx OR 6hx OR 6rx) MAG !ID (AMAZON OR FILTLVL<4)]: %NAME%
 ItemDisplay[(am2 OR am7 OR amc) (MAG OR RARE) !ID ILVL>71]: %NAME%
 
 //Rare ETH weapons
@@ -1151,7 +1157,7 @@ ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl
 
 //Rare weapons
 ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp OR mac OR 9ma OR 7ma OR mst OR 9mt OR 7mt OR ssd OR 9ss OR 7ss OR scm OR 9sm OR 7sm OR sbr OR 9sb OR 7sb OR flc OR 9fc OR 7fc OR wsd OR 9wd OR 7wd OR dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR bld OR 9bl OR 7bl OR STAFF OR BOW OR XBOW) RARE !ETH !ID FILTLVL<4]: %NAME%
-ItemDisplay[(lbw OR 8lb OR 6lb OR lbb OR 8l8 OR 6l7 OR lwb OR 8lw OR 6lw) RARE !ID  (AMAZON OR FILTLVL<4)]: %NAME%
+ItemDisplay[(BOW OR XBOW) RARE !ID (AMAZON OR FILTLVL<4)]: %NAME%
 ItemDisplay[STAFF RARE !ID FILTLVL<4]: %NAME%
 
 //Show me exactly +SKILLS values on NMAG items
@@ -3135,8 +3141,8 @@ ItemDisplay[t23]: %NAME%{%WHITE%Immunes: %RED%130% %YELLOW%100%%NL%%NAME%}%CONTI
 ItemDisplay[t24]: %NAME%{%WHITE%Immunes: %YELLOW%120% %GREEN%110% %GOLD%105%%NL%%NAME%}%CONTINUE%
 ItemDisplay[t25]: %NAME%{%WHITE%Immunes: %YELLOW%135% %GREEN%125%%NL%%NAME%}%CONTINUE%
 ItemDisplay[t26]: %NAME%{%WHITE%Immunes: %GREEN%135% %GOLD%100%%NL%%NAME%}%CONTINUE%
-ItemDisplay[t27]: %NAME%{%WHITE%Immunes: %RED%100% %BLUE%140% %YELLOW%110% %GREEN%100% %GOLD%100%%NL%%NAME%}%CONTINUE%
-ItemDisplay[t28]: %NAME%{%WHITE%Immunes: %BLUE%130% %YELLOW%125% %GREEN%100%%NL%%NAME%}%CONTINUE%
+ItemDisplay[t27]: %NAME%{%WHITE%Immunes: %GRAY%Immune-Free Zone%NL%%NAME%}%CONTINUE%
+ItemDisplay[t28]: %NAME%{%WHITE%Immunes: %GRAY%Immune-Free Zone%NL%%NAME%}%CONTINUE%
 ItemDisplay[t31]: %NAME%{%WHITE%Immunes: %BLUE%180% %GREEN%130% %ORANGE%100%%NL%%NAME%}%CONTINUE%
 ItemDisplay[t32]: %NAME%{%WHITE%Immunes: %BLUE%130% %YELLOW%130%%NL%%NAME%}%CONTINUE%
 ItemDisplay[t33]: %NAME%{%WHITE%Immunes: %RED%120% %BLUE%110%%NL%%NAME%}%CONTINUE%
@@ -3319,7 +3325,7 @@ ItemDisplay[((CHEST OR HELM OR CIRC OR SHIELD) OR WEAPON) !INF (CLVL<31 FILTLVL<
 ItemDisplay[(ARMOR OR WEAPON) (MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109) !leg FILTLVL>0]: %NAME%{%PURPLE%Decrease Your Filter Level in Settings to Display It All The Time%NL%%WHITE%Outside the Town/In the Fight Field it is Going to be %RED%HIDDEN%NL%WARNING%WHITE%: At Current Filter LVL this item is shown %RED%ONLY %WHITE%in Town%CL%%NAME%}
 ItemDisplay[(ARMOR OR WEAPON) !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109) !leg FILTLVL>0]: {%PURPLE%Decrease Your Filter Level in Settings to Display It All The Time%NL%%WHITE%Outside the Town/In the Fight Field it is Going to be %RED%HIDDEN%NL%WARNING%WHITE%: At Current Filter LVL this item is shown %RED%ONLY %WHITE%in Town%CL%%NAME%}
 ItemDisplay[(ARMOR OR WEAPON) INF FILTLVL>0]: {%NAME%}
-ItemDisplay[(ARMOR OR WEAPON) !leg !opm ((CLVL>30 FILTLVL>0) OR FILTLVL>3)]: {%NAME%}
+ItemDisplay[(ARMOR OR WEAPON) !leg !THROWPOTS ((CLVL>30 FILTLVL>0) OR FILTLVL>3)]: {%NAME%}
 
 //It’s just different sizes. BORDER > MAP > DOT > PX.
 //%TIER-X% - just minimap pin w/o chat notify when tier is higher
