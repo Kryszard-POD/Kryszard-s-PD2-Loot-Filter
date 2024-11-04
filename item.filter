@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season X: ver 10.1.5
+//	Kryszard's PD2 Loot Filter for Season X: ver 10.2.1
 //
 //	twitch.tv/kryszard
 //
@@ -13,7 +13,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 10.1.5}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 10.2.1}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%Item Filter %WHITE%- %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -3071,10 +3071,67 @@ ItemDisplay[(clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp) (SK370>2 OR SK238>2 OR SK24
 //Show me quantitiy of all stackables
 ItemDisplay[!(ARMOR OR WEAPON OR tbk OR ibk OR aqv OR cqv OR (MAPTIER>0 !NMAG)) QTY>0]: %NAME% %TAN%x %WHITE%%QTY%{%NAME%}%CONTINUE%
 
-//Jewel notes
+//Jewel notes part.1
+//All w/o High OW Damage Character Level Requirements Values
+ItemDisplay[jew ID RARE ILVL>67 STAT486=0]: %NAME%{%NAME%%BLUE%All Affixes %GRAY%Except High OW Damage %WHITE%Req Clvl: }%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~68-69 STAT486=0 CLVL<98]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~68-69 STAT486=0]: %NAME%{%NAME%98}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~70-72 STAT486=0 CLVL<95]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~70-72 STAT486=0]: %NAME%{%NAME%95}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~73-74 STAT486=0 CLVL<93]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~73-74 STAT486=0]: %NAME%{%NAME%93}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~75-77 STAT486=0 CLVL<90]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~75-77 STAT486=0]: %NAME%{%NAME%90}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~78-79 STAT486=0 CLVL<88]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~78-79 STAT486=0]: %NAME%{%NAME%88}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~80-82 STAT486=0 CLVL<85]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~80-82 STAT486=0]: %NAME%{%NAME%85}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~83-84 STAT486=0 CLVL<83]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~83-84 STAT486=0]: %NAME%{%NAME%83}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~85-87 STAT486=0 CLVL<80]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~85-87 STAT486=0]: %NAME%{%NAME%80}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~88-89 STAT486=0 CLVL<78]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~88-89 STAT486=0]: %NAME%{%NAME%78}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~90-92 STAT486=0 CLVL<75]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~90-92 STAT486=0]: %NAME%{%NAME%75}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~93-94 STAT486=0 CLVL<73]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~93-94 STAT486=0]: %NAME%{%NAME%73}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~95-97 STAT486=0 CLVL<70]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~95-97 STAT486=0]: %NAME%{%NAME%70}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~98-99 STAT486=0 CLVL<68]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~98-99 STAT486=0]: %NAME%{%NAME%68}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL>67 STAT486=0]: %NAME%{%CL%%NAME%%CL%}%CONTINUE%
+//All Affixes Character Level Requirements Values
+ItemDisplay[jew ID RARE ILVL>67 STAT486=0]: %NAME%{%NAME%%WHITE%Rolling %BLUE%All Affixes %WHITE%Require Character Level: }%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~68-72 STAT486=0]: %NAME%{%NAME%%RED%impossible}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~73-74 STAT486=0 CLVL<98]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~73-74 STAT486=0]: %NAME%{%NAME%98}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~75-77 STAT486=0 CLVL<95]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~75-77 STAT486=0]: %NAME%{%NAME%95}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~78-79 STAT486=0 CLVL<93]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~78-79 STAT486=0]: %NAME%{%NAME%93}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~80-82 STAT486=0 CLVL<90]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~80-82 STAT486=0]: %NAME%{%NAME%90}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~83-84 STAT486=0 CLVL<88]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~83-84 STAT486=0]: %NAME%{%NAME%88}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~85-87 STAT486=0 CLVL<85]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~85-87 STAT486=0]: %NAME%{%NAME%85}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~88-89 STAT486=0 CLVL<83]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~88-89 STAT486=0]: %NAME%{%NAME%83}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~90-92 STAT486=0 CLVL<80]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~90-92 STAT486=0]: %NAME%{%NAME%80}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~93-94 STAT486=0 CLVL<78]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~93-94 STAT486=0]: %NAME%{%NAME%78}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~95-97 STAT486=0 CLVL<75]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~95-97 STAT486=0]: %NAME%{%NAME%75}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~98-99 STAT486=0 CLVL<73]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL~98-99 STAT486=0]: %NAME%{%NAME%73}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL>67 STAT486=0]: %NAME%{%CL%%NAME%%CL%}%CONTINUE%
+//Jewel Notes part.2
+ItemDisplay[jew ID RARE ILVL>67 STAT486=0]: %NAME%{%CL%%NAME%%ORANGE%[%WHITE%You might want to %YELLOW%Reroll %WHITE%it with 6 x Perf %GRAY%O%ORANGE%]%CL%}%CONTINUE%
+ItemDisplay[jew ID]: %NAME%{%NAME%%CL%%TAN%Note%WHITE%: Cube with %GRAY%key %WHITE%to Destroy Into: %BLUE%Jewel Fragments%CL%}%CONTINUE%
 ItemDisplay[jew STAT477=21 ]: %NAME%{%TAN%Note%WHITE%: White %BLUE%Jewel}
 ItemDisplay[jew STAT477=4 ]: %NAME%{%TAN%Note%WHITE%: %GRAY%Black %BLUE%Jewel}
-ItemDisplay[jew ID]: %NAME%{%TAN%Note%WHITE%: Cube with %GRAY%key %WHITE%to Destroy Into: %BLUE%Jewel Fragments}
 ItemDisplay[jewf ID]: %BLUE%%NAME%{%GRAY%(Stackable Jewel)%NL%%TAN%Note%WHITE%: Use Those in Cube Recipes}
 
 //Standard of Heroes
