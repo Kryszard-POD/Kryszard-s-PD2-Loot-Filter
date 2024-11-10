@@ -9,7 +9,33 @@ I am trying to make one filter, which will suit most players needs.
 Filter is good for both: leveling and endgame experience.  
 It's gonna show you almost everything which can help you during leveling process at early stages of your new characters, and became more strict after you hit **lvl 80+** (select your lootfilter level in-game settings to adjust it more for your needs)
 
-## Season X Update:
+## Mid Season X Update:
+
+![S10_update2](https://github.com/user-attachments/assets/9a0485dd-18b6-481c-9a99-23b1e55acdb2)
+
+What's new?
+- Added information on Magic and Rare Crafting bases, that will show Craft ALVL from now on.
+	- High Craft ALVL Values gonna be highlighted in 3 tiers:
+		1. ORANGE color - Can Roll All Affixes,
+  		2. YELLOW color - Can Roll Most Affixes - Can't roll all of them, but you still might want to craft it, cause it can roll well,
+  		3. TEAL color - Good for +Skills Affixes - It's designed for class items that can roll +Skills - For Caster recipes (Can't roll the highest affixes, but this shouldn't be an issue for caster weapon),
+   		4. Low Craft ALVL values gonna be just displayed without any extra information.
+- Revisieted Upgrading items section:
+	- Added info with Value of Level Requirement after item being upgraded,
+	- Added coloring of Required stat Values - When your character doesn't meet creteria, values would be displayed in RED color. When it meet the req, it will be in WHITE. 
+		- (In some cases it might display required level in Light Red/Coral color - When LEVELREQ before upgrade is higher, then LVLREQ of upgraded base - Then Filter can't evaluate the right RED/WHITE color, becouse of limitation with comparation "LEVELREQ>CLVL" that is not supported for now.)
+- Some other minor changes:
+	- Highlights of some unique items reduced/improved slightly,
+	- Highlights of crafting bases is now based on ALVL/CRAFTALVL instead of ILVL,
+	- Rare Class items will show for all classes on Strict Filter Level (and still would be hidden if don't match your class on Max-Strict filter Level),
+	- High ED with CTC Amp damage Weapon higlight description changed slightly,
+	- Added some new +skills RW bases to be displayed,
+	- Fixed spelling od NMAG Hierophant Trophy (was h-EI-rophant trophy before),
+	- Added correct descriptions on Lucion Uber ingredients,
+	- In Previous update you might notice the extra info for ReRolling Rare Jewels,
+	- Some other fixes and improvements here and there.
+
+## Season X Launch Update:
 
 What's new?
 - Adjusted items descriptions to match all S10 changes like max sockets increase on some items, new possible runewords on rw bases, new runewords recipes on keys etc.,
