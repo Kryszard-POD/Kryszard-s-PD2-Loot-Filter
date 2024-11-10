@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season X: ver 10.2.1
+//	Kryszard's PD2 Loot Filter for Season X: ver 10.3.1
 //  Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -14,7 +14,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%futureal.filter ver 10.2.1}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%futureal.filter ver 10.3.1}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%Item Filter %WHITE%- %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -233,7 +233,7 @@ ItemDisplay[(SUP OR INF) !RW ne4]: Gargoyle Head%CONTINUE%
 ItemDisplay[(SUP OR INF) !RW ne9]: Cantor Trophy%CONTINUE%
 ItemDisplay[(SUP OR INF) !RW nee]: Succubus Skull%CONTINUE%
 ItemDisplay[(SUP OR INF) !RW ne5]: Demon Head%CONTINUE%
-ItemDisplay[(SUP OR INF) !RW nea]: Heirophant Trophy%CONTINUE%
+ItemDisplay[(SUP OR INF) !RW nea]: Hierophant Trophy%CONTINUE%
 ItemDisplay[(SUP OR INF) !RW nef]: Bloodlord Skull%CONTINUE%
 ItemDisplay[(SUP OR INF) !RW hax]: Hand Axe%CONTINUE%
 ItemDisplay[(SUP OR INF) !RW 9ha]: Hatchet%CONTINUE%
@@ -1026,9 +1026,11 @@ ItemDisplay[(7tw OR baf OR 7qs OR 6bs OR utg) UNI !ID]: %BORDER-68%%NAME%
 //GG PD2 UNIQUES only when ETH
 ItemDisplay[(utp OR 7st OR 7cm OR 7fb) UNI ETH !ID]: %BORDER-68%%NAME%
 //OK PD2 UNIQUES only when ETH
-ItemDisplay[(am5) UNI ETH !ID]: %MAP-68%%NAME%
+//ItemDisplay[(am5) UNI ETH !ID]: %MAP-68%%SAGE%*%DARK_GREEN%*%GRAY%*     %NAME%%GRAY%     *%DARK_GREEN%*%SAGE%*
 //OK PD2 UNIQUES
 ItemDisplay[(drf OR utp OR 7st OR 7cm OR 7fb OR ned OR ame OR ulg OR ung OR urg OR drc OR 7di) UNI !ID]: %MAP-68%%NAME%
+//OK/Lower Value PD2 UNIQUES when ETH
+ItemDisplay[(am5) UNI ETH !ID]: %MAP-68%%NAME%
 //OK/Lower Value PD2 UNIQUES
 ItemDisplay[(ba6 OR dr2 OR ne6 OR ulb) UNI !ID]: %MAP-68%%NAME%
 //PD2 Uniques worth notifying
@@ -1041,13 +1043,13 @@ ItemDisplay[(rin OR amu OR 6ws OR uar OR ulc OR urn OR uap OR ci3 OR xtb OR uit 
 ItemDisplay[(9gm OR 7gm OR 7s8 OR 7p7 OR 7wa) UNI ETH !ID]: %BORDER-68%%NAME%
 
 //OK UNIQUES only when ETH
-ItemDisplay[(7pa OR 7bt OR 7gi OR 7m7 OR 8ls OR 7gl OR 7b8 OR 7bk OR xpl OR 7ha OR 7b7 OR 7sr) UNI ETH !ID]: %MAP-68%%NAME%
+ItemDisplay[(7gi OR 7m7 OR 8ls OR 7gl OR 7b8 OR 7bk OR xpl OR 7ha OR 7b7 OR 7sr) UNI ETH !ID]: %MAP-68%%NAME%
 
 //OK UNIQUES
 //belts
 ItemDisplay[(ztb OR zlb OR zvb OR zhb OR umc OR uvc) UNI !ID]: %MAP-68%%NAME%
 //armors
-ItemDisplay[(xea OR uui OR xth OR xhn OR xtp OR xlt OR upl OR uld OR utu) UNI !ID]: %MAP-68%%NAME%
+ItemDisplay[(xea OR uui OR xhn OR xlt OR upl OR uld OR utu) UNI !ID]: %MAP-68%%NAME%
 //gloves
 ItemDisplay[(uvg OR uhg OR umg) UNI !ID]: %MAP-68%%NAME%
 //helmets
@@ -1057,10 +1059,16 @@ ItemDisplay[(lbt OR xhb OR uhb OR xvb) UNI !ID]: %MAP-68%%NAME%
 //shields
 ItemDisplay[(nee OR pa9 OR nea OR uts OR uow OR xsh OR xow OR pae OR nef) UNI !ID]: %MAP-68%%NAME%
 //weapons
-ItemDisplay[(7ts OR 7s8 OR 9bw OR 7wc OR 7bw OR 7cs OR 7ws OR 7fl OR 7kr OR 7cr OR 7gm OR 9tw OR oba OR ama OR obc OR 7lw OR amf OR 7wh OR 7p7 OR 7wa) UNI !ID]: %MAP-68%%NAME%
+ItemDisplay[(7ts OR 7s8 OR 9bw OR 7wc OR 7bw OR 7cs OR 7ws OR 7fl OR 7cr OR 7gm OR oba OR ama OR obc OR 7lw OR amf OR 7wh OR 7p7 OR 7wa) UNI !ID]: %MAP-68%%NAME%
 
 //OK/Lower Value UNIQUES
-ItemDisplay[(ltp OR xcl) UNI !ID]: %DOT-68%%NAME%
+ItemDisplay[(7pa OR 7bt OR ltp OR xcl OR pac OR 9tw OR xtp OR xth OR 7kr OR xpl OR xld OR 7b7) UNI !ID]: %DOT-68%%NAME%
+
+//Uniques worth notifying
+//Armors
+ItemDisplay[(brs OR fld OR xkp OR xul OR xlm OR drb OR 9sp OR mbt OR rng OR uul OR xng OR xui OR spl OR xmg OR xsk OR xml OR xlb OR xap OR xrs OR gth OR aar OR (BELT !(vbl OR hbl)) OR skp OR xhl OR xrn OR vbt OR xmb OR uvb OR umb OR lgl OR vgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR ush OR upk OR uml OR xts OR xrg OR tow OR kit OR gts OR xar) UNI !ID]: %PX-68%%TIER-5%%NAME%
+//Weapons
+ItemDisplay[((8ws OR 8lb OR 92h OR 8s8 OR 9wc OR 92h OR 8mx OR 6rx OR 6hx OR 9gw OR 7m7 OR 9cl OR mau OR 7ls OR 9ls OR 7br OR 7sr OR 7p7 OR 9ba OR 7ga OR 7gi OR 8ls OR 72a OR 7o7 OR 9yw OR 9fc OR 9kr OR amb OR 7sc OR 7mp OR 6sw OR 6l7 OR 8hx OR 8rx OR dgr OR 7dg OR 7bl OR 9ma OR 9wh OR 9gm OR 9ws OR 6cs OR 7gs OR 9sb OR 9bs) OR (ELT (THROWING OR JAV)) OR 7wb OR 7sp) UNI !ID]: %PX-68%%TIER-5%%NAME%
 
 //Rainbow Facet
 ItemDisplay[jew UNI !ID]: %BORDER-68%%NAME%
@@ -1071,12 +1079,7 @@ ItemDisplay[(7fb OR 7gd OR 7ls OR 7m7 OR 7qr OR 7ws) SET ETH !ID]: %MAP-84%%NAME
 //Good SET parts
 ItemDisplay[(amu OR rin OR uar OR ci3 OR 7qr OR uth OR paf) SET !ID]: %MAP-84%%NAME%
 
-//Uniques and Sets worth notifying
-//Armors
-ItemDisplay[(brs OR fld OR xkp OR xul OR xlm OR drb OR 9sp OR mbt OR rng OR uul OR xng OR xui OR spl OR pac OR xmg OR xsk OR xml OR xlb OR xpl OR xap OR xld OR xrs OR gth OR aar OR (BELT !(vbl OR hbl)) OR skp OR xhl OR xrn OR vbt OR xmb OR uvb OR umb OR lgl OR vgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR ush OR upk OR uml OR xts OR xrg OR tow OR kit OR gts OR xar) UNI !ID]: %PX-68%%TIER-5%%NAME%
-//Weapons
-ItemDisplay[((8ws OR 8lb OR 92h OR 8s8 OR 9wc OR 92h OR 8mx OR 6rx OR 6hx OR 9gw OR 7m7 OR 9cl OR mau OR 7ls OR 9ls OR 7br OR 7sr OR 7p7 OR 9ba OR 7ga OR 7gi OR 7pa OR 8ls OR 72a OR 7o7 OR 9yw OR 9fc OR 9kr OR amb OR 7sc OR 7mp OR 6sw OR 6l7 OR 8hx OR 8rx OR dgr OR 7dg OR 7bl OR 9ma OR 9wh OR 9gm OR 9ws OR 6cs OR 7b7 OR 7gs OR 9sb OR 9bs OR 7bt) OR (ELT (THROWING OR JAV)) OR 7wb OR 7sp) UNI !ID]: %PX-68%%TIER-5%%NAME%
-//Sets
+//Sets worth notifying
 ItemDisplay[((ARMOR OR WEAPON) (EXC OR ELT OR ci0 OR ba5 OR lbt) !(9vo OR xcl OR xrn)) SET !ID]: %PX-84%%TIER-5%%NAME%
 
 //Highlight all Sets and Uniques for low lvl characters
@@ -1091,36 +1094,38 @@ ItemDisplay[(jew OR rin OR amu OR CIRC) RARE !ID]: %DOT-A8%%NAME%
 
 //Class dependence highlight items
 //Barbarian
-ItemDisplay[(jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR tax OR 9ta OR 7ta) BARBARIAN NMAG ETH ILVL>71 STAT360=0 FILTLVL<6]: %DOT-A8%%PX-68%%TIER-3%%NAME%{%WHITE%Next: You Can %ORANGE%Craft %WHITE%With This Base%NL%%TAN%Note%WHITE%: You can %RED%Corrupt %WHITE%to Imbue into %YELLOW%Rare %GRAY%(%WHITE%50% Chance%GRAY%)}
-ItemDisplay[(jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR tax OR 9ta OR 7ta) BARBARIAN NMAG ETH ILVL>71 STAT360>0 FILTLVL<6]: %NAME%{%TAN%Note%WHITE%: Unlucky... Maybe Next Time :)}
-ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a) BARBARIAN RARE ETH !ID ILVL>71]: %DOT-A8%%NAME%
-ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a) BARBARIAN MAG ETH !ID ILVL>71]: %DOT-97%%PX-68%%NAME%
-ItemDisplay[BAR BARBARIAN RARE !ID]: %DOT-A8%%TIER-5%%NAME%
+ItemDisplay[(jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR tax OR 9ta OR 7ta) BARBARIAN NMAG ETH (ALVL>74 OR CRAFTALVL>74) STAT360=0 FILTLVL<6]: %DOT-A8%%PX-68%%TIER-3%%NAME%{%WHITE%Next: You Can %ORANGE%Craft %WHITE%With This Base%NL%%TAN%Note%WHITE%: You can %RED%Corrupt %WHITE%to Imbue into %YELLOW%Rare %GRAY%(%WHITE%50% Chance%GRAY%)}
+ItemDisplay[(jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR tax OR 9ta OR 7ta) BARBARIAN NMAG ETH (ALVL>74 OR CRAFTALVL>74) STAT360>0 FILTLVL<6]: %NAME%{%TAN%Note%WHITE%: Unlucky... Maybe Next Time :)}
+ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a) BARBARIAN RARE ETH !ID (ALVL>75 OR CRAFTALVL>75)]: %DOT-A8%%NAME%
+ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a) BARBARIAN MAG ETH !ID (ALVL>75 OR CRAFTALVL>75)]: %DOT-97%%PX-68%%NAME%
+ItemDisplay[BAR BARBARIAN RARE !ID (ALVL>70 OR CRAFTALVL>70)]: %DOT-A8%%TIER-5%%NAME%
 //Paladin
-ItemDisplay[DIN PALADIN RARE !ETH !ID ILVL>71]: %DOT-A8%%TIER-5%%NAME%
-ItemDisplay[DIN PALADIN MAG !ETH !ID ILVL>71]: %DOT-97%%PX-68%%TIER-2%%NAME%
+ItemDisplay[DIN PALADIN RARE !ETH !ID (ALVL>74 OR CRAFTALVL>74)]: %DOT-A8%%TIER-5%%NAME%
+ItemDisplay[DIN PALADIN MAG !ETH !ID (ALVL>74 OR CRAFTALVL>74)]: %DOT-97%%PX-68%%TIER-2%%NAME%
 //Necromancer
-ItemDisplay[NEC NECROMANCER RARE !ETH !ID ILVL>71]: %DOT-A8%%TIER-5%%NAME%
-ItemDisplay[NEC NECROMANCER MAG !ETH !ID ILVL>71]: %DOT-97%%PX-68%%TIER-2%%NAME%
+ItemDisplay[NEC NECROMANCER RARE !ETH !ID (ALVL>74 OR CRAFTALVL>74)]: %DOT-A8%%TIER-5%%NAME%
+ItemDisplay[NEC NECROMANCER MAG !ETH !ID (ALVL>74 OR CRAFTALVL>74)]: %DOT-97%%PX-68%%TIER-2%%NAME%
 //Amazon
-ItemDisplay[((am5 OR ama OR amf) OR (am2 OR am7 OR amc OR am1 OR am6 OR amb)) AMAZON RARE !ID ILVL>71]: %DOT-A8%%TIER-5%%NAME%
-ItemDisplay[((am5 OR ama OR amf) OR (am2 OR am7 OR amc OR am1 OR am6 OR amb)) AMAZON MAG !ID ILVL>71]: %DOT-97%%PX-68%%TIER-5%%NAME%
+ItemDisplay[(am5 OR ama OR amf) AMAZON RARE !ID (ALVL>59 OR CRAFTALVL>59)]: %DOT-A8%%TIER-5%%NAME%
+ItemDisplay[(am5 OR ama OR amf) AMAZON MAG !ID (ALVL>59 OR CRAFTALVL>59)]: %DOT-97%%PX-68%%TIER-5%%NAME%
+ItemDisplay[(am2 OR am7 OR amc OR am1 OR am6 OR amb) AMAZON RARE !ID (ALVL>74 OR CRAFTALVL>74)]: %DOT-A8%%TIER-5%%NAME%
+ItemDisplay[(am2 OR am7 OR amc OR am1 OR am6 OR amb) AMAZON MAG !ID (ALVL>74 OR CRAFTALVL>74)]: %DOT-97%%PX-68%%TIER-5%%NAME%
 //Sorceress
-ItemDisplay[SOR SORCERESS RARE !ID ILVL>71]: %DOT-A8%%TIER-5%%NAME%
-ItemDisplay[(ob5 OR oba OR obf) SORCERESS MAG !ID ILVL>71]: %DOT-97%%PX-68%%TIER-5%%NAME%
+ItemDisplay[SOR SORCERESS RARE !ID (ALVL>59 OR CRAFTALVL>59)]: %DOT-A8%%TIER-5%%NAME%
+ItemDisplay[(ob5 OR oba OR obf) SORCERESS MAG !ID (ALVL>59 OR CRAFTALVL>59)]: %DOT-97%%PX-68%%TIER-5%%NAME%
 //Assassin
-ItemDisplay[(7xf OR 9xf OR axf OR 7ar OR 9ar OR ktr OR 7tw OR 9tw OR btl OR 7qr OR 9qr OR skr) ASSASSIN RARE ETH !ID ILVL>71]: %DOT-A8%%NAME%
-ItemDisplay[(7xf OR 9xf OR axf OR 7ar OR 9ar OR ktr OR 7tw OR 9tw OR btl OR 7qr OR 9qr OR skr) ASSASSIN MAG ETH !ID ILVL>71]: %DOT-97%%PX-68%%NAME%
-ItemDisplay[SIN ASSASSIN RARE ETH !ID ILVL>71]: %DOT-A8%%TIER-5%%NAME%
-ItemDisplay[SIN ASSASSIN RARE !ID ILVL>71]: %DOT-A8%%TIER-2%%NAME%
+ItemDisplay[(7xf OR 9xf OR axf OR 7ar OR 9ar OR ktr OR 7tw OR 9tw OR btl OR 7qr OR 9qr OR skr) ASSASSIN RARE ETH !ID (ALVL>75 OR CRAFTALVL>75)]: %DOT-A8%%NAME%
+ItemDisplay[(7xf OR 9xf OR axf OR 7ar OR 9ar OR ktr OR 7tw OR 9tw OR btl OR 7qr OR 9qr OR skr) ASSASSIN MAG ETH !ID (ALVL>75 OR CRAFTALVL>75)]: %DOT-97%%PX-68%%NAME%
+ItemDisplay[SIN ASSASSIN RARE ETH !ID (ALVL>59 OR CRAFTALVL>59)]: %DOT-A8%%TIER-5%%NAME%
+ItemDisplay[SIN ASSASSIN RARE !ID (ALVL>59 OR CRAFTALVL>59)]: %DOT-A8%%TIER-2%%NAME%
 //Druid
-ItemDisplay[DRU DRUID RARE !ID]: %DOT-A8%%TIER-5%%NAME%
+ItemDisplay[DRU DRUID RARE !ID (ALVL>70 OR CRAFTALVL>70)]: %DOT-A8%%TIER-5%%NAME%
 
 //Craftables
-ItemDisplay[(jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR tax OR 9ta OR 7ta) NMAG ETH ILVL>71 STAT360=0 FILTLVL<4]: %DOT-A8%%PX-68%%TIER-2%%NAME%{%WHITE%Next: You Can %ORANGE%Craft %WHITE%With This Base%NL%%TAN%Note%WHITE%: You can %RED%Corrupt %WHITE%to Imbue into %YELLOW%Rare %GRAY%(%WHITE%50% Chance%GRAY%)}
-ItemDisplay[(jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR tax OR 9ta OR 7ta) NMAG ETH ILVL>71 STAT360>0 FILTLVL<4]: %NAME%{%TAN%Note%WHITE%: Unlucky... Maybe Next Time :)}
-ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a OR 7xf OR 9xf OR axf OR 7ar OR 9ar OR ktr OR 7tw OR 9tw OR btl OR 7qr OR 9qr OR skr) RARE ETH !ID ILVL>71]: %DOT-A8%%TIER-2%%NAME%
-ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a OR 7xf OR 9xf OR axf OR 7ar OR 9ar OR ktr OR 7tw OR 9tw OR btl OR 7qr OR 9qr OR skr) MAG ETH !ID ILVL>71]: %DOT-97%%PX-68%%TIER-2%%NAME%
+ItemDisplay[(jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR tax OR 9ta OR 7ta) NMAG ETH (ALVL>74 OR CRAFTALVL>74) STAT360=0 FILTLVL<4]: %DOT-A8%%PX-68%%TIER-2%%NAME%{%WHITE%Next: You Can %ORANGE%Craft %WHITE%With This Base%NL%%TAN%Note%WHITE%: You can %RED%Corrupt %WHITE%to Imbue into %YELLOW%Rare %GRAY%(%WHITE%50% Chance%GRAY%)}
+ItemDisplay[(jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR tax OR 9ta OR 7ta) NMAG ETH (ALVL>74 OR CRAFTALVL>74) STAT360>0 FILTLVL<4]: %NAME%{%TAN%Note%WHITE%: Unlucky... Maybe Next Time :)}
+ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a OR 7xf OR 9xf OR axf OR 7ar OR 9ar OR ktr OR 7tw OR 9tw OR btl OR 7qr OR 9qr OR skr) RARE ETH !ID (ALVL>75 OR CRAFTALVL>75)]: %DOT-A8%%TIER-2%%NAME%
+ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a OR 7xf OR 9xf OR axf OR 7ar OR 9ar OR ktr OR 7tw OR 9tw OR btl OR 7qr OR 9qr OR skr) MAG ETH !ID (ALVL>75 OR CRAFTALVL>75)]: %DOT-97%%PX-68%%TIER-2%%NAME%
 ItemDisplay[(GLOVES OR BELT OR BOOTS) MAG ETH !ID]: %NAME%
 ItemDisplay[(msk OR xsk OR usk OR bhm OR xh9 OR uh9 OR ghm OR xhm OR uhm OR crn OR xrn OR urn) MAG ETH !ID]: %NAME%
 ItemDisplay[SHIELD !(sml OR xml OR uml OR spk OR xpk OR upk) MAG ETH !ID]: %NAME%
@@ -1128,18 +1133,29 @@ ItemDisplay[CHEST MAG ETH !ID]: %NAME%
 ItemDisplay[GLOVES ((EXC OR ELT) !(utg OR uhg)) MAG !ETH !ID FILTLVL<4]: %NAME%
 ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp OR mac OR 9ma OR 7ma OR mst OR 9mt OR 7mt OR ssd OR 9ss OR 7ss OR scm OR 9sm OR 7sm OR sbr OR 9sb OR 7sb OR flc OR 9fc OR 7fc OR wsd OR 9wd OR 7wd OR dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR bld OR 9bl OR 7bl OR STAFF OR ktr OR wrb OR axf OR ces OR clw OR btl OR skr OR 9ar OR 9wb OR 9xf) MAG ETH !ID]: %NAME%
 ItemDisplay[(6lw OR 6l7 OR 6lb OR 6s7 OR 6cb OR 6lx OR 6mx OR 6hx OR 6rx) MAG !ID ((AMAZON FILTLVL<6) OR FILTLVL<4)]: %NAME%
-ItemDisplay[(am2 OR am7 OR amc) (MAG OR RARE) !ID ILVL>71]: %NAME%
+ItemDisplay[(am2 OR am7 OR amc) (MAG OR RARE) !ID (ALVL>74 OR CRAFTALVL>74)]: %NAME%
 
 //Class items
-ItemDisplay[(SOR OR WAND OR SCEPTER OR (am5 OR ama OR amf) OR (am2 OR am7 OR amc OR am1 OR am6 OR amb) OR DRU OR BAR OR NEC OR SIN OR DIN OR (clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp) OR (DAGGER !THROWING)) (MAG OR RARE) !ID FILTLVL<4]: %NAME%
-ItemDisplay[SOR SORCERESS (MAG OR RARE) !ID]: %NAME%
-ItemDisplay[(WAND OR (DAGGER !THROWING) OR (NEC !ETH)) NECROMANCER (MAG OR RARE) !ID]: %NAME%
+//Magic
+ItemDisplay[(SOR OR WAND OR SCEPTER OR (am5 OR ama OR amf) OR (am2 OR am7 OR amc OR am1 OR am6 OR amb) OR DRU OR BAR OR NEC OR SIN OR DIN OR (clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp) OR (DAGGER !THROWING)) MAG !ID FILTLVL<4]: %NAME%
+ItemDisplay[SOR SORCERESS MAG !ID]: %NAME%
+ItemDisplay[(WAND OR (DAGGER !THROWING) OR (NEC !ETH)) NECROMANCER MAG !ID]: %NAME%
 ItemDisplay[NEC NECROMANCER RARE ETH !ID]: %NAME%
-ItemDisplay[(SCEPTER OR DIN) PALADIN (MAG OR RARE) !ID]: %NAME%
-ItemDisplay[((am5 OR ama OR amf) OR (am2 OR am7 OR amc OR am1 OR am6 OR amb)) AMAZON (MAG OR RARE) !ID]: %NAME%
-ItemDisplay[(DRU OR (clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp)) DRUID (MAG OR RARE) !ID]: %NAME%
-ItemDisplay[BAR BARBARIAN (MAG OR RARE) !ID]: %NAME%
-ItemDisplay[(SIN OR (DAGGER !THROWING)) ASSASSIN (MAG OR RARE) !ID]: %NAME%
+ItemDisplay[(SCEPTER OR DIN) PALADIN MAG !ID]: %NAME%
+ItemDisplay[((am5 OR ama OR amf) OR (am2 OR am7 OR amc OR am1 OR am6 OR amb)) AMAZON MAG !ID]: %NAME%
+ItemDisplay[(DRU OR (clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp)) DRUID MAG !ID]: %NAME%
+ItemDisplay[BAR BARBARIAN MAG !ID]: %NAME%
+ItemDisplay[(SIN OR (DAGGER !THROWING)) ASSASSIN MAG !ID]: %NAME%
+//Rare
+ItemDisplay[(SOR OR WAND OR SCEPTER OR (am5 OR ama OR amf) OR (am2 OR am7 OR amc OR am1 OR am6 OR amb) OR DRU OR BAR OR NEC OR SIN OR DIN OR (clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp) OR (DAGGER !THROWING)) RARE !ID FILTLVL<6]: %NAME%
+ItemDisplay[SOR SORCERESS RARE !ID]: %NAME%
+ItemDisplay[(WAND OR (DAGGER !THROWING) OR (NEC !ETH)) NECROMANCER RARE !ID]: %NAME%
+ItemDisplay[NEC NECROMANCER RARE ETH !ID]: %NAME%
+ItemDisplay[(SCEPTER OR DIN) PALADIN RARE !ID]: %NAME%
+ItemDisplay[((am5 OR ama OR amf) OR (am2 OR am7 OR amc OR am1 OR am6 OR amb)) AMAZON RARE !ID]: %NAME%
+ItemDisplay[(DRU OR (clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp)) DRUID RARE !ID]: %NAME%
+ItemDisplay[BAR BARBARIAN RARE !ID]: %NAME%
+ItemDisplay[(SIN OR (DAGGER !THROWING)) ASSASSIN RARE !ID]: %NAME%
 
 //Hide Magic Ring and Amulets on Super Strict Level
 ItemDisplay[(rin OR amu) MAG !ID FILTLVL>5]: {%NAME%}
@@ -2528,104 +2544,1113 @@ ItemDisplay[ARMOR EXC SET ID]: %NAME%{%GREEN%This Item%WHITE%, %ORANGE%Ko%WHITE%
 ItemDisplay[WEAPON NORM SET ID]: %NAME%{%GREEN%This Item%WHITE%, %ORANGE%Ral%WHITE%, %ORANGE%Sol%WHITE%, Perf %GREEN%O}%CONTINUE%
 ItemDisplay[WEAPON EXC SET ID]: %NAME%{%GREEN%This Item%WHITE%, %ORANGE%Lum%WHITE%, %ORANGE%Pul%WHITE%, Perf %GREEN%O}%CONTINUE%
 
-//Exactly Requirements after upgrade (Thanks to BetweenWalls)
+//Exactly Requirements after upgrade
 ItemDisplay[(ARMOR OR WEAPON) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID]: %NAME%{%NAME%%CL%%TAN%Note%WHITE%: Upgrade:}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID]: %NAME%{%NAME% %GRAY%(%WHITE%Req: }%CONTINUE%
 //Strength
-ItemDisplay[(ARMOR OR WEAPON) !(CIRC OR SOR OR WAND OR 8ss OR hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID]: %NAME%{%NAME% %GRAY%(%WHITE%Req: %GRAY%Str%WHITE%:}%CONTINUE%
-//STR 2__
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (xth OR xul OR xar OR xow OR xhb OR 9m9 OR 9gm OR 9vo) !(ETH (xth OR xhb))]: %NAME%{%NAME%2}%CONTINUE%
-//STR 1__
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ghm OR crn OR xlm OR xhl OR xsk OR xh9 OR xhm OR xrn OR plt OR fld OR gth OR ful OR aar OR xtu OR xng OR xcl OR xhn OR xrs OR xpl OR xlt OR xld OR xtp OR tow OR gts OR xml OR xrg OR xpk OR xit OR xsh OR xts OR hgl OR xmg OR xtg OR xhg OR hbt OR xmb OR xtb OR hbl OR zmb OR ztb OR zhb OR dr8 OR dr9 OR dra OR ba4 OR ba5 OR ba6 OR ba7 OR ba8 OR ba9 OR baa OR pa5 OR pa7 OR pa8 OR pa9 OR paa OR nea OR wax OR btx OR gax OR gix OR 9ha OR 9ax OR 92a OR 9mp OR 9wa OR 9la OR 9ba OR 9bt OR 9ga OR 9gi OR whm OR mau OR gma OR 9sp OR 9ma OR 9mt OR 9fl OR 9wh OR lsd OR wsd OR gis OR bsw OR flb OR gsd OR 9ss OR 9sm OR 9sb OR 9fc OR 9bs OR 9wd OR 92h OR 9cm OR 9gs OR 9b9 OR 9fb OR 9gd OR 9pi OR 9s9 OR spt OR pik OR 9sr OR 9tr OR 9br OR 9st OR 9p9 OR pax OR hal OR wsc OR 9b7 OR 9s8 OR 9pa OR 9h9 OR 9wc OR 8cb OR 8lw OR hxb OR 8mx OR 8hx OR 8rx OR wsp OR 9sc OR 9qs OR 9wb OR 9xf OR 9cs OR 9lw OR 9tw OR 9qr OR am7 OR am3 OR am4 OR am8 OR am9 OR ama OR (ETH (xth OR xhb))) !(ETH (crn OR xlm OR xsk OR xh9 OR fld OR xtp OR xml OR xsh OR xmg OR zmb OR dr8 OR ba4 OR ba6 OR pa7 OR nea OR btx OR whm OR lsd OR gis OR 9sb OR spt OR wsp OR 9qs OR 9wb OR 9xf OR am7 OR am3 OR ama))]: %NAME%{%NAME%1}%CONTINUE%
-//STR _9_
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID ((!ETH (xhm OR chn OR spl OR xla OR xlt OR kit OR tbt OR xvb OR dr7 OR baa OR ne8 OR ne9 OR mpi OR bax OR 9la OR bsd OR clm OR 9ls OR 9b8 OR glv OR 9ja OR vou OR 9b7 OR lwb OR 8l8 OR 9ws OR 9ar)) OR (ETH (crn OR xlm OR xsk OR xh9 OR fld OR xth OR xtp OR xml OR xsh OR xmg OR xhb OR zmb OR dr8 OR ba4 OR ba6 OR pa7 OR nea OR btx OR whm OR lsd OR gis OR 9sb OR spt OR wsp OR 9qs OR 9wb OR 9xf OR am7 OR am3 OR ama)))]: %NAME%{%NAME%9}%CONTINUE%
-//STR _8_
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID ((!ETH (fhl OR xkp OR scl OR xea OR xts OR tgl OR xhg OR tbl OR zhb OR dr6 OR ba3 OR pa4 OR pa6 OR ne7 OR 2ax OR 9bt OR fla OR 9cl OR 9wh OR crs OR 9gs OR 9fb OR 9gd OR 9ta OR ssp OR 9gl OR brn OR bar OR scy OR 9wc OR lbb OR 8s8 OR mxb OR rxb OR 8lx OR skr OR am6)) OR (ETH (xhm OR chn OR spl OR xla OR xlt OR kit OR tbt OR xvb OR dr7 OR baa OR ne8 OR ne9 OR mpi OR bax OR 9la OR bsd OR clm OR 9ls OR 9b8 OR glv OR 9ja OR vou OR 9b7 OR lwb OR 8l8 OR 9ws OR 9ar)))]: %NAME%{%NAME%8}%CONTINUE%
-//STR _7_
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID ((!ETH (xrn OR rng OR aar OR xui OR xld OR lrg OR xuc OR ba2 OR ba9 OR ne6 OR lax OR mst OR flc OR 2hs OR gsd OR 92h OR 9cm OR 9ts OR tri OR 9h9 OR swb OR 8hb OR 8sw OR gsc OR ces OR clw OR btl OR am2)) OR (ETH (fhl OR xkp OR scl OR xea OR xts OR tgl OR xhg OR tbl OR zhb OR dr6 OR ba3 OR pa4 OR pa6 OR ne7 OR 2ax OR 9bt OR fla OR 9cl OR 9wh OR crs OR 9gs OR 9fb OR 9gd OR 9ta OR ssp OR 9gl OR brn OR bar OR scy OR 9wc OR lbb OR 8s8 OR mxb OR rxb OR 8lx OR skr OR am6)))]: %NAME%{%NAME%7}%CONTINUE%
-//STR _6_
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID ((!ETH (stu OR brs OR xpl OR spk OR mbt OR xtb OR dr4 OR dr5 OR pa3 OR axe OR 9ba OR 9ga OR 9gi OR mac OR gma OR 9b9 OR 9bl OR 9tr OR 9p9 OR 9pa OR sbb OR 8sb OR 8hx OR 8ls OR wrb OR axf)) OR (ETH (xrn OR rng OR aar OR xui OR xld OR lrg OR xuc OR ba2 OR ba9 OR ne6 OR lax OR mst OR flc OR 2hs OR gsd OR 92h OR 9cm OR 9ts OR tri OR 9h9 OR swb OR 8hb OR 8sw OR gsc OR ces OR clw OR btl OR am2)))]: %NAME%{%NAME%6}%CONTINUE%
-//STR _5_
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID ((!ETH (hlm OR msk OR bhm OR xap OR hla OR ltp OR xhn OR sml OR bsh OR xit OR mgl OR xlg OR xvg OR xtg OR xlb OR mbl OR zlb OR zvb OR ztb OR dr2 OR dr3 OR ba1 OR ba8 OR pa2 OR ne4 OR ne5 OR 9mt OR 9gm OR sbr OR 9ss OR 9di OR 9sr OR 9s8 OR lbw OR cbw OR 8lb OR lxb OR 8bs OR scp OR ktr OR am1)) OR (ETH (stu OR brs OR xpl OR spk OR mbt OR xtb OR dr4 OR dr5 OR pa3 OR axe OR 9ba OR 9ga OR 9gi OR mac OR gma OR 9b9 OR 9bl OR 9tr OR 9p9 OR 9pa OR sbb OR 8sb OR 8hx OR 8ls OR wrb OR axf)))]: %NAME%{%NAME%5}%CONTINUE%
-//STR _4_
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID ((!ETH (skp OR xhl OR lea OR ful OR xcl OR vbt OR dr1 OR pa1 OR pa9 OR paa OR ne2 OR ne3 OR 92a OR 9ma OR 9fc OR 9bs OR 9wd OR bld OR 9kr OR 9tk OR 9bk OR wsc OR 8rx OR 8cs)) OR (ETH (hlm OR msk OR bhm OR xap OR hla OR ltp OR xhn OR sml OR bsh OR xit OR mgl OR xlg OR xvg OR xtg OR xlb OR mbl OR zlb OR zvb OR ztb OR dr2 OR dr3 OR ba1 OR ba8 OR pa2 OR ne4 OR ne5 OR 9mt OR 9gm OR sbr OR 9ss OR 9di OR 9sr OR 9s8 OR lbw OR cbw OR 8lb OR lxb OR 8bs OR scp OR ktr OR am1)))]: %NAME%{%NAME%4}%CONTINUE%
-//STR _3_
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID ((!ETH (qui OR xng OR xar OR buc OR tow OR ne1 OR 9mp OR 9wa OR spc OR 9sp OR 9sm OR 9dg OR 9br OR hal OR 8lw OR 8ws OR am9)) OR (ETH (skp OR xhl OR lea OR ful OR xcl OR vbt OR dr1 OR pa1 OR pa9 OR paa OR ne2 OR ne3 OR 92a OR 9ma OR 9fc OR 9bs OR 9wd OR bld OR 9kr OR 9tk OR 9bk OR wsc OR 8rx OR 8cs)))]: %NAME%{%NAME%3}%CONTINUE%
-//STR _2_
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID ((!ETH (cap OR xul OR gth OR xrg OR lgl OR vgl OR lbt OR hbt OR lbl OR vbl OR ba7 OR pa8 OR hax OR wax OR gix OR 9ha OR clb OR mau OR 9fl OR 9m9 OR ssd OR scm OR wsd OR flb OR 9cr OR dgr OR dir OR kri OR tkf OR tax OR bkf OR bal OR jav OR pil OR tsp OR 9s9 OR spr OR 9st OR sbw OR hbw OR 8cb OR sst OR lst OR cst OR bst OR wst OR 9sc OR am5)) OR (ETH (qui OR xng OR xar OR buc OR tow OR ne1 OR 9mp OR 9wa OR spc OR 9sp OR 9sm OR 9dg OR 9br OR hal OR 8lw OR 8ws OR am9)))]: %NAME%{%NAME%2}%CONTINUE%
-//STR _1_
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID ((!ETH (ghm OR plt OR xtu OR xrs OR gts OR xpk OR xow OR hgl OR xmb OR hbl OR dr9 OR dra OR ba5 OR pa5 OR gax OR 9ax OR bsw OR 9pi OR pik OR pax OR 9vo OR hxb OR 8mx OR 9cs OR 9lw OR 9tw OR 9qr OR am4 OR am8)) OR (ETH (cap OR xul OR gth OR xrg OR lgl OR vgl OR lbt OR hbt OR lbl OR vbl OR ba7 OR pa8 OR hax OR wax OR gix OR 9ha OR clb OR mau OR 9fl OR 9m9 OR ssd OR scm OR wsd OR flb OR 9cr OR dgr OR dir OR kri OR tkf OR tax OR bkf OR bal OR jav OR pil OR tsp OR 9s9 OR spr OR 9st OR sbw OR hbw OR 8cb OR sst OR lst OR cst OR bst OR wst OR 9sc OR am5)))]: %NAME%{%NAME%1}%CONTINUE%
-//STR _0_
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID ((!ETH (crn OR xlm OR xsk OR xh9 OR fld OR xth OR xtp OR xml OR xsh OR xmg OR xhb OR zmb OR dr8 OR ba4 OR ba6 OR pa7 OR nea OR btx OR whm OR lsd OR gis OR 9sb OR spt OR wsp OR 9qs OR 9wb OR 9xf OR am7 OR am3 OR ama)) OR (ETH (ghm OR plt OR xtu OR xrs OR gts OR xpk OR xow OR hgl OR xmb OR hbl OR dr9 OR dra OR ba5 OR pa5 OR gax OR 9ax OR bsw OR 9pi OR pik OR pax OR 9vo OR hxb OR 8mx OR 9cs OR 9lw OR 9tw OR 9qr OR am4 OR am8)))]: %NAME%{%NAME%0}%CONTINUE%
-//STR __9
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (hlm OR xlm OR xcl OR xow OR ba7 OR pa2 OR pa3 OR pa4 OR pa7 OR 9bt OR gma OR 9wh OR 9sb OR 9ls OR 9gd OR 9gl OR 9h9 OR 8s8 OR axf OR btl OR 9ar)]: %NAME%{%NAME%9}%CONTINUE%
-//STR __8
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (bhm OR qui OR plt OR xhn OR xrs OR xth OR buc OR bsh OR xpk OR mgl OR tgl OR xmb OR xhb OR mbl OR tbl OR dra OR ba1 OR ba3 OR ba5 OR paa OR ne1 OR ne5 OR axe OR 9wa OR 9cl OR sbr OR 9sm OR 9dg OR 9tk OR 9ta OR glv OR 9ja OR 9pi OR 9tr OR 9wc OR cbw OR scp OR 9qs OR 9xf OR 9qr OR am7)]: %NAME%{%NAME%8}%CONTINUE%
-//STR __7
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (spl OR xui OR xuc OR xrg OR vbt OR ne3 OR ne6 OR 9ga OR wsd OR 9wd OR bld OR 9s9 OR tri OR 8l8 OR 8mx OR 9ws OR ktr OR am6 OR ama)]: %NAME%{%NAME%7}%CONTINUE%
-//STR __6
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (xh9 OR scl OR xlt OR xit OR xsh OR xmg OR zmb OR dr3 OR dr6 OR ba6 OR baa OR pa6 OR nea OR 9la OR 9ba OR 9b8 OR 9ts OR 8hb OR gsc OR wrb OR clw OR am1)]: %NAME%{%NAME%6}%CONTINUE%
-//STR __5
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (msk OR ghm OR brs OR gth OR ltp OR xla OR xpl OR spk OR xts OR xhg OR mbt OR tbt OR hbt OR zhb OR dr5 OR dr7 OR ne9 OR hax OR 2ax OR gax OR gix OR 9ha OR 9ax OR 92a OR clb OR 9ma OR 9fl OR 9m9 OR ssd OR scm OR crs OR flb OR 9cr OR 92h OR 9gs OR dgr OR dir OR kri OR 9di OR 9bl OR tkf OR tax OR bkf OR bal OR 9bk OR jav OR pil OR tsp OR spr OR 9sr OR 9p9 OR vou OR 9b7 OR 9pa OR sbw OR hbw OR sbb OR lwb OR sst OR lst OR cst OR bst OR wst OR 9sc OR 9wb OR 9tw OR am4 OR am5)]: %NAME%{%NAME%5}%CONTINUE%
-//STR __4
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (xkp OR xrn OR rng OR xea OR xld OR dr1 OR dr8 OR ba9 OR pa1 OR pa5 OR pa8 OR mpi OR 9gi OR mst OR mau OR gis OR 8sb OR 8lw OR 8cs OR 8ws OR am8)]: %NAME%{%NAME%4}%CONTINUE%
-//STR __3
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (skp OR crn OR lea OR fld OR xtp OR sml OR tow OR xtb OR dr9 OR ba2 OR ba4 OR lax OR 9mp OR 9sp OR 9mt OR 9gm OR lsd OR 2hs OR bsw OR 9b9 OR pax OR hal OR lbw OR swb OR 8lx OR 8hx OR 8ls OR wsp OR ces OR 9lw OR am2)]: %NAME%{%NAME%3}%CONTINUE%
-//STR __2
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (fhl OR xhl OR xsk OR xhm OR chn OR xar OR dr4 OR pa9 OR ne7 OR bax OR fla OR bsd OR 9fc OR 9bs OR 9fb OR 9kr OR 9br OR 9st OR scy OR 9s8 OR 8lb OR 8sw OR lxb OR 8bs OR skr OR am9)]: %NAME%{%NAME%2}%CONTINUE%
-//STR __1
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (stu OR xtu OR xng OR lrg OR kit OR xtg OR xvb OR ztb OR ba8 OR ne2 OR ne8 OR wax OR btx OR mac OR clm OR 9cm OR spt OR 8cb OR 8rx OR am3)]: %NAME%{%NAME%1}%CONTINUE%
-//STR __0
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (cap OR xap OR hla OR ful OR aar OR xul OR gts OR xml OR lgl OR vgl OR hgl OR xlg OR xvg OR lbt OR xlb OR lbl OR vbl OR hbl OR zlb OR zvb OR dr2 OR ne4 OR spc OR whm OR flc OR gsd OR 9ss OR ssp OR brn OR pik OR bar OR wsc OR 9vo OR lbb OR mxb OR hxb OR rxb OR 9cs)]: %NAME%{%NAME%0}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(CIRC OR SOR OR hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID]: %NAME%{%NAME%%LIGHT_GRAY%Str%WHITE%:}%CONTINUE%
+//STR REQ
+//Items that after upgrade will Require STR 10
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((cap OR lgl OR vgl OR lbt OR lbl OR vbl) ETH)) CHARSTAT0<10]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((cap OR lgl OR vgl OR lbt OR lbl OR vbl) ETH))]: %NAME%{%NAME%10}%CONTINUE%
+//Items that after upgrade will Require STR 15
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((hax OR clb OR ssd OR scm OR 9cr OR dgr OR dir OR kri OR tkf OR tax OR bkf OR bal OR jav OR pil OR tsp OR spr OR sbw OR hbw OR sst OR 8ss OR lst OR cst OR bst OR wst OR wnd OR 9wn OR ywn OR 9yw OR bwn OR 9bw OR gwn OR 9gw OR am5) ETH)) CHARSTAT0<15]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((hax OR clb OR ssd OR scm OR 9cr OR dgr OR dir OR kri OR tkf OR tax OR bkf OR bal OR jav OR pil OR tsp OR spr OR sbw OR hbw OR sst OR 8ss OR lst OR cst OR bst OR wst OR wnd OR 9wn OR ywn OR 9yw OR bwn OR 9bw OR gwn OR 9gw OR am5) ETH))]: %NAME%{%NAME%15}%CONTINUE%
+//Items that after upgrade will Require STR 20
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((cap OR lgl OR vgl OR lbt OR lbl OR vbl) !ETH) OR ((spc) ETH)) CHARSTAT0<20]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((cap OR lgl OR vgl OR lbt OR lbl OR vbl) !ETH) OR ((spc) ETH))]: %NAME%{%NAME%20}%CONTINUE%
+//Items that after upgrade will Require STR 24
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8ws) ETH)) CHARSTAT0<24]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8ws) ETH))]: %NAME%{%NAME%24}%CONTINUE%
+//Items that after upgrade will Require STR 25
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((hax OR clb OR ssd OR scm OR 9cr OR dgr OR dir OR kri OR tkf OR tax OR bkf OR bal OR jav OR pil OR tsp OR spr OR sbw OR hbw OR sst OR 8ss OR lst OR cst OR bst OR wst OR wnd OR 9wn OR ywn OR 9yw OR bwn OR 9bw OR gwn OR 9gw OR am5) !ETH)) CHARSTAT0<25]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((hax OR clb OR ssd OR scm OR 9cr OR dgr OR dir OR kri OR tkf OR tax OR bkf OR bal OR jav OR pil OR tsp OR spr OR sbw OR hbw OR sst OR 8ss OR lst OR cst OR bst OR wst OR wnd OR 9wn OR ywn OR 9yw OR bwn OR 9bw OR gwn OR 9gw OR am5) !ETH))]: %NAME%{%NAME%25}%CONTINUE%
+//Items that after upgrade will Require STR 28
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9dg OR qui OR buc OR ne1) ETH)) CHARSTAT0<28]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9dg OR qui OR buc OR ne1) ETH))]: %NAME%{%NAME%28}%CONTINUE%
+//Items that after upgrade will Require STR 30
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((spc) !ETH)) CHARSTAT0<30]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((spc) !ETH))]: %NAME%{%NAME%30}%CONTINUE%
+//Items that after upgrade will Require STR 31
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((ne2) ETH)) CHARSTAT0<31]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((ne2) ETH))]: %NAME%{%NAME%31}%CONTINUE%
+//Items that after upgrade will Require STR 32
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9kr) ETH)) CHARSTAT0<32]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9kr) ETH))]: %NAME%{%NAME%32}%CONTINUE%
+//Items that after upgrade will Require STR 33
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((skp OR lea) ETH)) CHARSTAT0<33]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((skp OR lea) ETH))]: %NAME%{%NAME%33}%CONTINUE%
+//Items that after upgrade will Require STR 34
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8ws) !ETH) OR ((8cs OR dr1 OR pa1) ETH)) CHARSTAT0<34]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8ws) !ETH) OR ((8cs OR dr1 OR pa1) ETH))]: %NAME%{%NAME%34}%CONTINUE%
+//Items that after upgrade will Require STR 35
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9bk) ETH)) CHARSTAT0<35]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9bk) ETH))]: %NAME%{%NAME%35}%CONTINUE%
+//Items that after upgrade will Require STR 37
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((bld OR vbt OR ne3) ETH)) CHARSTAT0<37]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((bld OR vbt OR ne3) ETH))]: %NAME%{%NAME%37}%CONTINUE%
+//Items that after upgrade will Require STR 38
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9dg OR qui OR buc OR ne1) !ETH) OR ((9tk) ETH)) CHARSTAT0<38]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9dg OR qui OR buc OR ne1) !ETH) OR ((9tk) ETH))]: %NAME%{%NAME%38}%CONTINUE%
+//Items that after upgrade will Require STR 40
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xap OR hla OR xlg OR xvg OR xlb OR zlb OR zvb OR dr2 OR ne4) ETH)) CHARSTAT0<40]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xap OR hla OR xlg OR xvg OR xlb OR zlb OR zvb OR dr2 OR ne4) ETH))]: %NAME%{%NAME%40}%CONTINUE%
+//Items that after upgrade will Require STR 41
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((ne2) !ETH)) CHARSTAT0<41]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((ne2) !ETH))]: %NAME%{%NAME%41}%CONTINUE%
+//Items that after upgrade will Require STR 42
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9kr) !ETH) OR ((8lb OR lxb OR 8bs) ETH)) CHARSTAT0<42]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9kr) !ETH) OR ((8lb OR lxb OR 8bs) ETH))]: %NAME%{%NAME%42}%CONTINUE%
+//Items that after upgrade will Require STR 43
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((skp OR lea) !ETH) OR ((lbw OR sml) ETH)) CHARSTAT0<43]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((skp OR lea) !ETH) OR ((lbw OR sml) ETH))]: %NAME%{%NAME%43}%CONTINUE%
+//Items that after upgrade will Require STR 44
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8cs OR dr1 OR pa1) !ETH)) CHARSTAT0<44]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8cs OR dr1 OR pa1) !ETH))]: %NAME%{%NAME%44}%CONTINUE%
+//Items that after upgrade will Require STR 45
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9bk) !ETH) OR ((9di OR msk OR ltp) ETH)) CHARSTAT0<45]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9bk) !ETH) OR ((9di OR msk OR ltp) ETH))]: %NAME%{%NAME%45}%CONTINUE%
+//Items that after upgrade will Require STR 46
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((am1 OR dr3) ETH)) CHARSTAT0<46]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((am1 OR dr3) ETH))]: %NAME%{%NAME%46}%CONTINUE%
+//Items that after upgrade will Require STR 47
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((bld OR vbt OR ne3) !ETH) OR ((ktr) ETH)) CHARSTAT0<47]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((bld OR vbt OR ne3) !ETH) OR ((ktr) ETH))]: %NAME%{%NAME%47}%CONTINUE%
+//Items that after upgrade will Require STR 48
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9tk) !ETH) OR ((sbr OR cbw OR scp OR bhm OR bsh OR mgl OR mbl OR ba1 OR ne5) ETH)) CHARSTAT0<48]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9tk) !ETH) OR ((sbr OR cbw OR scp OR bhm OR bsh OR mgl OR mbl OR ba1 OR ne5) ETH))]: %NAME%{%NAME%48}%CONTINUE%
+//Items that after upgrade will Require STR 49
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((hlm OR pa2) ETH)) CHARSTAT0<49]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((hlm OR pa2) ETH))]: %NAME%{%NAME%49}%CONTINUE%
+//Items that after upgrade will Require STR 50
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xap OR hla OR xlg OR xvg OR xlb OR zlb OR zvb OR dr2 OR ne4) !ETH)) CHARSTAT0<50]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xap OR hla OR xlg OR xvg OR xlb OR zlb OR zvb OR dr2 OR ne4) !ETH))]: %NAME%{%NAME%50}%CONTINUE%
+//Items that after upgrade will Require STR 51
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((mac OR stu) ETH)) CHARSTAT0<51]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((mac OR stu) ETH))]: %NAME%{%NAME%51}%CONTINUE%
+//Items that after upgrade will Require STR 52
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8lb OR lxb OR 8bs) !ETH) OR ((dr4) ETH)) CHARSTAT0<52]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8lb OR lxb OR 8bs) !ETH) OR ((dr4) ETH))]: %NAME%{%NAME%52}%CONTINUE%
+//Items that after upgrade will Require STR 53
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((lbw OR sml) !ETH) OR ((8ls) ETH)) CHARSTAT0<53]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((lbw OR sml) !ETH) OR ((8ls) ETH))]: %NAME%{%NAME%53}%CONTINUE%
+//Items that after upgrade will Require STR 54
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8sb) ETH)) CHARSTAT0<54]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8sb) ETH))]: %NAME%{%NAME%54}%CONTINUE%
+//Items that after upgrade will Require STR 55
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9di OR msk OR ltp) !ETH) OR ((9bl OR sbb OR brs OR spk OR mbt OR dr5) ETH)) CHARSTAT0<55]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9di OR msk OR ltp) !ETH) OR ((9bl OR sbb OR brs OR spk OR mbt OR dr5) ETH))]: %NAME%{%NAME%55}%CONTINUE%
+//Items that after upgrade will Require STR 56
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((am1 OR dr3) !ETH) OR ((wrb) ETH)) CHARSTAT0<56]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((am1 OR dr3) !ETH) OR ((wrb) ETH))]: %NAME%{%NAME%56}%CONTINUE%
+//Items that after upgrade will Require STR 57
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((ktr) !ETH)) CHARSTAT0<57]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((ktr) !ETH))]: %NAME%{%NAME%57}%CONTINUE%
+//Items that after upgrade will Require STR 58
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((sbr OR cbw OR scp OR bhm OR bsh OR mgl OR mbl OR ba1 OR ne5) !ETH) OR ((axe) ETH)) CHARSTAT0<58]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((sbr OR cbw OR scp OR bhm OR bsh OR mgl OR mbl OR ba1 OR ne5) !ETH) OR ((axe) ETH))]: %NAME%{%NAME%58}%CONTINUE%
+//Items that after upgrade will Require STR 59
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((hlm OR pa2) !ETH) OR ((axf OR pa3) ETH)) CHARSTAT0<59]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((hlm OR pa2) !ETH) OR ((axf OR pa3) ETH))]: %NAME%{%NAME%59}%CONTINUE%
+//Items that after upgrade will Require STR 60
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((flc) ETH)) CHARSTAT0<60]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((flc) ETH))]: %NAME%{%NAME%60}%CONTINUE%
+//Items that after upgrade will Require STR 61
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((mac OR stu) !ETH) OR ((lrg) ETH)) CHARSTAT0<61]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((mac OR stu) !ETH) OR ((lrg) ETH))]: %NAME%{%NAME%61}%CONTINUE%
+//Items that after upgrade will Require STR 62
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((dr4) !ETH) OR ((8sw) ETH)) CHARSTAT0<62]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((dr4) !ETH) OR ((8sw) ETH))]: %NAME%{%NAME%62}%CONTINUE%
+//Items that after upgrade will Require STR 63
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8ls) !ETH) OR ((lax OR 2hs OR swb OR ces OR am2 OR ba2) ETH)) CHARSTAT0<63]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8ls) !ETH) OR ((lax OR 2hs OR swb OR ces OR am2 OR ba2) ETH))]: %NAME%{%NAME%63}%CONTINUE%
+//Items that after upgrade will Require STR 64
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8sb) !ETH) OR ((mst OR rng) ETH)) CHARSTAT0<64]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8sb) !ETH) OR ((mst OR rng) ETH))]: %NAME%{%NAME%64}%CONTINUE%
+//Items that after upgrade will Require STR 65
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9bl OR sbb OR brs OR spk OR mbt OR dr5) !ETH)) CHARSTAT0<65]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9bl OR sbb OR brs OR spk OR mbt OR dr5) !ETH))]: %NAME%{%NAME%65}%CONTINUE%
+//Items that after upgrade will Require STR 66
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((wrb) !ETH) OR ((9ts OR 8hb OR gsc OR clw) ETH)) CHARSTAT0<66]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((wrb) !ETH) OR ((9ts OR 8hb OR gsc OR clw) ETH))]: %NAME%{%NAME%66}%CONTINUE%
+//Items that after upgrade will Require STR 67
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((tri OR xui OR xuc OR ne6) ETH)) CHARSTAT0<67]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((tri OR xui OR xuc OR ne6) ETH))]: %NAME%{%NAME%67}%CONTINUE%
+//Items that after upgrade will Require STR 68
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((axe) !ETH)) CHARSTAT0<68]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((axe) !ETH))]: %NAME%{%NAME%68}%CONTINUE%
+//Items that after upgrade will Require STR 69
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((axf OR pa3) !ETH) OR ((btl) ETH)) CHARSTAT0<69]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((axf OR pa3) !ETH) OR ((btl) ETH))]: %NAME%{%NAME%69}%CONTINUE%
+//Items that after upgrade will Require STR 70
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((flc) !ETH) OR ((ssp OR brn OR bar OR lbb OR mxb OR rxb) ETH)) CHARSTAT0<70]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((flc) !ETH) OR ((ssp OR brn OR bar OR lbb OR mxb OR rxb) ETH))]: %NAME%{%NAME%70}%CONTINUE%
+//Items that after upgrade will Require STR 71
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((lrg) !ETH)) CHARSTAT0<71]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((lrg) !ETH))]: %NAME%{%NAME%71}%CONTINUE%
+//Items that after upgrade will Require STR 72
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8sw) !ETH) OR ((fla OR scy OR skr OR fhl OR ne7) ETH)) CHARSTAT0<72]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8sw) !ETH) OR ((fla OR scy OR skr OR fhl OR ne7) ETH))]: %NAME%{%NAME%72}%CONTINUE%
+//Items that after upgrade will Require STR 73
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((lax OR 2hs OR swb OR ces OR am2 OR ba2) !ETH) OR ((8lx) ETH)) CHARSTAT0<73]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((lax OR 2hs OR swb OR ces OR am2 OR ba2) !ETH) OR ((8lx) ETH))]: %NAME%{%NAME%73}%CONTINUE%
+//Items that after upgrade will Require STR 74
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((mst OR rng) !ETH) OR ((xkp OR xea) ETH)) CHARSTAT0<74]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((mst OR rng) !ETH) OR ((xkp OR xea) ETH))]: %NAME%{%NAME%74}%CONTINUE%
+//Items that after upgrade will Require STR 75
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((2ax OR crs) ETH)) CHARSTAT0<75]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((2ax OR crs) ETH))]: %NAME%{%NAME%75}%CONTINUE%
+//Items that after upgrade will Require STR 76
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ts OR 8hb OR gsc OR clw) !ETH) OR ((scl OR dr6 OR pa6) ETH)) CHARSTAT0<76]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ts OR 8hb OR gsc OR clw) !ETH) OR ((scl OR dr6 OR pa6) ETH))]: %NAME%{%NAME%76}%CONTINUE%
+//Items that after upgrade will Require STR 77
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((tri OR xui OR xuc OR ne6) !ETH) OR ((am6) ETH)) CHARSTAT0<77]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((tri OR xui OR xuc OR ne6) !ETH) OR ((am6) ETH))]: %NAME%{%NAME%77}%CONTINUE%
+//Items that after upgrade will Require STR 78
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9cl OR 9ta OR tgl OR tbl OR ba3) ETH)) CHARSTAT0<78]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9cl OR 9ta OR tgl OR tbl OR ba3) ETH))]: %NAME%{%NAME%78}%CONTINUE%
+//Items that after upgrade will Require STR 79
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((btl) !ETH) OR ((9gl OR 8s8 OR pa4) ETH)) CHARSTAT0<79]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((btl) !ETH) OR ((9gl OR 8s8 OR pa4) ETH))]: %NAME%{%NAME%79}%CONTINUE%
+//Items that after upgrade will Require STR 80
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((ssp OR brn OR bar OR lbb OR mxb OR rxb) !ETH)) CHARSTAT0<80]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((ssp OR brn OR bar OR lbb OR mxb OR rxb) !ETH))]: %NAME%{%NAME%80}%CONTINUE%
+//Items that after upgrade will Require STR 81
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((clm OR kit OR xvb OR ne8) ETH)) CHARSTAT0<81]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((clm OR kit OR xvb OR ne8) ETH))]: %NAME%{%NAME%81}%CONTINUE%
+//Items that after upgrade will Require STR 82
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((fla OR scy OR skr OR fhl OR ne7) !ETH) OR ((bax OR bsd OR chn) ETH)) CHARSTAT0<82]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((fla OR scy OR skr OR fhl OR ne7) !ETH) OR ((bax OR bsd OR chn) ETH))]: %NAME%{%NAME%82}%CONTINUE%
+//Items that after upgrade will Require STR 83
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8lx) !ETH)) CHARSTAT0<83]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8lx) !ETH))]: %NAME%{%NAME%83}%CONTINUE%
+//Items that after upgrade will Require STR 84
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xkp OR xea) !ETH) OR ((mpi) ETH)) CHARSTAT0<84]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xkp OR xea) !ETH) OR ((mpi) ETH))]: %NAME%{%NAME%84}%CONTINUE%
+//Items that after upgrade will Require STR 85
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((2ax OR crs) !ETH) OR ((vou OR lwb OR xla OR tbt OR dr7 OR ne9) ETH)) CHARSTAT0<85]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((2ax OR crs) !ETH) OR ((vou OR lwb OR xla OR tbt OR dr7 OR ne9) ETH))]: %NAME%{%NAME%85}%CONTINUE%
+//Items that after upgrade will Require STR 86
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((scl OR dr6 OR pa6) !ETH) OR ((9b8) ETH)) CHARSTAT0<86]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((scl OR dr6 OR pa6) !ETH) OR ((9b8) ETH))]: %NAME%{%NAME%86}%CONTINUE%
+//Items that after upgrade will Require STR 87
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((am6) !ETH) OR ((8l8 OR 9ws OR spl) ETH)) CHARSTAT0<87]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((am6) !ETH) OR ((8l8 OR 9ws OR spl) ETH))]: %NAME%{%NAME%87}%CONTINUE%
+//Items that after upgrade will Require STR 88
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9cl OR 9ta OR tgl OR tbl OR ba3) !ETH) OR ((9ja OR glv) ETH)) CHARSTAT0<88]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9cl OR 9ta OR tgl OR tbl OR ba3) !ETH) OR ((9ja OR glv) ETH))]: %NAME%{%NAME%88}%CONTINUE%
+//Items that after upgrade will Require STR 89
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9gl OR 8s8 OR pa4) !ETH) OR ((9ls OR 9ar) ETH)) CHARSTAT0<89]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9gl OR 8s8 OR pa4) !ETH) OR ((9ls OR 9ar) ETH))]: %NAME%{%NAME%89}%CONTINUE%
+//Items that after upgrade will Require STR 90
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((whm OR xml) ETH)) CHARSTAT0<90]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((whm OR xml) ETH))]: %NAME%{%NAME%90}%CONTINUE%
+//Items that after upgrade will Require STR 91
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((clm OR kit OR xvb OR ne8) !ETH) OR ((btx OR spt OR am3) ETH)) CHARSTAT0<91]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((clm OR kit OR xvb OR ne8) !ETH) OR ((btx OR spt OR am3) ETH))]: %NAME%{%NAME%91}%CONTINUE%
+//Items that after upgrade will Require STR 92
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((bax OR bsd OR chn) !ETH) OR ((xsk) ETH)) CHARSTAT0<92]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((bax OR bsd OR chn) !ETH) OR ((xsk) ETH))]: %NAME%{%NAME%92}%CONTINUE%
+//Items that after upgrade will Require STR 93
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((lsd OR wsp OR crn OR fld OR xtp OR ba4) ETH)) CHARSTAT0<93]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((lsd OR wsp OR crn OR fld OR xtp OR ba4) ETH))]: %NAME%{%NAME%93}%CONTINUE%
+//Items that after upgrade will Require STR 94
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((mpi) !ETH) OR ((gis OR dr8) ETH)) CHARSTAT0<94]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((mpi) !ETH) OR ((gis OR dr8) ETH))]: %NAME%{%NAME%94}%CONTINUE%
+//Items that after upgrade will Require STR 95
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((vou OR lwb OR xla OR tbt OR dr7 OR ne9) !ETH) OR ((9wb) ETH)) CHARSTAT0<95]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((vou OR lwb OR xla OR tbt OR dr7 OR ne9) !ETH) OR ((9wb) ETH))]: %NAME%{%NAME%95}%CONTINUE%
+//Items that after upgrade will Require STR 96
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9b8) !ETH) OR ((xh9 OR xsh OR xmg OR zmb OR ba6 OR nea) ETH)) CHARSTAT0<96]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9b8) !ETH) OR ((xh9 OR xsh OR xmg OR zmb OR ba6 OR nea) ETH))]: %NAME%{%NAME%96}%CONTINUE%
+//Items that after upgrade will Require STR 97
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8l8 OR 9ws OR spl) !ETH) OR ((ama) ETH)) CHARSTAT0<97]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8l8 OR 9ws OR spl) !ETH) OR ((ama) ETH))]: %NAME%{%NAME%97}%CONTINUE%
+//Items that after upgrade will Require STR 98
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ja OR glv) !ETH) OR ((9qs OR 9xf OR am7) ETH)) CHARSTAT0<98]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ja OR glv) !ETH) OR ((9qs OR 9xf OR am7) ETH))]: %NAME%{%NAME%98}%CONTINUE%
+//Items that after upgrade will Require STR 99
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ls OR 9ar) !ETH) OR ((9sb OR xlm OR pa7) ETH)) CHARSTAT0<99]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ls OR 9ar) !ETH) OR ((9sb OR xlm OR pa7) ETH))]: %NAME%{%NAME%99}%CONTINUE%
+//Items that after upgrade will Require STR 100
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((whm OR xml) !ETH) OR ((pik OR hxb OR 9cs OR gts OR hgl OR hbl) ETH)) CHARSTAT0<100]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((whm OR xml) !ETH) OR ((pik OR hxb OR 9cs OR gts OR hgl OR hbl) ETH))]: %NAME%{%NAME%100}%CONTINUE%
+//Items that after upgrade will Require STR 101
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((btx OR spt OR am3) !ETH) OR ((xtu) ETH)) CHARSTAT0<101]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((btx OR spt OR am3) !ETH) OR ((xtu) ETH))]: %NAME%{%NAME%101}%CONTINUE%
+//Items that after upgrade will Require STR 102
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xsk) !ETH)) CHARSTAT0<102]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xsk) !ETH))]: %NAME%{%NAME%102}%CONTINUE%
+//Items that after upgrade will Require STR 103
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((lsd OR wsp OR crn OR fld OR xtp OR ba4) !ETH) OR ((bsw OR pax OR 9lw OR dr9) ETH)) CHARSTAT0<103]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((lsd OR wsp OR crn OR fld OR xtp OR ba4) !ETH) OR ((bsw OR pax OR 9lw OR dr9) ETH))]: %NAME%{%NAME%103}%CONTINUE%
+//Items that after upgrade will Require STR 104
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((gis OR dr8) !ETH) OR ((am8 OR pa5) ETH)) CHARSTAT0<104]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((gis OR dr8) !ETH) OR ((am8 OR pa5) ETH))]: %NAME%{%NAME%104}%CONTINUE%
+//Items that after upgrade will Require STR 105
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9wb) !ETH) OR ((9ax OR gax OR 9tw OR am4 OR ghm) ETH)) CHARSTAT0<105]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9wb) !ETH) OR ((9ax OR gax OR 9tw OR am4 OR ghm) ETH))]: %NAME%{%NAME%105}%CONTINUE%
+//Items that after upgrade will Require STR 106
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xh9 OR xsh OR xmg OR zmb OR ba6 OR nea) !ETH)) CHARSTAT0<106]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xh9 OR xsh OR xmg OR zmb OR ba6 OR nea) !ETH))]: %NAME%{%NAME%106}%CONTINUE%
+//Items that after upgrade will Require STR 107
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((ama) !ETH) OR ((8mx) ETH)) CHARSTAT0<107]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((ama) !ETH) OR ((8mx) ETH))]: %NAME%{%NAME%107}%CONTINUE%
+//Items that after upgrade will Require STR 108
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9qs OR 9xf OR am7) !ETH) OR ((9pi OR 9qr OR xrs OR plt OR xpk OR xmb OR dra OR ba5) ETH)) CHARSTAT0<108]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9qs OR 9xf OR am7) !ETH) OR ((9pi OR 9qr OR xrs OR plt OR xpk OR xmb OR dra OR ba5) ETH))]: %NAME%{%NAME%108}%CONTINUE%
+//Items that after upgrade will Require STR 109
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9sb OR xlm OR pa7) !ETH)) CHARSTAT0<109]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9sb OR xlm OR pa7) !ETH))]: %NAME%{%NAME%109}%CONTINUE%
+//Items that after upgrade will Require STR 110
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((pik OR hxb OR 9cs OR gts OR hgl OR hbl) !ETH)) CHARSTAT0<110]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((pik OR hxb OR 9cs OR gts OR hgl OR hbl) !ETH))]: %NAME%{%NAME%110}%CONTINUE%
+//Items that after upgrade will Require STR 111
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xtu) !ETH) OR ((wax OR 8cb) ETH)) CHARSTAT0<111]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xtu) !ETH) OR ((wax OR 8cb) ETH))]: %NAME%{%NAME%111}%CONTINUE%
+//Items that after upgrade will Require STR 112
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9st) ETH)) CHARSTAT0<112]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9st) ETH))]: %NAME%{%NAME%112}%CONTINUE%
+//Items that after upgrade will Require STR 113
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((bsw OR pax OR 9lw OR dr9) !ETH)) CHARSTAT0<113]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((bsw OR pax OR 9lw OR dr9) !ETH))]: %NAME%{%NAME%113}%CONTINUE%
+//Items that after upgrade will Require STR 114
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((am8 OR pa5) !ETH) OR ((mau OR pa8) ETH)) CHARSTAT0<114]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((am8 OR pa5) !ETH) OR ((mau OR pa8) ETH))]: %NAME%{%NAME%114}%CONTINUE%
+//Items that after upgrade will Require STR 115
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ax OR gax OR 9tw OR am4 OR ghm) !ETH) OR ((9ha OR gix OR 9fl OR flb OR 9sc OR gth OR hbt) ETH)) CHARSTAT0<115]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ax OR gax OR 9tw OR am4 OR ghm) !ETH) OR ((9ha OR gix OR 9fl OR flb OR 9sc OR gth OR hbt) ETH))]: %NAME%{%NAME%115}%CONTINUE%
+//Items that after upgrade will Require STR 117
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8mx) !ETH) OR ((wsd OR 9s9 OR xrg) ETH)) CHARSTAT0<117]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8mx) !ETH) OR ((wsd OR 9s9 OR xrg) ETH))]: %NAME%{%NAME%117}%CONTINUE%
+//Items that after upgrade will Require STR 118
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9pi OR 9qr OR xrs OR plt OR xpk OR xmb OR dra OR ba5) !ETH)) CHARSTAT0<118]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9pi OR 9qr OR xrs OR plt OR xpk OR xmb OR dra OR ba5) !ETH))]: %NAME%{%NAME%118}%CONTINUE%
+//Items that after upgrade will Require STR 119
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((ba7) ETH)) CHARSTAT0<119]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((ba7) ETH))]: %NAME%{%NAME%119}%CONTINUE%
+//Items that after upgrade will Require STR 121
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((wax OR 8cb) !ETH) OR ((xng) ETH)) CHARSTAT0<121]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((wax OR 8cb) !ETH) OR ((xng) ETH))]: %NAME%{%NAME%121}%CONTINUE%
+//Items that after upgrade will Require STR 122
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9st) !ETH) OR ((9br OR am9) ETH)) CHARSTAT0<122]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9st) !ETH) OR ((9br OR am9) ETH))]: %NAME%{%NAME%122}%CONTINUE%
+//Items that after upgrade will Require STR 123
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9mp OR 9sp OR hal OR tow) ETH)) CHARSTAT0<123]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9mp OR 9sp OR hal OR tow) ETH))]: %NAME%{%NAME%123}%CONTINUE%
+//Items that after upgrade will Require STR 124
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((mau OR pa8) !ETH) OR ((8lw) ETH)) CHARSTAT0<124]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((mau OR pa8) !ETH) OR ((8lw) ETH))]: %NAME%{%NAME%124}%CONTINUE%
+//Items that after upgrade will Require STR 125
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ha OR gix OR 9fl OR flb OR 9sc OR gth OR hbt) !ETH)) CHARSTAT0<125]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ha OR gix OR 9fl OR flb OR 9sc OR gth OR hbt) !ETH))]: %NAME%{%NAME%125}%CONTINUE%
+//Items that after upgrade will Require STR 127
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((wsd OR 9s9 OR xrg) !ETH)) CHARSTAT0<127]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((wsd OR 9s9 OR xrg) !ETH))]: %NAME%{%NAME%127}%CONTINUE%
+//Items that after upgrade will Require STR 128
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9wa OR 9sm) ETH)) CHARSTAT0<128]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9wa OR 9sm) ETH))]: %NAME%{%NAME%128}%CONTINUE%
+//Items that after upgrade will Require STR 129
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((ba7) !ETH)) CHARSTAT0<129]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((ba7) !ETH))]: %NAME%{%NAME%129}%CONTINUE%
+//Items that after upgrade will Require STR 130
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((wsc OR ful) ETH)) CHARSTAT0<130]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((wsc OR ful) ETH))]: %NAME%{%NAME%130}%CONTINUE%
+//Items that after upgrade will Require STR 131
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xng) !ETH) OR ((8rx) ETH)) CHARSTAT0<131]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xng) !ETH) OR ((8rx) ETH))]: %NAME%{%NAME%131}%CONTINUE%
+//Items that after upgrade will Require STR 132
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9br OR am9) !ETH) OR ((9fc OR 9bs OR xhl OR pa9) ETH)) CHARSTAT0<132]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9br OR am9) !ETH) OR ((9fc OR 9bs OR xhl OR pa9) ETH))]: %NAME%{%NAME%132}%CONTINUE%
+//Items that after upgrade will Require STR 133
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9mp OR 9sp OR hal OR tow) !ETH)) CHARSTAT0<133]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9mp OR 9sp OR hal OR tow) !ETH))]: %NAME%{%NAME%133}%CONTINUE%
+//Items that after upgrade will Require STR 134
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8lw) !ETH)) CHARSTAT0<134]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8lw) !ETH))]: %NAME%{%NAME%134}%CONTINUE%
+//Items that after upgrade will Require STR 135
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((92a OR 9ma) ETH)) CHARSTAT0<135]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((92a OR 9ma) ETH))]: %NAME%{%NAME%135}%CONTINUE%
+//Items that after upgrade will Require STR 137
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9wd) ETH)) CHARSTAT0<137]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9wd) ETH))]: %NAME%{%NAME%137}%CONTINUE%
+//Items that after upgrade will Require STR 138
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9wa OR 9sm) !ETH) OR ((paa) ETH)) CHARSTAT0<138]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9wa OR 9sm) !ETH) OR ((paa) ETH))]: %NAME%{%NAME%138}%CONTINUE%
+//Items that after upgrade will Require STR 139
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xcl) ETH)) CHARSTAT0<139]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xcl) ETH))]: %NAME%{%NAME%139}%CONTINUE%
+//Items that after upgrade will Require STR 140
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((wsc OR ful) !ETH) OR ((9ss) ETH)) CHARSTAT0<140]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((wsc OR ful) !ETH) OR ((9ss) ETH))]: %NAME%{%NAME%140}%CONTINUE%
+//Items that after upgrade will Require STR 141
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8rx) !ETH) OR ((xtg OR ztb OR ba8) ETH)) CHARSTAT0<141]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8rx) !ETH) OR ((xtg OR ztb OR ba8) ETH))]: %NAME%{%NAME%141}%CONTINUE%
+//Items that after upgrade will Require STR 142
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9fc OR 9bs OR xhl OR pa9) !ETH) OR ((9s8) ETH)) CHARSTAT0<142]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9fc OR 9bs OR xhl OR pa9) !ETH) OR ((9s8) ETH))]: %NAME%{%NAME%142}%CONTINUE%
+//Items that after upgrade will Require STR 143
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9mt) ETH)) CHARSTAT0<143]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9mt) ETH))]: %NAME%{%NAME%143}%CONTINUE%
+//Items that after upgrade will Require STR 145
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((92a OR 9ma) !ETH) OR ((9sr) ETH)) CHARSTAT0<145]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((92a OR 9ma) !ETH) OR ((9sr) ETH))]: %NAME%{%NAME%145}%CONTINUE%
+//Items that after upgrade will Require STR 146
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xit) ETH)) CHARSTAT0<146]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xit) ETH))]: %NAME%{%NAME%146}%CONTINUE%
+//Items that after upgrade will Require STR 147
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9wd) !ETH)) CHARSTAT0<147]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9wd) !ETH))]: %NAME%{%NAME%147}%CONTINUE%
+//Items that after upgrade will Require STR 148
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((paa) !ETH) OR ((xhn) ETH)) CHARSTAT0<148]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((paa) !ETH) OR ((xhn) ETH))]: %NAME%{%NAME%148}%CONTINUE%
+//Items that after upgrade will Require STR 149
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xcl) !ETH)) CHARSTAT0<149]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xcl) !ETH))]: %NAME%{%NAME%149}%CONTINUE%
+//Items that after upgrade will Require STR 150
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ss) !ETH)) CHARSTAT0<150]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ss) !ETH))]: %NAME%{%NAME%150}%CONTINUE%
+//Items that after upgrade will Require STR 151
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xtg OR ztb OR ba8) !ETH)) CHARSTAT0<151]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xtg OR ztb OR ba8) !ETH))]: %NAME%{%NAME%151}%CONTINUE%
+//Items that after upgrade will Require STR 152
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9s8) !ETH)) CHARSTAT0<152]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9s8) !ETH))]: %NAME%{%NAME%152}%CONTINUE%
+//Items that after upgrade will Require STR 153
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9mt) !ETH) OR ((9b9 OR 8hx OR xtb) ETH)) CHARSTAT0<153]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9mt) !ETH) OR ((9b9 OR 8hx OR xtb) ETH))]: %NAME%{%NAME%153}%CONTINUE%
+//Items that after upgrade will Require STR 154
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9gi) ETH)) CHARSTAT0<154]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9gi) ETH))]: %NAME%{%NAME%154}%CONTINUE%
+//Items that after upgrade will Require STR 155
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9sr) !ETH) OR ((9p9 OR 9pa OR xpl) ETH)) CHARSTAT0<155]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9sr) !ETH) OR ((9p9 OR 9pa OR xpl) ETH))]: %NAME%{%NAME%155}%CONTINUE%
+//Items that after upgrade will Require STR 156
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xit) !ETH) OR ((9ba) ETH)) CHARSTAT0<156]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xit) !ETH) OR ((9ba) ETH))]: %NAME%{%NAME%156}%CONTINUE%
+//Items that after upgrade will Require STR 157
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ga) ETH)) CHARSTAT0<157]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ga) ETH))]: %NAME%{%NAME%157}%CONTINUE%
+//Items that after upgrade will Require STR 158
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xhn) !ETH) OR ((9tr) ETH)) CHARSTAT0<158]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xhn) !ETH) OR ((9tr) ETH))]: %NAME%{%NAME%158}%CONTINUE%
+//Items that after upgrade will Require STR 159
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((gma) ETH)) CHARSTAT0<159]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((gma) ETH))]: %NAME%{%NAME%159}%CONTINUE%
+//Items that after upgrade will Require STR 160
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((gsd OR aar) ETH)) CHARSTAT0<160]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((gsd OR aar) ETH))]: %NAME%{%NAME%160}%CONTINUE%
+//Items that after upgrade will Require STR 161
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9cm) ETH)) CHARSTAT0<161]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9cm) ETH))]: %NAME%{%NAME%161}%CONTINUE%
+//Items that after upgrade will Require STR 163
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9b9 OR 8hx OR xtb) !ETH)) CHARSTAT0<163]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9b9 OR 8hx OR xtb) !ETH))]: %NAME%{%NAME%163}%CONTINUE%
+//Items that after upgrade will Require STR 164
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9gi) !ETH) OR ((xrn OR xld OR ba9) ETH)) CHARSTAT0<164]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9gi) !ETH) OR ((xrn OR xld OR ba9) ETH))]: %NAME%{%NAME%164}%CONTINUE%
+//Items that after upgrade will Require STR 165
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9p9 OR 9pa OR xpl) !ETH) OR ((92h) ETH)) CHARSTAT0<165]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9p9 OR 9pa OR xpl) !ETH) OR ((92h) ETH))]: %NAME%{%NAME%165}%CONTINUE%
+//Items that after upgrade will Require STR 166
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ba) !ETH)) CHARSTAT0<166]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ba) !ETH))]: %NAME%{%NAME%166}%CONTINUE%
+//Items that after upgrade will Require STR 167
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ga) !ETH)) CHARSTAT0<167]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ga) !ETH))]: %NAME%{%NAME%167}%CONTINUE%
+//Items that after upgrade will Require STR 168
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9tr) !ETH)) CHARSTAT0<168]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9tr) !ETH))]: %NAME%{%NAME%168}%CONTINUE%
+//Items that after upgrade will Require STR 169
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((gma) !ETH) OR ((9h9) ETH)) CHARSTAT0<169]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((gma) !ETH) OR ((9h9) ETH))]: %NAME%{%NAME%169}%CONTINUE%
+//Items that after upgrade will Require STR 170
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((gsd OR aar) !ETH)) CHARSTAT0<170]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((gsd OR aar) !ETH))]: %NAME%{%NAME%170}%CONTINUE%
+//Items that after upgrade will Require STR 171
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9cm) !ETH)) CHARSTAT0<171]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9cm) !ETH))]: %NAME%{%NAME%171}%CONTINUE%
+//Items that after upgrade will Require STR 172
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9fb) ETH)) CHARSTAT0<172]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9fb) ETH))]: %NAME%{%NAME%172}%CONTINUE%
+//Items that after upgrade will Require STR 174
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xrn OR xld OR ba9) !ETH)) CHARSTAT0<174]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xrn OR xld OR ba9) !ETH))]: %NAME%{%NAME%174}%CONTINUE%
+//Items that after upgrade will Require STR 175
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((92h) !ETH) OR ((9gs OR xts OR xhg OR zhb) ETH)) CHARSTAT0<175]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((92h) !ETH) OR ((9gs OR xts OR xhg OR zhb) ETH))]: %NAME%{%NAME%175}%CONTINUE%
+//Items that after upgrade will Require STR 178
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9wc) ETH)) CHARSTAT0<178]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9wc) ETH))]: %NAME%{%NAME%178}%CONTINUE%
+//Items that after upgrade will Require STR 179
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9h9) !ETH) OR ((9bt OR 9wh OR 9gd) ETH)) CHARSTAT0<179]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9h9) !ETH) OR ((9bt OR 9wh OR 9gd) ETH))]: %NAME%{%NAME%179}%CONTINUE%
+//Items that after upgrade will Require STR 182
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9fb) !ETH) OR ((xhm) ETH)) CHARSTAT0<182]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9fb) !ETH) OR ((xhm) ETH))]: %NAME%{%NAME%182}%CONTINUE%
+//Items that after upgrade will Require STR 185
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9gs OR xts OR xhg OR zhb) !ETH) OR ((9b7) ETH)) CHARSTAT0<185]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9gs OR xts OR xhg OR zhb) !ETH) OR ((9b7) ETH))]: %NAME%{%NAME%185}%CONTINUE%
+//Items that after upgrade will Require STR 186
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9la OR xlt OR baa) ETH)) CHARSTAT0<186]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9la OR xlt OR baa) ETH))]: %NAME%{%NAME%186}%CONTINUE%
+//Items that after upgrade will Require STR 188
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9wc) !ETH)) CHARSTAT0<188]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9wc) !ETH))]: %NAME%{%NAME%188}%CONTINUE%
+//Items that after upgrade will Require STR 189
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9bt OR 9wh OR 9gd) !ETH)) CHARSTAT0<189]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9bt OR 9wh OR 9gd) !ETH))]: %NAME%{%NAME%189}%CONTINUE%
+//Items that after upgrade will Require STR 192
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xhm) !ETH)) CHARSTAT0<192]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xhm) !ETH))]: %NAME%{%NAME%192}%CONTINUE%
+//Items that after upgrade will Require STR 195
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9b7) !ETH)) CHARSTAT0<195]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9b7) !ETH))]: %NAME%{%NAME%195}%CONTINUE%
+//Items that after upgrade will Require STR 196
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9la OR xlt OR baa) !ETH)) CHARSTAT0<196]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9la OR xlt OR baa) !ETH))]: %NAME%{%NAME%196}%CONTINUE%
+//Items that after upgrade will Require STR 198
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xth OR xhb) ETH)) CHARSTAT0<198]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xth OR xhb) ETH))]: %NAME%{%NAME%198}%CONTINUE%
+//Items that after upgrade will Require STR 200
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9vo) ETH)) CHARSTAT0<200]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9vo) ETH))]: %NAME%{%NAME%200}%CONTINUE%
+//Items that after upgrade will Require STR 208
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xth OR xhb) !ETH)) CHARSTAT0<208]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xth OR xhb) !ETH))]: %NAME%{%NAME%208}%CONTINUE%
+//Items that after upgrade will Require STR 209
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xow) ETH)) CHARSTAT0<209]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xow) ETH))]: %NAME%{%NAME%209}%CONTINUE%
+//Items that after upgrade will Require STR 210
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9vo) !ETH) OR ((xul) ETH)) CHARSTAT0<210]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9vo) !ETH) OR ((xul) ETH))]: %NAME%{%NAME%210}%CONTINUE%
+//Items that after upgrade will Require STR 215
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9m9) ETH)) CHARSTAT0<215]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9m9) ETH))]: %NAME%{%NAME%215}%CONTINUE%
+//Items that after upgrade will Require STR 219
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xow) !ETH)) CHARSTAT0<219]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xow) !ETH))]: %NAME%{%NAME%219}%CONTINUE%
+//Items that after upgrade will Require STR 220
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xul) !ETH)) CHARSTAT0<220]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xul) !ETH))]: %NAME%{%NAME%220}%CONTINUE%
+//Items that after upgrade will Require STR 222
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xar) ETH)) CHARSTAT0<222]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xar) ETH))]: %NAME%{%NAME%222}%CONTINUE%
+//Items that after upgrade will Require STR 225
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9m9) !ETH)) CHARSTAT0<225]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9m9) !ETH))]: %NAME%{%NAME%225}%CONTINUE%
+//Items that after upgrade will Require STR 232
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xar) !ETH)) CHARSTAT0<232]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((xar) !ETH))]: %NAME%{%NAME%232}%CONTINUE%
+//Items that after upgrade will Require STR 243
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9gm) ETH)) CHARSTAT0<243]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9gm) ETH))]: %NAME%{%NAME%243}%CONTINUE%
+//Items that after upgrade will Require STR 253
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9gm) !ETH)) CHARSTAT0<253]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9gm) !ETH))]: %NAME%{%NAME%253}%CONTINUE%
 //When -REQ appears
-ItemDisplay[(ARMOR OR WEAPON) !(CIRC OR SOR OR WAND OR 8ss OR hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID !STAT91=0]: %NAME%{%NAME%%GRAY%-x%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(CIRC OR SOR OR hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID !STAT91=0]: %NAME%{%NAME%%BLUE%-x%}%CONTINUE%
 //Dexterity
-ItemDisplay[(hax OR mpi OR gax OR 9ha OR 9ax OR 92a OR 9mp OR 9wa OR 9ba OR 9bt OR 9ga OR 9gi OR fla OR 9cl OR 9ma OR 9mt OR 9fl OR (SWORD !ssd) OR (DAGGER !THROWING !dgr) OR THROWING OR (SPEAR !THROWING !spt) OR (POLEARM !bar !vou) OR BOW OR XBOW OR 8ls OR 8cs OR 8bs OR 9sc OR 9qs OR 9ws OR SIN OR ZON) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID]: %NAME%{%NAME%%WHITE%, %GRAY%Dex%WHITE%:}%CONTINUE%
-//DEX 1__
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (gsd OR 9sb OR 9fc OR 9cr OR 9bs OR 9ls OR 9wd OR 92h OR 9cm OR 9b9 OR 9gd OR bal OR 9tk OR 9ta OR 9bk OR 9b8 OR tsp OR 9ja OR 9pi OR 9gl OR 9ts OR 9sr OR 9br OR 9st OR 9p9 OR wsc OR 9s8 OR 9pa OR 9wc OR swb OR lwb OR 8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8sw OR 8lw OR 8lx OR 8mx OR 9wb OR 9xf OR 9cs OR 9lw OR 9tw OR 9qr OR am2 OR am6 OR am7 OR am8 OR am9 OR am5 OR ama) !(ETH (9fc OR 9ls OR 92h OR 9cm OR 9b9 OR bal OR 9ta OR 9p9 OR 9pa OR swb OR 8cb OR 8mx OR 9wb OR 9xf OR am5))]: %NAME%{%NAME%1}%CONTINUE%
-//DEX _9_
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID ((!ETH (flb OR 9sm OR 9fb OR bld OR 9di OR bkf OR 9s9 OR brn OR 9tr OR hal OR 9h9 OR lbb OR rxb OR 8rx OR 9ar OR am4)) OR (ETH (9fc OR 9ls OR 92h OR 9cm OR 9b9 OR bal OR 9ta OR 9p9 OR 9pa OR swb OR 8cb OR 8mx OR 9wb OR 9xf OR am5)))]: %NAME%{%NAME%9}%CONTINUE%
-//DEX _8_
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID ((!ETH (9ax OR wsd OR 9ss OR 9gs OR kri OR 9kr OR tax OR pil OR ssp OR pik OR scy OR sbb OR 8lb OR hxb OR skr OR am6 OR am3)) OR (ETH (flb OR 9sm OR 9fb OR bld OR 9di OR bkf OR 9s9 OR brn OR 9tr OR hal OR 9h9 OR lbb OR rxb OR 8rx OR 9ar OR am4)))]: %NAME%{%NAME%8}%CONTINUE%
-//DEX _7_
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID ((!ETH (mpi OR gax OR fla OR 9fl OR lsd OR gis OR 9dg OR glv OR 9b7 OR cbw OR mxb OR 8hx OR 9ws OR ces OR clw OR btl OR am1)) OR (ETH (9ax OR wsd OR 9ss OR 9gs OR kri OR 9kr OR tax OR pil OR ssp OR pik OR scy OR sbb OR 8lb OR hxb OR skr OR am6 OR am3)))]: %NAME%{%NAME%7}%CONTINUE%
-//DEX _6_
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID ((!ETH (9ha OR 9ba OR crs OR 2hs OR 9bl OR 9st OR pax OR hbw OR 8lw OR lxb OR 9sc OR 9qs OR wrb OR axf)) OR (ETH (mpi OR gax OR fla OR 9fl OR lsd OR gis OR 9dg OR glv OR 9b7 OR cbw OR mxb OR 8hx OR 9ws OR ces OR clw OR btl OR am1)))]: %NAME%{%NAME%6}%CONTINUE%
-//DEX _5_
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID ((!ETH (9mp OR 9wa OR 9ga OR 9gi OR scm OR sbr OR dir OR tkf OR 9vo OR 8lx OR ktr OR am7 OR ama)) OR (ETH (9ha OR 9ba OR crs OR 2hs OR 9bl OR 9st OR pax OR hbw OR 8lw OR lxb OR 9sc OR 9qs OR wrb OR axf)))]: %NAME%{%NAME%5}%CONTINUE%
-//DEX _4_
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID ((!ETH (92a OR 9cl OR 9ma OR 9mt OR flc OR bsd OR 9tk OR 9bk OR 9ts OR wsc OR 9wc OR sbw OR lbw OR 8sb OR 8sw OR am8 OR am9)) OR (ETH (9mp OR 9wa OR 9ga OR 9gi OR scm OR sbr OR dir OR tkf OR 9vo OR 8lx OR ktr OR am7 OR ama)))]: %NAME%{%NAME%4}%CONTINUE%
-//DEX _3_
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID ((!ETH (9bt OR 9cr OR 9gl OR 9br OR 8s8 OR 8ls OR 8cs)) OR (ETH (92a OR 9cl OR 9ma OR 9mt OR flc OR bsd OR 9tk OR 9bk OR 9ts OR wsc OR 9wc OR sbw OR lbw OR 8sb OR 8sw OR am8 OR am9)))]: %NAME%{%NAME%3}%CONTINUE%
-//DEX _2_
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID ((!ETH (hax OR clm OR bsw OR 9sb OR 9wd OR 9b8 OR jav OR 9ja OR spr OR tri OR 9sr OR 8l8 OR 8bs)) OR (ETH (9bt OR 9cr OR 9gl OR 9br OR 8s8 OR 8ls OR 8cs)))]: %NAME%{%NAME%2}%CONTINUE%
-//DEX _1_
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID ((!ETH (gsd OR 9bs OR 9gd OR tsp OR 9pi OR 9s8 OR lwb OR 8hb OR 9cs OR 9lw OR 9tw OR 9qr OR am2)) OR (ETH (hax OR clm OR bsw OR 9sb OR 9wd OR 9b8 OR jav OR 9ja OR spr OR tri OR 9sr OR 8l8 OR 8bs)))]: %NAME%{%NAME%1}%CONTINUE%
-//DEX _0_
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID ((!ETH (9fc OR 9ls OR 92h OR 9cm OR 9b9 OR bal OR 9ta OR 9p9 OR 9pa OR swb OR 8cb OR 8mx OR 9wb OR 9xf OR am5)) OR (ETH (gsd OR 9bs OR 9gd OR tsp OR 9pi OR 9s8 OR lwb OR 8hb OR 9cs OR 9lw OR 9tw OR 9qr OR am2)))]: %NAME%{%NAME%0}%CONTINUE%
-//DEX __9
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (gax OR 9wa OR 9ga OR lsd OR 9ls OR 9h9 OR lbw OR 8hb OR 9qs OR axf OR btl OR 9ar OR am9 OR am5)]: %NAME%{%NAME%9}%CONTINUE%
-//DEX __8
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (sbr OR wsd OR 9ss OR dir OR kri OR 9di OR 9ta OR pil OR tsp OR pik OR 9s8 OR lwb OR 8lb OR 8rx OR 9xf OR 9qr OR am4)]: %NAME%{%NAME%8}%CONTINUE%
-//DEX __7
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ha OR 9fl OR 9gs OR bld OR 9bl OR bkf OR 9gl OR 9tr OR pax OR 8cb OR 8lw OR 8hx OR 8cs OR 8bs OR ktr OR am1 OR am6)]: %NAME%{%NAME%7}%CONTINUE%
-//DEX __6
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ma OR 9cr OR 9kr OR bal OR 9p9 OR 8sw OR wrb OR clw)]: %NAME%{%NAME%6}%CONTINUE%
-//DEX __5
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (hax OR 92a OR 9ba OR 9gi OR 9sm OR 9fc OR 9fb OR 9dg OR jav OR 9s9 OR 9ts OR spr OR tri OR brn OR 9b7 OR 9vo OR lbb OR rxb OR 8lx OR 8mx OR 8ls OR 9sc OR 9wb OR 9tw)]: %NAME%{%NAME%5}%CONTINUE%
-//DEX __4
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9mp OR 9mt OR flb OR 9wd OR 9cm OR 9br)]: %NAME%{%NAME%4}%CONTINUE%
-//DEX __3
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ax OR 9bt OR fla OR 9cl OR bsd OR 9b9 OR glv OR 9ja OR 9st OR 9pa OR sbw OR cbw OR swb OR 8sb OR ces OR 9lw)]: %NAME%{%NAME%3}%CONTINUE%
-//DEX __2
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (scm OR flc OR 9sb OR 9bs OR tkf OR 9bk OR 9b8 OR 9pi OR scy OR hbw OR 8s8 OR skr OR am7 OR am8)]: %NAME%{%NAME%2}%CONTINUE%
-//DEX __1
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (2hs OR gis OR 9tk OR hal OR 8l8 OR lxb OR ama)]: %NAME%{%NAME%1}%CONTINUE%
-//DEX __0
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (mpi OR crs OR clm OR bsw OR gsd OR 92h OR 9gd OR tax OR ssp OR 9sr OR wsc OR 9wc OR sbb OR mxb OR hxb OR 9ws OR 9cs OR am2 OR am3)]: %NAME%{%NAME%0}%CONTINUE%
+ItemDisplay[(hax OR mpi OR gax OR 9ha OR 9ax OR 92a OR 9mp OR 9wa OR 9ba OR 9bt OR 9ga OR 9gi OR fla OR 9cl OR 9ma OR 9mt OR 9fl OR (SWORD !ssd) OR (DAGGER !THROWING !dgr) OR THROWING OR (SPEAR !THROWING !spt) OR (POLEARM !bar !vou) OR BOW OR XBOW OR 8ls OR 8cs OR 8bs OR 9sc OR 9qs OR 9ws OR SIN OR ZON) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID]: %NAME%{%NAME%%WHITE%, %LIGHT_GRAY%Dex%WHITE%:}%CONTINUE%
+//DEX REQ
+//Items that after upgrade will Require DEX 10
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((clm) ETH)) CHARSTAT2<10]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((clm) ETH))]: %NAME%{%NAME%10}%CONTINUE%
+//Items that after upgrade will Require DEX 15
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((hax OR jav OR spr OR tri) ETH)) CHARSTAT2<15]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((hax OR jav OR spr OR tri) ETH))]: %NAME%{%NAME%15}%CONTINUE%
+//Items that after upgrade will Require DEX 17
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8bs) ETH)) CHARSTAT2<17]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8bs) ETH))]: %NAME%{%NAME%17}%CONTINUE%
+//Items that after upgrade will Require DEX 20
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((clm) !ETH)) CHARSTAT2<20]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((clm) !ETH))]: %NAME%{%NAME%20}%CONTINUE%
+//Items that after upgrade will Require DEX 23
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9bt) ETH)) CHARSTAT2<23]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9bt) ETH))]: %NAME%{%NAME%23}%CONTINUE%
+//Items that after upgrade will Require DEX 25
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((hax OR jav OR spr OR tri) !ETH) OR ((8ls) ETH)) CHARSTAT2<25]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((hax OR jav OR spr OR tri) !ETH) OR ((8ls) ETH))]: %NAME%{%NAME%25}%CONTINUE%
+//Items that after upgrade will Require DEX 27
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8bs) !ETH) OR ((8cs) ETH)) CHARSTAT2<27]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8bs) !ETH) OR ((8cs) ETH))]: %NAME%{%NAME%27}%CONTINUE%
+//Items that after upgrade will Require DEX 32
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((flc) ETH)) CHARSTAT2<32]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((flc) ETH))]: %NAME%{%NAME%32}%CONTINUE%
+//Items that after upgrade will Require DEX 33
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9bt) !ETH) OR ((9cl OR bsd OR sbw) ETH)) CHARSTAT2<33]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9bt) !ETH) OR ((9cl OR bsd OR sbw) ETH))]: %NAME%{%NAME%33}%CONTINUE%
+//Items that after upgrade will Require DEX 34
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9mt) ETH)) CHARSTAT2<34]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9mt) ETH))]: %NAME%{%NAME%34}%CONTINUE%
+//Items that after upgrade will Require DEX 35
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8ls) !ETH)) CHARSTAT2<35]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8ls) !ETH))]: %NAME%{%NAME%35}%CONTINUE%
+//Items that after upgrade will Require DEX 36
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ma) ETH)) CHARSTAT2<36]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ma) ETH))]: %NAME%{%NAME%36}%CONTINUE%
+//Items that after upgrade will Require DEX 37
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8cs) !ETH)) CHARSTAT2<37]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8cs) !ETH))]: %NAME%{%NAME%37}%CONTINUE%
+//Items that after upgrade will Require DEX 39
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((lbw) ETH)) CHARSTAT2<39]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((lbw) ETH))]: %NAME%{%NAME%39}%CONTINUE%
+//Items that after upgrade will Require DEX 42
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((flc) !ETH) OR ((scm OR tkf) ETH)) CHARSTAT2<42]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((flc) !ETH) OR ((scm OR tkf) ETH))]: %NAME%{%NAME%42}%CONTINUE%
+//Items that after upgrade will Require DEX 43
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9cl OR bsd OR sbw) !ETH)) CHARSTAT2<43]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9cl OR bsd OR sbw) !ETH))]: %NAME%{%NAME%43}%CONTINUE%
+//Items that after upgrade will Require DEX 44
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9mt) !ETH) OR ((9mp) ETH)) CHARSTAT2<44]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9mt) !ETH) OR ((9mp) ETH))]: %NAME%{%NAME%44}%CONTINUE%
+//Items that after upgrade will Require DEX 45
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9gi OR 9vo) ETH)) CHARSTAT2<45]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9gi OR 9vo) ETH))]: %NAME%{%NAME%45}%CONTINUE%
+//Items that after upgrade will Require DEX 46
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ma) !ETH)) CHARSTAT2<46]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ma) !ETH))]: %NAME%{%NAME%46}%CONTINUE%
+//Items that after upgrade will Require DEX 47
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((ktr) ETH)) CHARSTAT2<47]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((ktr) ETH))]: %NAME%{%NAME%47}%CONTINUE%
+//Items that after upgrade will Require DEX 48
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((sbr OR dir) ETH)) CHARSTAT2<48]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((sbr OR dir) ETH))]: %NAME%{%NAME%48}%CONTINUE%
+//Items that after upgrade will Require DEX 49
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((lbw) !ETH) OR ((9wa OR 9ga) ETH)) CHARSTAT2<49]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((lbw) !ETH) OR ((9wa OR 9ga) ETH))]: %NAME%{%NAME%49}%CONTINUE%
+//Items that after upgrade will Require DEX 50
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((crs) ETH)) CHARSTAT2<50]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((crs) ETH))]: %NAME%{%NAME%50}%CONTINUE%
+//Items that after upgrade will Require DEX 51
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((2hs OR lxb) ETH)) CHARSTAT2<51]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((2hs OR lxb) ETH))]: %NAME%{%NAME%51}%CONTINUE%
+//Items that after upgrade will Require DEX 52
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((scm OR tkf) !ETH) OR ((hbw) ETH)) CHARSTAT2<52]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((scm OR tkf) !ETH) OR ((hbw) ETH))]: %NAME%{%NAME%52}%CONTINUE%
+//Items that after upgrade will Require DEX 54
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9mp) !ETH)) CHARSTAT2<54]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9mp) !ETH))]: %NAME%{%NAME%54}%CONTINUE%
+//Items that after upgrade will Require DEX 55
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9gi OR 9vo) !ETH) OR ((9ba OR 9sc) ETH)) CHARSTAT2<55]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9gi OR 9vo) !ETH) OR ((9ba OR 9sc) ETH))]: %NAME%{%NAME%55}%CONTINUE%
+//Items that after upgrade will Require DEX 56
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((wrb) ETH)) CHARSTAT2<56]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((wrb) ETH))]: %NAME%{%NAME%56}%CONTINUE%
+//Items that after upgrade will Require DEX 57
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((ktr) !ETH) OR ((9ha OR 9bl OR pax) ETH)) CHARSTAT2<57]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((ktr) !ETH) OR ((9ha OR 9bl OR pax) ETH))]: %NAME%{%NAME%57}%CONTINUE%
+//Items that after upgrade will Require DEX 58
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((sbr OR dir) !ETH)) CHARSTAT2<58]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((sbr OR dir) !ETH))]: %NAME%{%NAME%58}%CONTINUE%
+//Items that after upgrade will Require DEX 59
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9wa OR 9ga) !ETH) OR ((9qs OR axf) ETH)) CHARSTAT2<59]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9wa OR 9ga) !ETH) OR ((9qs OR axf) ETH))]: %NAME%{%NAME%59}%CONTINUE%
+//Items that after upgrade will Require DEX 60
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((crs) !ETH) OR ((mpi OR mxb OR 9ws) ETH)) CHARSTAT2<60]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((crs) !ETH) OR ((mpi OR mxb OR 9ws) ETH))]: %NAME%{%NAME%60}%CONTINUE%
+//Items that after upgrade will Require DEX 61
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((2hs OR lxb) !ETH) OR ((gis) ETH)) CHARSTAT2<61]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((2hs OR lxb) !ETH) OR ((gis) ETH))]: %NAME%{%NAME%61}%CONTINUE%
+//Items that after upgrade will Require DEX 62
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((hbw) !ETH)) CHARSTAT2<62]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((hbw) !ETH))]: %NAME%{%NAME%62}%CONTINUE%
+//Items that after upgrade will Require DEX 63
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((fla OR glv OR cbw OR ces) ETH)) CHARSTAT2<63]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((fla OR glv OR cbw OR ces) ETH))]: %NAME%{%NAME%63}%CONTINUE%
+//Items that after upgrade will Require DEX 65
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ba OR 9sc) !ETH) OR ((9dg OR 9b7) ETH)) CHARSTAT2<65]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ba OR 9sc) !ETH) OR ((9dg OR 9b7) ETH))]: %NAME%{%NAME%65}%CONTINUE%
+//Items that after upgrade will Require DEX 66
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((wrb) !ETH) OR ((clw) ETH)) CHARSTAT2<66]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((wrb) !ETH) OR ((clw) ETH))]: %NAME%{%NAME%66}%CONTINUE%
+//Items that after upgrade will Require DEX 67
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ha OR 9bl OR pax) !ETH) OR ((9fl OR 8hx OR am1) ETH)) CHARSTAT2<67]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ha OR 9bl OR pax) !ETH) OR ((9fl OR 8hx OR am1) ETH))]: %NAME%{%NAME%67}%CONTINUE%
+//Items that after upgrade will Require DEX 69
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9qs OR axf) !ETH) OR ((gax OR lsd OR btl) ETH)) CHARSTAT2<69]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9qs OR axf) !ETH) OR ((gax OR lsd OR btl) ETH))]: %NAME%{%NAME%69}%CONTINUE%
+//Items that after upgrade will Require DEX 70
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((mpi OR mxb OR 9ws) !ETH) OR ((tax OR ssp OR sbb OR hxb OR am3) ETH)) CHARSTAT2<70]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((mpi OR mxb OR 9ws) !ETH) OR ((tax OR ssp OR sbb OR hxb OR am3) ETH))]: %NAME%{%NAME%70}%CONTINUE%
+//Items that after upgrade will Require DEX 71
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((gis) !ETH)) CHARSTAT2<71]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((gis) !ETH))]: %NAME%{%NAME%71}%CONTINUE%
+//Items that after upgrade will Require DEX 72
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((scy OR skr) ETH)) CHARSTAT2<72]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((scy OR skr) ETH))]: %NAME%{%NAME%72}%CONTINUE%
+//Items that after upgrade will Require DEX 73
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((fla OR glv OR cbw OR ces) !ETH)) CHARSTAT2<73]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((fla OR glv OR cbw OR ces) !ETH))]: %NAME%{%NAME%73}%CONTINUE%
+//Items that after upgrade will Require DEX 75
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9dg OR 9b7) !ETH)) CHARSTAT2<75]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9dg OR 9b7) !ETH))]: %NAME%{%NAME%75}%CONTINUE%
+//Items that after upgrade will Require DEX 76
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((clw) !ETH) OR ((9kr) ETH)) CHARSTAT2<76]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((clw) !ETH) OR ((9kr) ETH))]: %NAME%{%NAME%76}%CONTINUE%
+//Items that after upgrade will Require DEX 77
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9fl OR 8hx OR am1) !ETH) OR ((9gs) ETH)) CHARSTAT2<77]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9fl OR 8hx OR am1) !ETH) OR ((9gs) ETH))]: %NAME%{%NAME%77}%CONTINUE%
+//Items that after upgrade will Require DEX 78
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((wsd OR kri OR pil OR pik) ETH)) CHARSTAT2<78]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((wsd OR kri OR pil OR pik) ETH))]: %NAME%{%NAME%78}%CONTINUE%
+//Items that after upgrade will Require DEX 79
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((gax OR lsd OR btl) !ETH)) CHARSTAT2<79]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((gax OR lsd OR btl) !ETH))]: %NAME%{%NAME%79}%CONTINUE%
+//Items that after upgrade will Require DEX 80
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((tax OR ssp OR sbb OR hxb OR am3) !ETH)) CHARSTAT2<80]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((tax OR ssp OR sbb OR hxb OR am3) !ETH))]: %NAME%{%NAME%80}%CONTINUE%
+//Items that after upgrade will Require DEX 81
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((hal) ETH)) CHARSTAT2<81]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((hal) ETH))]: %NAME%{%NAME%81}%CONTINUE%
+//Items that after upgrade will Require DEX 82
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((scy OR skr) !ETH)) CHARSTAT2<82]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((scy OR skr) !ETH))]: %NAME%{%NAME%82}%CONTINUE%
+//Items that after upgrade will Require DEX 84
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((flb) ETH)) CHARSTAT2<84]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((flb) ETH))]: %NAME%{%NAME%84}%CONTINUE%
+//Items that after upgrade will Require DEX 85
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9sm OR 9fb OR 9s9 OR brn OR lbb OR rxb) ETH)) CHARSTAT2<85]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9sm OR 9fb OR 9s9 OR brn OR lbb OR rxb) ETH))]: %NAME%{%NAME%85}%CONTINUE%
+//Items that after upgrade will Require DEX 86
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9kr) !ETH)) CHARSTAT2<86]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9kr) !ETH))]: %NAME%{%NAME%86}%CONTINUE%
+//Items that after upgrade will Require DEX 87
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9gs) !ETH) OR ((bld OR bkf OR 9tr) ETH)) CHARSTAT2<87]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9gs) !ETH) OR ((bld OR bkf OR 9tr) ETH))]: %NAME%{%NAME%87}%CONTINUE%
+//Items that after upgrade will Require DEX 88
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((wsd OR kri OR pil OR pik) !ETH) OR ((9di OR 8rx OR am4) ETH)) CHARSTAT2<88]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((wsd OR kri OR pil OR pik) !ETH) OR ((9di OR 8rx OR am4) ETH))]: %NAME%{%NAME%88}%CONTINUE%
+//Items that after upgrade will Require DEX 89
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9h9 OR 9ar) ETH)) CHARSTAT2<89]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9h9 OR 9ar) ETH))]: %NAME%{%NAME%89}%CONTINUE%
+//Items that after upgrade will Require DEX 90
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((92h) ETH)) CHARSTAT2<90]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((92h) ETH))]: %NAME%{%NAME%90}%CONTINUE%
+//Items that after upgrade will Require DEX 91
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((hal) !ETH)) CHARSTAT2<91]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((hal) !ETH))]: %NAME%{%NAME%91}%CONTINUE%
+//Items that after upgrade will Require DEX 93
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9pa OR swb) ETH)) CHARSTAT2<93]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9pa OR swb) ETH))]: %NAME%{%NAME%93}%CONTINUE%
+//Items that after upgrade will Require DEX 94
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((flb) !ETH) OR ((9cm) ETH)) CHARSTAT2<94]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((flb) !ETH) OR ((9cm) ETH))]: %NAME%{%NAME%94}%CONTINUE%
+//Items that after upgrade will Require DEX 95
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9sm OR 9fb OR 9s9 OR brn OR lbb OR rxb) !ETH) OR ((9fc OR 8mx OR 9wb) ETH)) CHARSTAT2<95]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9sm OR 9fb OR 9s9 OR brn OR lbb OR rxb) !ETH) OR ((9fc OR 8mx OR 9wb) ETH))]: %NAME%{%NAME%95}%CONTINUE%
+//Items that after upgrade will Require DEX 96
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((bal OR 9p9) ETH)) CHARSTAT2<96]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((bal OR 9p9) ETH))]: %NAME%{%NAME%96}%CONTINUE%
+//Items that after upgrade will Require DEX 97
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((bld OR bkf OR 9tr) !ETH) OR ((8cb) ETH)) CHARSTAT2<97]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((bld OR bkf OR 9tr) !ETH) OR ((8cb) ETH))]: %NAME%{%NAME%97}%CONTINUE%
+//Items that after upgrade will Require DEX 98
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9di OR 8rx OR am4) !ETH) OR ((9ta OR 9xf) ETH)) CHARSTAT2<98]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9di OR 8rx OR am4) !ETH) OR ((9ta OR 9xf) ETH))]: %NAME%{%NAME%98}%CONTINUE%
+//Items that after upgrade will Require DEX 99
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9h9 OR 9ar) !ETH) OR ((9ls OR am5) ETH)) CHARSTAT2<99]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9h9 OR 9ar) !ETH) OR ((9ls OR am5) ETH))]: %NAME%{%NAME%99}%CONTINUE%
+//Items that after upgrade will Require DEX 100
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((92h) !ETH) OR ((gsd OR 9gd OR 9cs OR am2) ETH)) CHARSTAT2<100]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((92h) !ETH) OR ((gsd OR 9gd OR 9cs OR am2) ETH))]: %NAME%{%NAME%100}%CONTINUE%
+//Items that after upgrade will Require DEX 102
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9bs OR 9pi) ETH)) CHARSTAT2<102]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9bs OR 9pi) ETH))]: %NAME%{%NAME%102}%CONTINUE%
+//Items that after upgrade will Require DEX 103
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9pa OR swb) !ETH) OR ((9lw) ETH)) CHARSTAT2<103]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9pa OR swb) !ETH) OR ((9lw) ETH))]: %NAME%{%NAME%103}%CONTINUE%
+//Items that after upgrade will Require DEX 104
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9cm) !ETH)) CHARSTAT2<104]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9cm) !ETH))]: %NAME%{%NAME%104}%CONTINUE%
+//Items that after upgrade will Require DEX 105
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9fc OR 8mx OR 9wb) !ETH) OR ((9tw) ETH)) CHARSTAT2<105]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9fc OR 8mx OR 9wb) !ETH) OR ((9tw) ETH))]: %NAME%{%NAME%105}%CONTINUE%
+//Items that after upgrade will Require DEX 106
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((bal OR 9p9) !ETH)) CHARSTAT2<106]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((bal OR 9p9) !ETH))]: %NAME%{%NAME%106}%CONTINUE%
+//Items that after upgrade will Require DEX 107
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8cb) !ETH)) CHARSTAT2<107]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8cb) !ETH))]: %NAME%{%NAME%107}%CONTINUE%
+//Items that after upgrade will Require DEX 108
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ta OR 9xf) !ETH) OR ((tsp OR 9s8 OR lwb OR 9qr) ETH)) CHARSTAT2<108]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ta OR 9xf) !ETH) OR ((tsp OR 9s8 OR lwb OR 9qr) ETH))]: %NAME%{%NAME%108}%CONTINUE%
+//Items that after upgrade will Require DEX 109
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ls OR am5) !ETH) OR ((8hb) ETH)) CHARSTAT2<109]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ls OR am5) !ETH) OR ((8hb) ETH))]: %NAME%{%NAME%109}%CONTINUE%
+//Items that after upgrade will Require DEX 110
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((gsd OR 9gd OR 9cs OR am2) !ETH) OR ((9sr) ETH)) CHARSTAT2<110]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((gsd OR 9gd OR 9cs OR am2) !ETH) OR ((9sr) ETH))]: %NAME%{%NAME%110}%CONTINUE%
+//Items that after upgrade will Require DEX 111
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8l8) ETH)) CHARSTAT2<111]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8l8) ETH))]: %NAME%{%NAME%111}%CONTINUE%
+//Items that after upgrade will Require DEX 112
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9bs OR 9pi) !ETH) OR ((9sb OR 9b8) ETH)) CHARSTAT2<112]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9bs OR 9pi) !ETH) OR ((9sb OR 9b8) ETH))]: %NAME%{%NAME%112}%CONTINUE%
+//Items that after upgrade will Require DEX 113
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9lw) !ETH) OR ((9ja) ETH)) CHARSTAT2<113]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9lw) !ETH) OR ((9ja) ETH))]: %NAME%{%NAME%113}%CONTINUE%
+//Items that after upgrade will Require DEX 114
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9wd) ETH)) CHARSTAT2<114]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9wd) ETH))]: %NAME%{%NAME%114}%CONTINUE%
+//Items that after upgrade will Require DEX 115
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9tw) !ETH)) CHARSTAT2<115]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9tw) !ETH))]: %NAME%{%NAME%115}%CONTINUE%
+//Items that after upgrade will Require DEX 118
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((tsp OR 9s8 OR lwb OR 9qr) !ETH)) CHARSTAT2<118]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((tsp OR 9s8 OR lwb OR 9qr) !ETH))]: %NAME%{%NAME%118}%CONTINUE%
+//Items that after upgrade will Require DEX 119
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8hb) !ETH)) CHARSTAT2<119]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8hb) !ETH))]: %NAME%{%NAME%119}%CONTINUE%
+//Items that after upgrade will Require DEX 120
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9sr) !ETH)) CHARSTAT2<120]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9sr) !ETH))]: %NAME%{%NAME%120}%CONTINUE%
+//Items that after upgrade will Require DEX 121
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8l8) !ETH)) CHARSTAT2<121]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8l8) !ETH))]: %NAME%{%NAME%121}%CONTINUE%
+//Items that after upgrade will Require DEX 122
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9sb OR 9b8) !ETH) OR ((8s8) ETH)) CHARSTAT2<122]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9sb OR 9b8) !ETH) OR ((8s8) ETH))]: %NAME%{%NAME%122}%CONTINUE%
+//Items that after upgrade will Require DEX 123
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ja) !ETH)) CHARSTAT2<123]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ja) !ETH))]: %NAME%{%NAME%123}%CONTINUE%
+//Items that after upgrade will Require DEX 124
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9wd) !ETH) OR ((9br) ETH)) CHARSTAT2<124]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9wd) !ETH) OR ((9br) ETH))]: %NAME%{%NAME%124}%CONTINUE%
+//Items that after upgrade will Require DEX 126
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9cr) ETH)) CHARSTAT2<126]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9cr) ETH))]: %NAME%{%NAME%126}%CONTINUE%
+//Items that after upgrade will Require DEX 127
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9gl) ETH)) CHARSTAT2<127]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9gl) ETH))]: %NAME%{%NAME%127}%CONTINUE%
+//Items that after upgrade will Require DEX 130
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((wsc OR 9wc) ETH)) CHARSTAT2<130]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((wsc OR 9wc) ETH))]: %NAME%{%NAME%130}%CONTINUE%
+//Items that after upgrade will Require DEX 131
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9tk) ETH)) CHARSTAT2<131]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9tk) ETH))]: %NAME%{%NAME%131}%CONTINUE%
+//Items that after upgrade will Require DEX 132
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8s8) !ETH) OR ((9bk OR am8) ETH)) CHARSTAT2<132]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8s8) !ETH) OR ((9bk OR am8) ETH))]: %NAME%{%NAME%132}%CONTINUE%
+//Items that after upgrade will Require DEX 133
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8sb) ETH)) CHARSTAT2<133]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8sb) ETH))]: %NAME%{%NAME%133}%CONTINUE%
+//Items that after upgrade will Require DEX 134
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9br) !ETH)) CHARSTAT2<134]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9br) !ETH))]: %NAME%{%NAME%134}%CONTINUE%
+//Items that after upgrade will Require DEX 135
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ts) ETH)) CHARSTAT2<135]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ts) ETH))]: %NAME%{%NAME%135}%CONTINUE%
+//Items that after upgrade will Require DEX 136
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9cr) !ETH) OR ((8sw) ETH)) CHARSTAT2<136]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9cr) !ETH) OR ((8sw) ETH))]: %NAME%{%NAME%136}%CONTINUE%
+//Items that after upgrade will Require DEX 137
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9gl) !ETH)) CHARSTAT2<137]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9gl) !ETH))]: %NAME%{%NAME%137}%CONTINUE%
+//Items that after upgrade will Require DEX 139
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((am9) ETH)) CHARSTAT2<139]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((am9) ETH))]: %NAME%{%NAME%139}%CONTINUE%
+//Items that after upgrade will Require DEX 140
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((wsc OR 9wc) !ETH)) CHARSTAT2<140]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((wsc OR 9wc) !ETH))]: %NAME%{%NAME%140}%CONTINUE%
+//Items that after upgrade will Require DEX 141
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9tk) !ETH) OR ((ama) ETH)) CHARSTAT2<141]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9tk) !ETH) OR ((ama) ETH))]: %NAME%{%NAME%141}%CONTINUE%
+//Items that after upgrade will Require DEX 142
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9bk OR am8) !ETH) OR ((am7) ETH)) CHARSTAT2<142]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9bk OR am8) !ETH) OR ((am7) ETH))]: %NAME%{%NAME%142}%CONTINUE%
+//Items that after upgrade will Require DEX 143
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8sb) !ETH)) CHARSTAT2<143]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8sb) !ETH))]: %NAME%{%NAME%143}%CONTINUE%
+//Items that after upgrade will Require DEX 145
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ts) !ETH) OR ((8lx) ETH)) CHARSTAT2<145]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9ts) !ETH) OR ((8lx) ETH))]: %NAME%{%NAME%145}%CONTINUE%
+//Items that after upgrade will Require DEX 146
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8sw) !ETH)) CHARSTAT2<146]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8sw) !ETH))]: %NAME%{%NAME%146}%CONTINUE%
+//Items that after upgrade will Require DEX 149
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((am9) !ETH)) CHARSTAT2<149]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((am9) !ETH))]: %NAME%{%NAME%149}%CONTINUE%
+//Items that after upgrade will Require DEX 151
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((ama) !ETH)) CHARSTAT2<151]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((ama) !ETH))]: %NAME%{%NAME%151}%CONTINUE%
+//Items that after upgrade will Require DEX 152
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((am7) !ETH)) CHARSTAT2<152]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((am7) !ETH))]: %NAME%{%NAME%152}%CONTINUE%
+//Items that after upgrade will Require DEX 153
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9st) ETH)) CHARSTAT2<153]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9st) ETH))]: %NAME%{%NAME%153}%CONTINUE%
+//Items that after upgrade will Require DEX 155
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8lx) !ETH)) CHARSTAT2<155]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8lx) !ETH))]: %NAME%{%NAME%155}%CONTINUE%
+//Items that after upgrade will Require DEX 157
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8lw) ETH)) CHARSTAT2<157]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8lw) ETH))]: %NAME%{%NAME%157}%CONTINUE%
+//Items that after upgrade will Require DEX 163
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9st) !ETH)) CHARSTAT2<163]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9st) !ETH))]: %NAME%{%NAME%163}%CONTINUE%
+//Items that after upgrade will Require DEX 167
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8lw) !ETH)) CHARSTAT2<167]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8lw) !ETH))]: %NAME%{%NAME%167}%CONTINUE%
+//Items that after upgrade will Require DEX 177
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((am6) ETH)) CHARSTAT2<177]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((am6) ETH))]: %NAME%{%NAME%177}%CONTINUE%
+//Items that after upgrade will Require DEX 178
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8lb) ETH)) CHARSTAT2<178]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8lb) ETH))]: %NAME%{%NAME%178}%CONTINUE%
+//Items that after upgrade will Require DEX 187
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((am6) !ETH)) CHARSTAT2<187]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((am6) !ETH))]: %NAME%{%NAME%187}%CONTINUE%
+//Items that after upgrade will Require DEX 188
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8lb) !ETH)) CHARSTAT2<188]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8lb) !ETH))]: %NAME%{%NAME%188}%CONTINUE%
 //When -REQ appears
-ItemDisplay[(hax OR mpi OR gax OR 9ha OR 9ax OR 92a OR 9mp OR 9wa OR 9ba OR 9bt OR 9ga OR 9gi OR fla OR 9cl OR 9ma OR 9mt OR 9fl OR (SWORD !ssd) OR (DAGGER !THROWING !dgr) OR THROWING OR (SPEAR !THROWING !spt) OR (POLEARM !bar !vou) OR BOW OR XBOW OR 8ls OR 8cs OR 8bs OR 9sc OR 9qs OR 9ws OR SIN OR ZON) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID !STAT91=0]: %NAME%{%NAME%%GRAY%-x%}%CONTINUE%
+ItemDisplay[(hax OR mpi OR gax OR 9ha OR 9ax OR 92a OR 9mp OR 9wa OR 9ba OR 9bt OR 9ga OR 9gi OR fla OR 9cl OR 9ma OR 9mt OR 9fl OR (SWORD !ssd) OR (DAGGER !THROWING !dgr) OR THROWING OR (SPEAR !THROWING !spt) OR (POLEARM !bar !vou) OR BOW OR XBOW OR 8ls OR 8cs OR 8bs OR 9sc OR 9qs OR 9ws OR SIN OR ZON) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID !STAT91=0]: %NAME%{%NAME%%BLUE%-x%}%CONTINUE%
+//LVL
+ItemDisplay[(ARMOR OR WEAPON) !(CIRC OR SOR OR hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID]: %NAME%{%NAME%%WHITE%, }%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID]: %NAME%{%NAME%%LIGHT_GRAY%Lvl%WHITE%:}%CONTINUE%
+//Items that after upgrade will Require LVL 18
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (clb OR ssd OR jav OR sbw OR sst) LVLREQ<18 CLVL<18]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (clb OR ssd OR jav OR sbw OR sst) LVLREQ<18]: %NAME%{%NAME%18}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (clb OR ssd OR jav OR sbw OR sst) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (clb OR ssd OR jav OR sbw OR sst) LVLREQ>17]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 19
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (hax OR dgr OR tkf OR wnd OR scp) LVLREQ<19 CLVL<19]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (hax OR dgr OR tkf OR wnd OR scp) LVLREQ<19]: %NAME%{%NAME%19}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (hax OR dgr OR tkf OR wnd OR scp) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (hax OR dgr OR tkf OR wnd OR scp) LVLREQ>18]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 20
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (spc) LVLREQ<20 CLVL<20]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (spc) LVLREQ<20]: %NAME%{%NAME%20}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (spc) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (spc) LVLREQ>19]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 21
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (spr OR bar OR hbw OR ktr OR lgl) LVLREQ<21 CLVL<21]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (spr OR bar OR hbw OR ktr OR lgl) LVLREQ<21]: %NAME%{%NAME%21}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (spr OR bar OR hbw OR ktr OR lgl) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (spr OR bar OR hbw OR ktr OR lgl) LVLREQ>20]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 22
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (axe OR lax OR tax OR lxb OR cap OR qui OR buc) LVLREQ<22 CLVL<22]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (axe OR lax OR tax OR lxb OR cap OR qui OR buc) LVLREQ<22]: %NAME%{%NAME%22}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (axe OR lax OR tax OR lxb OR cap OR qui OR buc) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (axe OR lax OR tax OR lxb OR cap OR qui OR buc) LVLREQ>21]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 23
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (mac OR sbr OR pax OR lbw OR lst) LVLREQ<23 CLVL<23]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (mac OR sbr OR pax OR lbw OR lst) LVLREQ<23]: %NAME%{%NAME%23}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (mac OR sbr OR pax OR lbw OR lst) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (mac OR sbr OR pax OR lbw OR lst) LVLREQ>22]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 24
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (dir OR tri OR wrb OR ob1 OR lea OR lbt OR lbl OR ne1) LVLREQ<24 CLVL<24]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (dir OR tri OR wrb OR ob1 OR lea OR lbt OR lbl OR ne1) LVLREQ<24]: %NAME%{%NAME%24}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (dir OR tri OR wrb OR ob1 OR lea OR lbt OR lbl OR ne1) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (dir OR tri OR wrb OR ob1 OR lea OR lbt OR lbl OR ne1) LVLREQ>23]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 25
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (2ax OR mpi OR wax OR bax OR btx OR gax OR gix OR mst OR fla OR whm OR mau OR gma OR scm OR flc OR crs OR bsd OR lsd OR wsd OR 2hs OR clm OR gis OR bsw OR flb OR gsd OR kri OR bld OR bkf OR bal OR pil OR ssp OR glv OR tsp OR brn OR spt OR pik OR vou OR scy OR hal OR wsc OR cbw OR sbb OR lbb OR swb OR lwb OR mxb OR hxb OR rxb OR cst OR bst OR wst OR ywn OR bwn OR gwn OR gsc OR wsp OR skp OR hlm OR fhl OR msk OR bhm OR ghm OR crn OR hla OR stu OR rng OR scl OR chn OR brs OR spl OR plt OR fld OR gth OR ltp OR ful OR aar OR sml OR lrg OR spk OR kit OR bsh OR tow OR gts OR vgl OR mgl OR tgl OR hgl OR vbt OR mbt OR tbt OR hbt OR vbl OR mbl OR tbl OR hbl OR ba1) LVLREQ<25 CLVL<25]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (2ax OR mpi OR wax OR bax OR btx OR gax OR gix OR mst OR fla OR whm OR mau OR gma OR scm OR flc OR crs OR bsd OR lsd OR wsd OR 2hs OR clm OR gis OR bsw OR flb OR gsd OR kri OR bld OR bkf OR bal OR pil OR ssp OR glv OR tsp OR brn OR spt OR pik OR vou OR scy OR hal OR wsc OR cbw OR sbb OR lbb OR swb OR lwb OR mxb OR hxb OR rxb OR cst OR bst OR wst OR ywn OR bwn OR gwn OR gsc OR wsp OR skp OR hlm OR fhl OR msk OR bhm OR ghm OR crn OR hla OR stu OR rng OR scl OR chn OR brs OR spl OR plt OR fld OR gth OR ltp OR ful OR aar OR sml OR lrg OR spk OR kit OR bsh OR tow OR gts OR vgl OR mgl OR tgl OR hgl OR vbt OR mbt OR tbt OR hbt OR vbl OR mbl OR tbl OR hbl OR ba1) LVLREQ<25]: %NAME%{%NAME%25}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (2ax OR mpi OR wax OR bax OR btx OR gax OR gix OR mst OR fla OR whm OR mau OR gma OR scm OR flc OR crs OR bsd OR lsd OR wsd OR 2hs OR clm OR gis OR bsw OR flb OR gsd OR kri OR bld OR bkf OR bal OR pil OR ssp OR glv OR tsp OR brn OR spt OR pik OR vou OR scy OR hal OR wsc OR cbw OR sbb OR lbb OR swb OR lwb OR mxb OR hxb OR rxb OR cst OR bst OR wst OR ywn OR bwn OR gwn OR gsc OR wsp OR skp OR hlm OR fhl OR msk OR bhm OR ghm OR crn OR hla OR stu OR rng OR scl OR chn OR brs OR spl OR plt OR fld OR gth OR ltp OR ful OR aar OR sml OR lrg OR spk OR kit OR bsh OR tow OR gts OR vgl OR mgl OR tgl OR hgl OR vbt OR mbt OR tbt OR hbt OR vbl OR mbl OR tbl OR hbl OR ba1) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (2ax OR mpi OR wax OR bax OR btx OR gax OR gix OR mst OR fla OR whm OR mau OR gma OR scm OR flc OR crs OR bsd OR lsd OR wsd OR 2hs OR clm OR gis OR bsw OR flb OR gsd OR kri OR bld OR bkf OR bal OR pil OR ssp OR glv OR tsp OR brn OR spt OR pik OR vou OR scy OR hal OR wsc OR cbw OR sbb OR lbb OR swb OR lwb OR mxb OR hxb OR rxb OR cst OR bst OR wst OR ywn OR bwn OR gwn OR gsc OR wsp OR skp OR hlm OR fhl OR msk OR bhm OR ghm OR crn OR hla OR stu OR rng OR scl OR chn OR brs OR spl OR plt OR fld OR gth OR ltp OR ful OR aar OR sml OR lrg OR spk OR kit OR bsh OR tow OR gts OR vgl OR mgl OR tgl OR hgl OR vbt OR mbt OR tbt OR hbt OR vbl OR mbl OR tbl OR hbl OR ba1) LVLREQ>24]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 26
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am5 OR dr1 OR pa1) LVLREQ<26 CLVL<26]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am5 OR dr1 OR pa1) LVLREQ<26]: %NAME%{%NAME%26}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am5 OR dr1 OR pa1) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am5 OR dr1 OR pa1) LVLREQ>25]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 27
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (axf OR ob2) LVLREQ<27 CLVL<27]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (axf OR ob2) LVLREQ<27]: %NAME%{%NAME%27}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (axf OR ob2) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (axf OR ob2) LVLREQ>26]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 29
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am1 OR dr3 OR ba2 OR ba3 OR ne2) LVLREQ<29 CLVL<29]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am1 OR dr3 OR ba2 OR ba3 OR ne2) LVLREQ<29]: %NAME%{%NAME%29}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am1 OR dr3 OR ba2 OR ba3 OR ne2) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am1 OR dr3 OR ba2 OR ba3 OR ne2) LVLREQ>28]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 30
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ces OR ob3 OR dr2 OR pa2) LVLREQ<30 CLVL<30]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ces OR ob3 OR dr2 OR pa2) LVLREQ<30]: %NAME%{%NAME%30}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ces OR ob3 OR dr2 OR pa2) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ces OR ob3 OR dr2 OR pa2) LVLREQ>29]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 32
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am3 OR dr4 OR ba4) LVLREQ<32 CLVL<32]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am3 OR dr4 OR ba4) LVLREQ<32]: %NAME%{%NAME%32}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am3 OR dr4 OR ba4) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am3 OR dr4 OR ba4) LVLREQ>31]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 33
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (clw OR ne3) LVLREQ<33 CLVL<33]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (clw OR ne3) LVLREQ<33]: %NAME%{%NAME%33}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (clw OR ne3) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (clw OR ne3) LVLREQ>32]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 34
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ob4 OR pa3) LVLREQ<34 CLVL<34]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ob4 OR pa3) LVLREQ<34]: %NAME%{%NAME%34}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ob4 OR pa3) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ob4 OR pa3) LVLREQ>33]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 35
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am2) LVLREQ<35 CLVL<35]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am2) LVLREQ<35]: %NAME%{%NAME%35}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am2) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am2) LVLREQ>34]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 36
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ne4) LVLREQ<36 CLVL<36]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ne4) LVLREQ<36]: %NAME%{%NAME%36}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ne4) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ne4) LVLREQ>35]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 37
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (btl OR ob5) LVLREQ<37 CLVL<37]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (btl OR ob5) LVLREQ<37]: %NAME%{%NAME%37}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (btl OR ob5) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (btl OR ob5) LVLREQ>36]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 38
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am4 OR pa4) LVLREQ<38 CLVL<38]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am4 OR pa4) LVLREQ<38]: %NAME%{%NAME%38}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am4 OR pa4) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am4 OR pa4) LVLREQ>37]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 39
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9cl OR am6 OR ci0) LVLREQ<39 CLVL<39]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9cl OR am6 OR ci0) LVLREQ<39]: %NAME%{%NAME%39}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9cl OR am6 OR ci0) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9cl OR am6 OR ci0) LVLREQ>38]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 40
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ha OR 9ja OR skr OR xhl OR ba5 OR ne5) LVLREQ<40 CLVL<40]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ha OR 9ja OR skr OR xhl OR ba5 OR ne5) LVLREQ<40]: %NAME%{%NAME%40}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ha OR 9ja OR skr OR xhl OR ba5 OR ne5) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ha OR 9ja OR skr OR xhl OR ba5 OR ne5) LVLREQ>39]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 41
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8sb OR 9wn OR dr5 OR pa5) LVLREQ<41 CLVL<41]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8sb OR 9wn OR dr5 OR pa5) LVLREQ<41]: %NAME%{%NAME%41}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8sb OR 9wn OR dr5 OR pa5) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8sb OR 9wn OR dr5 OR pa5) LVLREQ>40]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 42
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9la OR 9sp OR 9ss OR 9ta OR 8lx OR xlg) LVLREQ<42 CLVL<42]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9la OR 9sp OR 9ss OR 9ta OR 8lx OR xlg) LVLREQ<42]: %NAME%{%NAME%42}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9la OR 9sp OR 9ss OR 9ta OR 8lx OR xlg) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9la OR 9sp OR 9ss OR 9ta OR 8lx OR xlg) LVLREQ>41]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 43
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9dg OR 9sr OR 8ss OR xap OR xuc) LVLREQ<43 CLVL<43]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9dg OR 9sr OR 8ss OR xap OR xuc) LVLREQ<43]: %NAME%{%NAME%43}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9dg OR 9sr OR 8ss OR xap OR xuc) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9dg OR 9sr OR 8ss OR xap OR xuc) LVLREQ>42]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 44
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (92h OR 9ar OR ob6 OR ne6) LVLREQ<44 CLVL<44]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (92h OR 9ar OR ob6 OR ne6) LVLREQ<44]: %NAME%{%NAME%44}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (92h OR 9ar OR ob6 OR ne6) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (92h OR 9ar OR ob6 OR ne6) LVLREQ>43]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 45
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ax OR 9sm OR 9b7 OR 8hb OR am8 OR xml OR xlb OR ba6) LVLREQ<45 CLVL<45]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ax OR 9sm OR 9b7 OR 8hb OR am8 OR xml OR xlb OR ba6) LVLREQ<45]: %NAME%{%NAME%45}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ax OR 9sm OR 9b7 OR 8hb OR am8 OR xml OR xlb OR ba6) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ax OR 9sm OR 9b7 OR 8hb OR am8 OR xml OR xlb OR ba6) LVLREQ>44]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 46
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9pi OR 9sc OR 9wb OR zlb OR dr6) LVLREQ<46 CLVL<46]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9pi OR 9sc OR 9wb OR zlb OR dr6) LVLREQ<46]: %NAME%{%NAME%46}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9pi OR 9sc OR 9wb OR zlb OR dr6) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9pi OR 9sc OR 9wb OR zlb OR dr6) LVLREQ>45]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 47
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ma OR 9sb OR 8lb OR xkp OR xhn OR xvg OR pa6) LVLREQ<47 CLVL<47]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ma OR 9sb OR 8lb OR xkp OR xhn OR xvg OR pa6) LVLREQ<47]: %NAME%{%NAME%47}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ma OR 9sb OR 8lb OR xkp OR xhn OR xvg OR pa6) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ma OR 9sb OR 8lb OR xkp OR xhn OR xvg OR pa6) LVLREQ>46]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 48
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ba OR 9tk OR 9vo OR 9yw OR ama OR xrg) LVLREQ<48 CLVL<48]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ba OR 9tk OR 9vo OR 9yw OR ama OR xrg) LVLREQ<48]: %NAME%{%NAME%48}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ba OR 9tk OR 9vo OR 9yw OR ama OR xrg) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ba OR 9tk OR 9vo OR 9yw OR ama OR xrg) LVLREQ>47]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 49
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9cm OR 9tr OR 8ls OR xui OR xvb OR ba7 OR ne8) LVLREQ<49 CLVL<49]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9cm OR 9tr OR 8ls OR xui OR xvb OR ba7 OR ne8) LVLREQ<49]: %NAME%{%NAME%49}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9cm OR 9tr OR 8ls OR xui OR xvb OR ba7 OR ne8) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9cm OR 9tr OR 8ls OR xui OR xvb OR ba7 OR ne8) LVLREQ>48]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 50
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8mx OR ob7 OR xea OR ne7) LVLREQ<50 CLVL<50]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8mx OR ob7 OR xea OR ne7) LVLREQ<50]: %NAME%{%NAME%50}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8mx OR ob7 OR xea OR ne7) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8mx OR ob7 OR xea OR ne7) LVLREQ>49]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 51
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9m9 OR 9fc OR 8cb OR 9xf OR xlm OR xla OR xpk OR xmg OR zvb OR dr7) LVLREQ<51 CLVL<51]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9m9 OR 9fc OR 8cb OR 9xf OR xlm OR xla OR xpk OR xmg OR zvb OR dr7) LVLREQ<51]: %NAME%{%NAME%51}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9m9 OR 9fc OR 8cb OR 9xf OR xlm OR xla OR xpk OR xmg OR zvb OR dr7) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9m9 OR 9fc OR 8cb OR 9xf OR xlm OR xla OR xpk OR xmg OR zvb OR dr7) LVLREQ>50]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 52
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (92a OR 9mt OR 9di OR ci1 OR pa7) LVLREQ<52 CLVL<52]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (92a OR 9mt OR 9di OR ci1 OR pa7) LVLREQ<52]: %NAME%{%NAME%52}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (92a OR 9mt OR 9di OR ci1 OR pa7) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (92a OR 9mt OR 9di OR ci1 OR pa7) LVLREQ>51]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 53
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gs OR 9s9 OR 9s8 OR xtu) LVLREQ<53 CLVL<53]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gs OR 9s9 OR 9s8 OR xtu) LVLREQ<53]: %NAME%{%NAME%53}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gs OR 9s9 OR 9s8 OR xtu) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gs OR 9s9 OR 9s8 OR xtu) LVLREQ>52]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 54
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9bt OR 9cr OR 8s8 OR 9cs OR xng OR xit OR xmb OR ba8) LVLREQ<54 CLVL<54]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9bt OR 9cr OR 8s8 OR 9cs OR xng OR xit OR xmb OR ba8) LVLREQ<54]: %NAME%{%NAME%54}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9bt OR 9cr OR 8s8 OR 9cs OR xng OR xit OR xmb OR ba8) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9bt OR 9cr OR 8s8 OR 9cs OR xng OR xit OR xmb OR ba8) LVLREQ>53]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 55
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9br OR 8cs OR xsk OR xcl OR pa8) LVLREQ<55 CLVL<55]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9br OR 8cs OR xsk OR xcl OR pa8) LVLREQ<55]: %NAME%{%NAME%55}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9br OR 8cs OR xsk OR xcl OR pa8) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9br OR 8cs OR xsk OR xcl OR pa8) LVLREQ>54]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 56
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8hx OR 9bw OR ob8 OR xrs OR zmb) LVLREQ<56 CLVL<56]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8hx OR 9bw OR ob8 OR xrs OR zmb) LVLREQ<56]: %NAME%{%NAME%56}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8hx OR 9bw OR ob8 OR xrs OR zmb) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8hx OR 9bw OR ob8 OR xrs OR zmb) LVLREQ>55]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 57
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9fl OR 9b9 OR 9bk OR 8l8 OR 9qs OR xpl OR xsh OR xtg OR dr8) LVLREQ<57 CLVL<57]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9fl OR 9b9 OR 9bk OR 8l8 OR 9qs OR xpl OR xsh OR xtg OR dr8) LVLREQ<57]: %NAME%{%NAME%57}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9fl OR 9b9 OR 9bk OR 8l8 OR 9qs OR xpl OR xsh OR xtg OR dr8) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9fl OR 9b9 OR 9bk OR 8l8 OR 9qs OR xpl OR xsh OR xtg OR dr8) LVLREQ>56]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 58
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9bs OR 9lw OR am7) LVLREQ<58 CLVL<58]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9bs OR 9lw OR am7) LVLREQ<58]: %NAME%{%NAME%58}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9bs OR 9lw OR am7) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9bs OR 9lw OR am7) LVLREQ>57]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 59
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9mp OR 9gl OR 9pa OR xhm OR xlt OR xow) LVLREQ<59 CLVL<59]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9mp OR 9gl OR 9pa OR xhm OR xlt OR xow) LVLREQ<59]: %NAME%{%NAME%59}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9mp OR 9gl OR 9pa OR xhm OR xlt OR xow) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9mp OR 9gl OR 9pa OR xhm OR xlt OR xow) LVLREQ>58]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 60
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9fb OR 9b8 OR 8sw OR 9tw OR am9 OR xtb OR ba9 OR ne9) LVLREQ<60 CLVL<60]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9fb OR 9b8 OR 8sw OR 9tw OR am9 OR xtb OR ba9 OR ne9) LVLREQ<60]: %NAME%{%NAME%60}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9fb OR 9b8 OR 8sw OR 9tw OR am9 OR xtb OR ba9 OR ne9) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9fb OR 9b8 OR 8sw OR 9tw OR am9 OR xtb OR ba9 OR ne9) LVLREQ>59]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 61
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ga OR 9wh OR 9ls OR xld OR pa9) LVLREQ<61 CLVL<61]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ga OR 9wh OR 9ls OR xld OR pa9) LVLREQ<61]: %NAME%{%NAME%61}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ga OR 9wh OR 9ls OR xld OR pa9) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ga OR 9wh OR 9ls OR xld OR pa9) LVLREQ>60]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 62
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9kr OR 9st OR 8bs OR xth OR ztb OR dr9) LVLREQ<62 CLVL<62]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9kr OR 9st OR 8bs OR xth OR ztb OR dr9) LVLREQ<62]: %NAME%{%NAME%62}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9kr OR 9st OR 8bs OR xth OR ztb OR dr9) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9kr OR 9st OR 8bs OR xth OR ztb OR dr9) LVLREQ>61]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 63
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gd OR 9h9 OR 8lw OR 8rx OR ob9 OR xh9 OR xtp OR xts) LVLREQ<63 CLVL<63]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gd OR 9h9 OR 8lw OR 8rx OR ob9 OR xh9 OR xtp OR xts) LVLREQ<63]: %NAME%{%NAME%63}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gd OR 9h9 OR 8lw OR 8rx OR ob9 OR xh9 OR xtp OR xts) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gd OR 9h9 OR 8lw OR 8rx OR ob9 OR xh9 OR xtp OR xts) LVLREQ>62]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 64
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9wa OR 9gw OR 9qr OR ci2 OR xul OR xhg) LVLREQ<64 CLVL<64]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9wa OR 9gw OR 9qr OR ci2 OR xul OR xhg) LVLREQ<64]: %NAME%{%NAME%64}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9wa OR 9gw OR 9qr OR ci2 OR xul OR xhg) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9wa OR 9gw OR 9qr OR ci2 OR xul OR xhg) LVLREQ>63]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 65
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gm OR 9ts OR xhb OR baa OR nea) LVLREQ<65 CLVL<65]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gm OR 9ts OR xhb OR baa OR nea) LVLREQ<65]: %NAME%{%NAME%65}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gm OR 9ts OR xhb OR baa OR nea) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gm OR 9ts OR xhb OR baa OR nea) LVLREQ>64]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 66
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gi OR 9wd OR 9bl OR 9p9 OR 9wc OR 8ws OR 9ws OR oba OR xrn OR xar OR dra OR paa) LVLREQ<66 CLVL<66]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gi OR 9wd OR 9bl OR 9p9 OR 9wc OR 8ws OR 9ws OR oba OR xrn OR xar OR dra OR paa) LVLREQ<66]: %NAME%{%NAME%66}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gi OR 9wd OR 9bl OR 9p9 OR 9wc OR 8ws OR 9ws OR oba OR xrn OR xar OR dra OR paa) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gi OR 9wd OR 9bl OR 9p9 OR 9wc OR 8ws OR 9ws OR oba OR xrn OR xar OR dra OR paa) LVLREQ>65]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 67
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (zhb) LVLREQ<67 CLVL<67]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (zhb) LVLREQ<67]: %NAME%{%NAME%67}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (zhb) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (zhb) LVLREQ>66]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Upgrading Req End Line
-ItemDisplay[(ARMOR OR WEAPON) !(CIRC OR SOR OR WAND OR 8ss OR hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID]: %NAME%{%NAME%%GRAY%)}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID]: %NAME%{%NAME%%GRAY%)}%CONTINUE%
 
 //Items which will benefit socket roll chance from upgrading it first
 //from 1 to 2
@@ -2773,6 +3798,31 @@ ItemDisplay[wst (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0 ILVL>25]: 
 //closer
 ItemDisplay[((CHEST OR HELM OR CIRC OR SHIELD) OR WEAPON) !THROWING (RARE OR CRAFT OR UNI OR SET OR MAG) ID SOCK=0]: %NAME%{%NAME%%TAN%]}%CONTINUE%
 
+//Note about Craft Affix Levels
+ItemDisplay[(ARMOR OR WEAPON OR amu OR rin) !CIRC (MAG OR RARE)]: %NAME%{%NAME%%CL%}%CONTINUE%
+//All Affixes Opener
+ItemDisplay[((WEAPON CRAFTALVL>76) OR ((CHEST OR SHIELD) CRAFTALVL>84) OR (HELM CRAFTALVL>80) OR (GLOVES CRAFTALVL>74) OR (BELT CRAFTALVL>70) OR (BOOTS CRAFTALVL>69) OR (amu CRAFTALVL>89) OR (rin CRAFTALVL>80)) (MAG OR RARE)]: %NAME%{%NAME%%ORANGE%[}%CONTINUE%
+//Good Affixes Opener
+ItemDisplay[(((WEAPON !(SOR OR WAND OR (BOW OR XBOW OR (ZON JAV) OR DAGGER OR CLUB OR TMACE OR (THROWING AXE))) CRAFTALVL=76) OR ((BOW OR XBOW OR (ZON JAV) OR DAGGER OR CLUB OR TMACE OR (THROWING AXE)) CRAFTALVL~75-76)) OR ((CHEST OR SHIELD) CRAFTALVL~75-84) OR (HELM CRAFTALVL~71-79) OR (GLOVES CRAFTALVL~59-74) OR (BELT CRAFTALVL~65-70) OR (BOOTS CRAFTALVL~65-69) OR (rin CRAFTALVL~75-80)) (MAG OR RARE)]: %NAME%{%NAME%%YELLOW%[}%CONTINUE%
+//+Skills Affixes Opener
+ItemDisplay[((SOR CRAFTALVL~60-76) OR (WAND CRAFTALVL~60-76) OR (SIN CRAFTALVL~60-75) OR (SCEPTER CRAFTALVL~60-75) OR (CLUB CRAFTALVL~71-74) OR ((ZON JAV) CRAFTALVL~60-74)) (MAG OR RARE)]: %NAME%{%NAME%%TEAL%[}%CONTINUE%
+//Craft Alvl Text Opener
+ItemDisplay[(ARMOR OR WEAPON OR amu OR rin) !CIRC (MAG OR RARE)]: %NAME%{%NAME%%WHITE%Craft Alvl: }%CONTINUE%
+//All Affixes Color
+ItemDisplay[((WEAPON CRAFTALVL>76) OR ((CHEST OR SHIELD) CRAFTALVL>84) OR (HELM CRAFTALVL>80) OR (GLOVES CRAFTALVL>74) OR (BELT CRAFTALVL>70) OR (BOOTS CRAFTALVL>69) OR (amu CRAFTALVL>89) OR (rin CRAFTALVL>80)) (MAG OR RARE)]: %NAME%{%NAME%%ORANGE%}%CONTINUE%
+//Good Affixes Color
+ItemDisplay[(((WEAPON !(SOR OR WAND OR (BOW OR XBOW OR (ZON JAV) OR DAGGER OR CLUB OR TMACE OR (THROWING AXE))) CRAFTALVL=76) OR ((BOW OR XBOW OR (ZON JAV) OR DAGGER OR CLUB OR TMACE OR (THROWING AXE)) CRAFTALVL~75-76)) OR ((CHEST OR SHIELD) CRAFTALVL~75-84) OR (HELM CRAFTALVL~71-79) OR (GLOVES CRAFTALVL~59-74) OR (BELT CRAFTALVL~65-70) OR (BOOTS CRAFTALVL~65-69) OR (rin CRAFTALVL~75-80)) (MAG OR RARE)]: %NAME%{%NAME%%YELLOW%}%CONTINUE%
+//+Skills Affixes Color
+ItemDisplay[((SOR CRAFTALVL~60-76) OR (WAND CRAFTALVL~60-76) OR (SIN CRAFTALVL~60-75) OR (SCEPTER CRAFTALVL~60-75) OR (CLUB CRAFTALVL~71-74) OR ((ZON JAV) CRAFTALVL~60-74)) (MAG OR RARE)]:  %NAME%{%NAME%%TEAL%}%CONTINUE%
+//CRAFTALVL Value
+ItemDisplay[(ARMOR OR WEAPON OR amu OR rin) !CIRC (MAG OR RARE)]: %NAME%{%NAME%%CRAFTALVL%}%CONTINUE%
+//All Affixes Text and Closer
+ItemDisplay[((WEAPON CRAFTALVL>76) OR ((CHEST OR SHIELD) CRAFTALVL>84) OR (HELM CRAFTALVL>80) OR (GLOVES CRAFTALVL>74) OR (BELT CRAFTALVL>70) OR (BOOTS CRAFTALVL>69) OR (amu CRAFTALVL>89) OR (rin CRAFTALVL>80)) (MAG OR RARE)]: %NAME%{%NAME%%WHITE% - Can Roll %BLUE%All Affixes%ORANGE%]}%CONTINUE%
+//Good Affixes Text and Closer
+ItemDisplay[(((WEAPON !(SOR OR WAND OR (BOW OR XBOW OR (ZON JAV) OR DAGGER OR CLUB OR TMACE OR (THROWING AXE))) CRAFTALVL=76) OR ((BOW OR XBOW OR (ZON JAV) OR DAGGER OR CLUB OR TMACE OR (THROWING AXE)) CRAFTALVL~75-76)) OR ((CHEST OR SHIELD) CRAFTALVL~75-84) OR (HELM CRAFTALVL~71-79) OR (GLOVES CRAFTALVL~59-74) OR (BELT CRAFTALVL~65-70) OR (BOOTS CRAFTALVL~65-69) OR (rin CRAFTALVL~75-80)) (MAG OR RARE)]: %NAME%{%NAME%%WHITE% - Can Roll %LIGHT_GRAY%Most %BLUE%Affixes%YELLOW%]}%CONTINUE%
+//+Skills Affixes Text and Closer
+ItemDisplay[((SOR CRAFTALVL~60-76) OR (WAND CRAFTALVL~60-76) OR (SIN CRAFTALVL~60-75) OR (SCEPTER CRAFTALVL~60-75) OR (CLUB CRAFTALVL~71-74) OR ((ZON JAV) CRAFTALVL~60-74)) (MAG OR RARE)]: %NAME%{%NAME%%WHITE% - Good for %LIGHT_GRAY%+Skills %BLUE%Affixes%TEAL%]}%CONTINUE%
+
 //Half Freeze Duration / Cannot Be Frozen Notes
 //Unequipped
 ItemDisplay[STAT118=1 !EQUIPPED]: %NAME%{%TAN%Note%WHITE%: 2 x %BLUE%HFD %WHITE%= %BLUE%Cannot Be Frozen%CL%%NAME%}%CONTINUE%
@@ -2783,7 +3833,7 @@ ItemDisplay[(CHARSTAT118>1 AND CHARSTAT153=0) STAT118=1 EQUIPPED]: %NAME%{%TAN%N
 ItemDisplay[CHARSTAT153>0 STAT118=1 EQUIPPED]: %NAME%{%TAN%Note%WHITE%: %BLUE%Cannot Be Frozen %WHITE%Activated Elsewhere%CL%%NAME%}%CONTINUE%
 
 //Shop Hunting / Good Items Highlighting
-ItemDisplay[WEAPON (MAG OR RARE OR CRAFT) (ED>249 AND (SUFFIX=662 OR SUFFIX=898 OR SUFFIX=899)) STAT360=0]: %NAME%{%NAME%%CL%%RED%***   %GREEN%High ED %ORANGE%High Amp %GREEN%CTC Weapon%RED%   ***%CL%%GREEN%***%RED%***   %TAN%Note%WHITE%: Notice me, That's me:   %RED%***%GREEN%***}
+ItemDisplay[WEAPON (MAG OR RARE OR CRAFT) (ED>299 AND (SUFFIX=662 OR SUFFIX=898 OR SUFFIX=899)) STAT360=0]: %NAME%{%NAME%%CL%%RED%***   %GREEN%High ED %ORANGE%Amp Proc %GREEN%Combo%RED%   ***%CL%%GREEN%***%RED%***   %TAN%Note%WHITE%: Notice me, That's me:   %RED%***%GREEN%***}
 //
 ItemDisplay[WEAPON (MAG OR RARE OR CRAFT) ED>399 STAT360=0]: %NAME%{%NAME%%CL%%RED%***   %GREEN%High ED Weapon%RED%   ***%CL%%GREEN%***%RED%***   %TAN%Note%WHITE%: Notice me, That's me:   %RED%***%GREEN%***}
 //
@@ -2845,7 +3895,7 @@ ItemDisplay[WEAPON (MAG OR RARE OR CRAFT) (SUFFIX=578 OR SUFFIX=579) STAT360=0]:
 
 //Imbue Bases
 ItemDisplay[ci3 NMAG !ETH SOCK=0]: %DOT-D6%%TIER-3%%NAME%{%TAN%Note%WHITE%: You can %YELLOW%Imbue %WHITE%it using Charsi quest%NL%%NAME%}
-ItemDisplay[(am5 OR ama OR amf) (AMAZON OR FILTLVL<2) NMAG ETH ILVL>71 FILTLVL<4]: %NAME%{%TAN%Note%WHITE%: You can %YELLOW%Imbue %WHITE%it using Charsi quest}
+ItemDisplay[(am5 OR ama OR amf) (AMAZON OR FILTLVL<2) NMAG ETH (ALVL>59 OR CRAFTALVL>59) FILTLVL<4]: %NAME%{%TAN%Note%WHITE%: You can %YELLOW%Imbue %WHITE%it using Charsi quest}
 
 //RuneWord Bases
 //Chests
@@ -2977,6 +4027,7 @@ ItemDisplay[(wsp OR 9ws OR 7ws) (SK100>0 OR SK108>0 OR SK125>0) !INF !ETH NMAG !
 ItemDisplay[(wsp OR 9ws OR 7ws) !INF NMAG !RW (SOCK=0 OR SOCK=5) SK124>2]: %NAME%{%NAME%}
 ItemDisplay[(wsp OR 9ws OR 7ws) !INF NMAG !RW (SOCK=0 OR SOCK=5) SK124>0 FILTLVL<6]: %NAME%{%NAME%}
 ItemDisplay[(wsp OR 9ws OR 7ws) !INF !ETH NMAG !RW (SOCK=0 OR SOCK=4) FILTLVL<4]: %NAME%{%NAME%}
+ItemDisplay[7ws !INF !ETH NMAG !RW !SOCK=1 (SK96>2 OR SK97>2 OR SK98>2 OR SK99>2 OR SK100>2 OR SK101>2 OR SK102>2 OR SK103>2 OR SK104>2 OR SK105>2 OR SK106>2 OR SK107>2 OR SK108>2 OR SK109>2 OR SK110>2 OR SK111>2 OR SK112>2 OR SK113>2 OR SK114>2 OR SK115>2 OR SK116>2 OR SK117>2 OR SK118>2 OR SK119>2 OR SK120>2 OR SK121>2 OR SK122>2 OR SK123>2 OR SK124>2 OR SK125>2 OR SK364>2 OR SK371>2 OR SK378>2)]: %NAME%{%NAME%}
 //Swords
 ItemDisplay[(crs OR bsd OR lsd) NMAG !INF !RW SOCK=4 FILTLVL<4]: %NAME%{%NAME%}
 ItemDisplay[((crs (ILVL>25 AND ILVL<41)) OR ((bsd OR lsd) ILVL>25)) NMAG !INF !RW (SOCK=0 OR SOCK=4) (CLVL<80 OR FILTLVL<2)]: %NAME%{%NAME%}
@@ -2997,7 +4048,9 @@ ItemDisplay[(7fb OR 7gd OR 7ls) NMAG !RW !INF !ETH !SOCK=1~2 (BARARIAN OR FILTLV
 ItemDisplay[fla NMAG !RW !INF (SOCK=0 OR SOCK>2) FILTLVL<4]: %NAME%{%NAME%}
 ItemDisplay[fla NMAG !RW !INF SOCK>3 FILTLVL>6]: %NAME%{%NAME%}
 //Wands
-ItemDisplay[WAND !(wnd OR ywn OR 9wn) ((SK66>1 OR SK91>1) AND ((SK367>1 AND (SK68>1 OR SK95>1)) OR (SK68>1 AND (SK367>1 OR SK95>1)))) !SOCK=1 NMAG !RW]: %DOT-D6%%NAME%{%NAME%}
+ItemDisplay[WAND !(wnd OR ywn OR 9wn) ((SK66>1 OR SK87>1 OR SK91>1) AND ((SK367>1 AND (SK68>1 OR SK95>1)) OR (SK68>1 AND (SK367>1 OR SK95>1)))) !SOCK=1 NMAG !RW]: %DOT-D6%%NAME%{%NAME%}
+ItemDisplay[WAND !(wnd OR ywn OR 9wn) (((SK87>0 OR SK91>0) AND (SK95>0 OR SK68>0) AND (SK367>0)) OR ((SK87>0 OR SK91>0) AND (SK95>0 AND SK68>0))) !SOCK=1 NMAG !RW]: %DOT-D6%%NAME%{%NAME%}
+ItemDisplay[WAND !(wnd OR ywn OR 9wn) (((SK87>2 OR SK91>2) AND (SK95>2 OR SK68>2 OR SK367>2))) !SOCK=1 NMAG !RW]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[WAND !(wnd OR ywn OR 9wn) ((SK75>2 OR SK85>2 OR SK94>2) AND SK79>2) !SOCK=1 NMAG !RW]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[WAND !(wnd OR ywn OR 9wn) ((SK75>2 OR SK85>2) AND ((SK79>1 AND SK66>1) OR (SK79>0 AND SK66>2) OR (SK79>2 AND SK66>0))) !SOCK=1 NMAG !RW]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[WAND !(wnd OR ywn OR 9wn) ((SK94>2 AND SK79>1 AND SK91>1) OR (SK94>2 AND SK79>2 AND SK91>0) OR (SK94>2 AND SK79>0 AND SK91>2)) !SOCK=1 NMAG !RW]: %DOT-D6%%NAME%{%NAME%}
@@ -3075,7 +4128,7 @@ ItemDisplay[!(ARMOR OR WEAPON OR tbk OR ibk OR aqv OR cqv OR (MAPTIER>0 !NMAG)) 
 
 //Jewel notes part.1
 //All w/o High OW Damage Character Level Requirements Values
-ItemDisplay[jew ID RARE ILVL>67 STAT486=0]: %NAME%{%NAME%%BLUE%All Affixes %GRAY%Except High OW Damage %WHITE%Req Clvl: }%CONTINUE%
+ItemDisplay[jew ID RARE ILVL>67 STAT486=0]: %NAME%{%NAME%%BLUE%All Affixes %LIGHT_GRAY%Except High OW Damage %WHITE%Req Clvl: }%CONTINUE%
 ItemDisplay[jew ID RARE ILVL~68-69 STAT486=0 CLVL<98]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[jew ID RARE ILVL~68-69 STAT486=0]: %NAME%{%NAME%98}%CONTINUE%
 ItemDisplay[jew ID RARE ILVL~70-72 STAT486=0 CLVL<95]: %NAME%{%NAME%%RED%}%CONTINUE%
@@ -3169,8 +4222,12 @@ ItemDisplay[rkey]: %MAP-0A%%PX-62%%NAME%{%TAN%Note%WHITE%: You can use it w/o lo
 //DClone & Rathma Materials & items
 ItemDisplay[(dcma OR rtma) STAT185=0]: %MAP-0A%%PX-62%%NAME%{%BLUE%Tier: 0 (Default)%NL%%RED%DO IT AT YOUR OWN RISK!%NL%%TAN%Note%WHITE%: %GRAY%You better not go in there...}
 ItemDisplay[(dcma OR rtma) STAT185>0]: %MAP-0A%%PX-62%%NAME%{%RED%DO IT AT YOUR OWN RISK!%NL%%TAN%Note%WHITE%: %GRAY%You better not go in there...}
+ItemDisplay[luca]: %MAP-0A%%PX-62%%NAME%{%RED%DO IT AT YOUR OWN RISK!%NL%%TAN%Note%WHITE%: %GRAY%You better not go in there...}
+ItemDisplay[lucb]: %MAP-0A%%PX-62%%NAME%{%TAN%Note%WHITE%: %GRAY%Am I hearing wing beat...? %RED%Lucion%GRAY%...?}
+ItemDisplay[lucc]: %MAP-0A%%PX-62%%NAME%{%TAN%Note%WHITE%: %GRAY%Am I hearing wing beat...? %RED%Lucion%GRAY%...?}
+ItemDisplay[lucd]: %MAP-0A%%PX-62%%NAME%{%TAN%Note%WHITE%: %GRAY%Am I hearing wing beat...? %RED%Lucion%GRAY%...?}
 ItemDisplay[dcbl OR dcho]: %MAP-0A%%PX-62%%NAME%{%TAN%Note%WHITE%: %RED%Diablo Clone %GRAY%walks nearby...}
-ItemDisplay[dcso]: %MAP-0A%%PX-62%%NAME%{%TAN%Note%WHITE%: Contains Soul of %RED%Diablo Clone}
+ItemDisplay[dcso]: %MAP-0A%%PX-62%%NAME%{%TAN%Note%WHITE%: %GRAY%Contains Soul of %RED%Diablo Clone}
 ItemDisplay[rtmf]: %MAP-0A%%PX-62%%NAME%{%TAN%Note%WHITE%: 2x %ORANGE%Bone Fragments %WHITE%+ %GOLD%Hellfire Torch %WHITE%= %ORANGE%Trang-Oul's Jawbone}
 ItemDisplay[rtmv]: %MAP-0A%%PX-62%%NAME%{%TAN%Note%WHITE%: %RED%Rathma %GRAY%is getting closer...}
 ItemDisplay[rtmo]: %MAP-0A%%PX-62%%NAME%{%TAN%Note%WHITE%: %RED%Rathma %GRAY%is getting closer...}
@@ -3374,8 +4431,8 @@ ItemDisplay[NMAG !RW (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 O
 //Always show me those items
 ItemDisplay[UNI OR SET OR RW OR CRAFT OR GEMMED]: %NAME%{%NAME%}
 
-// Notifying for Unknown Items (future proofing) (Thanks to BetweenWalls)
-ItemDisplay[(ILVL>1 OR QTY>0 OR PRICE>1) !(ARMOR OR WEAPON OR amu OR rin OR aqv OR cqv OR cm1 OR cm2 OR cm3 OR jew OR jewf OR RUNE>0 OR GEMTYPE>0 OR MAPTIER>-1 OR hp1 OR mp1 OR hp2 OR mp2 OR hp3 OR mp3 OR hp4 OR mp4 OR hp5 OR mp5 OR pvpp OR rvs OR rvl OR vps OR wms OR yps OR key OR tsc OR isc OR tbk OR ibk OR ear OR bks OR bkd OR box OR vip OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2 OR toa OR tes OR ceh OR bet OR fed OR dhn OR bey OR mbr OR pk1 OR pk2 OR pk3 OR std OR wss OR cwss OR lpp OR lbox OR lmal OR crfb OR crfc OR crfh OR crfs OR crfv OR crfu OR crfp OR rtp OR rid OR rkey OR lsvl OR llmr OR ubtm OR uba OR ubaa OR ubab OR ubac OR dcma OR dcso OR dcho OR dcbl OR rtma OR rtmv OR rtmo OR cm2f OR rtmf OR iwss OR scrb OR upmp OR scou OR irma OR irra OR urma OR rrra OR imma OR imra OR upma OR rera OR fort OR ram)]: %MAP-0A%%PX-62%%NAME%{%NAME%%CL%%WHITE%Item description will be adjusted later during the season.%CL%%TAN%Note%WHITE%: This item is recently added to the game.}	// notifications for unknown items (the first group of conditions including ilvl/qty/price is a workaround for !GOLD>0 since that doesn't work like other conditions)
+//Notifying for Unknown Items (future proofing) (Thanks to BetweenWalls)
+ItemDisplay[(ILVL>1 OR QTY>0 OR PRICE>1) !(ARMOR OR WEAPON OR amu OR rin OR aqv OR cqv OR cm1 OR cm2 OR cm3 OR jew OR jewf OR RUNE>0 OR GEMTYPE>0 OR MAPTIER>-1 OR hp1 OR mp1 OR hp2 OR mp2 OR hp3 OR mp3 OR hp4 OR mp4 OR hp5 OR mp5 OR pvpp OR rvs OR rvl OR vps OR wms OR yps OR key OR tsc OR isc OR tbk OR ibk OR ear OR bks OR bkd OR box OR vip OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2 OR toa OR tes OR ceh OR bet OR fed OR dhn OR bey OR mbr OR pk1 OR pk2 OR pk3 OR std OR wss OR cwss OR lpp OR lbox OR lmal OR crfb OR crfc OR crfh OR crfs OR crfv OR crfu OR crfp OR rtp OR rid OR rkey OR lsvl OR llmr OR ubtm OR uba OR ubaa OR ubab OR ubac OR dcma OR dcso OR dcho OR dcbl OR rtma OR rtmv OR rtmo OR cm2f OR rtmf OR iwss OR scrb OR upmp OR scou OR irma OR irra OR urma OR rrra OR imma OR imra OR upma OR rera OR fort OR ram OR luca OR lucb OR lucc OR lucd)]: %MAP-0A%%PX-62%%NAME%{%NAME%%CL%%WHITE%Item description will be adjusted later during the season.%CL%%TAN%Note%WHITE%: This item is recently added to the game.}	// notifications for unknown items (the first group of conditions including ilvl/qty/price is a workaround for !GOLD>0 since that doesn't work like other conditions)
 
 //HIDE EVERYTHING ELSE
 ItemDisplay[(tkf OR tax OR bkf) ((NMAG AND !INF) OR ((MAG OR RARE) !ETH !ID)) CLVL<13 FILTLVL<4]: %NAME% %GRAY%(%TAN%$%WHITE%%PRICE%%GRAY%){%NAME%}
