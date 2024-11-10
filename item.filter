@@ -3710,8 +3710,6 @@ ItemDisplay[(lbw OR 8lb) (RARE OR CRAFT OR UNI OR SET) ID SOCK=0 STAT360=0]: %NA
 //closer
 ItemDisplay[(lbw OR 8lb) (RARE OR CRAFT OR UNI OR SET) ID SOCK=0 STAT360=0]: %NAME%{%NAME%%TAN%]}%CONTINUE%
 
-
-
 //Info about Max Sockets from all sources of socketing
 //opener
 ItemDisplay[(dgr OR dir OR wnd OR ywn OR 9wn OR (ci0 ILVL<26)) MAG ID SOCK=0]: %NAME%{%NAME%%CL%%WHITE%Max Sockets: %TAN%[%WHITE%L:1}%CONTINUE%
