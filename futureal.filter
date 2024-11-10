@@ -1026,7 +1026,7 @@ ItemDisplay[(7tw OR baf OR 7qs OR 6bs OR utg) UNI !ID]: %BORDER-68%%NAME%
 //GG PD2 UNIQUES only when ETH
 ItemDisplay[(utp OR 7st OR 7cm OR 7fb) UNI ETH !ID]: %BORDER-68%%NAME%
 //OK PD2 UNIQUES only when ETH
-//ItemDisplay[(am5) UNI ETH !ID]: %MAP-68%%SAGE%*%DARK_GREEN%*%GRAY%*     %NAME%%GRAY%     *%DARK_GREEN%*%SAGE%*
+//ItemDisplay[(am5) UNI ETH !ID]: %MAP-68%%NAME%
 //OK PD2 UNIQUES
 ItemDisplay[(drf OR utp OR 7st OR 7cm OR 7fb OR ned OR ame OR ulg OR ung OR urg OR drc OR 7di) UNI !ID]: %MAP-68%%NAME%
 //OK/Lower Value PD2 UNIQUES when ETH
