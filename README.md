@@ -242,7 +242,7 @@ Filter is pretty much the same for characters below lvl 80, at 80+ diffrences ar
 - Runes: Only Lem [20]+ will drop chat notify
 
 ## in-game settings:
-![image](https://github.com/user-attachments/assets/23b448e1-43e5-43c1-8f4e-0e754e6adf23)
+![Options_LootFilter](https://github.com/user-attachments/assets/a839ec77-8df1-4ddc-969e-6272dce0b013)
 
 
 # Donate/Support:
