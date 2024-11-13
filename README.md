@@ -23,7 +23,7 @@ What's new?
 - Revisieted Upgrading items section:
 	- Added info with Value of Level Requirement after item being upgraded,
 	- Added coloring of Required stat Values - When your character doesn't meet creteria, values would be displayed in RED color. When it meet the req, it will be in WHITE. 
-		- (In some cases it might display required level in Light Red/Coral color - When LEVELREQ before upgrade is higher, then LVLREQ of upgraded base - Then Filter can't evaluate the right RED/WHITE color, becouse of limitation with comparation "LEVELREQ>CLVL" that is not supported for now.)
+		- <s>(In some cases it might display required level in Light Red/Coral color - When LEVELREQ before upgrade is higher, then LVLREQ of upgraded base - Then Filter can't evaluate the right RED/WHITE color, becouse of limitation with comparation "LEVELREQ>CLVL" that is not supported for now.)</s> - I managed to find workaround, all should be good now.
 - Some other minor changes:
 	- Highlights of some unique items reduced/improved slightly,
 	- Highlights of crafting bases is now based on ALVL/CRAFTALVL instead of ILVL,
