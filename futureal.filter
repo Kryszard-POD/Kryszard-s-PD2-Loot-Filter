@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season X: ver 10.3.2
+//	Kryszard's PD2 Loot Filter for Season X: ver 10.3.3
 //  Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -14,7 +14,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%futureal.filter ver 10.3.2}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%futureal.filter ver 10.3.3}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%Item Filter %WHITE%- %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -845,176 +845,176 @@ ItemDisplay[RUNE>25]: %BORDER-62%%ORANGE%%RUNENAME% Rune %GRAY%[%GREEN%%RUNENUM%
 ItemDisplay[(cm1 OR cm2 OR cm3) MAG !ID]: %DOT-9B%%NAME%
 ItemDisplay[(cm1 OR cm2 OR cm3) UNI !ID]: %PX-68%%NAME%
 
+//Notes on Charms
+ItemDisplay[cm2 UNI]: %NAME%{%TAN%Note%WHITE%: Cube with %GRAY%key %WHITE%to Destroy Into: %ORANGE%Hellfire Ashes}%CONTINUE%
+ItemDisplay[cm3 MAG ID ILVL>90]: %NAME%{%WHITE%Cube with 3xPerf Gem%NL%%TAN%Note%WHITE%: ILVL%ORANGE%91+ %BLUE%Grand Charm%WHITE%, to Reroll:}%CONTINUE%
+
 //Good Charms part.1
-ItemDisplay[cm3 MAG (MAXDMG>6 AND LIFE>0)]: %TAN%Max Dmg %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (MAXDMG>6 AND FRW>0)]: %TAN%Max Dmg %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (MAXDMG>6 AND FHR>0)]: %TAN%Max Dmg %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (MAXDMG>6 AND DEX>0)]: %TAN%Max Dmg %GREEN%dex%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (MAXDMG>6 AND STR>0)]: %TAN%Max Dmg %DARK_GREEN%str%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG MAXDMG>8]: %TAN%Max Dmg%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (RES>7 AND LIFE>0)]: %PURPLE%ALL %WHITE%Res %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (RES>7 AND FRW>0)]: %PURPLE%ALL %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (RES>7 AND FHR>0)]: %PURPLE%ALL %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG RES>9]: %PURPLE%ALL %WHITE%Res%BLUE%%NL%%NAME%
+ItemDisplay[cm3 MAG (MAXDMG>6 AND LIFE>0)]: %TAN%Max Dmg %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (MAXDMG>6 AND FRW>0)]: %TAN%Max Dmg %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (MAXDMG>6 AND FHR>0)]: %TAN%Max Dmg %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (MAXDMG>6 AND DEX>0)]: %TAN%Max Dmg %GREEN%dex%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (MAXDMG>6 AND STR>0)]: %TAN%Max Dmg %DARK_GREEN%str%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG MAXDMG>8]: %TAN%Max Dmg%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (RES>7 AND LIFE>0)]: %PURPLE%ALL %WHITE%Res %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (RES>7 AND FRW>0)]: %PURPLE%ALL %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (RES>7 AND FHR>0)]: %PURPLE%ALL %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG RES>9]: %PURPLE%ALL %WHITE%Res%BLUE%%NL%%NAME%{%NAME%}
 
 //PD2 Large Charms
-ItemDisplay[cm2 UNI]: %NAME%{%TAN%Note%WHITE%: Cube with %GRAY%key %WHITE%to Destroy Into: %ORANGE%Hellfire Ashes}
-ItemDisplay[cm2 MAG ((STAT357>1 AND LIFE>0) OR (STAT357>0 AND LIFE>24))]: %ORANGE%Magic %PURPLE%Damage %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG ((STAT329>1 AND LIFE>0) OR (STAT329>0 AND LIFE>24))]: %RED%Fire %PURPLE%Damage %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG ((STAT330>1 AND LIFE>0) OR (STAT330>0 AND LIFE>24))]: %YELLOW%Light %PURPLE%Damage %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG ((STAT331>1 AND LIFE>0) OR (STAT331>0 AND LIFE>24))]: %BLUE%Cold %PURPLE%Damage %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG ((STAT332>1 AND LIFE>0) OR (STAT332>0 AND LIFE>24))]: %GREEN%Psn %PURPLE%Damage %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG (STAT357>1 AND FRW>0)]: %ORANGE%Magic %PURPLE%Damage %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG (STAT329>1 AND FRW>0)]: %RED%Fire %PURPLE%Damage %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG (STAT330>1 AND FRW>0)]: %YELLOW%Light %PURPLE%Damage %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG (STAT331>1 AND FRW>0)]: %BLUE%Cold %PURPLE%Damage %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG (STAT332>1 AND FRW>0)]: %GREEN%Psn %PURPLE%Damage %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG (STAT357>1 AND FHR>0)]: %ORANGE%Magic %PURPLE%Damage %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG (STAT329>1 AND FHR>0)]: %RED%Fire %PURPLE%Damage %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG (STAT330>1 AND FHR>0)]: %YELLOW%Light %PURPLE%Damage %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG (STAT331>1 AND FHR>0)]: %BLUE%Cold %PURPLE%Damage %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG (STAT332>1 AND FHR>0)]: %GREEN%Psn %PURPLE%Damage %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG STAT357>2]: %ORANGE%Magic %PURPLE%Damage%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG STAT329>2]: %RED%Fire %PURPLE%Damage%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG STAT330>2]: %YELLOW%Light %PURPLE%Damage%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG STAT331>2]: %BLUE%Cold %PURPLE%Damage%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG STAT332>2]: %GREEN%Psn %PURPLE%Damage%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG ((STAT357>1 AND LIFE>0) OR (STAT357>0 AND LIFE>24))]: %ORANGE%Magic %PURPLE%Damage %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG ((STAT329>1 AND LIFE>0) OR (STAT329>0 AND LIFE>24))]: %RED%Fire %PURPLE%Damage %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG ((STAT330>1 AND LIFE>0) OR (STAT330>0 AND LIFE>24))]: %YELLOW%Light %PURPLE%Damage %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG ((STAT331>1 AND LIFE>0) OR (STAT331>0 AND LIFE>24))]: %BLUE%Cold %PURPLE%Damage %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG ((STAT332>1 AND LIFE>0) OR (STAT332>0 AND LIFE>24))]: %GREEN%Psn %PURPLE%Damage %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG (STAT357>1 AND FRW>0)]: %ORANGE%Magic %PURPLE%Damage %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG (STAT329>1 AND FRW>0)]: %RED%Fire %PURPLE%Damage %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG (STAT330>1 AND FRW>0)]: %YELLOW%Light %PURPLE%Damage %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG (STAT331>1 AND FRW>0)]: %BLUE%Cold %PURPLE%Damage %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG (STAT332>1 AND FRW>0)]: %GREEN%Psn %PURPLE%Damage %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG (STAT357>1 AND FHR>0)]: %ORANGE%Magic %PURPLE%Damage %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG (STAT329>1 AND FHR>0)]: %RED%Fire %PURPLE%Damage %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG (STAT330>1 AND FHR>0)]: %YELLOW%Light %PURPLE%Damage %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG (STAT331>1 AND FHR>0)]: %BLUE%Cold %PURPLE%Damage %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG (STAT332>1 AND FHR>0)]: %GREEN%Psn %PURPLE%Damage %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG STAT357>2]: %ORANGE%Magic %PURPLE%Damage%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG STAT329>2]: %RED%Fire %PURPLE%Damage%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG STAT330>2]: %YELLOW%Light %PURPLE%Damage%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG STAT331>2]: %BLUE%Cold %PURPLE%Damage%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG STAT332>2]: %GREEN%Psn %PURPLE%Damage%BLUE%%NL%%NAME%{%NAME%}
 
 //Good Charms part.2
-ItemDisplay[cm2 MAG (MAXDMG>3 AND LIFE>0)]: %TAN%Max Dmg %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG (MAXDMG>3 AND DEX>0)]: %TAN%Max Dmg %GREEN%dex%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG (MAXDMG>3 AND STR>0)]: %TAN%Max Dmg %DARK_GREEN%str%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG (MAXDMG>3 AND FRW>0)]: %TAN%Max Dmg %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG (MAXDMG>3 AND FHR>0)]: %TAN%Max Dmg %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG MAXDMG>4]: %TAN%Max Dmg%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG (RES>4 AND FRW>0)]: %PURPLE%ALL %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG (RES>4 AND FHR>0)]: %PURPLE%ALL %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG ((RES>4 AND LIFE>0) OR (RES>0 AND LIFE>29))]: %PURPLE%ALL %WHITE%Res %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG RES>6]: %PURPLE%ALL %WHITE%Res%BLUE%%NL%%NAME%
-ItemDisplay[cm2 MAG LIFE>33]: %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG ((MAXDMG>1 AND LIFE>0) OR (MAXDMG>0 AND LIFE>9))]: %TAN%Max Dmg %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG ((MAXDMG>1 AND MFIND>0) OR (MAXDMG>0 AND MFIND>4))]: %TAN%Max Dmg %GREEN%MF%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG (MAXDMG>1 AND DEX>0)]: %TAN%Max Dmg %GREEN%dex%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG (MAXDMG>1 AND STR>0)]: %TAN%Max Dmg %DARK_GREEN%str%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG (MAXDMG>1 AND FRW>0)]: %TAN%Max Dmg %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG (MAXDMG>1 AND FHR>0)]: %TAN%Max Dmg %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG MAXDMG>1]: %TAN%Max Dmg%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG (RES>0 AND LIFE>0)]: %PURPLE%ALL %WHITE%Res %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG (RES>0 AND FRW>0)]: %PURPLE%ALL %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG (RES>0 AND FHR>0)]: %PURPLE%ALL %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG (RES>0 AND MFIND>0)]: %PURPLE%ALL %WHITE%Res %GREEN%MF%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG RES>0]: %PURPLE%ALL %WHITE%Res%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG ((FRES>9 AND LIFE>0) OR (FRES>4 AND LIFE>10) OR (FRES>0 AND LIFE>16))]: %RED%Fire %WHITE%Res %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG ((LRES>9 AND LIFE>0) OR (LRES>4 AND LIFE>10) OR (LRES>0 AND LIFE>16))]: %YELLOW%Light %WHITE%Res %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG ((CRES>9 AND LIFE>0) OR (CRES>4 AND LIFE>10) OR (CRES>0 AND LIFE>16))]: %BLUE%Cold %WHITE%Res %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG ((PRES>9 AND LIFE>0) OR (PRES>4 AND LIFE>10) OR (PRES>0 AND LIFE>16))]: %GREEN%Psn %WHITE%Res %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG (FRES>4 AND FRW>0)]: %RED%Fire %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG (LRES>4 AND FRW>0)]: %YELLOW%Light %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG (CRES>4 AND FRW>0)]: %BLUE%Cold %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG (PRES>4 AND FRW>0)]: %GREEN%Psn %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG (FRES>4 AND FHR>0)]: %RED%Fire %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG (LRES>4 AND FHR>0)]: %YELLOW%Light %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG (CRES>4 AND FHR>0)]: %BLUE%Cold %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG (PRES>4 AND FHR>0)]: %GREEN%Psn %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG ((FRES>9 AND MFIND>0) OR (FRES>4 AND MFIND>3) OR (FRES>0 AND MFIND>5))]: %RED%Fire %WHITE%Res %GREEN%MF%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG ((LRES>9 AND MFIND>0) OR (LRES>4 AND MFIND>3) OR (LRES>0 AND MFIND>5))]: %YELLOW%Light %WHITE%Res %GREEN%MF%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG ((CRES>9 AND MFIND>0) OR (CRES>4 AND MFIND>3) OR (CRES>0 AND MFIND>5))]: %BLUE%Cold %WHITE%Res %GREEN%MF%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG ((PRES>9 AND MFIND>0) OR (PRES>4 AND MFIND>3) OR (PRES>0 AND MFIND>5))]: %GREEN%Psn %WHITE%Res %GREEN%MF%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG FRES>9]: %RED%Fire %WHITE%Res%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG LRES>9]: %YELLOW%Light %WHITE%Res%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG CRES>9]: %BLUE%Cold %WHITE%Res%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG PRES>9]: %GREEN%Psn %WHITE%Res%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG MFIND>5]: %GREEN%MF%BLUE%%NL%%NAME%
-ItemDisplay[cm1 MAG LIFE>16]: %RED%Life%BLUE%%NL%%NAME%
+ItemDisplay[cm2 MAG (MAXDMG>3 AND LIFE>0)]: %TAN%Max Dmg %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG (MAXDMG>3 AND DEX>0)]: %TAN%Max Dmg %GREEN%dex%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG (MAXDMG>3 AND STR>0)]: %TAN%Max Dmg %DARK_GREEN%str%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG (MAXDMG>3 AND FRW>0)]: %TAN%Max Dmg %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG (MAXDMG>3 AND FHR>0)]: %TAN%Max Dmg %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG MAXDMG>4]: %TAN%Max Dmg%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG (RES>4 AND FRW>0)]: %PURPLE%ALL %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG (RES>4 AND FHR>0)]: %PURPLE%ALL %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG ((RES>4 AND LIFE>0) OR (RES>0 AND LIFE>29))]: %PURPLE%ALL %WHITE%Res %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG RES>6]: %PURPLE%ALL %WHITE%Res%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm2 MAG LIFE>33]: %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG ((MAXDMG>1 AND LIFE>0) OR (MAXDMG>0 AND LIFE>9))]: %TAN%Max Dmg %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG ((MAXDMG>1 AND MFIND>0) OR (MAXDMG>0 AND MFIND>4))]: %TAN%Max Dmg %GREEN%MF%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG (MAXDMG>1 AND DEX>0)]: %TAN%Max Dmg %GREEN%dex%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG (MAXDMG>1 AND STR>0)]: %TAN%Max Dmg %DARK_GREEN%str%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG (MAXDMG>1 AND FRW>0)]: %TAN%Max Dmg %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG (MAXDMG>1 AND FHR>0)]: %TAN%Max Dmg %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG MAXDMG>1]: %TAN%Max Dmg%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG (RES>0 AND LIFE>0)]: %PURPLE%ALL %WHITE%Res %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG (RES>0 AND FRW>0)]: %PURPLE%ALL %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG (RES>0 AND FHR>0)]: %PURPLE%ALL %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG (RES>0 AND MFIND>0)]: %PURPLE%ALL %WHITE%Res %GREEN%MF%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG RES>0]: %PURPLE%ALL %WHITE%Res%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG ((FRES>9 AND LIFE>0) OR (FRES>4 AND LIFE>10) OR (FRES>0 AND LIFE>16))]: %RED%Fire %WHITE%Res %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG ((LRES>9 AND LIFE>0) OR (LRES>4 AND LIFE>10) OR (LRES>0 AND LIFE>16))]: %YELLOW%Light %WHITE%Res %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG ((CRES>9 AND LIFE>0) OR (CRES>4 AND LIFE>10) OR (CRES>0 AND LIFE>16))]: %BLUE%Cold %WHITE%Res %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG ((PRES>9 AND LIFE>0) OR (PRES>4 AND LIFE>10) OR (PRES>0 AND LIFE>16))]: %GREEN%Psn %WHITE%Res %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG (FRES>4 AND FRW>0)]: %RED%Fire %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG (LRES>4 AND FRW>0)]: %YELLOW%Light %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG (CRES>4 AND FRW>0)]: %BLUE%Cold %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG (PRES>4 AND FRW>0)]: %GREEN%Psn %WHITE%Res %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG (FRES>4 AND FHR>0)]: %RED%Fire %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG (LRES>4 AND FHR>0)]: %YELLOW%Light %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG (CRES>4 AND FHR>0)]: %BLUE%Cold %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG (PRES>4 AND FHR>0)]: %GREEN%Psn %WHITE%Res %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG ((FRES>9 AND MFIND>0) OR (FRES>4 AND MFIND>3) OR (FRES>0 AND MFIND>5))]: %RED%Fire %WHITE%Res %GREEN%MF%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG ((LRES>9 AND MFIND>0) OR (LRES>4 AND MFIND>3) OR (LRES>0 AND MFIND>5))]: %YELLOW%Light %WHITE%Res %GREEN%MF%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG ((CRES>9 AND MFIND>0) OR (CRES>4 AND MFIND>3) OR (CRES>0 AND MFIND>5))]: %BLUE%Cold %WHITE%Res %GREEN%MF%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG ((PRES>9 AND MFIND>0) OR (PRES>4 AND MFIND>3) OR (PRES>0 AND MFIND>5))]: %GREEN%Psn %WHITE%Res %GREEN%MF%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG FRES>9]: %RED%Fire %WHITE%Res%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG LRES>9]: %YELLOW%Light %WHITE%Res%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG CRES>9]: %BLUE%Cold %WHITE%Res%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG PRES>9]: %GREEN%Psn %WHITE%Res%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG MFIND>5]: %GREEN%MF%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm1 MAG LIFE>16]: %RED%Life%BLUE%%NL%%NAME%{%NAME%}
 
 //Skillers
-ItemDisplay[cm3 MAG (TABSK0>0 AND FHR>0)]: %PURPLE%Bow and Crossbow %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK2>0 AND FHR>0)]: %PURPLE%Javelin and Spear %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK1>0 AND FHR>0)]: %PURPLE%Passive and Magic %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK8>0 AND FHR>0)]: %PURPLE%Fire Spells %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK9>0 AND FHR>0)]: %PURPLE%Lightning Spells %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK10>0 AND FHR>0)]: %PURPLE%Cold Spells %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK16>0 AND FHR>0)]: %PURPLE%Curses %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK17>0 AND FHR>0)]: %PURPLE%Poison & Bone Spells %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK18>0 AND FHR>0)]: %GRAY%Nec %PURPLE%Summoning Spells %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK24>0 AND FHR>0)]: %GRAY%Pal %PURPLE%Combat %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK25>0 AND FHR>0)]: %PURPLE%Offensive Auras %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK26>0 AND FHR>0)]: %PURPLE%Defensive Auras %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK32>0 AND FHR>0)]: %GRAY%Barb %PURPLE%Combat %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK33>0 AND FHR>0)]: %GRAY%Barb %PURPLE%Masteries %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK34>0 AND FHR>0)]: %PURPLE%Warcries %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK40>0 AND FHR>0)]: %GRAY%Dru %PURPLE%Summoning %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK41>0 AND FHR>0)]: %PURPLE%Shape Shifting %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK42>0 AND FHR>0)]: %PURPLE%Elemental %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK48>0 AND FHR>0)]: %PURPLE%Traps %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK49>0 AND FHR>0)]: %PURPLE%Shadow Disciplines %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK50>0 AND FHR>0)]: %PURPLE%Martial Arts %ORANGE%FHR%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK0>0 AND FRW>0)]: %PURPLE%Bow and Crossbow %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK2>0 AND FRW>0)]: %PURPLE%Javelin and Spear %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK1>0 AND FRW>0)]: %PURPLE%Passive and Magic %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK8>0 AND FRW>0)]: %PURPLE%Fire Spells %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK9>0 AND FRW>0)]: %PURPLE%Lightning Spells %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK10>0 AND FRW>0)]: %PURPLE%Cold Spells %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK16>0 AND FRW>0)]: %PURPLE%Curses %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK17>0 AND FRW>0)]: %PURPLE%Poison & Bone Spells %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK18>0 AND FRW>0)]: %GRAY%Nec %PURPLE%Summoning Spells %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK24>0 AND FRW>0)]: %GRAY%Pal %PURPLE%Combat %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK25>0 AND FRW>0)]: %PURPLE%Offensive Auras %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK26>0 AND FRW>0)]: %PURPLE%Defensive Auras %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK32>0 AND FRW>0)]: %GRAY%Barb %PURPLE%Combat %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK33>0 AND FRW>0)]: %GRAY%Barb %PURPLE%Masteries %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK34>0 AND FRW>0)]: %PURPLE%Warcries %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK40>0 AND FRW>0)]: %GRAY%Dru %PURPLE%Summoning %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK41>0 AND FRW>0)]: %PURPLE%Shape Shifting %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK42>0 AND FRW>0)]: %PURPLE%Elemental %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK48>0 AND FRW>0)]: %PURPLE%Traps %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK49>0 AND FRW>0)]: %PURPLE%Shadow Disciplines %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK50>0 AND FRW>0)]: %PURPLE%Martial Arts %ORANGE%frw%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK0>0 AND LIFE>0)]: %PURPLE%Bow and Crossbow %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK2>0 AND LIFE>0)]: %PURPLE%Javelin and Spear %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK1>0 AND LIFE>0)]: %PURPLE%Passive and Magic %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK8>0 AND LIFE>0)]: %PURPLE%Fire Spells %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK9>0 AND LIFE>0)]: %PURPLE%Lightning Spells %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK10>0 AND LIFE>0)]: %PURPLE%Cold Spells %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK16>0 AND LIFE>0)]: %PURPLE%Curses %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK17>0 AND LIFE>0)]: %PURPLE%Poison & Bone Spells %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK18>0 AND LIFE>0)]: %GRAY%Nec %PURPLE%Summoning Spells %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK24>0 AND LIFE>0)]: %GRAY%Pal %PURPLE%Combat %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK25>0 AND LIFE>0)]: %PURPLE%Offensive Auras %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK26>0 AND LIFE>0)]: %PURPLE%Defensive Auras %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK32>0 AND LIFE>0)]: %GRAY%Barb %PURPLE%Combat %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK33>0 AND LIFE>0)]: %GRAY%Barb %PURPLE%Masteries %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK34>0 AND LIFE>0)]: %PURPLE%Warcries %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK40>0 AND LIFE>0)]: %GRAY%Dru %PURPLE%Summoning %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK41>0 AND LIFE>0)]: %PURPLE%Shape Shifting %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK42>0 AND LIFE>0)]: %PURPLE%Elemental %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK48>0 AND LIFE>0)]: %PURPLE%Traps %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK49>0 AND LIFE>0)]: %PURPLE%Shadow Disciplines %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG (TABSK50>0 AND LIFE>0)]: %PURPLE%Martial Arts %RED%Life%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG TABSK0>0]: %PURPLE%Bow and Crossbow%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG TABSK2>0]: %PURPLE%Javelin and Spear%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG TABSK1>0]: %PURPLE%Passive and Magic%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG TABSK8>0]: %PURPLE%Fire Spells%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG TABSK9>0]: %PURPLE%Lightning Spells%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG TABSK10>0]: %PURPLE%Cold Spells%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG TABSK16>0]: %PURPLE%Curses%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG TABSK17>0]: %PURPLE%Poison & Bone Spells%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG TABSK18>0]: %GRAY%Nec %PURPLE%Summoning Spells%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG TABSK24>0]: %GRAY%Pal %PURPLE%Combat%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG TABSK25>0]: %PURPLE%Offensive Auras%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG TABSK26>0]: %PURPLE%Defensive Auras%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG TABSK32>0]: %GRAY%Barb %PURPLE%Combat%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG TABSK33>0]: %GRAY%Barb %PURPLE%Masteries%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG TABSK34>0]: %PURPLE%Warcries%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG TABSK40>0]: %GRAY%Dru %PURPLE%Summoning%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG TABSK41>0]: %PURPLE%Shape Shifting%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG TABSK42>0]: %PURPLE%Elemental%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG TABSK48>0]: %PURPLE%Traps%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG TABSK49>0]: %PURPLE%Shadow Disciplines%BLUE%%NL%%NAME%
-ItemDisplay[cm3 MAG TABSK50>0]: %PURPLE%Martial Arts%BLUE%%NL%%NAME%
-
-//Note abut High-LVL Grand Charms
-ItemDisplay[cm3 MAG ID ILVL>90]: %NAME%{%WHITE%Cube with 3xPerf Gem%NL%%TAN%Note%WHITE%: ILVL%ORANGE%91+ %BLUE%Grand Charm%WHITE%, to Reroll:}
+ItemDisplay[cm3 MAG (TABSK0>0 AND FHR>0)]: %PURPLE%Bow and Crossbow %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK2>0 AND FHR>0)]: %PURPLE%Javelin and Spear %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK1>0 AND FHR>0)]: %PURPLE%Passive and Magic %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK8>0 AND FHR>0)]: %PURPLE%Fire Spells %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK9>0 AND FHR>0)]: %PURPLE%Lightning Spells %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK10>0 AND FHR>0)]: %PURPLE%Cold Spells %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK16>0 AND FHR>0)]: %PURPLE%Curses %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK17>0 AND FHR>0)]: %PURPLE%Poison & Bone Spells %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK18>0 AND FHR>0)]: %GRAY%Nec %PURPLE%Summoning Spells %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK24>0 AND FHR>0)]: %GRAY%Pal %PURPLE%Combat %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK25>0 AND FHR>0)]: %PURPLE%Offensive Auras %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK26>0 AND FHR>0)]: %PURPLE%Defensive Auras %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK32>0 AND FHR>0)]: %GRAY%Barb %PURPLE%Combat %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK33>0 AND FHR>0)]: %GRAY%Barb %PURPLE%Masteries %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK34>0 AND FHR>0)]: %PURPLE%Warcries %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK40>0 AND FHR>0)]: %GRAY%Dru %PURPLE%Summoning %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK41>0 AND FHR>0)]: %PURPLE%Shape Shifting %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK42>0 AND FHR>0)]: %PURPLE%Elemental %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK48>0 AND FHR>0)]: %PURPLE%Traps %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK49>0 AND FHR>0)]: %PURPLE%Shadow Disciplines %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK50>0 AND FHR>0)]: %PURPLE%Martial Arts %ORANGE%FHR%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK0>0 AND FRW>0)]: %PURPLE%Bow and Crossbow %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK2>0 AND FRW>0)]: %PURPLE%Javelin and Spear %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK1>0 AND FRW>0)]: %PURPLE%Passive and Magic %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK8>0 AND FRW>0)]: %PURPLE%Fire Spells %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK9>0 AND FRW>0)]: %PURPLE%Lightning Spells %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK10>0 AND FRW>0)]: %PURPLE%Cold Spells %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK16>0 AND FRW>0)]: %PURPLE%Curses %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK17>0 AND FRW>0)]: %PURPLE%Poison & Bone Spells %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK18>0 AND FRW>0)]: %GRAY%Nec %PURPLE%Summoning Spells %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK24>0 AND FRW>0)]: %GRAY%Pal %PURPLE%Combat %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK25>0 AND FRW>0)]: %PURPLE%Offensive Auras %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK26>0 AND FRW>0)]: %PURPLE%Defensive Auras %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK32>0 AND FRW>0)]: %GRAY%Barb %PURPLE%Combat %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK33>0 AND FRW>0)]: %GRAY%Barb %PURPLE%Masteries %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK34>0 AND FRW>0)]: %PURPLE%Warcries %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK40>0 AND FRW>0)]: %GRAY%Dru %PURPLE%Summoning %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK41>0 AND FRW>0)]: %PURPLE%Shape Shifting %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK42>0 AND FRW>0)]: %PURPLE%Elemental %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK48>0 AND FRW>0)]: %PURPLE%Traps %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK49>0 AND FRW>0)]: %PURPLE%Shadow Disciplines %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK50>0 AND FRW>0)]: %PURPLE%Martial Arts %ORANGE%frw%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK0>0 AND LIFE>0)]: %PURPLE%Bow and Crossbow %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK2>0 AND LIFE>0)]: %PURPLE%Javelin and Spear %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK1>0 AND LIFE>0)]: %PURPLE%Passive and Magic %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK8>0 AND LIFE>0)]: %PURPLE%Fire Spells %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK9>0 AND LIFE>0)]: %PURPLE%Lightning Spells %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK10>0 AND LIFE>0)]: %PURPLE%Cold Spells %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK16>0 AND LIFE>0)]: %PURPLE%Curses %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK17>0 AND LIFE>0)]: %PURPLE%Poison & Bone Spells %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK18>0 AND LIFE>0)]: %GRAY%Nec %PURPLE%Summoning Spells %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK24>0 AND LIFE>0)]: %GRAY%Pal %PURPLE%Combat %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK25>0 AND LIFE>0)]: %PURPLE%Offensive Auras %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK26>0 AND LIFE>0)]: %PURPLE%Defensive Auras %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK32>0 AND LIFE>0)]: %GRAY%Barb %PURPLE%Combat %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK33>0 AND LIFE>0)]: %GRAY%Barb %PURPLE%Masteries %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK34>0 AND LIFE>0)]: %PURPLE%Warcries %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK40>0 AND LIFE>0)]: %GRAY%Dru %PURPLE%Summoning %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK41>0 AND LIFE>0)]: %PURPLE%Shape Shifting %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK42>0 AND LIFE>0)]: %PURPLE%Elemental %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK48>0 AND LIFE>0)]: %PURPLE%Traps %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK49>0 AND LIFE>0)]: %PURPLE%Shadow Disciplines %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG (TABSK50>0 AND LIFE>0)]: %PURPLE%Martial Arts %RED%Life%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG TABSK0>0]: %PURPLE%Bow and Crossbow%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG TABSK2>0]: %PURPLE%Javelin and Spear%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG TABSK1>0]: %PURPLE%Passive and Magic%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG TABSK8>0]: %PURPLE%Fire Spells%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG TABSK9>0]: %PURPLE%Lightning Spells%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG TABSK10>0]: %PURPLE%Cold Spells%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG TABSK16>0]: %PURPLE%Curses%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG TABSK17>0]: %PURPLE%Poison & Bone Spells%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG TABSK18>0]: %GRAY%Nec %PURPLE%Summoning Spells%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG TABSK24>0]: %GRAY%Pal %PURPLE%Combat%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG TABSK25>0]: %PURPLE%Offensive Auras%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG TABSK26>0]: %PURPLE%Defensive Auras%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG TABSK32>0]: %GRAY%Barb %PURPLE%Combat%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG TABSK33>0]: %GRAY%Barb %PURPLE%Masteries%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG TABSK34>0]: %PURPLE%Warcries%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG TABSK40>0]: %GRAY%Dru %PURPLE%Summoning%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG TABSK41>0]: %PURPLE%Shape Shifting%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG TABSK42>0]: %PURPLE%Elemental%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG TABSK48>0]: %PURPLE%Traps%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG TABSK49>0]: %PURPLE%Shadow Disciplines%BLUE%%NL%%NAME%{%NAME%}
+ItemDisplay[cm3 MAG TABSK50>0]: %PURPLE%Martial Arts%BLUE%%NL%%NAME%{%NAME%}
 
 //PD2 DCLONE/DUNGEON/RATHMA BOSSES UNIQUES
 ItemDisplay[(uhl OR uth OR utb OR 7bs OR 7qr) UNI !ID]: %BORDER-68%%NAME%
@@ -1024,15 +1024,15 @@ ItemDisplay[(rar OR rbe OR ram) UNI !ID]: %BORDER-68%%NAME%
 //GG PD2 UNIQUES
 ItemDisplay[(7tw OR baf OR 7qs OR 6bs OR utg) UNI !ID]: %BORDER-68%%NAME%
 //GG PD2 UNIQUES only when ETH
-ItemDisplay[(utp OR 7st OR 7cm OR 7fb) UNI ETH !ID]: %BORDER-68%%NAME%
+ItemDisplay[(utp OR 7st OR 7fb) UNI ETH !ID]: %BORDER-68%%NAME%
 //OK PD2 UNIQUES only when ETH
-//ItemDisplay[(am5) UNI ETH !ID]: %MAP-68%%NAME%
+ItemDisplay[(7cm) UNI ETH !ID]: %MAP-68%%NAME%
 //OK PD2 UNIQUES
-ItemDisplay[(drf OR utp OR 7st OR 7cm OR 7fb OR ned OR ame OR ulg OR ung OR urg OR drc OR 7di) UNI !ID]: %MAP-68%%NAME%
+ItemDisplay[(drf OR utp OR 7st OR 7fb OR ned OR ame OR ulg OR ung OR urg OR drc OR 7di) UNI !ID]: %MAP-68%%NAME%
 //OK/Lower Value PD2 UNIQUES when ETH
 ItemDisplay[(am5) UNI ETH !ID]: %MAP-68%%NAME%
 //OK/Lower Value PD2 UNIQUES
-ItemDisplay[(ba6 OR dr2 OR ne6 OR ulb) UNI !ID]: %MAP-68%%NAME%
+ItemDisplay[(ba6 OR dr2 OR ne6 OR ulb OR 7cm) UNI !ID]: %MAP-68%%NAME%
 //PD2 Uniques worth notifying
 ItemDisplay[(9ar OR ob6 OR am5 OR pa3) UNI !ID]: %PX-68%%TIER-5%%NAME%
 
@@ -1127,7 +1127,7 @@ ItemDisplay[(jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv 
 ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a OR 7xf OR 9xf OR axf OR 7ar OR 9ar OR ktr OR 7tw OR 9tw OR btl OR 7qr OR 9qr OR skr) RARE ETH !ID (ALVL>75 OR CRAFTALVL>75)]: %DOT-A8%%TIER-2%%NAME%
 ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a OR 7xf OR 9xf OR axf OR 7ar OR 9ar OR ktr OR 7tw OR 9tw OR btl OR 7qr OR 9qr OR skr) MAG ETH !ID (ALVL>75 OR CRAFTALVL>75)]: %DOT-97%%PX-68%%TIER-2%%NAME%
 ItemDisplay[(GLOVES OR BELT OR BOOTS) MAG ETH !ID]: %NAME%
-ItemDisplay[(msk OR xsk OR usk OR bhm OR xh9 OR uh9 OR ghm OR xhm OR uhm OR crn OR xrn OR urn) MAG ETH !ID]: %NAME%
+ItemDisplay[(msk OR xsk OR usk OR bhm OR xh9 OR uh9 OR ghm OR xhm OR uhm OR crn OR xrn OR urn OR DRU OR BAR) MAG ETH !ID]: %NAME%
 ItemDisplay[SHIELD !(sml OR xml OR uml OR spk OR xpk OR upk) MAG ETH !ID]: %NAME%
 ItemDisplay[CHEST MAG ETH !ID]: %NAME%
 ItemDisplay[GLOVES ((EXC OR ELT) !(utg OR uhg)) MAG !ETH !ID FILTLVL<4]: %NAME%
@@ -1174,6 +1174,7 @@ ItemDisplay[HELM RARE !ID FILTLVL<4]: %NAME%
 ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp OR mac OR 9ma OR 7ma OR mst OR 9mt OR 7mt OR ssd OR 9ss OR 7ss OR scm OR 9sm OR 7sm OR sbr OR 9sb OR 7sb OR flc OR 9fc OR 7fc OR wsd OR 9wd OR 7wd OR dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR bld OR 9bl OR 7bl OR STAFF) RARE ETH !ID]: %NAME%
 
 //Rare weapons
+ItemDisplay[(6hx OR 8hx OR hxb OR 6mx OR 8mx OR mxb OR 6lw OR 8lw OR lwb OR 6l7 OR 8l8 OR lbb OR 6lb OR 8lb OR lbw) RARE !ID]: %NAME%
 ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp OR mac OR 9ma OR 7ma OR mst OR 9mt OR 7mt OR ssd OR 9ss OR 7ss OR scm OR 9sm OR 7sm OR sbr OR 9sb OR 7sb OR flc OR 9fc OR 7fc OR wsd OR 9wd OR 7wd OR dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR bld OR 9bl OR 7bl OR STAFF OR BOW OR XBOW) RARE !ETH !ID FILTLVL<4]: %NAME%
 ItemDisplay[(BOW OR XBOW) RARE !ID (AMAZON OR FILTLVL<4)]: %NAME%
 ItemDisplay[STAFF RARE !ID FILTLVL<4]: %NAME%
@@ -3407,247 +3408,332 @@ ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8lb) !ETH))]: %NAME%{%NAME%188}%
 //When -REQ appears
 ItemDisplay[(hax OR mpi OR gax OR 9ha OR 9ax OR 92a OR 9mp OR 9wa OR 9ba OR 9bt OR 9ga OR 9gi OR fla OR 9cl OR 9ma OR 9mt OR 9fl OR (SWORD !ssd) OR (DAGGER !THROWING !dgr) OR THROWING OR (SPEAR !THROWING !spt) OR (POLEARM !bar !vou) OR BOW OR XBOW OR 8ls OR 8cs OR 8bs OR 9sc OR 9qs OR 9ws OR SIN OR ZON) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID !STAT91=0]: %NAME%{%NAME%%BLUE%-x%}%CONTINUE%
 //LVL
+//Part 1.
 ItemDisplay[(ARMOR OR WEAPON) !(CIRC OR SOR OR hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID]: %NAME%{%NAME%%WHITE%, }%CONTINUE%
 ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID]: %NAME%{%NAME%%LIGHT_GRAY%Lvl%WHITE%:}%CONTINUE%
 //Items that after upgrade will Require LVL 18
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (clb OR ssd OR jav OR sbw OR sst) LVLREQ<18 CLVL<18]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (clb OR ssd OR jav OR sbw OR sst) LVLREQ<18]: %NAME%{%NAME%18}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (clb OR ssd OR jav OR sbw OR sst) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (clb OR ssd OR jav OR sbw OR sst) LVLREQ>17]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 19
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (hax OR dgr OR tkf OR wnd OR scp) LVLREQ<19 CLVL<19]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (hax OR dgr OR tkf OR wnd OR scp) LVLREQ<19]: %NAME%{%NAME%19}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (hax OR dgr OR tkf OR wnd OR scp) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (hax OR dgr OR tkf OR wnd OR scp) LVLREQ>18]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 20
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (spc) LVLREQ<20 CLVL<20]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (spc) LVLREQ<20]: %NAME%{%NAME%20}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (spc) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (spc) LVLREQ>19]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 21
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (spr OR bar OR hbw OR ktr OR lgl) LVLREQ<21 CLVL<21]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (spr OR bar OR hbw OR ktr OR lgl) LVLREQ<21]: %NAME%{%NAME%21}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (spr OR bar OR hbw OR ktr OR lgl) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (spr OR bar OR hbw OR ktr OR lgl) LVLREQ>20]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 22
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (axe OR lax OR tax OR lxb OR cap OR qui OR buc) LVLREQ<22 CLVL<22]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (axe OR lax OR tax OR lxb OR cap OR qui OR buc) LVLREQ<22]: %NAME%{%NAME%22}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (axe OR lax OR tax OR lxb OR cap OR qui OR buc) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (axe OR lax OR tax OR lxb OR cap OR qui OR buc) LVLREQ>21]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 23
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (mac OR sbr OR pax OR lbw OR lst) LVLREQ<23 CLVL<23]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (mac OR sbr OR pax OR lbw OR lst) LVLREQ<23]: %NAME%{%NAME%23}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (mac OR sbr OR pax OR lbw OR lst) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (mac OR sbr OR pax OR lbw OR lst) LVLREQ>22]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 24
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (dir OR tri OR wrb OR ob1 OR lea OR lbt OR lbl OR ne1) LVLREQ<24 CLVL<24]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (dir OR tri OR wrb OR ob1 OR lea OR lbt OR lbl OR ne1) LVLREQ<24]: %NAME%{%NAME%24}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (dir OR tri OR wrb OR ob1 OR lea OR lbt OR lbl OR ne1) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (dir OR tri OR wrb OR ob1 OR lea OR lbt OR lbl OR ne1) LVLREQ>23]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 25
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (2ax OR mpi OR wax OR bax OR btx OR gax OR gix OR mst OR fla OR whm OR mau OR gma OR scm OR flc OR crs OR bsd OR lsd OR wsd OR 2hs OR clm OR gis OR bsw OR flb OR gsd OR kri OR bld OR bkf OR bal OR pil OR ssp OR glv OR tsp OR brn OR spt OR pik OR vou OR scy OR hal OR wsc OR cbw OR sbb OR lbb OR swb OR lwb OR mxb OR hxb OR rxb OR cst OR bst OR wst OR ywn OR bwn OR gwn OR gsc OR wsp OR skp OR hlm OR fhl OR msk OR bhm OR ghm OR crn OR hla OR stu OR rng OR scl OR chn OR brs OR spl OR plt OR fld OR gth OR ltp OR ful OR aar OR sml OR lrg OR spk OR kit OR bsh OR tow OR gts OR vgl OR mgl OR tgl OR hgl OR vbt OR mbt OR tbt OR hbt OR vbl OR mbl OR tbl OR hbl OR ba1) LVLREQ<25 CLVL<25]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (2ax OR mpi OR wax OR bax OR btx OR gax OR gix OR mst OR fla OR whm OR mau OR gma OR scm OR flc OR crs OR bsd OR lsd OR wsd OR 2hs OR clm OR gis OR bsw OR flb OR gsd OR kri OR bld OR bkf OR bal OR pil OR ssp OR glv OR tsp OR brn OR spt OR pik OR vou OR scy OR hal OR wsc OR cbw OR sbb OR lbb OR swb OR lwb OR mxb OR hxb OR rxb OR cst OR bst OR wst OR ywn OR bwn OR gwn OR gsc OR wsp OR skp OR hlm OR fhl OR msk OR bhm OR ghm OR crn OR hla OR stu OR rng OR scl OR chn OR brs OR spl OR plt OR fld OR gth OR ltp OR ful OR aar OR sml OR lrg OR spk OR kit OR bsh OR tow OR gts OR vgl OR mgl OR tgl OR hgl OR vbt OR mbt OR tbt OR hbt OR vbl OR mbl OR tbl OR hbl OR ba1) LVLREQ<25]: %NAME%{%NAME%25}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (2ax OR mpi OR wax OR bax OR btx OR gax OR gix OR mst OR fla OR whm OR mau OR gma OR scm OR flc OR crs OR bsd OR lsd OR wsd OR 2hs OR clm OR gis OR bsw OR flb OR gsd OR kri OR bld OR bkf OR bal OR pil OR ssp OR glv OR tsp OR brn OR spt OR pik OR vou OR scy OR hal OR wsc OR cbw OR sbb OR lbb OR swb OR lwb OR mxb OR hxb OR rxb OR cst OR bst OR wst OR ywn OR bwn OR gwn OR gsc OR wsp OR skp OR hlm OR fhl OR msk OR bhm OR ghm OR crn OR hla OR stu OR rng OR scl OR chn OR brs OR spl OR plt OR fld OR gth OR ltp OR ful OR aar OR sml OR lrg OR spk OR kit OR bsh OR tow OR gts OR vgl OR mgl OR tgl OR hgl OR vbt OR mbt OR tbt OR hbt OR vbl OR mbl OR tbl OR hbl OR ba1) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (2ax OR mpi OR wax OR bax OR btx OR gax OR gix OR mst OR fla OR whm OR mau OR gma OR scm OR flc OR crs OR bsd OR lsd OR wsd OR 2hs OR clm OR gis OR bsw OR flb OR gsd OR kri OR bld OR bkf OR bal OR pil OR ssp OR glv OR tsp OR brn OR spt OR pik OR vou OR scy OR hal OR wsc OR cbw OR sbb OR lbb OR swb OR lwb OR mxb OR hxb OR rxb OR cst OR bst OR wst OR ywn OR bwn OR gwn OR gsc OR wsp OR skp OR hlm OR fhl OR msk OR bhm OR ghm OR crn OR hla OR stu OR rng OR scl OR chn OR brs OR spl OR plt OR fld OR gth OR ltp OR ful OR aar OR sml OR lrg OR spk OR kit OR bsh OR tow OR gts OR vgl OR mgl OR tgl OR hgl OR vbt OR mbt OR tbt OR hbt OR vbl OR mbl OR tbl OR hbl OR ba1) LVLREQ>24]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 26
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am5 OR dr1 OR pa1) LVLREQ<26 CLVL<26]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am5 OR dr1 OR pa1) LVLREQ<26]: %NAME%{%NAME%26}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am5 OR dr1 OR pa1) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am5 OR dr1 OR pa1) LVLREQ>25]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 27
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (axf OR ob2) LVLREQ<27 CLVL<27]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (axf OR ob2) LVLREQ<27]: %NAME%{%NAME%27}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (axf OR ob2) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (axf OR ob2) LVLREQ>26]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 29
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am1 OR dr3 OR ba2 OR ba3 OR ne2) LVLREQ<29 CLVL<29]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am1 OR dr3 OR ba2 OR ba3 OR ne2) LVLREQ<29]: %NAME%{%NAME%29}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am1 OR dr3 OR ba2 OR ba3 OR ne2) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am1 OR dr3 OR ba2 OR ba3 OR ne2) LVLREQ>28]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 30
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ces OR ob3 OR dr2 OR pa2) LVLREQ<30 CLVL<30]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ces OR ob3 OR dr2 OR pa2) LVLREQ<30]: %NAME%{%NAME%30}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ces OR ob3 OR dr2 OR pa2) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ces OR ob3 OR dr2 OR pa2) LVLREQ>29]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 32
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am3 OR dr4 OR ba4) LVLREQ<32 CLVL<32]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am3 OR dr4 OR ba4) LVLREQ<32]: %NAME%{%NAME%32}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am3 OR dr4 OR ba4) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am3 OR dr4 OR ba4) LVLREQ>31]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 33
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (clw OR ne3) LVLREQ<33 CLVL<33]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (clw OR ne3) LVLREQ<33]: %NAME%{%NAME%33}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (clw OR ne3) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (clw OR ne3) LVLREQ>32]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 34
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ob4 OR pa3) LVLREQ<34 CLVL<34]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ob4 OR pa3) LVLREQ<34]: %NAME%{%NAME%34}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ob4 OR pa3) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ob4 OR pa3) LVLREQ>33]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 35
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am2) LVLREQ<35 CLVL<35]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am2) LVLREQ<35]: %NAME%{%NAME%35}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am2) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am2) LVLREQ>34]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 36
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ne4) LVLREQ<36 CLVL<36]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ne4) LVLREQ<36]: %NAME%{%NAME%36}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ne4) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ne4) LVLREQ>35]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 37
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (btl OR ob5) LVLREQ<37 CLVL<37]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (btl OR ob5) LVLREQ<37]: %NAME%{%NAME%37}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (btl OR ob5) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (btl OR ob5) LVLREQ>36]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 38
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am4 OR pa4) LVLREQ<38 CLVL<38]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am4 OR pa4) LVLREQ<38]: %NAME%{%NAME%38}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am4 OR pa4) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am4 OR pa4) LVLREQ>37]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 39
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9cl OR am6 OR ci0) LVLREQ<39 CLVL<39]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9cl OR am6 OR ci0) LVLREQ<39]: %NAME%{%NAME%39}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9cl OR am6 OR ci0) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9cl OR am6 OR ci0) LVLREQ>38]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 40
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ha OR 9ja OR skr OR xhl OR ba5 OR ne5) LVLREQ<40 CLVL<40]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ha OR 9ja OR skr OR xhl OR ba5 OR ne5) LVLREQ<40]: %NAME%{%NAME%40}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ha OR 9ja OR skr OR xhl OR ba5 OR ne5) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ha OR 9ja OR skr OR xhl OR ba5 OR ne5) LVLREQ>39]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 41
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8sb OR 9wn OR dr5 OR pa5) LVLREQ<41 CLVL<41]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8sb OR 9wn OR dr5 OR pa5) LVLREQ<41]: %NAME%{%NAME%41}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8sb OR 9wn OR dr5 OR pa5) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8sb OR 9wn OR dr5 OR pa5) LVLREQ>40]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 42
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9la OR 9sp OR 9ss OR 9ta OR 8lx OR xlg) LVLREQ<42 CLVL<42]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9la OR 9sp OR 9ss OR 9ta OR 8lx OR xlg) LVLREQ<42]: %NAME%{%NAME%42}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9la OR 9sp OR 9ss OR 9ta OR 8lx OR xlg) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9la OR 9sp OR 9ss OR 9ta OR 8lx OR xlg) LVLREQ>41]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 43
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9dg OR 9sr OR 8ss OR xap OR xuc) LVLREQ<43 CLVL<43]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9dg OR 9sr OR 8ss OR xap OR xuc) LVLREQ<43]: %NAME%{%NAME%43}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9dg OR 9sr OR 8ss OR xap OR xuc) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9dg OR 9sr OR 8ss OR xap OR xuc) LVLREQ>42]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 44
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (92h OR 9ar OR ob6 OR ne6) LVLREQ<44 CLVL<44]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (92h OR 9ar OR ob6 OR ne6) LVLREQ<44]: %NAME%{%NAME%44}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (92h OR 9ar OR ob6 OR ne6) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (92h OR 9ar OR ob6 OR ne6) LVLREQ>43]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 45
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ax OR 9sm OR 9b7 OR 8hb OR am8 OR xml OR xlb OR ba6) LVLREQ<45 CLVL<45]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ax OR 9sm OR 9b7 OR 8hb OR am8 OR xml OR xlb OR ba6) LVLREQ<45]: %NAME%{%NAME%45}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ax OR 9sm OR 9b7 OR 8hb OR am8 OR xml OR xlb OR ba6) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ax OR 9sm OR 9b7 OR 8hb OR am8 OR xml OR xlb OR ba6) LVLREQ>44]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 46
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9pi OR 9sc OR 9wb OR zlb OR dr6) LVLREQ<46 CLVL<46]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9pi OR 9sc OR 9wb OR zlb OR dr6) LVLREQ<46]: %NAME%{%NAME%46}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9pi OR 9sc OR 9wb OR zlb OR dr6) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9pi OR 9sc OR 9wb OR zlb OR dr6) LVLREQ>45]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 47
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ma OR 9sb OR 8lb OR xkp OR xhn OR xvg OR pa6) LVLREQ<47 CLVL<47]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ma OR 9sb OR 8lb OR xkp OR xhn OR xvg OR pa6) LVLREQ<47]: %NAME%{%NAME%47}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ma OR 9sb OR 8lb OR xkp OR xhn OR xvg OR pa6) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ma OR 9sb OR 8lb OR xkp OR xhn OR xvg OR pa6) LVLREQ>46]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 48
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ba OR 9tk OR 9vo OR 9yw OR ama OR xrg) LVLREQ<48 CLVL<48]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ba OR 9tk OR 9vo OR 9yw OR ama OR xrg) LVLREQ<48]: %NAME%{%NAME%48}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ba OR 9tk OR 9vo OR 9yw OR ama OR xrg) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ba OR 9tk OR 9vo OR 9yw OR ama OR xrg) LVLREQ>47]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 49
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9cm OR 9tr OR 8ls OR xui OR xvb OR ba7 OR ne8) LVLREQ<49 CLVL<49]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9cm OR 9tr OR 8ls OR xui OR xvb OR ba7 OR ne8) LVLREQ<49]: %NAME%{%NAME%49}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9cm OR 9tr OR 8ls OR xui OR xvb OR ba7 OR ne8) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9cm OR 9tr OR 8ls OR xui OR xvb OR ba7 OR ne8) LVLREQ>48]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 50
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8mx OR ob7 OR xea OR ne7) LVLREQ<50 CLVL<50]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8mx OR ob7 OR xea OR ne7) LVLREQ<50]: %NAME%{%NAME%50}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8mx OR ob7 OR xea OR ne7) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8mx OR ob7 OR xea OR ne7) LVLREQ>49]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 51
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9m9 OR 9fc OR 8cb OR 9xf OR xlm OR xla OR xpk OR xmg OR zvb OR dr7) LVLREQ<51 CLVL<51]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9m9 OR 9fc OR 8cb OR 9xf OR xlm OR xla OR xpk OR xmg OR zvb OR dr7) LVLREQ<51]: %NAME%{%NAME%51}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9m9 OR 9fc OR 8cb OR 9xf OR xlm OR xla OR xpk OR xmg OR zvb OR dr7) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9m9 OR 9fc OR 8cb OR 9xf OR xlm OR xla OR xpk OR xmg OR zvb OR dr7) LVLREQ>50]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 52
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (92a OR 9mt OR 9di OR ci1 OR pa7) LVLREQ<52 CLVL<52]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (92a OR 9mt OR 9di OR ci1 OR pa7) LVLREQ<52]: %NAME%{%NAME%52}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (92a OR 9mt OR 9di OR ci1 OR pa7) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (92a OR 9mt OR 9di OR ci1 OR pa7) LVLREQ>51]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 53
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gs OR 9s9 OR 9s8 OR xtu) LVLREQ<53 CLVL<53]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gs OR 9s9 OR 9s8 OR xtu) LVLREQ<53]: %NAME%{%NAME%53}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gs OR 9s9 OR 9s8 OR xtu) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gs OR 9s9 OR 9s8 OR xtu) LVLREQ>52]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 54
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9bt OR 9cr OR 8s8 OR 9cs OR xng OR xit OR xmb OR ba8) LVLREQ<54 CLVL<54]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9bt OR 9cr OR 8s8 OR 9cs OR xng OR xit OR xmb OR ba8) LVLREQ<54]: %NAME%{%NAME%54}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9bt OR 9cr OR 8s8 OR 9cs OR xng OR xit OR xmb OR ba8) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9bt OR 9cr OR 8s8 OR 9cs OR xng OR xit OR xmb OR ba8) LVLREQ>53]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 55
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9br OR 8cs OR xsk OR xcl OR pa8) LVLREQ<55 CLVL<55]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9br OR 8cs OR xsk OR xcl OR pa8) LVLREQ<55]: %NAME%{%NAME%55}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9br OR 8cs OR xsk OR xcl OR pa8) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9br OR 8cs OR xsk OR xcl OR pa8) LVLREQ>54]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 56
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8hx OR 9bw OR ob8 OR xrs OR zmb) LVLREQ<56 CLVL<56]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8hx OR 9bw OR ob8 OR xrs OR zmb) LVLREQ<56]: %NAME%{%NAME%56}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8hx OR 9bw OR ob8 OR xrs OR zmb) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8hx OR 9bw OR ob8 OR xrs OR zmb) LVLREQ>55]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 57
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9fl OR 9b9 OR 9bk OR 8l8 OR 9qs OR xpl OR xsh OR xtg OR dr8) LVLREQ<57 CLVL<57]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9fl OR 9b9 OR 9bk OR 8l8 OR 9qs OR xpl OR xsh OR xtg OR dr8) LVLREQ<57]: %NAME%{%NAME%57}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9fl OR 9b9 OR 9bk OR 8l8 OR 9qs OR xpl OR xsh OR xtg OR dr8) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9fl OR 9b9 OR 9bk OR 8l8 OR 9qs OR xpl OR xsh OR xtg OR dr8) LVLREQ>56]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 58
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9bs OR 9lw OR am7) LVLREQ<58 CLVL<58]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9bs OR 9lw OR am7) LVLREQ<58]: %NAME%{%NAME%58}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9bs OR 9lw OR am7) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9bs OR 9lw OR am7) LVLREQ>57]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 59
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9mp OR 9gl OR 9pa OR xhm OR xlt OR xow) LVLREQ<59 CLVL<59]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9mp OR 9gl OR 9pa OR xhm OR xlt OR xow) LVLREQ<59]: %NAME%{%NAME%59}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9mp OR 9gl OR 9pa OR xhm OR xlt OR xow) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9mp OR 9gl OR 9pa OR xhm OR xlt OR xow) LVLREQ>58]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 60
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9fb OR 9b8 OR 8sw OR 9tw OR am9 OR xtb OR ba9 OR ne9) LVLREQ<60 CLVL<60]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9fb OR 9b8 OR 8sw OR 9tw OR am9 OR xtb OR ba9 OR ne9) LVLREQ<60]: %NAME%{%NAME%60}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9fb OR 9b8 OR 8sw OR 9tw OR am9 OR xtb OR ba9 OR ne9) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9fb OR 9b8 OR 8sw OR 9tw OR am9 OR xtb OR ba9 OR ne9) LVLREQ>59]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 61
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ga OR 9wh OR 9ls OR xld OR pa9) LVLREQ<61 CLVL<61]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ga OR 9wh OR 9ls OR xld OR pa9) LVLREQ<61]: %NAME%{%NAME%61}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ga OR 9wh OR 9ls OR xld OR pa9) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ga OR 9wh OR 9ls OR xld OR pa9) LVLREQ>60]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 62
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9kr OR 9st OR 8bs OR xth OR ztb OR dr9) LVLREQ<62 CLVL<62]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9kr OR 9st OR 8bs OR xth OR ztb OR dr9) LVLREQ<62]: %NAME%{%NAME%62}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9kr OR 9st OR 8bs OR xth OR ztb OR dr9) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9kr OR 9st OR 8bs OR xth OR ztb OR dr9) LVLREQ>61]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 63
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gd OR 9h9 OR 8lw OR 8rx OR ob9 OR xh9 OR xtp OR xts) LVLREQ<63 CLVL<63]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gd OR 9h9 OR 8lw OR 8rx OR ob9 OR xh9 OR xtp OR xts) LVLREQ<63]: %NAME%{%NAME%63}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gd OR 9h9 OR 8lw OR 8rx OR ob9 OR xh9 OR xtp OR xts) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gd OR 9h9 OR 8lw OR 8rx OR ob9 OR xh9 OR xtp OR xts) LVLREQ>62]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 64
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9wa OR 9gw OR 9qr OR ci2 OR xul OR xhg) LVLREQ<64 CLVL<64]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9wa OR 9gw OR 9qr OR ci2 OR xul OR xhg) LVLREQ<64]: %NAME%{%NAME%64}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9wa OR 9gw OR 9qr OR ci2 OR xul OR xhg) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9wa OR 9gw OR 9qr OR ci2 OR xul OR xhg) LVLREQ>63]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 65
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gm OR 9ts OR xhb OR baa OR nea) LVLREQ<65 CLVL<65]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gm OR 9ts OR xhb OR baa OR nea) LVLREQ<65]: %NAME%{%NAME%65}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gm OR 9ts OR xhb OR baa OR nea) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gm OR 9ts OR xhb OR baa OR nea) LVLREQ>64]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 66
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gi OR 9wd OR 9bl OR 9p9 OR 9wc OR 8ws OR 9ws OR oba OR xrn OR xar OR dra OR paa) LVLREQ<66 CLVL<66]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gi OR 9wd OR 9bl OR 9p9 OR 9wc OR 8ws OR 9ws OR oba OR xrn OR xar OR dra OR paa) LVLREQ<66]: %NAME%{%NAME%66}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gi OR 9wd OR 9bl OR 9p9 OR 9wc OR 8ws OR 9ws OR oba OR xrn OR xar OR dra OR paa) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gi OR 9wd OR 9bl OR 9p9 OR 9wc OR 8ws OR 9ws OR oba OR xrn OR xar OR dra OR paa) LVLREQ>65]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 67
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (zhb) LVLREQ<67 CLVL<67]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (zhb) LVLREQ<67]: %NAME%{%NAME%67}%CONTINUE%
-ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (zhb) LVLREQ>CLVL]: %NAME%{%NAME%%CORAL%}%CONTINUE%
+//Part 2.
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=18 CLVL<18]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=19 CLVL<19]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=20 CLVL<20]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=21 CLVL<21]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=22 CLVL<22]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=23 CLVL<23]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=24 CLVL<24]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=25 CLVL<25]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=26 CLVL<26]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=27 CLVL<27]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=28 CLVL<28]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=29 CLVL<29]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=30 CLVL<30]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=31 CLVL<31]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=32 CLVL<32]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=33 CLVL<33]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=34 CLVL<34]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=35 CLVL<35]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=36 CLVL<36]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=37 CLVL<37]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=38 CLVL<38]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=39 CLVL<39]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=40 CLVL<40]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=41 CLVL<41]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=42 CLVL<42]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=43 CLVL<43]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=44 CLVL<44]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=45 CLVL<45]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=46 CLVL<46]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=47 CLVL<47]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=48 CLVL<48]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=49 CLVL<49]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=50 CLVL<50]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=51 CLVL<51]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=52 CLVL<52]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=53 CLVL<53]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=54 CLVL<54]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=55 CLVL<55]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=56 CLVL<56]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=57 CLVL<57]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=58 CLVL<58]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=59 CLVL<59]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=60 CLVL<60]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=61 CLVL<61]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=62 CLVL<62]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=63 CLVL<63]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=64 CLVL<64]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=65 CLVL<65]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=66 CLVL<66]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=67 CLVL<67]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=68 CLVL<68]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=69 CLVL<69]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=70 CLVL<70]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=71 CLVL<71]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=72 CLVL<72]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=73 CLVL<73]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=74 CLVL<74]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=75 CLVL<75]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=76 CLVL<76]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=77 CLVL<77]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=78 CLVL<78]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=79 CLVL<79]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=80 CLVL<80]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=81 CLVL<81]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=82 CLVL<82]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=83 CLVL<83]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=84 CLVL<84]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=85 CLVL<85]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=86 CLVL<86]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=87 CLVL<87]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=88 CLVL<88]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=89 CLVL<89]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=90 CLVL<90]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=91 CLVL<91]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=92 CLVL<92]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=93 CLVL<93]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=94 CLVL<94]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=95 CLVL<95]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=96 CLVL<96]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=97 CLVL<97]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=98 CLVL<98]: %NAME%{%NAME%%RED%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID LVLREQ=99 CLVL<99]: %NAME%{%NAME%%RED%}%CONTINUE%
+//Part 3.
+//Items that after upgrade will Require LVL 18
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (clb OR ssd OR jav OR sbw OR sst) LVLREQ>17]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 19
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (hax OR dgr OR tkf OR wnd OR scp) LVLREQ>18]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 20
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (spc) LVLREQ>19]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 21
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (spr OR bar OR hbw OR ktr OR lgl) LVLREQ>20]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 22
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (axe OR lax OR tax OR lxb OR cap OR qui OR buc) LVLREQ>21]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 23
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (mac OR sbr OR pax OR lbw OR lst) LVLREQ>22]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 24
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (dir OR tri OR wrb OR ob1 OR lea OR lbt OR lbl OR ne1) LVLREQ>23]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 25
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (2ax OR mpi OR wax OR bax OR btx OR gax OR gix OR mst OR fla OR whm OR mau OR gma OR scm OR flc OR crs OR bsd OR lsd OR wsd OR 2hs OR clm OR gis OR bsw OR flb OR gsd OR kri OR bld OR bkf OR bal OR pil OR ssp OR glv OR tsp OR brn OR spt OR pik OR vou OR scy OR hal OR wsc OR cbw OR sbb OR lbb OR swb OR lwb OR mxb OR hxb OR rxb OR cst OR bst OR wst OR ywn OR bwn OR gwn OR gsc OR wsp OR skp OR hlm OR fhl OR msk OR bhm OR ghm OR crn OR hla OR stu OR rng OR scl OR chn OR brs OR spl OR plt OR fld OR gth OR ltp OR ful OR aar OR sml OR lrg OR spk OR kit OR bsh OR tow OR gts OR vgl OR mgl OR tgl OR hgl OR vbt OR mbt OR tbt OR hbt OR vbl OR mbl OR tbl OR hbl OR ba1) LVLREQ>24]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 26
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am5 OR dr1 OR pa1) LVLREQ>25]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 27
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (axf OR ob2) LVLREQ>26]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 29
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am1 OR dr3 OR ba2 OR ba3 OR ne2) LVLREQ>28]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 30
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ces OR ob3 OR dr2 OR pa2) LVLREQ>29]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 32
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am3 OR dr4 OR ba4) LVLREQ>31]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 33
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (clw OR ne3) LVLREQ>32]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 34
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ob4 OR pa3) LVLREQ>33]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 35
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am2) LVLREQ>34]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 36
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (ne4) LVLREQ>35]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 37
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (btl OR ob5) LVLREQ>36]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 38
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (am4 OR pa4) LVLREQ>37]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 39
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9cl OR am6 OR ci0) LVLREQ>38]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 40
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ha OR 9ja OR skr OR xhl OR ba5 OR ne5) LVLREQ>39]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 41
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8sb OR 9wn OR dr5 OR pa5) LVLREQ>40]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 42
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9la OR 9sp OR 9ss OR 9ta OR 8lx OR xlg) LVLREQ>41]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 43
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9dg OR 9sr OR 8ss OR xap OR xuc) LVLREQ>42]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 44
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (92h OR 9ar OR ob6 OR ne6) LVLREQ>43]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 45
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ax OR 9sm OR 9b7 OR 8hb OR am8 OR xml OR xlb OR ba6) LVLREQ>44]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 46
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9pi OR 9sc OR 9wb OR zlb OR dr6) LVLREQ>45]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 47
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ma OR 9sb OR 8lb OR xkp OR xhn OR xvg OR pa6) LVLREQ>46]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 48
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ba OR 9tk OR 9vo OR 9yw OR ama OR xrg) LVLREQ>47]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 49
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9cm OR 9tr OR 8ls OR xui OR xvb OR ba7 OR ne8) LVLREQ>48]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 50
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8mx OR ob7 OR xea OR ne7) LVLREQ>49]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 51
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9m9 OR 9fc OR 8cb OR 9xf OR xlm OR xla OR xpk OR xmg OR zvb OR dr7) LVLREQ>50]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 52
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (92a OR 9mt OR 9di OR ci1 OR pa7) LVLREQ>51]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 53
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gs OR 9s9 OR 9s8 OR xtu) LVLREQ>52]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 54
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9bt OR 9cr OR 8s8 OR 9cs OR xng OR xit OR xmb OR ba8) LVLREQ>53]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 55
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9br OR 8cs OR xsk OR xcl OR pa8) LVLREQ>54]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 56
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (8hx OR 9bw OR ob8 OR xrs OR zmb) LVLREQ>55]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 57
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9fl OR 9b9 OR 9bk OR 8l8 OR 9qs OR xpl OR xsh OR xtg OR dr8) LVLREQ>56]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 58
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9bs OR 9lw OR am7) LVLREQ>57]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 59
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9mp OR 9gl OR 9pa OR xhm OR xlt OR xow) LVLREQ>58]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 60
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9fb OR 9b8 OR 8sw OR 9tw OR am9 OR xtb OR ba9 OR ne9) LVLREQ>59]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 61
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9ga OR 9wh OR 9ls OR xld OR pa9) LVLREQ>60]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 62
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9kr OR 9st OR 8bs OR xth OR ztb OR dr9) LVLREQ>61]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 63
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gd OR 9h9 OR 8lw OR 8rx OR ob9 OR xh9 OR xtp OR xts) LVLREQ>62]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 64
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9wa OR 9gw OR 9qr OR ci2 OR xul OR xhg) LVLREQ>63]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 65
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gm OR 9ts OR xhb OR baa OR nea) LVLREQ>64]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 66
+ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gi OR 9wd OR 9bl OR 9p9 OR 9wc OR 8ws OR 9ws OR oba OR xrn OR xar OR dra OR paa) LVLREQ>65]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
+//Items that after upgrade will Require LVL 67
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (zhb) LVLREQ>66]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Upgrading Req End Line
 ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID]: %NAME%{%NAME%%GRAY%)}%CONTINUE%
@@ -4199,7 +4285,7 @@ ItemDisplay[(ARMOR OR WEAPON OR (aqv OR cqv)) (MAG OR RARE OR SET OR UNI OR CRAF
 ItemDisplay[wss]: %MAP-0A%%DOT-66%%NAME%{%RED%Warning%WHITE%: It can Brick your Item%NL%%TAN%Note%WHITE%: Use it to %RED%Corrupt %WHITE%Item/Map:}
 ItemDisplay[iwss]: %MAP-0A%%DOT-66%%NAME%{%WHITE%Random Event to Your Map%NL%%TAN%Note%WHITE%: Use it to %PURPLE%Add %WHITE%a Guaranteed}
 ItemDisplay[scrb]: %MAP-A9%%NAME%{%NAME%}//{%RED%Group Dungeon%NL%%TAN%Note%WHITE%: Cube it with %GRAY%[%ORANGE%T3%GRAY%] %WHITE%Map to Make:}
-ItemDisplay[ubtm]: %MAP-A9%%NAME%{%GRAY%(It will create 3 Portals to come back Max 3 Times)%NL%%TAN%Note%WHITE%: Enterence to Uber Tristram}
+ItemDisplay[ubtm]: %MAP-A9%%NAME%{%GRAY%(It will create 3 Portals to come back Max 3 Times)%NL%%TAN%Note%WHITE%: Entrance to Uber Tristram}
 ItemDisplay[imra]: %NAME%{%WHITE%Map + %GOLD%Orb %WHITE%+ %BLUE%Jewel %WHITE%+ %ORANGE%Any Rune%NL%%TAN%Note%WHITE%: Imbue White Map to %YELLOW%Rare%WHITE%:%NL%}%CONTINUE%
 ItemDisplay[rera]: %NAME%{%YELLOW%Map %WHITE%+ %GOLD%Orb %WHITE%+ Perf Gem + %ORANGE%Any Rune%NL%%TAN%Note%WHITE%: Reroll %YELLOW%Rare %WHITE%Map:%NL%}%CONTINUE%
 ItemDisplay[upma]: %NAME%{%BLUE%Map %WHITE%+ %GOLD%Orb %WHITE%+ Perf %GRAY%O %WHITE%+ %ORANGE%Any Rune%NL%%TAN%Note%WHITE%: Imbue %BLUE%Magic %WHITE%Map to %YELLOW%Rare%WHITE%:%NL%}%CONTINUE%
@@ -4219,7 +4305,7 @@ ItemDisplay[lsvl]: %BORDER-9B%%DOT-62%%NAME%{%TAN%Note%WHITE%: %WHITE%This item 
 ItemDisplay[llmr]: %BORDER-9B%%DOT-62%%NAME%{%WHITE%Only works with %BLUE%magic%WHITE%/%YELLOW%rare%WHITE%/%ORANGE%craft %WHITE%equipment%NL%%TAN%Note%WHITE%: %WHITE%This item is %PURPLE%E%RED%x%ORANGE%t%YELLOW%re%ORANGE%m%RED%e%PURPLE%l%RED%y Rare%WHITE%.}
 ItemDisplay[rkey]: %MAP-0A%%PX-62%%NAME%{%TAN%Note%WHITE%: You can use it w/o losing it in Cube recipes}
 
-//DClone & Rathma Materials & items
+//DClone/Rathma/Lucion Materials & items
 ItemDisplay[(dcma OR rtma) STAT185=0]: %MAP-0A%%PX-62%%NAME%{%BLUE%Tier: 0 (Default)%NL%%RED%DO IT AT YOUR OWN RISK!%NL%%TAN%Note%WHITE%: %GRAY%You better not go in there...}
 ItemDisplay[(dcma OR rtma) STAT185>0]: %MAP-0A%%PX-62%%NAME%{%RED%DO IT AT YOUR OWN RISK!%NL%%TAN%Note%WHITE%: %GRAY%You better not go in there...}
 ItemDisplay[luca]: %MAP-0A%%PX-62%%NAME%{%RED%DO IT AT YOUR OWN RISK!%NL%%TAN%Note%WHITE%: %GRAY%You better not go in there...}
