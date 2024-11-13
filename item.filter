@@ -3733,7 +3733,6 @@ ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gm OR 9ts OR xhb OR baa OR nea) L
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (9gi OR 9wd OR 9bl OR 9p9 OR 9wc OR 8ws OR 9ws OR oba OR xrn OR xar OR dra OR paa) LVLREQ>65]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
 //Items that after upgrade will Require LVL 67
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (zhb) LVLREQ>66]: %NAME%{%NAME%%LVLREQ%}%CONTINUE%
-
 //Upgrading Req End Line
 ItemDisplay[(ARMOR OR WEAPON) !(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID]: %NAME%{%NAME%%GRAY%)}%CONTINUE%
 
@@ -4304,7 +4303,7 @@ ItemDisplay[lsvl]: %BORDER-9B%%DOT-62%%GREEN%*%PURPLE%*%RED%*%TAN%*%GRAY%*      
 ItemDisplay[llmr]: %BORDER-9B%%DOT-62%%GREEN%*%PURPLE%*%RED%*%ORANGE%*%GOLD%*        %NAME%        %GOLD%*%ORANGE%*%RED%*%PURPLE%*%GREEN%*{%WHITE%Only works with %BLUE%magic%WHITE%/%YELLOW%rare%WHITE%/%ORANGE%craft %WHITE%equipment%NL%%TAN%Note%WHITE%: %WHITE%This item is %PURPLE%E%RED%x%ORANGE%t%YELLOW%re%ORANGE%m%RED%e%PURPLE%l%RED%y Rare%WHITE%.}
 ItemDisplay[rkey]: %MAP-0A%%PX-62%%GRAY%*%LIGHT_GRAY%*%YELLOW%*   %NAME%   %YELLOW%*%LIGHT_GRAY%*%GRAY%*{%TAN%Note%WHITE%: You can use it w/o losing it in Cube recipes}
 
-//DClone & Rathma Materials & items
+//DClone/Rathma/Lucion & items
 ItemDisplay[(dcma OR rtma) STAT185=0]: %MAP-0A%%PX-62%%GRAY%*%RED%* %NAME% %RED%*%GRAY%*{%BLUE%Tier: 0 (Default)%NL%%RED%DO IT AT YOUR OWN RISK!%NL%%TAN%Note%WHITE%: %GRAY%You better not go in there...}
 ItemDisplay[(dcma OR rtma) STAT185>0]: %MAP-0A%%PX-62%%GRAY%*%RED%* %NAME% %RED%*%GRAY%*{%RED%DO IT AT YOUR OWN RISK!%NL%%TAN%Note%WHITE%: %GRAY%You better not go in there...}
 ItemDisplay[luca]: %MAP-0A%%PX-62%%GRAY%*%RED%* %NAME% %RED%*%GRAY%*{%RED%DO IT AT YOUR OWN RISK!%NL%%TAN%Note%WHITE%: %GRAY%You better not go in there...}
