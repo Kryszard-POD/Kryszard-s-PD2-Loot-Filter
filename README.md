@@ -242,7 +242,7 @@ Filter is pretty much the same for characters below lvl 80, at 80+ diffrences ar
 - Runes: Only Lem [20]+ will drop chat notify
 
 ## in-game settings:
-![image](https://github.com/Kryszard-POD/Kryszard-s-PD2-Loot-Filter/assets/63604590/7f19090c-4261-4bb9-9cc5-a8ff6e06a8c6)
+![image](https://github.com/user-attachments/assets/23b448e1-43e5-43c1-8f4e-0e754e6adf23)
 
 
 # Donate/Support:
