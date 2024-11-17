@@ -1021,7 +1021,7 @@ ItemDisplay[jew UNI !ID]: %BORDER-68%%RED%r%ORANGE%a%YELLOW%in%GREEN%b%BLUE%o%PU
 ItemDisplay[(7fb OR 7gd OR 7ls OR 7m7 OR 7qr OR 7ws) SET ETH !ID]: %MAP-84%%DARK_GREEN%*%GREEN%*%WHITE%*     %NAME%     %WHITE%*%GREEN%*%DARK_GREEN%*
 
 //Good SET parts
-ItemDisplay[(amu OR rin OR uar OR ci3 OR 7qr OR uth OR paf) SET !ID]: %MAP-84%%DARK_GREEN%*%GREEN%*%WHITE%*     %NAME%     %WHITE%*%GREEN%*%DARK_GREEN%*
+ItemDisplay[(amu OR rin OR uar OR ci3 OR 7qr OR uth OR paf OR urn) SET !ID]: %MAP-84%%DARK_GREEN%*%GREEN%*%WHITE%*     %NAME%     %WHITE%*%GREEN%*%DARK_GREEN%*
 
 //Sets worth notifying
 ItemDisplay[((ARMOR OR WEAPON) (EXC OR ELT OR ci0 OR ba5 OR lbt) !(9vo OR xcl OR xrn)) SET !ID]: %PX-84%%TIER-5%%NAME%
