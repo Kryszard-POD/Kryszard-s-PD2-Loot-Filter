@@ -966,17 +966,17 @@ ItemDisplay[(rar OR rbe OR ram) UNI !ID]: %BORDER-68%%GREEN%HOLY %PURPLE%*%RED%*
 
 //NEW PD2 UNIQUES
 //GG PD2 UNIQUES
-ItemDisplay[(7tw OR baf OR 7qs OR 6bs OR utg) UNI !ID]: %BORDER-68%%ORANGE%pick %PURPLE%*%RED%*%YELLOW%*%GREEN%*     %NAME%     %GREEN%*%YELLOW%*%RED%*%PURPLE%* %ORANGE%up
+ItemDisplay[(baf OR 7qs OR 6bs OR utg) UNI !ID]: %BORDER-68%%ORANGE%pick %PURPLE%*%RED%*%YELLOW%*%GREEN%*     %NAME%     %GREEN%*%YELLOW%*%RED%*%PURPLE%* %ORANGE%up
 //GG PD2 UNIQUES only when ETH
-ItemDisplay[(utp OR 7st OR 7fb) UNI ETH !ID]: %BORDER-68%%ORANGE%pick %PURPLE%*%RED%*%YELLOW%*%GREEN%*     %NAME%     %GREEN%*%YELLOW%*%RED%*%PURPLE%* %ORANGE%up
+ItemDisplay[(utp OR 7st) UNI ETH !ID]: %BORDER-68%%ORANGE%pick %PURPLE%*%RED%*%YELLOW%*%GREEN%*     %NAME%     %GREEN%*%YELLOW%*%RED%*%PURPLE%* %ORANGE%up
 //OK PD2 UNIQUES only when ETH
-ItemDisplay[(7cm) UNI ETH !ID]: %MAP-68%%SAGE%*%DARK_GREEN%*%GRAY%*     %NAME%%GRAY%     *%DARK_GREEN%*%SAGE%*
+ItemDisplay[(7cm OR 7fb) UNI ETH !ID]: %MAP-68%%SAGE%*%DARK_GREEN%*%GRAY%*     %NAME%%GRAY%     *%DARK_GREEN%*%SAGE%*
 //OK PD2 UNIQUES
-ItemDisplay[(drf OR utp OR 7st OR 7fb OR ned OR ame OR ulg OR ung OR urg OR drc OR 7di) UNI !ID]: %MAP-68%%SAGE%*%DARK_GREEN%*%GRAY%*     %NAME%%GRAY%     *%DARK_GREEN%*%SAGE%*
+ItemDisplay[(drf OR utp OR 7st OR ned OR ame OR ulg OR ung OR urg OR drc OR 7di OR 7tw) UNI !ID]: %MAP-68%%SAGE%*%DARK_GREEN%*%GRAY%*     %NAME%%GRAY%     *%DARK_GREEN%*%SAGE%*
 //OK/Lower Value PD2 UNIQUES when ETH
 ItemDisplay[(am5) UNI ETH !ID]: %MAP-68%%SAGE%*   %NAME%%SAGE%   *
 //OK/Lower Value PD2 UNIQUES
-ItemDisplay[(ba6 OR dr2 OR ne6 OR ulb OR 7cm) UNI !ID]: %MAP-68%%SAGE%*   %NAME%%SAGE%   *
+ItemDisplay[(ba6 OR dr2 OR ne6 OR ulb OR 7cm OR 7fb) UNI !ID]: %MAP-68%%SAGE%*   %NAME%%SAGE%   *
 //PD2 Uniques worth notifying
 ItemDisplay[(9ar OR ob6 OR am5 OR pa3) UNI !ID]: %PX-68%%TIER-5%%NAME%
 
