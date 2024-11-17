@@ -1023,7 +1023,7 @@ ItemDisplay[jew UNI !ID]: %BORDER-68%%NAME%
 ItemDisplay[(7fb OR 7gd OR 7ls OR 7m7 OR 7qr OR 7ws) SET ETH !ID]: %MAP-84%%NAME%
 
 //Good SET parts
-ItemDisplay[(amu OR rin OR uar OR ci3 OR 7qr OR uth OR paf) SET !ID]: %MAP-84%%NAME%
+ItemDisplay[(amu OR rin OR uar OR ci3 OR 7qr OR uth OR paf OR urn) SET !ID]: %MAP-84%%NAME%
 
 //Sets worth notifying
 ItemDisplay[((ARMOR OR WEAPON) (EXC OR ELT OR ci0 OR ba5 OR lbt) !(9vo OR xcl OR xrn)) SET !ID]: %PX-84%%TIER-5%%NAME%
