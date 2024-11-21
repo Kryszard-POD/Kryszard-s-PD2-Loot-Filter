@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season X: ver 10.4.4
+//	Kryszard's PD2 Loot Filter for Season X: ver 10.4.5
 //
 //	twitch.tv/kryszard
 //
@@ -13,7 +13,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 10.4.4}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 10.4.5}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%Item Filter %WHITE%- %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -1003,14 +1003,16 @@ ItemDisplay[(lbt OR xhb OR uhb OR xvb) UNI !ID]: %MAP-68%%YELLOW%*%TAN%*%GRAY%* 
 //shields
 ItemDisplay[(nee OR pa9 OR nea OR uts OR uow OR xsh OR xow OR pae OR nef OR pac) UNI !ID]: %MAP-68%%YELLOW%*%TAN%*%GRAY%*     %NAME%%GRAY%     *%TAN%*%YELLOW%*
 //weapons
-ItemDisplay[(7ts OR 7s8 OR 9bw OR 7wc OR 7bw OR 7cs OR 7ws OR 7fl OR 7cr OR 7gm OR oba OR ama OR obc OR 7lw OR amf OR 7wh OR 7p7 OR 7wa) UNI !ID]: %MAP-68%%YELLOW%*%TAN%*%GRAY%*     %NAME%%GRAY%     *%TAN%*%YELLOW%*
+ItemDisplay[(7ts OR 7s8 OR 9bw OR 7wc OR 7bw OR 7ws OR 7fl OR 7cr OR 7gm OR oba OR ama OR obc OR 7lw OR amf OR 7wh OR 7p7 OR 7wa) UNI !ID]: %MAP-68%%YELLOW%*%TAN%*%GRAY%*     %NAME%%GRAY%     *%TAN%*%YELLOW%*
 
+//OK/Lower Value UNIQUES only when ETH
+ItemDisplay[(7ga) UNI ETH !ID]: %DOT-68%%TAN%*   %NAME%   %TAN%*
 //OK/Lower Value UNIQUES
-ItemDisplay[(7pa OR 7bt OR ltp OR xcl OR 9tw OR xtp OR xth OR 7kr OR xpl OR xld OR 7b7 OR 8hx) UNI !ID]: %DOT-68%%TAN%*   %NAME%   %TAN%*
+ItemDisplay[(7pa OR 7bt OR ltp OR xcl OR 9tw OR xtp OR xth OR 7kr OR xpl OR xld OR 7b7 OR 8hx OR 7cs OR xmb OR tbt) UNI !ID]: %DOT-68%%TAN%*   %NAME%   %TAN%*
 
 //Uniques worth notifying
 //Armors
-ItemDisplay[(brs OR fld OR xkp OR xul OR xlm OR drb OR 9sp OR mbt OR rng OR uul OR xng OR xui OR spl OR xmg OR xsk OR xml OR xlb OR xap OR xrs OR gth OR aar OR (BELT !(vbl OR hbl)) OR skp OR xhl OR xrn OR vbt OR xmb OR uvb OR umb OR lgl OR vgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR ush OR upk OR uml OR xts OR xrg OR tow OR kit OR gts OR xar) UNI !ID]: %PX-68%%TIER-5%%NAME%
+ItemDisplay[(brs OR fld OR xkp OR xul OR xlm OR drb OR 9sp OR mbt OR rng OR uul OR xng OR xui OR spl OR xmg OR xsk OR xml OR xlb OR xap OR xrs OR gth OR aar OR (BELT !(vbl OR hbl)) OR skp OR xhl OR xrn OR vbt OR uvb OR umb OR lgl OR vgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR ush OR upk OR uml OR xts OR xrg OR tow OR kit OR gts OR xar) UNI !ID]: %PX-68%%TIER-5%%NAME%
 //Weapons
 ItemDisplay[((8ws OR 8lb OR 92h OR 8s8 OR 9wc OR 92h OR 8mx OR 6rx OR 6hx OR 9gw OR 7m7 OR 9cl OR mau OR 7ls OR 9ls OR 7br OR 7sr OR 7p7 OR 9ba OR 7ga OR 7gi OR 8ls OR 72a OR 7o7 OR 9yw OR 9fc OR 9kr OR amb OR 7sc OR 7mp OR 6sw OR 6l7 OR 8rx OR dgr OR 7dg OR 7bl OR 9ma OR 9wh OR 9gm OR 9ws OR 6cs OR 7gs OR 9sb OR 9bs) OR (ELT (THROWING OR JAV)) OR 7wb OR 7sp) UNI !ID]: %PX-68%%TIER-5%%NAME%
 
