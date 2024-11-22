@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season X: ver 10.4.5
+//	Kryszard's PD2 Loot Filter for Season X: ver 10.4.6
 //  Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -14,7 +14,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%futureal.filter ver 10.4.5}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%futureal.filter ver 10.4.6}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%Item Filter %WHITE%- %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -22,6 +22,19 @@ ItemDisplay[box FILTLVL=3]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Setting
 ItemDisplay[box FILTLVL=4]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%4 - %ORANGE%Strict Filter%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=5]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%5 - %ORANGE%Strict Filter %WHITE%- %RED%w/o Potions%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=6]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%6 - %RED%Max-Strictness Filter%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
+
+//Define Aliases
+Alias[THROWPOTS]: (opm OR gpm OR opl OR ops OR gps OR gpl OR tpfs OR tpgs OR tpcs OR tpls OR tpfm OR tpgm OR tpcm OR tplm OR tpfl OR tpgl OR tpcl OR tpll)
+//Vengance Prefixes
+Alias[HIGHVENGPFX]: (PREFIX=617 OR PREFIX=621 OR PREFIX=625 OR PREFIX=629 OR PREFIX=633 OR PREFIX=637 OR PREFIX=641 OR PREFIX=645 OR PREFIX=649)
+Alias[MIDVENGPFX]: (PREFIX=616 OR PREFIX=620 OR PREFIX=624 OR PREFIX=628 OR PREFIX=632 OR PREFIX=636 OR PREFIX=640 OR PREFIX=644 OR PREFIX=648)
+Alias[LOWVENGPFX]: (PREFIX=615 OR PREFIX=619 OR PREFIX=623 OR PREFIX=627 OR PREFIX=631 OR PREFIX=635 OR PREFIX=639 OR PREFIX=643 OR PREFIX=647)
+//Vengance Suffixes
+Alias[HIGHVENGSFX]: (SUFFIX=697 OR SUFFIX=701 OR SUFFIX=705 OR SUFFIX=709 OR SUFFIX=713 OR SUFFIX=717 OR SUFFIX=721 OR SUFFIX=725 OR SUFFIX=729)
+Alias[MIDVENGSFX]: (SUFFIX=696 OR SUFFIX=700 OR SUFFIX=704 OR SUFFIX=708 OR SUFFIX=712 OR SUFFIX=716 OR SUFFIX=720 OR SUFFIX=724 OR SUFFIX=728)
+Alias[LOWVENGSFX]: (SUFFIX=695 OR SUFFIX=699 OR SUFFIX=703 OR SUFFIX=707 OR SUFFIX=711 OR SUFFIX=715 OR SUFFIX=719 OR SUFFIX=723 OR SUFFIX=727)
+//Towns
+Alias[TOWN]: (MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)
 
 //Gold
 ItemDisplay[GOLD<100 (CLVL>11 OR FILTLVL>3)]:
@@ -731,8 +744,9 @@ ItemDisplay[SOCK>0]: %NAME% %TAN%[%WHITE%%SOCKETS%%TAN%]%CONTINUE%
 ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE) ID]: %NAME% %GRAY%(%TAN%$%WHITE%%PRICE%%GRAY%)%CONTINUE%
 
 //Health & Mana Potions
-ItemDisplay[rvl]: %WHITE%Full Rejuv
-ItemDisplay[rvs]: %WHITE%Small Rejuv{%PURPLE%r %WHITE%35%, Perf %YELLOW%O%WHITE%, %BLUE%Ring %WHITE%= Light Res %BLUE%Ring%NL%%WHITE%3x%PURPLE%r %WHITE%35% = %PURPLE%R %WHITE%Full%NL%%TAN%Note%WHITE%: Crafting Recipes:}
+ItemDisplay[rvl]: %WHITE%Full Rejuv%CONTINUE%
+ItemDisplay[rvs]: %WHITE%Small Rejuv{%PURPLE%r %WHITE%35%, Perf %YELLOW%O%WHITE%, %BLUE%Ring %WHITE%= Light Res %BLUE%Ring%NL%%WHITE%3x%PURPLE%r %WHITE%35% = %PURPLE%R %WHITE%Full%NL%%TAN%Note%WHITE%: Crafting Recipes:}%CONTINUE%
+ItemDisplay[rvs FILTLVL>5]: {%NAME%}%CONTINUE%
 ItemDisplay[hp5]: %WHITE%Super Healing{%NAME%}%CONTINUE%
 ItemDisplay[mp5]: %WHITE%Super Mana{%NAME%}%CONTINUE%
 ItemDisplay[hp1]: %WHITE%minor Healing{%NAME%}%CONTINUE%
@@ -782,7 +796,7 @@ ItemDisplay[key QTY=23]: %NAME%{Weapon: [50-80]% ED, -[10-20]% Target Defense%NL
 ItemDisplay[key QTY=24]: %NAME%{Weapon: [100-140]% Dmg to Demon/Undead, [3-6]% ML, [10-15] R.Life%NL%Shield: [10-20]% Block, [3-6]% ML, -[20-30]% Req%NL%Chest: [3-6]% ML, [5-10] R.Life, -[20-30]% Req%NL%Helm: [10-20]% Deadly Strike, [2-4]% ML, [5-10] R.Life%NL%Boots: [10-20]% PLR, [2-4]% ML, [5-10] R.Life%NL%Gloves: [5-10]% Deadly Strike, [2-4]% ML, [5-10] R.Life%NL%Belt: [10-20]% Dmg as Mana, [3-6]% ML, [5-10] R.Life%NL%Ring: [10-20]% PLR, [1-3]% ML, [5-10] R.Life%NL%Amulet: [5-10]% Curse D. R., [3-6]% ML, [5-10] R.Life%NL%%TAN% Note%WHITE%: Vampiric %ORANGE%[%GRAY%O%ORANGE%]%WHITE%:}%CONTINUE%
 ItemDisplay[key QTY=25]: %NAME%{Weapon: [50-80]% ED, [20-30]% MF, [1-3] L.Radius%NL%Shield: [10-20]% Block, [20-30]% MF, [1-3] L.Radius%NL%Chest: [25-50]% Defense, [20-30]% MF, [1-3] L.Radius%NL%Helm: [25-50]% Defense, [20-30]% MF, [1-3] L.Radius%NL%Boots: [25-50]% Defense, [15-25]% MF, [1-3] L.Radius%NL%Gloves: [25-50]% Defense, [15-25]% MF, [1-3] L.Radius%NL%Belt: [25-50]% Defense, [20-30]% MF, [1-3] L.Radius%NL%Ring: [5-10] Vit, [10-20]% MF, [1-3] L.Radius%NL%Amulet: [10-20] Vit, [20-30]% MF, [1-3] L.Radius%NL%%TAN%Note%WHITE%: Bontiful %ORANGE%[%YELLOW%O%ORANGE%]%WHITE%:}%CONTINUE%
 ItemDisplay[key QTY=26]: %NAME%{Weapon: [20-40]% ED, 20% IAS, [50-100] AR%NL%Shield: [5-10]% All Res, [10-20]% Block, H. F. D.%NL%Chest: [5-10]% All Res, [10-20]% Block, [25-50]% Defense%NL%Helm: [5-10]% IAS, [25-50]% Defense, H. F. D.%NL%Boots: 10% FRW, [100-150] Def vs Missle, H. F. D.%NL%Gloves: [5-10]% IAS, [10-20]% AR, [25-50]% Defense%NL%Belt: [5-10]% IAS, [25-50]% Defense, H. F. D.%NL%Ring: [3-5]% All Res, [50-100] Def vs Missle, H. F. D.%NL%Amulet: [5-15]% All Res, [100-150] Def vs Missle, [4-8] All Atrb%NL%%TAN% Note%WHITE%: Brilliant %ORANGE%[%WHITE%O%ORANGE%]%WHITE%:}%CONTINUE%
-ItemDisplay[key FILTLVL>0 (ASSASSIN OR FILTLVL>3) !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}
+ItemDisplay[key FILTLVL>0 (ASSASSIN OR FILTLVL>3) !TOWN]: {%NAME%}
 
 //Arrows & Bolts
 ItemDisplay[(aqv OR cqv) !NMAG !ID]: %NAME%%CONTINUE%
@@ -792,7 +806,6 @@ ItemDisplay[aqv MAG !ID ((!AMAZON AND FILTLVL>1 AND CLVL>79) OR FILTLVL>3)]:
 ItemDisplay[(aqv OR cqv) RARE AMAZON !ID]: %DOT-A8%%TIER-5%%NAME%%CONTINUE%
 
 //Choking, Exploding, Fulminating, Oil, Rancid, Strangling, and New PD2 Throwing Potions
-Alias[THROWPOTS]: (opm OR gpm OR opl OR ops OR gps OR gpl OR tpfs OR tpgs OR tpcs OR tpls OR tpfm OR tpgm OR tpcm OR tplm OR tpfl OR tpgl OR tpcl OR tpll)
 ItemDisplay[opm OR tpfm]: %NAME%{%WHITE%Exoplo. Potion, Perf %RED%O%WHITE%, %BLUE%Ring %WHITE%= Fire Res %BLUE%Ring%NL%%TAN%Note%WHITE%: Crafting Recipe:}%CONTINUE%
 ItemDisplay[(opm OR tpfm) FILTLVL>0 (CLVL>79 OR FILTLVL>3)]: {%NAME%}
 ItemDisplay[(gpm OR opl OR ops OR gps OR gpl) FILTLVL>0 (CLVL>23 OR FILTLVL>3)]: {%NAME%}
@@ -850,15 +863,6 @@ ItemDisplay[cm2 UNI]: %NAME%{%TAN%Note%WHITE%: Cube with %GRAY%key %WHITE%to Des
 ItemDisplay[cm3 MAG ID ILVL>90]: %NAME%{%WHITE%Cube with 3xPerf Gem%NL%%TAN%Note%WHITE%: ILVL%ORANGE%91+ %BLUE%Grand Charm%WHITE%, to Reroll:}%CONTINUE%
 //CL when needed
 ItemDisplay[(cm1 OR cm2 OR cm3) MAG ID]: %CL%%NAME%{%NAME%}%CONTINUE%
-
-//Vengance Prefixes
-Alias[HIGHVENGPFX]: (PREFIX=617 OR PREFIX=621 OR PREFIX=625 OR PREFIX=629 OR PREFIX=633 OR PREFIX=637 OR PREFIX=641 OR PREFIX=645 OR PREFIX=649)
-Alias[MIDVENGPFX]: (PREFIX=616 OR PREFIX=620 OR PREFIX=624 OR PREFIX=628 OR PREFIX=632 OR PREFIX=636 OR PREFIX=640 OR PREFIX=644 OR PREFIX=648)
-Alias[LOWVENGPFX]: (PREFIX=615 OR PREFIX=619 OR PREFIX=623 OR PREFIX=627 OR PREFIX=631 OR PREFIX=635 OR PREFIX=639 OR PREFIX=643 OR PREFIX=647)
-//Vengance Suffixes
-Alias[HIGHVENGSFX]: (SUFFIX=697 OR SUFFIX=701 OR SUFFIX=705 OR SUFFIX=709 OR SUFFIX=713 OR SUFFIX=717 OR SUFFIX=721 OR SUFFIX=725 OR SUFFIX=729)
-Alias[MIDVENGSFX]: (SUFFIX=696 OR SUFFIX=700 OR SUFFIX=704 OR SUFFIX=708 OR SUFFIX=712 OR SUFFIX=716 OR SUFFIX=720 OR SUFFIX=724 OR SUFFIX=728)
-Alias[LOWVENGSFX]: (SUFFIX=695 OR SUFFIX=699 OR SUFFIX=703 OR SUFFIX=707 OR SUFFIX=711 OR SUFFIX=715 OR SUFFIX=719 OR SUFFIX=723 OR SUFFIX=727)
 
 //Grand Charms TAGS
 //EG TAG
@@ -1109,6 +1113,7 @@ ItemDisplay[(SIN OR (DAGGER !THROWING)) ASSASSIN RARE !ID]: %NAME%
 ItemDisplay[(rin OR amu) MAG !ID FILTLVL>5]: {%NAME%}
 
 //Circlets
+ItemDisplay[CIRC MAG !ID FILTLVL>5]: {%NAME%}
 ItemDisplay[CIRC (MAG OR RARE) !ID]: %NAME%
 
 //Rare Gloves, Belts and Boots
@@ -4241,7 +4246,8 @@ ItemDisplay[imma]: %NAME%{%WHITE%Map + %GOLD%Orb %WHITE%+ %BLUE%Jewel %NL%%TAN%N
 ItemDisplay[scou]: %NAME%{%BLUE%M%WHITE%a%YELLOW%p %WHITE%+ %GOLD%Orb%NL%%TAN%Note%WHITE%: Imbue %BLUE%Magic%WHITE%/%YELLOW%Rare %WHITE%Map to White:%NL%}
 ItemDisplay[fort]: %GOLD%%NAME%{%BLUE%M%WHITE%a%YELLOW%p %WHITE%+ %GOLD%Orb%NL%%WHITE%2x Health, 2x Exp, 20% Damage, 2x Loot%NL%%TAN%Note%WHITE%: Reduces Base Density by Half, Monsters Gain:%NL%}
 ItemDisplay[upmp]: %NAME%{%WHITE%3x%BLUE%M%WHITE%a%YELLOW%p %TAN%(%WHITE%Tier:%ORANGE%x%TAN%) %WHITE%+ %GOLD%Orb %WHITE%= Map %TAN%(%WHITE%Tier:%ORANGE%x%WHITE%+1%TAN%)%NL%Note%WHITE%: Upgrade Maps for higher Tier:%NL%}
-ItemDisplay[(imra OR rera OR upma OR imma)]: %NAME%{%GRAY%(Skip Map to make %GOLD%Infused Orb%GRAY%)%NL%%NAME%}
+ItemDisplay[(imra OR rera OR upma OR imma)]: %NAME%{%GRAY%(Skip Map to make %GOLD%Infused Orb%GRAY%)%NL%%NAME%}%CONTINUE%
+ItemDisplay[imma FILTLVL>3 !SHOP !TOWN]: {%NAME%}%CONTINUE%
 ItemDisplay[irra]: %NAME%{%WHITE%Map + %GOLD%Orb%NL%%TAN%Note%WHITE%: Imbue White Map to %YELLOW%Rare%WHITE%:%NL%}
 ItemDisplay[rrra]: %NAME%{%YELLOW%Map %WHITE%+ %GOLD%Orb%NL%%TAN%Note%WHITE%: Reroll %YELLOW%Rare %WHITE%Map:%NL%}
 ItemDisplay[urma]: %NAME%{%BLUE%Map %WHITE%+ %GOLD%Orb%NL%%TAN%Note%WHITE%: Imbue %BLUE%Magic %WHITE%Map to %YELLOW%Rare%WHITE%:%NL%}
@@ -4484,8 +4490,8 @@ ItemDisplay[(am5 OR ama OR amf) NMAG !RW TABSK2>0 (CLVL<41 FILTLVL<4)]: %NAME%{%
 ItemDisplay[(am5 OR ama OR amf) NMAG !RW TABSK2>2 (FILTLVL<2 OR (CLVL<80 AND (FILTLVL>1 AND FILTLVL<4)))]: %NAME%{%NAME%}
 ItemDisplay[(GLOVES OR BOOTS OR BELT) NMAG !INF (CLVL<19 FILTLVL<4)]: %NAME%{%NAME%}
 ItemDisplay[((CHEST OR HELM OR CIRC OR SHIELD) OR WEAPON) !INF (CLVL<31 FILTLVL<4)]: %NAME%{%NAME%}
-ItemDisplay[(ARMOR OR WEAPON) (MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109) !leg FILTLVL>0]: %NAME%{%PURPLE%Decrease Your Filter Level in Settings to Display It All The Time%NL%%WHITE%Outside the Town/In the Fight Field it is Going to be %RED%HIDDEN%NL%WARNING%WHITE%: At Current Filter LVL this item is shown %RED%ONLY %WHITE%in Town%CL%%NAME%}
-ItemDisplay[(ARMOR OR WEAPON) !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109) !leg FILTLVL>0]: {%PURPLE%Decrease Your Filter Level in Settings to Display It All The Time%NL%%WHITE%Outside the Town/In the Fight Field it is Going to be %RED%HIDDEN%NL%WARNING%WHITE%: At Current Filter LVL this item is shown %RED%ONLY %WHITE%in Town%CL%%NAME%}
+ItemDisplay[(ARMOR OR WEAPON) TOWN !leg FILTLVL>0]: %NAME%{%PURPLE%Decrease Your Filter Level in Settings to Display It All The Time%NL%%WHITE%Outside the Town/In the Fight Field it is Going to be %RED%HIDDEN%NL%WARNING%WHITE%: At Current Filter LVL this item is shown %RED%ONLY %WHITE%in Town%CL%%NAME%}
+ItemDisplay[(ARMOR OR WEAPON) !TOWN !leg FILTLVL>0]: {%PURPLE%Decrease Your Filter Level in Settings to Display It All The Time%NL%%WHITE%Outside the Town/In the Fight Field it is Going to be %RED%HIDDEN%NL%WARNING%WHITE%: At Current Filter LVL this item is shown %RED%ONLY %WHITE%in Town%CL%%NAME%}
 ItemDisplay[(ARMOR OR WEAPON) INF FILTLVL>0]: {%NAME%}
 ItemDisplay[(ARMOR OR WEAPON) !leg !THROWPOTS ((CLVL>30 FILTLVL>0) OR FILTLVL>3)]: {%NAME%}
 
