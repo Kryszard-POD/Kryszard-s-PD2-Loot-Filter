@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season X: ver 10.4.6
+//	Kryszard's PD2 Loot Filter for Season X: ver 10.4.7
 //  Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -14,7 +14,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%futureal.filter ver 10.4.6}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%futureal.filter ver 10.4.7}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%Item Filter %WHITE%- %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -587,7 +587,7 @@ ItemDisplay[NMAG !ID SHOP ba3 MAPID>132]: %NAME%%GOLD%Demonhorn's Edge%NL%%WHITE
 ItemDisplay[NMAG !ID SHOP ba4 MAPID>132]: %NAME%%GOLD%Halaberd's Reign%NL%%WHITE%Elite Tier:%CONTINUE%
 ItemDisplay[NMAG !ID SHOP ba5 MAPID>132]: %NAME%%GOLD%Raekor's Virtue%NL%%WHITE%Elite Tier:%NL%%NL%%GOLD%Arreat's Face%NL%%WHITE%Exceptional Tier:%CONTINUE%
 ItemDisplay[NMAG !ID SHOP dr1 MAPID>132]: %NAME%%GOLD%Cerebus' Bite%NL%%WHITE%Elite Tier:%CONTINUE%
-ItemDisplay[NMAG !ID SHOP dr2 MAPID>132]: %NAME%%GOLD%Denmother%NL%%WHITE%Elite Tier:%NL%%NL%Quetzalcoatl%NL%%WHITE%Normal Tier:%CONTINUE%
+ItemDisplay[NMAG !ID SHOP dr2 MAPID>132]: %NAME%%GOLD%Denmother%NL%%WHITE%Elite Tier:%NL%%NL%%GOLD%Quetzalcoatl%NL%%WHITE%Normal Tier:%CONTINUE%
 ItemDisplay[NMAG !ID SHOP dr3 MAPID>132]: %NAME%%GOLD%Spirit Keeper%NL%%WHITE%Elite Tier:%CONTINUE%
 ItemDisplay[NMAG !ID SHOP dr4 MAPID>132]: %NAME%%GOLD%Ravenlore%NL%%WHITE%Elite Tier:%CONTINUE%
 ItemDisplay[NMAG !ID SHOP dr5 MAPID>132]: %NAME%%GOLD%Ursa's Nightmare%NL%%WHITE%Elite Tier:%NL%%NL%%GOLD%Jalal's Mane%NL%%WHITE%Exceptional Tier:%CONTINUE%
@@ -610,7 +610,7 @@ ItemDisplay[NMAG !ID SHOP qui MAPID>132]: %NAME%%GOLD%Ormus' Robes%NL%%WHITE%Eli
 ItemDisplay[NMAG !ID SHOP lea MAPID>132]: %NAME%%GOLD%Skin of the Vipermagi%NL%%WHITE%Exceptional Tier:%NL%%NL%%GOLD%Blinkbat's Form%NL%%WHITE%Normal Tier:%CONTINUE%
 ItemDisplay[NMAG !ID SHOP hla MAPID>132]: %NAME%%GOLD%Skin of the Flayed One%NL%%WHITE%Exceptional Tier:%NL%%NL%%GOLD%The Centurion%NL%%WHITE%Normal Tier:%CONTINUE%
 ItemDisplay[NMAG !ID SHOP stu MAPID>132]: %NAME%%GOLD%The Gladiator's Bane%NL%%WHITE%Elite Tier:%NL%%NL%%GOLD%Iron Pelt%NL%%WHITE%Exceptional Tier:%NL%%NL%%GOLD%Twitchthroe%NL%%WHITE%Normal Tier:%CONTINUE%
-ItemDisplay[NMAG !ID SHOP rng MAPID>132]: %NAME%%GOLD%Wraithskin%NL%%WHITE%Elite Tier:%NL%%NL%Spirit Forge%NL%%WHITE%Exceptional Tier:%NL%%NL%%GOLD%Darkglow%NL%%WHITE%Normal Tier:%CONTINUE%
+ItemDisplay[NMAG !ID SHOP rng MAPID>132]: %NAME%%GOLD%Wraithskin%NL%%WHITE%Elite Tier:%NL%%NL%%GOLD%Spirit Forge%NL%%WHITE%Exceptional Tier:%NL%%NL%%GOLD%Darkglow%NL%%WHITE%Normal Tier:%CONTINUE%
 ItemDisplay[NMAG !ID SHOP scl MAPID>132]: %NAME%%GOLD%Crow Caw%NL%%WHITE%Exceptional Tier:%NL%%NL%%GOLD%Hawkmail%NL%%WHITE%Normal Tier:%CONTINUE%
 ItemDisplay[NMAG !ID SHOP brs MAPID>132]: %NAME%%GOLD%Duriel's Shell%NL%%WHITE%Exceptional Tier:%NL%%NL%%GOLD%Venom Ward%NL%%WHITE%Normal Tier:%CONTINUE%
 ItemDisplay[NMAG !ID SHOP chn MAPID>132]: %NAME%%GOLD%Shaftstop%NL%%WHITE%Exceptional Tier:%NL%%NL%%GOLD%Sparking Mail%NL%%WHITE%Normal Tier:%CONTINUE%
@@ -675,7 +675,7 @@ ItemDisplay[NMAG !ID SHOP mxb MAPID>132]: %NAME%%GOLD%Pus Spitter%NL%%WHITE%Exce
 ItemDisplay[NMAG !ID SHOP hxb MAPID>132]: %NAME%%GOLD%Hellrack%NL%%WHITE%Elite Tier:%NL%%NL%%GOLD%Buriza-Do Kyanon%NL%%WHITE%Exceptional Tier:%NL%%NL%%GOLD%Hellcast%NL%%WHITE%Normal Tier:%CONTINUE%
 ItemDisplay[NMAG !ID SHOP rxb MAPID>132]: %NAME%%GOLD%Gut Siphon%NL%%WHITE%Elite Tier:%NL%%NL%%GOLD%Demon Machine%NL%%WHITE%Exceptional Tier:%NL%%NL%%GOLD%Doomslinger%NL%%WHITE%Normal Tier:%CONTINUE%
 ItemDisplay[NMAG !ID SHOP dgr MAPID>132]: %NAME%%GOLD%Wizardspike%NL%%WHITE%Elite Tier:%NL%%NL%%GOLD%Spineripper%NL%%WHITE%Exceptional Tier:%NL%%NL%%GOLD%Gull%NL%%WHITE%Normal Tier:%CONTINUE%
-ItemDisplay[NMAG !ID SHOP dir MAPID>132]: %NAME%%GOLD%Shatterblade%NL%%WHITE%Elite Tier:%NL%%NL%Heart Carver%NL%%WHITE%Exceptional Tier:%NL%%NL%%GOLD%The Diggler%NL%%WHITE%Normal Tier:%CONTINUE%
+ItemDisplay[NMAG !ID SHOP dir MAPID>132]: %NAME%%GOLD%Shatterblade%NL%%WHITE%Elite Tier:%NL%%NL%%GOLD%Heart Carver%NL%%WHITE%Exceptional Tier:%NL%%NL%%GOLD%The Diggler%NL%%WHITE%Normal Tier:%CONTINUE%
 ItemDisplay[NMAG !ID SHOP kri MAPID>132]: %NAME%%GOLD%Fleshripper%NL%%WHITE%Elite Tier:%NL%%NL%%GOLD%Blackbog's Sharp%NL%%WHITE%Exceptional Tier:%NL%%NL%%GOLD%The Jade Tan Do%NL%%WHITE%Normal Tier:%CONTINUE%
 ItemDisplay[NMAG !ID SHOP bld MAPID>132]: %NAME%%GOLD%Ghostflame%NL%%WHITE%Elite Tier:%NL%%NL%%GOLD%Stormspike%NL%%WHITE%Exceptional Tier:%NL%%NL%%GOLD%Spectral Shard%NL%%WHITE%Normal Tier:%CONTINUE%
 // ItemDisplay[NMAG !ID SHOP jav MAPID>132]: %NAME%
@@ -1009,27 +1009,27 @@ ItemDisplay[(lbt OR xhb OR uhb OR xvb) UNI !ID]: %MAP-68%%NAME%
 //shields
 ItemDisplay[(nee OR pa9 OR nea OR uts OR uow OR xsh OR xow OR pae OR nef OR pac) UNI !ID]: %MAP-68%%NAME%
 //weapons
-ItemDisplay[(7ts OR 7s8 OR 9bw OR 7wc OR 7bw OR 7ws OR 7fl OR 7cr OR 7gm OR oba OR ama OR obc OR 7lw OR amf OR 7wh OR 7p7 OR 7wa) UNI !ID]: %MAP-68%%NAME%
+ItemDisplay[(7ts OR 7s8 OR 9bw OR 7wc OR 7bw OR 7ws OR 7fl OR 7cr OR 7gm OR oba OR ama OR obc OR amf OR 7wh OR 7p7 OR 7wa) UNI !ID]: %MAP-68%%NAME%
 
 //OK/Lower Value UNIQUES only when ETH
 ItemDisplay[(7ga) UNI ETH !ID]: %DOT-68%%TAN%%NAME%
 //OK/Lower Value UNIQUES
-ItemDisplay[(7pa OR 7bt OR ltp OR xcl OR 9tw OR xtp OR xth OR 7kr OR xpl OR xld OR 7b7 OR 8hx OR 7cs OR xmb OR tbt OR amb) UNI !ID]: %DOT-68%%NAME%
+ItemDisplay[(7pa OR 7bt OR ltp OR xcl OR 9tw OR xtp OR xth OR 7kr OR xpl OR xld OR 7b7 OR 8hx OR 7cs OR xmb OR tbt OR amb OR 7sc OR 7ha OR 7ls OR 7lw) UNI !ID]: %DOT-68%%NAME%
 
 //Uniques worth notifying
 //Armors
 ItemDisplay[(brs OR fld OR xkp OR xul OR xlm OR drb OR 9sp OR mbt OR rng OR uul OR xng OR xui OR spl OR xmg OR xsk OR xml OR xlb OR xap OR xrs OR gth OR aar OR (BELT !(vbl OR hbl)) OR skp OR xhl OR xrn OR vbt OR uvb OR umb OR lgl OR vgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR ush OR upk OR uml OR xts OR xrg OR tow OR kit OR gts OR xar) UNI !ID]: %PX-68%%TIER-5%%NAME%
 //Weapons
-ItemDisplay[((8ws OR 8lb OR 92h OR 8s8 OR 9wc OR 92h OR 8mx OR 6rx OR 6hx OR 9gw OR 7m7 OR 9cl OR mau OR 7ls OR 9ls OR 7br OR 7sr OR 7p7 OR 9ba OR 7ga OR 7gi OR 8ls OR 72a OR 7o7 OR 9yw OR 9fc OR 9kr OR 7sc OR 7mp OR 6sw OR 6l7 OR 8rx OR dgr OR 7dg OR 7bl OR 9ma OR 9wh OR 9gm OR 9ws OR 6cs OR 7gs OR 9sb OR 9bs) OR (ELT (THROWING OR JAV)) OR 7wb OR 7sp) UNI !ID]: %PX-68%%TIER-5%%NAME%
+ItemDisplay[((8ws OR 8lb OR 92h OR 8s8 OR 9wc OR 92h OR 8mx OR 6rx OR 6hx OR 9gw OR 7m7 OR 9cl OR mau OR 9ls OR 7br OR 7sr OR 7p7 OR 9ba OR 7ga OR 7gi OR 8ls OR 72a OR 7o7 OR 9yw OR 9fc OR 9kr OR 7mp OR 6sw OR 6l7 OR 8rx OR dgr OR 7dg OR 7bl OR 9ma OR 9wh OR 9gm OR 9ws OR 6cs OR 7gs OR 9sb OR 9bs) OR (ELT (THROWING OR JAV)) OR 7wb OR 7sp) UNI !ID]: %PX-68%%TIER-5%%NAME%
 
 //Rainbow Facet
 ItemDisplay[jew UNI !ID]: %BORDER-68%%NAME%
 
 //Good SET parts when ETH
-ItemDisplay[(7fb OR 7gd OR 7ls OR 7m7 OR 7qr OR 7ws) SET ETH !ID]: %MAP-84%%NAME%
+ItemDisplay[(7fb OR 7gd OR 7ls OR 7m7 OR 7qr) SET ETH !ID]: %MAP-84%%NAME%
 
 //Good SET parts
-ItemDisplay[(amu OR rin OR uar OR ci3 OR 7qr OR uth OR paf OR urn) SET !ID]: %MAP-84%%NAME%
+ItemDisplay[(amu OR rin OR uar OR ci3 OR 7qr OR uth OR paf OR urn OR 7ws) SET !ID]: %MAP-84%%NAME%
 
 //Sets worth notifying
 ItemDisplay[((ARMOR OR WEAPON) (EXC OR ELT OR ci0 OR ba5 OR lbt) !(9vo OR xcl OR xrn)) SET !ID]: %PX-84%%TIER-5%%NAME%
@@ -3003,7 +3003,7 @@ ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9gm) ETH))]: %NAME%{%NAME%243}%C
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9gm) !ETH)) CHARSTAT0<253]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((9gm) !ETH))]: %NAME%{%NAME%253}%CONTINUE%
 //When -REQ appears
-ItemDisplay[(ARMOR OR WEAPON) !(CIRC OR SOR OR hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID !STAT91=0]: %NAME%{%NAME%%BLUE%-x%}%CONTINUE%
+ItemDisplay[(ARMOR OR WEAPON) !(CIRC OR SOR OR hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID !STAT91=0]: %NAME%{%NAME%%BLUE%%STAT91%%}%CONTINUE%
 //Dexterity
 ItemDisplay[(hax OR mpi OR gax OR 9ha OR 9ax OR 92a OR 9mp OR 9wa OR 9ba OR 9bt OR 9ga OR 9gi OR fla OR 9cl OR 9ma OR 9mt OR 9fl OR (SWORD !ssd) OR (DAGGER !THROWING !dgr) OR THROWING OR (SPEAR !THROWING !spt) OR (POLEARM !bar !vou) OR BOW OR XBOW OR 8ls OR 8cs OR 8bs OR 9sc OR 9qs OR 9ws OR SIN OR ZON) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID]: %NAME%{%NAME%%WHITE%, %LIGHT_GRAY%Dex%WHITE%:}%CONTINUE%
 //DEX REQ
@@ -3359,7 +3359,7 @@ ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((am6) !ETH))]: %NAME%{%NAME%187}%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8lb) !ETH)) CHARSTAT2<188]: %NAME%{%NAME%%RED%}%CONTINUE%
 ItemDisplay[(RARE OR CRAFT OR UNI OR SET) ID (((8lb) !ETH))]: %NAME%{%NAME%188}%CONTINUE%
 //When -REQ appears
-ItemDisplay[(hax OR mpi OR gax OR 9ha OR 9ax OR 92a OR 9mp OR 9wa OR 9ba OR 9bt OR 9ga OR 9gi OR fla OR 9cl OR 9ma OR 9mt OR 9fl OR (SWORD !ssd) OR (DAGGER !THROWING !dgr) OR THROWING OR (SPEAR !THROWING !spt) OR (POLEARM !bar !vou) OR BOW OR XBOW OR 8ls OR 8cs OR 8bs OR 9sc OR 9qs OR 9ws OR SIN OR ZON) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID !STAT91=0]: %NAME%{%NAME%%BLUE%-x%}%CONTINUE%
+ItemDisplay[(hax OR mpi OR gax OR 9ha OR 9ax OR 92a OR 9mp OR 9wa OR 9ba OR 9bt OR 9ga OR 9gi OR fla OR 9cl OR 9ma OR 9mt OR 9fl OR (SWORD !ssd) OR (DAGGER !THROWING !dgr) OR THROWING OR (SPEAR !THROWING !spt) OR (POLEARM !bar !vou) OR BOW OR XBOW OR 8ls OR 8cs OR 8bs OR 9sc OR 9qs OR 9ws OR SIN OR ZON) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID !STAT91=0]: %NAME%{%NAME%%BLUE%%STAT91%%}%CONTINUE%
 //LVL
 //Part 1.
 ItemDisplay[(ARMOR OR WEAPON) !(CIRC OR SOR OR hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh) (RARE OR CRAFT OR UNI OR SET) (NORM OR EXC) ID]: %NAME%{%NAME%%WHITE%, }%CONTINUE%
