@@ -9,6 +9,12 @@ I am trying to make one filter, which will suit most players needs.
 Filter is good for both: leveling and endgame experience.  
 It's gonna show you almost everything which can help you during leveling process at early stages of your new characters, and became more strict after you hit **lvl 80+** (select your lootfilter level in-game settings to adjust it more for your needs)
 
+
+## Season 11 - Sound Notifications Preview:
+https://github.com/user-attachments/assets/08f57650-30e2-4dbc-9f46-c529d48d0f0a
+
+
+
 ## Mid Season X Update:
 
 ![S10_update2](https://github.com/user-attachments/assets/9a0485dd-18b6-481c-9a99-23b1e55acdb2)
