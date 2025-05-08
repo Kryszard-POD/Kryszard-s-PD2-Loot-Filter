@@ -12,13 +12,10 @@ It's gonna show you almost everything which can help you during leveling process
 
 
 ## Season 11 - Shop Hunting Preview:
-https://github.com/user-attachments/assets/eacfe5eb-cef6-4f77-939e-5f278c595ed7
-
+https://github.com/user-attachments/assets/b5e71954-e481-4597-a183-12eecc16bf37
 
 ## Season 11 - Sound Notifications Preview:
-https://github.com/user-attachments/assets/08f57650-30e2-4dbc-9f46-c529d48d0f0a
-
-
+https://github.com/user-attachments/assets/6960a1d9-e9c7-4466-870a-813f9dc54f6e
 
 ## Mid Season X Update:
 
