@@ -9,20 +9,33 @@ I am trying to make one filter, which will suit most players needs.
 Filter is good for both: leveling and endgame experience.  
 It's gonna show you almost everything which can help you during leveling process at early stages of your new characters, and became more strict after you hit **lvl 80+** (select your lootfilter level in-game settings to adjust it more for your needs)
 
+## Season 11 Update (WIP)
 
-
-## Season 11 - Shop Hunting Preview:
+### Season 11 - Shop Hunting Preview:
 https://github.com/user-attachments/assets/b5e71954-e481-4597-a183-12eecc16bf37
 
-## Season 11 - Sound Notifications Preview:
+### Season 11 - Sound Notifications Preview:
 https://github.com/user-attachments/assets/6960a1d9-e9c7-4466-870a-813f9dc54f6e
 
-## Season 11 - Staffmods & Price Tags Preview:
+### Season 11 - Pathfinding/Map Reading Tips Preview:
+
+![image](https://github.com/user-attachments/assets/3c88fd7a-1550-4e4a-ac01-93ff9476cb8c)
+
+![image](https://github.com/user-attachments/assets/ef0bb0fa-2ccb-42ff-9248-e0559da4018e)
+
+![image](https://github.com/user-attachments/assets/00c6a8ac-575e-4551-adb6-277a763a4bf7)
+
+![image](https://github.com/user-attachments/assets/c2e3504d-7397-4d9b-b24f-2020abde6f89)
+
+
+### Season 11 - Staffmods & Price Tags Preview:
 NEW (Season 11): 
 ![image](https://github.com/user-attachments/assets/28f30fd1-7aaa-4114-a8b1-de7ce8ca9dfb)
 
 OLD (Season 10):
 ![image](https://github.com/user-attachments/assets/bc8301da-f3d2-48d7-9e39-f614193abcbc)
+
+
 
 
 ## Mid Season X Update:
