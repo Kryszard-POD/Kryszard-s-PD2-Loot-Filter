@@ -35,6 +35,10 @@ NEW (Season 11):
 OLD (Season 10):
 ![image](https://github.com/user-attachments/assets/bc8301da-f3d2-48d7-9e39-f614193abcbc)
 
+### Season 11 - Other Screenshots Preview:
+Each rune display all RuneWords it is needed for:
+![image](https://github.com/user-attachments/assets/91e654d8-3eeb-4f3d-a4b7-4dd7ec01e877)
+
 
 
 
