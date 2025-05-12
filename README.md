@@ -9,15 +9,20 @@ I am trying to make one filter, which will suit most players needs.
 Filter is good for both: leveling and endgame experience.  
 It's gonna show you almost everything which can help you during leveling process at early stages of your new characters, and became more strict after you hit **lvl 80+** (select your lootfilter level in-game settings to adjust it more for your needs)
 
-## Season 11 Update (WIP)
+# Season 11 Filter Update – Patch Notes
 
-### Season 11 - Shop Hunting Preview:
-https://github.com/user-attachments/assets/b5e71954-e481-4597-a183-12eecc16bf37
+The filter has been updated to reflect **all Season 11 changes** that could affect its behavior or appearance.
 
-### Season 11 - Sound Notifications Preview:
-https://github.com/user-attachments/assets/6960a1d9-e9c7-4466-870a-813f9dc54f6e
+---
 
-### Season 11 - Pathfinding/Map Reading Tips Preview:
+## 🔍 What's New?
+
+### 🧭 Built-in Map Assistance (Legal Maphack?)
+While this is **not** a maphack (to comply with ToS), a new feature has been added to assist you in navigating the **LoD campaign** more efficiently:
+
+> **📌 Pathfinding and map-reading tips are now displayed on every Keys stack** in LoD areas!
+
+Preview:
 
 ![image](https://github.com/user-attachments/assets/3c88fd7a-1550-4e4a-ac01-93ff9476cb8c)
 
@@ -26,21 +31,140 @@ https://github.com/user-attachments/assets/6960a1d9-e9c7-4466-870a-813f9dc54f6e
 ![image](https://github.com/user-attachments/assets/00c6a8ac-575e-4551-adb6-277a763a4bf7)
 
 ![image](https://github.com/user-attachments/assets/c2e3504d-7397-4d9b-b24f-2020abde6f89)
+---
+
+### 🛒 Shop Hunting Revisited
+
+Preview:
+https://github.com/user-attachments/assets/b5e71954-e481-4597-a183-12eecc16bf37
 
 
-### Season 11 - Staffmods & Price Tags Preview:
+The Shop Hunting highlights have been **completely reworked**.
+
+- "Notice me, that's me!" notes have been replaced **inside vendor screens**.
+- The filter now highlights **+3 or more to any individual skill**, including all combinations such as:
+  - `+3` to a specific skill
+  - `+1` class skill + `+2` specific skill
+  - `+2` skill tree + `+1` specific skill
+  - Works for `+4`, `+5`, `+6` as well
+ 
+    **Highlight intensity scales** with +skills: +3 is subtle, +4 is stronger, +5 stands out, and **+6 absolutely pops!**
+
+#### 🎨 Skill Tree Color Coding (Based on Sorceress Trees):
+| Skill Tree | Theme     | Color  |
+|------------|-----------|--------|
+| Tree 1     | Cold      | Teal   |
+| Tree 2     | Lightning | Yellow |
+| Tree 3     | Fire      | Coral  |
+
+- Font color is blended if bonuses come from multiple trees.
+- Applies to **all character classes**.
+
+#### Additional Highlights:
+- High ED weapons & armors
+- High PDR armors or combined with ED versions
+- CtC or Charges for useful skills like:
+  - Teleport
+  - Amplify Damage
+  - Lower Resist
+
+📝 Old "Notice me, that's me!" notes still appear **outside vendor screens**.
+
+---
+
+### 🔊 Sound Notifications
+
+Added **optional** Sound Notifications for rare and valuable items.
+
+Preview:
+https://github.com/user-attachments/assets/6960a1d9-e9c7-4466-870a-813f9dc54f6e
+
+🔈 Enabled for:
+- Good&Rare Uniques
+- Uber Boss Materials
+- Uber Boss Uniques
+- Puzzlebox, Demonic Box, Puzzlepieces
+- Mid Runes
+- High Runes
+- Super-rare items:
+  - Lilith Mirror
+  - Horadric Navigator
+  - Skeleton Key
+  - etc.
+
+🎮 Toggle sound notifications via the **in-game menu**.
+
+---
+
+### 📦 Staffmods & Price Tag Updates
+
+- All staffmods (`+skills`, `+ED`, `eth`) now shown inside a **single bracket**:
+It is now: 
+ ```text
+  [15%|30r|eth]Sup Sacred Targe [4] *
+  ```
+Previously was:
+ ```text
+  [15%] [30r] [eth] Sup Sacred Targe [4] *
+  ```
+#### 💲 New Price Tag Display:
+
+| Price Range       | Display Format           |
+|-------------------|--------------------------|
+| 0 – 999           | Exact (e.g. `842`)       |
+| 1,000 – 4,999     | Nearest 100 (`1.0k`, `1.2k`) |
+| 5,000 – 9,999     | Nearest 500 (`5.0k`, `5.5k`) |
+| 10,000 – 35,000   | Nearest 1000 (`12k`, `15k`)  |
+
+> Full, unrounded values are still shown **in towns**.  
+> Extra spacing removed to reduce screen clutter.
+
 NEW (Season 11): 
 ![image](https://github.com/user-attachments/assets/28f30fd1-7aaa-4114-a8b1-de7ce8ca9dfb)
 
 OLD (Season 10):
 ![image](https://github.com/user-attachments/assets/bc8301da-f3d2-48d7-9e39-f614193abcbc)
 
-### Season 11 - Other Screenshots Preview:
-Each rune display all RuneWords it is needed for:
-![image](https://github.com/user-attachments/assets/91e654d8-3eeb-4f3d-a4b7-4dd7ec01e877)
+---
+
+### 🗺️ Map Descriptions Updated
+
+Maps now display:
+- All **monster immunities**
+- Highest **resistance values**
+- Each **Boss’s damage type**
+
+> ⚠️ If you notice missing or incorrect data, please report it.
+
+---
+
+## 🔧 Other Changes
+
+- RuneWords are now listed on **each required rune**
+- Removed:
+  - Price Tags on equipped items
+  - Craft Alvl info on equipped items
+- Added:
+  - Price Tags on crafted items
+  - Few missing good charm highlights
+  - Max socket info for throwing weapons
+  - RuneWords shown on socketed throwing weapons
+  - Some new RuneWord base items
+- Slight updates to some Unique item highlights due to affix changes
+- Included **all new Uniques**, including descriptions for **Gheed's Event**
+- Minor fixes and improvements to various item descriptions
+- Filter code refactored to use **Aliases** extensively for better future maintainability
+
+---
+
+## 🧪 Feedback
+
+Please report any bugs, missing highlights, or inconsistencies so they can be addressed in future updates.
+
+**Happy hunting! 🔥**
 
 
-
+---
 
 ## Mid Season X Update:
 
