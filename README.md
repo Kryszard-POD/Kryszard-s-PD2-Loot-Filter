@@ -63,10 +63,14 @@ The Shop Hunting highlights have been **completely reworked**.
 #### Additional Highlights:
 - High ED weapons & armors
 - High PDR armors or combined with ED versions
+- High All Res Affix
 - CtC or Charges for useful skills like:
   - Teleport
   - Amplify Damage
   - Lower Resist
+ 
+  ![image](https://github.com/user-attachments/assets/4fab33fa-1bf5-4742-9e00-ba958c2d5a5d)
+
 
 📝 Old "Notice me, that's me!" notes still appear **outside vendor screens**.
 
@@ -81,6 +85,7 @@ https://github.com/user-attachments/assets/6960a1d9-e9c7-4466-870a-813f9dc54f6e
 
 🔈 Enabled for:
 - Good&Rare Uniques
+- Good Set Items
 - Uber Boss Materials
 - Uber Boss Uniques
 - Puzzlebox, Demonic Box, Puzzlepieces
@@ -96,9 +101,9 @@ https://github.com/user-attachments/assets/6960a1d9-e9c7-4466-870a-813f9dc54f6e
 
 ---
 
-### 📦 Staffmods & Price Tag Updates
+### 📦 Staffmods, Automods & Price Tag Updates
 
-- All staffmods (`+skills`, `+ED`, `eth`) now shown inside a **single bracket**:
+- All staffmods and automods (`+skills`, `+ED`, `eth`) now shown inside a **single bracket**:
 It is now: 
  ```text
   [15%|30r|eth]Sup Sacred Targe [4] *
@@ -133,6 +138,8 @@ Maps now display:
 - All **monster immunities**
 - Highest **resistance values**
 - Each **Boss’s damage type**
+
+![image](https://github.com/user-attachments/assets/477f113b-a6ee-4610-9312-80c7095ae773)
 
 > ⚠️ If you notice missing or incorrect data, please report it.
 
