@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season 11: ver 11.0.3
+//	Kryszard's PD2 Loot Filter for Season 11: ver 11.1.3
 //	Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -14,7 +14,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 11.0.3 %BLACK%| %GRAY% updated: 2025-05-14}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 11.1.3 %BLACK%| %GRAY% updated: 2025-05-16}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%Item Filter %WHITE%- %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -3173,13 +3173,13 @@ ItemDisplay[STAFF RARE !ID FILTLVL<4]: %NAME%
 //ALL ITEM DESCRIPTIONS OPENER - DESCRIPTIONS BELOW THIS LINE
 
 //Notes about socketing recipes
-ItemDisplay[CHEST !INF !SUP SOCK=0 NMAG]: %NAME%{%WHITE%This Item, %ORANGE%Tal%WHITE%, %ORANGE%Thul%WHITE%, Perf %YELLOW%O%CL%%TAN%Note%WHITE%: Socketing Recipe:}%CONTINUE%
-ItemDisplay[(WEAPON AND !THROWPOTS) !INF !SUP SOCK=0 NMAG]: %NAME%{%WHITE%This Item, %ORANGE%Ral%WHITE%, %ORANGE%Amn%WHITE%, Perf %PURPLE%O%CL%%TAN%Note%WHITE%: Socketing Recipe:}%CONTINUE%
-ItemDisplay[(HELM OR CIRC) !INF !SUP SOCK=0 NMAG]: %NAME%{%NAME%%WHITE%This Item, %ORANGE%Ral%WHITE%, %ORANGE%Thul%WHITE%, Perf %BLUE%O%CL%%TAN%Note%WHITE%: Socketing Recipe:}%CONTINUE%
-ItemDisplay[SHIELD !INF !SUP SOCK=0 NMAG]: %NAME%{%WHITE%This Item, %ORANGE%Tal%WHITE%, %ORANGE%Amn%WHITE%, Perf %RED%O%CL%%TAN%Note%WHITE%: Socketing Recipe:}%CONTINUE%
+ItemDisplay[CHEST !INF !SUP SOCK=0 NMAG !SHOP]: %NAME%{%WHITE%This Item, %ORANGE%Tal%WHITE%, %ORANGE%Thul%WHITE%, Perf %YELLOW%O%CL%%TAN%Note%WHITE%: Socketing Recipe:}%CONTINUE%
+ItemDisplay[(WEAPON AND !THROWPOTS) !INF !SUP SOCK=0 NMAG !SHOP]: %NAME%{%WHITE%This Item, %ORANGE%Ral%WHITE%, %ORANGE%Amn%WHITE%, Perf %PURPLE%O%CL%%TAN%Note%WHITE%: Socketing Recipe:}%CONTINUE%
+ItemDisplay[(HELM OR CIRC) !INF !SUP SOCK=0 NMAG !SHOP]: %NAME%{%NAME%%WHITE%This Item, %ORANGE%Ral%WHITE%, %ORANGE%Thul%WHITE%, Perf %BLUE%O%CL%%TAN%Note%WHITE%: Socketing Recipe:}%CONTINUE%
+ItemDisplay[SHIELD !INF !SUP SOCK=0 NMAG !SHOP]: %NAME%{%WHITE%This Item, %ORANGE%Tal%WHITE%, %ORANGE%Amn%WHITE%, Perf %RED%O%CL%%TAN%Note%WHITE%: Socketing Recipe:}%CONTINUE%
 
 //Notes about socketing INF/SUP items
-ItemDisplay[(CHEST OR (WEAPON AND !THROWPOTS) OR HELM OR CIRC OR SHIELD) (INF OR SUP) NMAG SOCK=0]: %NAME%{%WHITE%or %RED%Corrupt %WHITE%for Random Sockets%CL%%TAN%Note%WHITE%: Larzuk for Max Sockets,}%CONTINUE%
+ItemDisplay[(CHEST OR (WEAPON AND !THROWPOTS) OR HELM OR CIRC OR SHIELD) (INF OR SUP) NMAG SOCK=0 !SHOP]: %NAME%{%WHITE%or %RED%Corrupt %WHITE%for Random Sockets%CL%%TAN%Note%WHITE%: Larzuk for Max Sockets,}%CONTINUE%
 
 //Notes about Max Sockets in NMAG items
 //helmets & circlets
@@ -3198,8 +3198,8 @@ ItemDisplay[(rng OR xng OR xcl OR xhn OR brs OR xrs OR xpl OR xlt OR xld OR ltp 
 ItemDisplay[(uui OR uea OR ula OR utu OR ung OR ucl OR uhn OR urs OR upl OR ult OR uld OR uth OR utp OR uul OR uar OR gth OR ful OR aar OR xth OR xul OR xar) NMAG SOCK=0]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%4%TAN%]}%CONTINUE%
 //shields
 ItemDisplay[(buc OR xuc) NMAG SOCK=0]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%1%TAN%]}%CONTINUE%
-ItemDisplay[(uuc OR sml OR xml OR uml) NMAG SOCK=0]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%2%TAN%]}%CONTINUE%
-ItemDisplay[(lrg OR xrg OR urg OR upk OR kit OR xit OR ush OR tow OR xow OR gts OR xts OR spk OR xpk OR bsh OR xsh) NMAG SOCK=0]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%3%TAN%]}%CONTINUE%
+ItemDisplay[(uuc OR sml OR xml OR uml OR bsh) NMAG SOCK=0]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%2%TAN%]}%CONTINUE%
+ItemDisplay[(lrg OR xrg OR urg OR upk OR kit OR xit OR ush OR tow OR xow OR gts OR xts OR spk OR xpk OR xsh) NMAG SOCK=0]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%3%TAN%]}%CONTINUE%
 ItemDisplay[(uit OR uow OR uts) NMAG SOCK=0]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%4%TAN%]}%CONTINUE%
 //pala shields
 ItemDisplay[DIN NORM NMAG SOCK=0 ILVL<26]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%3%TAN%]}%CONTINUE%
@@ -4541,13 +4541,13 @@ ItemDisplay[((dgr OR dir OR wnd OR ywn OR 9wn OR tkf OR tax OR jav) OR (buc OR x
 ItemDisplay[((dgr OR dir OR wnd OR ywn OR 9wn OR tkf OR tax OR jav) OR (buc OR xuc)) (RARE OR CRAFT OR UNI OR SET) ID SOCK=0]: %NAME%{%NAME%%TAN%]}%CONTINUE%
 //from 2 to 3
 //opener
-ItemDisplay[(((hax OR clb OR mac OR ssd OR scm OR sbr OR flc OR scp OR ktr OR wrb OR axf OR ces) OR (ci0 OR ci1 OR bhm OR xh9 OR qui OR lea OR hla OR stu OR xui OR xea OR xla OR xtu OR scl OR chn OR spl OR plt OR fld OR (NEC NORM)) STAT360=0) OR sst) (RARE OR CRAFT OR UNI OR SET) ID SOCK=0]: %NAME%{%NAME%%CL%%WHITE%After Upgrade: %TAN%[%WHITE%L:1}%CONTINUE%
+ItemDisplay[(((hax OR clb OR mac OR ssd OR scm OR sbr OR flc OR scp OR ktr OR wrb OR axf OR ces) OR (ci0 OR ci1 OR bhm OR xh9 OR qui OR lea OR hla OR stu OR xui OR xea OR xla OR xtu OR scl OR chn OR spl OR plt OR fld OR bsh OR (NEC NORM)) STAT360=0) OR sst) (RARE OR CRAFT OR UNI OR SET) ID SOCK=0]: %NAME%{%NAME%%CL%%WHITE%After Upgrade: %TAN%[%WHITE%L:1}%CONTINUE%
 //values
-ItemDisplay[((hax OR clb OR mac OR ssd OR scm OR sbr OR flc OR scp OR ktr OR wrb OR axf OR ces) OR (ci0 OR ci1 OR bhm OR xh9 OR qui OR lea OR hla OR stu OR xui OR xea OR xla OR xtu OR scl OR chn OR spl OR plt OR fld OR (NEC NORM))) (RARE OR CRAFT OR UNI OR SET) ID SOCK=0 STAT360=0]: %NAME%{%NAME%, %TAN%P%WHITE%:2}%CONTINUE%
+ItemDisplay[((hax OR clb OR mac OR ssd OR scm OR sbr OR flc OR scp OR ktr OR wrb OR axf OR ces) OR (ci0 OR ci1 OR bhm OR xh9 OR qui OR lea OR hla OR stu OR xui OR xea OR xla OR xtu OR scl OR chn OR spl OR plt OR fld OR bsh OR (NEC NORM))) (RARE OR CRAFT OR UNI OR SET) ID SOCK=0 STAT360=0]: %NAME%{%NAME%, %TAN%P%WHITE%:2}%CONTINUE%
 ItemDisplay[sst (RARE OR CRAFT OR UNI OR SET) ID SOCK=0]: %NAME%{%NAME%, %TAN%P%WHITE%:%ORANGE%3%WHITE%}%CONTINUE%
-ItemDisplay[((hax OR clb OR mac OR ssd OR scm OR sbr OR flc OR scp OR ktr OR wrb OR axf OR ces) OR (ci0 OR ci1 OR bhm OR xh9 OR qui OR lea OR hla OR stu OR xui OR xea OR xla OR xtu OR scl OR chn OR spl OR plt OR fld OR (NEC NORM)) OR sst) (RARE OR CRAFT OR UNI OR SET) ID SOCK=0 STAT360=0]: %NAME%{%NAME%, %RED%C%WHITE%:%ORANGE%3}%CONTINUE%
+ItemDisplay[((hax OR clb OR mac OR ssd OR scm OR sbr OR flc OR scp OR ktr OR wrb OR axf OR ces) OR (ci0 OR ci1 OR bhm OR xh9 OR qui OR lea OR hla OR stu OR xui OR xea OR xla OR xtu OR scl OR chn OR spl OR plt OR fld OR bsh OR (NEC NORM)) OR sst) (RARE OR CRAFT OR UNI OR SET) ID SOCK=0 STAT360=0]: %NAME%{%NAME%, %RED%C%WHITE%:%ORANGE%3}%CONTINUE%
 //closer
-ItemDisplay[(((hax OR clb OR mac OR ssd OR scm OR sbr OR flc OR scp OR ktr OR wrb OR axf OR ces) OR (ci0 OR ci1 OR bhm OR xh9 OR qui OR lea OR hla OR stu OR xui OR xea OR xla OR xtu OR scl OR chn OR spl OR plt OR fld OR (NEC NORM)) STAT360=0) OR sst) (RARE OR CRAFT OR UNI OR SET) ID SOCK=0]: %NAME%{%NAME%%TAN%]}%CONTINUE%
+ItemDisplay[(((hax OR clb OR mac OR ssd OR scm OR sbr OR flc OR scp OR ktr OR wrb OR axf OR ces) OR (ci0 OR ci1 OR bhm OR xh9 OR qui OR lea OR hla OR stu OR xui OR xea OR xla OR xtu OR scl OR chn OR spl OR plt OR fld OR bsh OR (NEC NORM)) STAT360=0) OR sst) (RARE OR CRAFT OR UNI OR SET) ID SOCK=0]: %NAME%{%NAME%%TAN%]}%CONTINUE%
 //from 3 to 4
 //opener
 ItemDisplay[(bar OR sbw OR lxb) (RARE OR CRAFT OR UNI OR SET) ID SOCK=0]: %NAME%{%NAME%%CL%%WHITE%After Upgrade: %TAN%[%WHITE%L:1}%CONTINUE%
@@ -4617,8 +4617,8 @@ ItemDisplay[(rng OR xng OR xcl OR xhn OR brs OR xrs OR xpl OR xlt OR xld OR ltp 
 ItemDisplay[(uui OR uea OR ula OR utu OR ung OR ucl OR uhn OR urs OR upl OR ult OR uld OR uth OR utp OR uul OR uar OR gth OR ful OR aar OR xth OR xul OR xar) (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0]: %NAME%{%NAME%, %RED%C%WHITE%:3}%CONTINUE%
 //shields
 ItemDisplay[(buc OR xuc) (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0]: %NAME%{%NAME%, %RED%C%WHITE%:1}%CONTINUE%
-ItemDisplay[(uuc OR sml OR xml OR uml) (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0]: %NAME%{%NAME%, %RED%C%WHITE%:2}%CONTINUE%
-ItemDisplay[(lrg OR xrg OR urg OR upk OR kit OR xit OR ush OR tow OR xow OR gts OR xts OR spk OR xpk OR bsh OR xsh) (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0]: %NAME%{%NAME%, %RED%C%WHITE%:3}%CONTINUE%
+ItemDisplay[(uuc OR sml OR xml OR uml OR bsh) (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0]: %NAME%{%NAME%, %RED%C%WHITE%:2}%CONTINUE%
+ItemDisplay[(lrg OR xrg OR urg OR upk OR kit OR xit OR ush OR tow OR xow OR gts OR xts OR spk OR xpk OR xsh) (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0]: %NAME%{%NAME%, %RED%C%WHITE%:3}%CONTINUE%
 ItemDisplay[(uit OR uow OR uts) (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0]: %NAME%{%NAME%, %RED%C%WHITE%:3}%CONTINUE%
 //pala shields
 ItemDisplay[DIN NORM (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0 ILVL<26]: %NAME%{%NAME%, %RED%C%WHITE%:3}%CONTINUE%
