@@ -2190,7 +2190,7 @@ ItemDisplay[mp3]: %BLUE%!%WHITE%mana{%WHITE%Mana Potion}%CONTINUE%
 ItemDisplay[mp4]: %BLUE%!%WHITE%great mp{%WHITE%Greater Mana Potion}%CONTINUE%
 ItemDisplay[(hp1 OR hp2 OR hp3 OR mp1 OR mp2 OR mp3) FILTLVL>0 (DIFF>0 OR FILTLVL=4 OR FILTLVL>5) !SHOP]: {%NAME%}
 ItemDisplay[(hp4 OR mp4) FILTLVL>0 (DIFF>1 OR FILTLVL=4 OR FILTLVL>5) !SHOP]: {%NAME%}
-ItemDisplay[(hp5 OR mp5) DIFF>1 (FILTLVL=4 OR FILTLVL>5) !SHOP]: {%NAME%}
+ItemDisplay[(hp5 OR mp5) (DIFF>1 OR FILTLVL=4 OR FILTLVL>5) !SHOP]: {%NAME%}
 
 //Utilites
 ItemDisplay[tsc]: %BLUE%* %GRAY%tp %WHITE%scroll{%RED%Warning%WHITE%: You gonna lose socketed Runes/Gems/Jewels%NL%Socketed Item, %BLUE%* %GRAY%tp %WHITE%scroll, %ORANGE%Hel%NL%%TAN%Note%WHITE%: To remove Runes/Gems/Jewels from Item:%NL%Scroll of Town Portal}%CONTINUE%
