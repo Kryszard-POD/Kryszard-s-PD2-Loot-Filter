@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season 11: ver 11.1.4
+//	Kryszard's PD2 Loot Filter for Season 11: ver 11.1.5
 //	Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -15,7 +15,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 11.1.4 %BLACK%| %GRAY% updated: 2025-05-17}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 11.1.5 %BLACK%| %GRAY% updated: 2025-05-17}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -2189,9 +2189,9 @@ ItemDisplay[mp1]: %WHITE%minor Mana{%WHITE%Minor Mana Potion}%CONTINUE%
 ItemDisplay[mp2]: %WHITE%light Mana{%WHITE%Light Mana Potion}%CONTINUE%
 ItemDisplay[mp3]: %WHITE%Mana{%WHITE%Mana Potion}%CONTINUE%
 ItemDisplay[mp4]: %WHITE%great Mana{%WHITE%Greater Mana Potion}%CONTINUE%
-ItemDisplay[(hp1 OR hp2 OR hp3 OR mp1 OR mp2 OR mp3) FILTLVL>0 (DIFF>0 OR FILTLVL=4 OR FILTLVL>5) !SHOP]: {%NAME%}
-ItemDisplay[(hp4 OR mp4) FILTLVL>0 (DIFF>1 OR FILTLVL=4 OR FILTLVL>5) !SHOP]: {%NAME%}
-ItemDisplay[(hp5 OR mp5) (DIFF>1 OR FILTLVL=4 OR FILTLVL>5) !SHOP]: {%NAME%}
+ItemDisplay[(hp1 OR hp2 OR hp3 OR mp1 OR mp2 OR mp3) ((FILTLVL>0 DIFF>0) OR (FILTLVL=4 OR FILTLVL>5)) !SHOP]: {%NAME%}
+ItemDisplay[(hp4 OR mp4) ((FILTLVL>0 DIFF>1) OR (FILTLVL=4 OR FILTLVL>5)) !SHOP]: {%NAME%}
+ItemDisplay[(hp5 OR mp5) (FILTLVL=4 OR FILTLVL>5) !SHOP]: {%NAME%}
 
 //Utilites
 ItemDisplay[tsc]: %WHITE%tp scroll{%RED%Warning%WHITE%: You gonna lose socketed Runes/Gems/Jewels%NL%Socketed Item, %BLUE%* %GRAY%tp %WHITE%scroll, %ORANGE%Hel%NL%%TAN%Note%WHITE%: To remove Runes/Gems/Jewels from Item:%NL%Scroll of Town Portal}%CONTINUE%
