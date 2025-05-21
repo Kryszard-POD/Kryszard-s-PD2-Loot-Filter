@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season 11: ver 11.1.7
+//	Kryszard's PD2 Loot Filter for Season 11: ver 11.1.8
 //
 //	twitch.tv/kryszard
 //
@@ -14,7 +14,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 11.1.7 %BLACK%| %GRAY% updated: 2025-05-19}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 11.1.8 %BLACK%| %GRAY% updated: 2025-05-21}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -5464,6 +5464,7 @@ ItemDisplay[8ws NMAG !INF !RW !SOCK~1-3 FILTLVL<5]: %NAME%{%NAME%}
 ItemDisplay[wst ((SK44>2 OR SK64>2 OR SK65>2 OR SK59>2 OR SK369>2) OR ((SK44>1 OR SK64>1 OR SK59>1 OR SK369>1) AND SK65>0)) NMAG !RW (SOCK=0 OR SOCK=5) FILTLVL<5]: %NAME%{%NAME%}
 ItemDisplay[(8cs OR 8bs OR 8ws) (SK48>2 OR SK49>2 OR SK38>2 OR SK53>2 OR SK57>2 OR SK63>2 OR SK383>2 OR SK376>2 OR SK61>2 OR SK51>2 OR SK47>2) NMAG !RW (SOCK=0 OR SOCK=4) FILTLVL<5]: %NAME%{%NAME%}
 ItemDisplay[(cst OR bst OR 8cs OR 8bs OR 6cs OR 6bs OR wst OR 8ws OR 6ws) (SK58>1 OR SK50>1) NMAG !RW (SOCK=0 OR SOCK=4 OR SOCK=5) FILTLVL<5]: %NAME%{%NAME%}
+ItemDisplay[(cst OR bst OR 8cs OR 8bs OR 6cs OR 6bs OR wst OR 8ws OR 6ws) (SK40>2 AND SK52>2) NMAG !RW (SOCK=0 OR SOCK=4 OR SOCK=5) FILTLVL<5]: %NAME%{%NAME%}
 ItemDisplay[STAFF ELT NMAG !RW SOCK=3 FILTLVL<5]: %NAME%{%NAME%}
 ItemDisplay[(wst OR 8ws OR 6ws) (SK50>0 OR SK58>0 OR SK60>0) NMAG !RW (SOCK=0 OR SOCK=4 OR SOCK=5) FILTLVL<5]: %NAME%{%NAME%}
 //Polearms/Spears/Amazon Spears
@@ -5766,7 +5767,7 @@ ItemDisplay[t12]: %NAME%{%WHITE%Boss Damage: %GOLD%Phys %BLACK%| %WHITE%Monsters
 ItemDisplay[t12]: %NAME%{%RED%F%WHITE%:%CORAL%135 %BLACK%| %BLUE%C%WHITE%:%CORAL%130 %BLACK%| %YELLOW%L%WHITE%:80 %BLACK%| %GREEN%P%WHITE%:75 %BLACK%| %ORANGE%M%WHITE%:50 %BLACK%| %GOLD%P%WHITE%:50%CL%%NAME%}%CONTINUE%
 //Bastion Keep Map
 ItemDisplay[t13]: %NAME%{%WHITE%Boss Damage: %BLUE%Cold %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
-ItemDisplay[t13]: %NAME%{%RED%F%WHITE%:85 %BLACK%| %BLUE%C%WHITE%:85 %BLACK%| %YELLOW%L%WHITE%:85 %BLACK%| %GREEN%P%WHITE%:85 %BLACK%| %ORANGE%M%WHITE%:40 %BLACK%| %GOLD%P%WHITE%:45%CL%%NAME%}%CONTINUE%
+ItemDisplay[t13]: %NAME%{%RED%F%WHITE%:%CORAL%125 %BLACK%| %BLUE%C%WHITE%:%CORAL%130 %BLACK%| %YELLOW%L%WHITE%:75 %BLACK%| %GREEN%P%WHITE%:85 %BLACK%| %ORANGE%M%WHITE%:50 %BLACK%| %GOLD%P%WHITE%:%CORAL%110%CL%%NAME%}%CONTINUE%
 //Sanatorium Map
 ItemDisplay[t14]: %NAME%{%WHITE%Boss Damage: %GOLD%Phys%WHITE%/%ORANGE%Magic %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
 ItemDisplay[t14]: %NAME%{%RED%F%WHITE%:75 %BLACK%| %BLUE%C%WHITE%:75 %BLACK%| %YELLOW%L%WHITE%:%CORAL%125 %BLACK%| %GREEN%P%WHITE%:%CORAL%130 %BLACK%| %ORANGE%M%WHITE%:35 %BLACK%| %GOLD%P%WHITE%:60%CL%%NAME%}%CONTINUE%
