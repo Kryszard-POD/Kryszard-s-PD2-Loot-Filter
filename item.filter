@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season 11: ver 11.1.8
+//	Kryszard's PD2 Loot Filter for Season 11: ver 11.1.9
 //
 //	twitch.tv/kryszard
 //
@@ -14,7 +14,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 11.1.8 %BLACK%| %GRAY% updated: 2025-05-21}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 11.1.9 %BLACK%| %GRAY% updated: 2025-05-22}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -104,9 +104,9 @@ Alias[NOTIFYSET1]: (((ARMOR OR WEAPON) (EXC OR ELT OR ci0 OR ba5 OR lbt) !(9vo O
 
 //NMAG ITEMS WITH ED TO SHOW EXACT ED VALUES 
 //Armors
-Alias[EDARMOR]: ((((CHEST OR (HELM !(BAR OR DRU)) OR (SHIELD !(DIN OR NEC))) ELT) OR (DIN (EXC OR ELT) (RES>19 OR AR>100)) OR (gth OR ful OR aar) OR (xng OR xcl OR xhn OR xrs OR xpl OR xlt OR xld OR xtp) OR ci3 OR xsh OR xhm) !SOCK=1 !INF SUP NMAG ED~5-15)
+Alias[EDARMOR]: ((((CHEST OR (HELM !(BAR OR DRU)) OR (SHIELD !(DIN OR NEC))) ELT) OR (DIN (EXC OR ELT) (RES>19 OR AR>100)) OR (gth OR ful OR aar) OR (xng OR xcl OR xhn OR xrs OR xpl OR xlt OR xld OR xtp) OR ci3 OR xsh OR xhm OR (RW ARMOR)) !SOCK=1 !INF SUP NMAG ED~5-15)
 //Weapons
-Alias[EDWEAPON]: ((((WEAPON !SIN !SOR !WAND !SCEPTER !STAFF !(clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp) !DAGGER) ELT) OR 8rx) !SOCK=1 !INF SUP NMAG ED~5-15)
+Alias[EDWEAPON]: ((((WEAPON !SIN !SOR !WAND !SCEPTER !STAFF !(clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp) !DAGGER) ELT) OR 8rx OR (RW WEAPON)) !SOCK=1 !INF SUP NMAG ED~5-15)
 
 //STAFFMODS
 //Amazon STAFFMODS
@@ -5278,9 +5278,11 @@ ItemDisplay[WEAPON (MAG OR RARE OR CRAFT) (SUFFIX=578 OR SUFFIX=579) !SHOP !EQUI
 //ALL ITEM DESCRIPTIONS CLOSER - DESCRIPTIONS ABOVE THIS LINE
 
 //Imbue Bases
-ItemDisplay[ci3 NMAG !ETH SOCK=0]: %DOT-D6%%TIER-4%%NAME%{%TAN%Note%WHITE%: You can %YELLOW%Imbue %WHITE%it using Charsi quest%NL%%NAME%}
-ItemDisplay[(am5 OR ama OR amf) (AMAZON OR FILTLVL<2) NMAG ETH (ALVL>59 OR CRAFTALVL>59) SOCK=0 FILTLVL<5]: %NAME%{%TAN%Note%WHITE%: You can %YELLOW%Imbue %WHITE%it using Charsi quest%NL%%NAME%}
-ItemDisplay[(7ja OR 7pi OR 7s7 OR 7gl OR 7ts OR 7ta) (BARBARIAN OR FILTLVL<2) NMAG ETH (ALVL>74 OR CRAFTALVL>74) SOCK=0 FILTLVL<5]: %NAME%{%TAN%Note%WHITE%: You can %YELLOW%Imbue %WHITE%it using Charsi quest%NL%%NAME%}
+ItemDisplay[ci3 NMAG !ETH SOCK=0]: %DOT-D6%%TIER-4%%NAME%{%TAN%Note%WHITE%: You can %YELLOW%Imbue %WHITE%it using Charsi quest%CL%%NAME%}
+ItemDisplay[7cr NMAG SOCK=0 !PALADIN]: %DOT-D6%%TIER-2%%NAME%{%TAN%grant a %GOLD%Legendary Weapon %TAN%of the Paladin%CL%%GRAY%Psst... %TAN%It is said that %YELLOW%Imbuing %TAN%this base may%CL%%TAN%Note%WHITE%: You can %YELLOW%Imbue %WHITE%it using Charsi quest%CL%%NAME%}
+ItemDisplay[7cr NMAG SOCK=0 PALADIN]: %DOT-D6%%TIER-4%%NAME%{%TAN%grant a %GOLD%Legendary Weapon %TAN%of the Paladin%CL%%GRAY%Psst... %TAN%It is said that %YELLOW%Imbuing %TAN%this base may%CL%%TAN%Note%WHITE%: You can %YELLOW%Imbue %WHITE%it using Charsi quest%CL%%NAME%}
+ItemDisplay[(am5 OR ama OR amf) (AMAZON OR FILTLVL<2) NMAG ETH (ALVL>59 OR CRAFTALVL>59) SOCK=0 FILTLVL<5]: %NAME%{%TAN%Note%WHITE%: You can %YELLOW%Imbue %WHITE%it using Charsi quest%CL%%NAME%}
+ItemDisplay[(7ja OR 7pi OR 7s7 OR 7gl OR 7ts OR 7ta) (BARBARIAN OR FILTLVL<2) NMAG ETH (ALVL>74 OR CRAFTALVL>74) SOCK=0 FILTLVL<5]: %NAME%{%TAN%Note%WHITE%: You can %YELLOW%Imbue %WHITE%it using Charsi quest%CL%%NAME%}
 //RuneWord Bases
 //Chests
 ItemDisplay[((gth OR ful OR aar) OR (xng OR xcl OR xhn OR xrs OR xpl OR xlt OR xld OR xtp)) !INF !ETH NMAG !RW (SOCK=0 OR SOCK=3) ED=15]: %DOT-D6%%NAME%{%NAME%}
@@ -5458,7 +5460,7 @@ ItemDisplay[6ws NMAG !INF !RW !SOCK~1-3]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[(cst OR bst OR 8cs OR 8bs OR 6cs OR 6bs OR wst OR 8ws OR 6ws) (SK58>2 OR (SK58>0 AND SK50>0)) NMAG !RW (SOCK=0 OR SOCK=4 OR SOCK=5)]: %DOT-D6%%TIER-6%%NAME%{%NAME%}
 ItemDisplay[(6ws OR 6cs OR 6bs) NMAG !INF !RW !SOCK=1 ED>9]: %DOT-D6%%TIER-6%%NAME%{%NAME%}
 ItemDisplay[(6ws OR 6cs OR 6bs) NMAG !INF !RW !SOCK=1 ED>4 FILTLVL<7]: %DOT-D6%%TIER-4%%NAME%{%NAME%}
-ItemDisplay[(6ws OR 6cs OR 6bs) NMAG !INF !RW !SOCK~1-3]: %DOT-D6%%TIER-4%%NAME%{%NAME%}
+ItemDisplay[(6ws OR 6cs OR 6bs) NMAG !INF !RW !SOCK~1-3]: %DOT-D6%%TIER-2%%NAME%{%NAME%}
 ItemDisplay[(6ws OR 6cs OR 6bs) NMAG !INF !RW !SOCK=1 BARBARIAN FILTLVL<5]: %NAME%{%NAME%}
 ItemDisplay[8ws NMAG !INF !RW !SOCK~1-3 FILTLVL<5]: %NAME%{%NAME%}
 ItemDisplay[wst ((SK44>2 OR SK64>2 OR SK65>2 OR SK59>2 OR SK369>2) OR ((SK44>1 OR SK64>1 OR SK59>1 OR SK369>1) AND SK65>0)) NMAG !RW (SOCK=0 OR SOCK=5) FILTLVL<5]: %NAME%{%NAME%}
