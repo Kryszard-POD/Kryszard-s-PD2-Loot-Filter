@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season 11: ver 11.1.11
+//	Kryszard's PD2 Loot Filter for Season 11: ver 11.1.12
 //
 //	twitch.tv/kryszard
 //
@@ -14,7 +14,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 11.1.11 %BLACK%| %GRAY% updated: 2025-05-25}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 11.1.12 %BLACK%| %GRAY% updated: 2025-05-26}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -63,7 +63,7 @@ Alias[PD2NOTIFYUNI1]: ((9ar OR ob6 OR am5 OR pa3 OR ba7 OR ob7) UNI !ID)
 
 //LOD UNIQUES
 //GG UNIQUES only when ETH
-Alias[LODGGUNIETH1]: ((9gm OR 7gm OR 7s8 OR 7p7 OR 7wa) UNI ETH !ID)
+Alias[LODGGUNIETH1]: ((9gm OR 7gm OR 7s8 OR 7p7 OR 7wa OR 7wh) UNI ETH !ID)
 //GG UNIQUES
 Alias[LODGGUNI1]: ((rin OR amu OR 6ws OR uar OR ulc OR urn OR uap OR ci3 OR xtb OR uit OR 6lw OR 7gw OR 7gd OR obf OR ulm) UNI !ID)
 //OK UNIQUES only when ETH - Armors
@@ -250,7 +250,7 @@ Alias[SORTREE33]: (SK36=3 OR SK37=3 OR SK41=3 OR SK46=3 OR SK51=3 OR SK47=3 OR S
 
 //OTHER SHOP HUNTING HIGHLIGHTS
 //SHOPHUNT01 - HIGH ED
-Alias[SHOPHUNT01]: ((WEAPON (EDAM>249)) OR (ARMOR (EDAM>149)) OR (WEAPON (EDAM>199 AND (SUFFIX=662 OR SUFFIX=898 OR SUFFIX=899))))
+Alias[SHOPHUNT01]: ((WEAPON (EXC OR ELT) (EDAM>249)) OR (ARMOR (EDAM>149)) OR (WEAPON (EXC OR ELT) (EDAM>199 AND (SUFFIX=662 OR SUFFIX=898 OR SUFFIX=899))))
 //SHOPHUNT02 - LOW ED
 Alias[SHOPHUNT02]: ((STAT36>14 AND EDAM~1-150) OR (STAT36>9 AND EDAM~100-150))
 //SHOPHUNT03 - TELEPORT CHARGES
@@ -258,7 +258,7 @@ Alias[SHOPHUNT03]: (CHSK54>0)
 //SHOPHUNT04 - LOW RES CTC
 Alias[SHOPHUNT04]: (SUFFIX=909 OR SUFFIX=912)
 //SHOPHUNT05 - AMP DMG CTC
-Alias[SHOPHUNT05]: ((SUFFIX=899 OR SUFFIX=906) OR (WEAPON (EDAM>199 AND (SUFFIX=662 OR SUFFIX=898 OR SUFFIX=899))))
+Alias[SHOPHUNT05]: ((SUFFIX=899 OR SUFFIX=906) OR (WEAPON (EXC OR ELT) (EDAM>199 AND (SUFFIX=662 OR SUFFIX=898 OR SUFFIX=899))))
 //SHOPHUNT06 - LOW RES CHARGES
 Alias[SHOPHUNT06]: (SUFFIX=594 OR SUFFIX=595)
 //SHOPHUNT07 - LIFE TAP CHARGES
@@ -3169,6 +3169,7 @@ ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl
 ItemDisplay[(6hx OR 8hx OR hxb OR 6mx OR 8mx OR mxb OR 6lw OR 8lw OR lwb OR 6l7 OR 8l8 OR lbb OR 6lb OR 8lb OR lbw) RARE !ID]: %NAME%
 ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp OR mac OR 9ma OR 7ma OR mst OR 9mt OR 7mt OR ssd OR 9ss OR 7ss OR scm OR 9sm OR 7sm OR sbr OR 9sb OR 7sb OR flc OR 9fc OR 7fc OR wsd OR 9wd OR 7wd OR dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR bld OR 9bl OR 7bl OR STAFF OR BOW OR XBOW) RARE !ETH !ID FILTLVL<5]: %NAME%
 ItemDisplay[(BOW OR XBOW) RARE !ID (AMAZON OR FILTLVL<5)]: %NAME%
+ItemDisplay[(BOW OR XBOW) !(sbw OR 8sb OR 6sb OR hbw OR 8hb OR 6hb OR swb OR 8sw OR 6sw) RARE !ID]: %NAME%
 ItemDisplay[STAFF RARE !ID FILTLVL<5]: %NAME%
 
 //ALL ITEM DESCRIPTIONS OPENER - DESCRIPTIONS BELOW THIS LINE
@@ -4641,7 +4642,7 @@ ItemDisplay[(92a OR 72a OR 9la OR 9ba OR 9bt OR 7la OR 7ba OR 7bt OR 9fl OR 7fl 
 ItemDisplay[(92a OR 72a OR 9la OR 9ba OR 9bt OR 7la OR 7ba OR 7bt OR 9fl OR 7fl OR 9fb OR 7fb OR 9br OR 7br OR 7s8 OR 7pa OR 8s8 OR 8sw OR 6s7 OR 6sw OR 8rx OR 6rx OR 9ws OR 7ws OR amb OR am7 OR amc) 2H (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0]: %NAME%{%NAME%, %RED%C%WHITE%:5}%CONTINUE%
 //always 6
 ItemDisplay[(9mp OR 9wa OR 7mp OR 7wa OR 9ga OR 9gi OR 7ga OR 7gi OR 9m9 OR 9gm OR 7m7 OR 7gm OR 7cr OR 9gd OR 7gd OR 9st OR 9p9 OR 7st OR 7p7 OR 9h9 OR 9wc OR 7h7 OR 7wc OR 8l8 OR 8lw OR 6l7 OR 6lw OR 8hx OR 6hx OR 8ws OR 6ws OR am8 OR am9 OR amd OR ame) 1H (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0]: %NAME%{%NAME%, %RED%C%WHITE%:4}%CONTINUE%
-ItemDisplay[(9mp OR 9wa OR 7mp OR 7wa OR 9ga OR 9gi OR 7ga OR 7gi OR 9m9 OR 9gm OR 7m7 OR 7gm OR 7cr OR 9gd OR 7gd OR 9st OR 9p9 OR 7st OR 7p7 OR 9h9 OR 9wc OR 7h7 OR 7wc OR 8l8 OR 8lw OR 6l7 OR 6lw OR 8hx OR 6hx OR 8ws OR 6ws OR am8 OR am9 OR amd OR ame OR 7sr) (2H OR 7cr2) (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0]: %NAME%{%NAME%, %RED%C%WHITE%:6}%CONTINUE%
+ItemDisplay[(((9mp OR 9wa OR 7mp OR 7wa OR 9ga OR 9gi OR 7ga OR 7gi OR 9m9 OR 9gm OR 7m7 OR 7gm OR 7cr OR 9gd OR 7gd OR 9st OR 9p9 OR 7st OR 7p7 OR 9h9 OR 9wc OR 7h7 OR 7wc OR 8l8 OR 8lw OR 6l7 OR 6lw OR 8hx OR 6hx OR 8ws OR 6ws OR am8 OR am9 OR amd OR ame OR 7sr) 2H) OR 7cr2) (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0]: %NAME%{%NAME%, %RED%C%WHITE%:6}%CONTINUE%
 //varies 2/3/3
 ItemDisplay[(kri OR clw OR btl OR skr OR ob5 OR bal OR glv OR tsp) (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0 ILVL<26]: %NAME%{%NAME%, %RED%C%WHITE%:2}%CONTINUE%
 ItemDisplay[(kri OR clw OR btl OR skr OR ob5 OR bal OR glv OR tsp) (RARE OR CRAFT OR UNI OR SET OR MAG) SOCK=0 STAT360=0 ILVL>25]: %NAME%{%NAME%, %RED%C%WHITE%:3}%CONTINUE%
@@ -6073,7 +6074,7 @@ ItemDisplay[(gpws OR gpw)]: %NAME%{%NAME%%WHITE%You Can use %BLUE%Magic%WHITE%/%
 ItemDisplay[(skzs OR skz)]: %NAME%{%NAME%%WHITE%You Can use %BLUE%Magic%WHITE%/%YELLOW%Rare %WHITE%Items as Bases%NL%Gloves: %ORANGE%Io %BLACK%| %WHITE%Belt: %ORANGE%Eld %BLACK%| %WHITE%Boots: %ORANGE%El%NL%%WHITE%Weapon: %ORANGE%Shael %BLACK%| %WHITE%Chest: %ORANGE%Tir %BLACK%| %WHITE%Shield: %ORANGE%Sol%NL%%WHITE%Ring: %ORANGE%Hel %BLACK%| %WHITE%Helm: %ORANGE%Lum %BLACK%| %WHITE%Amulet: %ORANGE%Dol%NL%%TAN%Note%WHITE%: Vampiric Crafting Recipes: Perf %GRAY%O%WHITE%, %BLUE%Jewel%WHITE%,}%CONTINUE%
 
 //Hide Flawlesses on Max Strict Level
-//ItemDisplay[(GEM<5 OR (gzvs OR glys OR glbs OR glgs OR glrs OR glws OR skls)) FILTLVL>6]:{%NAME%}%CONTINUE%
+ItemDisplay[(GEM<5 OR (gzvs OR glys OR glbs OR glgs OR glrs OR glws OR skls)) FILTLVL>6]:{%NAME%}%CONTINUE%
 
 //Craft Infusions
 ItemDisplay[crfb]: %DOT-66%%ORANGE%[%RED%O%ORANGE%] %NAME%{%NAME%}
