@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season 11: ver 11.1.12
+//	Kryszard's PD2 Loot Filter for Season 11: ver 11.1.13
 //	Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -15,7 +15,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%futureal.filter ver 11.1.12 %BLACK%| %GRAY% updated: 2025-05-26}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%futureal.filter ver 11.1.13 %BLACK%| %GRAY% updated: 2025-05-28}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -70,7 +70,7 @@ Alias[LODGGUNI1]: ((rin OR amu OR 6ws OR uar OR ulc OR urn OR uap OR ci3 OR xtb 
 //OK UNIQUES only when ETH - Armors
 Alias[LODOKUNIETH1]: ((xpl) UNI ETH !ID)
 //OK UNIQUES only when ETH - Weapons
-Alias[LODOKUNIETH2]: ((7gi OR 7m7 OR 8ls OR 7gl OR 7b8 OR 7bk OR 7ha OR 7b7 OR 7sr OR 9b8) UNI ETH !ID)
+Alias[LODOKUNIETH2]: ((7gi OR 7m7 OR 8ls OR 7gl OR 7b8 OR 7bk OR 7ha OR 7b7 OR 7sr OR 9b8 OR 9la) UNI ETH !ID)
 //belts
 Alias[LODOKUNI1]: ((ztb OR zlb OR zvb OR zhb OR umc OR uvc) UNI !ID)
 //armors
@@ -91,9 +91,9 @@ Alias[LODLOWUNIETH1]: ((7ga OR mau) UNI ETH !ID)
 Alias[LODLOWUNI1]: ((7pa OR 7bt OR ltp OR xcl OR 9tw OR xtp OR xth OR 7kr OR xpl OR xld OR 7b7 OR 8hx OR 7cs OR xmb OR tbt OR amb OR 7sc OR 7ha OR 7ls OR 7bl OR 9b8 OR 6hx OR uml OR upk OR 7gl OR 9gm) UNI !ID)
 //Uniques worth notifying
 //Armors
-Alias[LODNOTIFYUNI1]: ((brs OR fld OR xkp OR xul OR xlm OR drb OR 9sp OR mbt OR rng OR uul OR xng OR xui OR spl OR xmg OR xsk OR xml OR xlb OR xap OR xrs OR gth OR aar OR (BELT !(vbl OR hbl)) OR skp OR xhl OR xrn OR vbt OR uvb OR umb OR lgl OR vgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR ush OR xts OR xrg OR tow OR kit OR gts OR xar) UNI !ID)
+Alias[LODNOTIFYUNI1]: ((brs OR fld OR xkp OR xul OR xlm OR drb OR 9sp OR mbt OR rng OR uul OR xng OR xui OR spl OR xmg OR xsk OR xml OR xlb OR xap OR xrs OR gth OR aar OR (BELT !(vbl OR hbl)) OR skp OR xhl OR xrn OR vbt OR uvb OR umb OR lgl OR vgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR ush OR xts OR xrg OR xar) UNI !ID)
 //Weapons
-Alias[LODNOTIFYUNI2]: (((8ws OR 8lb OR 92h OR 8s8 OR 9wc OR 92h OR 8mx OR 6rx OR 9gw OR 7m7 OR 9cl OR mau OR 9ls OR 7br OR 7sr OR 7p7 OR 9ba OR 7ga OR 7gi OR 8ls OR 72a OR 7o7 OR 9yw OR 9fc OR 9kr OR 7mp OR 6sw OR 6l7 OR 8rx OR dgr OR 7dg OR 9ma OR 9wh OR 9ws OR 6cs OR 7gs OR 9sb OR 9bs OR 9tr) OR (ELT (THROWING OR JAV)) OR 7wb OR 7sp) UNI !ID)
+Alias[LODNOTIFYUNI2]: (((8ws OR 8lb OR 92h OR 8s8 OR 9wc OR 92h OR 8mx OR 6rx OR 9gw OR 7m7 OR 9cl OR mau OR 9ls OR 7br OR 7sr OR 7p7 OR 9ba OR 7ga OR 7gi OR 8ls OR 72a OR 7o7 OR 9yw OR 9fc OR 9kr OR 7mp OR 6sw OR 6l7 OR 8rx OR dgr OR 7dg OR 9ma OR 9wh OR 9ws OR 6cs OR 7gs OR 9sb OR 9bs OR 9tr OR 9la) OR (ELT (THROWING OR JAV)) OR 7wb OR 7sp) UNI !ID)
 
 //SET PARTS
 //OK SET parts when ETH
@@ -2921,12 +2921,15 @@ ItemDisplay[(gzvs OR glys OR glbs OR glgs OR glrs OR glws OR skls) FILTLVL<7]: %
 ItemDisplay[(gpvs OR gpys OR gpbs OR gpgs OR gprs OR gpws OR skzs)]: %DOT-70%%NAME%%CONTINUE%
 
 //Runes Apperance
-ItemDisplay[RUNE<21]: %ORANGE%%RUNENAME% %GRAY%[%TAN%%RUNENUM%%GRAY%]{%NAME%}%CONTINUE%
+ItemDisplay[RUNE<18]: %ORANGE%%RUNENAME% %GRAY%[%TAN%%RUNENUM%%GRAY%]{%NAME%}%CONTINUE%
+ItemDisplay[RUNE~18-19]: %ORANGE%%RUNENAME% Rune %GRAY%[%TAN%%RUNENUM%%GRAY%]{%NAME%}%CONTINUE%
 ItemDisplay[RUNE~20-25]: %ORANGE%%RUNENAME% Rune %GRAY%[%RED%%RUNENUM%%GRAY%]{%NAME%}%CONTINUE%
 ItemDisplay[RUNE>25]: %ORANGE%%RUNENAME% Rune %GRAY%[%GREEN%%RUNENUM%%GRAY%]{%NAME%}%CONTINUE%
 
 //All Charms
-ItemDisplay[(cm1 OR cm2 OR cm3) MAG !ID]: %DOT-9B%%NAME%
+ItemDisplay[(cm1 OR cm3) MAG !ID]: %DOT-9B%%PURPLE%*%BLUE%   %NAME%   %PURPLE%*
+ItemDisplay[cm2 MAG !ID FILTLVL<5]: %DOT-9B%%PURPLE%*%BLUE%   %NAME%   %PURPLE%*
+ItemDisplay[cm2 MAG !ID FILTLVL>4]: %DOT-9B%%TIER-4%%GRAY%*%BLUE%   %NAME%   %GRAY%*
 ItemDisplay[(cm1 OR cm2 OR cm3) UNI !ID]: %PX-68%%NAME%
 
 //Notes on Charms
@@ -2947,9 +2950,9 @@ ItemDisplay[cm3 MAG ((MAXDMG>6 AND LIFE>0) OR (RES>7 AND LIFE>0) OR ((TABSK0>0 O
 //Max Dmg TAG
 ItemDisplay[cm3 MAG ((RES>7 AND MAXDMG>0) OR (MAXDMG>6 AND GFIND>0) OR (MAXDMG>0 AND ((HIGHVENGPFX OR HIGHVENGSFX))) OR (MAXDMG>6 AND ((MIDVENGPFX OR MIDVENGSFX))) OR (MAXDMG>6 AND LIFE>0) OR (MAXDMG>6 AND FRW>0) OR (MAXDMG>6 AND FHR>0) OR (MAXDMG>6 AND DEX>0) OR (MAXDMG>6 AND STR>0) OR ((TABSK0>0 OR TABSK2>0 OR TABSK1>0 OR TABSK8>0 OR TABSK9>0 OR TABSK10>0 OR TABSK16>0 OR TABSK17>0 OR TABSK18>0 OR TABSK24>0 OR TABSK25>0 OR TABSK26>0 OR TABSK32>0 OR TABSK33>0 OR TABSK34>0 OR TABSK40>0 OR TABSK41>0 OR TABSK42>0 OR TABSK48>0 OR TABSK49>0 OR TABSK50>0) AND MAXDMG>0) OR MAXDMG>8)]: %TAN%Max Dmg %NAME%{%NAME%}%CONTINUE%
 //FHR TAG
-ItemDisplay[cm3 MAG (((TABSK0>0 OR TABSK2>0 OR TABSK1>0 OR TABSK8>0 OR TABSK9>0 OR TABSK10>0 OR TABSK16>0 OR TABSK17>0 OR TABSK18>0 OR TABSK24>0 OR TABSK25>0 OR TABSK26>0 OR TABSK32>0 OR TABSK33>0 OR TABSK34>0 OR TABSK40>0 OR TABSK41>0 OR TABSK42>0 OR TABSK48>0 OR TABSK49>0 OR TABSK50>0) AND FHR>0) OR ((HIGHVENGPFX OR HIGHVENGSFX OR MIDVENGPFX OR MIDVENGSFX) AND FHR>0) OR (RES>7 AND FHR>0))]: %ORANGE%FHR %NAME%{%NAME%}%CONTINUE%
+ItemDisplay[cm3 MAG (((TABSK0>0 OR TABSK2>0 OR TABSK1>0 OR TABSK8>0 OR TABSK9>0 OR TABSK10>0 OR TABSK16>0 OR TABSK17>0 OR TABSK18>0 OR TABSK24>0 OR TABSK25>0 OR TABSK26>0 OR TABSK32>0 OR TABSK33>0 OR TABSK34>0 OR TABSK40>0 OR TABSK41>0 OR TABSK42>0 OR TABSK48>0 OR TABSK49>0 OR TABSK50>0) AND FHR>0) OR ((HIGHVENGPFX OR HIGHVENGSFX OR MIDVENGPFX OR MIDVENGSFX) AND FHR>0) OR (RES>7 AND FHR>0) OR (MAXDMG>6 AND FHR>0))]: %ORANGE%FHR %NAME%{%NAME%}%CONTINUE%
 //frw TAG
-ItemDisplay[cm3 MAG (((TABSK0>0 OR TABSK2>0 OR TABSK1>0 OR TABSK8>0 OR TABSK9>0 OR TABSK10>0 OR TABSK16>0 OR TABSK17>0 OR TABSK18>0 OR TABSK24>0 OR TABSK25>0 OR TABSK26>0 OR TABSK32>0 OR TABSK33>0 OR TABSK34>0 OR TABSK40>0 OR TABSK41>0 OR TABSK42>0 OR TABSK48>0 OR TABSK49>0 OR TABSK50>0) AND FRW>0) OR ((HIGHVENGPFX OR HIGHVENGSFX OR MIDVENGPFX OR MIDVENGSFX) AND FRW>0) OR (RES>7 AND FRW>0))]: %ORANGE%frw %NAME%{%NAME%}%CONTINUE%
+ItemDisplay[cm3 MAG (((TABSK0>0 OR TABSK2>0 OR TABSK1>0 OR TABSK8>0 OR TABSK9>0 OR TABSK10>0 OR TABSK16>0 OR TABSK17>0 OR TABSK18>0 OR TABSK24>0 OR TABSK25>0 OR TABSK26>0 OR TABSK32>0 OR TABSK33>0 OR TABSK34>0 OR TABSK40>0 OR TABSK41>0 OR TABSK42>0 OR TABSK48>0 OR TABSK49>0 OR TABSK50>0) AND FRW>0) OR ((HIGHVENGPFX OR HIGHVENGSFX OR MIDVENGPFX OR MIDVENGSFX) AND FRW>0) OR (RES>7 AND FRW>0) OR (MAXDMG>6 AND FRW>0))]: %ORANGE%frw %NAME%{%NAME%}%CONTINUE%
 //ALL res TAG
 ItemDisplay[cm3 MAG ((RES>7 AND MAXDMG>0) OR (RES>7 AND DEX>0) OR (RES>7 AND STR>0) OR (RES>7 AND GFIND>0) OR (RES>7 AND LIFE>0) OR (RES>7 AND FRW>0) OR (RES>7 AND FHR>0) OR (RES>7 AND (MIDVENGPFX OR MIDVENGSFX)) OR (RES>0 AND (HIGHVENGPFX OR HIGHVENGSFX)) OR RES>9)]: %PURPLE%ALL %WHITE%Res %NAME%{%NAME%}%CONTINUE%
 //Skillers TAG
@@ -3214,7 +3217,7 @@ ItemDisplay[NEC (EXC OR ELT) NMAG SOCK=0]: %NAME%{%NAME%%CL%%WHITE%Maximum Socke
 //always 1
 ItemDisplay[(dgr OR dir OR wnd OR ywn OR 9wn OR tkf OR tax OR jav) NMAG SOCK=0]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%1%TAN%]}%CONTINUE%
 //always 2
-ItemDisplay[(hax OR clb OR spc OR mac OR ssd OR scm OR sbr OR flc OR 9dg OR 9di OR 7dg OR 7di OR bld OR 9bl OR 7bl OR sst OR (WAND !(wnd OR ywn OR 9wn)) OR scp OR ktr OR wrb OR axf OR ces OR 9tk OR 7tk OR 9ta OR 7ta OR bkf OR 9bk OR 7bk OR ssp OR 9s9 OR 7s7 OR 9pi OR 7pi OR 9ja OR 7ja OR pil OR (SOR !(ob5 OR oba OR obf))) NMAG SOCK=0]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%2%TAN%]}%CONTINUE%
+ItemDisplay[(hax OR clb OR spc OR mac OR ssd OR scm OR sbr OR flc OR 9dg OR 9di OR 7dg OR 7di OR bld OR 9bl OR 7bl OR sst OR (WAND !(wnd OR ywn OR 9wn)) OR scp OR ktr OR wrb OR axf OR ces OR 9tk OR 7tk OR 9ta OR 7ta OR bkf OR 9bk OR 7bk OR ssp OR 9s9 OR 7s7 OR 9pi OR 7pi OR 9ja OR 7ja OR pil OR am5 OR ama OR amf OR (SOR !(ob5 OR oba OR obf))) NMAG SOCK=0]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%2%TAN%]}%CONTINUE%
 //always 3
 ItemDisplay[(9ha OR 7ha OR 9cl OR 7cl OR 9ma OR 7ma OR 9sp OR mst OR 9mt OR 7mt OR 9ss OR 9sm OR 9sb OR 9fc OR 7ss OR 7sm OR 7sb OR 7fc OR wsd OR 9wd OR 7wd OR 2hs OR 92h OR 72h OR 9kr OR 7kr OR spr OR bar OR sbw OR lxb OR 8ss OR 6ss OR lst OR 8ls OR 6ls OR 9sc OR 7sc OR gsc OR 9qs OR 7qs OR 7sp OR (SIN !(ktr OR wrb OR axf OR ces OR clw OR btl OR skr)) OR oba OR obf OR 9b8 OR 7b8 OR 9gl OR 7gl OR 9ts OR 7ts) NMAG SOCK=0]: %NAME%{%NAME%%CL%%WHITE%Maximum Sockets: %TAN%[%WHITE%3%TAN%]}%CONTINUE%
 //always 4
@@ -5641,6 +5644,11 @@ ItemDisplay[(SOR OR sst OR 8ss OR 6ss) (SK52>2 OR SK54>2 OR SK55>2 OR SK369>1 OR
 ItemDisplay[(SIN OR DAGGER) (SK270>2 OR SK269>2 OR SK268>2 OR SK267>2 OR SK273>2 OR SK266>2 OR SK366>1 OR SK272>1 OR SK274>1 OR SK275>1 OR SK277>1 OR SK271>0 OR SK276>0 OR SK278>0 OR SK279>0 OR SK280>0 OR ((SK261>0 OR SK262>0 OR SK263>0 OR 264>0 OR 265>0) AND (SK270>1 OR SK269>1 OR SK268>1 OR SK267>1 OR SK273>1 OR SK266>1 OR SK366>0 OR SK272>0 OR SK274>0 OR SK275>0 OR SK277>0))) !ETH !INF !RW NMAG FILTLVL<5]: %NAME%{%NAME%}
 ItemDisplay[SCEPTER !(wsp OR 9qs OR 9ws OR 7ws) (SK111>2 OR SK112>2 OR SK116>2 OR SK113>2 OR SK114>2 OR SK115>2 OR SK378>1 OR SK121>1 OR SK117>1 OR SK118>1 OR SK119>1 OR SK120>1 OR SK364>0 OR SK122>0 OR SK123>0 OR SK124>0 OR SK125>0 OR ((SK108>0 OR SK109>0 OR SK371>0 OR SK107>0) AND (SK111>1 OR SK112>1 OR SK116>1 OR SK113>1 OR SK114>1 OR SK115>1 OR SK378>0 OR SK121>0 OR SK117>0 OR SK118>0 OR SK119>0 OR SK120>0))) !ETH !INF !RW NMAG FILTLVL<5]: %NAME%{%NAME%}
 ItemDisplay[(clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp) (SK370>2 OR SK238>2 OR SK243>2 OR SK246>2 OR SK244>1 OR SK245>1 OR SK239>1 OR SK237>1 OR SK241>1 OR SK247>0 OR SK226>0 OR SK248>0 OR SK249>0 OR SK250>0 OR ((SK234>0 OR SK240>0 OR SK242>0 OR SK227>0 OR SK231>0) AND (SK370>1 OR SK238>1 OR SK243>1 OR SK246>1 OR SK244>0 OR SK245>0 OR SK239>0 OR SK237>0 OR SK241>0))) !ETH !INF !RW NMAG FILTLVL<5]: %NAME%{%NAME%}
+ItemDisplay[(SIN OR DAGGER) ((ASNTREE12 OR ASNTREE13) AND (ASNTREE22 OR ASNTREE23) AND (ASNTREE32 OR ASNTREE33)) !ETH !INF !RW NMAG FILTLVL<5]: %NAME%{%NAME%}
+ItemDisplay[WAND ((NECTREE12 OR NECTREE13) AND (NECTREE22 OR NECTREE23) AND (NECTREE32 OR NECTREE33)) !ETH !INF !RW NMAG FILTLVL<5]: %NAME%{%NAME%}
+ItemDisplay[(SOR OR sst OR 8ss OR 6ss) ((SORTREE12 OR SORTREE13) AND (SORTREE22 OR SORTREE23) AND (SORTREE32 OR SORTREE33)) !ETH !INF !RW NMAG FILTLVL<5]: %NAME%{%NAME%}
+ItemDisplay[SCEPTER !(wsp OR 9qs OR 9ws OR 7ws) ((PALTREE12 OR PALTREE13) AND (PALTREE22 OR PALTREE23) AND (PALTREE32 OR PALTREE33)) !ETH !INF !RW NMAG FILTLVL<5]: %NAME%{%NAME%}
+ItemDisplay[(clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp) ((DRUTREE12 OR DRUTREE13) AND (DRUTREE22 OR DRUTREE23) AND (DRUTREE32 OR DRUTREE33)) !ETH !INF !RW NMAG FILTLVL<5]: %NAME%{%NAME%}
 
 //Jewel notes part.1
 //All Affixes Character Level Requirements Values
@@ -6067,7 +6075,7 @@ ItemDisplay[gzvs OR glys OR glbs OR glgs OR glrs OR glws OR skls OR gzv OR glw O
 ItemDisplay[gzv OR glw OR glg OR glr OR glb OR gly OR skl]: %NAME%{%NAME%%NL%}%CONTINUE%
 
 ItemDisplay[(gpvs OR gpv)]: %NAME%{%NAME%%WHITE%You Can use %BLUE%Magic%WHITE%/%YELLOW%Rare %WHITE%Items as Bases%NL%Gloves: %ORANGE%Ort %BLACK%| %WHITE%Belt: %ORANGE%Ith %BLACK%| %WHITE%Boots: %ORANGE%Thul%NL%%WHITE%Weapon: %ORANGE%Tir %BLACK%| %WHITE%Chest: %ORANGE%Tal %BLACK%| %WHITE%Shield: %ORANGE%Eth%NL%%WHITE%Ring: %ORANGE%Amn %BLACK%| %WHITE%Helm: %ORANGE%Nef %BLACK%| %WHITE%Amulet: %ORANGE%Ral%NL%%TAN%Note%WHITE%: Caster Crafting Recipes: Perf %PURPLE%O%WHITE%, %BLUE%Jewel%WHITE%,}%CONTINUE%
-ItemDisplay[(gpys OR gpy)]: %NAME%{%NAME%%WHITE%You Can use %BLUE%Magic%WHITE%/%YELLOW%Rare %WHITE%Items as Bases%NL%Gloves: %ORANGE%Hel %BLACK%| %WHITE%Belt: %ORANGE%El %BLACK%| %WHITE%Boots: %ORANGE%Io%NL%%WHITE%Weapon: %ORANGE%Shael %BLACK%| %WHITE%Chest: %ORANGE%Eld %BLACK%| %WHITE%Shield: %ORANGE%Dol%NL%%WHITE%Ring: %ORANGE%Lum %BLACK%| %WHITE%Helm: %ORANGE%Tir %BLACK%| %WHITE%Amulet: %ORANGE%Ko%NL%%TAN%Note%WHITE%: Bontiful Crafting Recipes: Perf %YELLOW%O%WHITE%, %BLUE%Jewel%WHITE%,}%CONTINUE%
+ItemDisplay[(gpys OR gpy)]: %NAME%{%NAME%%WHITE%You Can use %BLUE%Magic%WHITE%/%YELLOW%Rare %WHITE%Items as Bases%NL%Gloves: %ORANGE%Hel %BLACK%| %WHITE%Belt: %ORANGE%El %BLACK%| %WHITE%Boots: %ORANGE%Io%NL%%WHITE%Weapon: %ORANGE%Shael %BLACK%| %WHITE%Chest: %ORANGE%Eld %BLACK%| %WHITE%Shield: %ORANGE%Dol%NL%%WHITE%Ring: %ORANGE%Lum %BLACK%| %WHITE%Helm: %ORANGE%Tir %BLACK%| %WHITE%Amulet: %ORANGE%Ko%NL%%TAN%Note%WHITE%: Bountiful Crafting Recipes: Perf %YELLOW%O%WHITE%, %BLUE%Jewel%WHITE%,}%CONTINUE%
 ItemDisplay[(gpbs OR gpb)]: %NAME%{%NAME%%WHITE%You Can use %BLUE%Magic%WHITE%/%YELLOW%Rare %WHITE%Items as Bases%NL%Gloves: %ORANGE%Ort %BLACK%| %WHITE%Belt: %ORANGE%Tal %BLACK%| %WHITE%Boots: %ORANGE%Ral%NL%%WHITE%Weapon: %ORANGE%Tir %BLACK%| %WHITE%Chest: %ORANGE%Nef %BLACK%| %WHITE%Shield: %ORANGE%Eth%NL%%WHITE%Ring: %ORANGE%Amn %BLACK%| %WHITE%Helm: %ORANGE%Ith %BLACK%| %WHITE%Amulet: %ORANGE%Thul%NL%%TAN%Note%WHITE%: Hitpower Crafting Recipes: Perf %BLUE%O%WHITE%, %BLUE%Jewel%WHITE%,}%CONTINUE%
 ItemDisplay[(gpgs OR gpg)]: %NAME%{%NAME%%WHITE%You Can use %BLUE%Magic%WHITE%/%YELLOW%Rare %WHITE%Items as Bases%NL%Gloves: %ORANGE%Ral %BLACK%| %WHITE%Belt: %ORANGE%Tal %BLACK%| %WHITE%Boots: %ORANGE%Ort%NL%%WHITE%Weapon: %ORANGE%Sol %BLACK%| %WHITE%Chest: %ORANGE%Eth %BLACK%| %WHITE%Shield: %ORANGE%Nef%NL%%WHITE%Ring: %ORANGE%Amn %BLACK%| %WHITE%Helm: %ORANGE%Ith %BLACK%| %WHITE%Amulet: %ORANGE%Thul%NL%%TAN%Note%WHITE%: Safety Crafting Recipes: Perf %GREEN%O%WHITE%, %BLUE%Jewel%WHITE%,}%CONTINUE%
 ItemDisplay[(gprs OR gpr)]: %NAME%{%NAME%%WHITE%You Can use %BLUE%Magic%WHITE%/%YELLOW%Rare %WHITE%Items as Bases%NL%Gloves: %ORANGE%Nef %BLACK%| %WHITE%Belt: %ORANGE%Tal %BLACK%| %WHITE%Boots: %ORANGE%Eth%NL%%WHITE%Weapon: %ORANGE%Ort %BLACK%| %WHITE%Chest: %ORANGE%Thul %BLACK%| %WHITE%Shield: %ORANGE%Ith%NL%%WHITE%Ring: %ORANGE%Sol %BLACK%| %WHITE%Helm: %ORANGE%Ral %BLACK%| %WHITE%Amulet: %ORANGE%Amn%NL%%TAN%Note%WHITE%: Blood Crafting Recipes: Perf %RED%O%WHITE%, %BLUE%Jewel%WHITE%,}%CONTINUE%
@@ -6107,7 +6115,7 @@ ItemDisplay[NMAG !RW SORSTAFF (FILTLVL<2 OR (CLVL<80 AND FILTLVL~2-4))]: %NAME%{
 ItemDisplay[UNI OR SET OR RW OR CRAFT OR GEMMED OR EQUIPPED OR SHOP OR leg]: %NAME%{%NAME%}
 
 //Notifying for Unknown Items (future proofing) (Thanks to BetweenWalls)
-ItemDisplay[(ILVL>1 OR QTY>0 OR PRICE>1) !(ARMOR OR WEAPON OR amu OR rin OR aqv OR cqv OR cm1 OR cm2 OR cm3 OR jew OR jewf OR RUNE>0 OR GEMTYPE>0 OR MAPTIER>-1 OR hp1 OR mp1 OR hp2 OR mp2 OR hp3 OR mp3 OR hp4 OR mp4 OR hp5 OR mp5 OR pvpp OR rvs OR rvl OR vps OR wms OR yps OR key OR tsc OR isc OR tbk OR ibk OR ear OR bks OR bkd OR box OR vip OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2 OR toa OR tes OR ceh OR bet OR fed OR dhn OR bey OR mbr OR pk1 OR pk2 OR pk3 OR std OR wss OR cwss OR lpp OR lbox OR lmal OR crfb OR crfc OR crfh OR crfs OR crfv OR crfu OR crfp OR rtp OR rid OR rkey OR lsvl OR llmr OR ubtm OR uba OR ubaa OR ubab OR ubac OR dcma OR dcso OR dcho OR dcbl OR rtma OR rtmv OR rtmo OR cm2f OR rtmf OR iwss OR scrb OR upmp OR scou OR irma OR irra OR urma OR rrra OR imma OR imra OR upma OR rera OR fort OR ram OR luca OR lucb OR lucc OR lucd OR imrn)]: %SOUNDID-705%%MAP-0A%%PX-62%%NAME%{%NAME%%CL%%WHITE%Item description will be adjusted later during the season.%CL%%TAN%Note%WHITE%: This item is recently added to the game.}	// notifications for unknown items (the first group of conditions including ilvl/qty/price is a workaround for !GOLD>0 since that doesn't work like other conditions)
+ItemDisplay[(ILVL>1 OR QTY>0 OR PRICE>1) !(ARMOR OR WEAPON OR amu OR rin OR aqv OR cqv OR cm1 OR cm2 OR cm3 OR jew OR jewf OR RUNE>0 OR GEMTYPE>0 OR MAPTIER>-1 OR hp1 OR mp1 OR hp2 OR mp2 OR hp3 OR mp3 OR hp4 OR mp4 OR hp5 OR mp5 OR pvpp OR rvs OR rvl OR vps OR wms OR yps OR key OR tsc OR isc OR tbk OR ibk OR ear OR bks OR bkd OR box OR vip OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2 OR toa OR tes OR ceh OR bet OR fed OR dhn OR bey OR mbr OR pk1 OR pk2 OR pk3 OR std OR wss OR cwss OR lpp OR lbox OR lmal OR crfb OR crfc OR crfh OR crfs OR crfv OR crfu OR crfp OR rtp OR rid OR rkey OR lsvl OR llmr OR ubtm OR uba OR ubaa OR ubab OR ubac OR dcma OR dcso OR dcho OR dcbl OR rtma OR rtmv OR rtmo OR cm2f OR rtmf OR iwss OR scrb OR upmp OR scou OR irma OR irra OR urma OR rrra OR imma OR imra OR upma OR rera OR fort OR ram OR luca OR lucb OR lucc OR lucd OR imrn OR cm1p OR cm2p OR cm3p)]: %SOUNDID-705%%MAP-0A%%PX-62%%NAME%{%NAME%%CL%%WHITE%Item description will be adjusted later during the season.%CL%%TAN%Note%WHITE%: This item is recently added to the game.}	// notifications for unknown items (the first group of conditions including ilvl/qty/price is a workaround for !GOLD>0 since that doesn't work like other conditions)
 
 //HIDE EVERYTHING ELSE
 ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE) !ID (FILTLVL<2 OR (CLVL<41 FILTLVL<5))]: %NAME%
