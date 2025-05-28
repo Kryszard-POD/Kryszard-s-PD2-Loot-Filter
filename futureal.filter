@@ -88,12 +88,12 @@ Alias[LODOKUNI7]: ((7ts OR 7s8 OR 9bw OR 7wc OR 7bw OR 7ws OR 7fl OR 7cr OR 7gm 
 //OK/Lower Value UNIQUES only when ETH
 Alias[LODLOWUNIETH1]: ((7ga OR mau) UNI ETH !ID)
 //OK/Lower Value UNIQUES
-Alias[LODLOWUNI1]: ((7pa OR 7bt OR ltp OR xcl OR 9tw OR xtp OR xth OR 7kr OR xpl OR xld OR 7b7 OR 8hx OR 7cs OR xmb OR tbt OR amb OR 7sc OR 7ha OR 7ls OR 7bl OR 9b8 OR 6hx OR uml OR upk OR 7gl OR 9gm) UNI !ID)
+Alias[LODLOWUNI1]: ((7pa OR 7bt OR ltp OR xcl OR 9tw OR xtp OR xth OR 7kr OR xpl OR xld OR 7b7 OR 8hx OR 7cs OR xmb OR tbt OR amb OR 7sc OR 7ha OR 7ls OR 7bl OR 9b8 OR 6hx OR uml OR upk OR 7gl OR 9gm OR 7br) UNI !ID)
 //Uniques worth notifying
 //Armors
 Alias[LODNOTIFYUNI1]: ((brs OR fld OR xkp OR xul OR xlm OR drb OR 9sp OR mbt OR rng OR uul OR xng OR xui OR spl OR xmg OR xsk OR xml OR xlb OR xap OR xrs OR gth OR aar OR (BELT !(vbl OR hbl)) OR skp OR xhl OR xrn OR vbt OR uvb OR umb OR lgl OR vgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR ush OR xts OR xrg OR xar) UNI !ID)
 //Weapons
-Alias[LODNOTIFYUNI2]: (((8ws OR 8lb OR 92h OR 8s8 OR 9wc OR 92h OR 8mx OR 6rx OR 9gw OR 7m7 OR 9cl OR mau OR 9ls OR 7br OR 7sr OR 7p7 OR 9ba OR 7ga OR 7gi OR 8ls OR 72a OR 7o7 OR 9yw OR 9fc OR 9kr OR 7mp OR 6sw OR 6l7 OR 8rx OR dgr OR 7dg OR 9ma OR 9wh OR 9ws OR 6cs OR 7gs OR 9sb OR 9bs OR 9tr OR 9la) OR (ELT (THROWING OR JAV)) OR 7wb OR 7sp) UNI !ID)
+Alias[LODNOTIFYUNI2]: (((8ws OR 8lb OR 92h OR 8s8 OR 9wc OR 92h OR 8mx OR 6rx OR 9gw OR 7m7 OR 9cl OR mau OR 9ls OR 7sr OR 7p7 OR 9ba OR 7ga OR 7gi OR 8ls OR 72a OR 7o7 OR 9yw OR 9fc OR 9kr OR 7mp OR 6sw OR 6l7 OR 8rx OR dgr OR 7dg OR 9ma OR 9wh OR 9ws OR 6cs OR 7gs OR 9sb OR 9bs OR 9tr OR 9la) OR (ELT (THROWING OR JAV)) OR 7wb OR 7sp) UNI !ID)
 
 //SET PARTS
 //OK SET parts when ETH
