@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season 11: ver 11.2.1
+//	Kryszard's PD2 Loot Filter for Season 11: ver 11.2.2
 //	Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -15,7 +15,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%futureal.filter ver 11.2.1 %BLACK%| %GRAY% updated: 2025-05-30}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%futureal.filter ver 11.2.2 %BLACK%| %GRAY% updated: 2025-05-31}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -66,7 +66,7 @@ Alias[PD2NOTIFYUNI1]: ((9ar OR ob6 OR am5 OR pa3 OR ba7 OR ob7) UNI !ID)
 //GG UNIQUES only when ETH
 Alias[LODGGUNIETH1]: ((9gm OR 7gm OR 7s8 OR 7p7 OR 7wa OR 7wh) UNI ETH !ID)
 //GG UNIQUES
-Alias[LODGGUNI1]: ((rin OR amu OR 6ws OR uar OR ulc OR urn OR uap OR ci3 OR xtb OR uit OR 6lw OR 7gw OR 7gd OR obf) UNI !ID)
+Alias[LODGGUNI1]: ((rin OR amu OR 6ws OR uar OR ulc OR urn OR uap OR ci3 OR xtb OR uit OR 6lw OR 7gw OR 7gd OR obf OR uhm) UNI !ID)
 //OK UNIQUES only when ETH - Armors
 Alias[LODOKUNIETH1]: ((xpl) UNI ETH !ID)
 //OK UNIQUES only when ETH - Weapons
@@ -78,7 +78,7 @@ Alias[LODOKUNI2]: ((xea OR uui OR xhn OR xlt OR upl OR uld OR utu) UNI !ID)
 //gloves
 Alias[LODOKUNI3]: ((uvg OR uhg OR umg) UNI !ID)
 //helmets
-Alias[LODOKUNI4]: ((xh9 OR usk OR ci2 OR baa OR bac OR dra OR dre OR uhm OR uh9 OR xhm OR drd OR bae OR ulm) UNI !ID)
+Alias[LODOKUNI4]: ((xh9 OR usk OR ci2 OR baa OR bac OR dra OR dre OR uh9 OR xhm OR drd OR bae OR ulm) UNI !ID)
 //boots
 Alias[LODOKUNI5]: ((lbt OR xhb OR uhb OR xvb) UNI !ID)
 //shields
@@ -314,7 +314,7 @@ Alias[VSOCK404]: ((xul OR uul) UNI SOCK>0 STAT121>0 STAT123>0 STAT118>0)
 
 //Varies up to 3 sockets
 //Blade of Ali Baba - Tulwar -> Hydra Edge - Varies: 2-3
-Alias[VSOCK301]: ((9fc OR 7fc) UNI SOCK>0 ED>0 DEX>0 MANA>0 GFIND>0 MFIND>0)
+Alias[VSOCK301]: ((9fc OR 7fc) UNI SOCK>0 ED>0 DEX>0 MANA>0 STAT239>0 STAT240>0)
 //Djinn Slayer - Ataghan - Varies: 2-3
 Alias[VSOCK302]: (7sm UNI SOCK>0 ED>0 STAT121>0 STAT62>0 STAT145>0)
 //Achilles Strike - Hurlbat -> Winged Axe - Varies: 2-3
@@ -3010,7 +3010,7 @@ ItemDisplay[RUNE>25]: %ORANGE%%RUNENAME% Rune %GRAY%[%GREEN%%RUNENUM%%GRAY%]{%NA
 //All Charms
 ItemDisplay[(cm1 OR cm3) MAG !ID]: %DOT-9B%%NAME%
 ItemDisplay[cm2 MAG !ID FILTLVL<5]: %DOT-9B%%NAME%
-ItemDisplay[cm2 MAG !ID FILTLVL>4]: %DOT-9B%%TIER-4%%NAME%
+ItemDisplay[cm2 MAG !ID FILTLVL>4]: %DOT-1C%%PX-9B%%TIER-4%%NAME%
 ItemDisplay[(cm1 OR cm2 OR cm3) UNI !ID]: %PX-68%%NAME%
 
 //Notes on Charms
@@ -5712,6 +5712,11 @@ ItemDisplay[WAND ((NECTREE11 OR NECTREE12 OR NECTREE13) AND (NECTREE21 OR NECTRE
 ItemDisplay[(SOR OR sst OR 8ss OR 6ss) ((SORTREE11 OR SORTREE12 OR SORTREE13) AND (SORTREE21 OR SORTREE22 OR SORTREE23) AND (SORTREE31 OR SORTREE32 OR SORTREE33)) !ETH !INF !RW NMAG FILTLVL<5]: %NAME%{%NAME%}
 ItemDisplay[SCEPTER !(wsp OR 9qs OR 9ws OR 7ws) ((PALTREE11 OR PALTREE12 OR PALTREE13) AND (PALTREE21 OR PALTREE22 OR PALTREE23) AND (PALTREE31 OR PALTREE32 OR PALTREE33)) !ETH !INF !RW NMAG FILTLVL<5]: %NAME%{%NAME%}
 ItemDisplay[(clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp) ((DRUTREE11 OR DRUTREE12 OR DRUTREE13) AND (DRUTREE21 OR DRUTREE22 OR DRUTREE23) AND (DRUTREE31 OR DRUTREE32 OR DRUTREE33)) !ETH !INF !RW NMAG FILTLVL<5]: %NAME%{%NAME%}
+ItemDisplay[(SIN OR DAGGER) (((ASNTREE12 OR ASNTREE 13) AND ((ASNTREE22 OR ASNTREE 23) OR (ASNTREE32 OR ASNTREE 33))) OR ((ASNTREE22 OR ASNTREE 23) AND ((ASNTREE12 OR ASNTREE 13) OR (ASNTREE32 OR ASNTREE 33)))) !ETH !INF !RW NMAG FILTLVL<5]: %NAME%{%NAME%}
+ItemDisplay[WAND (((NECTREE12 OR NECTREE 13) AND ((NECTREE22 OR NECTREE 23) OR (NECTREE32 OR NECTREE 33))) OR ((NECTREE22 OR NECTREE 23) AND ((NECTREE12 OR NECTREE 13) OR (NECTREE32 OR NECTREE 33)))) !ETH !INF !RW NMAG FILTLVL<5]: %NAME%{%NAME%}
+ItemDisplay[(SOR OR sst OR 8ss OR 6ss) (((SORTREE12 OR SORTREE 13) AND ((SORTREE22 OR SORTREE 23) OR (SORTREE32 OR SORTREE 33))) OR ((SORTREE22 OR SORTREE 23) AND ((SORTREE12 OR SORTREE 13) OR (SORTREE32 OR SORTREE 33)))) !ETH !INF !RW NMAG FILTLVL<5]: %NAME%{%NAME%}
+ItemDisplay[SCEPTER !(wsp OR 9qs OR 9ws OR 7ws) (((PALTREE12 OR PALTREE 13) AND ((PALTREE22 OR PALTREE 23) OR (PALTREE32 OR PALTREE 33))) OR ((PALTREE22 OR PALTREE 23) AND ((PALTREE12 OR PALTREE 13) OR (PALTREE32 OR PALTREE 33)))) !ETH !INF !RW NMAG FILTLVL<5]: %NAME%{%NAME%}
+ItemDisplay[(clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp) (((DRUTREE12 OR DRUTREE 13) AND ((DRUTREE22 OR DRUTREE 23) OR (DRUTREE32 OR DRUTREE 33))) OR ((DRUTREE22 OR DRUTREE 23) AND ((DRUTREE12 OR DRUTREE 13) OR (DRUTREE32 OR DRUTREE 33)))) !ETH !INF !RW NMAG FILTLVL<5]: %NAME%{%NAME%}
 
 //Jewel notes part.1
 //All Affixes Character Level Requirements Values
