@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season 11: ver 11.2.2
+//	Kryszard's PD2 Loot Filter for Season 11: ver 11.2.3
 //	Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -15,7 +15,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%futureal.filter ver 11.2.2 %BLACK%| %GRAY% updated: 2025-05-31}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%futureal.filter ver 11.2.3 %BLACK%| %GRAY% updated: 2025-06-01}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -68,7 +68,7 @@ Alias[LODGGUNIETH1]: ((9gm OR 7gm OR 7s8 OR 7p7 OR 7wa OR 7wh) UNI ETH !ID)
 //GG UNIQUES
 Alias[LODGGUNI1]: ((rin OR amu OR 6ws OR uar OR ulc OR urn OR uap OR ci3 OR xtb OR uit OR 6lw OR 7gw OR 7gd OR obf OR uhm) UNI !ID)
 //OK UNIQUES only when ETH - Armors
-Alias[LODOKUNIETH1]: ((xpl) UNI ETH !ID)
+Alias[LODOKUNIETH1]: ((xpl OR uul) UNI ETH !ID)
 //OK UNIQUES only when ETH - Weapons
 Alias[LODOKUNIETH2]: ((7gi OR 7m7 OR 8ls OR 7gl OR 7b8 OR 7bk OR 7ha OR 7b7 OR 7sr OR 9b8 OR 9la) UNI ETH !ID)
 //belts
@@ -86,12 +86,12 @@ Alias[LODOKUNI6]: ((nee OR pa9 OR nea OR uts OR uow OR xsh OR xow OR pae OR nef 
 //weapons
 Alias[LODOKUNI7]: ((7ts OR 7s8 OR 9bw OR 7wc OR 7bw OR 7ws OR 7fl OR 7cr OR 7gm OR oba OR ama OR obc OR amf OR 7wh OR 7p7 OR 7wa OR 7lw) UNI !ID)
 //OK/Lower Value UNIQUES only when ETH
-Alias[LODLOWUNIETH1]: ((7ga OR mau OR 9st) UNI ETH !ID)
+Alias[LODLOWUNIETH1]: ((7ga OR mau OR 9st OR uvb) UNI ETH !ID)
 //OK/Lower Value UNIQUES
-Alias[LODLOWUNI1]: ((7pa OR 7bt OR ltp OR xcl OR 9tw OR xtp OR xth OR 7kr OR xpl OR xld OR 7b7 OR 8hx OR 7cs OR xmb OR tbt OR amb OR 7sc OR 7ha OR 7ls OR 7bl OR 9b8 OR 6hx OR uml OR upk OR 7gl OR 9gm OR 7br) UNI !ID)
+Alias[LODLOWUNI1]: ((7pa OR 7bt OR ltp OR xcl OR 9tw OR xtp OR xth OR 7kr OR xpl OR xld OR 7b7 OR 8hx OR 7cs OR xmb OR tbt OR amb OR 7sc OR 7ha OR 7ls OR 7bl OR 9b8 OR 6hx OR uml OR upk OR 7gl OR 9gm OR 7br OR ush OR uul) UNI !ID)
 //Uniques worth notifying
 //Armors
-Alias[LODNOTIFYUNI1]: ((brs OR fld OR xkp OR xul OR xlm OR drb OR 9sp OR mbt OR rng OR uul OR xng OR xui OR spl OR xmg OR xsk OR xml OR xlb OR xap OR xrs OR gth OR aar OR (BELT !(vbl OR hbl)) OR skp OR xhl OR xrn OR vbt OR uvb OR umb OR lgl OR vgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR ush OR xts OR xrg OR xar) UNI !ID)
+Alias[LODNOTIFYUNI1]: ((brs OR fld OR xkp OR xul OR xlm OR drb OR 9sp OR mbt OR rng OR xng OR xui OR spl OR xmg OR xsk OR xml OR xlb OR xap OR xrs OR gth OR aar OR (BELT !(vbl OR hbl)) OR skp OR xhl OR xrn OR vbt OR uvb OR umb OR lgl OR vgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR xts OR xrg OR xar) UNI !ID)
 //Weapons
 Alias[LODNOTIFYUNI2]: (((8ws OR 8lb OR 92h OR 8s8 OR 9wc OR 92h OR 8mx OR 6rx OR 9gw OR 7m7 OR 9cl OR mau OR 9ls OR 7sr OR 7p7 OR 9ba OR 7ga OR 7gi OR 8ls OR 72a OR 7o7 OR 9yw OR 9fc OR 9kr OR 7mp OR 6sw OR 6l7 OR 8rx OR dgr OR 7dg OR 9ma OR 9wh OR 9ws OR 6cs OR 7gs OR 9sb OR 9bs OR 9tr OR 9la) OR (ELT (THROWING OR JAV)) OR 7wb OR 7sp) UNI !ID)
 
@@ -5323,7 +5323,7 @@ ItemDisplay[((TABSK2>4) OR (CLSK0>1 AND TABSK2>2) OR (CLSK0>1 AND ALLSK>1 AND TA
 //High ED Amp Proc Combo
 ItemDisplay[(NOTICEME01)]: %NAME%{%NAME%%CL%%RED%***   %GREEN%High ED %ORANGE%Amp Proc %GREEN%Combo%RED%   ***}%CONTINUE%
 //High ED Weapon
-ItemDisplay[(NOTICEME02)]: %NAME%{%NAME%%CL%%RED%***   %GREEN%High ED Weapon%RED%   ***}%CONTINUE%
+ItemDisplay[(NOTICEME02) !(NOTICEME01)]: %NAME%{%NAME%%CL%%RED%***   %GREEN%High ED Weapon%RED%   ***}%CONTINUE%
 //3sk, 20ias Gloves
 ItemDisplay[(NOTICEME03)]: %NAME%{%NAME%%CL%%RED%***   %GREEN%3sk, 20ias Gloves%RED%   ***}%CONTINUE%
 //3sk, 10fcr Gloves
@@ -5333,7 +5333,7 @@ ItemDisplay[(NOTICEME05)]: %NAME%{%NAME%%CL%%RED%***   %GREEN%Teleport Charges%R
 //Lower Resist CTC
 ItemDisplay[(NOTICEME06)]: %NAME%{%NAME%%CL%%LIGHT_GRAY%High %PURPLE%Lower Resist %GREEN%CTC %LIGHT_GRAY%Proc}%CONTINUE%
 //Amplify Damage CTC
-ItemDisplay[(NOTICEME07)]: %NAME%{%NAME%%CL%%LIGHT_GRAY%High %ORANGE%Amplify Damage %GREEN%CTC %LIGHT_GRAY%Proc}%CONTINUE%
+ItemDisplay[(NOTICEME07) !(NOTICEME01)]: %NAME%{%NAME%%CL%%LIGHT_GRAY%High %ORANGE%Amplify Damage %GREEN%CTC %LIGHT_GRAY%Proc}%CONTINUE%
 //Lower Resist Charges
 ItemDisplay[(NOTICEME08)]: %NAME%{%NAME%%CL%%DARK_GREEN%Lower Resist Charges}%CONTINUE%
 //Life Tap Charges
@@ -5564,10 +5564,10 @@ ItemDisplay[7p7 NMAG ETH !INF !RW !SOCK=1 ED>4]: %DOT-D6%%TIER-6%%NAME%{%NAME%}
 ItemDisplay[7p7 NMAG !ETH !INF !RW !SOCK=1 ED>4 FILTLVL<7]: %DOT-D6%%TIER-2%%NAME%{%NAME%}
 ItemDisplay[7p7 NMAG ETH !INF !RW !SOCK=1]: %DOT-D6%%TIER-4%%NAME%{%NAME%}
 ItemDisplay[7p7 NMAG !ETH !INF !RW !SOCK=1 BARBARIAN FILTLVL<5]: %NAME%{%NAME%}
-ItemDisplay[((POLEARM OR SPEAR) !JAV ELT) NMAG ETH !INF !RW SOCK=3]: %NAME%{%NAME%}
-ItemDisplay[((POLEARM OR SPEAR) ELT) NMAG ETH !INF !RW SOCK=3 NECROMANCER]: %NAME%{%NAME%}
-ItemDisplay[((POLEARM OR SPEAR) ELT) NMAG !INF !RW SOCK=3 NECROMANCER FILTLVL<7]: %NAME%{%NAME%}
-ItemDisplay[((POLEARM OR SPEAR) EXC) NMAG ETH !INF !RW SOCK=3 NECROMANCER FILTLVL<7]: %NAME%{%NAME%}
+ItemDisplay[((POLEARM OR SPEAR) !JAV ELT) NMAG ETH !INF !RW SOCK~3-4]: %NAME%{%NAME%}
+ItemDisplay[((POLEARM OR SPEAR) ELT) NMAG ETH !INF !RW SOCK~3-4 NECROMANCER]: %NAME%{%NAME%}
+ItemDisplay[((POLEARM OR SPEAR) ELT) NMAG !INF !RW SOCK~3-4 NECROMANCER FILTLVL<7]: %NAME%{%NAME%}
+ItemDisplay[((POLEARM OR SPEAR) EXC) NMAG ETH !INF !RW SOCK~3-4 NECROMANCER FILTLVL<7]: %NAME%{%NAME%}
 ItemDisplay[(amd OR ame) TABSK2>2 !ETH !INF NMAG !RW (SOCK=0 OR SOCK=4) ED=15]: %DOT-D6%%NAME%{%NAME%}
 ItemDisplay[(amd OR ame) TABSK2>2 !ETH !INF NMAG !RW (SOCK=0 OR SOCK=4) ED>9]: %DOT-D6%%TIER-6%%NAME%{%NAME%}
 ItemDisplay[(amd OR ame) TABSK2>2 !ETH !INF NMAG !RW (SOCK=0 OR SOCK=4) ED>4]: %DOT-D6%%TIER-2%%NAME%{%NAME%}
