@@ -2289,9 +2289,9 @@ ItemDisplay[key (TOWN OR MAPID>132)]: %NAME%{%TAN%Pro-Tip%WHITE%: You can buy ma
 ItemDisplay[key (TOWN OR MAPID>132)]: %NAME%{%ORANGE%Crafting %WHITE%Bases from Vendors%NL%%NAME%}%CONTINUE%
 ItemDisplay[key (TOWN OR MAPID>132)]: %NAME%{%WHITE%PD2 %GRAY%"%TAN%Settings%GRAY%" %WHITE%menu available in classic D2 settings%NL%%NL%%NAME%}%CONTINUE%
 ItemDisplay[key (TOWN OR MAPID>132)]: %NAME%{%WHITE%Type %GRAY%"%TAN%.help%GRAY%" %WHITE%on chat to list useful commands%NL%%NAME%}%CONTINUE%
-ItemDisplay[key (TOWN OR MAPID>132)]: %NAME%{%TAN%Note%WHITE%: RuneWords %ORANGE%Recipes %WHITE%Avaliable at Quantity 1-17%NL%%NL%%NAME%}%CONTINUE%
+ItemDisplay[key (TOWN OR MAPID>132)]: %NAME%{%TAN%Note%WHITE%: RuneWords %ORANGE%Recipes %WHITE%Available at Quantity 1-17%NL%%NL%%NAME%}%CONTINUE%
 ItemDisplay[key (TOWN OR MAPID>132)]: %NAME%{%GRAY%[A-E]%WHITE%: 1-5 %GRAY%[F-J]%WHITE%: 5-8 %GRAY%[K-O]%WHITE%: 8-11 %GRAY%[P-T]%WHITE%: 11-15 %GRAY%[U-Z]%WHITE%: 15-17%NL%%NAME%}%CONTINUE%
-ItemDisplay[key (TOWN OR MAPID>132)]: %NAME%{%ORANGE%Crafting %WHITE%Guaranteed Stats Avaliable at Quantity 18-24%NL%%NAME%}%CONTINUE%
+ItemDisplay[key (TOWN OR MAPID>132)]: %NAME%{%ORANGE%Crafting %WHITE%Guaranteed Stats Available at Quantity 18-24%NL%%NAME%}%CONTINUE%
 ItemDisplay[key (TOWN OR MAPID>132)]: %NAME%{%CORAL%Pathfinding%WHITE%/%TEAL%Map Reading %WHITE%Tips available outside Town%NL%%NL%%NAME%}%CONTINUE%
 //keys description in SHOP
 ItemDisplay[key SHOP]: %NAME%{%TAN%Note%WHITE%: Key stack descriptions in your inventory}%CONTINUE%
