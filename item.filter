@@ -386,7 +386,7 @@ ItemDisplay[GOLD<400 (CLVL>39 OR FILTLVL>5)]:
 ItemDisplay[GOLD<1000 CLVL>79]:
 ItemDisplay[GOLD<2000 CLVL>79 FILTLVL>1]:
 ItemDisplay[GOLD<3000 CLVL>79 FILTLVL>5]:
-ItemDisplay[GOLD<5000 CLVL>79 FILTLVL>6]:
+ItemDisplay[GOLD<5000 CLVL>79 FILTLVL>7]:
 
 //Names of Superior and Inferior items to short in later step
 ItemDisplay[(SUP OR INF) !RW cap]: Cap%CONTINUE%
@@ -2269,7 +2269,7 @@ ItemDisplay[ETH OR (DIN NMAG !RW RES>0) OR (DIN NMAG !RW EDAM>0) OR ((AMASTAFF O
 //Health & Mana & Rejuvenation Potions
 ItemDisplay[rvl]: %PURPLE%R %WHITE%Full{%WHITE%Full Rejuvenation Potion}%CONTINUE%
 ItemDisplay[rvs]: %PURPLE%r %WHITE%35%{%PURPLE%r %WHITE%35%, Perf %YELLOW%O%WHITE%, %BLUE%Ring %WHITE%= Light Res %BLUE%Ring%NL%%WHITE%3x%PURPLE%r %WHITE%35% = %PURPLE%R%WHITE% Full%NL%%TAN% Note%WHITE%: Crafting Recipes:%NL%Rejuvenation Potion}%CONTINUE%
-ItemDisplay[rvs FILTLVL>6]: {%NAME%}%CONTINUE%
+ItemDisplay[rvs FILTLVL>7]: {%NAME%}%CONTINUE%
 ItemDisplay[hp5]: %RED%!%WHITE%Hp{%WHITE%Super Healing Potion}%CONTINUE%
 ItemDisplay[mp5]: %BLUE%!%WHITE%Mp{%WHITE%Super Mana Potion}%CONTINUE%
 ItemDisplay[hp1]: %RED%!%WHITE%minor hp{%WHITE%Minor Healing Potion}%CONTINUE%
@@ -3244,10 +3244,10 @@ ItemDisplay[BAR BARBARIAN RARE !ID]: %NAME%
 ItemDisplay[(SIN OR (DAGGER !THROWING)) ASSASSIN RARE !ID]: %NAME%
 
 //Hide Magic Ring and Amulets on Super Strict Level
-ItemDisplay[(rin OR amu) MAG !ID FILTLVL>6]: {%NAME%}
+ItemDisplay[(rin OR amu) MAG !ID FILTLVL>7]: {%NAME%}
 
 //Circlets
-ItemDisplay[CIRC MAG !ID FILTLVL>6]: {%NAME%}
+ItemDisplay[CIRC MAG !ID FILTLVL>7]: {%NAME%}
 ItemDisplay[CIRC (MAG OR RARE) !ID]: %NAME%
 
 //Rare Gloves, Belts and Boots
@@ -5813,7 +5813,7 @@ ItemDisplay[scou]: %NAME% %ORANGE%*{%BLUE%M%WHITE%a%YELLOW%p %WHITE%+ %GOLD%Orb%
 ItemDisplay[fort]: %GOLD%%NAME% %ORANGE%*{%BLUE%M%WHITE%a%YELLOW%p %WHITE%+ %GOLD%Orb%NL%%WHITE%2x Health, 2x Exp, 20% Damage, 2x Loot%NL%%TAN% Note%WHITE%: Reduces Base Density by Half, Monsters Gain:%NL%}
 ItemDisplay[upmp]: %NAME% %ORANGE%*{%WHITE%3x%BLUE%M%WHITE%a%YELLOW%p %TAN%(%WHITE%Tier:%ORANGE%x%TAN%) %WHITE%+ %GOLD%Orb %WHITE%= Map %TAN%(%WHITE%Tier:%ORANGE%x%WHITE%+1%TAN%)%NL%Note%WHITE%: Upgrade Maps for higher Tier:%NL%}
 ItemDisplay[(imra OR rera OR upma)]: %NAME%{%GRAY%(Skip Map to make %GOLD%Infused Orb%GRAY%)%NL%%NAME%}%CONTINUE%
-ItemDisplay[imma FILTLVL>6 !SHOP !TOWN]: {%NAME%}%CONTINUE%
+ItemDisplay[imma FILTLVL>7 !SHOP !TOWN]: {%NAME%}%CONTINUE%
 ItemDisplay[irra]: %NAME% %ORANGE%*{%WHITE%Map + %GOLD%Orb%NL%%TAN%Note%WHITE%: Imbue White Map to %YELLOW%Rare%WHITE%:%NL%}
 ItemDisplay[rrra]: %NAME% %ORANGE%*{%YELLOW%Map %WHITE%+ %GOLD%Orb%NL%%TAN%Note%WHITE%: Reroll %YELLOW%Rare %WHITE%Map:%NL%}
 ItemDisplay[urma]: %NAME% %ORANGE%*{%BLUE%Map %WHITE%+ %GOLD%Orb%NL%%TAN%Note%WHITE%: Imbue %BLUE%Magic %WHITE%Map to %YELLOW%Rare%WHITE%:%NL%}
@@ -6163,7 +6163,7 @@ ItemDisplay[(gpws OR gpw)]: %NAME%{%NAME%%WHITE%You Can use %BLUE%Magic%WHITE%/%
 ItemDisplay[(skzs OR skz)]: %NAME%{%NAME%%WHITE%You Can use %BLUE%Magic%WHITE%/%YELLOW%Rare %WHITE%Items as Bases%NL%Gloves: %ORANGE%Io %BLACK%| %WHITE%Belt: %ORANGE%Eld %BLACK%| %WHITE%Boots: %ORANGE%El%NL%%WHITE%Weapon: %ORANGE%Shael %BLACK%| %WHITE%Chest: %ORANGE%Tir %BLACK%| %WHITE%Shield: %ORANGE%Sol%NL%%WHITE%Ring: %ORANGE%Hel %BLACK%| %WHITE%Helm: %ORANGE%Lum %BLACK%| %WHITE%Amulet: %ORANGE%Dol%NL%%TAN%Note%WHITE%: Vampiric Crafting Recipes: Perf %GRAY%O%WHITE%, %BLUE%Jewel%WHITE%,}%CONTINUE%
 
 //Hide Flawlesses on Max Strict Level
-ItemDisplay[(GEM<5 OR (gzvs OR glys OR glbs OR glgs OR glrs OR glws OR skls)) FILTLVL>6]:{%NAME%}%CONTINUE%
+ItemDisplay[(GEM<5 OR (gzvs OR glys OR glbs OR glgs OR glrs OR glws OR skls)) FILTLVL>7]:{%NAME%}%CONTINUE%
 
 //Craft Infusions
 ItemDisplay[crfb]: %DOT-66%%ORANGE%[%RED%O%ORANGE%] %NAME%{%NAME%}
