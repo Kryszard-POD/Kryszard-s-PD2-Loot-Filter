@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season 11: ver 11.4.1
+//	Kryszard's PD2 Loot Filter for Season 11: ver 11.4.2
 //
 //	twitch.tv/kryszard
 //
@@ -7,6 +7,7 @@
 //Define Filter Strict Levels
 ItemDisplayFilterName[]: Hide Just Trash Items
 ItemDisplayFilterName[]: More Notify
+ItemDisplayFilterName[]: More Notify - w/o Potions
 ItemDisplayFilterName[]: Recommended
 ItemDisplayFilterName[]: Recommended - w/o Potions
 ItemDisplayFilterName[]: Strict Filter
@@ -14,7 +15,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 11.4.1 %BLACK%| %GRAY% updated: 2025-06-21}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 11.4.2 %BLACK%| %GRAY% updated: 2025-06-21}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
