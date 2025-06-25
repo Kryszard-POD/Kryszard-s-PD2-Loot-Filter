@@ -230,7 +230,7 @@ Changelog:
 - Visual Changes: 
 	- PD2 "Pick Up"-Tagged items will be displayed with correct "*-stars" colors now (It should be like this from previous season, but I didn't notice it stays with same coloring as LoD items).
 	- Added better highlights for Unique Horadric Tomes and Skeleton Key,
-	- Superior items with ED tags color changed to New avaliable options:
+	- Superior items with ED tags color changed to New available options:
 		- Weapons - "Sup" color changed from RED to CORAL (light red) - Percentage values on high-tier items will stay in RED.
 		- Armors - "Sup" color changed from BLUE to TEAL (light blue-ish) - Percentage values on high-tier items will stay in BLUE.
 	- Removed displayed Quantity on Quivers - Those will be displayed as "x  Arrows  x" if MAG or RARE from now on.
@@ -273,7 +273,7 @@ General changes:
 - +skills AutoMod's now will be highlighted in better colors for class that you play,
 - Added 0/6 sockets uneth Colossus Blade as good Asylum RW base,
 - Mirrored Jewels will show their colors in descriptions now (black/white),
-- Rathma/DClone entrance key description updated (3 tiers avaliable),
+- Rathma/DClone entrance key description updated (3 tiers available),
 - Some general fixes&improvements like Shadow Bow wasn't showing possible max sockets from corruption etc.,
 
 ## New QoL Feature:
@@ -297,7 +297,7 @@ What's new:
 - Added Notes for new S7 items like Hellfire Ashes, Catalyst Shard, etc.,
 - Updated already existing Notes to match s7 changes,
 - Added new "+Xdwo" abbreviation on NMAG barb helms to catch new Deep Wounds skill,
-- Adjusted Filter code with new avaliable improvements,
+- Adjusted Filter code with new available improvements,
 - Paladin shields will show exact Enhanced Damage % automod values,
 - Removed Spirit Sword bases from filter level 4+,
 - Added few more staves RW bases for your new A4 Merc,
