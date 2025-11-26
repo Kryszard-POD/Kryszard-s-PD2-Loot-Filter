@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season 12: ver 12.0.2
+//	Kryszard's PD2 Loot Filter for Season 12: ver 12.0.3
 //
 //	twitch.tv/kryszard
 //
@@ -15,7 +15,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 12.0.2 %BLACK%| %GRAY% updated: 2025-11-25}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 12.0.3 %BLACK%| %GRAY% updated: 2025-11-26}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -356,9 +356,6 @@ Alias[VSOCK312]: (ucl SET SOCK>0 TABSK49>0 STAT216>0 STAT110>0)
 //Varies up to 2 sockets
 //Kalan's Legacy - Mummified Trophy - Varies: 1-2
 Alias[VSOCK201]: ((ne6 OR neb) UNI SOCK>0 CLSK2=1 FBR>0 STAT20>0)
-
-//S12 BETA TESTING LINES
-
 
 //SOUNDS EFFECTS
 //Special Items Exclusives
@@ -2790,6 +2787,8 @@ ItemDisplay[GLOVES ((EXC OR ELT) !(utg OR uhg)) MAG !ETH !ID FILTLVL<6]: %NAME%
 ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp OR mst OR 9mt OR 7mt OR ssd OR 9ss OR 7ss OR scm OR 9sm OR 7sm OR sbr OR 9sb OR 7sb OR flc OR 9fc OR 7fc OR wsd OR 9wd OR 7wd OR dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR bld OR 9bl OR 7bl OR STAFF OR ktr OR wrb OR axf OR ces OR clw OR btl OR skr OR 9ar OR 9wb OR 9xf) MAG ETH !ID]: %NAME%
 ItemDisplay[(6lw OR 6l7 OR 6lb OR 6s7 OR 6cb OR 6lx OR 6mx OR 6hx OR 6rx) MAG !ID ((AMAZON FILTLVL<8) OR FILTLVL<6)]: %NAME%
 ItemDisplay[(am2 OR am7 OR amc) (MAG OR RARE) !ID (ALVL>74 OR CRAFTALVL>74)]: %NAME%
+ItemDisplay[(ob5 OR oba OR obf) (MAG OR RARE) !ID (ALVL>59 OR CRAFTALVL>59)]: %NAME%
+
 
 //Class items
 //Magic
@@ -5546,8 +5545,8 @@ ItemDisplay[t54]: %NAME%{%RED%F%WHITE%:65 %BLACK%| %BLUE%C%WHITE%:65 %BLACK%| %Y
 ItemDisplay[t55]: %NAME%{%WHITE%Boss Damage: %GRAY%Missing Data %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
 ItemDisplay[t55]: %NAME%{%RED%F%WHITE%:75 %BLACK%| %BLUE%C%WHITE%:50 %BLACK%| %YELLOW%L%WHITE%:75 %BLACK%| %GREEN%P%WHITE%:30 %BLACK%| %ORANGE%M%WHITE%:50 %BLACK%| %GOLD%P%WHITE%:50%CL%%NAME%}%CONTINUE%
 //City of Ureh
-//ItemDisplay[t55]:
-//ItemDisplay[t55]:
+//ItemDisplay[t56]:
+//ItemDisplay[t56]:
 
 //Essences
 ItemDisplay[tes]: %PX-9D%%NAME%{%TAN%Essence %WHITE%from: %BLUE%Andariel %WHITE%or %BLUE%Duriel}
@@ -5781,7 +5780,7 @@ ItemDisplay[(am5 OR ama OR amf) NMAG !RW TABSK2>1 (CLVL<61 FILTLVL<6)]: %NAME%{%
 ItemDisplay[(am5 OR ama OR amf) NMAG !RW TABSK2>2 (FILTLVL<2 OR (CLVL<80 AND FILTLVL~2-5))]: %NAME%{%NAME%}
 ItemDisplay[(GLOVES OR BOOTS OR BELT) NMAG !INF (CLVL<19 FILTLVL<6)]: %NAME%{%NAME%}
 ItemDisplay[((CHEST OR HELM OR CIRC OR SHIELD) OR WEAPON) !INF (CLVL<31 FILTLVL<6)]: %NAME%{%NAME%}
-ItemDisplay[(aqv OR cqv) NMAG !INF SOCK=0 (CLVL<7 FILTLVL<6)]: %NAME%{%NAME%}
+ItemDisplay[(aqv OR cqv) NMAG !INF SOCK=0 ((CLVL<7 OR DIFF>0) FILTLVL<6)]: %NAME%{%NAME%}
 ItemDisplay[(aqv OR cqv) NMAG !INF !SOCK=0 ((CLVL<19 OR DIFF>0) FILTLVL<6)]: %NAME%{%NAME%}
 ItemDisplay[(aqv2 OR cqv2) NMAG !INF !SOCK=2 ((CLVL<41 AND DIFF<1) FILTLVL<6)]: %NAME%{%NAME%}
 ItemDisplay[(aqv2 OR cqv2) NMAG !INF SOCK=2 ((CLVL<61 AND DIFF<2) FILTLVL<6)]: %NAME%{%NAME%}
