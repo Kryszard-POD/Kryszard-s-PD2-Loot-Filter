@@ -2520,7 +2520,9 @@ ItemDisplay[(tpfl OR tpgl OR tpcl OR tpll) FILTLVL>0 (CLVL>39 OR FILTLVL>5)]: {%
 
 //Gems
 //Gems Notes
-ItemDisplay[GEM<5]:%NAME%{%WHITE%3x Gem of the same Type and Level%NL%Higher Level Gem:%NL%%TAN% Note%WHITE%: Horadric Cube Recipes:}%CONTINUE%
+ItemDisplay[GEM<5]:%NAME%{%NL%%WHITE%Higher Level Gem:%NL%%TAN% Note%WHITE%: Horadric Cube Recipes:}%CONTINUE%
+ItemDisplay[GEM=4]:%NAME%{ + %GRAY%key%NAME%}%CONTINUE%
+ItemDisplay[GEM<5]:%NAME%{%WHITE%3x Gem of the same Type and Level%NAME%}%CONTINUE%
 ItemDisplay[GEM=1]:%NAME%{%WHITE%Any Chip. Gem, 3x Any %RED%!%WHITE%H.Potion, 3x Any %BLUE%!%WHITE%M.Potion%NL%Rejuvenation Potion:%NL%%NL%%NAME%}%CONTINUE%
 ItemDisplay[GEM=1]:%NAME%{%WHITE%3x Any Chip. Gem, %BLUE%Magic Weapon%NL%%WHITE%ReRolled %BLUE%Weapon %LIGHT_GRAY%(Ilvl25) %WHITE%With %TAN%[%WHITE%1-2%TAN%] %WHITE%Sockets:%NL%%NL%%NAME%}%CONTINUE%
 ItemDisplay[GEM=3]:%NAME%{%WHITE%Any Square Gem, 3x Any %RED%!%WHITE%H.Potion, 3x Any %BLUE%!%WHITE%M.Potion%NL%Full Rejuvenation Potion:%NL%%NL%%NAME%}%CONTINUE%
