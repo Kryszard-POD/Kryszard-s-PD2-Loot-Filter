@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season 12: ver 12.0.3
+//	Kryszard's PD2 Loot Filter for Season 12: ver 12.0.4
 //
 //	twitch.tv/kryszard
 //
@@ -15,7 +15,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 12.0.3 %BLACK%| %GRAY% updated: 2025-11-26}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 12.0.4 %BLACK%| %GRAY% updated: 2025-11-27}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -1788,7 +1788,7 @@ ItemDisplay[ETH OR (DIN NMAG !RW RES>0) OR (DIN NMAG !RW EDAM>0) OR ((AMASTAFF O
 
 //Health & Mana & Rejuvenation Potions
 ItemDisplay[rvl]: %PURPLE%R %WHITE%Full{%WHITE%Full Rejuvenation Potion}%CONTINUE%
-ItemDisplay[rvs]: %PURPLE%r %WHITE%35%{%PURPLE%r %WHITE%35%, Perf %YELLOW%O%WHITE%, %BLUE%Ring %WHITE%= Light Res %BLUE%Ring%NL%%WHITE%3x%PURPLE%r %WHITE%35% = %PURPLE%R%WHITE% Full%NL%%TAN% Note%WHITE%: Crafting Recipes:%NL%Rejuvenation Potion}%CONTINUE%
+ItemDisplay[rvs]: %PURPLE%r %WHITE%35%{%PURPLE%r %WHITE%35%, Perf %YELLOW%O%WHITE%, %BLUE%Ring %WHITE%= Light Res %BLUE%Ring%NL%%WHITE%3x %PURPLE%r %WHITE%35% = %PURPLE%R%WHITE% Full%NL%%TAN% Note%WHITE%: Crafting Recipes:%NL%Rejuvenation Potion}%CONTINUE%
 ItemDisplay[rvs FILTLVL>7]: {%NAME%}%CONTINUE%
 ItemDisplay[hp5]: %RED%!%WHITE%Hp{%WHITE%Super Healing Potion}%CONTINUE%
 ItemDisplay[mp5]: %BLUE%!%WHITE%Mp{%WHITE%Super Mana Potion}%CONTINUE%
@@ -2519,12 +2519,12 @@ ItemDisplay[(tpfl OR tpgl OR tpcl OR tpll) FILTLVL>0 (CLVL>39 OR FILTLVL>5)]: {%
 
 //Gems
 //Gems Notes
-ItemDisplay[GEM<5]:%NAME%{%WHITE%3x Gem of the same Type and Level = 1x Higher Level Gem%NL%%TAN% Note%WHITE%: Crafting Recipes:}%CONTINUE%
-ItemDisplay[GEM=1]:%NAME%{%WHITE%3x Any %RED%!%WHITE%H.Potion, 3x Any %BLUE%!%WHITE%M.Potion, Any Chip. Gem = %PURPLE%r %WHITE%35%%NL%%NAME%}%CONTINUE%
-ItemDisplay[GEM=1]:%NAME%{%WHITE%3x Any Chip. Gem + %BLUE%Magic Weapon %WHITE%= ReRolled %BLUE%Weapon %LIGHT_GRAY%(Ilvl25) %WHITE%With %TAN%[%WHITE%1-2%TAN%] %WHITE%Sockets%NL%%NAME%}%CONTINUE%
-ItemDisplay[GEM=3]:%NAME%{%WHITE%3x Any %RED%!%WHITE%H.Potion, 3x Any %BLUE%!%WHITE%M.Potion, Any Square Gem = %PURPLE%R %WHITE%Full%NL%%NAME%}%CONTINUE%
-ItemDisplay[GEM=3]:%NAME%{%WHITE%3x Any Square Gem + Normal Socketed Weapon %WHITE%= %BLUE%Magic Weapon %LIGHT_GRAY%(Ilvl30) %WHITE%With %TAN%[%WHITE%1-2%TAN%] %WHITE%Sockets%NL%%NAME%}%CONTINUE%
-ItemDisplay[GEM=4 OR (gzvs OR glys OR glbs OR glgs OR glrs OR glws OR skls OR gzv OR glw OR glg OR glr OR glb OR gly OR skl)]:%NAME%{%WHITE%3x Any Flawless Gem + %BLUE%Magic Weapon %WHITE%= ReRolled %BLUE%Weapon %LIGHT_GRAY%(Ilvl30) %WHITE%With %TAN%[%WHITE%1-2%TAN%] %WHITE%Sockets%NL%%NAME%}%CONTINUE%
+ItemDisplay[GEM<5]:%NAME%{%WHITE%3x Gem of the same Type and Level%NL%Higher Level Gem:%NL%%TAN% Note%WHITE%: Horadric Cube Recipes:}%CONTINUE%
+ItemDisplay[GEM=1]:%NAME%{%WHITE%Any Chip. Gem, 3x Any %RED%!%WHITE%H.Potion, 3x Any %BLUE%!%WHITE%M.Potion%NL%Rejuvenation Potion:%NL%%NL%%NAME%}%CONTINUE%
+ItemDisplay[GEM=1]:%NAME%{%WHITE%3x Any Chip. Gem, %BLUE%Magic Weapon%NL%%WHITE%ReRolled %BLUE%Weapon %LIGHT_GRAY%(Ilvl25) %WHITE%With %TAN%[%WHITE%1-2%TAN%] %WHITE%Sockets:%NL%%NL%%NAME%}%CONTINUE%
+ItemDisplay[GEM=3]:%NAME%{%WHITE%Any Square Gem, 3x Any %RED%!%WHITE%H.Potion, 3x Any %BLUE%!%WHITE%M.Potion%NL%Full Rejuvenation Potion:%NL%%NL%%NAME%}%CONTINUE%
+ItemDisplay[GEM=3]:%NAME%{%WHITE%3x Any Square Gem, Normal Socketed Weapon%NL%%BLUE%Magic Weapon %LIGHT_GRAY%(Ilvl30) %WHITE%With %TAN%[%WHITE%1-2%TAN%] %WHITE%Sockets:%NL%%NL%%NAME%}%CONTINUE%
+ItemDisplay[GEM=4 OR (gzvs OR glys OR glbs OR glgs OR glrs OR glws OR skls OR gzv OR glw OR glg OR glr OR glb OR gly OR skl)]:%NAME%{%WHITE%3x Any Flawless Gem, %BLUE%Magic Weapon %NL%%WHITE%ReRolled %BLUE%Weapon %LIGHT_GRAY%(Ilvl30) %WHITE%With %TAN%[%WHITE%1-2%TAN%] %WHITE%Sockets%NL%%NL%%NAME%}%CONTINUE%
 ItemDisplay[gzv OR glw OR glg OR glr OR glb OR gly OR skl]: %NAME%{%NAME%%NL%}%CONTINUE%
 ItemDisplay[(gpvs OR gpv)]: %NAME%{%NAME%%WHITE%You Can use %BLUE%Magic%WHITE%/%YELLOW%Rare %WHITE%Items as Bases%NL%Gloves: %ORANGE%Ort %BLACK%| %WHITE%Belt: %ORANGE%Ith %BLACK%| %WHITE%Boots: %ORANGE%Thul%NL%%WHITE%Weapon: %ORANGE%Tir %BLACK%| %WHITE%Chest: %ORANGE%Tal %BLACK%| %WHITE%Shield/Quiver: %ORANGE%Eth%NL%%WHITE%Ring: %ORANGE%Amn %BLACK%| %WHITE%Helm: %ORANGE%Nef %BLACK%| %WHITE%Amulet: %ORANGE%Ral%NL%%TAN%Note%WHITE%: Caster Crafting Recipes: Perf %PURPLE%O%WHITE%, %BLUE%Jewel%WHITE%,}%CONTINUE%
 ItemDisplay[(gpys OR gpy)]: %NAME%{%NAME%%WHITE%You Can use %BLUE%Magic%WHITE%/%YELLOW%Rare %WHITE%Items as Bases%NL%Gloves: %ORANGE%Hel %BLACK%| %WHITE%Belt: %ORANGE%El %BLACK%| %WHITE%Boots: %ORANGE%Io%NL%%WHITE%Weapon: %ORANGE%Shael %BLACK%| %WHITE%Chest: %ORANGE%Eld %BLACK%| %WHITE%Shield/Quiver: %ORANGE%Dol%NL%%WHITE%Ring: %ORANGE%Lum %BLACK%| %WHITE%Helm: %ORANGE%Tir %BLACK%| %WHITE%Amulet: %ORANGE%Ko%NL%%TAN%Note%WHITE%: Bountiful Crafting Recipes: Perf %YELLOW%O%WHITE%, %BLUE%Jewel%WHITE%,}%CONTINUE%
