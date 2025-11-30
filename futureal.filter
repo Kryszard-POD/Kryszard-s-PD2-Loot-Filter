@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season 12: ver 12.1.1
+//	Kryszard's PD2 Loot Filter for Season 12: ver 12.1.2
 //	Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -16,7 +16,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%futureal.filter ver 12.1.1 %BLACK%| %GRAY% updated: 2025-11-28}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%futureal.filter ver 12.1.2 %BLACK%| %GRAY% updated: 2025-11-30}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -323,7 +323,7 @@ Alias[NOTICEME08]: (WEAPON (MAG OR RARE OR CRAFT) (SUFFIX=594 OR SUFFIX=595) !RW
 //Life Tap Charges
 Alias[NOTICEME09]: (WEAPON (MAG OR RARE OR CRAFT) (SUFFIX=578 OR SUFFIX=579) !RW !SHOP !EQUIPPED)
 //High ED Weapon + Mods
-Alias[NOTICEME10]: (WEAPON (MAG OR RARE OR CRAFT) ED>349 ((STAT21+STAT22+STAT23+STAT24+STAT159+STAT160>14) OR STAT141>0 OR STAT136>0 OR IAS>29 OR (STAT121+STAT122>50) OR STAT218>0 OR STAT219>0 OR STAT252>0) !SHOP !EQUIPPED)
+Alias[NOTICEME10]: (WEAPON (MAG OR RARE OR CRAFT) ED>349 ((STAT21+STAT22+STAT23+STAT24+STAT159+STAT160>14) OR STAT141>0 OR STAT136>0 OR IAS>29 OR (STAT121+STAT122>50) OR STAT218>0 OR STAT219>0 OR STAT252>0 OR STAT501>285) !SHOP !EQUIPPED)
 
 //VARIABLE SOCKETS ROLLS
 //Varies up to 5 sockets
@@ -1826,7 +1826,8 @@ ItemDisplay[tsc]: %WHITE%tp scroll{%RED%Warning%WHITE%: You gonna lose socketed 
 ItemDisplay[isc]: %WHITE%id scroll{%WHITE%Scroll of Identify}%CONTINUE%
 ItemDisplay[vps]: %WHITE%Stamina{%GRAY%(time stack)%NL%%WHITE%Gives infinite stamina for 30s%NL%%TAN%Note%WHITE%: Instantly restores stamina%NL%Stamina Potion}%CONTINUE%
 ItemDisplay[wms]: %WHITE%Thawing{%GREEN%!%WHITE%thaw, Perf %BLUE%O%WHITE%, %BLUE%Ring %WHITE%= Cold Res %BLUE%Ring%NL%%GRAY%(time stack)%NL%%WHITE%Gives +25 Cold Res for 30s%NL%%TAN%Note%WHITE%: Instantly thaws character%NL%Thawing Potion}%CONTINUE%
-ItemDisplay[(tsc OR isc OR vps OR wms) FILTLVL>0 (CLVL>30 OR FILTLVL>5) !SHOP]: {%NAME%}%CONTINUE%
+ItemDisplay[(tsc OR isc OR vps) FILTLVL>0 (CLVL>30 OR FILTLVL>5) !SHOP]: {%NAME%}%CONTINUE%
+ItemDisplay[wms FILTLVL>0 (CHARSTAT118>1 OR CHARSTAT153>0) !SHOP]: {%NAME%}%CONTINUE%
 ItemDisplay[yps]: %WHITE%Antidote{%GREEN%!%WHITE%ant, Perf %GREEN%O%WHITE%, %BLUE%Ring %WHITE%= Psn Res %BLUE%Ring%NL%%GRAY%(time stack)%NL%%WHITE%Gives +25 Psn Res for 30s%NL%%TAN%Note%WHITE%: Instantly cures poison%NL%Antidote Potion}
 
 //keys
@@ -2591,9 +2592,7 @@ ItemDisplay[RUNE~20-25]: %ORANGE%%RUNENAME% Rune %GRAY%[%RED%%RUNENUM%%GRAY%]{%N
 ItemDisplay[RUNE>25]: %ORANGE%%RUNENAME% Rune %GRAY%[%GREEN%%RUNENUM%%GRAY%]{%NAME%}%CONTINUE%
 
 //All Charms
-ItemDisplay[(cm1 OR cm3) MAG !ID]: %DOT-9B%%NAME%
-ItemDisplay[cm2 MAG !ID FILTLVL<6]: %DOT-9B%%NAME%
-ItemDisplay[cm2 MAG !ID FILTLVL>5]: %DOT-1C%%PX-9B%%TIER-5%%NAME%
+ItemDisplay[(cm1 OR cm2 OR cm3) MAG !ID]: %DOT-9B%%NAME%
 ItemDisplay[(cm1 OR cm2 OR cm3) UNI !ID]: %PX-68%%NAME%
 
 //Notes on Charms
@@ -2809,6 +2808,9 @@ ItemDisplay[(am2 OR am7 OR amc) (MAG OR RARE) !ID (ALVL>74 OR CRAFTALVL>74)]: %N
 ItemDisplay[(ob5 OR oba OR obf) (MAG OR RARE) !ID (ALVL>59 OR CRAFTALVL>59)]: %NAME%
 
 //Class items
+//Non-Magical 1 sock Craft Bases (3x Square Gem + Socketed NMag Exc/Elite Tier Base -> Magic -> Craft)
+ItemDisplay[(am7 OR am6 OR 8lw OR 8l8 OR 8lb OR 8s8 OR 8cb OR 8lx OR 8mx OR 8hx OR 8rx) AMAZON NMAG SOCK=1 (CLVL<61 AND FILTLVL<6)]: %NAME%
+ItemDisplay[(amc OR amb OR 6lw OR 6l7 OR 6lb OR 6s7 OR 6cb OR 6lx OR 6mx OR 6hx OR 6rx) AMAZON NMAG SOCK=1 (CLVL<80 AND FILTLVL<6)]: %NAME%
 //Magic
 ItemDisplay[(SOR OR WAND OR SCEPTER OR (am5 OR ama OR amf) OR (am2 OR am7 OR amc OR am1 OR am6 OR amb) OR (am3 OR am8 OR amd OR am4 OR am9 OR ame) OR QUIVER OR DRU OR BAR OR NEC OR SIN OR DIN OR (clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp) OR (DAGGER !THROWING)) MAG !ID FILTLVL<6]: %NAME%
 ItemDisplay[SOR SORCERESS MAG !ID]: %NAME%
