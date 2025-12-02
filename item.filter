@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season 12: ver 12.1.2
+//	Kryszard's PD2 Loot Filter for Season 12: ver 12.1.3
 //
 //	twitch.tv/kryszard
 //
@@ -15,7 +15,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 12.1.2 %BLACK%| %GRAY% updated: 2025-11-30}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 12.1.3 %BLACK%| %GRAY% updated: 2025-12-01}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -71,7 +71,7 @@ Alias[LODGGUNI1]: ((rin OR amu OR 6ws OR uar OR ulc OR urn OR uap OR ci3 OR xtb 
 //OK UNIQUES only when ETH - Armors
 Alias[LODOKUNIETH1]: ((xpl OR uul) UNI ETH !ID)
 //OK UNIQUES only when ETH - Weapons
-Alias[LODOKUNIETH2]: ((7gi OR 7m7 OR 7gl OR 7b8 OR 7bk OR 7ha OR 7b7 OR 7sr OR 9b8 OR 9la) UNI ETH !ID)
+Alias[LODOKUNIETH2]: ((7gi OR 7m7 OR 7gl OR 7b8 OR 7bk OR 7ha OR 7b7 OR 7sr OR 9b8 OR 9la OR 8ls) UNI ETH !ID)
 //belts
 Alias[LODOKUNI1]: ((ztb OR zlb OR zvb OR zhb OR umc OR uvc) UNI !ID)
 //armors
@@ -85,11 +85,11 @@ Alias[LODOKUNI5]: ((lbt OR xhb OR uhb OR xvb) UNI !ID)
 //shields
 Alias[LODOKUNI6]: ((nee OR pa9 OR nea OR uts OR uow OR xsh OR xow OR pae OR nef OR pac) UNI !ID)
 //weapons
-Alias[LODOKUNI7]: ((7ts OR 7s8 OR 9bw OR 7wc OR 7bw OR 7ws OR 7fl OR 7cr OR 7gm OR oba OR ama OR obc OR amf OR 7wh OR 7p7 OR 7wa OR 7lw OR 7gd OR 8ls) UNI !ID)
+Alias[LODOKUNI7]: ((7ts OR 7s8 OR 9bw OR 7wc OR 7bw OR 7ws OR 7fl OR 7cr OR 7gm OR oba OR ama OR obc OR amf OR 7wh OR 7p7 OR 7wa OR 7lw OR 7gd) UNI !ID)
 //OK/Lower Value UNIQUES only when ETH
 Alias[LODLOWUNIETH1]: ((7ga OR mau OR 9st OR uvb) UNI ETH !ID)
 //OK/Lower Value UNIQUES
-Alias[LODLOWUNI1]: ((7pa OR 7bt OR ltp OR xcl OR 9tw OR xtp OR xth OR 7kr OR xpl OR xld OR 7b7 OR 8hx OR 7cs OR xmb OR tbt OR amb OR 7sc OR 7ha OR 7ls OR 7bl OR 9b8 OR 6hx OR uml OR upk OR 7gl OR 9gm OR 7br OR ush OR uul) UNI !ID)
+Alias[LODLOWUNI1]: ((7pa OR 7bt OR ltp OR xcl OR 9tw OR xtp OR xth OR 7kr OR xpl OR xld OR 7b7 OR 8hx OR 7cs OR xmb OR tbt OR amb OR 7sc OR 7ha OR 7ls OR 7bl OR 9b8 OR 6hx OR uml OR upk OR 7gl OR 9gm OR 7br OR ush OR uul OR 8ls OR bad) UNI !ID)
 //Uniques worth notifying
 //Armors
 Alias[LODNOTIFYUNI1]: ((brs OR fld OR xkp OR xul OR xlm OR drb OR 9sp OR mbt OR rng OR xng OR xui OR spl OR xmg OR xsk OR xml OR xlb OR xap OR xrs OR gth OR aar OR (BELT !(vbl OR hbl)) OR skp OR xhl OR xrn OR vbt OR uvb OR umb OR lgl OR vgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR xts OR xrg OR xar) UNI !ID)
@@ -426,6 +426,9 @@ ItemDisplay[CRAFT]: %ORANGE%%NAME%%CONTINUE%
 
 //Add red "*" Stars on Corrupted items in Unique Stygian Caverns Map
 ItemDisplay[(ARMOR OR WEAPON OR (QUIVER OR rin OR amu)) (MAG OR RARE OR SET OR UNI OR CRAFT) !ID (MAPID=181 OR MAPID=182)]: %RED%*%NAME%%RED%*%CONTINUE%
+
+//Add "[?]" Unknown Sockets Roll bracket on items in Unique City of Ureh Map
+ItemDisplay[((CHEST OR HELM OR CIRC OR SHIELD OR QUIVER) OR WEAPON) !THROWPOTS (MAG OR RARE OR CRAFT OR UNI OR SET) !ID]: %NAME% %TAN%[%WHITE%?%TAN%]%CONTINUE%
 
 //"Sup" for superiors, and "Inf" for inferiors
 ItemDisplay[SUP ED<5]: %WHITE%Sup %NAME%%CONTINUE%
@@ -5111,9 +5114,10 @@ ItemDisplay[(SCEPTER !scp) !INF !ETH NMAG !RW (SK112>2 AND SK113>0) (SOCK=0 OR S
 ItemDisplay[(wsp OR 9ws OR 7ws) (SK99>2 OR SK109>2 OR SK118>2) !INF NMAG !RW SOCK=4]: %DOT-D6%%TIER-7%%NAME%{%NAME%}
 ItemDisplay[(wsp OR 9ws OR 7ws) (SK99>2 OR SK109>2 OR SK118>2) !INF NMAG !RW (SOCK=0 OR SOCK=4) FILTLVL<8]: %DOT-D6%%TIER-5%%NAME%{%NAME%}
 ItemDisplay[(wsp OR 9ws OR 7ws) SK117>0 NMAG !RW (SOCK=0 OR SOCK=5) PALADIN FILTLVL<8]: %DOT-D6%%TIER-5%%NAME%{%NAME%}
-ItemDisplay[(SCEPTER !scp) !INF !ETH NMAG !RW (SK101>2 OR SK112>2 OR SK121>2) (SOCK=0 OR SOCK=3) FILTLVL<8]: %DOT-D6%%TIER-3%%NAME%{%NAME%}
+ItemDisplay[(SCEPTER !scp) !INF !ETH NMAG !RW (SK101>2 OR SK112>2 OR SK121>2) (SOCK=0 OR SOCK=3) PALADIN FILTLVL<8]: %DOT-D6%%TIER-3%%NAME%{%NAME%}
 ItemDisplay[7ws NMAG !ETH !RW !SOCK=1 ED>4 FILTLVL<8]: %DOT-D6%%TIER-3%%NAME%{%NAME%}
 ItemDisplay[(wsp OR 9ws OR 7ws) SK117>0 NMAG !RW (SOCK=0 OR SOCK=5) FILTLVL<8]: %DOT-D6%%TIER-3%%NAME%{%NAME%}
+ItemDisplay[(SCEPTER !scp) !INF !ETH NMAG !RW (SK101>2 OR SK112>2 OR SK121>2) (SOCK=0 OR SOCK=3) FILTLVL<8]: %NAME%{%NAME%}
 ItemDisplay[(wsp OR 9ws OR 7ws) (SK100>1 AND SK108>1 AND SK125>1) !INF !ETH NMAG !RW (SOCK=0 OR SOCK=4)]: %NAME%{%NAME%}
 ItemDisplay[(wsp OR 9ws OR 7ws) (SK100>2 OR SK108>2 OR SK125>2) !INF !ETH NMAG !RW (SOCK=0 OR SOCK=4) FILTLVL<8]: %NAME%{%NAME%}
 ItemDisplay[(wsp OR 9ws OR 7ws) (SK100>0 OR SK108>0 OR SK125>0) !INF !ETH NMAG !RW (SOCK=0 OR SOCK=4) FILTLVL<8]: %NAME%{%NAME%}
@@ -5398,7 +5402,7 @@ ItemDisplay[jew ID RARE ILVL~98-99 STAT486=0]: %NAME%{%NAME%68}%CONTINUE%
 //
 ItemDisplay[jew ID RARE ILVL>67 STAT486=0]: %NAME%{%CL%%NAME%%CL%}%CONTINUE%
 //Jewel Notes part.2
-ItemDisplay[jew ID RARE ILVL>67 STAT486=0]: %NAME%{%CL%%NAME%%WHITE%To %YELLOW%Reroll %WHITE%Cube with 3 x Perf %GRAY%O%CL%}%CONTINUE%
+ItemDisplay[jew ID RARE ILVL>67 STAT486=0]: %NAME%{%CL%%NAME%%WHITE%To %YELLOW%ReRoll %WHITE%Cube with 3 x Perf %GRAY%O%CL%}%CONTINUE%
 ItemDisplay[jew  MAG ID ILVL>84]: %NAME%{%WHITE%Ilvl%TEAL%85+ %BLUE%Jewel %WHITE%Always Roll 2 Affixes,}%CONTINUE%
 ItemDisplay[jew  MAG ID ILVL>84]: %NAME%{%WHITE%To ReRoll Cube with 3x Perf Gem%CL%%NAME%}%CONTINUE%
 ItemDisplay[jew ID]: %NAME%{%NAME%%CL%%TAN%Note%WHITE%: Cube with %GRAY%key %WHITE%to Destroy Into: %BLUE%Jewel Fragments%CL%}%CONTINUE%
@@ -5418,25 +5422,25 @@ ItemDisplay[iwss]: %MAP-0A%%DOT-66%%NAME% %ORANGE%*{%WHITE%Random Event to Your 
 ItemDisplay[scrb]: %MAP-A9%%NAME% %ORANGE%*{%NAME%}//{%RED%Group Dungeon%NL%%TAN%Note%WHITE%: Cube it with %GRAY%[%ORANGE%T3%GRAY%] %WHITE%Map to Make:}
 ItemDisplay[ubtm]: %MAP-A9%%GRAY%* %NAME% %GRAY%*{%GRAY%(It will create 3 Portals to come back Max 3 Times)%NL%%TAN%Note%WHITE%: Entrance to Uber Tristram}
 ItemDisplay[imra]: %NAME% %ORANGE%*{%WHITE%Map + %GOLD%Orb %WHITE%+ %BLUE%Jewel %WHITE%+ %ORANGE%Any Rune%NL%%TAN%Note%WHITE%: Imbue White Map to %YELLOW%Rare%WHITE%:%NL%}%CONTINUE%
-ItemDisplay[rera]: %NAME% %ORANGE%*{%YELLOW%Map %WHITE%+ %GOLD%Orb %WHITE%+ Perf Gem + %ORANGE%Any Rune%NL%%TAN%Note%WHITE%: Reroll %YELLOW%Rare %WHITE%Map:%NL%}%CONTINUE%
+ItemDisplay[rera]: %NAME% %ORANGE%*{%YELLOW%Map %WHITE%+ %GOLD%Orb %WHITE%+ Perf Gem + %ORANGE%Any Rune%NL%%TAN%Note%WHITE%: ReRoll %YELLOW%Rare %WHITE%Map:%NL%}%CONTINUE%
 ItemDisplay[upma]: %NAME% %ORANGE%*{%BLUE%Map %WHITE%+ %GOLD%Orb %WHITE%+ Perf Gem %WHITE%+ %ORANGE%Any Rune%NL%%TAN%Note%WHITE%: Imbue %BLUE%Magic %WHITE%Map to %YELLOW%Rare%WHITE%:%NL%}%CONTINUE%
-ItemDisplay[imma]: %NAME% %ORANGE%*{%BLUE%Map %WHITE%+ %GOLD%Orb%NL%%WHITE%Reroll %BLUE%Magic %WHITE%Map:%NL%%NL%%GRAY%(Skip Map to make %GOLD%Infused Orb%GRAY%)%NL%%WHITE%Map + %GOLD%Orb %WHITE%+ %BLUE%Jewel %NL%%TAN%Note%WHITE%: Imbue White Map to %BLUE%Magic%WHITE%:%NL%}%CONTINUE%
+ItemDisplay[imma]: %NAME% %ORANGE%*{%BLUE%Map %WHITE%+ %GOLD%Orb%NL%%WHITE%ReRoll %BLUE%Magic %WHITE%Map:%NL%%NL%%GRAY%(Skip Map to make %GOLD%Infused Orb%GRAY%)%NL%%WHITE%Map + %GOLD%Orb %WHITE%+ %BLUE%Jewel %NL%%TAN%Note%WHITE%: Imbue White Map to %BLUE%Magic%WHITE%:%NL%}%CONTINUE%
 ItemDisplay[scou]: %NAME% %ORANGE%*{%BLUE%M%WHITE%a%YELLOW%p %WHITE%+ %GOLD%Orb%NL%%TAN%Note%WHITE%: Imbue %BLUE%Magic%WHITE%/%YELLOW%Rare %WHITE%Map to White:%NL%}
 ItemDisplay[fort]: %GOLD%%NAME% %ORANGE%*{%BLUE%M%WHITE%a%YELLOW%p %WHITE%+ %GOLD%Orb%NL%%WHITE%2x Health, 2x Exp, 20% Damage, 2x Loot%NL%%TAN% Note%WHITE%: Reduces Base Density by Half, Monsters Gain:%NL%}
 ItemDisplay[upmp]: %NAME% %ORANGE%*{%WHITE%3x%BLUE%M%WHITE%a%YELLOW%p %TAN%(%WHITE%Tier:%ORANGE%x%TAN%) %WHITE%+ %GOLD%Orb %WHITE%= Map %TAN%(%WHITE%Tier:%ORANGE%x%WHITE%+1%TAN%)%NL%Note%WHITE%: Upgrade Maps for higher Tier:%NL%}
 ItemDisplay[(imra OR rera OR upma)]: %NAME%{%GRAY%(Skip Map to make %GOLD%Infused Orb%GRAY%)%NL%%NAME%}%CONTINUE%
 ItemDisplay[imma FILTLVL>7 !SHOP !TOWN]: {%NAME%}%CONTINUE%
 ItemDisplay[irra]: %NAME% %ORANGE%*{%WHITE%Map + %GOLD%Orb%NL%%TAN%Note%WHITE%: Imbue White Map to %YELLOW%Rare%WHITE%:%NL%}
-ItemDisplay[rrra]: %NAME% %ORANGE%*{%YELLOW%Map %WHITE%+ %GOLD%Orb%NL%%TAN%Note%WHITE%: Reroll %YELLOW%Rare %WHITE%Map:%NL%}
+ItemDisplay[rrra]: %NAME% %ORANGE%*{%YELLOW%Map %WHITE%+ %GOLD%Orb%NL%%TAN%Note%WHITE%: ReRoll %YELLOW%Rare %WHITE%Map:%NL%}
 ItemDisplay[urma]: %NAME% %ORANGE%*{%BLUE%Map %WHITE%+ %GOLD%Orb%NL%%TAN%Note%WHITE%: Imbue %BLUE%Magic %WHITE%Map to %YELLOW%Rare%WHITE%:%NL%}
-ItemDisplay[irma]: %NAME% %ORANGE%*{%BLUE%Map %WHITE%+ %GOLD%Orb%NL%%WHITE%Reroll %BLUE%Magic %WHITE%Map:%NL%%NL%%WHITE%Map + %GOLD%Orb%NL%%TAN%Note%WHITE%: Imbue White Map to %BLUE%Magic%WHITE%:%NL%}
+ItemDisplay[irma]: %NAME% %ORANGE%*{%BLUE%Map %WHITE%+ %GOLD%Orb%NL%%WHITE%ReRoll %BLUE%Magic %WHITE%Map:%NL%%NL%%WHITE%Map + %GOLD%Orb%NL%%TAN%Note%WHITE%: Imbue White Map to %BLUE%Magic%WHITE%:%NL%}
 ItemDisplay[lbox]: %BORDER-0A%%DOT-62%%GREEN%*%PURPLE%*%RED%*       %NAME%       %RED%*%PURPLE%*%GREEN%*{%WHITE%Two-Handed Weapon = 2-4 max%NL%One-Handed Weapon = 1-2 max%NL%Helmet, Chest, Shield = 1-2 max%NL%%TAN%Note%WHITE%: Use to %TAN%Socket %WHITE%an Item}
 ItemDisplay[lpp]: %DOT-0A%%PX-62%%GRAY%*%YELLOW%*   %NAME%   %YELLOW%*%GRAY%*{%WHITE%Two-Handed Weapon = 2-4 max%NL%One-Handed Weapon = 1-2 max%NL%Helmet, Chest, Shield = 1-2 max%NL%%TAN%Note%WHITE%: Use to %TAN%Socket %WHITE%Normal/%BLUE%Magic%WHITE%/%YELLOW%Rare%WHITE%/%ORANGE%Crafted %WHITE%Item}
 ItemDisplay[lmal]: %GOLD%%NAME% %ORANGE%*{%WHITE%All Types of Items = 1 max%NL%%TAN%Note%WHITE%: Use to %TAN%Socket %WHITE%an Item}
 ItemDisplay[lsvl]: %BORDER-9B%%DOT-62%%GREEN%*%SAGE%*%WHITE%*%CORAL%*%RED%*        %NAME%        %RED%*%CORAL%*%WHITE%*%SAGE%*%GREEN%*{%TAN%Note%WHITE%: %WHITE%This item is %PURPLE%E%RED%x%ORANGE%t%YELLOW%re%ORANGE%m%RED%e%PURPLE%l%RED%y Rare%WHITE%.}
 ItemDisplay[llmr]: %BORDER-9B%%DOT-62%%GREEN%*%SAGE%*%WHITE%*%CORAL%*%RED%*        %NAME%        %RED%*%CORAL%*%WHITE%*%SAGE%*%GREEN%*{%RED%You Can't remove socketed Misc from it%NL%%WHITE%Their colors will be changed to Black and White.%NL%Can't be used in any cube recipes.%NL%%RED%Warning%WHITE%: Items will be marked as %PURPLE%Mirrored %WHITE%and%NL%%WHITE%Only works with %BLUE%magic%WHITE%/%YELLOW%rare%WHITE%/%ORANGE%craft %WHITE%equipment%NL%%TAN%Note%WHITE%: %WHITE%This item is %PURPLE%E%RED%x%ORANGE%t%YELLOW%re%ORANGE%m%RED%e%PURPLE%l%RED%y Rare%WHITE%.}
 ItemDisplay[rkey]: %MAP-0A%%PX-62%%GRAY%*%LIGHT_GRAY%*%YELLOW%*   %NAME%   %YELLOW%*%LIGHT_GRAY%*%GRAY%*{%NAME%}
-ItemDisplay[imrn]: %BORDER-0A%%DOT-62%%GREEN%*%PURPLE%*%RED%*       %NAME%       %RED%*%PURPLE%*%GREEN%*{%TAN%Note%WHITE%: Use to %CORAL%Reroll %WHITE%an %GOLD%Unique %WHITE%or %GREEN%Set %WHITE%Item}
+ItemDisplay[imrn]: %BORDER-0A%%DOT-62%%GREEN%*%PURPLE%*%RED%*       %NAME%       %RED%*%PURPLE%*%GREEN%*{%TAN%Note%WHITE%: Use to %CORAL%ReRoll %WHITE%an %GOLD%Unique %WHITE%or %GREEN%Set %WHITE%Item}
 
 //DClone/Rathma/Lucion Materials & items
 ItemDisplay[(dcma OR rtma OR luca) STAT185=0]: %MAP-0A%%PX-62%%GRAY%*%RED%* %NAME% %RED%*%GRAY%*{%BLUE%Tier: 0 (Default)%NL%%RED%Enter at your own risk!%NL%%TAN%Note%WHITE%: %GRAY%Many have entered... Few have returned.}
@@ -5582,8 +5586,8 @@ ItemDisplay[t54]: %NAME%{%RED%F%WHITE%:65 %BLACK%| %BLUE%C%WHITE%:65 %BLACK%| %Y
 ItemDisplay[t55]: %NAME%{%WHITE%Boss Damage: %GRAY%Missing Data %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
 ItemDisplay[t55]: %NAME%{%RED%F%WHITE%:75 %BLACK%| %BLUE%C%WHITE%:50 %BLACK%| %YELLOW%L%WHITE%:75 %BLACK%| %GREEN%P%WHITE%:30 %BLACK%| %ORANGE%M%WHITE%:50 %BLACK%| %GOLD%P%WHITE%:50%CL%%NAME%}%CONTINUE%
 //City of Ureh
-//ItemDisplay[t56]:
-//ItemDisplay[t56]:
+ItemDisplay[t56]: %NAME%{%WHITE%Boss Damage: %GRAY%Missing Data %BLACK%| %WHITE%Monsters Highest Res:%CL%%NAME%}%CONTINUE%
+ItemDisplay[t56]: %NAME%{%RED%F%WHITE%:85 %BLACK%| %BLUE%C%WHITE%:80 %BLACK%| %YELLOW%L%WHITE%:%CORAL%100%GRAY%? %BLACK%| %GREEN%P%WHITE%:75 %BLACK%| %ORANGE%M%WHITE%:50 %BLACK%| %GOLD%P%WHITE%:65%CL%%NAME%}%CONTINUE%
 
 //Essences
 ItemDisplay[tes]: %PX-9D%%NAME%{%TAN%Essence %WHITE%from: %BLUE%Andariel %WHITE%or %BLUE%Duriel}
