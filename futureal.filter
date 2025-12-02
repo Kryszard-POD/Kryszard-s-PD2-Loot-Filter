@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season 12: ver 12.1.3
+//	Kryszard's PD2 Loot Filter for Season 12: ver 12.1.4
 //	Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -16,7 +16,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%futureal.filter ver 12.1.3 %BLACK%| %GRAY% updated: 2025-12-01}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%futureal.filter ver 12.1.4 %BLACK%| %GRAY% updated: 2025-12-01}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -429,7 +429,7 @@ ItemDisplay[CRAFT]: %ORANGE%%NAME%%CONTINUE%
 ItemDisplay[(ARMOR OR WEAPON OR (QUIVER OR rin OR amu)) (MAG OR RARE OR SET OR UNI OR CRAFT) !ID (MAPID=181 OR MAPID=182)]: %RED%*%NAME%%RED%*%CONTINUE%
 
 //Add "[?]" Unknown Sockets Roll bracket on items in Unique City of Ureh Map
-ItemDisplay[((CHEST OR HELM OR CIRC OR SHIELD OR QUIVER) OR WEAPON) !THROWPOTS (MAG OR RARE OR CRAFT OR UNI OR SET) !ID]: %NAME% %TAN%[%WHITE%?%TAN%]%CONTINUE%
+ItemDisplay[((CHEST OR HELM OR CIRC OR SHIELD OR QUIVER) OR WEAPON) !THROWPOTS (MAG OR RARE OR CRAFT OR UNI OR SET) !ID (MAPID=195 OR MAPID=196)]: %NAME% %TAN%[%WHITE%?%TAN%]%CONTINUE%
 
 //"Sup" for superiors, and "Inf" for inferiors
 ItemDisplay[SUP ED<5]: %WHITE%Sup %NAME%%CONTINUE%
