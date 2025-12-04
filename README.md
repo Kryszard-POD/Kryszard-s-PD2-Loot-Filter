@@ -9,6 +9,39 @@ I am trying to make one filter, which will suit most players needs.
 Filter is good for both: leveling and endgame experience.  
 It's gonna show you almost everything which can help you during leveling process at early stages of your new characters, and became more strict after you hit **lvl 80+** (select your lootfilter level in-game settings to adjust it more for your needs)
 
+# **S12 Loot Filter Update – Changelog**
+<img width="1048" height="624" alt="S12_update" src="https://github.com/user-attachments/assets/5278f633-7518-4c3e-9601-ae0c6282ce8c" />
+
+## 🚀 New & Updated Features
+- Added support for the new **`%BASENAME%`** keyword in filter code.
+- Reworked **High +Skills callouts** for improved accuracy (all +5 or higher skill combinations now correctly detected).
+- Added **High ED +Mods Weapon** callouts for weapons with **350%+ Enhanced Damage** and valuable supporting modifiers.
+- Added **TAGS** for strong **IAS/FCR Large Charm** affix combinations.
+- Added all **new quivers**, including full descriptions: upgrade recipes, requirements, max sockets, socketing rules, and runeword compatibility.
+
+## 📝 Description Updates
+- Updated descriptions for **runes, runeword bases, gems, craft infusions**, and other related items.
+- Adjusted **Craft Alvl** notes to reflect which items can now roll **All/Most affixes** due to affix tier shifts.
+- Added details for high-ilvl **charms and jewels**, which always roll **2 affixes** when rerolled.
+
+## 🔨 Fixes & Adjustments
+- Updated displayed max sockets for **Tomb Reaver** from **4 → 5**.
+- Added **Gheed’s “Good Day” greeting sound** for Gheed’s Fortune Grand Charm drops.
+- Added an additional sound effect for **unique map** drops.
+- Removed **throwing weapons** from the gold-worthy vendor pool due to incorrect displayed gold values (game shows ~35k but payout is ~6–7k).
+- Added all **magic elite belts** to the gold-worthy pool (typically 30k+ vendor value).
+- Fixed certain **Uber items** not triggering the extra drop sound.
+- Fixed **Cleaver** not showing required Dexterity in its upgraded version.
+- Removed outdated **HFD descriptions** from items that have **HFD + CBF** combos.
+- Removed the colored **“*-STAR” suffix** from superior item names after applying runewords.
+- Various minor fixes, cleanup, and polish across the filter.
+
+## ↗️ Filter will cover all upcoming Open Beta/Season Launch Changes
+
+---
+
+
+
 # Season 11 Filter Update – Patch Notes
 
 The filter has been updated to reflect **all Season 11 changes** that could affect its behavior or appearance.
