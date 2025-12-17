@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season 12: ver 12.1.6
+//	Kryszard's PD2 Loot Filter for Season 12: ver 12.1.7
 //
 //	twitch.tv/kryszard
 //
@@ -15,7 +15,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 12.1.6 %BLACK%| %GRAY% updated: 2025-12-11}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 12.1.7 %BLACK%| %GRAY% updated: 2025-12-17}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -47,35 +47,35 @@ Alias[KNOWNMAPS]: (t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t21 OR t22 O
 Alias[PD2UBERUNI1]: ((uhl OR uth OR utb OR 7bs OR 7qr) UNI !ID)
 Alias[PD2UBERUNI2]: ((rar OR rbe OR ram) UNI !ID)
 //GG PD2 UNIQUES only when ETH
-Alias[PD2GGUNIETH1]: ((utp OR 7st OR uhc) UNI ETH !ID)
+Alias[PD2GGUNIETH1]: ((utp OR uhc) UNI ETH !ID)
 //GG PD2 UNIQUES
-Alias[PD2GGUNI1]: ((baf OR 7qs OR 6bs OR utg) UNI !ID)
+Alias[PD2GGUNI1]: ((baf OR 7qs OR utg) UNI !ID)
 //OK PD2 UNIQUES only when ETH - Weapons
-Alias[PD2OKUNIETH1]: ((7cm OR 7fb) UNI ETH !ID)
+Alias[PD2OKUNIETH1]: ((7cm OR 7fb OR 7st OR 9b8) UNI ETH !ID)
 //OK PD2 UNIQUES - Armors
 Alias[PD2OKUNI1]: ((drf OR utp OR ned OR ulg OR ung OR urg OR drc OR paf OR dr6 OR neg OR uhc OR aqv3 OR cqv3) UNI !ID)
 //OK PD2 UNIQUES - Weapons
-Alias[PD2OKUNI2]: ((7st OR ame OR 7di OR 7tw OR amc OR 7xf OR 6hb) UNI !ID)
+Alias[PD2OKUNI2]: ((ame OR 7di OR 7tw OR amc OR 7xf OR 6hb OR 6bs) UNI !ID)
 //Lower Value PD2 UNIQUES when ETH
 Alias[PD2LOWUNIETH1]: ((am5) UNI ETH !ID)
 //Lower Value PD2 UNIQUES
-Alias[PD2LOWUNI1]: ((ba6 OR dr2 OR ne6 OR ulb OR 7cm OR 7fb OR aqv2 OR cqv2) UNI !ID)
+Alias[PD2LOWUNI1]: ((ba6 OR dr2 OR ne6 OR ulb OR 7cm OR 7fb OR aqv2 OR cqv2 OR 7st OR 9b8) UNI !ID)
 //PD2 Uniques worth notifying
 Alias[PD2NOTIFYUNI1]: ((9ar OR ob6 OR am5 OR pa3 OR ba7 OR ob7) UNI !ID)
 
 //LOD UNIQUES
 //GG UNIQUES only when ETH
-Alias[LODGGUNIETH1]: ((9gm OR 7gm OR 7s8 OR 7p7 OR 7wa OR 7wh OR 7gd) UNI ETH !ID)
+Alias[LODGGUNIETH1]: ((9gm OR 7gm OR 7s8 OR 7p7 OR 7wa OR 7wh OR 7gd OR uul) UNI ETH !ID)
 //GG UNIQUES
 Alias[LODGGUNI1]: ((rin OR amu OR 6ws OR uar OR ulc OR urn OR uap OR ci3 OR xtb OR uit OR 6lw OR 7gw OR obf OR uhm) UNI !ID)
 //OK UNIQUES only when ETH - Armors
-Alias[LODOKUNIETH1]: ((xpl OR uul) UNI ETH !ID)
+Alias[LODOKUNIETH1]: ((xpl) UNI ETH !ID)
 //OK UNIQUES only when ETH - Weapons
-Alias[LODOKUNIETH2]: ((7gi OR 7m7 OR 7gl OR 7b8 OR 7bk OR 7ha OR 7b7 OR 7sr OR 9b8 OR 9la OR 8ls) UNI ETH !ID)
+Alias[LODOKUNIETH2]: ((7gi OR 7m7 OR 7gl OR 7b8 OR 7bk OR 7ha OR 7b7 OR 7sr OR 9la OR 8ls OR 7ga OR amd) UNI ETH !ID)
 //belts
 Alias[LODOKUNI1]: ((ztb OR zlb OR zvb OR zhb OR umc OR uvc) UNI !ID)
 //armors
-Alias[LODOKUNI2]: ((xea OR uui OR xhn OR xlt OR upl OR uld OR utu) UNI !ID)
+Alias[LODOKUNI2]: ((xea OR uui OR xhn OR xlt OR upl OR uld OR utu OR uul) UNI !ID)
 //gloves
 Alias[LODOKUNI3]: ((uvg OR uhg OR umg) UNI !ID)
 //helmets
@@ -85,16 +85,16 @@ Alias[LODOKUNI5]: ((lbt OR xhb OR uhb OR xvb) UNI !ID)
 //shields
 Alias[LODOKUNI6]: ((nee OR pa9 OR nea OR uts OR uow OR xsh OR xow OR pae OR nef OR pac) UNI !ID)
 //weapons
-Alias[LODOKUNI7]: ((7ts OR 7s8 OR 9bw OR 7wc OR 7bw OR 7ws OR 7fl OR 7cr OR 7gm OR oba OR ama OR obc OR amf OR 7wh OR 7p7 OR 7wa OR 7lw OR 7gd) UNI !ID)
+Alias[LODOKUNI7]: ((7ts OR 7s8 OR 9bw OR 7wc OR 7bw OR 7ws OR 7fl OR 7cr OR 7gm OR oba OR ama OR obc OR amf OR 7wh OR 7p7 OR 7wa OR 7lw OR 7gd OR 8mx) UNI !ID)
 //OK/Lower Value UNIQUES only when ETH
-Alias[LODLOWUNIETH1]: ((7ga OR mau OR 9st OR uvb) UNI ETH !ID)
+Alias[LODLOWUNIETH1]: ((mau OR 9st OR uvb) UNI ETH !ID)
 //OK/Lower Value UNIQUES
-Alias[LODLOWUNI1]: ((7pa OR 7bt OR ltp OR xcl OR 9tw OR xtp OR xth OR 7kr OR xpl OR xld OR 7b7 OR 8hx OR 7cs OR xmb OR tbt OR amb OR 7sc OR 7ha OR 7ls OR 7bl OR 9b8 OR 6hx OR uml OR upk OR 7gl OR 9gm OR 7br OR ush OR uul OR 8ls OR bad OR 6sw OR 8cb OR 8ws) UNI !ID)
+Alias[LODLOWUNI1]: ((7pa OR 7bt OR ltp OR xcl OR 9tw OR xtp OR xth OR 7kr OR xpl OR xld OR 7b7 OR 8hx OR 7cs OR xmb OR tbt OR amb OR 7sc OR 7ha OR 7ls OR 7bl OR 6hx OR uml OR upk OR 7gl OR 9gm OR 7br OR ush OR 8ls OR bad OR 6sw OR 8cb OR 8ws OR tgl OR umb OR 7mp OR aar OR 9ls OR 7gi OR 7wb OR 7ga OR amd) UNI !ID)
 //Uniques worth notifying
 //Armors
-Alias[LODNOTIFYUNI1]: ((brs OR fld OR xkp OR xul OR xlm OR drb OR 9sp OR mbt OR rng OR xng OR xui OR spl OR xmg OR xsk OR xml OR xlb OR xap OR xrs OR gth OR aar OR (BELT !(vbl OR hbl)) OR skp OR xhl OR xrn OR vbt OR uvb OR umb OR lgl OR vgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xtg OR xhg OR xts OR xrg OR xar) UNI !ID)
+Alias[LODNOTIFYUNI1]: ((brs OR fld OR xkp OR xul OR xlm OR drb OR 9sp OR mbt OR rng OR xng OR xui OR spl OR xmg OR xsk OR xml OR xlb OR xap OR xrs OR gth OR (BELT !(vbl OR hbl)) OR skp OR xhl OR xrn OR vbt OR uvb OR lgl OR vgl OR mgl OR hgl OR xlg OR xvg OR xtg OR xhg OR xts OR xrg OR xar) UNI !ID)
 //Weapons
-Alias[LODNOTIFYUNI2]: (((8lb OR 92h OR 8s8 OR 9wc OR 92h OR 8mx OR 6rx OR 9gw OR 7m7 OR 9cl OR mau OR 9ls OR 7sr OR 7p7 OR 9ba OR 7ga OR 7gi OR 72a OR 7o7 OR 9yw OR 9fc OR 9kr OR 7mp OR 6l7 OR 8rx OR dgr OR 7dg OR 9ma OR 9wh OR 9ws OR 6cs OR 7gs OR 9sb OR 9bs OR 9tr OR 9la OR 9s8) OR (ELT (THROWING OR JAV)) OR 7wb OR 7sp) UNI !ID)
+Alias[LODNOTIFYUNI2]: (((8lb OR 92h OR 8s8 OR 9wc OR 92h OR 6rx OR 9gw OR 7m7 OR 9cl OR mau OR 7sr OR 9ba OR 72a OR 7o7 OR 9yw OR 9fc OR 9kr OR 6l7 OR 8rx OR dgr OR 7dg OR 9ma OR 9wh OR 9ws OR 6cs OR 7gs OR 9sb OR 9bs OR 9tr OR 9la OR 9s8) OR (ELT (THROWING OR JAV)) OR 7sp) UNI !ID)
 
 //SET PARTS
 //OK SET parts when ETH
@@ -375,7 +375,7 @@ Alias[VSOCK201]: ((ne6 OR neb) UNI SOCK>0 CLSK2=1 FBR>0 STAT20>0)
 
 //SOUNDS EFFECTS
 //Special Items Exclusives
-ItemDisplay[neg UNI !ID !TOWN]: %SOUNDID-913%%NAME%{%NAME%}%CONTINUE% //fallen_warcry_1 - for Sacred Totem "Raaaakanishu!"
+ItemDisplay[neg UNI !ID !TOWN]: %SOUNDID-4699%%NAME%{%NAME%}%CONTINUE% //fallen_warcry_1 - for Sacred Totem "Raaaakanishu!"
 ItemDisplay[jew UNI !ID !TOWN]: %SOUNDID-2669%%NAME%{%NAME%}%CONTINUE% //shrine_gemupgrade - for Rainbow Facet
 ItemDisplay[(uba OR ubaa OR ubab OR ubac) !TOWN]: %SOUNDID-4609%%NAME%{%NAME%}%CONTINUE% //wussie_let_us_out_2 - for Uber Ancients
 ItemDisplay[cm3 UNI !ID !TOWN]: %SOUNDID-3918%%NAME%{%NAME%}%CONTINUE% //gheed_greeting_time_2 - for Gheed's Fortune
@@ -399,7 +399,7 @@ ItemDisplay[(lbox OR imrn) !TOWN]: %SOUNDID-621%%NAME%{%NAME%}%CONTINUE% //blood
 //Uber Materials
 ItemDisplay[(ubtm OR dcma OR dcso OR dcbl OR dcho OR rtma OR rtmv OR rtmo OR cm2f OR rtmf OR luca OR lucb OR lucc OR lucd) !TOWN]: %SOUNDID-1123%%NAME%{%NAME%}%CONTINUE% //greatermummy_resurrect_1 - for Uber Ingredients
 //Unique Maps
-ItemDisplay[MAPTIER>0 !ID UNI]: %SOUNDID-35%%NAME%{%NAME%}%CONTINUE% //hellforgesmash - for unique maps
+ItemDisplay[MAPTIER>0 !ID UNI !TOWN]: %SOUNDID-35%%NAME%{%NAME%}%CONTINUE% //hellforgesmash - for unique maps
 //Spare Interesting Sounds
 //ItemDisplay[]: %SOUNDID-705%%NAME%{%NAME%}%CONTINUE% //darkwanderer_death - spare sound for... ??? used later for unknown items
 
