@@ -9,6 +9,10 @@ I am trying to make one filter, which will suit most players needs.
 Filter is good for both: leveling and endgame experience.  
 It's gonna show you almost everything which can help you during leveling process at early stages of your new characters, and became more strict after you hit **lvl 80+** (select your lootfilter level in-game settings to adjust it more for your needs)
 
+# **S13 Loot Filter Update**
+
+## Filter is updated - More details soon...
+
 # **S12 Loot Filter Update – Changelog**
 <img width="1048" height="624" alt="S12_update" src="https://github.com/user-attachments/assets/5278f633-7518-4c3e-9601-ae0c6282ce8c" />
 
