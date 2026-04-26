@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season 13: ver 13.1.11
+//	Kryszard's PD2 Loot Filter for Season 13: ver 13.1.12
 //	Tweaked for: Futureal (twitch.tv/futureal)
 //
 //	twitch.tv/kryszard
@@ -16,7 +16,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%futureal.filter ver 13.1.11 %BLACK%| %GRAY% updated: 2026-04-26}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%futureal.filter ver 13.1.12 %BLACK%| %GRAY% updated: 2026-04-26}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -2268,12 +2268,12 @@ ItemDisplay[(VSOCK201)]: %NAME%%GRAY%/%LIGHT_GRAY%2%CONTINUE%
 //Sockets Closer
 ItemDisplay[SOCK>0]: %NAME%%TAN%]%CONTINUE%
 //Armors ED TAG
-ItemDisplay[EDARMOR !STAT75]: %BLUE%%ED%%PERCENT%%NAME%%CONTINUE%
-ItemDisplay[EDARMOR STAT75]: %BLUE%%ED%%WHITE%%PERCENT%%NAME%%CONTINUE%
+ItemDisplay[EDARMOR STAT75=0]: %BLUE%%ED%%PERCENT%%NAME%%CONTINUE%
+ItemDisplay[EDARMOR STAT75>0]: %BLUE%%ED%%WHITE%%PERCENT%%NAME%%CONTINUE%
 //ItemDisplay[EDARMOR !RW]: %NAME% %BLUE%*%CONTINUE%
 //Weapons ED TAG
-ItemDisplay[EDWEAPON !STAT119]: %RED%%ED%%PERCENT%%NAME%%CONTINUE%
-ItemDisplay[EDWEAPON STAT119]: %RED%%ED%%WHITE%%PERCENT%%NAME%%CONTINUE%
+ItemDisplay[EDWEAPON STAT119=0]: %RED%%ED%%PERCENT%%NAME%%CONTINUE%
+ItemDisplay[EDWEAPON STAT119>0]: %RED%%ED%%WHITE%%PERCENT%%NAME%%CONTINUE%
 //ItemDisplay[EDWEAPON !RW]: %NAME% %RED%*%CONTINUE%
 //Closer ALL NMAG MODS IN ONE BRACKET
 ItemDisplay[((MAG OR RARE OR CRAFT) AND ((AMASTAFF WEAPON) OR NECSTAFF OR ASNSTAFF OR BARSTAFF OR DRUSTAFF OR PALSTAFF OR SORSTAFF) AND GROUND) OR (ETH OR REPAIR>0 OR STAT152>0) OR (DIN NMAG !RW RES>0) OR (DIN NMAG !RW EDAM>0) OR ((AMASTAFF OR NECSTAFF OR ASNSTAFF OR BARSTAFF OR DRUSTAFF OR PALSTAFF OR SORSTAFF) NMAG !RW) OR EDARMOR OR EDWEAPON]: %GRAY%[%NAME%%CONTINUE%
@@ -3244,6 +3244,7 @@ ItemDisplay[(gax OR 9ga OR 7ga) (BARBARIAN OR DRUID) RARE ETH !ID (ALVL>75 OR CR
 ItemDisplay[(gax OR 9ga OR 7ga) (BARBARIAN OR DRUID) MAG ETH !ID (ALVL>75 OR CRAFTALVL>75)]: %DOT-97%%PX-68%%NAME%
 //Paladin
 ItemDisplay[DIN PALADIN RARE !ETH !ID (ALVL>74 OR CRAFTALVL>74)]: %DOT-A8%%TIER-7%%NAME%
+ItemDisplay[DIN PALADIN MAG !ETH !ID (ALVL>74 OR CRAFTALVL>74) MAXSOCKETS=4]: %DOT-97%%PX-68%%TIER-7%%NAME%
 ItemDisplay[DIN PALADIN MAG !ETH !ID (ALVL>74 OR CRAFTALVL>74)]: %DOT-97%%PX-68%%TIER-3%%NAME%
 //Necromancer
 ItemDisplay[NEC NECROMANCER RARE !ETH !ID (ALVL>74 OR CRAFTALVL>74)]: %DOT-A8%%TIER-7%%NAME%
@@ -3268,7 +3269,7 @@ ItemDisplay[DRU DRUID RARE !ID (ALVL>70 OR CRAFTALVL>70)]: %DOT-A8%%TIER-7%%NAME
 
 //Craftables
 ItemDisplay[(CHEST OR SHIELD) RARE !ETH !ID (ALVL>74 OR CRAFTALVL>74) MAXSOCKETS=4]: %DOT-A8%%TIER-7%%NAME%
-ItemDisplay[(CHEST OR SHIELD) MAG !ETH !ID (ALVL>74 OR CRAFTALVL>74) MAXSOCKETS=4]: %DOT-A8%%TIER-3%%NAME%
+ItemDisplay[(CHEST OR SHIELD !DIN) MAG !ETH !ID (ALVL>74 OR CRAFTALVL>74) MAXSOCKETS=4]: %DOT-97%%PX-68%%TIER-3%%NAME%
 ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a OR 7xf OR 9xf OR axf OR 7ar OR 9ar OR ktr OR 7tw OR 9tw OR btl OR 7qr OR 9qr OR skr OR gax OR 9ga OR 7ga) RARE ETH !ID (ALVL>75 OR CRAFTALVL>75)]: %DOT-A8%%TIER-3%%NAME%
 ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a OR 7xf OR 9xf OR axf OR 7ar OR 9ar OR ktr OR 7tw OR 9tw OR btl OR 7qr OR 9qr OR skr OR gax OR 9ga OR 7ga) MAG ETH !ID (ALVL>75 OR CRAFTALVL>75)]: %DOT-97%%PX-68%%TIER-3%%NAME%
 ItemDisplay[(GLOVES OR BELT OR BOOTS) MAG ETH !ID]: %NAME%
