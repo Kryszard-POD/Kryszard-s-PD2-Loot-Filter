@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season 13: ver 13.1.9
+//	Kryszard's PD2 Loot Filter for Season 13: ver 13.1.10
 //
 //
 //	twitch.tv/kryszard
@@ -16,7 +16,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 13.1.9 %BLACK%| %GRAY% updated: 2026-04-25}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 13.1.10 %BLACK%| %GRAY% updated: 2026-04-26}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -3278,6 +3278,7 @@ ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl
 ItemDisplay[(6lw OR 6l7 OR 6lb OR 6s7 OR 6cb OR 6lx OR 6mx OR 6hx OR 6rx) MAG !ID ((AMAZON FILTLVL<8) OR FILTLVL<6)]: %NAME%
 ItemDisplay[(am2 OR am7 OR amc) (MAG OR RARE) !ID (ALVL>74 OR CRAFTALVL>74)]: %NAME%
 ItemDisplay[(ob5 OR oba OR obf) (MAG OR RARE) !ID (ALVL>59 OR CRAFTALVL>59)]: %NAME%
+ItemDisplay[(CHEST OR SHIELD) (MAG OR RARE) !ID (ALVL>74 OR CRAFTALVL>74) MAXSOCKETS=4]: %NAME%
 
 //Class items
 //Non-Magical 1 sock Craft Bases (3x Square Gem + Socketed NMag Exc/Elite Tier Base -> Magic -> Craft)
