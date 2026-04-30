@@ -11,7 +11,145 @@ It's gonna show you almost everything which can help you during leveling process
 
 # **S13 Loot Filter Update**
 
-## Filter is updated - More details soon...
+# 📊 Experimental Map Scoring System (XP & MF Rating)
+
+<img width="840" height="478" alt="image" src="https://github.com/user-attachments/assets/6888acf4-0f30-4dfd-a488-9df5a8160553" />
+
+
+This is an experimental loot filter system that rates maps from **1 to 10** based on how good they are for:
+
+- **Experience (XP)**
+- **Magic Find (MF)**
+
+---
+
+## 🎯 What do the numbers mean?
+
+- **1** → very weak map (low stats, not worth running)  
+- **5** → average rare map  
+- **8+** → strong map worth running  
+- **10** → near-perfect (about top ~90% rolls)
+
+The goal is simple:  
+👉 Instantly see if a map is worth running without analyzing multiple stats.
+
+---
+
+## ⚙️ How it works (simple overview)
+
+The system evaluates core map stats and combines them into a single score.
+
+### XP is based on:
+- Monster Density (more monsters = more XP)
+- Experience %
+- Monster Rarity (reduced impact)
+- Area Level (+1 bonus)
+
+### MF is based on:
+- Monster Density (more drops)
+- Magic Find %
+- Monster Rarity (strong impact)
+- Additional drop modifiers (charms, jewelry, etc.)
+- Area Level (+1 bonus)
+
+---
+
+## 🧠 Key design principles
+
+- Balanced around **realistic maps**, not perfect rolls  
+- **Average rare map = 5**  
+- **90% of max core roll = 10**  
+- Maps are not treated as starting from zero (they always have baseline stats)  
+- Different stat combinations can still produce strong maps  
+
+---
+
+## 🗺️ Tier-based scoring (important)
+
+Each map tier (**T1 / T2 / T3**) is scored **independently**.
+
+This means:
+
+```
+T1 score 10 ≠ T3 score 10
+```
+
+- A **10 score on a T1 map** = near-perfect for T1  
+- A **10 score on a T3 map** = near-perfect for T3  
+
+There is no direct comparison between tiers.
+
+---
+
+## 🧪 Pre-corruption baseline
+
+The system evaluates **raw map rolls only**.
+
+It does **not include**:
+- Corruption bonuses  
+- Standard of Heroes  
+- Any external modifiers  
+
+These will naturally increase the map’s strength in gameplay, but:
+
+```
+Score is capped at 10
+```
+
+So:
+- A map rated **10 before corruption** is already near-perfect  
+- After corruption or added bonuses → it becomes even stronger  
+- But the displayed score remains **10**
+
+---
+
+## 💡 Special mechanics
+
+### Additional Drops
+- Weighted higher than normal drops  
+- Represent guaranteed valuable item types  
+- Examples: charms, jewels, jewelry, armor, weapons  
+
+### Monster Rarity
+- Weighted separately for XP and MF
+- Reflects better loot from champion/unique monsters  
+
+Monster Rarity affects both XP and MF, but not equally.
+It has a moderate impact on XP and a stronger impact on MF, because champion and unique monsters are worth more experience and have better guaranteed drops.
+
+### Extra Boss
+- Adds a flat **+0.5 MF score**  
+- Still capped at 10  
+
+---
+
+## 🔥 Example
+
+Instead of checking multiple stats manually:
+
+```
+XP: 7.5 | MF: 8
+```
+
+You immediately know it's a strong farming map.
+
+---
+
+## 🧪 Why “experimental”?
+
+This system is tuned based on gameplay feel, not just raw math.
+
+The goal is:
+
+👉 Make map evaluation faster, clearer, and more intuitive
+
+---
+
+## 📣 Feedback
+
+This is still a work in progress.
+
+Suggestions, improvements, and balancing ideas are welcome.
 
 # **S12 Loot Filter Update – Changelog**
 <img width="1048" height="624" alt="S12_update" src="https://github.com/user-attachments/assets/5278f633-7518-4c3e-9601-ae0c6282ce8c" />
