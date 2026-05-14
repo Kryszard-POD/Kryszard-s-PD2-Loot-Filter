@@ -1,4 +1,4 @@
-//	Kryszard's PD2 Loot Filter for Season 13: ver 13.3.1
+//	Kryszard's PD2 Loot Filter for Season 13: ver 13.3.2
 //
 //
 //	twitch.tv/kryszard
@@ -16,7 +16,7 @@ ItemDisplayFilterName[]: Strict Filter - w/o Potions
 ItemDisplayFilterName[]: Max-Strictness Filter
 
 //Show info about current Filter Level in description of Horadric Cube
-ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 13.3.1 %BLACK%| %GRAY% updated: 2026-05-01}%CONTINUE%
+ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 13.3.2 %BLACK%| %GRAY% updated: 2026-05-14}%CONTINUE%
 ItemDisplay[box FILTLVL=0]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%0 - %TAN%Show All Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=1]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%1 - %TAN%Hide Just Trash Items%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=2]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%2 - %TAN%More Notify%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
@@ -635,8 +635,8 @@ ItemDisplay[(ETH OR REPAIR>0 OR STAT152>0) OR (DIN NMAG !RW RES>0) OR (DIN NMAG 
 ItemDisplay[ETH (REPAIR>0 OR STAT152>0)]: %WHITE%ind%NAME%%CONTINUE%
 ItemDisplay[!ETH (REPAIR>0 OR STAT152>0)]: %GRAY%ind%NAME%%CONTINUE%
 ItemDisplay[ETH !(REPAIR>0) !(STAT152>0)]: %WHITE%eth%NAME%%CONTINUE%
-ItemDisplay[ETH AND ((DIN NMAG !RW RES>0) OR (DIN NMAG !RW EDAM>0) OR (AMASTAFF (NMAG OR ((MAG OR RARE OR CRAFT) GROUND))) OR EDARMOR OR EDWEAPON)]: %GRAY%|%NAME%%CONTINUE%
-ItemDisplay[ETH AND ((NECSTAFF OR ASNSTAFF OR BARSTAFF OR DRUSTAFF OR PALSTAFF OR SORSTAFF) (NMAG OR ((MAG OR RARE OR CRAFT) GROUND)) !RW)]: %GRAY%|%NAME%%CONTINUE%
+ItemDisplay[(ETH OR (REPAIR>0 OR STAT152>0)) AND ((DIN NMAG !RW RES>0) OR (DIN NMAG !RW EDAM>0) OR (AMASTAFF (NMAG OR ((MAG OR RARE OR CRAFT) GROUND))) OR EDARMOR OR EDWEAPON)]: %GRAY%|%NAME%%CONTINUE%
+ItemDisplay[(ETH OR (REPAIR>0 OR STAT152>0)) AND ((NECSTAFF OR ASNSTAFF OR BARSTAFF OR DRUSTAFF OR PALSTAFF OR SORSTAFF) (NMAG OR ((MAG OR RARE OR CRAFT) GROUND)) !RW)]: %GRAY%|%NAME%%CONTINUE%
 //PALADIN SHIELDS Opener
 //Show me exactly RES value on PALADIN shields
 ItemDisplay[DIN NMAG !RW RES>0 AND RES<20]: %TAN%%RES%%WHITE%r%NAME%%CONTINUE%
@@ -3207,7 +3207,7 @@ ItemDisplay[DRU DRUID RARE !ID (ALVL>70 OR CRAFTALVL>70)]: %DOT-A8%%TIER-7%%NAME
 
 //Craftables
 ItemDisplay[(CHEST OR SHIELD) RARE !ETH !ID (ALVL>74 OR CRAFTALVL>74) MAXSOCKETS=4]: %DOT-A8%%TIER-7%%NAME%
-ItemDisplay[(CHEST OR SHIELD !DIN) MAG !ETH !ID (ALVL>74 OR CRAFTALVL>74) MAXSOCKETS=4]: %DOT-97%%PX-68%%TIER-3%%NAME%
+ItemDisplay[(CHEST OR SHIELD !DIN) MAG !ETH !ID (ALVL>74 OR CRAFTALVL>74) MAXSOCKETS=4 FILTLVL<8]: %DOT-97%%PX-68%%TIER-3%%NAME%
 ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a OR 7xf OR 9xf OR axf OR 7ar OR 9ar OR ktr OR 7tw OR 9tw OR btl OR 7qr OR 9qr OR skr OR gax OR 9ga OR 7ga) RARE ETH !ID (ALVL>75 OR CRAFTALVL>75)]: %DOT-A8%%TIER-3%%NAME%
 ItemDisplay[(wax OR 9wa OR 7wa OR gix OR 9gi OR 7gi OR btx OR 9bt OR 7bt OR jav OR 9ja OR 7ja OR pil OR 9pi OR 7pi OR ssp OR 9s9 OR 7s7 OR glv OR 9gl OR 7gl OR tsp OR 9ts OR 7ts OR gma OR 9gm OR 7gm OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR pik OR 9p9 OR 7p7 OR gsd OR 9gd OR 7gd OR flb OR 9fb OR 7fb OR bsw OR 9b9 OR 7b7 OR gis OR 9gs OR 7gs OR tax OR 9ta OR 7ta OR 2ax OR 92a OR 72a OR 7xf OR 9xf OR axf OR 7ar OR 9ar OR ktr OR 7tw OR 9tw OR btl OR 7qr OR 9qr OR skr OR gax OR 9ga OR 7ga) MAG ETH !ID (ALVL>75 OR CRAFTALVL>75)]: %DOT-97%%PX-68%%TIER-3%%NAME%
 ItemDisplay[(GLOVES OR BELT OR BOOTS) MAG ETH !ID]: %NAME%
@@ -3215,7 +3215,7 @@ ItemDisplay[(msk OR xsk OR usk OR bhm OR xh9 OR uh9 OR ghm OR xhm OR uhm OR crn 
 ItemDisplay[SHIELD !(sml OR xml OR uml OR spk OR xpk OR upk) MAG ETH !ID]: %NAME%
 ItemDisplay[CHEST MAG ETH !ID]: %NAME%
 ItemDisplay[GLOVES ((EXC OR ELT) !(utg OR uhg)) MAG !ETH !ID FILTLVL<6]: %NAME%
-ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp OR mst OR 9mt OR 7mt OR ssd OR 9ss OR 7ss OR scm OR 9sm OR 7sm OR sbr OR 9sb OR 7sb OR flc OR 9fc OR 7fc OR wsd OR 9wd OR 7wd OR dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR bld OR 9bl OR 7bl OR STAFF OR ktr OR wrb OR axf OR ces OR clw OR btl OR skr OR 9ar OR 9wb OR 9xf) MAG ETH !ID]: %NAME%
+ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp OR ssd OR 9ss OR 7ss OR scm OR 9sm OR 7sm OR sbr OR 9sb OR 7sb OR flc OR 9fc OR 7fc OR wsd OR 9wd OR 7wd OR dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR bld OR 9bl OR 7bl OR STAFF OR ktr OR wrb OR axf OR ces OR clw OR btl OR skr OR 9ar OR 9wb OR 9xf) MAG ETH !ID]: %NAME%
 ItemDisplay[(6lw OR 6l7 OR 6lb OR 6s7 OR 6cb OR 6lx OR 6mx OR 6hx OR 6rx) MAG !ID ((AMAZON FILTLVL<8) OR FILTLVL<6)]: %NAME%
 ItemDisplay[(am2 OR am7 OR amc) (MAG OR RARE) !ID (ALVL>74 OR CRAFTALVL>74)]: %NAME%
 ItemDisplay[(ob5 OR oba OR obf) (MAG OR RARE) !ID (ALVL>59 OR CRAFTALVL>59)]: %NAME%
@@ -3258,11 +3258,11 @@ ItemDisplay[(GLOVES OR BOOTS OR BELT) RARE !ID]: %NAME%
 ItemDisplay[(CHEST OR SHIELD OR HELM) RARE !ID]: %NAME%
 
 //Rare ETH weapons
-ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp OR mst OR 9mt OR 7mt OR ssd OR 9ss OR 7ss OR scm OR 9sm OR 7sm OR sbr OR 9sb OR 7sb OR flc OR 9fc OR 7fc OR wsd OR 9wd OR 7wd OR dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR bld OR 9bl OR 7bl OR STAFF) RARE ETH !ID]: %NAME%
+ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp OR ssd OR 9ss OR 7ss OR scm OR 9sm OR 7sm OR sbr OR 9sb OR 7sb OR flc OR 9fc OR 7fc OR wsd OR 9wd OR 7wd OR dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR bld OR 9bl OR 7bl OR STAFF) RARE ETH !ID]: %NAME%
 
 //Rare weapons
 ItemDisplay[(6hx OR 8hx OR hxb OR 6mx OR 8mx OR mxb OR 6lw OR 8lw OR lwb OR 6l7 OR 8l8 OR lbb OR 6lb OR 8lb OR lbw) RARE !ID]: %NAME%
-ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp OR mac OR 9ma OR 7ma OR mst OR 9mt OR 7mt OR ssd OR 9ss OR 7ss OR scm OR 9sm OR 7sm OR sbr OR 9sb OR 7sb OR flc OR 9fc OR 7fc OR wsd OR 9wd OR 7wd OR dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR bld OR 9bl OR 7bl OR STAFF OR BOW OR XBOW) RARE !ETH !ID FILTLVL<6]: %NAME%
+ItemDisplay[WEAPON !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp OR ssd OR 9ss OR 7ss OR scm OR 9sm OR 7sm OR sbr OR 9sb OR 7sb OR flc OR 9fc OR 7fc OR wsd OR 9wd OR 7wd OR dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR bld OR 9bl OR 7bl OR STAFF OR BOW OR XBOW) RARE !ETH !ID FILTLVL<6]: %NAME%
 ItemDisplay[(BOW OR XBOW) RARE !ID (AMAZON OR FILTLVL<6)]: %NAME%
 ItemDisplay[(BOW OR XBOW) !(sbw OR 8sb OR 6sb OR hbw OR 8hb OR 6hb OR swb OR 8sw OR 6sw) RARE !ID]: %NAME%
 ItemDisplay[STAFF RARE !ID FILTLVL<6]: %NAME%
@@ -4203,6 +4203,7 @@ ItemDisplay[(SCEPTER !scp) !INF !ETH NMAG !RW (SK112>2 AND SK113>0) (SOCK=0 OR S
 ItemDisplay[(wsp OR 9ws OR 7ws) (SK99>2 OR SK109>2 OR SK118>2) !INF NMAG !RW SOCK=4]: %DOT-D6%%TIER-7%%NAME%{%NAME%}
 ItemDisplay[(wsp OR 9ws OR 7ws) (SK99>2 OR SK109>2 OR SK118>2) !INF NMAG !RW (SOCK=0 OR SOCK=4) FILTLVL<8]: %DOT-D6%%TIER-5%%NAME%{%NAME%}
 ItemDisplay[(wsp OR 9ws OR 7ws) SK117>0 NMAG !RW (SOCK=0 OR SOCK=5) PALADIN FILTLVL<8]: %DOT-D6%%TIER-5%%NAME%{%NAME%}
+ItemDisplay[7ws NMAG ETH !RW !SOCK=1 FILTLVL<8]: %DOT-D6%%TIER-5%%NAME%{%NAME%}
 ItemDisplay[(SCEPTER !scp) !INF !ETH NMAG !RW (SK101>2 OR SK112>2 OR SK121>2) (SOCK=0 OR SOCK=3) PALADIN FILTLVL<8]: %DOT-D6%%TIER-3%%NAME%{%NAME%}
 ItemDisplay[7ws NMAG !ETH !RW !SOCK=1 ED>4 FILTLVL<8]: %DOT-D6%%TIER-3%%NAME%{%NAME%}
 ItemDisplay[(wsp OR 9ws OR 7ws) SK117>0 NMAG !RW (SOCK=0 OR SOCK=5) FILTLVL<8]: %DOT-D6%%TIER-3%%NAME%{%NAME%}
@@ -4900,9 +4901,9 @@ ItemDisplay[uba]: %MAP-0A%%PX-62%%GRAY%*%RED%* %NAME% %RED%*%GRAY%*{%TAN%Note%WH
 
 //Project Diablo 2 Maps
 ItemDisplay[MAPTIER>0 NMAG]: %WHITE%%NAME%%CONTINUE%
-ItemDisplay[MAPTIER=1 OR t51]: %GRAY%[%DARK_GREEN%T1%GRAY%] %NAME% %DARK_GREEN%*%CONTINUE%
-ItemDisplay[MAPTIER=2 OR t53 OR t52]: %GRAY%[%TAN%T2%GRAY%] %NAME% %TAN%*%CONTINUE%
-ItemDisplay[MAPTIER=3 OR (MAPTIER=5 !t53 !t52 !t51)]: %GRAY%[%ORANGE%T3%GRAY%] %NAME% %ORANGE%*%CONTINUE%
+ItemDisplay[MAPTIER=1 OR t51 OR t58]: %GRAY%[%DARK_GREEN%T1%GRAY%] %NAME% %DARK_GREEN%*%CONTINUE%
+ItemDisplay[MAPTIER=2 OR t53 OR t52 OR t57]: %GRAY%[%TAN%T2%GRAY%] %NAME% %TAN%*%CONTINUE%
+ItemDisplay[MAPTIER=3 OR (MAPTIER=5 !t51 !t52 !t53 !t57 !t58)]: %GRAY%[%ORANGE%T3%GRAY%] %NAME% %ORANGE%*%CONTINUE%
 ItemDisplay[MAPTIER=4]: %GRAY%[%RED%D%GRAY%] %NAME% %RED%*%CONTINUE%
 ItemDisplay[MAPTIER>0 (!ID OR NMAG) !UNI]: %MAP-7F%%NAME%%CONTINUE%
 ItemDisplay[MAPTIER>0 !ID UNI]: %MAP-7F%%DOT-68%%RED%*%GREEN%*%YELLOW%*          %NAME%          %YELLOW%*%GREEN%*%RED%*%CONTINUE%
