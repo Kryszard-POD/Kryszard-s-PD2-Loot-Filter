@@ -13,7 +13,8 @@ ItemDisplayFilterName[]: Recommended
 ItemDisplayFilterName[]: Recommended - w/o Potions
 ItemDisplayFilterName[]: Strict Filter
 ItemDisplayFilterName[]: Strict Filter - w/o Potions
-ItemDisplayFilterName[]: Max-Strictness Filter
+ItemDisplayFilterName[]: Max-Strictness Filter - Potions
+ItemDisplayFilterName[]: Max-Strictness Filter - w/o Potions
 
 //Show info about current Filter Level in description of Horadric Cube
 ItemDisplay[box]:%NAME%{%NAME%%NL%%GRAY%item.filter ver 13.3.2 %BLACK%| %GRAY% updated: 2026-05-14}%CONTINUE%
@@ -25,7 +26,8 @@ ItemDisplay[box FILTLVL=4]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Setting
 ItemDisplay[box FILTLVL=5]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%5 - %TAN%Recommended %WHITE%- %RED%w/o Potions%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=6]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%6 - %ORANGE%Strict Filter%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 ItemDisplay[box FILTLVL=7]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%7 - %ORANGE%Strict Filter %WHITE%- %RED%w/o Potions%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
-ItemDisplay[box FILTLVL=8]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%8 - %RED%Max-Strictness Filter%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
+ItemDisplay[box FILTLVL=8]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%8 - %RED%Max-Strictness Filter - Potions%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
+ItemDisplay[box FILTLVL=9]: %NAME%{%NAME%%NL%%WHITE%You Can Change it in Settings%NL%8 - %RED%Max-Strictness Filter - w/o Potions%NL%%TAN% Note%WHITE%: Kryszard's PD2 Loot-Filter level:%NL%}
 
 //DEFINE ALIASES
 //Throwing Potions
@@ -374,6 +376,24 @@ Alias[VSOCK312]: (ucl SET SOCK>0 TABSK49>0 STAT216>0 STAT110>0)
 //Kalan's Legacy - Mummified Trophy - Varies: 1-2
 Alias[VSOCK201]: ((ne6 OR neb) UNI SOCK>0 CLSK2=1 FBR>0 STAT20>0)
 
+//CUSTOM
+//TOP Runewords
+ItemDisplay[(NMAG OR SUP) AND !RW AND (SOCK=0 OR SOCK=4 OR SOCK=5) AND SCEPTER AND (wsp OR 92s OR 7ws) AND (SK123>1 AND (SK117>1 OR SK107>0 OR SK378>0 OR SK111>0))]: %GOLD%TOP PAL BASE %WHITE%%NAME% %GRAY%%MAP%
+ItemDisplay[(NMAG OR SUP) AND !RW AND (SOCK=0 OR SOCK=4) AND STAFF AND (6ls OR 6cs OR 6bs OR 6ws OR 8ws) AND (SK63>1 AND (SK48>1 OR SK53>1 OR SK38>1))]: %GOLD%TOP SORC BASE %WHITE%%NAME% %GRAY%%MAP%
+ItemDisplay[(NMAG OR SUP) AND !RW AND (SOCK=0 OR SOCK=5) AND STAFF AND (wst OR 6ws OR 8ws) AND (SK58>1 AND (SK60>1 OR SK50>1))]: %GOLD%CTA SORC BASE %WHITE%%NAME% %GRAY%%MAP%
+ItemDisplay[(NMAG OR SUP) AND !RW AND (SOCK=0 OR SOCK=3) AND SIN AND (9lw OR 9tw OR 7tw OR 7xf) AND (SK265>1 AND (SK275>1 OR SK252>1))]: %GOLD%TOP ASSA BASE %WHITE%%NAME% %GRAY%%MAP%
+ItemDisplay[(NMAG OR SUP) AND !RW AND (SOCK=0 OR SOCK=3) AND SIN AND (7xf OR 7qr OR 7ar OR 7wb OR 7lw) AND (SK278>1 AND (SK268>1 OR SK257>1 OR SK252>1))]: %GOLD%TOP ASSA BASE %WHITE%%NAME% %GRAY%%MAP%
+ItemDisplay[(NMAG OR SUP) AND !RW AND (SOCK=0 OR SOCK=2) AND WAND AND !(wnd OR ywn OR 9wn) AND (SK94>1 AND SK79>1)]: %GOLD%TOP NECRO BASE %WHITE%%NAME% %GRAY%%MAP%
+ItemDisplay[(NMAG OR SUP) AND !RW AND (SOCK=0 OR SOCK=3) AND MACE AND (SK243>1 AND (SK228>1 OR SK226>1 OR SK224>1))]: %GOLD%TOP DUDU BASE %WHITE%%NAME% %GRAY%%MAP%
+
+//TOP Craft Assasin weapons
+ItemDisplay[WEAPON (7xf OR 9xf OR axf) ETH (RARE OR MAG) !ID]: %GOLD%TOP ASSA CRAFT BASE %WHITE%%NAME%
+ItemDisplay[WEAPON (7ar OR 9ar OR ktr OR 7qr OR 9qr OR skr) ETH (RARE OR MAG) !ID]: %GOLD%DECENT ASSA CRAFT BASE %WHITE%%NAME%
+ItemDisplay[WEAPON (7wb OR 9wb OR wrb OR 7lw OR 9lw OR clw) ETH (RARE OR MAG) !ID]: %GOLD%OK ASSA CRAFT BASE %WHITE%%NAME%
+
+//TOP Craft Maul weapons
+ItemDisplay[WEAPON (7ba OR 9ba OR bax OR 7o7 OR 9b7 OR bar OR 7h7 OR 9h9 OR hal OR 7gm OR 9gm OR gma OR 7gs OR 9gs OR gis) ETH (RARE OR MAG) !ID]: %GOLD%TOP MAUL CRAFT BASE %WHITE%%NAME%
+ItemDisplay[WEAPON (7gi OR 9gi OR gix OR 7m7 OR 9m9 OR mau OR 7cm OR 9cm OR clm OR 7bt OR 9bt OR btx OR 7pa OR 9pa OR pax OR 7vo OR 9vo OR vou OR 7ga OR 9ga OR gax OR 7la OR 9la OR lax OR 7s8 OR 9s8 OR scy OR 7wc OR 9wc OR wsc) ETH (RARE OR MAG) !ID]: %GOLD%DECENT MAUL CRAFT BASE %WHITE%%NAME%
 //QUEST ITEMS
 Alias[QUESTITEM]: (bks OR bkd OR tr1 OR ass OR box OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2 OR hdm OR msf OR vip OR hst OR g33 OR qf1 OR qf2 OR hfh OR tes OR ceh OR bet OR fed OR toa OR pk1 OR pk2 OR pk3 OR dhn OR bey OR mbr)
 
@@ -2220,7 +2240,7 @@ ItemDisplay[((MAG OR RARE OR CRAFT) AND ((AMASTAFF WEAPON) OR NECSTAFF OR ASNSTA
 //Health & Mana & Rejuvenation Potions
 ItemDisplay[rvl]: %PURPLE%R %WHITE%Full{%WHITE%Full Rejuvenation Potion}%CONTINUE%
 ItemDisplay[rvs]: %PURPLE%r %WHITE%35%{%PURPLE%r %WHITE%35%, Perf %YELLOW%O%WHITE%, %BLUE%Ring %WHITE%= Light Res %BLUE%Ring%NL%%WHITE%3x %PURPLE%r %WHITE%35% = %PURPLE%R%WHITE% Full%NL%%TAN% Note%WHITE%: Crafting Recipes:%NL%Rejuvenation Potion}%CONTINUE%
-ItemDisplay[rvs FILTLVL>7]: {%NAME%}%CONTINUE%
+ItemDisplay[rvs FILTLVL>8]: {%NAME%}%CONTINUE%
 ItemDisplay[hp5]: %RED%!%WHITE%Hp{%WHITE%Super Healing Potion}%CONTINUE%
 ItemDisplay[mp5]: %BLUE%!%WHITE%Mp{%WHITE%Super Mana Potion}%CONTINUE%
 ItemDisplay[hp1]: %RED%!%WHITE%minor hp{%WHITE%Minor Healing Potion}%CONTINUE%
@@ -2233,7 +2253,7 @@ ItemDisplay[mp3]: %BLUE%!%WHITE%mana{%WHITE%Mana Potion}%CONTINUE%
 ItemDisplay[mp4]: %BLUE%!%WHITE%great mp{%WHITE%Greater Mana Potion}%CONTINUE%
 ItemDisplay[(hp1 OR hp2 OR hp3 OR mp1 OR mp2 OR mp3) ((FILTLVL>0 DIFF>0) OR (FILTLVL=3 OR FILTLVL=5 OR FILTLVL>6)) !SHOP]: {%NAME%}
 ItemDisplay[(hp4 OR mp4) ((FILTLVL>0 DIFF>1) OR (FILTLVL=3 OR FILTLVL=5 OR FILTLVL>6)) !SHOP]: {%NAME%}
-ItemDisplay[(hp5 OR mp5) (FILTLVL=3 OR FILTLVL=5 OR FILTLVL>6) !SHOP]: {%NAME%}
+ItemDisplay[(hp5 OR mp5) (FILTLVL=3 OR FILTLVL=5 OR FILTLVL=7 OR FILTLVL=9)) !SHOP]: {%NAME%}
 
 //Utilites
 ItemDisplay[tsc]: %BLUE%* %GRAY%tp %WHITE%scroll{%RED%Warning%WHITE%: You gonna lose socketed Runes/Gems/Jewels%NL%Socketed Item, %BLUE%* %GRAY%tp %WHITE%scroll, %ORANGE%Hel%NL%%TAN%Note%WHITE%: To remove Runes/Gems/Jewels from Item:%NL%Scroll of Town Portal}%CONTINUE%
@@ -3245,7 +3265,7 @@ ItemDisplay[BAR BARBARIAN RARE !ID]: %NAME%
 ItemDisplay[(SIN OR (DAGGER !THROWING)) ASSASSIN RARE !ID]: %NAME%
 
 //Hide Magic Ring and Amulets on Super Strict Level
-ItemDisplay[(rin OR amu) MAG !ID FILTLVL>7]: {%NAME%}
+ItemDisplay[(rin) MAG !ID FILTLVL>7]: {%NAME%}
 
 //Circlets
 ItemDisplay[CIRC MAG !ID FILTLVL>7]: {%NAME%}
